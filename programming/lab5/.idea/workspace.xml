@@ -40,8 +40,13 @@
       <file leaf-file-name="CollectionController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/CollectionController.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="150">
               <caret line="18" column="70" lean-forward="false" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
+=======
+            <state relative-caret-position="153">
+              <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="7" />
+>>>>>>> 75dca3d2c13702aaaf48e681c6a2dc66dffdab43
               <folding>
                 <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
                 <element signature="method#readFromFile#0;class#CollectionController#0" expanded="false" />
@@ -66,8 +71,13 @@
       <file leaf-file-name="Shorty.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Shorty.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="250">
               <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+=======
+            <state relative-caret-position="53">
+              <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+>>>>>>> 75dca3d2c13702aaaf48e681c6a2dc66dffdab43
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,7 +88,7 @@
       <file leaf-file-name="Status.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Status.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="102">
               <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
               <folding />
             </state>
@@ -136,10 +146,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="1942" />
-    <option name="height" value="1042" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -414,7 +424,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+=======
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+>>>>>>> 75dca3d2c13702aaaf48e681c6a2dc66dffdab43
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -929,6 +943,7 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/io/FileInputStream.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/regex/Matcher.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/String.java" />
+<<<<<<< HEAD
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/AbstractStringBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -954,10 +969,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="975" column="19" lean-forward="false" selection-start-line="975" selection-start-column="19" selection-end-line="975" selection-end-column="19" />
+=======
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/AbstractStringBuilder.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/StringBuilder.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+>>>>>>> 75dca3d2c13702aaaf48e681c6a2dc66dffdab43
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/io/Serializable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="605">
@@ -1002,6 +1026,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="18" column="70" lean-forward="false" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
+=======
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/io/File.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/CollectionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="7" />
+>>>>>>> 75dca3d2c13702aaaf48e681c6a2dc66dffdab43
           <folding>
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
             <element signature="method#readFromFile#0;class#CollectionController#0" expanded="false" />
@@ -1022,12 +1053,31 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/com/company/Shorty.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
+=======
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/String.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="82" column="32" lean-forward="false" selection-start-line="82" selection-start-column="32" selection-end-line="82" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Shorty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#compare#0;class#Shorty#0" expanded="false" />
+>>>>>>> 75dca3d2c13702aaaf48e681c6a2dc66dffdab43
           </folding>
         </state>
       </provider>
