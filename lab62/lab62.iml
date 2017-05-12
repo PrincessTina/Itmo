@@ -7,6 +7,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="org.eclipse.swt:org.eclipse.swt.win32.win32.x86_64:4.3" level="project" />
   </component>
 </module>
-
