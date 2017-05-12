@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-public class Shorty implements Serializable, Comparator<Shorty> {
+public class Shorty implements Comparator<Shorty> {
   private String name;
   private int age;
   private double height;
