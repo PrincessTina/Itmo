@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="org.eclipse.platform:org.eclipse.swt:3.105.3" type="repository">
+    <properties maven-id="org.eclipse.platform:org.eclipse.swt:3.105.3" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/platform/org.eclipse.swt/3.105.3/org.eclipse.swt-3.105.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
