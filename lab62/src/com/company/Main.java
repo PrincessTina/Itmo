@@ -2,26 +2,46 @@ package com.company;
 
 
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.layout.FillLayout;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.ToolBar;
+import org.eclipse.swt.widgets.ToolItem;
 
 public class Main {
-
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Display display = new Display();
-
         Shell shell = new Shell(display);
+        GridLayout layout = new GridLayout();
+        shell.setLayout(layout);
+        layout.numColumns = 3;
+        shell.setText("Platoon Manager");
+        shell.setSize(700,500);
 
-        // the layout manager handle the layout
-        // of the widgets in the container
-        shell.setLayout(new FillLayout());
+        ToolBar toolbar = new ToolBar(shell, SWT.HORIZONTAL);
+        ToolItem File = new ToolItem(toolbar, SWT.DROP_DOWN);
+        File.setText("File");
+        File.setToolTipText("Open File");
+        ToolItem Help = new ToolItem(toolbar, SWT.PUSH);
+        Help.setText("Help");
+        Help.setToolTipText("There is no Help");
 
-        //TODO add some widgets to the Shell
+        GridData gridDataTool = new GridData();
+        gridDataTool.horizontalAlignment = GridData.FILL;
+        gridDataTool.horizontalSpan = 3;
+        toolbar.setLayoutData(gridDataTool);
+
+
+
+
+
+
         shell.open();
         while (!shell.isDisposed()) {
-            if (!display.readAndDispatch()) {
+            if (!display.readAndDispatch())
+            {
                 display.sleep();
             }
         }
