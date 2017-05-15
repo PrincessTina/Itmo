@@ -2,13 +2,11 @@ package com.company;
 
 
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Point;
+import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Shell;
-import org.eclipse.swt.widgets.ToolBar;
-import org.eclipse.swt.widgets.ToolItem;
+import org.eclipse.swt.widgets.*;
 
 public class Main {
     public static void main(String[] args){
@@ -21,9 +19,38 @@ public class Main {
         shell.setSize(700,500);
 
         ToolBar toolbar = new ToolBar(shell, SWT.HORIZONTAL);
-        ToolItem File = new ToolItem(toolbar, SWT.DROP_DOWN);
+        ToolItem File = new ToolItem(toolbar, SWT.PUSH);
         File.setText("File");
         File.setToolTipText("Open File");
+        Menu menu = new Menu(shell, SWT.POP_UP);
+        MenuItem New = new MenuItem(menu, SWT.PUSH);
+        New.setText("New");
+        MenuItem Open= new MenuItem(menu, SWT.PUSH);
+        Open.setText("Open");
+        new MenuItem(menu, SWT.SEPARATOR);
+        MenuItem Save= new MenuItem(menu, SWT.PUSH);
+        Save.setText("Save");
+        new MenuItem(menu, SWT.SEPARATOR);
+        MenuItem Info= new MenuItem(menu, SWT.PUSH);
+        Info.setText("Info About your Platoon");
+        File.addListener(SWT.Selection, new Listener() {
+            public void handleEvent(Event event) {
+                if(event.detail == SWT.NONE) {
+                    Rectangle bounds = File.getBounds();
+                    Point point = toolbar.toDisplay(bounds.x, bounds.y + bounds.height);
+                    menu.setLocation(point);
+                    menu.setVisible(true);
+                }
+            }
+        });
+        Listener selectionListener = new Listener() {
+            public void handleEvent(Event event) {
+                ToolItem item = (ToolItem)event.widget;
+                System.out.println(item.getText() + " is selected");
+                if( (item.getStyle() & SWT.RADIO) != 0 || (item.getStyle() & SWT.CHECK) != 0 )
+                    System.out.println("Selection status: " + item.getSelection());
+            }
+        };
         ToolItem Help = new ToolItem(toolbar, SWT.PUSH);
         Help.setText("Help");
         Help.setToolTipText("There is no Help");
