@@ -52,14 +52,12 @@ public class Main {
 
         MenuItem blonde = new MenuItem(submenu, SWT.PUSH);
 
-        file.addListener(SWT.Selection, new Listener() {
-            public void handleEvent(Event event) {
-                if(event.detail == SWT.NONE) {
-                    Rectangle bounds = file.getBounds();
-                    Point point = toolBar.toDisplay(bounds.x, bounds.y + bounds.height);
-                    menu.setLocation(point);
-                    menu.setVisible(true);
-                }
+        file.addListener(SWT.Selection, event -> {
+            if(event.detail == SWT.NONE) {
+                Rectangle bounds = file.getBounds();
+                Point point = toolBar.toDisplay(bounds.x, bounds.y + bounds.height);
+                menu.setLocation(point);
+                menu.setVisible(true);
             }
         });
 
@@ -82,14 +80,12 @@ public class Main {
         MenuItem load = new MenuItem(commandsMenu, SWT.CASCADE);
         load.setText("Load");
 
-        command.addListener(SWT.Selection, new Listener() {
-            public void handleEvent(Event event) {
-                if(event.detail == SWT.NONE) {
-                    Rectangle bounds = command.getBounds();
-                    Point point = toolBar.toDisplay(bounds.x, bounds.y + bounds.height);
-                    commandsMenu.setLocation(point);
-                    commandsMenu.setVisible(true);
-                }
+        command.addListener(SWT.Selection, event -> {
+            if(event.detail == SWT.NONE) {
+                Rectangle bounds = command.getBounds();
+                Point point = toolBar.toDisplay(bounds.x, bounds.y + bounds.height);
+                commandsMenu.setLocation(point);
+                commandsMenu.setVisible(true);
             }
         });
 
@@ -147,36 +143,28 @@ public class Main {
         browser.setLayoutData(data);
 
         // search event
-        location.addListener(SWT.DefaultSelection, new Listener() {
-          public void handleEvent(Event e) {
-            String url = "";
-            for(String tokens: location.getText().split(" ")) {
-              url = url + tokens + "%20";
-            }
-            browser.setUrl("https://yandex.ru/search/?text=" + url);
+        location.addListener(SWT.DefaultSelection, e -> {
+          String url = "";
+          for(String tokens: location.getText().split(" ")) {
+            url = url + tokens + "%20";
           }
+          browser.setUrl("https://yandex.ru/search/?text=" + url);
         });
 
-      dayLight.addListener (SWT.Selection, new Listener () {
-        public void handleEvent (Event e) {
-          shell.setBackground(new Color (display, 255, 255, 255));
-          browserWindow.setBackground(new Color (display, 230, 230, 230));
-        }
+      dayLight.addListener (SWT.Selection, e -> {
+        shell.setBackground(new Color (display, 255, 255, 255));
+        browserWindow.setBackground(new Color (display, 230, 230, 230));
       });
 
-      nightTime.addListener (SWT.Selection, new Listener () {
-        public void handleEvent (Event e) {
-          shell.setBackground(new Color (display, 209, 28, 9));
-          browserWindow.setBackground(new Color (display, 0, 0, 0));
-        }
+      nightTime.addListener (SWT.Selection, e -> {
+        shell.setBackground(new Color (display, 209, 28, 9));
+        browserWindow.setBackground(new Color (display, 0, 0, 0));
       });
 
       blonde.setText("Blonde");
-      blonde.addListener (SWT.Selection, new Listener () {
-        public void handleEvent (Event e) {
-          shell.setBackground(new Color (display, 0, 0, 0));
-          browserWindow.setBackground(new Color (display, 207, 127, 199));
-        }
+      blonde.addListener (SWT.Selection, e -> {
+        shell.setBackground(new Color (display, 0, 0, 0));
+        browserWindow.setBackground(new Color (display, 207, 127, 199));
       });
 
         shell.open();
