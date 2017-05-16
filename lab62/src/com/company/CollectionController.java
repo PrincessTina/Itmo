@@ -90,7 +90,7 @@ public class CollectionController {
   public static void info(ArrayList<Shorty> people, String peopleFileName) {
     try {
       System.out.println("Collection type: " + people.getClass().getTypeName() + ", Update time: " +
-          getLastModificationDate(peopleFileName) + ", Size: " + people.size());
+            getLastModificationDate(peopleFileName) + ", Size: " + people.size());
     } catch (Exception ex) {
       System.out.println("Ups: " + ex.getMessage());
     }

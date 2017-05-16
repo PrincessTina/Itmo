@@ -23,7 +23,7 @@ public class Shorty implements Comparator<Shorty> {
   public String toString() {
     return "name: " + this.name + ", age: " + this.age + ", height: " + this.height + ", hobby: " + this.hobby + ", status: " + this.status;
   }
-  
+
   public int compare(Shorty a, Shorty b) {
     if (a.name.compareTo(b.name) == 0) {
       if (a.age == b.age) {
@@ -45,7 +45,7 @@ public class Shorty implements Comparator<Shorty> {
     defaultCollection.add(new Shorty("Pilulkin", 14, 157.8, "doctor", Status.have_a_girlfriend));
     defaultCollection.add(new Shorty("Shpuntik", 10, 139.2, "main tech", Status.have_a_girlfriend));
     defaultCollection.add(new Shorty("Shpuntik", 10, 139.2, "main tech", Status.have_a_girlfriend));
-    
+
     return defaultCollection;
   }
 }
