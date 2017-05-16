@@ -3,12 +3,14 @@ package com.company;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.browser.Browser;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.*;
 import org.eclipse.swt.layout.*;
 import org.eclipse.swt.widgets.*;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         // windows's settings
         Display display = new Display();
         Shell shell = new Shell(display);
@@ -16,7 +18,7 @@ public class Main {
         shell.setSize(1010,690);
         shell.setBackground(new Color (display, 255, 255, 255));
         GridLayout shellLayout = new GridLayout();
-        shellLayout.numColumns = 3;
+        shellLayout.numColumns = 2;
         shell.setLayout(shellLayout);
 
         // toolBar's settings
@@ -93,38 +95,42 @@ public class Main {
         help.setText("Help");
 
         // field where words for search will be written
-        final Text location = new Text(shell, SWT.BORDER);
+        final Text search = new Text(shell, SWT.BORDER);
         data = new GridData();
         data.horizontalAlignment = GridData.FILL;
-        data.horizontalSpan = 2;
+        data.horizontalSpan = 1;
         data.grabExcessHorizontalSpace = true;
-        location.setLayoutData(data);
+        search.setLayoutData(data);
+        search.setBackgroundImage(new Image (display, "..\\dark.jpg"));
 
         // new column for listing
         data = new GridData(SWT.FILL, SWT.FILL, true, true);
         Composite listingWindow = new Composite (shell, SWT.BORDER);
+        listingWindow.setSize(500, SWT.NONE);
         listingWindow.setLayoutData(data);
         listingWindow.setLayout(new GridLayout());
-        listingWindow.setBackgroundImage(new Image (display, "C:\\Users\\Queen\\Documents\\itmo\\2.jpg"));
+        listingWindow.setBackgroundImage(new Image (display, "..\\dark.jpg"));
 
         // list of the shorty's
         Tree tree = new Tree(listingWindow, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
+        data = new GridData(SWT.FILL, SWT.NONE, true, true);
         tree.setHeaderVisible(true);
-        TreeColumn column1 = new TreeColumn(tree, SWT.LEFT);
+        TreeColumn column1 = new TreeColumn(tree, SWT.CENTER);
         column1.setText("Name");
         column1.setWidth(100);
-        TreeColumn column2 = new TreeColumn(tree, SWT.LEFT);
+        TreeColumn column2 = new TreeColumn(tree, SWT.CENTER);
         column2.setText("Age");
-        column2.setWidth(50);
-        TreeColumn column3 = new TreeColumn(tree, SWT.LEFT);
+        column2.setWidth(100);
+        TreeColumn column3 = new TreeColumn(tree, SWT.CENTER);
         column3.setText("Height");
-        column3.setWidth(70);
-        TreeColumn column4 = new TreeColumn(tree, SWT.LEFT);
+        column3.setWidth(100);
+        TreeColumn column4 = new TreeColumn(tree, SWT.CENTER);
         column4.setText("Hobby");
         column4.setWidth(100);
-        TreeColumn column5 = new TreeColumn(tree, SWT.LEFT);
+        TreeColumn column5 = new TreeColumn(tree, SWT.CENTER);
         column5.setText("Status");
         column5.setWidth(100);
+        tree.setLayoutData(data);
 
         // new column for browser
         data = new GridData(SWT.FILL, SWT.FILL, true, true);
@@ -133,39 +139,62 @@ public class Main {
         browserWindow.setLayout(new GridLayout());
         new Label(browserWindow, SWT.FILL).setText("Search");
 
-        // browser's location in column
+        // browser's search in column
         final Browser browser = new Browser(browserWindow, 0);
-        data = new GridData();
-        data.horizontalAlignment = SWT.FILL;
-        data.verticalAlignment = SWT.FILL;
-        data.grabExcessHorizontalSpace = true;
-        data.grabExcessVerticalSpace = true;
         browser.setLayoutData(data);
+        browser.setBackgroundImage(new Image (display, "..\\dark.jpg"));
 
         // search event
-        location.addListener(SWT.DefaultSelection, e -> {
+        search.addListener(SWT.DefaultSelection, e -> {
           String url = "";
-          for(String tokens: location.getText().split(" ")) {
+          for(String tokens: search.getText().split(" ")) {
             url = url + tokens + "%20";
           }
           browser.setUrl("https://yandex.ru/search/?text=" + url);
         });
 
-      dayLight.addListener (SWT.Selection, e -> {
-        shell.setBackground(new Color (display, 255, 255, 255));
-        browserWindow.setBackground(new Color (display, 230, 230, 230));
-      });
+        dayLight.addListener (SWT.Selection, e -> {
+          shell.setBackground(new Color (display, 255, 255, 255));
+          browserWindow.setBackground(new Color (display, 230, 230, 230));
+        });
 
-      nightTime.addListener (SWT.Selection, e -> {
-        shell.setBackground(new Color (display, 209, 28, 9));
-        browserWindow.setBackground(new Color (display, 0, 0, 0));
-      });
+        nightTime.addListener (SWT.Selection, e -> {
+          shell.setBackground(new Color (display, 209, 28, 9));
+          browserWindow.setBackground(new Color (display, 0, 0, 0));
+        });
 
-      blonde.setText("Blonde");
-      blonde.addListener (SWT.Selection, e -> {
-        shell.setBackground(new Color (display, 0, 0, 0));
-        browserWindow.setBackground(new Color (display, 207, 127, 199));
-      });
+        blonde.setText("Blond");
+        blonde.addListener (SWT.Selection, e -> {
+          shell.setBackground(new Color (display, 0, 0, 0));
+          browserWindow.setBackground(new Color (display, 207, 127, 199));
+        });
+
+        // Диалоговое окно чтения файла
+        set.addListener (SWT.Selection, e -> {
+              FileDialog setFile = new FileDialog(shell, SWT.OPEN);
+              setFilters(setFile);
+              String peopleFileName = setFile.open();
+            });
+
+        help.addListener(SWT.Selection, e -> {
+              int style = SWT.APPLICATION_MODAL | SWT.OK;
+              MessageBox messageBox = new MessageBox(shell, style);
+              messageBox.setText("Help");
+              messageBox.setMessage("Use one of the commands: \n" +
+              "\n Info: Display information about the collection" +
+              "\n Add: Add new element in json or other format" +
+              "\n Remove first: Remove the first element of the collection" +
+              "\n Remove All: Remove all elements that match the specified" +
+              "\n Load: Display the contents of the collection" +
+              "\n Set File: Choose file that you want working with" +
+              "\n Save All: Save all changes in file" +
+              "\n Mode: Set one of the mods");
+              messageBox.open();
+            });
+
+        add.addListener(SWT.Selection, e -> {
+          addWindow(display);
+        });
 
         shell.open();
         while (!shell.isDisposed()) {
@@ -175,6 +204,48 @@ public class Main {
             }
         }
         display.dispose();
+    }
+
+    // set file for working with collection
+    private static void setFilters (FileDialog dialog) {
+      String[] FILTERS = {"Файлы Excel (*.csv)", "*.csv"};
+      String[] fileName = new String[FILTERS.length];
+      String[] extension  = new String[FILTERS.length];
+        fileName[0] = FILTERS[0];
+        extension[0] = FILTERS[1];
+      dialog.setFilterNames(fileName);
+      dialog.setFilterExtensions(extension);
+    }
+
+    public static void addWindow (Display display) {
+      Shell shell = new Shell(display);
+      shell.setText("Add element");
+      shell.setSize(400, 570);
+      shell.setLayout(new GridLayout(1, true));
+
+      Label label = new Label(shell, SWT.NULL);
+      label.setText("Brightness:");
+
+      // Scale
+      Scale scale = new Scale(shell, SWT.HORIZONTAL);
+      scale.setMinimum(0);
+      scale.setIncrement(1);
+      scale.setPageIncrement(5);
+      scale.setMaximum(100);
+
+      // Info
+      Label labelInfo = new Label(shell, SWT.CENTER);
+      labelInfo.setLayoutData(new GridData(40, SWT.DEFAULT));
+
+      // Event
+      scale.addSelectionListener(new SelectionAdapter() {
+        public void widgetSelected(SelectionEvent e) {
+          int value = scale.getMinimum() + scale.getSelection();
+          labelInfo.setText("" + value);
+        }
+      });
+
+      shell.open();
     }
 
 }
