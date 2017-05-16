@@ -1,13 +1,18 @@
 package com.company;
 
+import com.google.gson.Gson;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.browser.Browser;
 import org.eclipse.swt.events.*;
 import org.eclipse.swt.graphics.*;
 import org.eclipse.swt.layout.*;
 import org.eclipse.swt.widgets.*;
+import java.util.ArrayList;
 
 public class CollectionInterface {
+  static String peopleFileName = "";
+  static ArrayList<Shorty> people = new ArrayList<>();
+
   public static void createInterface() {
     // windows's settings
     Display display = new Display();
@@ -74,14 +79,6 @@ public class CollectionInterface {
 
     MenuItem remove_first = new MenuItem(commandsMenu, SWT.CASCADE);
     remove_first.setText("Remove first");
-    new MenuItem(commandsMenu, SWT.SEPARATOR);
-
-    MenuItem remove_all = new MenuItem(commandsMenu, SWT.CASCADE);
-    remove_all.setText("Remove all");
-    new MenuItem(commandsMenu, SWT.SEPARATOR);
-
-    MenuItem load = new MenuItem(commandsMenu, SWT.CASCADE);
-    load.setText("Load");
 
     // Command Event
     command.addListener(SWT.Selection, event -> {
@@ -95,6 +92,12 @@ public class CollectionInterface {
 
     ToolItem help = new ToolItem(toolBar, SWT.PUSH);
     help.setText("Help");
+
+    info.setEnabled(false);
+    add.setEnabled(false);
+    remove_first.setEnabled(false);
+    save.setEnabled(false);
+
 
     // Help Event
     help.addListener(SWT.Selection, e -> {
@@ -132,7 +135,8 @@ public class CollectionInterface {
     treeWindow.setBackgroundImage(new Image (display, "..\\24.jpg"));
 
     // Tree of the shorty's
-    createTree(treeWindow);
+    Tree tree = new Tree(treeWindow, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
+    createTree(tree);
 
     // Create column for browser
     data = new GridData(SWT.FILL, SWT.FILL, true, true);
@@ -158,7 +162,21 @@ public class CollectionInterface {
     set.addListener (SWT.Selection, e -> {
       FileDialog setFile = new FileDialog(shell, SWT.OPEN);
       setFilters(setFile);
-      String peopleFileName = setFile.open();
+      peopleFileName = setFile.open();
+
+      if(setFile.getFileName() != "") {
+        info.setEnabled(true);
+        add.setEnabled(true);
+        remove_first.setEnabled(true);
+        save.setEnabled(true);
+        people = CollectionController.readFromFile(peopleFileName);
+        modifyTree(tree);
+      }
+    });
+
+    // Save Event
+    save.addListener (SWT.Selection, e -> {
+      CollectionController.writeToFile(peopleFileName, people);
     });
 
     // DayLight Event
@@ -175,8 +193,27 @@ public class CollectionInterface {
       search.setForeground(new Color(display, 255, 255, 255));
     });
 
+    // Info event
+    info.addListener(SWT.Selection, e -> {
+      int style = SWT.APPLICATION_MODAL | SWT.OK;
+      MessageBox messageBox = new MessageBox(shell, style);
+      messageBox.setText("Information");
+      messageBox.setMessage(CollectionController.info(people, peopleFileName));
+      messageBox.open();
+    });
+
     // Add Event
-    add.addListener(SWT.Selection, e -> addWindow(display));
+    add.addListener(SWT.Selection, e -> addWindow(display, tree));
+
+    // Remove first event
+    remove_first.addListener(SWT.Selection, (Event e) -> {
+      try {
+        CollectionController.remove_first(people);
+        modifyTree(tree);
+      } catch (Exception ex) {
+        ex.printStackTrace();
+      }
+    });
 
     shell.open();
     while (!shell.isDisposed()) {
@@ -198,7 +235,7 @@ public class CollectionInterface {
     dialog.setFilterExtensions(extension);
   }
 
-  private static void addWindow (Display display) {
+  private static void addWindow (Display display, Tree tree) {
     Shell shell = new Shell(display);
     shell.setText("Add element");
     shell.setSize(500, 570);
@@ -224,7 +261,7 @@ public class CollectionInterface {
     scale.setMaximum(100);
     scale.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, true));
 
-    // Json format
+    // Json
     Label json = new Label(scalePlace, SWT.NULL);
     json.setText("Json");
     json.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
@@ -244,7 +281,7 @@ public class CollectionInterface {
     Text spaceHobby = new Text(valuesGroup, SWT.BORDER);
     new Label(valuesGroup, SWT.NULL).setText("Status");
     Combo status = new Combo(valuesGroup, SWT.READ_ONLY);
-    String statusOptions[] = {"married", "single", "all_is_complicated"};
+    String statusOptions[] = {"married", "single", "all_is_complicated", "have_a_girlfriend", "idle"};
     status.setItems(statusOptions);
 
     //Text.MULTI Json
@@ -261,10 +298,10 @@ public class CollectionInterface {
     Label labelInfo = new Label(shell, SWT.LEFT);
     labelInfo.setLayoutData(new GridData(40, SWT.DEFAULT));
 
-    //Button to add an object
-    Button add = new Button(shell, SWT.PUSH);
-    add.setText("Add element");
-    add.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, true));
+    //Button to add_element an object
+    Button add_element = new Button(shell, SWT.PUSH);
+    add_element.setText("Add element");
+    add_element.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, true));
 
     // Event
     scale.addSelectionListener(new SelectionAdapter() {
@@ -295,28 +332,86 @@ public class CollectionInterface {
       }
     });
 
+    // All element event
+    add_element.addListener(SWT.Selection, (Event e) -> {
+      if (spaceJson.getEnabled() == true) {
+        String shortyJson = spaceJson.getText();
+        Gson gson = new Gson();
+        people.add(gson.fromJson(shortyJson, Shorty.class));
+        modifyTree(tree);
+      }
+      else {
+        Status meaning;
+        switch (status.getText()) {
+          case "married":
+            meaning = Status.married;
+            break;
+          case "have_a_girlfriend":
+            meaning = Status.have_a_girlfriend;
+            break;
+          case "idle":
+            meaning = Status.idle;
+            break;
+          case "single":
+            meaning = Status.single;
+            break;
+          default:
+            meaning = Status.all_is_complicated;
+        }
+        people.add(new Shorty(spaceName.getText(), Integer.parseInt(spaceAge.getText()),
+              Double.parseDouble(spaceHeight.getText()), spaceHobby.getText(), meaning));
+        modifyTree(tree);
+      }
+    });
+
     shell.open();
   }
 
-  private static void createTree(Composite listingWindow) {
-    Tree tree = new Tree(listingWindow, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
-    GridData data = new GridData(SWT.FILL, SWT.NONE, true, true);
+  private static void createTree(Tree tree) {
+    GridData data = new GridData(SWT.FILL, SWT.FILL, true, true);
     tree.setHeaderVisible(true);
     TreeColumn column1 = new TreeColumn(tree, SWT.CENTER);
     column1.setText("Name");
     column1.setWidth(100);
     TreeColumn column2 = new TreeColumn(tree, SWT.CENTER);
     column2.setText("Age");
-    column2.setWidth(100);
+    column2.setWidth(50);
     TreeColumn column3 = new TreeColumn(tree, SWT.CENTER);
     column3.setText("Height");
-    column3.setWidth(100);
+    column3.setWidth(70);
     TreeColumn column4 = new TreeColumn(tree, SWT.CENTER);
     column4.setText("Hobby");
-    column4.setWidth(100);
+    column4.setWidth(160);
     TreeColumn column5 = new TreeColumn(tree, SWT.CENTER);
     column5.setText("Status");
-    column5.setWidth(100);
+    column5.setWidth(130);
     tree.setLayoutData(data);
+  }
+
+  private static void modifyTree (Tree tree) {
+    tree.removeAll();
+    tree.setRedraw(false);
+    TreeItem item = new TreeItem(tree, SWT.NONE);
+    TreeItem subItem;
+    for(Shorty shorty: people) {
+      if(people.indexOf(shorty) == 0) {
+        item = new TreeItem(tree, SWT.NONE);
+        item.setText(new String[] {shorty.name, Integer.toString(shorty.age), Double.toString(shorty.height),
+              shorty.hobby, shorty.status.toString()});
+      }
+      else {
+        if(shorty.compare(shorty, people.get(people.indexOf(shorty) - 1)) == 0) {
+          subItem = new TreeItem(item, SWT.NONE);
+          subItem.setText(new String[] {shorty.name, Integer.toString(shorty.age), Double.toString(shorty.height),
+                shorty.hobby, shorty.status.toString()});
+        }
+        else {
+          item = new TreeItem(tree, SWT.NONE);
+          item.setText(new String[] {shorty.name, Integer.toString(shorty.age), Double.toString(shorty.height),
+                shorty.hobby, shorty.status.toString()});
+        }
+      }
+    }
+    tree.setRedraw(true);
   }
 }

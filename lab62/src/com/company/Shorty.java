@@ -3,11 +3,11 @@ package com.company;
 import java.util.*;
 
 public class Shorty implements Comparator<Shorty> {
-  private String name;
-  private int age;
-  private double height;
-  private String hobby;
-  private Status status;
+  public String name;
+  public int age;
+  public double height;
+  public String hobby;
+  public Status status;
 
   Shorty(String name, int age, double height, String hobby, Status status) {
     this.name = name;

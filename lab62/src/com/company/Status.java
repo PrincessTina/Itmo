@@ -4,6 +4,6 @@ public enum Status {
   married,
   idle,
   have_a_girlfriend,
-  have_a_boyfriend,
+  single,
   all_is_complicated
 }

@@ -87,24 +87,9 @@ public class CollectionController {
    * @param people         - collection, where info is gathered
    * @param peopleFileName - file name, from which the collection is initialized
    */
-  public static void info(ArrayList<Shorty> people, String peopleFileName) {
-    try {
-      System.out.println("Collection type: " + people.getClass().getTypeName() + ", Update time: " +
-            getLastModificationDate(peopleFileName) + ", Size: " + people.size());
-    } catch (Exception ex) {
-      System.out.println("Ups: " + ex.getMessage());
-    }
-  }
-
-  /**
-   * Prints collection content
-   *
-   * @param people - the collection, which will be printed
-   */
-  public static void load(ArrayList<Shorty> people) {
-    for (Shorty shorty : people) {
-      System.out.println(shorty);
-    }
+  public static String info(ArrayList<Shorty> people, String peopleFileName) {
+      return "Collection type: " + people.getClass().getTypeName() + ", Update time: " +
+            getLastModificationDate(peopleFileName) + ", Size: " + people.size();
   }
 
   /**
