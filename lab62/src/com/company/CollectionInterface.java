@@ -424,9 +424,13 @@ public class CollectionInterface {
             default:
               meaning = Status.all_is_complicated;
           }
-          people.add(new Shorty(spaceName.getText(), Integer.parseInt(spaceAge.getText()),
+          try {
+            people.add(new Shorty(spaceName.getText(), Integer.parseInt(spaceAge.getText()),
                 Double.parseDouble(spaceHeight.getText()), spaceHobby.getText(), meaning));
-          modifyTree(tree);
+            modifyTree(tree);
+          } catch (Exception ex) {
+            
+          }
         }
         shell.close();
     });
