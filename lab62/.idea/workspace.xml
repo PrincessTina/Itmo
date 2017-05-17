@@ -20,9 +20,9 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="88">
-              <caret line="4" column="44" lean-forward="true" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding>
-                <element signature="e#137#138#0" expanded="true" />
+                <element signature="e#138#139#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -31,15 +31,17 @@
       <file leaf-file-name="CollectionInterface.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/CollectionInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="80" column="41" lean-forward="false" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
+            <state relative-caret-position="455">
+              <caret line="453" column="29" lean-forward="true" selection-start-line="453" selection-start-column="29" selection-end-line="453" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#setFilters#0;class#CollectionInterface#0" expanded="false" />
-                <element signature="e#11041#11674#0" expanded="true" />
-                <element signature="e#11673#11674#0" expanded="true" />
-                <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
+                <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
+                <element signature="e#12840#13473#0" expanded="true" />
+                <element signature="e#13472#13473#0" expanded="true" />
                 <element signature="method#modifyTree#0;class#CollectionInterface#0" expanded="false" />
+                <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
+                <element signature="method#modifyWindow#0;class#CollectionInterface#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -48,8 +50,8 @@
       <file leaf-file-name="CollectionController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/CollectionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="92" column="3" lean-forward="false" selection-start-line="92" selection-start-column="3" selection-end-line="92" selection-end-column="3" />
+            <state relative-caret-position="401">
+              <caret line="174" column="3" lean-forward="true" selection-start-line="174" selection-start-column="3" selection-end-line="174" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
@@ -121,8 +123,8 @@
         <option value="$PROJECT_DIR$/src/com/company/Dialog.java" />
         <option value="$PROJECT_DIR$/src/com/company/Shorty.java" />
         <option value="$PROJECT_DIR$/src/com/company/CollectionController.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/Status.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/CollectionInterface.java" />
       </list>
     </option>
@@ -497,12 +499,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
-          <line>4</line>
+          <line>3</line>
           <properties class="com.company.Main" method="main" />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="12" />
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -516,7 +518,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#137#138#0" expanded="true" />
+            <element signature="e#138#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -526,7 +528,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#137#138#0" expanded="true" />
+            <element signature="e#138#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -536,7 +538,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#137#138#0" expanded="true" />
+            <element signature="e#138#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -546,7 +548,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#137#138#0" expanded="true" />
+            <element signature="e#138#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -593,10 +595,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/CollectionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="92" column="3" lean-forward="false" selection-start-line="92" selection-start-column="3" selection-end-line="92" selection-end-column="3" />
+        <state relative-caret-position="401">
+          <caret line="174" column="3" lean-forward="true" selection-start-line="174" selection-start-column="3" selection-end-line="174" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
@@ -616,35 +626,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Status.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
-          <caret line="4" column="44" lean-forward="true" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
-            <element signature="e#137#138#0" expanded="true" />
+            <element signature="e#138#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/CollectionInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="80" column="41" lean-forward="false" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
+        <state relative-caret-position="455">
+          <caret line="453" column="29" lean-forward="true" selection-start-line="453" selection-start-column="29" selection-end-line="453" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#setFilters#0;class#CollectionInterface#0" expanded="false" />
-            <element signature="e#11041#11674#0" expanded="true" />
-            <element signature="e#11673#11674#0" expanded="true" />
-            <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
+            <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
+            <element signature="e#12840#13473#0" expanded="true" />
+            <element signature="e#13472#13473#0" expanded="true" />
             <element signature="method#modifyTree#0;class#CollectionInterface#0" expanded="false" />
+            <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
+            <element signature="method#modifyWindow#0;class#CollectionInterface#0" expanded="false" />
           </folding>
         </state>
       </provider>
