@@ -1,6 +1,7 @@
 package com.company;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.browser.Browser;
 import org.eclipse.swt.events.*;
@@ -8,6 +9,8 @@ import org.eclipse.swt.graphics.*;
 import org.eclipse.swt.layout.*;
 import org.eclipse.swt.widgets.*;
 
+import java.io.File;
+import java.io.FileReader;
 import java.text.Collator;
 import java.util.ArrayList;
 import java.util.Locale;
@@ -198,15 +201,55 @@ public class CollectionInterface {
       setFilters(setFile);
       peopleFileName = setFile.open();
 
-      if(!Objects.equals(setFile.getFileName(), "")) {
-        info.setEnabled(true);
-        add.setEnabled(true);
-        remove_all.setEnabled(true);
-        remove_first.setEnabled(true);
-        modify.setEnabled(true);
-        save.setEnabled(true);
-        people = CollectionController.readFromFile(peopleFileName);
-        modifyTree(tree);
+      try {
+        String fileContent = "";
+
+        FileReader fileReader = new FileReader(peopleFileName);
+        int c;
+        while ((c = fileReader.read()) != -1) {
+          fileContent = fileContent + (char) c;
+        }
+
+        if (fileContent.matches("\\s*")) {
+          int style = SWT.APPLICATION_MODAL | SWT.YES | SWT.NO;
+          MessageBox question = new MessageBox(shell, style);
+          question.setText("Warning");
+          question.setMessage("This file's empty. Do you want to \nfill it with default content?");
+
+          if (question.open() == 64) {
+            CollectionController.writeDefaultCollectionToFile(peopleFileName);
+            if(!Objects.equals(setFile.getFileName(), "")) {
+              people = CollectionController.readFromFile(peopleFileName);
+              modifyTree(tree);
+              info.setEnabled(true);
+              add.setEnabled(true);
+              remove_all.setEnabled(true);
+              remove_first.setEnabled(true);
+              modify.setEnabled(true);
+              save.setEnabled(true);
+            }
+          }
+        } else {
+          if(!Objects.equals(setFile.getFileName(), "")) {
+            people = CollectionController.readFromFile(peopleFileName);
+            modifyTree(tree);
+            info.setEnabled(true);
+            add.setEnabled(true);
+            remove_all.setEnabled(true);
+            remove_first.setEnabled(true);
+            modify.setEnabled(true);
+            save.setEnabled(true);
+          }
+        }
+
+      } catch (JsonSyntaxException | IllegalStateException ex) {
+        int style = SWT.APPLICATION_MODAL | SWT.OK;
+        MessageBox question = new MessageBox(shell, style);
+        question.setText("Error");
+        question.setMessage("The content of this file \ncan't be collected in the collection");
+        question.open();
+      } catch (Exception ex) {
+
       }
     });
 
@@ -237,15 +280,31 @@ public class CollectionInterface {
     });
 
     // Add Event
-    add.addListener(SWT.Selection, e -> addWindow(display, tree));
+    add.addListener(SWT.Selection, (Event e) -> addWindow(display, tree, shell));
 
     // Remove first event
     remove_first.addListener(SWT.Selection, (Event e) -> {
       try {
         CollectionController.remove_first(people);
-        modifyTree(tree);
+
+        if (people.size() != 0) {
+          modifyTree(tree);
+
+          int style = SWT.APPLICATION_MODAL | SWT.OK;
+          MessageBox window = new MessageBox(shell, style);
+          window.setMessage("Successfully deleted");
+          window.open();
+        } else {
+          throw new Exception("Empty collection");
+        }
       } catch (Exception ex) {
-        ex.printStackTrace();
+        tree.removeAll();
+
+        int style = SWT.APPLICATION_MODAL | SWT.OK;
+        MessageBox window = new MessageBox(shell, style);
+        window.setText("Warning");
+        window.setMessage("Collection is already empty");
+        window.open();
       }
     });
 
@@ -284,7 +343,7 @@ public class CollectionInterface {
     dialog.setFilterExtensions(extension);
   }
 
-  private static void addWindow (Display display, Tree tree) {
+  private static void addWindow (Display display, Tree tree, Shell mainShell) {
     Shell shell = new Shell(display);
     shell.setText("Add element");
     shell.setSize(500, 570);
@@ -396,15 +455,28 @@ public class CollectionInterface {
           shortyJson = matcher.group(1) + group2;
           Gson gson = new Gson();
           try {
-            people.add(gson.fromJson(shortyJson, Shorty.class));
+            Shorty shorty = gson.fromJson(shortyJson, Shorty.class);
+            if (shorty.age < 0) {
+              throw new Exception("Age can't be negative");
+            }
+
+            if (shorty.height <=0 ) {
+              throw new Exception("Height can only be positive");
+            }
+            people.add(shorty);
+            modifyTree(tree);
+            int style = SWT.APPLICATION_MODAL | SWT.OK;
+            MessageBox window = new MessageBox(mainShell, style);
+            window.setText("");
+            window.setMessage("Successfully added");
+            window.open();
           } catch (Exception ex) {
             int style = SWT.APPLICATION_MODAL | SWT.OK;
-            MessageBox error = new MessageBox(shell, style);
+            MessageBox error = new MessageBox(mainShell, style);
             error.setText("Error");
             error.setMessage(ex.getMessage());
             error.open();
           }
-          modifyTree(tree);
         }
         } else {
           Status meaning;
@@ -425,14 +497,30 @@ public class CollectionInterface {
               meaning = Status.all_is_complicated;
           }
           try {
+            if ((spaceName.getText().matches("\\s*")) || (spaceAge.getText().matches("\\s*")) ||
+                  (spaceHeight.getText().matches("\\s*")) || (spaceHobby.getText().matches("\\s*"))) {
+              throw new Exception("Complete the empty fields");
+            } else if ((Integer.parseInt(spaceAge.getText())) < 0) {
+              throw new Exception("Age can't be negative");
+            } else if ((Double.parseDouble(spaceHeight.getText())) <= 0) {
+              throw new Exception("Height can only be positive");
+            }
             people.add(new Shorty(spaceName.getText(), Integer.parseInt(spaceAge.getText()),
                 Double.parseDouble(spaceHeight.getText()), spaceHobby.getText(), meaning));
             modifyTree(tree);
+            int style = SWT.APPLICATION_MODAL | SWT.OK;
+            MessageBox window = new MessageBox(mainShell, style);
+            window.setText("");
+            window.setMessage("Successfully added");
+            window.open();
           } catch (Exception ex) {
-            
+            int style = SWT.APPLICATION_MODAL | SWT.OK;
+            MessageBox error = new MessageBox(mainShell, style);
+            error.setText("Warning");
+            error.setMessage(ex.getMessage());
+            error.open();
           }
         }
-        shell.close();
     });
   }
 
@@ -510,24 +598,34 @@ public class CollectionInterface {
 
     // Remove Event
     remove.addListener(SWT.Selection, (Event e) -> {
-      java.util.regex.Pattern removeAllRegex = java.util.regex.Pattern.compile("\\s*(\\{.+)(\\{.+}\\s*})");
-      Matcher matcher = removeAllRegex.matcher(jsonString.getText());
-      if (matcher.matches()) {
-        // Removes extra brackets
-        String shortyJson, group2;
-        group2 = matcher.group(2).trim().substring(1, matcher.group(2).length() - 1);
-        shortyJson = matcher.group(1) + group2;
-
-        try {
-          CollectionController.remove_all(people, shortyJson);
-        } catch (Exception ex) {
-          ex.printStackTrace();
+      try {
+        if (people.size() == 0) {
+          throw new Exception("Collection is already empty");
         }
+        java.util.regex.Pattern removeAllRegex = java.util.regex.Pattern.compile("\\s*(\\{.+)(\\{.+}\\s*})");
+        Matcher matcher = removeAllRegex.matcher(jsonString.getText());
+        if (matcher.matches()) {
+          // Removes extra brackets
+          String shortyJson, group2;
+          group2 = matcher.group(2).trim().substring(1, matcher.group(2).length() - 1);
+          shortyJson = matcher.group(1) + group2;
 
-        modifyTree(tree);
-      } else {
-        System.out.println("\n This command isn't supported \n P.S. If you want, you can use 'help' \n");
-      }
+          int number = CollectionController.remove_all(people, shortyJson);
+          modifyTree(tree);
+
+          int style = SWT.APPLICATION_MODAL | SWT.OK;
+          MessageBox window = new MessageBox(shell, style);
+          window.setText("");
+          window.setMessage("Successfully deleted " + number + " objects");
+          window.open();
+        }
+      } catch (Exception ex) {
+        int style = SWT.APPLICATION_MODAL | SWT.OK;
+        MessageBox error = new MessageBox(shell, style);
+        error.setText("Warning");
+        error.setMessage(ex.getMessage());
+        error.open();
+        }
     });
   }
 
@@ -590,20 +688,62 @@ public class CollectionInterface {
         default:
           meaning = Status.all_is_complicated;
       }
-
+      String expected_name, expected_hobby;
+      int expected_age;
+      double expected_height;
       try {
-        Shorty shorty = new Shorty(spaceName.getText(), Integer.parseInt(spaceAge.getText()),
-              Double.parseDouble(spaceHeight.getText()), spaceHobby.getText(), meaning);
+        if (index.getText().matches("\\s*")) {
+          throw new Exception("Input index");
+        } else if ((Integer.parseInt(index.getText()) < 0) || (Integer.parseInt(index.getText())
+              >= people.size())) {
+          throw new Exception("Index out of collection size");
+        }
+
+        if (spaceName.getText().matches("\\s*")) {
+          expected_name = people.get(Integer.parseInt(index.getText())).name;
+        } else {
+          expected_name = spaceName.getText();
+        }
+
+        if (spaceAge.getText().matches("\\s*")) {
+            expected_age = people.get(Integer.parseInt(index.getText())).age;
+        } else if ((Integer.parseInt(spaceAge.getText())) < 0) {
+            throw new Exception("Age can't be negative");
+        } else {
+            expected_age = Integer.parseInt(spaceAge.getText());
+        }
+
+        if (spaceHeight.getText().matches("\\s*")) {
+          expected_height = people.get(Integer.parseInt(index.getText())).height;
+        } else if ((Double.parseDouble(spaceHeight.getText())) <= 0) {
+          throw new Exception("Height can only be positive");
+        } else {
+          expected_height = Double.parseDouble(spaceHeight.getText());
+        }
+
+        if (spaceHobby.getText().matches("\\s*")) {
+          expected_hobby = people.get(Integer.parseInt(index.getText())).hobby;
+        } else {
+          expected_hobby = spaceHobby.getText();
+        }
+
+        Shorty shorty = new Shorty(expected_name, expected_age, expected_height, expected_hobby, meaning);
         people.set(Integer.parseInt(index.getText()), shorty);
+
+        modifyTree(tree);
+
+        int style = SWT.APPLICATION_MODAL | SWT.OK;
+        MessageBox window = new MessageBox(shell, style);
+        window.setText("");
+        window.setMessage("Successfully modified");
+        window.open();
       } catch (Exception ex) {
         int style = SWT.APPLICATION_MODAL | SWT.OK;
         MessageBox error = new MessageBox(shell, style);
-        error.setText("Error");
+        error.setText("Warning");
         error.setMessage(ex.getMessage());
         error.open();
       }
-      modifyTree(tree);
     });
   }
-
 }

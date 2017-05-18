@@ -20,10 +20,6 @@ public class CollectionController {
     try {
       String fileContent = "";
 
-      if (new File(peopleFileName).length() == 0) {
-        writeDefaultCollectionToFile(peopleFileName);
-      }
-
       FileReader fileReader = new FileReader(peopleFileName);
       int c;
       while ((c = fileReader.read()) != -1) {
@@ -51,18 +47,27 @@ public class CollectionController {
       Comparator<Shorty> shortyComparator = new Shorty();
       searchedCollection.sort(shortyComparator);
 
-    } catch (FileNotFoundException e) {
+    } catch (IOException e) {
       System.out.println("This file isn't exists");
       System.exit(1);
-    } catch (JsonSyntaxException e) {
-      System.out.println("The contents of this file can't be collected in the collection");
-      System.exit(1);
-    } catch (Exception e) {
-      System.out.println("Oops: " + e.getMessage());
     }
 
     return searchedCollection;
   }
+
+  public static void writeDefaultCollectionToFile(String peopleFileName) {
+    try (PrintWriter pw = new PrintWriter(peopleFileName)) {
+      for (int a = 0; a < Shorty.defaultCollection().size(); a++) {
+        pw.print(Shorty.defaultCollection().get(a).toString());
+        pw.print("; ");
+      }
+
+    } catch (Exception ex) {
+      System.out.println("Oops: " + ex.getMessage());
+    }
+
+  }
+
 
   /**
    * Saves current conditions to file
@@ -99,11 +104,6 @@ public class CollectionController {
    */
   public static void remove_first(ArrayList<Shorty> people) throws Exception {
     people.remove(0);
-    System.out.println("Successfully deleted");
-
-    if (people.size() == 0) {
-      throw new Exception("Empty collection");
-    }
   }
 
   /**
@@ -112,7 +112,7 @@ public class CollectionController {
    * @param people  - collection to be interacted with
    * @param shortyJson - shorty pattern by which will delete from collection
    */
-  public static void remove_all(ArrayList<Shorty> people, String shortyJson) throws Exception {
+  public static int remove_all(ArrayList<Shorty> people, String shortyJson) throws Exception {
     Gson gson = new Gson();
     Shorty example_object = gson.fromJson(shortyJson, Shorty.class);
     ArrayList<Integer> indexArray = new ArrayList<>();
@@ -131,10 +131,7 @@ public class CollectionController {
       people.remove(c);
     }
 
-    System.out.println("Successfully deleted " + indexArray.size() + " objects");
-    if (people.size() == 0) {
-      throw new Exception("Empty collection");
-    }
+    return indexArray.size();
   }
 
   private static String getLastModificationDate(String peopleFileName) {
@@ -142,35 +139,5 @@ public class CollectionController {
     SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
     return formatter.format(lastModified);
-  }
-
-  private static void writeDefaultCollectionToFile(String peopleFileName) {
-    System.out.println("\n This file's empty. Do you want to fill the file with default content? \n Write yes/no.");
-
-    String answer = new Scanner(System.in).nextLine();
-    switch (answer) {
-      case "yes":
-        try (PrintWriter pw = new PrintWriter(peopleFileName)) {
-          File file = new File(peopleFileName);
-          if (!file.exists()) {
-            boolean isCreated = file.createNewFile();
-            if (!isCreated) {
-              throw new Exception("Can't create new file");
-            }
-          }
-
-          for (int a = 0; a < Shorty.defaultCollection().size(); a++) {
-            pw.print(Shorty.defaultCollection().get(a).toString());
-            pw.print("; ");
-          }
-
-        } catch (Exception ex) {
-          System.out.println("Oops: " + ex.getMessage());
-        }
-
-        break;
-      case "no":
-        System.exit(1);
-    }
   }
 }
