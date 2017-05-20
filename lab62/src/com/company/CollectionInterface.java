@@ -12,10 +12,9 @@ import org.eclipse.swt.widgets.*;
 import java.io.File;
 import java.io.FileReader;
 import java.text.Collator;
-import java.util.ArrayList;
-import java.util.Locale;
-import java.util.Objects;
+import java.util.*;
 import java.util.regex.*;
+import java.util.regex.Pattern;
 
 import static com.sun.xml.internal.fastinfoset.alphabet.BuiltInRestrictedAlphabets.table;
 
@@ -175,6 +174,11 @@ public class CollectionInterface {
     new MenuItem(menu, SWT.SEPARATOR);
     tree.setMenu(menu);
 
+    // Names Sort Event
+    names.addListener(SWT.Selection, e -> {
+      sort(tree);
+    });
+
     // Create column for browser
     data = new GridData(SWT.FILL, SWT.FILL, true, true);
     Composite browserWindow = new Composite (shell, SWT.BORDER);
@@ -197,64 +201,75 @@ public class CollectionInterface {
 
     // Set Event
     set.addListener (SWT.Selection, e -> {
-      FileDialog setFile = new FileDialog(shell, SWT.OPEN);
-      setFilters(setFile);
-      peopleFileName = setFile.open();
+      Display.getDefault().syncExec(new Runnable() {
+        public void run() {
+          FileDialog setFile = new FileDialog(shell, SWT.OPEN);
+          setFilters(setFile);
+          peopleFileName = setFile.open();
 
-      try {
-        String fileContent = "";
+          try {
+            String fileContent = "";
 
-        FileReader fileReader = new FileReader(peopleFileName);
-        int c;
-        while ((c = fileReader.read()) != -1) {
-          fileContent = fileContent + (char) c;
-        }
-
-        if (fileContent.matches("\\s*")) {
-          int style = SWT.APPLICATION_MODAL | SWT.YES | SWT.NO;
-          MessageBox question = new MessageBox(shell, style);
-          question.setText("Warning");
-          question.setMessage("This file's empty. Do you want to \nfill it with default content?");
-
-          if (question.open() == 64) {
-            CollectionController.writeDefaultCollectionToFile(peopleFileName);
-            if(!Objects.equals(setFile.getFileName(), "")) {
-              people = CollectionController.readFromFile(peopleFileName);
-              modifyTree(tree);
-              info.setEnabled(true);
-              add.setEnabled(true);
-              remove_all.setEnabled(true);
-              remove_first.setEnabled(true);
-              modify.setEnabled(true);
-              save.setEnabled(true);
+            FileReader fileReader = new FileReader(peopleFileName);
+            int c;
+            while ((c = fileReader.read()) != -1) {
+              fileContent = fileContent + (char) c;
             }
-          }
-        } else {
-          if(!Objects.equals(setFile.getFileName(), "")) {
-            people = CollectionController.readFromFile(peopleFileName);
-            modifyTree(tree);
-            info.setEnabled(true);
-            add.setEnabled(true);
-            remove_all.setEnabled(true);
-            remove_first.setEnabled(true);
-            modify.setEnabled(true);
-            save.setEnabled(true);
+
+            if (fileContent.matches("\\s*")) {
+              int style = SWT.APPLICATION_MODAL | SWT.YES | SWT.NO;
+              MessageBox question = new MessageBox(shell, style);
+              question.setText("Warning");
+              question.setMessage("This file's empty. Do you want to \nfill it with default content?");
+
+              if (question.open() == 64) {
+                CollectionController.writeDefaultCollectionToFile(peopleFileName);
+                if (!Objects.equals(setFile.getFileName(), "")) {
+                  people = CollectionController.readFromFile(peopleFileName);
+                  modifyTree(tree);
+                  info.setEnabled(true);
+                  add.setEnabled(true);
+                  remove_all.setEnabled(true);
+                  remove_first.setEnabled(true);
+                  modify.setEnabled(true);
+                  save.setEnabled(true);
+                }
+              }
+            } else {
+              if (!Objects.equals(setFile.getFileName(), "")) {
+                people = CollectionController.readFromFile(peopleFileName);
+                modifyTree(tree);
+                info.setEnabled(true);
+                add.setEnabled(true);
+                remove_all.setEnabled(true);
+                remove_first.setEnabled(true);
+                modify.setEnabled(true);
+                save.setEnabled(true);
+              }
+            }
+
+          } catch (JsonSyntaxException | IllegalStateException ex) {
+            int style = SWT.APPLICATION_MODAL | SWT.OK;
+            MessageBox question = new MessageBox(shell, style);
+            question.setText("Error");
+            question.setMessage("The content of this file \ncan't be collected in the collection");
+            question.open();
+          } catch (Exception ex) {
+
           }
         }
-
-      } catch (JsonSyntaxException | IllegalStateException ex) {
-        int style = SWT.APPLICATION_MODAL | SWT.OK;
-        MessageBox question = new MessageBox(shell, style);
-        question.setText("Error");
-        question.setMessage("The content of this file \ncan't be collected in the collection");
-        question.open();
-      } catch (Exception ex) {
-
-      }
+      });
     });
 
     // Save Event
-    save.addListener (SWT.Selection, e -> CollectionController.writeToFile(peopleFileName, people));
+    save.addListener (SWT.Selection, e -> {
+      Thread thread = new Thread(new Runnable() {
+        public void run() {
+          CollectionController.writeToFile(peopleFileName, people);
+        }
+      });
+      thread.start();
+    });
 
     // DayLight Event
     dayLight.addListener (SWT.Selection, e -> {
@@ -549,31 +564,29 @@ public class CollectionInterface {
   private static void modifyTree (Tree tree) {
     tree.removeAll();
     tree.setRedraw(false);
-    TreeItem item = new TreeItem(tree, SWT.NONE);
+    TreeItem item;
     TreeItem subItem;
-    for(Shorty shorty: people) {
-      if(people.indexOf(shorty) == 0) {
-        item = new TreeItem(tree, SWT.NONE);
-        item.setText(new String[] {shorty.name, Integer.toString(shorty.age), Double.toString(shorty.height),
-              shorty.hobby, shorty.status.toString()});
+    Shorty shorty;
+
+    item = new TreeItem(tree, SWT.NONE);
+    item.setText(new String[] {people.get(0).name, Integer.toString(people.get(0).age),
+        Double.toString(people.get(0).height), people.get(0).hobby, people.get(0).status.toString()});
+
+    for (int i = 1; i <people.size(); i++) {
+      shorty = people.get(i);
+
+      if(shorty.compare(shorty, people.get(people.indexOf(shorty) - 1)) == 0) {
+        subItem = new TreeItem(item, SWT.NONE);
+        subItem.setText(new String[] {shorty.name, Integer.toString(shorty.age), Double.toString(shorty.height),
+            shorty.hobby, shorty.status.toString()});
       }
       else {
-        if(shorty.compare(shorty, people.get(people.indexOf(shorty) - 1)) == 0) {
-          subItem = new TreeItem(item, SWT.NONE);
-          subItem.setText(new String[] {shorty.name, Integer.toString(shorty.age), Double.toString(shorty.height),
-                shorty.hobby, shorty.status.toString()});
-        }
-        else {
-          item = new TreeItem(tree, SWT.NONE);
-          item.setText(new String[] {shorty.name, Integer.toString(shorty.age), Double.toString(shorty.height),
-                shorty.hobby, shorty.status.toString()});
-        }
+        item = new TreeItem(tree, SWT.NONE);
+        item.setText(new String[] {shorty.name, Integer.toString(shorty.age), Double.toString(shorty.height),
+            shorty.hobby, shorty.status.toString()});
       }
-
-
     }
     tree.setRedraw(true);
-
   }
 
   private static void removeWindow (Display display, Tree tree) {
@@ -746,4 +759,42 @@ public class CollectionInterface {
       }
     });
   }
+
+  private static void sort(Tree tree) {
+    TreeSet<String> sortedFields = new TreeSet<>();
+    int i = 0, numberOfItem, numberOfSubItem, j = 0;
+    String hashCode;
+    Pattern itemPattern = Pattern.compile(".*&(\\d+)");
+    Pattern subItemPattern = Pattern.compile(".*&\\d+&(\\d+)");
+    Matcher matcher;
+
+    for (TreeItem item: tree.getItems()) {
+      hashCode = item.getText(0) + "&" + i;
+      sortedFields.add(hashCode);
+      i++;
+      for (TreeItem subItem: item.getItems()) {
+        hashCode = subItem.getText(0) + "&" + i + "&" + j;
+        sortedFields.add(hashCode);
+      }
+      j = 0;
+    }
+    people.clear();
+    try {
+      for (String object : sortedFields) {
+        matcher = itemPattern.matcher(object);
+        if (matcher.matches()) {
+          matcher = itemPattern.matcher(object);
+          numberOfItem = Integer.parseInt(matcher.group(1));
+        } else {
+          matcher = subItemPattern.matcher(object);
+          numberOfItem = Integer.parseInt(matcher.group(1));
+          numberOfSubItem = Integer.parseInt(matcher.group(2));
+        }
+
+      }
+    } catch (Exception ex) {
+
+    }
+  }
 }
+
