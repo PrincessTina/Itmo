@@ -1,28 +1,22 @@
 package com.company;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonSyntaxException;
+import com.google.gson.*;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.browser.Browser;
 import org.eclipse.swt.events.*;
 import org.eclipse.swt.graphics.*;
 import org.eclipse.swt.layout.*;
 import org.eclipse.swt.widgets.*;
-
-import java.io.File;
 import java.io.FileReader;
-import java.text.Collator;
 import java.util.*;
 import java.util.regex.*;
 import java.util.regex.Pattern;
 
-import static com.sun.xml.internal.fastinfoset.alphabet.BuiltInRestrictedAlphabets.table;
-
-public class CollectionInterface {
+class CollectionInterface {
   private static String peopleFileName = "";
   private static ArrayList<Shorty> people = new ArrayList<>();
 
-  public static void createInterface() {
+  static void createInterface() {
     // windows's settings
     Display display = new Display();
     Shell shell = new Shell(display);
@@ -142,7 +136,7 @@ public class CollectionInterface {
     data.horizontalSpan = 1;
     data.grabExcessHorizontalSpace = true;
     search.setLayoutData(data);
-    search.setBackgroundImage(new Image (display, "..\\24.jpg"));
+    search.setBackgroundImage(new Image (display, "..\\..\\24.jpg"));
 
     // Create column for tree
     data = new GridData(SWT.FILL, SWT.FILL, true, true);
@@ -150,34 +144,49 @@ public class CollectionInterface {
     treeWindow.setSize(500, SWT.NONE);
     treeWindow.setLayoutData(data);
     treeWindow.setLayout(new GridLayout());
-    treeWindow.setBackgroundImage(new Image (display, "..\\24.jpg"));
+    treeWindow.setBackgroundImage(new Image (display, "..\\..\\24.jpg"));
 
     // Tree of the shorty's
     Tree tree = new Tree(treeWindow, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
-    createTree(tree);
+    createTree(shell, tree);
 
     Menu menu = new Menu(shell, SWT.POP_UP);
-    MenuItem names = new MenuItem(menu, SWT.PUSH);
-    names.setText("Names Sort");
-    new MenuItem(menu, SWT.SEPARATOR);
-    MenuItem ages = new MenuItem(menu, SWT.POP_UP);
-    ages.setText("Ages Sort");
-    new MenuItem(menu, SWT.SEPARATOR);
-    MenuItem heights = new MenuItem(menu, SWT.PUSH);
-    heights.setText("Heights Sort");
-    new MenuItem(menu, SWT.SEPARATOR);
-    MenuItem hobbies = new MenuItem(menu, SWT.PUSH);
-    hobbies.setText("Hobbies Sort");
-    new MenuItem(menu, SWT.SEPARATOR);
-    MenuItem statuses = new MenuItem(menu, SWT.PUSH);
-    statuses.setText("Statuses Sort");
-    new MenuItem(menu, SWT.SEPARATOR);
+    MenuItem sort = new MenuItem(menu, SWT.CASCADE);
+    sort.setText("Sort by");
+    Menu subMenu = new Menu(menu);
+    sort.setMenu(subMenu);
+
+    MenuItem names = new MenuItem(subMenu, SWT.PUSH);
+    names.setText("Names");
+    new MenuItem(subMenu, SWT.SEPARATOR);
+    MenuItem ages = new MenuItem(subMenu, SWT.POP_UP);
+    ages.setText("Ages");
+    new MenuItem(subMenu, SWT.SEPARATOR);
+    MenuItem heights = new MenuItem(subMenu, SWT.PUSH);
+    heights.setText("Heights");
+    new MenuItem(subMenu, SWT.SEPARATOR);
+    MenuItem hobbies = new MenuItem(subMenu, SWT.PUSH);
+    hobbies.setText("Hobbies");
+    new MenuItem(subMenu, SWT.SEPARATOR);
+    MenuItem statuses = new MenuItem(subMenu, SWT.PUSH);
+    statuses.setText("Statuses");
+    new MenuItem(subMenu, SWT.SEPARATOR);
     tree.setMenu(menu);
 
     // Names Sort Event
-    names.addListener(SWT.Selection, e -> {
-      sort(tree);
-    });
+    names.addListener(SWT.Selection, e -> sort(shell, tree, 0));
+
+    // Ages Sort Event
+    ages.addListener(SWT.Selection, e -> sort(shell, tree, 1));
+
+    // Heights Sort Event
+    heights.addListener(SWT.Selection, e -> sort(shell, tree, 2));
+
+    // Hobbies Sort Event
+    hobbies.addListener(SWT.Selection, e -> sort(shell, tree, 3));
+
+    // Status Sort Event
+    statuses.addListener(SWT.Selection, e -> sort(shell, tree, 4));
 
     // Create column for browser
     data = new GridData(SWT.FILL, SWT.FILL, true, true);
@@ -191,7 +200,7 @@ public class CollectionInterface {
     browser.setLayoutData(data);
 
     // Search event
-    search.addListener(SWT.DefaultSelection, e -> {
+    search.addListener(SWT.DefaultSelection, (Event e) -> {
       String url = "";
       for(String tokens: search.getText().split(" ")) {
         url = url + tokens + "%20";
@@ -200,88 +209,80 @@ public class CollectionInterface {
     });
 
     // Set Event
-    set.addListener (SWT.Selection, e -> {
-      Display.getDefault().syncExec(new Runnable() {
-        public void run() {
-          FileDialog setFile = new FileDialog(shell, SWT.OPEN);
-          setFilters(setFile);
-          peopleFileName = setFile.open();
+    set.addListener (SWT.Selection, e -> Display.getDefault().syncExec(() -> {
+      FileDialog setFile = new FileDialog(shell, SWT.OPEN);
+      setFilters(setFile);
+      peopleFileName = setFile.open();
 
-          try {
-            String fileContent = "";
+      try {
+        String fileContent = "";
 
-            FileReader fileReader = new FileReader(peopleFileName);
-            int c;
-            while ((c = fileReader.read()) != -1) {
-              fileContent = fileContent + (char) c;
+        FileReader fileReader = new FileReader(peopleFileName);
+        int c;
+        while ((c = fileReader.read()) != -1) {
+          fileContent = fileContent + (char) c;
+        }
+
+        if (fileContent.matches("\\s*")) {
+          int style = SWT.APPLICATION_MODAL | SWT.YES | SWT.NO;
+          MessageBox question = new MessageBox(shell, style);
+          question.setText("Warning");
+          question.setMessage("This file's empty. Do you want to \nfill it with default content?");
+
+          if (question.open() == 64) {
+            CollectionController.writeDefaultCollectionToFile(peopleFileName);
+            if (!Objects.equals(setFile.getFileName(), "")) {
+              people = CollectionController.readFromFile(peopleFileName);
+              modifyTree(tree);
+              info.setEnabled(true);
+              add.setEnabled(true);
+              remove_all.setEnabled(true);
+              remove_first.setEnabled(true);
+              modify.setEnabled(true);
+              save.setEnabled(true);
             }
-
-            if (fileContent.matches("\\s*")) {
-              int style = SWT.APPLICATION_MODAL | SWT.YES | SWT.NO;
-              MessageBox question = new MessageBox(shell, style);
-              question.setText("Warning");
-              question.setMessage("This file's empty. Do you want to \nfill it with default content?");
-
-              if (question.open() == 64) {
-                CollectionController.writeDefaultCollectionToFile(peopleFileName);
-                if (!Objects.equals(setFile.getFileName(), "")) {
-                  people = CollectionController.readFromFile(peopleFileName);
-                  modifyTree(tree);
-                  info.setEnabled(true);
-                  add.setEnabled(true);
-                  remove_all.setEnabled(true);
-                  remove_first.setEnabled(true);
-                  modify.setEnabled(true);
-                  save.setEnabled(true);
-                }
-              }
-            } else {
-              if (!Objects.equals(setFile.getFileName(), "")) {
-                people = CollectionController.readFromFile(peopleFileName);
-                modifyTree(tree);
-                info.setEnabled(true);
-                add.setEnabled(true);
-                remove_all.setEnabled(true);
-                remove_first.setEnabled(true);
-                modify.setEnabled(true);
-                save.setEnabled(true);
-              }
-            }
-
-          } catch (JsonSyntaxException | IllegalStateException ex) {
-            int style = SWT.APPLICATION_MODAL | SWT.OK;
-            MessageBox question = new MessageBox(shell, style);
-            question.setText("Error");
-            question.setMessage("The content of this file \ncan't be collected in the collection");
-            question.open();
-          } catch (Exception ex) {
-
+          }
+        } else {
+          if (!Objects.equals(setFile.getFileName(), "")) {
+            people = CollectionController.readFromFile(peopleFileName);
+            modifyTree(tree);
+            info.setEnabled(true);
+            add.setEnabled(true);
+            remove_all.setEnabled(true);
+            remove_first.setEnabled(true);
+            modify.setEnabled(true);
+            save.setEnabled(true);
           }
         }
-      });
-    });
+
+      } catch (JsonSyntaxException | IllegalStateException ex) {
+        int style = SWT.APPLICATION_MODAL | SWT.OK;
+        MessageBox question = new MessageBox(shell, style);
+        question.setText("Error");
+        question.setMessage("The content of this file \ncan't be collected in the collection");
+        question.open();
+      } catch (Exception ex) {
+        System.out.println(ex.getMessage());
+      }
+    }));
 
     // Save Event
-    save.addListener (SWT.Selection, e -> {
-      Thread thread = new Thread(new Runnable() {
-        public void run() {
-          CollectionController.writeToFile(peopleFileName, people);
-        }
-      });
+    save.addListener (SWT.Selection, (Event e) -> {
+      Thread thread = new Thread(() -> CollectionController.writeToFile(peopleFileName, people));
       thread.start();
     });
 
     // DayLight Event
     dayLight.addListener (SWT.Selection, e -> {
-      treeWindow.setBackgroundImage(new Image (display, "..\\clear.jpg"));
-      search.setBackgroundImage(new Image (display, "..\\clear.jpg"));
+      treeWindow.setBackgroundImage(new Image (display, "..\\..\\clear.jpg"));
+      search.setBackgroundImage(new Image (display, "..\\..\\clear.jpg"));
       search.setForeground(new Color(display, 0, 0, 0));
     });
 
     // NightTime Event
     nightTime.addListener (SWT.Selection, e -> {
-      treeWindow.setBackgroundImage(new Image (display, "..\\24.jpg"));
-      search.setBackgroundImage(new Image (display, "..\\24.jpg"));
+      treeWindow.setBackgroundImage(new Image (display, "..\\..\\24.jpg"));
+      search.setBackgroundImage(new Image (display, "..\\..\\24.jpg"));
       search.setForeground(new Color(display, 255, 255, 255));
     });
 
@@ -332,7 +333,7 @@ public class CollectionInterface {
     // Names Sort Event
     names.addListener(SWT.Selection, (Event e) -> {
       for(TreeColumn column: tree.getColumns()) {
-        if(column.getText() == "Name") {
+        if(Objects.equals(column.getText(), "Name")) {
           tree.setSortColumn(column);
         }
       }
@@ -380,8 +381,8 @@ public class CollectionInterface {
     Scale scale = new Scale(scalePlace, SWT.HORIZONTAL | SWT.BORDER);
     scale.setMinimum(0);
     scale.setIncrement(1);
-    scale.setPageIncrement(5);
-    scale.setMaximum(100);
+    scale.setPageIncrement(1);
+    scale.setMaximum(1);
     scale.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, true));
 
     // Json
@@ -437,7 +438,7 @@ public class CollectionInterface {
     //Listener for Scale
     scale.addSelectionListener(new SelectionAdapter() {
       public void widgetSelected(SelectionEvent selectionEvent) {
-        if (scale.getSelection() <= 50) {
+        if (scale.getSelection() < 1) {
           spaceAge.setEnabled(true);
           spaceHeight.setEnabled(true);
           spaceName.setEnabled(true);
@@ -460,14 +461,14 @@ public class CollectionInterface {
     // Add element event
     add_element.addListener(SWT.Selection, (Event e) -> {
       if (spaceJson.getEnabled()) {
-        java.util.regex.Pattern removeAllRegex = java.util.regex.Pattern.compile("\\s*(\\{.+)(\\{.+}\\s*})");
+        java.util.regex.Pattern removeAllRegex = java.util.regex.Pattern.compile("\\s*(\\{(.+\\s*)*)(\\{.+}\\s*})");
         Matcher matcher = removeAllRegex.matcher(spaceJson.getText());
 
         if (matcher.matches()) {
           // Removes extra brackets
-          String shortyJson, group2;
-          group2 = matcher.group(2).trim().substring(1, matcher.group(2).length() - 1);
-          shortyJson = matcher.group(1) + group2;
+          String shortyJson, group3;
+          group3 = matcher.group(3).trim().substring(1, matcher.group(3).length() - 1);
+          shortyJson = matcher.group(1) + group3;
           Gson gson = new Gson();
           try {
             Shorty shorty = gson.fromJson(shortyJson, Shorty.class);
@@ -539,7 +540,7 @@ public class CollectionInterface {
     });
   }
 
-  private static void createTree(Tree tree) {
+  private static void createTree(Shell shell, Tree tree) {
     GridData data = new GridData(SWT.FILL, SWT.FILL, true, true);
     tree.setHeaderVisible(true);
     TreeColumn column1 = new TreeColumn(tree, SWT.CENTER | SWT.PUSH);
@@ -559,7 +560,22 @@ public class CollectionInterface {
     column5.setText("Status");
     column5.setWidth(130);
     tree.setLayoutData(data);
-  }
+
+    // Names Sorting
+    column1.addListener(SWT.Selection, e -> sort(shell, tree, 0));
+
+    // Ages Sorting
+    column2.addListener(SWT.Selection, e -> sort(shell, tree, 1));
+
+    // Heights Sorting
+    column3.addListener(SWT.Selection, e -> sort(shell, tree, 2));
+
+    // Hobbies Sorting
+    column4.addListener(SWT.Selection, e -> sort(shell, tree, 3));
+
+    // Statuses Sorting
+    column5.addListener(SWT.Selection, e -> sort(shell, tree, 4));
+}
 
   private static void modifyTree (Tree tree) {
     tree.removeAll();
@@ -649,7 +665,7 @@ public class CollectionInterface {
     shell.setLayout(new GridLayout());
 
     Label title = new Label(shell, SWT.NULL);
-    title.setText("Input index of element that you want to \nchange and then new parametres");
+    title.setText("Input index of element that you want to \nchange and then new parameters");
 
     new Label(shell, SWT.NULL).setText("Index");
     Text index = new Text(shell, SWT.BORDER | SWT.FILL);
@@ -760,40 +776,97 @@ public class CollectionInterface {
     });
   }
 
-  private static void sort(Tree tree) {
-    TreeSet<String> sortedFields = new TreeSet<>();
-    int i = 0, numberOfItem, numberOfSubItem, j = 0;
-    String hashCode;
-    Pattern itemPattern = Pattern.compile(".*&(\\d+)");
-    Pattern subItemPattern = Pattern.compile(".*&\\d+&(\\d+)");
-    Matcher matcher;
-
-    for (TreeItem item: tree.getItems()) {
-      hashCode = item.getText(0) + "&" + i;
-      sortedFields.add(hashCode);
-      i++;
-      for (TreeItem subItem: item.getItems()) {
-        hashCode = subItem.getText(0) + "&" + i + "&" + j;
-        sortedFields.add(hashCode);
-      }
-      j = 0;
-    }
-    people.clear();
+  private static void sort(Shell shell, Tree tree, int sortedColumn) {
     try {
+      if (people.size() == 0) {
+        throw new Exception("Collection is already empty");
+      }
+      TreeSet<String> sortedFields = new TreeSet<>();
+      int i = 0, numberOfItem, numberOfSubItem, j = 0;
+      String hashCode;
+      Pattern itemPattern = Pattern.compile(".*&(\\d+)");
+      Pattern subItemPattern = Pattern.compile(".*&(\\d+)&(\\d+)");
+      Matcher matcher;
+
+      // Creating array of searched mean + number of item [+ number of subitem]
+      for (TreeItem item : tree.getItems()) {
+        hashCode = item.getText(sortedColumn) + "&" + i;
+        sortedFields.add(hashCode);
+        for (TreeItem subItem : item.getItems()) {
+          hashCode = subItem.getText(sortedColumn) + "&" + i + "&" + j;
+          sortedFields.add(hashCode);
+          j++;
+        }
+        j = 0;
+        i++;
+      }
+
+      people.clear();
+
+      // Creating new people collection
       for (String object : sortedFields) {
-        matcher = itemPattern.matcher(object);
+        matcher = subItemPattern.matcher(object);
         if (matcher.matches()) {
-          matcher = itemPattern.matcher(object);
-          numberOfItem = Integer.parseInt(matcher.group(1));
-        } else {
-          matcher = subItemPattern.matcher(object);
           numberOfItem = Integer.parseInt(matcher.group(1));
           numberOfSubItem = Integer.parseInt(matcher.group(2));
+          TreeItem item1 = tree.getItem(numberOfItem);
+          TreeItem item = item1.getItem(numberOfSubItem);
+          Status meaning;
+          switch (item.getText(4)) {
+            case "married":
+              meaning = Status.married;
+              break;
+            case "have_a_girlfriend":
+              meaning = Status.have_a_girlfriend;
+              break;
+            case "idle":
+              meaning = Status.idle;
+              break;
+            case "single":
+              meaning = Status.single;
+              break;
+            default:
+              meaning = Status.all_is_complicated;
+          }
+
+          people.add(new Shorty(item.getText(0), Integer.parseInt(item.getText(1)), Double.parseDouble(item.getText(2)),
+              item.getText(3), meaning));
+        } else {
+          matcher = itemPattern.matcher(object);
+          if (matcher.matches()) {
+            numberOfItem = Integer.parseInt(matcher.group(1));
+
+            TreeItem item = tree.getItem(numberOfItem);
+            Status meaning;
+            switch (item.getText(4)) {
+              case "married":
+                meaning = Status.married;
+                break;
+              case "have_a_girlfriend":
+                meaning = Status.have_a_girlfriend;
+                break;
+              case "idle":
+                meaning = Status.idle;
+                break;
+              case "single":
+                meaning = Status.single;
+                break;
+              default:
+                meaning = Status.all_is_complicated;
+            }
+
+            people.add(new Shorty(item.getText(0), Integer.parseInt(item.getText(1)), Double.parseDouble(item.getText(2)),
+                item.getText(3), meaning));
+          }
         }
-
       }
+      modifyTree(tree);
     } catch (Exception ex) {
-
+      int style = SWT.APPLICATION_MODAL | SWT.OK;
+      MessageBox error = new MessageBox(shell, style);
+      error.setText("Warning");
+      error.setMessage(ex.getMessage());
+      error.open();
     }
   }
 }

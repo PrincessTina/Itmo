@@ -31,14 +31,14 @@
       <file leaf-file-name="CollectionInterface.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/CollectionInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3416">
-              <caret line="269" column="9" lean-forward="true" selection-start-line="269" selection-start-column="9" selection-end-line="269" selection-end-column="9" />
+            <state relative-caret-position="1812">
+              <caret line="862" column="23" lean-forward="false" selection-start-line="862" selection-start-column="23" selection-end-line="862" selection-end-column="23" />
               <folding>
-                <element signature="e#9525#9526#0" expanded="true" />
-                <element signature="e#9603#9604#0" expanded="true" />
+                <element signature="imports" expanded="true" />
                 <element signature="method#setFilters#0;class#CollectionInterface#0" expanded="false" />
                 <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
                 <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
+                <element signature="method#modifyTree#0;class#CollectionInterface#0" expanded="false" />
                 <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
                 <element signature="method#modifyWindow#0;class#CollectionInterface#0" expanded="false" />
               </folding>
@@ -46,26 +46,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventTable.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/swt/org.eclipse.swt.win32.win32.x86_64/4.3/org.eclipse.swt.win32.win32.x86_64-4.3.jar!/org/eclipse/swt/widgets/EventTable.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="94" column="37" lean-forward="false" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CollectionController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/CollectionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="16" column="70" lean-forward="false" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+            <state relative-caret-position="1725">
+              <caret line="113" column="2" lean-forward="false" selection-start-line="113" selection-start-column="2" selection-end-line="113" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
                 <element signature="method#readFromFile#0;class#CollectionController#0" expanded="false" />
-                <marker date="1495175231121" expanded="false" signature="4407:4411" ph="{...}" />
+                <marker date="1495325820759" expanded="false" signature="4314:4318" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -74,12 +64,11 @@
       <file leaf-file-name="Shorty.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Shorty.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+            <state relative-caret-position="650">
+              <caret line="40" column="2" lean-forward="false" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
               <folding>
                 <element signature="method#toString#0;class#Shorty#0" expanded="false" />
                 <element signature="method#compare#0;class#Shorty#0" expanded="false" />
-                <element signature="method#defaultCollection#0;class#Shorty#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -115,6 +104,7 @@
       <find>composite</find>
       <find>com</find>
       <find>composit</find>
+      <find>name</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -126,9 +116,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/company/Dialog.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Shorty.java" />
         <option value="$PROJECT_DIR$/src/com/company/Status.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Shorty.java" />
         <option value="$PROJECT_DIR$/src/com/company/CollectionController.java" />
         <option value="$PROJECT_DIR$/src/com/company/CollectionInterface.java" />
       </list>
@@ -156,6 +146,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -213,7 +204,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -221,7 +211,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../lab5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
@@ -478,7 +468,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -489,8 +479,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -500,8 +490,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39817974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39817974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -515,15 +505,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/CollectionInterface.java</url>
-          <line>763</line>
-          <properties />
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="23" />
+      <option name="time" value="31" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -532,6 +514,86 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Dialog.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/Shorty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding>
+            <element signature="method#toString#0;class#Shorty#0" expanded="false" />
+            <element signature="method#compare#0;class#Shorty#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/swt/org.eclipse.swt.win32.win32.x86_64/4.3/org.eclipse.swt.win32.win32.x86_64-4.3.jar!/org/eclipse/swt/widgets/TreeItem.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="142" column="1" lean-forward="true" selection-start-line="142" selection-start-column="1" selection-end-line="142" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/CollectionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="16" column="70" lean-forward="false" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
+            <element signature="method#readFromFile#0;class#CollectionController#0" expanded="false" />
+            <marker date="1495325820759" expanded="false" signature="4314:4318" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/swt/org.eclipse.swt.win32.win32.x86_64/4.3/org.eclipse.swt.win32.win32.x86_64-4.3.jar!/org/eclipse/swt/widgets/EventTable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="94" column="37" lean-forward="false" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/CollectionInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="767" column="20" lean-forward="false" selection-start-line="767" selection-start-column="20" selection-end-line="767" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setFilters#0;class#CollectionInterface#0" expanded="false" />
+            <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
+            <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
+            <element signature="method#modifyTree#0;class#CollectionInterface#0" expanded="false" />
+            <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
+            <element signature="method#modifyWindow#0;class#CollectionInterface#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -547,11 +609,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#9525#9526#0" expanded="true" />
-            <element signature="e#9603#9604#0" expanded="true" />
+            <element signature="imports" expanded="true" />
             <element signature="method#setFilters#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
+            <element signature="method#modifyTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#modifyWindow#0;class#CollectionInterface#0" expanded="false" />
           </folding>
@@ -566,7 +628,7 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
             <element signature="method#readFromFile#0;class#CollectionController#0" expanded="false" />
-            <marker date="1495175231121" expanded="false" signature="4407:4411" ph="{...}" />
+            <marker date="1495325820759" expanded="false" signature="4314:4318" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -578,7 +640,6 @@
           <folding>
             <element signature="method#toString#0;class#Shorty#0" expanded="false" />
             <element signature="method#compare#0;class#Shorty#0" expanded="false" />
-            <element signature="method#defaultCollection#0;class#Shorty#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -606,11 +667,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#9525#9526#0" expanded="true" />
-            <element signature="e#9603#9604#0" expanded="true" />
+            <element signature="imports" expanded="true" />
             <element signature="method#setFilters#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
+            <element signature="method#modifyTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#modifyWindow#0;class#CollectionInterface#0" expanded="false" />
           </folding>
@@ -625,7 +686,7 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
             <element signature="method#readFromFile#0;class#CollectionController#0" expanded="false" />
-            <marker date="1495175231121" expanded="false" signature="4407:4411" ph="{...}" />
+            <marker date="1495325820759" expanded="false" signature="4314:4318" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -637,7 +698,6 @@
           <folding>
             <element signature="method#toString#0;class#Shorty#0" expanded="false" />
             <element signature="method#compare#0;class#Shorty#0" expanded="false" />
-            <element signature="method#defaultCollection#0;class#Shorty#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -665,11 +725,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#9525#9526#0" expanded="true" />
-            <element signature="e#9603#9604#0" expanded="true" />
+            <element signature="imports" expanded="true" />
             <element signature="method#setFilters#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
+            <element signature="method#modifyTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#modifyWindow#0;class#CollectionInterface#0" expanded="false" />
           </folding>
@@ -684,7 +744,7 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
             <element signature="method#readFromFile#0;class#CollectionController#0" expanded="false" />
-            <marker date="1495175231121" expanded="false" signature="4407:4411" ph="{...}" />
+            <marker date="1495325820759" expanded="false" signature="4314:4318" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -696,7 +756,6 @@
           <folding>
             <element signature="method#toString#0;class#Shorty#0" expanded="false" />
             <element signature="method#compare#0;class#Shorty#0" expanded="false" />
-            <element signature="method#defaultCollection#0;class#Shorty#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -724,11 +783,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#9525#9526#0" expanded="true" />
-            <element signature="e#9603#9604#0" expanded="true" />
+            <element signature="imports" expanded="true" />
             <element signature="method#setFilters#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
+            <element signature="method#modifyTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#modifyWindow#0;class#CollectionInterface#0" expanded="false" />
           </folding>
@@ -743,7 +802,7 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
             <element signature="method#readFromFile#0;class#CollectionController#0" expanded="false" />
-            <marker date="1495175231121" expanded="false" signature="4407:4411" ph="{...}" />
+            <marker date="1495325820759" expanded="false" signature="4314:4318" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -755,7 +814,6 @@
           <folding>
             <element signature="method#toString#0;class#Shorty#0" expanded="false" />
             <element signature="method#compare#0;class#Shorty#0" expanded="false" />
-            <element signature="method#defaultCollection#0;class#Shorty#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -783,11 +841,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#9525#9526#0" expanded="true" />
-            <element signature="e#9603#9604#0" expanded="true" />
+            <element signature="imports" expanded="true" />
             <element signature="method#setFilters#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
+            <element signature="method#modifyTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#modifyWindow#0;class#CollectionInterface#0" expanded="false" />
           </folding>
@@ -802,7 +860,7 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
             <element signature="method#readFromFile#0;class#CollectionController#0" expanded="false" />
-            <marker date="1495175231121" expanded="false" signature="4407:4411" ph="{...}" />
+            <marker date="1495325820759" expanded="false" signature="4314:4318" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -814,7 +872,6 @@
           <folding>
             <element signature="method#toString#0;class#Shorty#0" expanded="false" />
             <element signature="method#compare#0;class#Shorty#0" expanded="false" />
-            <element signature="method#defaultCollection#0;class#Shorty#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -875,18 +932,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Dialog.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/Shorty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-          <folding>
-            <element signature="method#toString#0;class#Shorty#0" expanded="false" />
-            <element signature="method#compare#0;class#Shorty#0" expanded="false" />
-            <element signature="method#defaultCollection#0;class#Shorty#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/swt/org.eclipse.swt.win32.win32.x86_64/4.3/org.eclipse.swt.win32.win32.x86_64-4.3.jar!/org/eclipse/swt/widgets/TreeItem.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
@@ -894,11 +939,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Status.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/regex/Matcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="375">
+          <caret line="596" column="21" lean-forward="false" selection-start-line="596" selection-start-column="21" selection-end-line="596" selection-end-column="21" />
+          <folding>
+            <element signature="e#21134#21135#0" expanded="false" />
+            <element signature="e#21194#21195#0" expanded="false" />
+            <element signature="e#21591#21592#0" expanded="false" />
+            <element signature="e#21636#21637#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/regex/Pattern.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="770" column="0" lean-forward="true" selection-start-line="770" selection-start-column="0" selection-end-line="770" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/swt/org.eclipse.swt.win32.win32.x86_64/4.3/org.eclipse.swt.win32.win32.x86_64-4.3.jar!/org/eclipse/swt/widgets/EventTable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="94" column="37" lean-forward="false" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/swt/org.eclipse.swt.win32.win32.x86_64/4.3/org.eclipse.swt.win32.win32.x86_64-4.3.jar!/org/eclipse/swt/widgets/Listener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -912,37 +983,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/CollectionController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Status.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="16" column="70" lean-forward="false" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+        <state relative-caret-position="200">
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Shorty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="40" column="2" lean-forward="false" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
-            <element signature="method#readFromFile#0;class#CollectionController#0" expanded="false" />
-            <marker date="1495175231121" expanded="false" signature="4407:4411" ph="{...}" />
+            <element signature="method#toString#0;class#Shorty#0" expanded="false" />
+            <element signature="method#compare#0;class#Shorty#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/swt/org.eclipse.swt.win32.win32.x86_64/4.3/org.eclipse.swt.win32.win32.x86_64-4.3.jar!/org/eclipse/swt/widgets/EventTable.class">
+    <entry file="file://$PROJECT_DIR$/src/com/company/CollectionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="94" column="37" lean-forward="false" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="37" />
+        <state relative-caret-position="1725">
+          <caret line="113" column="2" lean-forward="false" selection-start-line="113" selection-start-column="2" selection-end-line="113" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
+            <element signature="method#readFromFile#0;class#CollectionController#0" expanded="false" />
+            <marker date="1495325820759" expanded="false" signature="4314:4318" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="652" column="0" lean-forward="false" selection-start-line="652" selection-start-column="0" selection-end-line="652" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/CollectionInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3416">
-          <caret line="269" column="9" lean-forward="true" selection-start-line="269" selection-start-column="9" selection-end-line="269" selection-end-column="9" />
+        <state relative-caret-position="1812">
+          <caret line="862" column="23" lean-forward="false" selection-start-line="862" selection-start-column="23" selection-end-line="862" selection-end-column="23" />
           <folding>
-            <element signature="e#9525#9526#0" expanded="true" />
-            <element signature="e#9603#9604#0" expanded="true" />
+            <element signature="imports" expanded="true" />
             <element signature="method#setFilters#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
+            <element signature="method#modifyTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#modifyWindow#0;class#CollectionInterface#0" expanded="false" />
           </folding>

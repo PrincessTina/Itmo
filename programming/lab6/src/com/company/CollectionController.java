@@ -1,20 +1,19 @@
 package com.company;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonSyntaxException;
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.regex.*;
 
-public class CollectionController {
+class CollectionController {
   /**
    * Reads saved collection from file
    *
    * @param peopleFileName - file name to be read from
    * @return collection to be worked with
    */
-  public static ArrayList<Shorty> readFromFile(String peopleFileName) {
+  static ArrayList<Shorty> readFromFile(String peopleFileName) {
     ArrayList<Shorty> searchedCollection = new ArrayList<>();
 
     try {
@@ -55,7 +54,7 @@ public class CollectionController {
     return searchedCollection;
   }
 
-  public static void writeDefaultCollectionToFile(String peopleFileName) {
+  static void writeDefaultCollectionToFile(String peopleFileName) {
     try (PrintWriter pw = new PrintWriter(peopleFileName)) {
       for (int a = 0; a < Shorty.defaultCollection().size(); a++) {
         pw.print(Shorty.defaultCollection().get(a).toString());
@@ -75,7 +74,7 @@ public class CollectionController {
    * @param peopleFileName - backup file name
    * @param people - collection to be saved
    */
-  public static void writeToFile(String peopleFileName, ArrayList<Shorty> people) {
+  static void writeToFile(String peopleFileName, ArrayList<Shorty> people) {
     try (PrintWriter pw = new PrintWriter(peopleFileName)) {
       for (Shorty shorty : people) {
         pw.print(shorty.toString());
@@ -92,7 +91,7 @@ public class CollectionController {
    * @param people         - collection, where info is gathered
    * @param peopleFileName - file name, from which the collection is initialized
    */
-  public static String info(ArrayList<Shorty> people, String peopleFileName) {
+  static String info(ArrayList<Shorty> people, String peopleFileName) {
       return "Collection type: " + people.getClass().getTypeName() + ", Update time: " +
             getLastModificationDate(peopleFileName) + ", Size: " + people.size();
   }
@@ -102,7 +101,7 @@ public class CollectionController {
    *
    * @param people - collection to be interacted with
    */
-  public static void remove_first(ArrayList<Shorty> people) throws Exception {
+  static void remove_first(ArrayList<Shorty> people) throws Exception {
     people.remove(0);
   }
 
@@ -112,7 +111,7 @@ public class CollectionController {
    * @param people  - collection to be interacted with
    * @param shortyJson - shorty pattern by which will delete from collection
    */
-  public static int remove_all(ArrayList<Shorty> people, String shortyJson) throws Exception {
+  static int remove_all(ArrayList<Shorty> people, String shortyJson) throws Exception {
     Gson gson = new Gson();
     Shorty example_object = gson.fromJson(shortyJson, Shorty.class);
     ArrayList<Integer> indexArray = new ArrayList<>();

@@ -3,11 +3,11 @@ package com.company;
 import java.util.*;
 
 public class Shorty implements Comparator<Shorty> {
-  public String name;
-  public int age;
-  public double height;
-  public String hobby;
-  public Status status;
+  String name;
+  int age;
+  double height;
+  String hobby;
+  Status status;
 
   Shorty(String name, int age, double height, String hobby, Status status) {
     this.name = name;
@@ -38,7 +38,7 @@ public class Shorty implements Comparator<Shorty> {
     } else return a.name.compareTo(b.name);
   }
 
-  public static ArrayList<Shorty> defaultCollection() {
+  static ArrayList<Shorty> defaultCollection() {
     ArrayList<Shorty> defaultCollection = new ArrayList<>();
 
     defaultCollection.add(new Shorty("Neznayka", 11, 143.1, "bright colors", Status.idle));
