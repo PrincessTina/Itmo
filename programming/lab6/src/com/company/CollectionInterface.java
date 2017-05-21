@@ -58,6 +58,9 @@ class CollectionInterface {
     nightTime.setText("NightTime");
     new MenuItem(submenu, SWT.SEPARATOR);
 
+    MenuItem citySpirit = new MenuItem(submenu, SWT.PUSH);
+    citySpirit.setText("SitySpirit");
+
     // File Event
     file.addListener(SWT.Selection, event -> {
       if(event.detail == SWT.NONE) {
@@ -136,7 +139,7 @@ class CollectionInterface {
     data.horizontalSpan = 1;
     data.grabExcessHorizontalSpace = true;
     search.setLayoutData(data);
-    search.setBackgroundImage(new Image (display, "..\\..\\24.jpg"));
+    search.setBackgroundImage(new Image (display, "..\\..\\61.jpg"));
 
     // Create column for tree
     data = new GridData(SWT.FILL, SWT.FILL, true, true);
@@ -148,7 +151,7 @@ class CollectionInterface {
 
     // Tree of the shorty's
     Tree tree = new Tree(treeWindow, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
-    createTree(shell, tree);
+    createTree(shell, tree, display);
 
     Menu menu = new Menu(shell, SWT.POP_UP);
     MenuItem sort = new MenuItem(menu, SWT.CASCADE);
@@ -274,16 +277,29 @@ class CollectionInterface {
 
     // DayLight Event
     dayLight.addListener (SWT.Selection, e -> {
-      treeWindow.setBackgroundImage(new Image (display, "..\\..\\clear.jpg"));
       search.setBackgroundImage(new Image (display, "..\\..\\clear.jpg"));
       search.setForeground(new Color(display, 0, 0, 0));
+
+      tree.setBackgroundImage(new Image (display, "..\\..\\clear.jpg"));
+      tree.setForeground(new Color(display, 0, 0, 0));
     });
 
     // NightTime Event
     nightTime.addListener (SWT.Selection, e -> {
-      treeWindow.setBackgroundImage(new Image (display, "..\\..\\24.jpg"));
       search.setBackgroundImage(new Image (display, "..\\..\\24.jpg"));
       search.setForeground(new Color(display, 255, 255, 255));
+
+      tree.setBackgroundImage(new Image (display, "..\\..\\24.jpg"));
+      tree.setForeground(new Color(display, 255, 255, 255));
+    });
+
+    // CitySpirit Event
+    citySpirit.addListener (SWT.Selection, e -> {
+      search.setBackgroundImage(new Image (display, "..\\..\\61.jpg"));
+      search.setForeground(new Color(display, 0, 0, 0));
+
+      tree.setBackgroundImage(new Image (display, "..\\..\\61.jpg"));
+      tree.setForeground(new Color(display, 0, 0, 0));
     });
 
     // Info event
@@ -540,7 +556,10 @@ class CollectionInterface {
     });
   }
 
-  private static void createTree(Shell shell, Tree tree) {
+  private static void createTree(Shell shell, Tree tree, Display display) {
+    tree.setBackgroundImage(new Image (display, "..\\..\\61.jpg"));
+    tree.setForeground(new Color(display, 0, 0, 0));
+
     GridData data = new GridData(SWT.FILL, SWT.FILL, true, true);
     tree.setHeaderVisible(true);
     TreeColumn column1 = new TreeColumn(tree, SWT.CENTER | SWT.PUSH);
@@ -668,11 +687,12 @@ class CollectionInterface {
     title.setText("Input index of element that you want to \nchange and then new parameters");
 
     new Label(shell, SWT.NULL).setText("Index");
-    Text index = new Text(shell, SWT.BORDER | SWT.FILL);
-    index.setLayoutData(new GridData(SWT.FILL, SWT.NONE, true, true));
+    Text index = new Text(shell, SWT.BORDER);
+    GridData data = new GridData(SWT.FILL, SWT.NONE, true, true);
+    index.setLayoutData(data);
 
     new Label(shell, SWT.NULL).setText("Name");
-    Text spaceName = new Text(shell, SWT.BORDER | SWT.FILL);
+    Text spaceName = new Text(shell, SWT.BORDER);
     spaceName.setLayoutData(new GridData(SWT.FILL, SWT.NONE, true, true));
 
     new Label(shell, SWT.NULL).setText("Age");
