@@ -59,7 +59,7 @@ class CollectionInterface {
     new MenuItem(submenu, SWT.SEPARATOR);
 
     MenuItem citySpirit = new MenuItem(submenu, SWT.PUSH);
-    citySpirit.setText("SitySpirit");
+    citySpirit.setText("CitySpirit");
 
     // File Event
     file.addListener(SWT.Selection, event -> {
