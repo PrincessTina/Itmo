@@ -116,18 +116,21 @@ class CollectionInterface {
 
     // Help Event
     help.addListener(SWT.Selection, e -> {
-      int style = SWT.APPLICATION_MODAL | SWT.OK;
+      int style = SWT.APPLICATION_MODAL | SWT.OK | SWT.COLOR_WIDGET_BACKGROUND |SWT.LEFT_TO_RIGHT | SWT.LEFT;
       MessageBox messageBox = new MessageBox(shell, style);
+
       messageBox.setText("Help");
       messageBox.setMessage("Use one of the commands: \n" +
-            "\n Info: Display information about the collection" +
-            "\n Add: Add new element in json or other format" +
-            "\n Remove first: Remove the first element of the collection" +
-            "\n Remove All: Remove all elements that match the specified" +
-            "\n Load: Display the contents of the collection" +
-            "\n Set File: Choose file that you want working with" +
-            "\n Save All: Save all changes in file" +
-            "\n Mode: Set one of the mods");
+          "\n Info: Displays information about the collection" +
+          "\n Add: Adds new element in json or other format" +
+          "\n Remove first: Removes the first element of the collection" +
+          "\n Remove All: Removes all elements that match the specified in json format " +
+          "\n Modify: Changes the element with given index " +
+          "\n Set File: Chooses file that you want working with" +
+          "\n Save All: Saves all changes in file" +
+          "\n Mode: Sets one of the mods" +
+          "\n\n*Also you can click the right mouse button or on one of the " +
+          "table columns to choose variant of sorting elements in the collection");
       messageBox.open();
     });
 

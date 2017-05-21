@@ -31,16 +31,17 @@
       <file leaf-file-name="CollectionInterface.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/CollectionInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="292" column="57" lean-forward="false" selection-start-line="292" selection-start-column="57" selection-end-line="292" selection-end-column="57" />
+            <state relative-caret-position="205">
+              <caret line="309" column="48" lean-forward="false" selection-start-line="309" selection-start-column="48" selection-end-line="309" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#setFilters#0;class#CollectionInterface#0" expanded="false" />
                 <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
-                <element signature="e#15918#16111#0" expanded="true" />
-                <element signature="e#16110#16111#0" expanded="true" />
-                <element signature="e#16171#16802#0" expanded="true" />
-                <element signature="e#16801#16802#0" expanded="true" />
+                <element signature="e#16150#16343#0" expanded="true" />
+                <element signature="e#16342#16343#0" expanded="true" />
+                <element signature="e#16403#17034#0" expanded="true" />
+                <element signature="e#17033#17034#0" expanded="true" />
+                <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
                 <element signature="method#modifyTree#0;class#CollectionInterface#0" expanded="false" />
                 <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
                 <element signature="method#modifyWindow#0;class#CollectionInterface#0" expanded="false" />
@@ -111,6 +112,7 @@
       <find>name</find>
       <find>browser</find>
       <find>modify</find>
+      <find>info</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -511,7 +513,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="31" />
+      <option name="time" value="32" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -592,10 +594,11 @@
             <element signature="imports" expanded="true" />
             <element signature="method#setFilters#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
-            <element signature="e#15918#16111#0" expanded="true" />
-            <element signature="e#16110#16111#0" expanded="true" />
-            <element signature="e#16171#16802#0" expanded="true" />
-            <element signature="e#16801#16802#0" expanded="true" />
+            <element signature="e#16150#16343#0" expanded="true" />
+            <element signature="e#16342#16343#0" expanded="true" />
+            <element signature="e#16403#17034#0" expanded="true" />
+            <element signature="e#17033#17034#0" expanded="true" />
+            <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#modifyTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#modifyWindow#0;class#CollectionInterface#0" expanded="false" />
@@ -622,10 +625,11 @@
             <element signature="imports" expanded="true" />
             <element signature="method#setFilters#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
-            <element signature="e#15918#16111#0" expanded="true" />
-            <element signature="e#16110#16111#0" expanded="true" />
-            <element signature="e#16171#16802#0" expanded="true" />
-            <element signature="e#16801#16802#0" expanded="true" />
+            <element signature="e#16150#16343#0" expanded="true" />
+            <element signature="e#16342#16343#0" expanded="true" />
+            <element signature="e#16403#17034#0" expanded="true" />
+            <element signature="e#17033#17034#0" expanded="true" />
+            <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#modifyTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#modifyWindow#0;class#CollectionInterface#0" expanded="false" />
@@ -684,10 +688,11 @@
             <element signature="imports" expanded="true" />
             <element signature="method#setFilters#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
-            <element signature="e#15918#16111#0" expanded="true" />
-            <element signature="e#16110#16111#0" expanded="true" />
-            <element signature="e#16171#16802#0" expanded="true" />
-            <element signature="e#16801#16802#0" expanded="true" />
+            <element signature="e#16150#16343#0" expanded="true" />
+            <element signature="e#16342#16343#0" expanded="true" />
+            <element signature="e#16403#17034#0" expanded="true" />
+            <element signature="e#17033#17034#0" expanded="true" />
+            <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#modifyTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#modifyWindow#0;class#CollectionInterface#0" expanded="false" />
@@ -746,10 +751,11 @@
             <element signature="imports" expanded="true" />
             <element signature="method#setFilters#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
-            <element signature="e#15918#16111#0" expanded="true" />
-            <element signature="e#16110#16111#0" expanded="true" />
-            <element signature="e#16171#16802#0" expanded="true" />
-            <element signature="e#16801#16802#0" expanded="true" />
+            <element signature="e#16150#16343#0" expanded="true" />
+            <element signature="e#16342#16343#0" expanded="true" />
+            <element signature="e#16403#17034#0" expanded="true" />
+            <element signature="e#17033#17034#0" expanded="true" />
+            <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#modifyTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#modifyWindow#0;class#CollectionInterface#0" expanded="false" />
@@ -808,10 +814,11 @@
             <element signature="imports" expanded="true" />
             <element signature="method#setFilters#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
-            <element signature="e#15918#16111#0" expanded="true" />
-            <element signature="e#16110#16111#0" expanded="true" />
-            <element signature="e#16171#16802#0" expanded="true" />
-            <element signature="e#16801#16802#0" expanded="true" />
+            <element signature="e#16150#16343#0" expanded="true" />
+            <element signature="e#16342#16343#0" expanded="true" />
+            <element signature="e#16403#17034#0" expanded="true" />
+            <element signature="e#17033#17034#0" expanded="true" />
+            <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#modifyTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#modifyWindow#0;class#CollectionInterface#0" expanded="false" />
@@ -870,10 +877,11 @@
             <element signature="imports" expanded="true" />
             <element signature="method#setFilters#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
-            <element signature="e#15918#16111#0" expanded="true" />
-            <element signature="e#16110#16111#0" expanded="true" />
-            <element signature="e#16171#16802#0" expanded="true" />
-            <element signature="e#16801#16802#0" expanded="true" />
+            <element signature="e#16150#16343#0" expanded="true" />
+            <element signature="e#16342#16343#0" expanded="true" />
+            <element signature="e#16403#17034#0" expanded="true" />
+            <element signature="e#17033#17034#0" expanded="true" />
+            <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#modifyTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#modifyWindow#0;class#CollectionInterface#0" expanded="false" />
@@ -1055,16 +1063,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/CollectionInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="292" column="57" lean-forward="false" selection-start-line="292" selection-start-column="57" selection-end-line="292" selection-end-column="57" />
+        <state relative-caret-position="205">
+          <caret line="309" column="48" lean-forward="false" selection-start-line="309" selection-start-column="48" selection-end-line="309" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#setFilters#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
-            <element signature="e#15918#16111#0" expanded="true" />
-            <element signature="e#16110#16111#0" expanded="true" />
-            <element signature="e#16171#16802#0" expanded="true" />
-            <element signature="e#16801#16802#0" expanded="true" />
+            <element signature="e#16150#16343#0" expanded="true" />
+            <element signature="e#16342#16343#0" expanded="true" />
+            <element signature="e#16403#17034#0" expanded="true" />
+            <element signature="e#17033#17034#0" expanded="true" />
+            <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#modifyTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#modifyWindow#0;class#CollectionInterface#0" expanded="false" />
