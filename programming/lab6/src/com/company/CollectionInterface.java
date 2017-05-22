@@ -790,10 +790,10 @@ class CollectionInterface {
         window.setMessage("Successfully modified");
         window.open();
       } catch (Exception ex) {
-        int style = SWT.APPLICATION_MODAL | SWT.OK;
+        int style = SWT.APPLICATION_MODAL | SWT.YES | SWT.NO | SWT.ICON_QUESTION;
         MessageBox error = new MessageBox(shell, style);
-        error.setText("Warning");
-        error.setMessage(ex.getMessage());
+        error.setText("ПРОБЛЕМА");
+        error.setMessage("");
         error.open();
       }
     });
