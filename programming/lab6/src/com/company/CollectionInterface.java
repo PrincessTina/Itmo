@@ -34,7 +34,7 @@ class CollectionInterface {
     data.grabExcessHorizontalSpace = true;
     toolBar.setLayoutData(data);
 
-    ToolItem file = new ToolItem(toolBar, SWT.PUSH | SWT.COLOR_GREEN);
+    ToolItem file = new ToolItem(toolBar, SWT.PUSH);
     file.setText("File");
 
     Menu fileMenu = new Menu(shell, SWT.POP_UP);
@@ -49,6 +49,8 @@ class CollectionInterface {
 
     MenuItem mode = new MenuItem(fileMenu, SWT.CASCADE);
     mode.setText("Mode");
+    new MenuItem(fileMenu, SWT.SEPARATOR);
+
     mode.setMenu(submenu);
     MenuItem dayLight = new MenuItem(submenu, SWT.PUSH);
     dayLight.setText("DayLight");
@@ -60,6 +62,9 @@ class CollectionInterface {
 
     MenuItem citySpirit = new MenuItem(submenu, SWT.PUSH);
     citySpirit.setText("CitySpirit");
+
+    MenuItem exit = new MenuItem(fileMenu, SWT.PUSH);
+    exit.setText("Exit");
 
     // File Event
     file.addListener(SWT.Selection, event -> {
@@ -216,11 +221,14 @@ class CollectionInterface {
 
     // Set Event
     set.addListener (SWT.Selection, e -> Display.getDefault().syncExec(() -> {
-      FileDialog setFile = new FileDialog(shell, SWT.OPEN);
-      setFilters(setFile);
-      peopleFileName = setFile.open();
-
+      String extraPeopleFileName;
+      extraPeopleFileName = peopleFileName;
       try {
+        FileDialog setFile = new FileDialog(shell, SWT.OPEN);
+        setFilters(setFile);
+        peopleFileName = setFile.open();
+        if (peopleFileName == null) {throw new Exception("Extra return to the previous file");}
+
         String fileContent = "";
 
         FileReader fileReader = new FileReader(peopleFileName);
@@ -268,13 +276,31 @@ class CollectionInterface {
         question.setMessage("The content of this file \ncan't be collected in the collection");
         question.open();
       } catch (Exception ex) {
-        System.out.println(ex.getMessage());
+        if ((extraPeopleFileName != null) && (ex.getMessage() == "Extra return to the previous file")) {
+          peopleFileName = extraPeopleFileName;
+        }
+        else {
+          int style = SWT.APPLICATION_MODAL | SWT.OK;
+          MessageBox error = new MessageBox(shell, style);
+          error.setText("Warning");
+          error.setMessage(ex.getMessage());
+          error.open();
+        }
       }
     }));
 
     // Save Event
     save.addListener (SWT.Selection, (Event e) -> {
       Thread thread = new Thread(() -> CollectionController.writeToFile(peopleFileName, people));
+      thread.start();
+    });
+
+    // Exit event
+    exit.addListener(SWT.Selection, (Event e) -> {
+      Thread thread = new Thread(() -> {
+        CollectionController.writeToFile(peopleFileName, people);
+        System.exit(0);
+      });
       thread.start();
     });
 
@@ -790,11 +816,16 @@ class CollectionInterface {
         window.setMessage("Successfully modified");
         window.open();
       } catch (Exception ex) {
-        int style = SWT.APPLICATION_MODAL | SWT.YES | SWT.NO | SWT.ICON_QUESTION;
+        int style = SWT.APPLICATION_MODAL | SWT.NO | SWT.YES | SWT.ICON_QUESTION;
         MessageBox error = new MessageBox(shell, style);
         error.setText("ПРОБЛЕМА");
         error.setMessage("");
-        error.open();
+        if (error.open() == 64) {
+          MessageBox error2 = new MessageBox(shell, SWT.OK);
+          error2.setText("Решение");
+          error2.setMessage(ex.getMessage());
+          error2.open();
+        }
       }
     });
   }
