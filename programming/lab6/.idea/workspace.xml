@@ -21,7 +21,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="88">
               <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="e#138#139#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -29,8 +31,8 @@
       <file leaf-file-name="CollectionInterface.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/CollectionInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="66" column="25" lean-forward="false" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
+            <state relative-caret-position="241">
+              <caret line="839" column="3" lean-forward="false" selection-start-line="839" selection-start-column="3" selection-end-line="839" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#setFilters#0;class#CollectionInterface#0" expanded="false" />
@@ -48,11 +50,10 @@
       <file leaf-file-name="CollectionController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/CollectionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1518">
-              <caret line="113" column="2" lean-forward="false" selection-start-line="113" selection-start-column="2" selection-end-line="113" selection-end-column="2" />
+            <state relative-caret-position="227">
+              <caret line="45" column="6" lean-forward="true" selection-start-line="45" selection-start-column="6" selection-end-line="46" selection-end-column="48" />
               <folding>
                 <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
-                <element signature="method#readFromFile#0;class#CollectionController#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -61,8 +62,8 @@
       <file leaf-file-name="Shorty.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Shorty.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="40" column="2" lean-forward="false" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
+            <state relative-caret-position="154">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="method#toString#0;class#Shorty#0" expanded="false" />
                 <element signature="method#compare#0;class#Shorty#0" expanded="false" />
@@ -105,6 +106,9 @@
       <find>browser</find>
       <find>modify</find>
       <find>info</find>
+      <find>sort</find>
+      <find>comparator</find>
+      <find>object</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -127,7 +131,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-11" />
     <option name="y" value="-11" />
-    <option name="width" value="1942" />
+    <option name="width" value="1932" />
     <option name="height" value="1042" />
   </component>
   <component name="ProjectView">
@@ -145,6 +149,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -203,7 +208,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -467,7 +471,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="0" />
+    <frame x="-11" y="-11" width="1932" height="1042" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -485,7 +489,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18683083" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19214208" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -505,7 +509,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="32" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/CollectionInterface.java</url>
+          <line>843</line>
+          <properties />
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="36" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -552,7 +564,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -562,7 +576,6 @@
           <caret line="16" column="70" lean-forward="false" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
           <folding>
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
-            <element signature="method#readFromFile#0;class#CollectionController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -595,7 +608,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -622,7 +637,6 @@
           <caret line="16" column="70" lean-forward="false" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
           <folding>
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
-            <element signature="method#readFromFile#0;class#CollectionController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -650,7 +664,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -677,7 +693,6 @@
           <caret line="16" column="70" lean-forward="false" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
           <folding>
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
-            <element signature="method#readFromFile#0;class#CollectionController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -705,7 +720,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -732,7 +749,6 @@
           <caret line="174" column="3" lean-forward="false" selection-start-line="174" selection-start-column="3" selection-end-line="174" selection-end-column="3" />
           <folding>
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
-            <element signature="method#readFromFile#0;class#CollectionController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -760,7 +776,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -787,7 +805,6 @@
           <caret line="174" column="3" lean-forward="false" selection-start-line="174" selection-start-column="3" selection-end-line="174" selection-end-column="3" />
           <folding>
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
-            <element signature="method#readFromFile#0;class#CollectionController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -815,7 +832,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -842,7 +861,6 @@
           <caret line="174" column="3" lean-forward="true" selection-start-line="174" selection-start-column="3" selection-end-line="174" selection-end-column="3" />
           <folding>
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
-            <element signature="method#readFromFile#0;class#CollectionController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -870,7 +888,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -878,7 +898,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -886,7 +908,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -894,7 +918,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -929,11 +955,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/ArrayList.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -947,8 +976,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Shorty.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="40" column="2" lean-forward="false" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
+        <state relative-caret-position="154">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="method#toString#0;class#Shorty#0" expanded="false" />
             <element signature="method#compare#0;class#Shorty#0" expanded="false" />
@@ -958,20 +987,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/CollectionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1518">
-          <caret line="113" column="2" lean-forward="false" selection-start-line="113" selection-start-column="2" selection-end-line="113" selection-end-column="2" />
+        <state relative-caret-position="227">
+          <caret line="45" column="6" lean-forward="true" selection-start-line="45" selection-start-column="6" selection-end-line="46" selection-end-column="48" />
           <folding>
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
-            <element signature="method#readFromFile#0;class#CollectionController#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/ArrayList.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/CollectionInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="66" column="25" lean-forward="false" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
+        <state relative-caret-position="241">
+          <caret line="839" column="3" lean-forward="false" selection-start-line="839" selection-start-column="3" selection-end-line="839" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#setFilters#0;class#CollectionInterface#0" expanded="false" />

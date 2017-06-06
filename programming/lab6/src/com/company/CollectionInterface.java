@@ -525,6 +525,9 @@ class CollectionInterface {
               throw new Exception("Height can only be positive");
             }
             people.add(shorty);
+            Comparator<Shorty> shortyComparator = new Shorty();
+            people.sort(shortyComparator);
+
             modifyTree(tree);
             int style = SWT.APPLICATION_MODAL | SWT.OK;
             MessageBox window = new MessageBox(mainShell, style);
@@ -566,8 +569,12 @@ class CollectionInterface {
             } else if ((Double.parseDouble(spaceHeight.getText())) <= 0) {
               throw new Exception("Height can only be positive");
             }
-            people.add(new Shorty(spaceName.getText(), Integer.parseInt(spaceAge.getText()),
-                Double.parseDouble(spaceHeight.getText()), spaceHobby.getText(), meaning));
+            Shorty shorty = new Shorty(spaceName.getText(), Integer.parseInt(spaceAge.getText()),
+                  Double.parseDouble(spaceHeight.getText()), spaceHobby.getText(), meaning);
+            people.add(shorty);
+            Comparator<Shorty> shortyComparator = new Shorty();
+            people.sort(shortyComparator);
+
             modifyTree(tree);
             int style = SWT.APPLICATION_MODAL | SWT.OK;
             MessageBox window = new MessageBox(mainShell, style);
@@ -807,6 +814,8 @@ class CollectionInterface {
 
         Shorty shorty = new Shorty(expected_name, expected_age, expected_height, expected_hobby, meaning);
         people.set(Integer.parseInt(index.getText()), shorty);
+        Comparator<Shorty> shortyComparator = new Shorty();
+        people.sort(shortyComparator);
 
         modifyTree(tree);
 
@@ -835,21 +844,155 @@ class CollectionInterface {
       if (people.size() == 0) {
         throw new Exception("Collection is already empty");
       }
-      TreeSet<String> sortedFields = new TreeSet<>();
-      int i = 0, numberOfItem, numberOfSubItem, j = 0;
-      String hashCode;
-      Pattern itemPattern = Pattern.compile(".*&(\\d+)");
-      Pattern subItemPattern = Pattern.compile(".*&(\\d+)&(\\d+)");
+      ArrayList<String> sortedFields = new ArrayList<>();
+      LinkedList<Integer> indexes = new LinkedList<>();
+      int i = 0, numberOfItem, numberOfSubItem, j = 0, index = 0;
+      double newDigit, oldDigit;
+      String hashCode, newString, oldString;
+      Pattern itemPattern = Pattern.compile("(.*)&(\\d+)");
+      Pattern subItemPattern = Pattern.compile("(.*)&(\\d+)&(\\d+)");
       Matcher matcher;
 
       // Creating array of searched mean + number of item [+ number of subitem]
       for (TreeItem item : tree.getItems()) {
-        hashCode = item.getText(sortedColumn) + "&" + i;
-        sortedFields.add(hashCode);
-        for (TreeItem subItem : item.getItems()) {
-          hashCode = subItem.getText(sortedColumn) + "&" + i + "&" + j;
+        newString = item.getText(sortedColumn);
+        if (sortedFields.size() == 0) {
+          hashCode = newString + "&" + i;
           sortedFields.add(hashCode);
+        } else {
+          for (String oldHashCode: sortedFields) {
+            matcher = subItemPattern.matcher(oldHashCode);
+            if (matcher.matches()) {
+              if ((sortedColumn != 1) && (sortedColumn != 2)) {
+                oldString = matcher.group(1);
+                if (newString.compareToIgnoreCase(oldString) < 0) {
+                  hashCode = newString + "&" + i;
+                  sortedFields.add(sortedFields.indexOf(oldHashCode), hashCode);
+                  indexes.clear();
+                  break;
+                } else {
+                  index = sortedFields.indexOf(oldHashCode);
+                  indexes.add(index);
+                }
+              } else {
+                oldDigit = Double.parseDouble(matcher.group(1));
+                newDigit = Double.parseDouble(newString);
+                if (newDigit < oldDigit) {
+                  hashCode = newDigit + "&" + i;
+                  sortedFields.add(sortedFields.indexOf(oldHashCode), hashCode);
+                  indexes.clear();
+                  break;
+                } else {
+                  index = sortedFields.indexOf(oldHashCode);
+                  indexes.add(index);
+                }
+              }
+            } else {
+              matcher = itemPattern.matcher(oldHashCode);
+              if (matcher.matches()) {
+                if ((sortedColumn != 1) && (sortedColumn != 2)) {
+                  oldString = matcher.group(1);
+                  if (newString.compareToIgnoreCase(oldString) < 0) {
+                    hashCode = newString + "&" + i;
+                    sortedFields.add(sortedFields.indexOf(oldHashCode), hashCode);
+                    indexes.clear();
+                    break;
+                  } else {
+                    index = sortedFields.indexOf(oldHashCode);
+                    indexes.add(index);
+                  }
+                } else {
+                  oldDigit = Double.parseDouble(matcher.group(1));
+                  newDigit = Double.parseDouble(newString);
+                  if (newDigit < oldDigit) {
+                    hashCode = newDigit + "&" + i;
+                    sortedFields.add(sortedFields.indexOf(oldHashCode), hashCode);
+                    indexes.clear();
+                    break;
+                  } else {
+                    index = sortedFields.indexOf(oldHashCode);
+                    indexes.add(index);
+                  }
+                }
+              }
+            }
+          }
+          if (indexes.size() != 0) {
+            hashCode = newString + "&" + i;
+            sortedFields.add(indexes.getLast() + 1, hashCode);
+          }
+          indexes.clear();
+        }
+        for (TreeItem subItem : item.getItems()) {
+          newString = subItem.getText(sortedColumn);
+          if (sortedFields.size() == 0) {
+            hashCode = newString + "&" + i + "&" + j;
+            sortedFields.add(hashCode);
+          } else {
+            for (String oldHashCode: sortedFields) {
+              matcher = subItemPattern.matcher(oldHashCode);
+              if (matcher.matches()) {
+                if ((sortedColumn != 1) && (sortedColumn != 2)) {
+                  oldString = matcher.group(1);
+                  if (newString.compareToIgnoreCase(oldString) < 0) {
+                    hashCode = newString + "&" + i + "&" + j;
+                    sortedFields.add(sortedFields.indexOf(oldHashCode), hashCode);
+                    indexes.clear();
+                    break;
+                  } else {
+                    index = sortedFields.indexOf(oldHashCode);
+                    indexes.add(index);
+                  }
+                } else {
+                  oldDigit = Double.parseDouble(matcher.group(1));
+                  newDigit = Double.parseDouble(newString);
+                  if (newDigit < oldDigit) {
+                    hashCode = newDigit + "&" + i + "&" + j;
+                    sortedFields.add(sortedFields.indexOf(oldHashCode), hashCode);
+                    indexes.clear();
+                    break;
+                  } else {
+                    index = sortedFields.indexOf(oldHashCode);
+                    indexes.add(index);
+                  }
+                }
+              } else {
+                matcher = itemPattern.matcher(oldHashCode);
+                if (matcher.matches()) {
+                  if ((sortedColumn != 1) && (sortedColumn != 2)) {
+                    oldString = matcher.group(1);
+                    if (newString.compareToIgnoreCase(oldString) < 0) {
+                      hashCode = newString + "&" + i + "&" + j;
+                      sortedFields.add(sortedFields.indexOf(oldHashCode), hashCode);
+                      indexes.clear();
+                      break;
+                    } else {
+                      index = sortedFields.indexOf(oldHashCode);
+                      indexes.add(index);
+                    }
+                  } else {
+                    oldDigit = Double.parseDouble(matcher.group(1));
+                    newDigit = Double.parseDouble(newString);
+                    if (newDigit < oldDigit) {
+                      hashCode = newDigit + "&" + i + "&" + j;
+                      sortedFields.add(sortedFields.indexOf(oldHashCode), hashCode);
+                      indexes.clear();
+                      break;
+                    } else {
+                      index = sortedFields.indexOf(oldHashCode);
+                      indexes.add(index);
+                    }
+                  }
+                }
+              }
+            }
+            if (indexes.size() != 0) {
+              hashCode = newString + "&" + i + "&" + j;
+              sortedFields.add(indexes.getLast(), hashCode);
+            }
+          }
           j++;
+          indexes.clear();
         }
         j = 0;
         i++;
@@ -861,8 +1004,8 @@ class CollectionInterface {
       for (String object : sortedFields) {
         matcher = subItemPattern.matcher(object);
         if (matcher.matches()) {
-          numberOfItem = Integer.parseInt(matcher.group(1));
-          numberOfSubItem = Integer.parseInt(matcher.group(2));
+          numberOfItem = Integer.parseInt(matcher.group(2));
+          numberOfSubItem = Integer.parseInt(matcher.group(3));
           TreeItem item1 = tree.getItem(numberOfItem);
           TreeItem item = item1.getItem(numberOfSubItem);
           Status meaning;
@@ -884,11 +1027,11 @@ class CollectionInterface {
           }
 
           people.add(new Shorty(item.getText(0), Integer.parseInt(item.getText(1)), Double.parseDouble(item.getText(2)),
-              item.getText(3), meaning));
+                item.getText(3), meaning));
         } else {
           matcher = itemPattern.matcher(object);
           if (matcher.matches()) {
-            numberOfItem = Integer.parseInt(matcher.group(1));
+            numberOfItem = Integer.parseInt(matcher.group(2));
 
             TreeItem item = tree.getItem(numberOfItem);
             Status meaning;
@@ -910,7 +1053,7 @@ class CollectionInterface {
             }
 
             people.add(new Shorty(item.getText(0), Integer.parseInt(item.getText(1)), Double.parseDouble(item.getText(2)),
-                item.getText(3), meaning));
+                  item.getText(3), meaning));
           }
         }
       }
