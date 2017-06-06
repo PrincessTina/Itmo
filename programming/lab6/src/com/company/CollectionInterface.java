@@ -15,6 +15,7 @@ import java.util.regex.Pattern;
 class CollectionInterface {
   private static String peopleFileName = "";
   private static ArrayList<Shorty> people = new ArrayList<>();
+  private static ArrayList<Shorty> filteredArray= new ArrayList<>();
 
   static void createInterface() {
     // windows's settings
@@ -24,7 +25,7 @@ class CollectionInterface {
     shell.setSize(1010, 690);
     shell.setBackground(new Color(display, 255, 255, 255));
     GridLayout shellLayout = new GridLayout();
-    shellLayout.numColumns = 2;
+    shellLayout.numColumns = 3;
     shell.setLayout(shellLayout);
 
     // toolBar's settings
@@ -139,9 +140,20 @@ class CollectionInterface {
       messageBox.open();
     });
 
+    // Create filter Line
+    final Text filter = new Text(shell, SWT.BORDER);
+    filter.setEnabled(false);
+    filter.setForeground(new Color(display, 0, 0, 0));
+    data = new GridData();
+    data.horizontalAlignment = GridData.FILL;
+    data.horizontalSpan = 1;
+    data.grabExcessHorizontalSpace = true;
+    filter.setLayoutData(data);
+    filter.setBackgroundImage(new Image (display, "..\\..\\61.jpg"));
+
     // Create Search Line
     final Text search = new Text(shell, SWT.BORDER);
-    search.setForeground(new Color(display, 255, 255, 255));
+    search.setForeground(new Color(display, 0, 0, 0));
     data = new GridData();
     data.horizontalAlignment = GridData.FILL;
     data.horizontalSpan = 1;
@@ -151,6 +163,7 @@ class CollectionInterface {
 
     // Create column for tree
     data = new GridData(SWT.FILL, SWT.FILL, true, true);
+    data.horizontalSpan = 2;
     Composite treeWindow = new Composite (shell, SWT.BORDER);
     treeWindow.setSize(500, SWT.NONE);
     treeWindow.setLayoutData(data);
@@ -210,6 +223,13 @@ class CollectionInterface {
     final Browser browser = new Browser(browserWindow, 1);
     browser.setLayoutData(data);
 
+    //Filter event
+    filter.addListener(SWT.DefaultSelection, (Event e) ->{
+      String filt;
+      filt = filter.getText();
+      filterTree(tree, filt);
+    });
+
     // Search event
     search.addListener(SWT.DefaultSelection, (Event e) -> {
       String url = "";
@@ -247,7 +267,7 @@ class CollectionInterface {
             CollectionController.writeDefaultCollectionToFile(peopleFileName);
             if (!Objects.equals(setFile.getFileName(), "")) {
               people = CollectionController.readFromFile(peopleFileName);
-              modifyTree(tree);
+              modifyTree(tree, people);
               info.setEnabled(true);
               add.setEnabled(true);
               remove_all.setEnabled(true);
@@ -259,13 +279,14 @@ class CollectionInterface {
         } else {
           if (!Objects.equals(setFile.getFileName(), "")) {
             people = CollectionController.readFromFile(peopleFileName);
-            modifyTree(tree);
+            modifyTree(tree, people);
             info.setEnabled(true);
             add.setEnabled(true);
             remove_all.setEnabled(true);
             remove_first.setEnabled(true);
             modify.setEnabled(true);
             save.setEnabled(true);
+            filter.setEnabled(true);
           }
         }
 
@@ -308,7 +329,8 @@ class CollectionInterface {
     dayLight.addListener (SWT.Selection, e -> {
       search.setBackgroundImage(new Image (display, "..\\..\\clear.jpg"));
       search.setForeground(new Color(display, 0, 0, 0));
-
+      filter.setBackgroundImage(new Image (display, "..\\..\\clear.jpg"));
+      filter.setForeground(new Color(display, 0, 0, 0));
       tree.setBackgroundImage(new Image (display, "..\\..\\clear.jpg"));
       tree.setForeground(new Color(display, 0, 0, 0));
     });
@@ -317,7 +339,8 @@ class CollectionInterface {
     nightTime.addListener (SWT.Selection, e -> {
       search.setBackgroundImage(new Image (display, "..\\..\\24.jpg"));
       search.setForeground(new Color(display, 255, 255, 255));
-
+      filter.setBackgroundImage(new Image (display, "..\\..\\24.jpg"));
+      filter.setForeground(new Color(display, 255, 255, 255));
       tree.setBackgroundImage(new Image (display, "..\\..\\24.jpg"));
       tree.setForeground(new Color(display, 255, 255, 255));
     });
@@ -326,7 +349,8 @@ class CollectionInterface {
     citySpirit.addListener (SWT.Selection, e -> {
       search.setBackgroundImage(new Image (display, "..\\..\\61.jpg"));
       search.setForeground(new Color(display, 0, 0, 0));
-
+      filter.setBackgroundImage(new Image (display, "..\\..\\61.jpg"));
+      filter.setForeground(new Color(display, 0, 0, 0));
       tree.setBackgroundImage(new Image (display, "..\\..\\61.jpg"));
       tree.setForeground(new Color(display, 0, 0, 0));
     });
@@ -349,7 +373,7 @@ class CollectionInterface {
         CollectionController.remove_first(people);
 
         if (people.size() != 0) {
-          modifyTree(tree);
+          modifyTree(tree, people);
 
           int style = SWT.APPLICATION_MODAL | SWT.OK;
           MessageBox window = new MessageBox(shell, style);
@@ -528,7 +552,7 @@ class CollectionInterface {
             Comparator<Shorty> shortyComparator = new Shorty();
             people.sort(shortyComparator);
 
-            modifyTree(tree);
+            modifyTree(tree, people);
             int style = SWT.APPLICATION_MODAL | SWT.OK;
             MessageBox window = new MessageBox(mainShell, style);
             window.setText("");
@@ -575,7 +599,7 @@ class CollectionInterface {
             Comparator<Shorty> shortyComparator = new Shorty();
             people.sort(shortyComparator);
 
-            modifyTree(tree);
+            modifyTree(tree, people);
             int style = SWT.APPLICATION_MODAL | SWT.OK;
             MessageBox window = new MessageBox(mainShell, style);
             window.setText("");
@@ -632,7 +656,7 @@ class CollectionInterface {
     column5.addListener(SWT.Selection, e -> sort(shell, tree, 4));
 }
 
-  private static void modifyTree (Tree tree) {
+  private static void modifyTree (Tree tree, ArrayList<Shorty> collection) {
     tree.removeAll();
     tree.setRedraw(false);
     TreeItem item;
@@ -640,13 +664,13 @@ class CollectionInterface {
     Shorty shorty;
 
     item = new TreeItem(tree, SWT.NONE);
-    item.setText(new String[] {people.get(0).name, Integer.toString(people.get(0).age),
-        Double.toString(people.get(0).height), people.get(0).hobby, people.get(0).status.toString()});
+    item.setText(new String[] {collection.get(0).name, Integer.toString(collection.get(0).age),
+        Double.toString(collection.get(0).height), collection.get(0).hobby, collection.get(0).status.toString()});
 
-    for (int i = 1; i <people.size(); i++) {
-      shorty = people.get(i);
+    for (int i = 1; i < collection.size(); i++) {
+      shorty = collection.get(i);
 
-      if(shorty.compare(shorty, people.get(people.indexOf(shorty) - 1)) == 0) {
+      if(shorty.compare(shorty, collection.get(collection.indexOf(shorty) - 1)) == 0) {
         subItem = new TreeItem(item, SWT.NONE);
         subItem.setText(new String[] {shorty.name, Integer.toString(shorty.age), Double.toString(shorty.height),
             shorty.hobby, shorty.status.toString()});
@@ -695,7 +719,7 @@ class CollectionInterface {
           shortyJson = matcher.group(1) + group2;
 
           int number = CollectionController.remove_all(people, shortyJson);
-          modifyTree(tree);
+          modifyTree(tree, people);
 
           int style = SWT.APPLICATION_MODAL | SWT.OK;
           MessageBox window = new MessageBox(shell, style);
@@ -817,7 +841,7 @@ class CollectionInterface {
         Comparator<Shorty> shortyComparator = new Shorty();
         people.sort(shortyComparator);
 
-        modifyTree(tree);
+        modifyTree(tree, people);
 
         int style = SWT.APPLICATION_MODAL | SWT.OK;
         MessageBox window = new MessageBox(shell, style);
@@ -1057,13 +1081,41 @@ class CollectionInterface {
           }
         }
       }
-      modifyTree(tree);
+      modifyTree(tree, people);
     } catch (Exception ex) {
       int style = SWT.APPLICATION_MODAL | SWT.OK;
       MessageBox error = new MessageBox(shell, style);
       error.setText("Warning");
       error.setMessage(ex.getMessage());
       error.open();
+    }
+  }
+
+  private static void filterTree (Tree tree, String filt) {
+    int num = filt.length();
+    filteredArray.clear();
+    try {
+      if ((num != 0) && (!filt.matches("\\s*"))) {
+        for (int i = 0; i < people.size(); i++) {
+          if ((people.get(i).name.length() >= num && people.get(i).name.contains(filt)) ||
+                  (Integer.toString(people.get(i).age).length() >= num &&
+                      Integer.toString(people.get(i).age).contains(filt)) ||
+                  (Double.toString(people.get(i).height).length() >= num &&
+                      Double.toString(people.get(i).height).contains(filt)) ||
+                  (people.get(i).hobby.length() >= num && people.get(i).hobby.contains(filt)) ||
+                  (people.get(i).status.toString().length() >= num &&
+                      people.get(i).status.toString().contains(filt))) {
+            filteredArray.add(people.get(i));
+          }
+        }
+        if (filteredArray.size() > 0) {
+          modifyTree(tree, filteredArray);
+        } else {tree.removeAll();}
+      } else {
+        modifyTree(tree, people);
+      }
+    } catch (Exception e){
+      System.out.println("There is an error");
     }
   }
 }
