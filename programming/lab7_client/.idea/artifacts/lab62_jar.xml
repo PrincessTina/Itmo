@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="lab62:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/lab62_jar</output-path>
+    <root id="archive" name="lab62.jar">
+      <element id="module-output" name="lab62" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/eclipse/swt/org.eclipse.swt.win32.win32.x86_64/4.3/org.eclipse.swt.win32.win32.x86_64-4.3.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
