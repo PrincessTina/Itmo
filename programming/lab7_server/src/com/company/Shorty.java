@@ -8,13 +8,15 @@ public class Shorty implements Comparator<Shorty> {
   double height;
   String hobby;
   Status status;
+  int id;
 
-  Shorty(String name, int age, double height, String hobby, Status status) {
+  Shorty(String name, int age, double height, String hobby, Status status, int id) {
     this.name = name;
     this.age = age;
     this.height = height;
     this.hobby = hobby;
     this.status = status;
+    this.id = id;
   }
 
   // Is used for shorty comparator
@@ -22,7 +24,7 @@ public class Shorty implements Comparator<Shorty> {
 
   public String toString() {
     return "{name: '" + this.name + "', age: " + this.age + ", height: " + this.height + ", hobby: '" + this.hobby + "'" +
-        ", status: " + this.status + "}%";
+        ", status: " + this.status + ", id: " + this.id + "}%";
   }
 
   public int compare(Shorty a, Shorty b) {
@@ -37,16 +39,5 @@ public class Shorty implements Comparator<Shorty> {
         } else return -1;
       } else return a.age - b.age;
     } else return a.name.compareTo(b.name);
-  }
-
-  static ArrayList<Shorty> defaultCollection() {
-    ArrayList<Shorty> defaultCollection = new ArrayList<>();
-
-    defaultCollection.add(new Shorty("Neznayka", 11, 143.1, "bright colors", Status.idle));
-    defaultCollection.add(new Shorty("Pilulkin", 14, 157.8, "doctor", Status.have_a_girlfriend));
-    defaultCollection.add(new Shorty("Shpuntik", 10, 139.2, "main tech", Status.have_a_girlfriend));
-    defaultCollection.add(new Shorty("Shpuntik", 10, 139.2, "main tech", Status.have_a_girlfriend));
-
-    return defaultCollection;
   }
 }

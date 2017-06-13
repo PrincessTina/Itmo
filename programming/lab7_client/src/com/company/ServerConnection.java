@@ -5,31 +5,46 @@ import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
 
 class ServerConnection {
-  static String sendCommand(String sendData, String sendObjectAfter, String sendObjectBefore) {
+  static String sendCommand(String sendData, String sendObject, String indexOfObject) {
     try {
       DatagramChannel channel = DatagramChannel.open();
       ByteBuffer receiveSize = ByteBuffer.allocate(1024);
       ByteBuffer receiveData;
-      String searchedString = "";
+      String searchedString = "", sendDate = CollectionController.lastModified;
 
       channel.send(ByteBuffer.wrap(sendData.getBytes()), new InetSocketAddress("localhost", 9876));
+      channel.send(ByteBuffer.wrap(sendDate.getBytes()), new InetSocketAddress("localhost", 9876));
+
+      receiveData = ByteBuffer.allocate(1024);
+      channel.receive(receiveData);
 
       if (sendData.contains("load")) {
         channel.receive(receiveSize);
         receiveData = ByteBuffer.allocate(byteToInt(receiveSize));
         channel.receive(receiveData);
         searchedString = new String(receiveData.array());
-      } else if (sendData.contains("modify")) {
-        receiveData = ByteBuffer.allocate(1024);
-        channel.receive(receiveData);
+      } else if (sendData.contains("add")) {
         if (byteToInt(receiveData) == 1) {
           searchedString = "1";
-          channel.send(ByteBuffer.wrap(sendObjectAfter.getBytes()), new InetSocketAddress("localhost", 9876));
-          channel.send(ByteBuffer.wrap(sendObjectBefore.getBytes()), new InetSocketAddress("localhost", 9876));
+          channel.send(ByteBuffer.wrap(sendObject.getBytes()), new InetSocketAddress("localhost", 9876));
         } else {
           searchedString = "0";
         }
-      } else {
+      } else if (sendData.contains("modify")) {
+        if (byteToInt(receiveData) == 1) {
+          searchedString = "1";
+          channel.send(ByteBuffer.wrap(indexOfObject.getBytes()), new InetSocketAddress("localhost", 9876));
+          channel.send(ByteBuffer.wrap(sendObject.getBytes()), new InetSocketAddress("localhost", 9876));
+        } else {
+          searchedString = "0";
+        }
+      } else if (sendData.contains("remove")) {
+        if (byteToInt(receiveData) == 1) {
+          searchedString = "1";
+          channel.send(ByteBuffer.wrap(indexOfObject.getBytes()), new InetSocketAddress("localhost", 9876));
+        } else {
+          searchedString = "0";
+        }
       }
 
       return searchedString;

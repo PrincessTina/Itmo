@@ -1,11 +1,12 @@
 package com.company;
 
 import com.google.gson.Gson;
-import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
 class CollectionController {
+  static String lastModified = "null";
+
   /**
    * Reads saved collection from server
    *
@@ -28,31 +29,13 @@ class CollectionController {
   }
 
   /**
-   * Saves current conditions to file
-   *
-   * @param peopleFileName - backup file name
-   * @param people         - collection to be saved
-   */
-  static void writeToFile(String peopleFileName, ArrayList<Shorty> people) {
-    try (PrintWriter pw = new PrintWriter(peopleFileName)) {
-      for (Shorty shorty : people) {
-        pw.print(shorty.toString());
-        pw.print("; ");
-      }
-    } catch (Exception ex) {
-      System.out.println("Oops: " + ex.getMessage());
-    }
-  }
-
-  /**
    * Returns last modification date, collection size and collection type.
    *
    * @param people         - collection, where info is gathered
-   * @param peopleFileName - file name, from which the collection is initialized
    */
-  static String info(ArrayList<Shorty> people, String peopleFileName) {
-    return "Collection type: " + people.getClass().getTypeName() + ", Update time: " +
-        getLastModificationDate(peopleFileName) + ", Size: " + people.size();
+  static String info(ArrayList<Shorty> people) {
+    return "Collection type: " + people.getClass().getTypeName() + ", Update time: " + lastModified
+        + ", Size: " + people.size();
   }
 
   /**
@@ -70,15 +53,17 @@ class CollectionController {
    * @param people     - collection to be interacted with
    * @param shortyJson - shorty pattern by which will delete from collection
    */
-  static int remove_all(ArrayList<Shorty> people, String shortyJson) throws Exception {
+  static String remove_all(ArrayList<Shorty> people, String shortyJson) throws Exception {
     Gson gson = new Gson();
     Shorty example_object = gson.fromJson(shortyJson, Shorty.class);
     ArrayList<Integer> indexArray = new ArrayList<>();
+    StringBuilder indexes = new StringBuilder();
 
     // Finds people indexes
     for (int a = 0; a < people.size(); a++) {
       if (people.get(a).compare(people.get(a), example_object) == 0) {
         indexArray.add(a);
+        indexes.append(people.get(a).id).append("%");
       }
     }
 
@@ -89,13 +74,12 @@ class CollectionController {
       people.remove(c);
     }
 
-    return indexArray.size();
+    return indexes.toString();
   }
 
-  private static String getLastModificationDate(String peopleFileName) {
-    Date lastModified = new Date(new File(peopleFileName).lastModified());
+  static void getLastModificationDate() {
+    Date date =  new Date();
     SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-
-    return formatter.format(lastModified);
+    lastModified = formatter.format(date);
   }
 }

@@ -29,10 +29,14 @@
       <file leaf-file-name="CollectionInterface.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/CollectionInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1644">
+            <state relative-caret-position="25">
               <caret line="763" column="39" lean-forward="false" selection-start-line="763" selection-start-column="39" selection-end-line="763" selection-end-column="39" />
               <folding>
                 <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
+                <element signature="e#18164#18357#0" expanded="true" />
+                <element signature="e#18356#18357#0" expanded="true" />
+                <element signature="e#18417#19048#0" expanded="true" />
+                <element signature="e#19047#19048#0" expanded="true" />
                 <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
                 <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
                 <element signature="method#sort#0;class#CollectionInterface#0" expanded="false" />
@@ -45,9 +49,10 @@
       <file leaf-file-name="CollectionController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/CollectionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-619">
+            <state relative-caret-position="650">
               <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
               </folding>
             </state>
@@ -154,7 +159,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -201,8 +206,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -479,11 +484,12 @@
       <workItem from="1496921050325" duration="617000" />
       <workItem from="1496958820117" duration="929000" />
       <workItem from="1497095772637" duration="2353000" />
+      <workItem from="1497306440313" duration="603000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3899000" />
+    <option name="totallyTimeSpent" value="4502000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1934" height="1042" extended-state="0" />
@@ -592,6 +598,7 @@
         <state relative-caret-position="275">
           <caret line="16" column="70" lean-forward="false" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
           </folding>
         </state>
@@ -610,6 +617,10 @@
           <caret line="767" column="20" lean-forward="false" selection-start-line="767" selection-start-column="20" selection-end-line="767" selection-end-column="20" />
           <folding>
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
+            <element signature="e#18164#18357#0" expanded="true" />
+            <element signature="e#18356#18357#0" expanded="true" />
+            <element signature="e#18417#19048#0" expanded="true" />
+            <element signature="e#19047#19048#0" expanded="true" />
             <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#sort#0;class#CollectionInterface#0" expanded="false" />
@@ -632,6 +643,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
+            <element signature="e#18164#18357#0" expanded="true" />
+            <element signature="e#18356#18357#0" expanded="true" />
+            <element signature="e#18417#19048#0" expanded="true" />
+            <element signature="e#19047#19048#0" expanded="true" />
             <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#sort#0;class#CollectionInterface#0" expanded="false" />
@@ -645,6 +660,7 @@
         <state relative-caret-position="400">
           <caret line="16" column="70" lean-forward="false" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
           </folding>
         </state>
@@ -683,6 +699,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
+            <element signature="e#18164#18357#0" expanded="true" />
+            <element signature="e#18356#18357#0" expanded="true" />
+            <element signature="e#18417#19048#0" expanded="true" />
+            <element signature="e#19047#19048#0" expanded="true" />
             <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#sort#0;class#CollectionInterface#0" expanded="false" />
@@ -696,6 +716,7 @@
         <state relative-caret-position="400">
           <caret line="16" column="70" lean-forward="false" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
           </folding>
         </state>
@@ -734,6 +755,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
+            <element signature="e#18164#18357#0" expanded="true" />
+            <element signature="e#18356#18357#0" expanded="true" />
+            <element signature="e#18417#19048#0" expanded="true" />
+            <element signature="e#19047#19048#0" expanded="true" />
             <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#sort#0;class#CollectionInterface#0" expanded="false" />
@@ -747,6 +772,7 @@
         <state relative-caret-position="594">
           <caret line="174" column="3" lean-forward="false" selection-start-line="174" selection-start-column="3" selection-end-line="174" selection-end-column="3" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
           </folding>
         </state>
@@ -785,6 +811,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
+            <element signature="e#18164#18357#0" expanded="true" />
+            <element signature="e#18356#18357#0" expanded="true" />
+            <element signature="e#18417#19048#0" expanded="true" />
+            <element signature="e#19047#19048#0" expanded="true" />
             <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#sort#0;class#CollectionInterface#0" expanded="false" />
@@ -798,6 +828,7 @@
         <state relative-caret-position="4350">
           <caret line="174" column="3" lean-forward="false" selection-start-line="174" selection-start-column="3" selection-end-line="174" selection-end-column="3" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
           </folding>
         </state>
@@ -836,6 +867,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
+            <element signature="e#18164#18357#0" expanded="true" />
+            <element signature="e#18356#18357#0" expanded="true" />
+            <element signature="e#18417#19048#0" expanded="true" />
+            <element signature="e#19047#19048#0" expanded="true" />
             <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#sort#0;class#CollectionInterface#0" expanded="false" />
@@ -849,6 +884,7 @@
         <state relative-caret-position="4350">
           <caret line="174" column="3" lean-forward="true" selection-start-line="174" selection-start-column="3" selection-end-line="174" selection-end-column="3" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
           </folding>
         </state>
@@ -966,9 +1002,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/CollectionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-619">
+        <state relative-caret-position="650">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
           </folding>
         </state>
@@ -976,10 +1013,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/CollectionInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1644">
+        <state relative-caret-position="25">
           <caret line="763" column="39" lean-forward="false" selection-start-line="763" selection-start-column="39" selection-end-line="763" selection-end-column="39" />
           <folding>
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
+            <element signature="e#18164#18357#0" expanded="true" />
+            <element signature="e#18356#18357#0" expanded="true" />
+            <element signature="e#18417#19048#0" expanded="true" />
+            <element signature="e#19047#19048#0" expanded="true" />
             <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#sort#0;class#CollectionInterface#0" expanded="false" />
