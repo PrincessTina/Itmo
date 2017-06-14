@@ -22,7 +22,6 @@ class ClientConnection {
   private static String stringForNewCollection;
   private static String stringWithIndexes;
 
-  // ToDo: Исправить баг с сортировкой
   static void waitingCommand() {
     try {
       DatagramPacket receivePacket;

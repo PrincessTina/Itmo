@@ -6,15 +6,26 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.browser.Browser;
 import org.eclipse.swt.events.*;
 import org.eclipse.swt.graphics.*;
+import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.graphics.Point;
+import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.layout.*;
+import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.*;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Event;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Menu;
+import org.eclipse.swt.widgets.MenuItem;
 
+import java.awt.*;
 import java.util.*;
 import java.util.regex.*;
 import java.util.regex.Pattern;
 
 class CollectionInterface {
-  private static String peopleFileName = "";
   private static ArrayList<Shorty> people = new ArrayList<>();
   private static ArrayList<Shorty> filteredArray = new ArrayList<>();
 
@@ -509,8 +520,8 @@ class CollectionInterface {
   }
 
   private static void removeWindow(Display display, Tree tree) {
-    Shell shell = new Shell(display);
-    shell.setSize(800, 250);
+    Shell shell = new Shell(display, SWT.APPLICATION_MODAL | SWT.SHELL_TRIM);
+    shell.setSize(800, 190);
     shell.setText("Remove Elements");
     shell.setLayout(new GridLayout());
 
@@ -519,11 +530,11 @@ class CollectionInterface {
     GridData gridDataDialog = new GridData(SWT.BEGINNING, SWT.CENTER, false, false);
     title.setLayoutData(gridDataDialog);
 
-    Text jsonString = new Text(shell, SWT.BORDER);
+    Text jsonString = new Text(shell, SWT.BORDER | SWT.WRAP);
     gridDataDialog = new GridData(SWT.FILL, SWT.FILL, true, true);
     jsonString.setLayoutData(gridDataDialog);
 
-    Button remove = new Button(shell, SWT.PUSH);
+    Button remove = new Button(shell, SWT.PUSH | SWT.CENTER);
     remove.setText("Remove elements");
 
     shell.open();
@@ -568,7 +579,7 @@ class CollectionInterface {
   }
 
   private static void modifyWindow(Display display, Tree tree) {
-    Shell shell = new Shell(display);
+    Shell shell = new Shell(display, SWT.APPLICATION_MODAL | SWT.SHELL_TRIM);
     shell.setText("Modify");
     shell.setSize(350, 570);
     shell.setLayout(new GridLayout());
@@ -685,7 +696,7 @@ class CollectionInterface {
   }
 
   private static void addWindow(Display display, Tree tree, Shell mainShell) {
-    Shell shell = new Shell(display);
+    Shell shell = new Shell(display, SWT.APPLICATION_MODAL | SWT.SHELL_TRIM);
     shell.setText("Add element");
     shell.setSize(500, 570);
     GridLayout shellLayout = new GridLayout();
@@ -738,7 +749,7 @@ class CollectionInterface {
     jsonGroup.setLayout(new GridLayout());
     jsonGroup.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 
-    Text spaceJson = new Text(jsonGroup, SWT.MULTI | SWT.V_SCROLL | SWT.BORDER | SWT.H_SCROLL);
+    Text spaceJson = new Text(jsonGroup, SWT.V_SCROLL | SWT.BORDER | SWT.H_SCROLL | SWT.WRAP);
     spaceJson.setEnabled(false);
     gridDataDialog = new GridData(SWT.FILL, SWT.FILL, true, true);
     spaceJson.setLayoutData(gridDataDialog);
@@ -831,7 +842,7 @@ class CollectionInterface {
           CollectionController.getLastModificationDate();
 
           int style = SWT.APPLICATION_MODAL | SWT.OK;
-          MessageBox window = new MessageBox(mainShell, style);
+          MessageBox window = new MessageBox(shell, style);
           window.setText("");
           window.setMessage("Successfully added");
           window.open();

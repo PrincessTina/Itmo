@@ -25,7 +25,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="275">
@@ -35,13 +35,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientConnection.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ClientConnection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/ClientConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="24" column="38" lean-forward="false" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+            <state relative-caret-position="-45">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#waitingCommand#0;class#ClientConnection#0" expanded="false" />
                 <element signature="method#read#0;class#ClientConnection#0" expanded="false" />
                 <element signature="method#parsingShorty#0;class#ClientConnection#0" expanded="false" />
                 <element signature="method#parsingIndexes#0;class#ClientConnection#0" expanded="false" />
@@ -50,12 +51,12 @@
                 <element signature="method#remove#0;class#ClientConnection#0" expanded="false" />
                 <element signature="method#switchStatus#0;class#ClientConnection#0" expanded="false" />
                 <element signature="method#getLastModificationDate#0;class#ClientConnection#0" expanded="false" />
-                <marker date="1497336785252" expanded="true" signature="3866:3886" ph="SELECT * FRO... shorty" />
-                <marker date="1497336785252" expanded="true" signature="5591:5630" ph="select modif... " />
-                <marker date="1497336785252" expanded="true" signature="5591:5631" ph="select modif... " />
-                <marker date="1497336785252" expanded="true" signature="6185:6268" ph="insert into shorty... " />
-                <marker date="1497336785252" expanded="true" signature="6746:6777" ph="delete from " />
-                <marker date="1497336785252" expanded="true" signature="6871:6915" ph="update short... " />
+                <marker date="1497354822442" expanded="true" signature="3827:3847" ph="SELECT * FRO... shorty" />
+                <marker date="1497354822442" expanded="true" signature="5552:5591" ph="select modif... " />
+                <marker date="1497354822442" expanded="true" signature="5552:5592" ph="select modif... " />
+                <marker date="1497354822442" expanded="true" signature="6146:6229" ph="insert into shorty... " />
+                <marker date="1497354822442" expanded="true" signature="6707:6738" ph="delete from " />
+                <marker date="1497354822442" expanded="true" signature="6832:6876" ph="update short... " />
               </folding>
             </state>
           </provider>
@@ -64,8 +65,8 @@
       <file leaf-file-name="DataBaseController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/DataBaseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="60" lean-forward="false" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+            <state relative-caret-position="200">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#connection#0;class#DataBaseController#0" expanded="false" />
@@ -78,12 +79,92 @@
       <file leaf-file-name="Shorty.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Shorty.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
+            <state relative-caret-position="450">
               <caret line="41" column="3" lean-forward="false" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
               <folding>
                 <element signature="method#toString#0;class#Shorty#0" expanded="false" />
                 <element signature="method#compare#0;class#Shorty#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JAVA/com.company.ClientConnection" pinned="false" current-in-tab="false">
+        <entry file="uml://JAVA/com.company.ClientConnection">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>com.company.ClientConnection</OriginalElement>
+              <nodes>
+                <node x="0.0" y="97.0">java.lang.FunctionalInterface</node>
+                <node x="144.5" y="291.0">com.company.Shorty</node>
+                <node x="244.0" y="97.0">java.lang.Enum</node>
+                <node x="103.5" y="388.0">com.company.ClientConnection</node>
+                <node x="271.0" y="480.0">com.company.Main</node>
+                <node x="124.5" y="0.0">java.lang.Comparable</node>
+                <node x="242.0" y="194.0">com.company.Status</node>
+                <node x="26.5" y="194.0">java.util.Comparator</node>
+                <node x="316.5" y="0.0">java.io.Serializable</node>
+                <node x="0.0" y="480.0">com.company.DataBaseController</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="java.util.Comparator" target="java.lang.FunctionalInterface">
+                  <point x="0.0" y="-23.5" />
+                  <point x="0.0" y="23.5" />
+                </edge>
+                <edge source="com.company.Shorty" target="com.company.Status">
+                  <point x="31.75" y="-23.5" />
+                  <point x="239.75" y="266.0" />
+                  <point x="304.0" y="266.0" />
+                  <point x="0.0" y="23.5" />
+                </edge>
+                <edge source="com.company.Status" target="java.lang.Enum">
+                  <point x="0.0" y="-23.5" />
+                  <point x="0.0" y="23.5" />
+                </edge>
+                <edge source="java.lang.Enum" target="java.io.Serializable">
+                  <point x="30.0" y="-23.5" />
+                  <point x="334.0" y="72.0" />
+                  <point x="397.5" y="72.0" />
+                  <point x="0.0" y="23.5" />
+                </edge>
+                <edge source="com.company.Shorty" target="java.util.Comparator">
+                  <point x="-31.75" y="-23.5" />
+                  <point x="176.25" y="266.0" />
+                  <point x="112.0" y="266.0" />
+                  <point x="0.0" y="23.5" />
+                </edge>
+                <edge source="java.lang.Enum" target="java.lang.Comparable">
+                  <point x="-30.0" y="-23.5" />
+                  <point x="274.0" y="72.0" />
+                  <point x="210.5" y="72.0" />
+                  <point x="0.0" y="23.5" />
+                </edge>
+                <edge source="com.company.ClientConnection" target="com.company.Shorty">
+                  <point x="-52.25" y="-23.5" />
+                  <point x="155.75" y="363.0" />
+                  <point x="176.25" y="363.0" />
+                  <point x="-31.75" y="23.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.982472613458529" x="-315.2595836153854" y="272.07815332985973" />
+              <SelectedNodes>
+                <node>com.company.ClientConnection</node>
+              </SelectedNodes>
+              <Categories />
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Status.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Status.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -701,12 +782,12 @@
       <updated>1494847541228</updated>
       <workItem from="1496864951213" duration="956000" />
       <workItem from="1496866016993" duration="9000" />
-      <workItem from="1496878190986" duration="79394000" />
+      <workItem from="1496878190986" duration="82227000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80359000" />
+    <option name="totallyTimeSpent" value="83192000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -731,7 +812,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3208191" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31398106" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31398106" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -782,8 +863,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/Shorty.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/Status.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/CollectionInterface.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/CollectionController.java" />
@@ -936,14 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Status.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/javax/sql/rowset/CachedRowSet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-945">
@@ -952,9 +1023,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/ClientConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#waitingCommand#0;class#ClientConnection#0" expanded="false" />
+            <element signature="method#read#0;class#ClientConnection#0" expanded="false" />
+            <element signature="method#parsingShorty#0;class#ClientConnection#0" expanded="false" />
+            <element signature="method#parsingIndexes#0;class#ClientConnection#0" expanded="false" />
+            <element signature="method#modify#0;class#ClientConnection#0" expanded="false" />
+            <element signature="method#add#0;class#ClientConnection#0" expanded="false" />
+            <element signature="method#remove#0;class#ClientConnection#0" expanded="false" />
+            <element signature="method#switchStatus#0;class#ClientConnection#0" expanded="false" />
+            <element signature="method#getLastModificationDate#0;class#ClientConnection#0" expanded="false" />
+            <marker date="1497354822442" expanded="true" signature="3827:3847" ph="SELECT * FRO... shorty" />
+            <marker date="1497354822442" expanded="true" signature="5552:5591" ph="select modif... " />
+            <marker date="1497354822442" expanded="true" signature="5552:5592" ph="select modif... " />
+            <marker date="1497354822442" expanded="true" signature="6146:6229" ph="insert into shorty... " />
+            <marker date="1497354822442" expanded="true" signature="6707:6738" ph="delete from " />
+            <marker date="1497354822442" expanded="true" signature="6832:6876" ph="update short... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.company.DataBaseController">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.company.DataBaseController</OriginalElement>
+          <nodes>
+            <node x="" y="">com.company.DataBaseController</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="113.0" y="23.5" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Shorty.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
+        <state relative-caret-position="450">
           <caret line="41" column="3" lean-forward="false" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
           <folding>
             <element signature="method#toString#0;class#Shorty#0" expanded="false" />
@@ -963,10 +1077,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.company.ClientConnection">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.company.ClientConnection</OriginalElement>
+          <nodes>
+            <node x="0.0" y="97.0">java.lang.FunctionalInterface</node>
+            <node x="144.5" y="291.0">com.company.Shorty</node>
+            <node x="244.0" y="97.0">java.lang.Enum</node>
+            <node x="103.5" y="388.0">com.company.ClientConnection</node>
+            <node x="271.0" y="480.0">com.company.Main</node>
+            <node x="124.5" y="0.0">java.lang.Comparable</node>
+            <node x="242.0" y="194.0">com.company.Status</node>
+            <node x="26.5" y="194.0">java.util.Comparator</node>
+            <node x="316.5" y="0.0">java.io.Serializable</node>
+            <node x="0.0" y="480.0">com.company.DataBaseController</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="java.util.Comparator" target="java.lang.FunctionalInterface">
+              <point x="0.0" y="-23.5" />
+              <point x="0.0" y="23.5" />
+            </edge>
+            <edge source="com.company.Shorty" target="com.company.Status">
+              <point x="31.75" y="-23.5" />
+              <point x="239.75" y="266.0" />
+              <point x="304.0" y="266.0" />
+              <point x="0.0" y="23.5" />
+            </edge>
+            <edge source="com.company.Status" target="java.lang.Enum">
+              <point x="0.0" y="-23.5" />
+              <point x="0.0" y="23.5" />
+            </edge>
+            <edge source="java.lang.Enum" target="java.io.Serializable">
+              <point x="30.0" y="-23.5" />
+              <point x="334.0" y="72.0" />
+              <point x="397.5" y="72.0" />
+              <point x="0.0" y="23.5" />
+            </edge>
+            <edge source="com.company.Shorty" target="java.util.Comparator">
+              <point x="-31.75" y="-23.5" />
+              <point x="176.25" y="266.0" />
+              <point x="112.0" y="266.0" />
+              <point x="0.0" y="23.5" />
+            </edge>
+            <edge source="java.lang.Enum" target="java.lang.Comparable">
+              <point x="-30.0" y="-23.5" />
+              <point x="274.0" y="72.0" />
+              <point x="210.5" y="72.0" />
+              <point x="0.0" y="23.5" />
+            </edge>
+            <edge source="com.company.ClientConnection" target="com.company.Shorty">
+              <point x="-52.25" y="-23.5" />
+              <point x="155.75" y="363.0" />
+              <point x="176.25" y="363.0" />
+              <point x="-31.75" y="23.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.982472613458529" x="-315.2595836153854" y="272.07815332985973" />
+          <SelectedNodes>
+            <node>com.company.ClientConnection</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/DataBaseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="60" lean-forward="false" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+        <state relative-caret-position="200">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#connection#0;class#DataBaseController#0" expanded="false" />
@@ -980,30 +1170,6 @@
         <state relative-caret-position="275">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ClientConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="24" column="38" lean-forward="false" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#read#0;class#ClientConnection#0" expanded="false" />
-            <element signature="method#parsingShorty#0;class#ClientConnection#0" expanded="false" />
-            <element signature="method#parsingIndexes#0;class#ClientConnection#0" expanded="false" />
-            <element signature="method#modify#0;class#ClientConnection#0" expanded="false" />
-            <element signature="method#add#0;class#ClientConnection#0" expanded="false" />
-            <element signature="method#remove#0;class#ClientConnection#0" expanded="false" />
-            <element signature="method#switchStatus#0;class#ClientConnection#0" expanded="false" />
-            <element signature="method#getLastModificationDate#0;class#ClientConnection#0" expanded="false" />
-            <marker date="1497336785252" expanded="true" signature="3866:3886" ph="SELECT * FRO... shorty" />
-            <marker date="1497336785252" expanded="true" signature="5591:5630" ph="select modif... " />
-            <marker date="1497336785252" expanded="true" signature="5591:5631" ph="select modif... " />
-            <marker date="1497336785252" expanded="true" signature="6185:6268" ph="insert into shorty... " />
-            <marker date="1497336785252" expanded="true" signature="6746:6777" ph="delete from " />
-            <marker date="1497336785252" expanded="true" signature="6871:6915" ph="update short... " />
-          </folding>
         </state>
       </provider>
     </entry>
