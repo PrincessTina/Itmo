@@ -66,10 +66,10 @@ public class Text_ru_RU extends ListResourceBundle {
       {"successfully_modified", "Успешно изменено"},
       {"error", "Ошибка"},
       {"can_null", "Заполните пустые поля"},
-      {"loading", "Данные устарели. Загружаю новые данные.."},
+      {"loading", "Данные устарели.\nЗагружаю новые данные.."},
       {"add_element", "Добавить элемент"},
       {"values", "Значения"},
-      {"successfully_added", "Успешно добавлено"},
+      {"successfully_added", "Успешно добавлено"}
   };
   public Object[][] getContents() {
     return content;

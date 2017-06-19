@@ -4,7 +4,10 @@ import com.google.gson.*;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.browser.Browser;
 import org.eclipse.swt.events.*;
-import org.eclipse.swt.graphics.*;
+import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.graphics.Point;
+import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.layout.*;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.*;
@@ -15,11 +18,6 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.MenuItem;
 
-import java.text.DateFormat;
-import java.text.NumberFormat;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.regex.*;
 import java.util.regex.Pattern;
@@ -27,15 +25,12 @@ import java.util.regex.Pattern;
 class CollectionInterface {
   private static ArrayList<Shorty> people = new ArrayList<>();
   private static ArrayList<Shorty> filteredArray = new ArrayList<>();
-  private static ResourceBundle resource;
 
   static void createInterface() {
-    resource = Main.getResource();
-
     // windows's settings
     Display display = new Display();
     Shell shell = new Shell(display);
-    shell.setText(resource.getString("platoon"));
+    shell.setText("Platoon Manager");
     shell.setSize(1010, 690);
     shell.setBackground(new Color(display, 255, 255, 255));
     GridLayout shellLayout = new GridLayout();
@@ -50,93 +45,87 @@ class CollectionInterface {
     toolBar.setLayoutData(data);
 
     ToolItem file = new ToolItem(toolBar, SWT.PUSH);
-    file.setText(resource.getString("file"));
+    file.setText("File");
 
     Menu fileMenu = new Menu(shell, SWT.POP_UP);
     Menu submenu = new Menu(fileMenu);
-    Menu submenu2 = new Menu(fileMenu);
     MenuItem load = new MenuItem(fileMenu, SWT.PUSH);
-    load.setText(resource.getString("load"));
+    load.setText("Load");
     new MenuItem(fileMenu, SWT.SEPARATOR);
 
     MenuItem mode = new MenuItem(fileMenu, SWT.CASCADE);
-    mode.setText(resource.getString("mode"));
+    mode.setText("Mode");
     new MenuItem(fileMenu, SWT.SEPARATOR);
 
     mode.setMenu(submenu);
     MenuItem dayLight = new MenuItem(submenu, SWT.PUSH);
-    dayLight.setText(resource.getString("daylight"));
+    dayLight.setText("DayLight");
     new MenuItem(submenu, SWT.SEPARATOR);
 
     MenuItem nightTime = new MenuItem(submenu, SWT.PUSH);
-    nightTime.setText(resource.getString("nighttime"));
+    nightTime.setText("NightTime");
     new MenuItem(submenu, SWT.SEPARATOR);
 
     MenuItem citySpirit = new MenuItem(submenu, SWT.PUSH);
-    citySpirit.setText(resource.getString("citySpirit"));
-
-    MenuItem language = new MenuItem(fileMenu, SWT.CASCADE);
-    language.setText(resource.getString("language"));
-    new MenuItem(fileMenu, SWT.SEPARATOR);
-
-    language.setMenu(submenu2);
-    MenuItem russian = new MenuItem(submenu2, SWT.PUSH);
-    russian.setText(resource.getString("russian"));
-    new MenuItem(submenu2, SWT.SEPARATOR);
-
-    MenuItem german = new MenuItem(submenu2, SWT.PUSH);
-    german.setText(resource.getString("german"));
-    new MenuItem(submenu2, SWT.SEPARATOR);
-
-    MenuItem english = new MenuItem(submenu2, SWT.PUSH);
-    english.setText(resource.getString("english"));
-
-    new MenuItem(submenu2, SWT.SEPARATOR);
-    MenuItem bulgarian = new MenuItem(submenu2, SWT.PUSH);
-    bulgarian.setText(resource.getString("bulgarian"));
+    citySpirit.setText("CitySpirit");
 
     MenuItem exit = new MenuItem(fileMenu, SWT.PUSH);
-    exit.setText(resource.getString("exit"));
+    exit.setText("Exit");
 
     // File Event
     file.addListener(SWT.Selection, event -> toolItemInitialization(event, file, toolBar, fileMenu));
 
     ToolItem command = new ToolItem(toolBar, SWT.PUSH);
-    command.setText(resource.getString("commands"));
+    command.setText("Commands");
 
     Menu commandsMenu = new Menu(shell, SWT.POP_UP);
     MenuItem info = new MenuItem(commandsMenu, SWT.PUSH);
-    info.setText(resource.getString("info"));
+    info.setText("Info");
     new MenuItem(commandsMenu, SWT.SEPARATOR);
 
     MenuItem add = new MenuItem(commandsMenu, SWT.PUSH);
-    add.setText(resource.getString("add"));
+    add.setText("Add");
     new MenuItem(commandsMenu, SWT.SEPARATOR);
 
     MenuItem remove_first = new MenuItem(commandsMenu, SWT.CASCADE);
-    remove_first.setText(resource.getString("remove_first"));
+    remove_first.setText("Remove First");
     new MenuItem(commandsMenu, SWT.SEPARATOR);
 
     MenuItem remove_all = new MenuItem(commandsMenu, SWT.PUSH);
-    remove_all.setText(resource.getString("remove_all"));
+    remove_all.setText("Remove All");
     new MenuItem(commandsMenu, SWT.SEPARATOR);
 
     MenuItem modify = new MenuItem(commandsMenu, SWT.CASCADE);
-    modify.setText(resource.getString("modify"));
+    modify.setText("Modify");
 
     // Command Event
     command.addListener(SWT.Selection, event -> toolItemInitialization(event, command, toolBar, commandsMenu));
 
     ToolItem help = new ToolItem(toolBar, SWT.PUSH);
-    help.setText(resource.getString("help"));
+    help.setText("Help");
+
+    info.setEnabled(false);
+    add.setEnabled(false);
+    remove_first.setEnabled(false);
+    remove_all.setEnabled(false);
+    modify.setEnabled(false);
 
     // Help Event
     help.addListener(SWT.Selection, e -> {
       int style = SWT.APPLICATION_MODAL | SWT.OK | SWT.COLOR_WIDGET_BACKGROUND | SWT.LEFT_TO_RIGHT | SWT.LEFT;
       MessageBox messageBox = new MessageBox(shell, style);
 
-      messageBox.setText(resource.getString("help"));
-      messageBox.setMessage(resource.getString("help_text"));
+      messageBox.setText("Help");
+      messageBox.setMessage("Use one of the commands: \n" +
+          "\n Info: Displays information about the collection" +
+          "\n Add: Adds new element in json or other format" +
+          "\n Remove first: Removes the first element of the collection" +
+          "\n Remove All: Removes all elements that match the specified in json format " +
+          "\n Modify: Changes the element with given index " +
+          "\n Load: Update" +
+          "\n Mode: Sets one of the mods" +
+          "\n\n*Also you can click the right mouse button or on one of the " +
+          "table columns to choose variant of sorting elements in the collection");
       messageBox.open();
     });
 
@@ -176,30 +165,27 @@ class CollectionInterface {
 
     Menu menu = new Menu(shell, SWT.POP_UP);
     MenuItem sort = new MenuItem(menu, SWT.CASCADE);
-    sort.setText(resource.getString("sort_by"));
+    sort.setText("Sort by");
     Menu subMenu = new Menu(menu);
     sort.setMenu(subMenu);
 
     MenuItem names = new MenuItem(subMenu, SWT.PUSH);
-    names.setText(resource.getString("names"));
+    names.setText("Names");
     new MenuItem(subMenu, SWT.SEPARATOR);
     MenuItem ages = new MenuItem(subMenu, SWT.POP_UP);
-    ages.setText(resource.getString("ages"));
+    ages.setText("Ages");
     new MenuItem(subMenu, SWT.SEPARATOR);
     MenuItem heights = new MenuItem(subMenu, SWT.PUSH);
-    heights.setText(resource.getString("heights"));
+    heights.setText("Heights");
     new MenuItem(subMenu, SWT.SEPARATOR);
     MenuItem hobbies = new MenuItem(subMenu, SWT.PUSH);
-    hobbies.setText(resource.getString("hobbies"));
+    hobbies.setText("Hobbies");
     new MenuItem(subMenu, SWT.SEPARATOR);
     MenuItem statuses = new MenuItem(subMenu, SWT.PUSH);
-    statuses.setText(resource.getString("statuses"));
+    statuses.setText("Statuses");
     new MenuItem(subMenu, SWT.SEPARATOR);
     MenuItem ides = new MenuItem(subMenu, SWT.PUSH);
-    ides.setText(resource.getString("ides"));
-    new MenuItem(subMenu, SWT.SEPARATOR);
-    MenuItem dates = new MenuItem(subMenu, SWT.PUSH);
-    dates.setText(resource.getString("dates"));
+    ides.setText("Ides");
     tree.setMenu(menu);
 
     // Names Sort Event
@@ -238,12 +224,6 @@ class CollectionInterface {
       modifyTree(tree, people);
     });
 
-    // Date Sort Event
-    dates.addListener(SWT.Selection, e -> {
-      people.sort(new DateComparator());
-      modifyTree(tree, people);
-    });
-
     // Create column for browser
     data = new GridData(SWT.FILL, SWT.FILL, true, true);
     Composite browserWindow = new Composite(shell, SWT.BORDER);
@@ -269,19 +249,28 @@ class CollectionInterface {
         url.append(tokens).append("%20");
       }
       browser.setUrl("https://yandex.ru/search/?text=" + url);
-      browser.setJavascriptEnabled(true);
     });
 
     // Load Event
-    load.addListener(SWT.Selection, e -> {
+    load.addListener(SWT.Selection, e -> Display.getDefault().syncExec(() -> {
       try {
-        loading(tree);
+        people = CollectionController.readFromServer(ServerConnection.sendCommand("load", "null",
+            "null"));
+        Comparator<Shorty> shortyComparator = new Shorty();
+        people.sort(shortyComparator);
+        modifyTree(tree, people);
       } catch (NullPointerException ex) {
-        errorMessageWindow(shell, resource.getString("check_connection"));
+        errorMessageWindow(shell, "Check your connection with server");
       } catch (Exception ex) {
-        errorMessageWindow(shell, resource.getString("empty_collection"));
+        errorMessageWindow(shell, "Collection's empty");
       }
-    });
+      info.setEnabled(true);
+      add.setEnabled(true);
+      remove_all.setEnabled(true);
+      remove_first.setEnabled(true);
+      modify.setEnabled(true);
+      filterLine.setEnabled(true);
+    }));
 
     // Exit event
     exit.addListener(SWT.Selection, (Event e) -> {
@@ -323,7 +312,7 @@ class CollectionInterface {
     info.addListener(SWT.Selection, e -> {
       int style = SWT.APPLICATION_MODAL | SWT.OK;
       MessageBox messageBox = new MessageBox(shell, style);
-      messageBox.setText(resource.getString("info"));
+      messageBox.setText("Information");
       messageBox.setMessage(CollectionController.info(people));
       messageBox.open();
     });
@@ -343,10 +332,10 @@ class CollectionInterface {
           if (people.size() != 0) {
             int style = SWT.APPLICATION_MODAL | SWT.OK;
             MessageBox window = new MessageBox(shell, style);
-            window.setMessage(resource.getString("successfully_deleted"));
+            window.setMessage("Successfully deleted");
             window.open();
           } else {
-            throw new Exception(resource.getString("empty_collection"));
+            throw new Exception("Empty collection");
           }
         } else {
           extraLoading(shell, tree);
@@ -356,8 +345,8 @@ class CollectionInterface {
 
         int style = SWT.APPLICATION_MODAL | SWT.OK;
         MessageBox window = new MessageBox(shell, style);
-        window.setText(resource.getString("warning"));
-        window.setMessage(resource.getString("empty_collection"));
+        window.setText("Warning");
+        window.setMessage("Collection is already empty");
         window.open();
       }
     });
@@ -368,45 +357,7 @@ class CollectionInterface {
     // Modify Event
     modify.addListener(SWT.Selection, (Event e) -> modifyWindow(display, tree));
 
-    // English Event
-    english.addListener(SWT.Selection, e -> {
-      display.dispose();
-      Main.main(new String[]{"1"});
-    });
-
-    // Russian Event
-    russian.addListener(SWT.Selection, e -> {
-      display.dispose();
-      Main.main(new String[]{"0"});
-    });
-
-    // German Event
-    german.addListener(SWT.Selection, e -> {
-      display.dispose();
-      Main.main(new String[]{"2"});
-    });
-
-    // Bulgarian Event
-    bulgarian.addListener(SWT.Selection, e -> {
-      display.dispose();
-      Main.main(new String[]{"3"});
-    });
-
     shell.open();
-    try {
-      loading(tree);
-    } catch (NullPointerException ex) {
-      errorMessageWindow(shell, resource.getString("check_connection"));
-    } catch (Exception ex) {
-      errorMessageWindow(shell, ex.getMessage());
-    }
-    info.setEnabled(true);
-    add.setEnabled(true);
-    remove_all.setEnabled(true);
-    remove_first.setEnabled(true);
-    modify.setEnabled(true);
-    filterLine.setEnabled(true);
-
     while (!shell.isDisposed()) {
       if (!display.readAndDispatch()) {
         display.sleep();
@@ -422,27 +373,24 @@ class CollectionInterface {
     GridData data = new GridData(SWT.FILL, SWT.FILL, true, true);
     tree.setHeaderVisible(true);
     TreeColumn column1 = new TreeColumn(tree, SWT.CENTER | SWT.PUSH);
-    column1.setText(resource.getString("name"));
-    column1.setWidth(80);
+    column1.setText("Name");
+    column1.setWidth(90);
     TreeColumn column2 = new TreeColumn(tree, SWT.CENTER | SWT.PUSH);
-    column2.setText(resource.getString("age"));
+    column2.setText("Age");
     column2.setWidth(50);
     tree.setSortColumn(column2);
     TreeColumn column3 = new TreeColumn(tree, SWT.CENTER);
-    column3.setText(resource.getString("height"));
+    column3.setText("Height");
     column3.setWidth(70);
     TreeColumn column4 = new TreeColumn(tree, SWT.CENTER);
-    column4.setText(resource.getString("hobby"));
-    column4.setWidth(90);
+    column4.setText("Hobby");
+    column4.setWidth(100);
     TreeColumn column5 = new TreeColumn(tree, SWT.CENTER);
-    column5.setText(resource.getString("status"));
-    column5.setWidth(80);
+    column5.setText("Status");
+    column5.setWidth(100);
     TreeColumn column6 = new TreeColumn(tree, SWT.CENTER);
-    column6.setText(resource.getString("id"));
+    column6.setText("id");
     column6.setWidth(40);
-    TreeColumn column7 = new TreeColumn(tree, SWT.CENTER);
-    column7.setText(resource.getString("date"));
-    column7.setWidth(40);
     tree.setLayoutData(data);
 
     // Names Sorting
@@ -480,12 +428,6 @@ class CollectionInterface {
       people.sort(new IdComparator());
       modifyTree(tree, people);
     });
-
-    // Dates Sorting
-    column7.addListener(SWT.Selection, e -> {
-      people.sort(new DateComparator());
-      modifyTree(tree, people);
-    });
   }
 
   private static void modifyTree(Tree tree, ArrayList<Shorty> collection) {
@@ -495,47 +437,22 @@ class CollectionInterface {
     TreeItem subItem;
     Shorty shorty;
 
-    Locale locale = Main.locale;
-    String pattern = "dd.MM.yy hh:mm:ss a", deviation = " +01";
-
-    switch (Main.variantOfLocale) {
-      case 1:
-        pattern = "dd/MM/yy hh:mm:ss a";
-        break;
-      case 2:
-        pattern = "dd.MM.yy HH:mm:ss";
-        break;
-      case 3:
-        deviation = " +02";
-        break;
-      default:
-        pattern = "dd.MM.yy HH:mm:ss";
-        deviation = " +03";
-    }
-
     item = new TreeItem(tree, SWT.NONE);
-    item.setText(new String[]{collection.get(0).name,
-        NumberFormat.getNumberInstance(locale).format(collection.get(0).age),
-        NumberFormat.getNumberInstance(locale).format(collection.get(0).height),
-        collection.get(0).hobby, collection.get(0).status.toString(),
-        NumberFormat.getNumberInstance(locale).format(collection.get(0).id),
-        collection.get(0).date.format(DateTimeFormatter.ofPattern(pattern + deviation))});
+    item.setText(new String[]{collection.get(0).name, Integer.toString(collection.get(0).age),
+        Double.toString(collection.get(0).height), collection.get(0).hobby, collection.get(0).status.toString(),
+        String.valueOf(collection.get(0).id)});
 
     for (int i = 1; i < collection.size(); i++) {
       shorty = collection.get(i);
 
       if (shorty.compare(shorty, collection.get(collection.indexOf(shorty) - 1)) == 0) {
         subItem = new TreeItem(item, SWT.NONE);
-        subItem.setText(new String[]{shorty.name, NumberFormat.getNumberInstance(locale).format(shorty.age),
-            NumberFormat.getNumberInstance(locale).format(shorty.height),
-            shorty.hobby, shorty.status.toString(), NumberFormat.getNumberInstance(locale).format(shorty.id),
-            shorty.date.format(DateTimeFormatter.ofPattern(pattern + deviation))});
+        subItem.setText(new String[]{shorty.name, Integer.toString(shorty.age), Double.toString(shorty.height),
+            shorty.hobby, shorty.status.toString(), Integer.toString(shorty.id)});
       } else {
         item = new TreeItem(tree, SWT.NONE);
-        item.setText(new String[]{shorty.name, NumberFormat.getNumberInstance(locale).format(shorty.age),
-            NumberFormat.getNumberInstance(locale).format(shorty.height),
-            shorty.hobby, shorty.status.toString(), NumberFormat.getNumberInstance(locale).format(shorty.id),
-            shorty.date.format(DateTimeFormatter.ofPattern(pattern + deviation))});
+        item.setText(new String[]{shorty.name, Integer.toString(shorty.age), Double.toString(shorty.height),
+            shorty.hobby, shorty.status.toString(), Integer.toString(shorty.id)});
       }
     }
     tree.setRedraw(true);
@@ -576,11 +493,11 @@ class CollectionInterface {
   private static void removeWindow(Display display, Tree tree) {
     Shell shell = new Shell(display, SWT.APPLICATION_MODAL | SWT.SHELL_TRIM);
     shell.setSize(800, 190);
-    shell.setText(resource.getString("remove_elements"));
+    shell.setText("Remove Elements");
     shell.setLayout(new GridLayout());
 
     Label title = new Label(shell, SWT.NONE);
-    title.setText(resource.getString("input") + "\n{name: , age: , height: , hobby: , status: { }}");
+    title.setText("Input object in json format");
     GridData gridDataDialog = new GridData(SWT.BEGINNING, SWT.CENTER, false, false);
     title.setLayoutData(gridDataDialog);
 
@@ -589,7 +506,7 @@ class CollectionInterface {
     jsonString.setLayoutData(gridDataDialog);
 
     Button remove = new Button(shell, SWT.PUSH | SWT.CENTER);
-    remove.setText(resource.getString("remove_elements"));
+    remove.setText("Remove elements");
 
     shell.open();
 
@@ -597,7 +514,7 @@ class CollectionInterface {
     remove.addListener(SWT.Selection, (Event e) -> {
       try {
         if (people.size() == 0) {
-          throw new Exception(resource.getString("empty_collection"));
+          throw new Exception("Collection is already empty");
         }
         Pattern removeAllRegex = java.util.regex.Pattern.compile("\\s*(\\{.+)(\\{.+}\\s*})");
         Matcher matcher = removeAllRegex.matcher(jsonString.getText());
@@ -620,14 +537,11 @@ class CollectionInterface {
             int style = SWT.APPLICATION_MODAL | SWT.OK;
             MessageBox window = new MessageBox(shell, style);
             window.setText("");
-            window.setMessage(resource.getString("successfully_deleted") + " " + number +
-                resource.getString("objects"));
+            window.setMessage("Successfully deleted " + number + " objects");
             window.open();
           } else {
             extraLoading(shell, tree);
           }
-        } else {
-          errorMessageWindow(shell, resource.getString("check_correctness"));
         }
       } catch (Exception ex) {
         errorMessageWindow(shell, ex.getMessage());
@@ -637,42 +551,42 @@ class CollectionInterface {
 
   private static void modifyWindow(Display display, Tree tree) {
     Shell shell = new Shell(display, SWT.APPLICATION_MODAL | SWT.SHELL_TRIM);
-    shell.setText(resource.getString("modify"));
-    shell.setSize(350, 600);
+    shell.setText("Modify");
+    shell.setSize(350, 570);
     shell.setLayout(new GridLayout());
 
     Label title = new Label(shell, SWT.NULL);
-    title.setText(resource.getString("input_index"));
+    title.setText("Input index of element that you want to \nchange and then new parameters");
     GridData data = new GridData(SWT.FILL, SWT.NONE, true, true);
 
-    new Label(shell, SWT.NULL).setText(resource.getString("index"));
+    new Label(shell, SWT.NULL).setText("Index");
     Text index = new Text(shell, SWT.BORDER);
     index.setLayoutData(data);
 
-    new Label(shell, SWT.NULL).setText(resource.getString("name"));
+    new Label(shell, SWT.NULL).setText("Name");
     Text spaceName = new Text(shell, SWT.BORDER);
     spaceName.setLayoutData(data);
 
-    new Label(shell, SWT.NULL).setText(resource.getString("age"));
+    new Label(shell, SWT.NULL).setText("Age");
     Text spaceAge = new Text(shell, SWT.BORDER);
     spaceAge.setLayoutData(data);
 
-    new Label(shell, SWT.NULL).setText(resource.getString("height"));
+    new Label(shell, SWT.NULL).setText("Height");
     Text spaceHeight = new Text(shell, SWT.BORDER);
     spaceHeight.setLayoutData(data);
 
-    new Label(shell, SWT.NULL).setText(resource.getString("hobby"));
+    new Label(shell, SWT.NULL).setText("Hobby");
     Text spaceHobby = new Text(shell, SWT.BORDER);
     spaceHobby.setLayoutData(data);
 
-    new Label(shell, SWT.NULL).setText(resource.getString("status"));
+    new Label(shell, SWT.NULL).setText("Status");
     Combo status = new Combo(shell, SWT.READ_ONLY);
     status.setLayoutData(data);
     String statusOptions[] = {"all_is_complicated", "have_a_girlfriend", "married", "single", "idle"};
     status.setItems(statusOptions);
 
     Button modify = new Button(shell, SWT.PUSH | SWT.CENTER);
-    modify.setText(resource.getString("modify") + "!");
+    modify.setText("Modify it!");
     modify.setLayoutData(new GridData(SWT.CENTER, SWT.NULL, false, false));
 
     shell.open();
@@ -685,10 +599,10 @@ class CollectionInterface {
       double expected_height;
       try {
         if (index.getText().matches("\\s*")) {
-          throw new Exception(resource.getString("input_index_"));
+          throw new Exception("Input index");
         } else if ((Integer.parseInt(index.getText()) < 0) || (Integer.parseInt(index.getText())
             >= people.size())) {
-          throw new Exception(resource.getString("index_out"));
+          throw new Exception("Index out of collection size");
         }
 
         if (spaceName.getText().matches("\\s*")) {
@@ -700,7 +614,7 @@ class CollectionInterface {
         if (spaceAge.getText().matches("\\s*")) {
           expected_age = people.get(Integer.parseInt(index.getText())).age;
         } else if ((Integer.parseInt(spaceAge.getText())) < 0) {
-          throw new Exception(resource.getString("age_can"));
+          throw new Exception("Age can't be negative");
         } else {
           expected_age = Integer.parseInt(spaceAge.getText());
         }
@@ -708,7 +622,7 @@ class CollectionInterface {
         if (spaceHeight.getText().matches("\\s*")) {
           expected_height = people.get(Integer.parseInt(index.getText())).height;
         } else if ((Double.parseDouble(spaceHeight.getText())) <= 0) {
-          throw new Exception(resource.getString("height_can"));
+          throw new Exception("Height can only be positive");
         } else {
           expected_height = Double.parseDouble(spaceHeight.getText());
         }
@@ -721,7 +635,6 @@ class CollectionInterface {
 
         Shorty shorty = new Shorty(expected_name, expected_age, expected_height, expected_hobby, meaning,
             people.get(Integer.parseInt(index.getText())).id);
-        shorty.date = people.get(Integer.parseInt(index.getText())).date;
 
         if (Objects.equals(ServerConnection.sendCommand("modify", shorty.toString(),
             String.valueOf(people.get(Integer.parseInt(index.getText())).id) + "%"), "1")) {
@@ -735,20 +648,27 @@ class CollectionInterface {
           int style = SWT.APPLICATION_MODAL | SWT.OK;
           MessageBox window = new MessageBox(shell, style);
           window.setText("");
-          window.setMessage(resource.getString("successfully_modified"));
+          window.setMessage("Successfully modified");
           window.open();
         } else {
           extraLoading(shell, tree);
         }
       } catch (Exception ex) {
-        errorMessageWindow(shell, ex.getMessage());
+        MessageBox error = new MessageBox(shell, SWT.APPLICATION_MODAL | SWT.NO | SWT.YES | SWT.ICON_QUESTION);
+        error.setText("You have a trouble");
+        if (error.open() == 64) {
+          MessageBox error2 = new MessageBox(shell, SWT.OK);
+          error2.setText("Decision");
+          error2.setMessage(ex.getMessage());
+          error2.open();
+        }
       }
     });
   }
 
   private static void addWindow(Display display, Tree tree, Shell mainShell) {
     Shell shell = new Shell(display, SWT.APPLICATION_MODAL | SWT.SHELL_TRIM);
-    shell.setText(resource.getString("add_element"));
+    shell.setText("Add element");
     shell.setSize(500, 570);
     GridLayout shellLayout = new GridLayout();
     shellLayout.numColumns = 2;
@@ -760,7 +680,7 @@ class CollectionInterface {
 
     // Values
     Label values = new Label(scalePlace, SWT.NULL);
-    values.setText(resource.getString("values"));
+    values.setText("Values");
     GridData gridDataDialog = new GridData(SWT.BEGINNING, SWT.CENTER, false, false);
     values.setLayoutData(gridDataDialog);
 
@@ -782,15 +702,15 @@ class CollectionInterface {
     valuesGroup.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
     valuesGroup.setLayout(new GridLayout());
 
-    new Label(valuesGroup, SWT.NULL).setText(resource.getString("name"));
+    new Label(valuesGroup, SWT.NULL).setText("Name");
     Text spaceName = new Text(valuesGroup, SWT.BORDER);
-    new Label(valuesGroup, SWT.NULL).setText(resource.getString("age"));
+    new Label(valuesGroup, SWT.NULL).setText("Age");
     Text spaceAge = new Text(valuesGroup, SWT.BORDER);
-    new Label(valuesGroup, SWT.NULL).setText(resource.getString("height"));
+    new Label(valuesGroup, SWT.NULL).setText("Height");
     Text spaceHeight = new Text(valuesGroup, SWT.BORDER);
-    new Label(valuesGroup, SWT.NULL).setText(resource.getString("hobby"));
+    new Label(valuesGroup, SWT.NULL).setText("Hobby");
     Text spaceHobby = new Text(valuesGroup, SWT.BORDER);
-    new Label(valuesGroup, SWT.NULL).setText(resource.getString("status"));
+    new Label(valuesGroup, SWT.NULL).setText("Status");
     Combo status = new Combo(valuesGroup, SWT.READ_ONLY);
     String statusOptions[] = {"all_is_complicated", "have_a_girlfriend", "married", "single", "idle"};
     status.setItems(statusOptions);
@@ -811,7 +731,7 @@ class CollectionInterface {
 
     //Button to add_element an object
     Button add_element = new Button(shell, SWT.PUSH);
-    add_element.setText(resource.getString("add_element"));
+    add_element.setText("Add element");
     add_element.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, true));
 
     // Event
@@ -862,29 +782,27 @@ class CollectionInterface {
 
             shorty = gson.fromJson(shortyJson, Shorty.class);
             shorty.id = people.size();
-            shorty.date = ZonedDateTime.now(ZoneId.of("Europe/Moscow"));
 
             if (shorty.age < 0) {
-              throw new Exception(resource.getString("age_can"));
+              throw new Exception("Age can't be negative");
             }
 
             if (shorty.height <= 0) {
-              throw new Exception(resource.getString("height_can"));
+              throw new Exception("Height can only be positive");
             }
           }
         } else {
           Status meaning = switchStatus(status.getText());
           if ((spaceName.getText().matches("\\s*")) || (spaceAge.getText().matches("\\s*")) ||
               (spaceHeight.getText().matches("\\s*")) || (spaceHobby.getText().matches("\\s*"))) {
-            throw new Exception(resource.getString("can_null"));
+            throw new Exception("Complete the empty fields");
           } else if ((Integer.parseInt(spaceAge.getText())) < 0) {
-            throw new Exception(resource.getString("age_can"));
+            throw new Exception("Age can't be negative");
           } else if ((Double.parseDouble(spaceHeight.getText())) <= 0) {
-            throw new Exception(resource.getString("height_can"));
+            throw new Exception("Height can only be positive");
           }
           shorty = new Shorty(spaceName.getText(), Integer.parseInt(spaceAge.getText()),
               Double.parseDouble(spaceHeight.getText()), spaceHobby.getText(), meaning, people.size());
-          shorty.date = ZonedDateTime.now(ZoneId.of("Europe/Moscow"));
         }
         if (Objects.equals(ServerConnection.sendCommand("add", shorty.toString(), "null"), "1")) {
           people.add(shorty);
@@ -897,13 +815,13 @@ class CollectionInterface {
           int style = SWT.APPLICATION_MODAL | SWT.OK;
           MessageBox window = new MessageBox(shell, style);
           window.setText("");
-          window.setMessage(resource.getString("successfully_added"));
+          window.setMessage("Successfully added");
           window.open();
         } else {
           extraLoading(shell, tree);
         }
       } catch (JsonSyntaxException ex) {
-        errorMessageWindow(mainShell, resource.getString("empty_collection"));
+        errorMessageWindow(mainShell, "Collection's empty");
       } catch (Exception ex) {
         errorMessageWindow(mainShell, ex.getMessage());
       }
@@ -941,25 +859,17 @@ class CollectionInterface {
   }
 
   private static void errorMessageWindow(Shell shell, String message) {
-    try {
-      int style = SWT.APPLICATION_MODAL | SWT.OK;
-      MessageBox error = new MessageBox(shell, style);
-      error.setText(resource.getString("error"));
-      error.setMessage(message);
-      error.open();
-    } catch (Exception ex) {
-      int style = SWT.APPLICATION_MODAL | SWT.OK;
-      MessageBox error = new MessageBox(shell, style);
-      error.setText(resource.getString("error"));
-      error.setMessage(resource.getString("can_null"));
-      error.open();
-    }
+    int style = SWT.APPLICATION_MODAL | SWT.OK;
+    MessageBox error = new MessageBox(shell, style);
+    error.setText("Error");
+    error.setMessage(message);
+    error.open();
   }
 
   private static void extraLoading(Shell shell, Tree tree) throws Exception {
     MessageBox messageBox = new MessageBox(shell, SWT.APPLICATION_MODAL | SWT.OK);
-    messageBox.setText(resource.getString("warning"));
-    messageBox.setMessage(resource.getString("loading"));
+    messageBox.setText("Warning");
+    messageBox.setMessage("Your data're outdated\nLoading new data..");
     messageBox.open();
 
     people = CollectionController.readFromServer(ServerConnection.sendCommand("load", "null",

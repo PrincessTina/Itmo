@@ -1,10 +1,7 @@
 package com.company;
 
 import com.google.gson.Gson;
-
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.ZonedDateTime;
 import java.util.*;
 
 class CollectionController {
@@ -18,17 +15,11 @@ class CollectionController {
   static ArrayList<Shorty> readFromServer(String arrayOfObjects) throws Exception {
     ArrayList<Shorty> searchedCollection = new ArrayList<>();
     Gson gson = new Gson();
-    String date;
-    int i = 0;
 
     arrayOfObjects = arrayOfObjects.substring(1, arrayOfObjects.length() - 1) + ",";
 
     for (String tokens : arrayOfObjects.split("%,")) {
-      date = tokens.substring(tokens.indexOf("date") - 2, tokens.length() - 2).substring(9);
-      tokens = tokens.substring(0, tokens.indexOf("date") - 2) + "}";
       searchedCollection.add(gson.fromJson(tokens, Shorty.class));
-      searchedCollection.get(i).date = ZonedDateTime.parse(date);
-      i++;
     }
 
     Comparator<Shorty> shortyComparator = new Shorty();
@@ -88,6 +79,7 @@ class CollectionController {
 
   static void getLastModificationDate() {
     Date date =  new Date();
-    lastModified = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT, Main.locale).format(date);
+    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+    lastModified = formatter.format(date);
   }
 }
