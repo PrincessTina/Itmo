@@ -4,15 +4,11 @@ import com.google.gson.Gson;
 import com.sun.rowset.CachedRowSetImpl;
 
 import javax.sql.rowset.CachedRowSet;
-import java.net.DatagramPacket;
-import java.net.DatagramSocket;
-import java.sql.CallableStatement;
-import java.sql.Connection;
-import java.sql.Statement;
+import java.net.*;
+import java.sql.*;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.Date;
-import java.util.Objects;
 
 class ClientConnection {
   static DatagramSocket socket;
@@ -218,7 +214,7 @@ class ClientConnection {
     return statusString;
   }
 
-  static void getLastModificationDate() {
+  private static void getLastModificationDate() {
     Date date =  new Date();
     SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
     lastModified = formatter.format(date);

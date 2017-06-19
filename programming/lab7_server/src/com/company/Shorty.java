@@ -8,7 +8,7 @@ public class Shorty implements Comparator<Shorty> {
   double height;
   String hobby;
   Status status;
-  int id;
+  private int id;
 
   Shorty(String name, int age, double height, String hobby, Status status, int id) {
     this.name = name;
@@ -18,9 +18,6 @@ public class Shorty implements Comparator<Shorty> {
     this.status = status;
     this.id = id;
   }
-
-  // Is used for shorty comparator
-  Shorty() {}
 
   public String toString() {
     return "{name: '" + this.name + "', age: " + this.age + ", height: " + this.height + ", hobby: '" + this.hobby + "'" +
