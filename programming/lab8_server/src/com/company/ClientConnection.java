@@ -19,7 +19,7 @@ class ClientConnection {
   private static String lastModified = "null";
   private static ArrayList<Shorty> people = new ArrayList<>();
   private static String stringForNewCollection;
-  private static String stringWithIndexes;
+  static String stringWithIndexes;
 
   static void waitingCommand() {
     try {
@@ -148,7 +148,7 @@ class ClientConnection {
     return searchedCollection;
   }
 
-  private static ArrayList<Integer> parsingIndexes(String string) throws Exception {
+  public static ArrayList<Integer> parsingIndexes(String string) throws Exception {
     ArrayList<Integer> searchedIndexes = new ArrayList<>();
     String arrayOfObjects = string.substring(0, string.length());
 

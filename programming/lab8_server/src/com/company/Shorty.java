@@ -1,5 +1,6 @@
 package com.company;
 
+import javax.persistence.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 
@@ -12,7 +13,7 @@ public class Shorty implements Comparator<Shorty> {
   private int id;
   ZonedDateTime date;
 
-  Shorty(String name, int age, double height, String hobby, Status status, int id, ZonedDateTime date) {
+  public Shorty(String name, int age, double height, String hobby, Status status, int id, ZonedDateTime date) {
     this.name = name;
     this.age = age;
     this.height = height;
