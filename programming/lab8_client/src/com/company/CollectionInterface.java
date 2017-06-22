@@ -15,10 +15,8 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.MenuItem;
 
-import java.text.DateFormat;
 import java.text.NumberFormat;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.regex.*;
@@ -142,14 +140,13 @@ class CollectionInterface {
 
     // Create filter Line
     final Text filterLine = new Text(shell, SWT.BORDER);
-    filterLine.setEnabled(false);
     filterLine.setForeground(new Color(display, 0, 0, 0));
     data = new GridData();
     data.horizontalAlignment = GridData.FILL;
     data.horizontalSpan = 1;
     data.grabExcessHorizontalSpace = true;
     filterLine.setLayoutData(data);
-    filterLine.setBackgroundImage(new Image(display, "..\\..\\61.jpg"));
+    filterLine.setBackgroundImage(new Image(display, "..\\..\\60.jpg"));
 
     // Create Search Line
     final Text search = new Text(shell, SWT.BORDER);
@@ -159,7 +156,7 @@ class CollectionInterface {
     data.horizontalSpan = 1;
     data.grabExcessHorizontalSpace = true;
     search.setLayoutData(data);
-    search.setBackgroundImage(new Image(display, "..\\..\\61.jpg"));
+    search.setBackgroundImage(new Image(display, "..\\..\\60.jpg"));
 
     // Create column for tree
     data = new GridData(SWT.FILL, SWT.FILL, true, true);
@@ -270,6 +267,10 @@ class CollectionInterface {
       }
       browser.setUrl("https://yandex.ru/search/?text=" + url);
       browser.setJavascriptEnabled(true);
+      browser.setRedraw(false);
+      browser.setBackgroundImage(new Image(display, "..\\..\\60.jpg"));
+      browser.setRedraw(true);
+      browser.setBackground(new Color(display, 0, 0, 0));
     });
 
     // Load Event
@@ -311,9 +312,9 @@ class CollectionInterface {
 
     // CitySpirit Event
     citySpirit.addListener(SWT.Selection, e -> {
-      search.setBackgroundImage(new Image(display, "..\\..\\61.jpg"));
+      search.setBackgroundImage(new Image(display, "..\\..\\60.jpg"));
       search.setForeground(new Color(display, 0, 0, 0));
-      filterLine.setBackgroundImage(new Image(display, "..\\..\\61.jpg"));
+      filterLine.setBackgroundImage(new Image(display, "..\\..\\60.jpg"));
       filterLine.setForeground(new Color(display, 0, 0, 0));
       tree.setBackgroundImage(new Image(display, "..\\..\\61.jpg"));
       tree.setForeground(new Color(display, 0, 0, 0));
@@ -338,7 +339,6 @@ class CollectionInterface {
             String.valueOf(people.get(0).id) + "%"), "1")) {
           CollectionController.remove_first(people);
           loading(tree);
-          CollectionController.getLastModificationDate();
 
           if (people.size() != 0) {
             int style = SWT.APPLICATION_MODAL | SWT.OK;
@@ -400,12 +400,6 @@ class CollectionInterface {
     } catch (Exception ex) {
       errorMessageWindow(shell, ex.getMessage());
     }
-    info.setEnabled(true);
-    add.setEnabled(true);
-    remove_all.setEnabled(true);
-    remove_first.setEnabled(true);
-    modify.setEnabled(true);
-    filterLine.setEnabled(true);
 
     while (!shell.isDisposed()) {
       if (!display.readAndDispatch()) {
@@ -580,7 +574,7 @@ class CollectionInterface {
     shell.setLayout(new GridLayout());
 
     Label title = new Label(shell, SWT.NONE);
-    title.setText(resource.getString("input") + "\n{name: , age: , height: , hobby: , status: { }}");
+    title.setText(resource.getString("input") + "\n{name: 'mean', age: mean, height: mean, hobby: 'mean', status: { }}");
     GridData gridDataDialog = new GridData(SWT.BEGINNING, SWT.CENTER, false, false);
     title.setLayoutData(gridDataDialog);
 
@@ -617,8 +611,7 @@ class CollectionInterface {
             loading(tree);
             CollectionController.getLastModificationDate();
 
-            int style = SWT.APPLICATION_MODAL | SWT.OK;
-            MessageBox window = new MessageBox(shell, style);
+            MessageBox window = new MessageBox(shell, SWT.APPLICATION_MODAL | SWT.OK);
             window.setText("");
             window.setMessage(resource.getString("successfully_deleted") + " " + number +
                 resource.getString("objects"));
@@ -627,7 +620,7 @@ class CollectionInterface {
             extraLoading(shell, tree);
           }
         } else {
-          errorMessageWindow(shell, resource.getString("check_correctness"));
+          throw new Exception(resource.getString("check_correctness"));
         }
       } catch (Exception ex) {
         errorMessageWindow(shell, ex.getMessage());

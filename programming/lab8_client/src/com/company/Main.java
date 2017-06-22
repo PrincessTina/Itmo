@@ -1,12 +1,11 @@
 package com.company;
 
-import java.lang.reflect.Constructor;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class Main {
-  public static int variantOfLocale;
-  public static Locale locale;
+  static int variantOfLocale;
+  static Locale locale;
 
   public static void main(String args[]) {
     if (args.length == 0) {

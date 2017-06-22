@@ -1,8 +1,6 @@
 package com.company;
 
 import com.google.gson.Gson;
-
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.ZonedDateTime;
 import java.util.*;
@@ -54,6 +52,7 @@ class CollectionController {
    */
   static void remove_first(ArrayList<Shorty> people) throws Exception {
     people.remove(0);
+    getLastModificationDate();
   }
 
   /**
@@ -88,6 +87,7 @@ class CollectionController {
 
   static void getLastModificationDate() {
     Date date =  new Date();
-    lastModified = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT, Main.locale).format(date);
+    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+    lastModified = formatter.format(date);
   }
 }

@@ -19,9 +19,11 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
+            <state relative-caret-position="88">
               <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="e#138#139#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -29,14 +31,10 @@
       <file leaf-file-name="CollectionInterface.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/CollectionInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
+            <state relative-caret-position="22">
               <caret line="763" column="39" lean-forward="false" selection-start-line="763" selection-start-column="39" selection-end-line="763" selection-end-column="39" />
               <folding>
                 <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
-                <element signature="e#18164#18357#0" expanded="true" />
-                <element signature="e#18356#18357#0" expanded="true" />
-                <element signature="e#18417#19048#0" expanded="true" />
-                <element signature="e#19047#19048#0" expanded="true" />
                 <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
                 <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
                 <element signature="method#sort#0;class#CollectionInterface#0" expanded="false" />
@@ -49,10 +47,9 @@
       <file leaf-file-name="CollectionController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/CollectionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
+            <state relative-caret-position="572">
               <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="false" />
                 <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
               </folding>
             </state>
@@ -62,7 +59,7 @@
       <file leaf-file-name="Shorty.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Shorty.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
+            <state relative-caret-position="506">
               <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="method#toString#0;class#Shorty#0" expanded="false" />
@@ -75,7 +72,7 @@
       <file leaf-file-name="Status.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Status.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
+            <state relative-caret-position="176">
               <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
               <folding />
             </state>
@@ -139,10 +136,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="1934" />
-    <option name="height" value="1042" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -159,7 +156,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -206,8 +202,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -215,7 +212,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab8_client" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
@@ -492,36 +489,36 @@
     <option name="totallyTimeSpent" value="4502000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1934" height="1042" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287827" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22639363" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19089958" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19313304" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39817974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287827" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -589,7 +586,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -598,7 +597,6 @@
         <state relative-caret-position="275">
           <caret line="16" column="70" lean-forward="false" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
           </folding>
         </state>
@@ -617,10 +615,6 @@
           <caret line="767" column="20" lean-forward="false" selection-start-line="767" selection-start-column="20" selection-end-line="767" selection-end-column="20" />
           <folding>
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
-            <element signature="e#18164#18357#0" expanded="true" />
-            <element signature="e#18356#18357#0" expanded="true" />
-            <element signature="e#18417#19048#0" expanded="true" />
-            <element signature="e#19047#19048#0" expanded="true" />
             <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#sort#0;class#CollectionInterface#0" expanded="false" />
@@ -633,7 +627,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -643,10 +639,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
-            <element signature="e#18164#18357#0" expanded="true" />
-            <element signature="e#18356#18357#0" expanded="true" />
-            <element signature="e#18417#19048#0" expanded="true" />
-            <element signature="e#19047#19048#0" expanded="true" />
             <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#sort#0;class#CollectionInterface#0" expanded="false" />
@@ -660,7 +652,6 @@
         <state relative-caret-position="400">
           <caret line="16" column="70" lean-forward="false" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
           </folding>
         </state>
@@ -689,7 +680,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -699,10 +692,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
-            <element signature="e#18164#18357#0" expanded="true" />
-            <element signature="e#18356#18357#0" expanded="true" />
-            <element signature="e#18417#19048#0" expanded="true" />
-            <element signature="e#19047#19048#0" expanded="true" />
             <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#sort#0;class#CollectionInterface#0" expanded="false" />
@@ -716,7 +705,6 @@
         <state relative-caret-position="400">
           <caret line="16" column="70" lean-forward="false" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
           </folding>
         </state>
@@ -745,7 +733,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -755,10 +745,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
-            <element signature="e#18164#18357#0" expanded="true" />
-            <element signature="e#18356#18357#0" expanded="true" />
-            <element signature="e#18417#19048#0" expanded="true" />
-            <element signature="e#19047#19048#0" expanded="true" />
             <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#sort#0;class#CollectionInterface#0" expanded="false" />
@@ -772,7 +758,6 @@
         <state relative-caret-position="594">
           <caret line="174" column="3" lean-forward="false" selection-start-line="174" selection-start-column="3" selection-end-line="174" selection-end-column="3" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
           </folding>
         </state>
@@ -801,7 +786,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -811,10 +798,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
-            <element signature="e#18164#18357#0" expanded="true" />
-            <element signature="e#18356#18357#0" expanded="true" />
-            <element signature="e#18417#19048#0" expanded="true" />
-            <element signature="e#19047#19048#0" expanded="true" />
             <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#sort#0;class#CollectionInterface#0" expanded="false" />
@@ -828,7 +811,6 @@
         <state relative-caret-position="4350">
           <caret line="174" column="3" lean-forward="false" selection-start-line="174" selection-start-column="3" selection-end-line="174" selection-end-column="3" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
           </folding>
         </state>
@@ -857,7 +839,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -867,10 +851,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
-            <element signature="e#18164#18357#0" expanded="true" />
-            <element signature="e#18356#18357#0" expanded="true" />
-            <element signature="e#18417#19048#0" expanded="true" />
-            <element signature="e#19047#19048#0" expanded="true" />
             <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#sort#0;class#CollectionInterface#0" expanded="false" />
@@ -884,7 +864,6 @@
         <state relative-caret-position="4350">
           <caret line="174" column="3" lean-forward="true" selection-start-line="174" selection-start-column="3" selection-end-line="174" selection-end-column="3" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
           </folding>
         </state>
@@ -913,7 +892,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -921,7 +902,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -929,7 +912,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -937,7 +922,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -975,15 +962,17 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/ArrayList.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
+        <state relative-caret-position="88">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Shorty.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
+        <state relative-caret-position="506">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="method#toString#0;class#Shorty#0" expanded="false" />
@@ -994,7 +983,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Status.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
+        <state relative-caret-position="176">
           <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding />
         </state>
@@ -1002,10 +991,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/CollectionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
+        <state relative-caret-position="572">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="docComment;method#readFromFile#0;class#CollectionController#0" expanded="false" />
           </folding>
         </state>
@@ -1013,14 +1001,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/CollectionInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
+        <state relative-caret-position="22">
           <caret line="763" column="39" lean-forward="false" selection-start-line="763" selection-start-column="39" selection-end-line="763" selection-end-column="39" />
           <folding>
             <element signature="method#addWindow#0;class#CollectionInterface#0" expanded="false" />
-            <element signature="e#18164#18357#0" expanded="true" />
-            <element signature="e#18356#18357#0" expanded="true" />
-            <element signature="e#18417#19048#0" expanded="true" />
-            <element signature="e#19047#19048#0" expanded="true" />
             <element signature="method#createTree#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#removeWindow#0;class#CollectionInterface#0" expanded="false" />
             <element signature="method#sort#0;class#CollectionInterface#0" expanded="false" />

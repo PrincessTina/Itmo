@@ -3,6 +3,7 @@
     <properties maven-id="javax.persistence:persistence-api:1.0.2" />
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/javax/persistence/persistence-api/1.0.2/persistence-api-1.0.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/persistence/persistence-api/1.0.2/persistence-api-1.0.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

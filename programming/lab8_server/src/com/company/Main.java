@@ -6,7 +6,8 @@ public class Main {
   public static void main(String args[]) {
     try {
       ClientConnection.socket = new DatagramSocket(9876);
-      ClientConnection.connection = DataBaseController.connection();
+      ORM.connection = DataBaseController.connection();
+
 
       while (true) {
         ClientConnection.waitingCommand();
