@@ -19,8 +19,11 @@ import java.text.NumberFormat;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+import java.util.List;
 import java.util.regex.*;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 class CollectionInterface {
   private static ArrayList<Shorty> people = new ArrayList<>();
@@ -441,48 +444,41 @@ class CollectionInterface {
 
     // Names Sorting
     column1.addListener(SWT.Selection, e -> {
-      people.sort(new NameComparator());
-      modifyTree(tree, people);
+      modifyTree(tree, people.stream().sorted(new NameComparator()).collect(Collectors.toList()));
     });
 
     // Ages Sorting
     column2.addListener(SWT.Selection, e -> {
-      people.sort(new AgeComparator());
-      modifyTree(tree, people);
+      modifyTree(tree, people.stream().sorted(new AgeComparator()).collect(Collectors.toList()));
     });
 
     // Heights Sorting
     column3.addListener(SWT.Selection, e -> {
-      people.sort(new HeightComparator());
-      modifyTree(tree, people);
+      modifyTree(tree, people.stream().sorted(new HeightComparator()).collect(Collectors.toList()));
     });
 
     // Hobbies Sorting
     column4.addListener(SWT.Selection, e -> {
-      people.sort(new HobbyComparator());
-      modifyTree(tree, people);
+      modifyTree(tree, people.stream().sorted(new HobbyComparator()).collect(Collectors.toList()));
     });
 
     // Statuses Sorting
     column5.addListener(SWT.Selection, e -> {
-      people.sort(new StatusComparator());
-      modifyTree(tree, people);
+      modifyTree(tree, people.stream().sorted(new StatusComparator()).collect(Collectors.toList()));
     });
 
     // ides Sorting
     column6.addListener(SWT.Selection, e -> {
-      people.sort(new IdComparator());
-      modifyTree(tree, people);
+      modifyTree(tree, people.stream().sorted(new IdComparator()).collect(Collectors.toList()));
     });
 
     // Dates Sorting
     column7.addListener(SWT.Selection, e -> {
-      people.sort(new DateComparator());
-      modifyTree(tree, people);
+      modifyTree(tree, people.stream().sorted(new DateComparator()).collect(Collectors.toList()));
     });
   }
 
-  private static void modifyTree(Tree tree, ArrayList<Shorty> collection) {
+  private static void modifyTree(Tree tree, List<Shorty> collection) {
     tree.removeAll();
     tree.setRedraw(false);
     TreeItem item;
@@ -536,22 +532,15 @@ class CollectionInterface {
   }
 
   private static void filterTree(Shell shell, Tree tree, String filter) {
-    int num = filter.length();
     filteredArray.clear();
     try {
-      if ((num != 0) && (!filter.matches("\\s*"))) {
-        for (Shorty aPeople : people) {
-          if ((aPeople.name.length() >= num && aPeople.name.contains(filter)) ||
-              (Integer.toString(aPeople.age).length() >= num &&
-                  Integer.toString(aPeople.age).contains(filter)) ||
-              (Double.toString(aPeople.height).length() >= num &&
-                  Double.toString(aPeople.height).contains(filter)) ||
-              (aPeople.hobby.length() >= num && aPeople.hobby.contains(filter)) ||
-              (aPeople.status.toString().length() >= num &&
-                  aPeople.status.toString().contains(filter)) ||
-              (Integer.toString(aPeople.id).length() >= num &&
-                  Integer.toString(aPeople.id).contains(filter))) {
-            filteredArray.add(aPeople);
+      if ((filter.length() != 0) && (!filter.matches("\\s*"))) {
+        for (Shorty shorty : people) {
+          if (Stream.of(shorty.name, Integer.toString(shorty.age), Double.toString(shorty.height),
+                shorty.hobby, shorty.status.toString(), Integer.toString(shorty.id),
+                shorty.date.format(DateTimeFormatter.ofPattern("dd.MM.yy HH:mm:ss"))).filter
+                (w -> w.contains(filter)).count() != 0) {
+            filteredArray.add(shorty);
           }
         }
         if (filteredArray.size() > 0) {

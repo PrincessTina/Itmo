@@ -190,7 +190,8 @@ class ORM {
 
         request.append("create table if not exists ");
         request.append(currentClass.getSimpleName());
-        request.append("(\n");
+        request.append("(");
+        request.append(System.lineSeparator());
         request.append(buildFields());
         request.append(");");
 
@@ -204,9 +205,9 @@ class ORM {
             request.append(field.getName());
             request.append(" ");
             request.append(convertType(field.getType().getSimpleName()));
-            request.append(",\n");
+            request.append(", ");
         }
-        request.deleteCharAt(request.length() - 1);
+        request.delete(request.length() - 2, request.length() - 1);
         return request.toString();
     }
 
