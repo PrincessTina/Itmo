@@ -8,7 +8,6 @@ public class Main {
       ClientConnection.socket = new DatagramSocket(9876);
       ORM.connection = DataBaseController.connection();
 
-
       while (true) {
         ClientConnection.waitingCommand();
       }
