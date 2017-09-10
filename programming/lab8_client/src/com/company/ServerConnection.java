@@ -1,5 +1,6 @@
 package com.company;
 
+import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
@@ -12,8 +13,10 @@ class ServerConnection {
       ByteBuffer receiveData;
       String searchedString = "", sendDate = CollectionController.lastModified;
 
-      channel.send(ByteBuffer.wrap(sendData.getBytes()), new InetSocketAddress("localhost", 9876));
-      channel.send(ByteBuffer.wrap(sendDate.getBytes()), new InetSocketAddress("localhost", 9876));
+      channel.send(ByteBuffer.wrap(sendData.getBytes()), new InetSocketAddress(
+            InetAddress.getByName("LAPTOP-CN4TD6JS"), 9876));
+      channel.send(ByteBuffer.wrap(sendDate.getBytes()), new InetSocketAddress(
+            InetAddress.getByName("LAPTOP-CN4TD6JS"), 9876));
 
       receiveData = ByteBuffer.allocate(1024);
       channel.receive(receiveData);
@@ -26,22 +29,26 @@ class ServerConnection {
       } else if (sendData.contains("add")) {
         if (byteToInt(receiveData) == 1) {
           searchedString = "1";
-          channel.send(ByteBuffer.wrap(sendObject.getBytes()), new InetSocketAddress("localhost", 9876));
+          channel.send(ByteBuffer.wrap(sendObject.getBytes()), new InetSocketAddress(
+                InetAddress.getByName("LAPTOP-CN4TD6JS"), 9876));
         } else {
           searchedString = "0";
         }
       } else if (sendData.contains("modify")) {
         if (byteToInt(receiveData) == 1) {
           searchedString = "1";
-          channel.send(ByteBuffer.wrap(indexOfObject.getBytes()), new InetSocketAddress("localhost", 9876));
-          channel.send(ByteBuffer.wrap(sendObject.getBytes()), new InetSocketAddress("localhost", 9876));
+          channel.send(ByteBuffer.wrap(indexOfObject.getBytes()), new InetSocketAddress(
+                InetAddress.getByName("LAPTOP-CN4TD6JS"), 9876));
+          channel.send(ByteBuffer.wrap(sendObject.getBytes()), new InetSocketAddress(
+                InetAddress.getByName("LAPTOP-CN4TD6JS"), 9876));
         } else {
           searchedString = "0";
         }
       } else if (sendData.contains("remove")) {
         if (byteToInt(receiveData) == 1) {
           searchedString = "1";
-          channel.send(ByteBuffer.wrap(indexOfObject.getBytes()), new InetSocketAddress("localhost", 9876));
+          channel.send(ByteBuffer.wrap(indexOfObject.getBytes()), new InetSocketAddress(
+                InetAddress.getByName("LAPTOP-CN4TD6JS"), 9876));
         } else {
           searchedString = "0";
         }

@@ -443,39 +443,32 @@ class CollectionInterface {
     tree.setLayoutData(data);
 
     // Names Sorting
-    column1.addListener(SWT.Selection, e -> {
-      modifyTree(tree, people.stream().sorted(new NameComparator()).collect(Collectors.toList()));
-    });
+    column1.addListener(SWT.Selection, e -> modifyTree(tree,
+        people.stream().sorted(new NameComparator()).collect(Collectors.toList())));
 
     // Ages Sorting
-    column2.addListener(SWT.Selection, e -> {
-      modifyTree(tree, people.stream().sorted(new AgeComparator()).collect(Collectors.toList()));
-    });
+    column2.addListener(SWT.Selection, e -> modifyTree(tree,
+        people.stream().sorted(new AgeComparator()).collect(Collectors.toList())));
 
     // Heights Sorting
-    column3.addListener(SWT.Selection, e -> {
-      modifyTree(tree, people.stream().sorted(new HeightComparator()).collect(Collectors.toList()));
-    });
+    column3.addListener(SWT.Selection, e -> modifyTree(tree,
+        people.stream().sorted(new HeightComparator()).collect(Collectors.toList())));
 
     // Hobbies Sorting
-    column4.addListener(SWT.Selection, e -> {
-      modifyTree(tree, people.stream().sorted(new HobbyComparator()).collect(Collectors.toList()));
-    });
+    column4.addListener(SWT.Selection, e -> modifyTree(tree,
+        people.stream().sorted(new HobbyComparator()).collect(Collectors.toList())));
 
     // Statuses Sorting
-    column5.addListener(SWT.Selection, e -> {
-      modifyTree(tree, people.stream().sorted(new StatusComparator()).collect(Collectors.toList()));
-    });
+    column5.addListener(SWT.Selection, e -> modifyTree(tree,
+        people.stream().sorted(new StatusComparator()).collect(Collectors.toList())));
 
     // ides Sorting
-    column6.addListener(SWT.Selection, e -> {
-      modifyTree(tree, people.stream().sorted(new IdComparator()).collect(Collectors.toList()));
-    });
+    column6.addListener(SWT.Selection, e -> modifyTree(tree,
+        people.stream().sorted(new IdComparator()).collect(Collectors.toList())));
 
     // Dates Sorting
-    column7.addListener(SWT.Selection, e -> {
-      modifyTree(tree, people.stream().sorted(new DateComparator()).collect(Collectors.toList()));
-    });
+    column7.addListener(SWT.Selection, e -> modifyTree(tree,
+        people.stream().sorted(new DateComparator()).collect(Collectors.toList())));
   }
 
   private static void modifyTree(Tree tree, List<Shorty> collection) {
