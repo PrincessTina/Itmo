@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="main.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="validate.js"></script>
+</head>
+<body>
+
+    <table cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <th colspan="2">
+                <p>Выполнила Орлова Кристина Александровна
+                <p>Группа Р3202, Вариант 550</p>
+            </th>
+        </tr>
+        <tr>
+            <td style="background-image: url(ducks.jpg);" colspan="2" height="500px">
+                <div class="text">
+                    <p>Кафедра "Вт"</p>
+                    <p>Программирование интернет-приложений</p>
+                </div>
+            </td>
+        </tr>
+        <tr style="background-image: url(18-tekstura-dzhinsovoy-tkani.jpg);">
+            <td width="83%" height="250px">
+                <div class="tabs">
+                    <div class="tab">
+                        <input type="radio" id="tab1" name="group1" checked>
+                        <label for="tab1">Выбрать X</label>
+                        <div class="content">
+                            <form action="main.php" method="post">
+                            <input type="text" name="x" class="field" value="" size="15"/>
+                            <p><input type="submit" value="Проверить" name="button" class="button"
+                                      onmouseover="check_fields(x);"/></p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <input type="radio" id="tab2" name="group1">
+                        <label for="tab2">Выбрать Y</label>
+                        <div class="content">
+                            <p><select size="10" multiple name="y">
+                                <option disabled>Выберите Y</option>
+                                <option value="-2" selected> -2</option>
+                                <option value="-1.5"> -1.5</option>
+                                <option value="-1"> -1</option>
+                                <option value="-0.5"> - 0.5</option>
+                                <option value="0"> 0</option>
+                                <option value="0.5"> 0.5</option>
+                                <option value="1"> 1</option>
+                                <option value="1.5"> 1.5</option>
+                                <option value="2"> 2</option>
+                            </select></p>
+                            <p><input type="submit" value="Проверить" name="button" class="button"
+                                      onclick="check_fields(x);"/></p>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <input type="radio" id="tab3" name="group1">
+                        <label for="tab3">Выбрать R</label>
+                        <div class="content">
+                            <p><input type="radio" name="r" value="1" checked> 1 </p>
+                            <p><input type="radio" name="r" value="2"> 2 </p>
+                            <p><input type="radio" name="r" value="3"> 3 </p>
+                            <p><input type="radio" name="r" value="4"> 4 </p>
+                            <p><input type="radio" name="r" value="5"> 5 </p>
+                            <p><input type="submit" value="Проверить" name="button" class="button"
+                                      onmouseover="check_fields(x);"/>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td width="17%" height="260px">
+                <div class="graph">
+                    <img src="graph.jpg" width="100%" height="230">
+                </div>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
