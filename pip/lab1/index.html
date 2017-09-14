@@ -7,10 +7,9 @@
     <script type="text/javascript" src="validate.js"></script>
 </head>
 <body>
-<form action="main.php" method="post">
     <table cellpadding="0" cellspacing="0" width="100%">
         <tr>
-            <th colspan="2">
+            <th height="80px" colspan="2">
                 <p>Выполнила Орлова Кристина Александровна
                 <p>Группа Р3202, Вариант 550</p>
             </th>
@@ -30,16 +29,17 @@
                         <input type="radio" id="tab1" name="group1" checked>
                         <label for="tab1">Выбрать X</label>
                         <div class="content">
-                            <input type="text" name="x" class="field" value="" size="15"/> <span id="x_span"></span>
+                            <input type="text"  id="x" class="field" value="" size="15" oninput="returnField()"/>
+                            <span id="x_span"></span><span id="tick"></span>
                             <p><input type="submit" value="Проверить" name="button" class="button"
-                                      onmouseover="check_fields(x);"/></p>
+                                      onclick="exchangeParameters()" onmouseover="check_field();"/></p>
                         </div>
                     </div>
                     <div class="tab">
                         <input type="radio" id="tab2" name="group1">
                         <label for="tab2">Выбрать Y</label>
                         <div class="content">
-                            <p><select size="10" multiple name="y">
+                            <p><select size="10" id="y">
                                 <option disabled>Выберите Y</option>
                                 <option value="-2" selected> -2</option>
                                 <option value="-1.5"> -1.5</option>
@@ -52,7 +52,7 @@
                                 <option value="2"> 2</option>
                             </select></p>
                             <p><input type="submit" value="Проверить" name="button" class="button"
-                                      onclick="check_fields(x);"/></p>
+                                      onmouseover="check_field();"/></p>
                         </div>
                     </div>
                     <div class="tab">
@@ -65,7 +65,7 @@
                             <p><input type="radio" name="r" value="4"> 4 </p>
                             <p><input type="radio" name="r" value="5"> 5 </p>
                             <p><input type="submit" value="Проверить" name="button" class="button"
-                                      onmouseleave="returnField()" onmouseover="check_fields(x);"/>
+                                      onmouseover="check_field();"/>
                         </div>
                     </div>
                     <div class="tab">
@@ -95,22 +95,22 @@
                                 </tr>
                                 <tr>
                                     <td>
-
+                                    <span id = "x_table"></span>
                                     </td>
                                     <td>
-
+                                        <span id = "y_table"></span>
                                     </td>
                                     <td>
-
+                                        <span id = "r_table"></span>
                                     </td>
                                     <td>
-
+                                        <span id = "current_time"></span>
                                     </td>
                                     <td>
-
+                                        <span id = "work_time"></span>
                                     </td>
                                     <td>
-
+                                        <span id = "result"></span>
                                     </td>
                                 </tr>
                             </table>
@@ -120,11 +120,10 @@
             </td>
             <td width="17%" height="260px">
                 <div class="graph">
-                    <img src="graph.jpg" width="100%" height="240">
+                    <img src="graph.jpg" width="100%" height="235">
                 </div>
             </td>
         </tr>
     </table>
-</form>
 </body>
 </html>

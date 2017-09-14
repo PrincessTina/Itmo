@@ -7,6 +7,20 @@
     background-image: url(18-tekstura-dzhinsovoy-tkani.jpg);
 }
 
+* {
+    margin: 0;
+}
+
+#x_span {
+    margin-left: 10px;
+    color: maroon;
+}
+
+#tick {
+    margin-left: 10px;
+    color: limegreen;
+}
+
 th {
     font-style: italic;
     color: black;
@@ -18,7 +32,12 @@ th {
     padding-top: 81px;
 }
 
+input[name = 'r'] {
+    margin-top: 15px;
+}
+
 .button {
+    margin-top: 10px;
     width: 100%;
     height: 35px;
     align: center;
@@ -36,7 +55,7 @@ th {
 
 .tabs {
     position: relative;
-    height: 270px;
+    height: 265px;
     clear: both;
 }
 

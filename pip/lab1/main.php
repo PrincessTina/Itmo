@@ -6,10 +6,8 @@ global $_POST;
 $x = $_POST['x'];
 $y = $_POST['y'];
 $r = $_POST['r'];
+$arr = array('x' => $x, 'y' => $y, 'r' => $r);
+echo json_encode($arr);
 
-if (!empty($x)) {
-    echo "Приветствую Вас $x $y $r. <br />";
-} else {
-    echo "Как Вы посмели нажать эту кнопку?";
-    echo "<meta http-equiv='refresh' content='15; url=index.html' />";
-}
+
+
