@@ -7,7 +7,7 @@
     <script type="text/javascript" src="validate.js"></script>
 </head>
 <body>
-    <table cellpadding="0" cellspacing="0" width="100%">
+    <table cellpadding="0" cellspacing="0">
         <tr>
             <th height="80px" colspan="2">
                 <p>Выполнила Орлова Кристина Александровна
@@ -27,17 +27,20 @@
                 <div class="tabs">
                     <div class="tab">
                         <input type="radio" id="tab1" name="group1" checked>
-                        <label for="tab1">Выбрать X</label>
+                        <label for="tab1">Choose R</label>
                         <div class="content">
-                            <input type="text"  id="x" class="field" value="" size="15" oninput="returnField()"/>
-                            <span id="x_span"></span><span id="tick"></span>
-                            <p><input type="submit" value="Проверить" name="button" class="button"
-                                      onclick="exchangeParameters()" onmouseover="check_field();"/></p>
+                            <p><input type="radio" name="r" value="1" checked> 1 </p>
+                            <p><input type="radio" name="r" value="2"> 2 </p>
+                            <p><input type="radio" name="r" value="3"> 3 </p>
+                            <p><input type="radio" name="r" value="4"> 4 </p>
+                            <p><input type="radio" name="r" value="5"> 5 </p>
+                            <p><input type="submit" value="Next" name="button" class="button"
+                                      onclick="nextField(1);"/>
                         </div>
                     </div>
                     <div class="tab">
                         <input type="radio" id="tab2" name="group1">
-                        <label for="tab2">Выбрать Y</label>
+                        <label for="tab2">Choose Y</label>
                         <div class="content">
                             <p><select size="10" id="y">
                                 <option disabled>Выберите Y</option>
@@ -51,26 +54,23 @@
                                 <option value="1.5"> 1.5</option>
                                 <option value="2"> 2</option>
                             </select></p>
-                            <p><input type="submit" value="Проверить" name="button" class="button"
-                                      onmouseover="check_field();"/></p>
+                            <p><input type="submit" value="Next" name="button" class="button"
+                                      onclick="nextField(2);"/></p>
                         </div>
                     </div>
                     <div class="tab">
                         <input type="radio" id="tab3" name="group1">
-                        <label for="tab3">Выбрать R</label>
+                        <label for="tab3">Choose X</label>
                         <div class="content">
-                            <p><input type="radio" name="r" value="1" checked> 1 </p>
-                            <p><input type="radio" name="r" value="2"> 2 </p>
-                            <p><input type="radio" name="r" value="3"> 3 </p>
-                            <p><input type="radio" name="r" value="4"> 4 </p>
-                            <p><input type="radio" name="r" value="5"> 5 </p>
-                            <p><input type="submit" value="Проверить" name="button" class="button"
-                                      onmouseover="check_field();"/>
+                            <input type="text"  id="x" class="field" value="" size="15" oninput="returnField()"/>
+                            <span id="x_span"></span><span id="tick"></span>
+                            <p><input type="submit" value="Check!" name="button" class="button" id = "button"
+                                      onclick="exchangeParameters()" onmouseover="check_field();"/></p>
                         </div>
                     </div>
                     <div class="tab">
                         <input type="radio" id="tab4" name="group1">
-                        <label for="tab4">Результат</label>
+                        <label for="tab4">Result</label>
                         <div class="content">
                             <table border="1" cellspacing="0" cellpadding="0" width="100%">
                                 <tr>
@@ -84,13 +84,13 @@
                                         R
                                     </td>
                                     <td>
-                                        Текущее время
+                                        Current Time
                                     </td>
                                     <td>
-                                        Время работы
+                                        Work time (sec)
                                     </td>
                                     <td>
-                                        Итог
+                                        Result
                                     </td>
                                 </tr>
                                 <tr>

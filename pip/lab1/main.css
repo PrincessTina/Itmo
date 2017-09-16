@@ -7,8 +7,22 @@
     background-image: url(18-tekstura-dzhinsovoy-tkani.jpg);
 }
 
+table {
+    padding: 0;
+    border-spacing: 0;
+    width: 100%;
+}
+
+{
+colsp
+}
+
 * {
     margin: 0;
+}
+
+.content table td {
+    text-align: center;
 }
 
 #x_span {
