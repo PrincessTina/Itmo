@@ -67,6 +67,7 @@ td img {
 }
 
 label ~ * {
+    height: auto;
     position: absolute;
     top: 28px;
     left: 0;
@@ -90,6 +91,16 @@ label ~ * {
 .result {
     width: 100%;
     text-align: center;
+    word-break: break-all;
+}
+
+.result tr > td {
+    max-width: 300px;
+}
+
+#title {
+    color: white;
+    background: linear-gradient(#0C3248, #95f3f5);
 }
 
 #x_span {
@@ -110,17 +121,14 @@ input[name = 'r'] {
     margin-top: 10px;
     width: 100%;
     height: 35px;
-    align: center;
-    background: linear-gradient(#0C3248, #5F9EA0);
+    align-content: center;
+    background: linear-gradient(#0C3248, #95f3f5);
     color: white;
+    border-width: 1px;
 }
 
 .button:hover {
-    width: 100%;
-    height: 35px;
-    align: center;
-    background: linear-gradient(#5F9EA0, #0C3248);
-    color: white;
+    background: linear-gradient(#95f3f5, #0C3248);
 }
 
 

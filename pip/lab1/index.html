@@ -31,7 +31,7 @@
             <table class="tabs" cellpadding="0" cellspacing="0">
                 <tr>
                     <td class="tab">
-                        <input type="radio" id="tab1" name="group1" checked>
+                        <input type="radio" id="tab1" name="group1" checked onclick="block('result_table')">
                         <label for="tab1">Choose R</label>
                         <p>
                             <input type="radio" name="r" value="1" checked> 1 <br/>
@@ -43,11 +43,11 @@
                         </p>
                     </td>
                     <td class="tab">
-                        <input type="radio" id="tab2" name="group1">
+                        <input type="radio" id="tab2" name="group1" onclick="block('result_table')">
                         <label for="tab2">Choose Y</label>
                         <p>
                             <select size="10" id="y">
-                                <option disabled>Выберите Y</option>
+                                <option disabled>Choose Y</option>
                                 <option value="-2" selected> -2</option>
                                 <option value="-1.5"> -1.5</option>
                                 <option value="-1"> -1</option>
@@ -62,7 +62,7 @@
                         </p>
                     </td>
                     <td class="tab">
-                        <input type="radio" id="tab3" name="group1" onclick="unBlock()">
+                        <input type="radio" id="tab3" name="group1" onclick="unBlock('button')">
                         <label for="tab3">Choose X</label>
                         <p>
                             <input type="text" id="x" class="field" value="" size="15" oninput="checkField()"/>
@@ -72,10 +72,10 @@
                         </p>
                     </td>
                     <td class="tab">
-                        <input type="radio" id="tab4" name="group1" onclick="block()">
+                        <input type="radio" id="tab4" name="group1" onclick="unBlock('result_table')">
                         <label for="tab4">Result</label>
-                        <table class="result" cellspacing="0" cellpadding="0" border="1">
-                            <tr>
+                        <table class="result" cellspacing="0" cellpadding="0" border="1" id="result_table">
+                            <tr id="title">
                                 <td>
                                     X
                                 </td>
@@ -93,26 +93,6 @@
                                 </td>
                                 <td>
                                     Result
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span id="x_table"></span>
-                                </td>
-                                <td>
-                                    <span id="y_table"></span>
-                                </td>
-                                <td>
-                                    <span id="r_table"></span>
-                                </td>
-                                <td>
-                                    <span id="current_time"></span>
-                                </td>
-                                <td>
-                                    <span id="work_time"></span>
-                                </td>
-                                <td>
-                                    <span id="result"></span>
                                 </td>
                             </tr>
                         </table>

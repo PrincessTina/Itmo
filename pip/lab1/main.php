@@ -18,6 +18,7 @@ if ((($x > 0) && (bccomp($r, $x, 256) >= 0) && ($y >= -$r / 2) && ($y <= 0)) ||
     $result = "The point didn't pass the test";
 }
 
+//Перевожу время по линуксу на нормальное
 $date = date("H:i:s d/m/Y");
 $hour = substr($date, 0, 2) + 3;
 

@@ -25,7 +25,7 @@ function nextField(id) {
     if (id === 1) {
         tab = "tab2";
     } else {
-        unBlock();
+        unBlock('button');
         tab = "tab3";
     }
     document.getElementById(tab).checked = true;
@@ -35,28 +35,22 @@ function exchangeParameters() {
     var x = document.getElementById('x').value;
     var y = getY();
     var r = getR();
-    var arr;
     var xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState === XMLHttpRequest.DONE ) {
             if (xmlhttp.status === 200) {
-                arr = JSON.parse(xmlhttp.responseText);
+                var arr = JSON.parse(xmlhttp.responseText);
 
-                document.getElementById("x_table").innerHTML = x;
-                document.getElementById("y_table").innerHTML = y;
-                document.getElementById("r_table").innerHTML = r;
-                document.getElementById("result").innerHTML = arr.result;
-                document.getElementById("current_time").innerHTML = arr.current_time;
-                document.getElementById("work_time").innerHTML = arr.work_time;
-                block();
+                getRow(x, y, r, arr.current_time, arr.work_time, arr.result);
+                unBlock('result_table');
                 document.getElementById("tab4").checked = true;
             }
             else if (xmlhttp.status === 400) {
-                alert('There was an error 400');
+                alert('There is an error 400');
             }
             else {
-                alert('something else other than 200 was returned');
+                alert('Unknown error');
             }
         }
     };
@@ -66,12 +60,25 @@ function exchangeParameters() {
     xmlhttp.send("x=" + x + "&y=" + y + "&r=" + r);
 }
 
-function block() {
-    document.getElementById('button').hidden = true;
+function getRow(x, y, r, current_time, work_time, result) {
+    var table = document.getElementById('result_table');
+    table.innerHTML += "<tr> <td>"+x+"</td><td>"+y+"</td><td>"+r+"</td><td>"+current_time+"</td><td>"+work_time+"" +
+        "</td><td>"+result+"</td><tr>";
 }
 
-function unBlock() {
-    document.getElementById('button').hidden = false;
+function block(id) {
+    document.getElementById(id).hidden = true;
+}
+
+function unBlock(id) {
+    if (id === "button") {
+        document.getElementById(id).hidden = false;
+        block('result_table');
+    } else {
+        document.getElementById(id).hidden = false;
+        block('button');
+    }
+
 }
 
 function getY() {
