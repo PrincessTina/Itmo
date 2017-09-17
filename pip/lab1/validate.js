@@ -1,23 +1,22 @@
 
-function check_field() {
+
+function checkField() {
     var x = document.getElementById('x');
     var p = parseFloat(x.value);
 
-    if ((!/^-?\d+.?\d*$/.test(x.value.trim())) || (x.value.trim() === "")) {
+    if ((!/^-?\d+\.?\d*$/.test(x.value.trim())) || (x.value.trim() === "")) {
         document.getElementById('x_span').innerHTML = "Invalid format";
         document.getElementById('button').disabled = true;
+        document.getElementById('tick').innerHTML = "";
     } else if ((p <= -3) || (p >= 3)) {
         document.getElementById('x_span').innerHTML = "The number is out of ODB";
         document.getElementById('button').disabled = true;
+        document.getElementById('tick').innerHTML = "";
     } else {
         document.getElementById('tick').innerHTML = "*";
+        document.getElementById('x_span').innerHTML = "";
+        document.getElementById('button').disabled = false;
     }
-}
-
-function returnField() {
-    document.getElementById('x_span').innerHTML = "";
-    document.getElementById('tick').innerHTML = "";
-    document.getElementById('button').disabled = false;
 }
 
 function nextField(id) {
@@ -26,6 +25,7 @@ function nextField(id) {
     if (id === 1) {
         tab = "tab2";
     } else {
+        unBlock();
         tab = "tab3";
     }
     document.getElementById(tab).checked = true;
@@ -49,6 +49,7 @@ function exchangeParameters() {
                 document.getElementById("result").innerHTML = arr.result;
                 document.getElementById("current_time").innerHTML = arr.current_time;
                 document.getElementById("work_time").innerHTML = arr.work_time;
+                block();
                 document.getElementById("tab4").checked = true;
             }
             else if (xmlhttp.status === 400) {
@@ -63,6 +64,14 @@ function exchangeParameters() {
     xmlhttp.open("POST", "main.php", true);
     xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xmlhttp.send("x=" + x + "&y=" + y + "&r=" + r);
+}
+
+function block() {
+    document.getElementById('button').hidden = true;
+}
+
+function unBlock() {
+    document.getElementById('button').hidden = false;
 }
 
 function getY() {

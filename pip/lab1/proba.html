@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="main.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="validate.js"></script>
+</head>
+<body>
+<table class="tabs" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="tab">
+            <input type="radio" id="tab1" name="group1" checked>
+            <label for="tab1">Choose R</label>
+            <p>
+                <input type="radio" name="r" value="1" checked> 1 <br/>
+                <input type="radio" name="r" value="2"> 2 <br/>
+                <input type="radio" name="r" value="3"> 3 <br/>
+                <input type="radio" name="r" value="4"> 4 <br/>
+                <input type="radio" name="r" value="5"> 5 <br/>
+                <input type="submit" value="Next" class="button" onclick="nextField(1);"/>
+            </p>
+        </td>
+        <td class="tab">
+            <input type="radio" id="tab2" name="group1">
+            <label for="tab2">Choose Y</label>
+            <p>
+                <select size="10" id="y">
+                    <option disabled>Выберите Y</option>
+                    <option value="-2" selected> -2</option>
+                    <option value="-1.5"> -1.5</option>
+                    <option value="-1"> -1</option>
+                    <option value="-0.5"> -0.5</option>
+                    <option value="0"> 0</option>
+                    <option value="0.5"> 0.5</option>
+                    <option value="1"> 1</option>
+                    <option value="1.5"> 1.5</option>
+                    <option value="2"> 2</option>
+                </select><br/>
+                <input type="submit" value="Next" class="button" onclick="nextField(2);"/>
+            </p>
+        </td>
+        <td class="tab">
+            <input type="radio" id="tab3" name="group1" onclick="unBlock()">
+            <label for="tab3">Choose X</label>
+            <p>
+                <input type="text" id="x" class="field" value="" size="15" oninput="checkField()"/>
+                <span id="x_span"></span> <span id="tick"></span>
+                <input type="submit" value="Check!" class="button" id="button" disabled
+                       onclick="exchangeParameters()"/>
+            </p>
+        </td>
+        <td class="tab">
+            <input type="radio" id="tab4" name="group1" onclick="block()">
+            <label for="tab4">Result</label>
+        <table class="result" cellspacing="0" cellpadding="0" border="1">
+            <tr>
+                <td>
+                    X
+                </td>
+                <td>
+                    Y
+                </td>
+                <td>
+                    R
+                </td>
+                <td>
+                    Current Time
+                </td>
+                <td>
+                    Work time (sec)
+                </td>
+                <td>
+                    Result
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span id="x_table"></span>
+                </td>
+                <td>
+                    <span id="y_table"></span>
+                </td>
+                <td>
+                    <span id="r_table"></span>
+                </td>
+                <td>
+                    <span id="current_time"></span>
+                </td>
+                <td>
+                    <span id="work_time"></span>
+                </td>
+                <td>
+                    <span id="result"></span>
+                </td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
