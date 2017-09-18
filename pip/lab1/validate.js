@@ -9,7 +9,7 @@ function checkField() {
         document.getElementById('button').disabled = true;
         document.getElementById('tick').innerHTML = "";
     } else if ((p <= -3) || (p >= 3)) {
-        document.getElementById('x_span').innerHTML = "The number is out of ODB";
+        document.getElementById('x_span').innerHTML = "The number is out of (-3;3)";
         document.getElementById('button').disabled = true;
         document.getElementById('tick').innerHTML = "";
     } else {
@@ -42,7 +42,7 @@ function exchangeParameters() {
             if (xmlhttp.status === 200) {
                 var arr = JSON.parse(xmlhttp.responseText);
 
-                getRow(x, y, r, arr.current_time, arr.work_time, arr.result);
+                getRow(arr.x, arr.y, arr.r, arr.current_time, arr.work_time, arr.result);
                 unBlock('result_table');
                 document.getElementById("tab4").checked = true;
             }
