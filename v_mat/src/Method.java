@@ -1,4 +1,5 @@
 
+import javafx.scene.text.Text;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -10,17 +11,25 @@ class Method {
   static double[] mems;
   private static int n = 0;
   private static HashMap<Integer, String> map = new HashMap<>();
+  private static HashMap<Integer, Double> map2 = new HashMap<>();
+  private static ArrayList<Double> x_array = new ArrayList<>();
 
-  static void calculation() {
+  static void calculation(Text solveText) {
     System.out.println("Исходная матрица:");
-    writeMatrix();
+    writeMatrix(solveText);
 
-    directRate();
+    directRate(solveText);
 
     reverseRate();
+
+    simplifyAnswer();
+
+    Main.allocation();
+
+    findResidual();
   }
 
-  private static void directRate() {
+  private static void directRate(Text solveText) {
     double[] temporary_a = new double[n];
     double temporary_b;
 
@@ -65,14 +74,13 @@ class Method {
         }
         mems[i] = mems[i] + mems[k] * consta;
       }
-      writeMatrix();
+      writeMatrix(solveText);
     }
 
     findDeterminant();
   }
 
   private static void reverseRate() {
-    ArrayList<Double> x_array = new ArrayList<>();
     HashMap<Integer, Double> additional_y = new HashMap<>();
 
     for (int k = n - 1; k > -1; k--) {
@@ -98,20 +106,23 @@ class Method {
         StringBuilder temporary_x = new StringBuilder();
         temporary_x.append("(");
 
+        int l = 0;
+        double sum = 0;
+
         if (x != -0.0) {
           temporary_x.append(x);
-          temporary_x.append(" + ");
+          l = 1;
+          sum += x;
         }
 
-
-        int l = 0;
-
-        for (int a: additional_y.keySet()) {
+        for (int a : additional_y.keySet()) {
           if (l > 0) {
             temporary_x.append(" + ");
           }
 
           double coef = additional_y.get(a);
+
+          sum += coef*map2.get(a);
 
           if (coef == -1.0) {
             if (l > 0) {
@@ -123,7 +134,7 @@ class Method {
               temporary_x.deleteCharAt(temporary_x.length() - 2);
             }
             temporary_x.append(coef);
-          } else if (coef != 1.0){
+          } else if (coef != 1.0) {
             temporary_x.append(coef);
           }
 
@@ -138,6 +149,8 @@ class Method {
           temporary_x.deleteCharAt(0);
         }
         map.put(k, temporary_x.toString());
+        map2.put(k, sum);
+
         additional_y.clear();
         x_array.add(1000000.0);
       }
@@ -145,32 +158,61 @@ class Method {
       if (Double.isNaN(x)) {
         x_array.add(1000000.0);
         map.put(k, "q" + k);
+        map2.put(k, 1.0);
       } else if (x_array.size() == n - 1 - k) {
         x_array.add(x);
       }
 
     }
+  }
 
+  private static void findResidual() {
+    double b;
+    double del;
+    double x;
+    double coef;
+
+    System.out.println();
+    System.out.println("Столбец невязок:");
+
+    for (int k = 0; k < n; k++) {
+      b = 0;
+
+      for (int i = 0; i < n; i++) {
+        x = x_array.get(n - 1 - i);
+        coef = coefficient[k][i];
+
+        if (x == 1000000.0) {
+          b += coef*map2.get(i);
+        } else {
+          b += coef*x;
+        }
+      }
+
+      del = abs(mems[k] - b);
+
+      System.out.println("d" + (k + 1) + " = " + del);
+    }
+  }
+
+  private static void simplifyAnswer() {
     System.out.println("Ответ:");
 
-    simplify();
-
     int i = 0;
+
     for (Double x : x_array) {
       if (x != 1000000.0) {
         System.out.println("x" + (n - i) + " = " + x);
       } else {
-        System.out.println("x" + (n - i) + " = " + map.get(n - 1 - i));
+        String x_string = map.get(n - 1 - i);
+
+        if (x_string.matches("\\(.*\\)")) {
+          x_string = x_string.substring(1, x_string.length() - 1);
+        }
+        System.out.println("x" + (n - i) + " = " + x_string);
       }
+
       i++;
-    }
-  }
-
-  private static void simplify() {
-    for (String x: map.values()) {
-      if (x.matches("\\(")) {
-
-      }
     }
   }
 
@@ -183,18 +225,21 @@ class Method {
     System.out.println();
   }
 
-  private static void writeMatrix() {
+  private static void writeMatrix(Text solveText) {
+    double coef;
+    double areAllCoefNull;
     StringBuilder result = new StringBuilder();
     n = coefficient.length;
 
     for (int i = 0; i < n; i++) {
+      areAllCoefNull = 0;
       for (int j = 0; j < n; j++) {
-        double coef = coefficient[i][j];
+        coef = coefficient[i][j];
 
         if (coef != 0) {
           if (coef < 0) {
             result.deleteCharAt(result.length() - 2);
-            result.append("- ");
+            result.append("-");
           }
           if (abs(coef) != 1) {
             result.append(abs(coef));
@@ -202,14 +247,21 @@ class Method {
           result.append("x");
           result.append(j + 1);
           result.append(" + ");
+        } else {
+          areAllCoefNull += 1;
         }
       }
       result.deleteCharAt(result.length() - 2);
+
+      if (areAllCoefNull/n == 1.0) {
+        result.append("0.0 ");
+      }
       result.append("= ");
       result.append(mems[i]);
-      result.append("\n");
+      result.append("\t\n");
     }
 
+    solveText.setText(result.toString());
     System.out.println(result.toString());
   }
 }
