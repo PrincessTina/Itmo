@@ -1,9 +1,13 @@
 
+import javafx.geometry.Insets;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
 import static java.lang.Math.*;
+import static jdk.nashorn.internal.objects.Global.Infinity;
 
 
 class Method {
@@ -13,23 +17,20 @@ class Method {
   private static HashMap<Integer, String> map = new HashMap<>();
   private static HashMap<Integer, Double> map2 = new HashMap<>();
   private static ArrayList<Double> x_array = new ArrayList<>();
+  private static boolean isInfinity = false;
 
-  static void calculation(Text solveText) {
+  static void calculation() {
     System.out.println("Исходная матрица:");
-    writeMatrix(solveText);
+    writeMatrix();
 
-    directRate(solveText);
+    directRate();
 
     reverseRate();
 
-    simplifyAnswer();
-
-    Main.allocation();
-
-    findResidual();
+    fullReset();
   }
 
-  private static void directRate(Text solveText) {
+  private static void directRate() {
     double[] temporary_a = new double[n];
     double temporary_b;
 
@@ -74,7 +75,7 @@ class Method {
         }
         mems[i] = mems[i] + mems[k] * consta;
       }
-      writeMatrix(solveText);
+      writeMatrix();
     }
 
     findDeterminant();
@@ -93,6 +94,8 @@ class Method {
             if (coefficient[k][n - i] / coefficient[k][k] != 0) {
               if (coefficient[k][k] != 0) {
                 additional_y.put(n - i, -coefficient[k][n - i] / coefficient[k][k]);
+              } else {
+                //x_array.set(x_array.indexOf(y), 0.0);
               }
             }
           } else {
@@ -122,7 +125,7 @@ class Method {
 
           double coef = additional_y.get(a);
 
-          sum += coef*map2.get(a);
+          sum += coef * map2.get(a);
 
           if (coef == -1.0) {
             if (l > 0) {
@@ -155,6 +158,12 @@ class Method {
         x_array.add(1000000.0);
       }
 
+      if (x == Infinity) {
+        addTextElement("Решений нет", true);
+        isInfinity = true;
+        break;
+      }
+
       if (Double.isNaN(x)) {
         x_array.add(1000000.0);
         map.put(k, "q" + k);
@@ -162,18 +171,20 @@ class Method {
       } else if (x_array.size() == n - 1 - k) {
         x_array.add(x);
       }
+    }
 
+    if (!isInfinity) {
+      simplifyAnswer();
     }
   }
 
   private static void findResidual() {
+    StringBuilder answer = new StringBuilder();
+    answer.append("Столбец невязок: \n");
     double b;
-    double del;
     double x;
     double coef;
-
-    System.out.println();
-    System.out.println("Столбец невязок:");
+    double delta;
 
     for (int k = 0; k < n; k++) {
       b = 0;
@@ -183,49 +194,84 @@ class Method {
         coef = coefficient[k][i];
 
         if (x == 1000000.0) {
-          b += coef*map2.get(i);
+          b += coef * map2.get(i);
         } else {
-          b += coef*x;
+          b += coef * x;
         }
       }
 
-      del = abs(mems[k] - b);
+      delta = abs(mems[k] - b);
 
-      System.out.println("d" + (k + 1) + " = " + del);
+      if (delta < 1.0) {
+        answer.append("d");
+        answer.append(k + 1);
+        answer.append(" = ");
+        answer.append(delta);
+        answer.append("\n");
+      } else {
+        answer.delete(0, answer.length() - 1);
+        answer.append("Решений нет");
+        Interface.answerBox.getChildren().remove(Interface.answerBox.getChildren().size() - 1);
+        break;
+      }
     }
+    addTextElement(answer.toString(), true);
+    System.out.println(answer);
   }
 
   private static void simplifyAnswer() {
-    System.out.println("Ответ:");
-
     int i = 0;
+    StringBuilder answer = new StringBuilder();
+    answer.append("Столбец неизвестных: \n");
 
     for (Double x : x_array) {
+      answer.append("x");
+      answer.append(n - i);
+      answer.append(" = ");
+
       if (x != 1000000.0) {
-        System.out.println("x" + (n - i) + " = " + x);
+        answer.append(x);
       } else {
         String x_string = map.get(n - 1 - i);
-
         if (x_string.matches("\\(.*\\)")) {
           x_string = x_string.substring(1, x_string.length() - 1);
         }
-        System.out.println("x" + (n - i) + " = " + x_string);
-      }
 
+        answer.append(x_string);
+      }
+      answer.append("\n");
       i++;
     }
+
+    addTextElement(answer.toString(), true);
+    System.out.println(answer);
+
+    try {
+      Interface.allocation();
+    } catch (Exception ex) {
+      System.out.println(ex.getMessage());
+    }
+
+    findResidual();
   }
 
   private static void findDeterminant() {
+    StringBuilder answer = new StringBuilder();
     double determinant = 1;
     for (int i = 0; i < n; i++) {
       determinant = determinant * coefficient[i][i];
     }
-    System.out.println("Определитель матрицы равен: " + determinant);
-    System.out.println();
+
+    answer.append("Определитель матрицы равен: ");
+    answer.append(determinant);
+
+    addTextElement(answer.toString(), true);
+    System.out.println(answer.toString());
+
+    getTriangular();
   }
 
-  private static void writeMatrix(Text solveText) {
+  private static void writeMatrix() {
     double coef;
     double areAllCoefNull;
     StringBuilder result = new StringBuilder();
@@ -238,7 +284,9 @@ class Method {
 
         if (coef != 0) {
           if (coef < 0) {
-            result.deleteCharAt(result.length() - 2);
+            if (result.length() > 1) {
+              result.deleteCharAt(result.length() - 2);
+            }
             result.append("-");
           }
           if (abs(coef) != 1) {
@@ -251,9 +299,12 @@ class Method {
           areAllCoefNull += 1;
         }
       }
-      result.deleteCharAt(result.length() - 2);
 
-      if (areAllCoefNull/n == 1.0) {
+      if (result.length() > 1) {
+        result.deleteCharAt(result.length() - 2);
+      }
+
+      if (areAllCoefNull / n == 1.0) {
         result.append("0.0 ");
       }
       result.append("= ");
@@ -261,7 +312,41 @@ class Method {
       result.append("\t\n");
     }
 
-    solveText.setText(result.toString());
+
+    addTextElement(result.toString(), false);
     System.out.println(result.toString());
+  }
+
+  private static void getTriangular() {
+    StringBuilder matrix = new StringBuilder();
+    matrix.append("Треугольная матрица: \n");
+
+    for (int k = 0; k < n; k++) {
+      for (int i = 0; i < n; i++) {
+        matrix.append(coefficient[k][i]);
+        matrix.append(" ");
+      }
+      matrix.append("\n");
+    }
+
+    addTextElement(matrix.toString(), true);
+    System.out.println(matrix.toString());
+  }
+
+  private static void addTextElement(String mean, boolean isAnswer) {
+    Text text = new Text(mean);
+    VBox.setMargin(text, new Insets(10, 10, 0, 10));
+
+    if (isAnswer) {
+      Interface.answerBox.getChildren().add(text);
+    } else {
+      Interface.solveBox.getChildren().add(text);
+    }
+  }
+
+  private static void fullReset() {
+    map.clear();
+    map2.clear();
+    x_array.clear();
   }
 }

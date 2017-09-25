@@ -1,0 +1,40 @@
+.root {
+    -fx-background: white;
+}
+
+#r {
+    -fx-border-width: 2px;
+    -fx-border-style: hidden hidden hidden solid;
+    -fx-border-color: darkcyan;
+}
+
+#sP {
+    -fx-border-width: 2px;
+    -fx-border-style: solid hidden hidden solid;
+    -fx-border-color: darkcyan;
+}
+
+#aP {
+    -fx-border-width: 2px;
+    -fx-border-style: solid hidden hidden hidden;
+    -fx-border-color: darkcyan;
+}
+
+#button {
+    -fx-pref-width: 180px;
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(black, cyan);
+}
+
+#button:hover {
+    -fx-background-color: linear-gradient(cyan, black);
+}
+
+#sign {
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(cyan, black);
+}
+
+#sign:hover {
+    -fx-background-color: linear-gradient(black, cyan);
+}
