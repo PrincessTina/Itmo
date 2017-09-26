@@ -348,5 +348,7 @@ class Method {
     map.clear();
     map2.clear();
     x_array.clear();
+    isInfinity = false;
+
   }
 }

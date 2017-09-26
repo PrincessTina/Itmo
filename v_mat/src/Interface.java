@@ -150,7 +150,16 @@ public class Interface extends Application {
         s++;
       }
     } catch (Exception ex) {
-      System.out.println("error");
+      Text text = new Text("Файл не найден");
+      text.setWrappingWidth(250);
+      text.setTextAlignment(TextAlignment.CENTER);
+      VBox.setMargin(text, new Insets(10, 10, 0, 10));
+
+      Scene scene2 = new Scene(new VBox(text), 250, 100);
+      Stage stage2 = new Stage(StageStyle.DECORATED);
+      stage2.initModality(Modality.APPLICATION_MODAL);
+      stage2.setScene(scene2);
+      stage2.show();
     }
   }
 
