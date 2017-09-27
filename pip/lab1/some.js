@@ -1,5 +1,3 @@
-
-
 function checkField() {
     var x = document.getElementById('x');
     var p = parseFloat(x.value);
@@ -13,22 +11,10 @@ function checkField() {
         document.getElementById('button').disabled = true;
         document.getElementById('tick').innerHTML = "";
     } else {
-        document.getElementById('tick').innerHTML = "*";
+        document.getElementById('tick').innerHTML = "Correct data";
         document.getElementById('x_span').innerHTML = "";
         document.getElementById('button').disabled = false;
     }
-}
-
-function nextField(id) {
-    var tab;
-
-    if (id === 1) {
-        tab = "tab2";
-    } else {
-        unBlock('button');
-        tab = "tab3";
-    }
-    document.getElementById(tab).checked = true;
 }
 
 function exchangeParameters() {
@@ -44,8 +30,6 @@ function exchangeParameters() {
                 var arr = str.split(";");
                 getRow(arr[3], arr[4], arr[5], arr[1], arr[2], arr[0], arr[6]);
 
-                unBlock('result_table');
-                document.getElementById("tab4").checked = true;
             } else {
                 alert(xmlhttp.statusText); // вызвать обработчик ошибки с текстом ответа
             }
@@ -61,21 +45,6 @@ function getRow(x, y, r, current_time, work_time, result, support) {
     var table = document.getElementById('result_table');
     table.innerHTML += "<tr> <td>"+x+"</td><td>"+y+"</td><td>"+r+"</td><td>"+current_time+"</td><td>"+work_time+"" +
         "</td><td>"+result+"</td><td>"+support+"</td><tr>";
-}
-
-function block(id) {
-    document.getElementById(id).hidden = true;
-}
-
-function unBlock(id) {
-    if (id === "button") {
-        document.getElementById(id).hidden = false;
-        block('result_table');
-    } else {
-        document.getElementById(id).hidden = false;
-        block('button');
-    }
-
 }
 
 function getY() {
@@ -94,7 +63,4 @@ function getR() {
     }
     return R;
 }
-
-
-
 

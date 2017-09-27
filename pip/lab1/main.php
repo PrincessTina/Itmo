@@ -13,6 +13,7 @@ $y_value = floatval($y);
 $r_value = intval($r);
 
 if (extension_loaded('bcmath')) {
+    $support = "yes";
 
     if ((check($x)) && (check($y)) && (check($r))) {
         if (($r_value <=5) && ($r_value >= 1) && ($x_value < 3) && ($x_value > -3) && (($y_value == -2) || ($y_value == -1.5) ||
@@ -35,7 +36,7 @@ if (extension_loaded('bcmath')) {
         $result = "Invalid format of data";
     }
 } else {
-
+    $support = "no";
     if ((check($x)) && (check($y)) && (check($r))) {
         if (($r_value <=5) && ($r_value >= 1) && ($x_value < 3) && ($x_value > -3) && (($y_value == -2) || ($y_value == -1.5) ||
                 ($y_value == -1) || ($y_value==-0.5) || ($y_value == 0) || ($y_value == 0.5) || ($y_value == 1) || ($y_value == 1.5) ||
@@ -60,7 +61,7 @@ if (extension_loaded('bcmath')) {
 //Перевожу время по линуксу на нормальное
 $date = date("H:i:s d/m/Y");
 
-$hour = substr($date, 0, 2) + 3;
+$hour = substr($date, 0, 2) - 1;
 
 if ($hour < 10) {
     $hour = "0" . $hour;
@@ -70,11 +71,9 @@ $date = $hour . substr($date, 2, 17);
 
 $finish = microtime(true);
 $delta = $finish - $start;
-$arr = array('result' => $result, 'current_time' => $date, "work_time" => $delta, "x" => $x, "y" => $y, "r" => $r);
 
 
-echo json_encode($arr);
-//echo "wtf4";
+echo $result . ";" . $date . ";" . $delta . ";" . $x . ";" . $y . ";" . $r . ";" . $support;
 
 function check($a) {
     if (preg_match("/^-?\d+\.?\d*$/", trim($a)) == 1) {
