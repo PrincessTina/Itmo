@@ -45,12 +45,8 @@ function exchangeParameters() {
                 getRow(arr.x, arr.y, arr.r, arr.current_time, arr.work_time, arr.result);
                 unBlock('result_table');
                 document.getElementById("tab4").checked = true;
-            }
-            else if (xmlhttp.status === 400) {
-                alert('There is an error 400');
-            }
-            else {
-                alert('Unknown error');
+            } else {
+                alert(xmlhttp.statusText); // вызвать обработчик ошибки с текстом ответа
             }
         }
     };
