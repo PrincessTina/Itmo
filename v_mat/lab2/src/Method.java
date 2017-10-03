@@ -28,7 +28,7 @@ class Method extends Thread{
     double searchedIntegral;
     double receivedPrecision;
 
-    while (abs(integral2 - integral1) >= abs(precision)) {
+    while (abs(integral2 - integral1) >= 3*precision) {
       n = n2;
       n2 *= 2;
       integral1 = integration(n);
@@ -64,7 +64,7 @@ class Method extends Thread{
     } else if (isTimeLimit) {
       addNewTextElement("Превышено время исполнения", false);
     } else {
-      searchedIntegral = integral2;
+      searchedIntegral = integral1;
       receivedPrecision = abs(integral2 - integral1);
 
       if (searchedIntegral == 0.0) {
