@@ -1,13 +1,12 @@
+import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
-import java.util.Scanner;
-
 import static java.lang.Math.*;
 
-class Method {
+class Method extends Thread{
   static double a;
   static double b;
   static int num;
@@ -15,30 +14,44 @@ class Method {
   private static boolean isDiscontinuous = false;
   private static boolean isTimeLimit = false;
 
-  static void calculation() {
+  public void run() {
     checkBounds();
     findPrecisionIntegral();
     resetAll();
   }
 
-  private static void findPrecisionIntegral() {
+  private void findPrecisionIntegral() {
     int n = 10;
     int n2 = 20;
+    double integral2 = integration(n2);
+    double integral1 = integration(n);
     double searchedIntegral;
     double receivedPrecision;
 
-    while (abs(integration(n2) - integration(n)) >= abs(precision)) {
+    while (abs(integral2 - integral1) >= abs(precision)) {
       n = n2;
       n2 *= 2;
+      integral1 = integration(n);
+      integral2 = integration(n2);
 
-      if (n2 > 10485760) {
-        addNewTextElement("Не могу быстро посчитать для заданной точности или диапазона. \n" +
-            "Будете ждать? (может занять еще несколько минут)\nНа данный момент число разбиений = " + n2, true);
+      if (n2 >= 5242880) {
+        addNewTextElement("Не могу быстро посчитать для заданной точности или \nдиапазона. " +
+            "\nБудете ждать? (может занять еще несколько минут)\nНа данный момент число разбиений = " + n2, true);
 
-        //if (new Scanner(System.in).nextLine().equals("нет")) {
-          //isTimeLimit = true;
-          //break;
-        //}
+        try {
+          Thread.sleep(14000);
+          Platform.runLater(() -> Interface.answerField.setDisable(true));
+
+          if (!Interface.answerBox.getChildren().get(Interface.answerBox.getChildren().size() - 1).getAccessibleText().equals("да")) {
+            isTimeLimit = true;
+            break;
+          }
+        } catch (NullPointerException ex) {
+          isTimeLimit = true;
+          break;
+        } catch (Exception ex) {
+          System.out.println(ex.getMessage());
+        }
       }
 
       if (isDiscontinuous) {
@@ -51,8 +64,8 @@ class Method {
     } else if (isTimeLimit) {
       addNewTextElement("Превышено время исполнения", false);
     } else {
-      searchedIntegral = integration(n2);
-      receivedPrecision = abs(integration(n2) - integration(n));
+      searchedIntegral = integral2;
+      receivedPrecision = abs(integral2 - integral1);
 
       if (searchedIntegral == 0.0) {
         n2 = 0;
@@ -63,7 +76,7 @@ class Method {
     }
   }
 
-  private static double integration(int n) {
+  private double integration(int n) {
     double h = abs(b - a) / n;
     double integral = getF(a) + getF(b);
 
@@ -81,7 +94,7 @@ class Method {
     return integral;
   }
 
-  private static double getF(double x) {
+  private double getF(double x) {
     double y = 1000000;
     switch (num) {
       case 0:
@@ -115,7 +128,7 @@ class Method {
     return y;
   }
 
-  private static double getRound(double mean) {
+  private double getRound(double mean) {
     mean *= 1 / precision;
     mean = round(mean);
     mean *= precision;
@@ -123,7 +136,7 @@ class Method {
     return mean;
   }
 
-  private static void checkBounds() {
+  private void checkBounds() {
     if (a > b) {
       double m = a;
       a = b;
@@ -131,18 +144,24 @@ class Method {
     }
   }
 
-  private static void addNewTextElement(String mean, boolean isRequest) {
+  private void addNewTextElement(String mean, boolean isRequest) {
     Text text = new Text(mean);
-    VBox.setMargin(text, new Insets(10, 10, 0, 10));
+    text.setId("answer");
+    text.setFill(Color.valueOf("#2f4f4f"));
+    VBox.setMargin(text, new Insets(10, 2, 0, 8));
 
     if (isRequest) {
       text.setFill(Color.DARKCYAN);
+      Platform.runLater(() -> {
+        Interface.answerField.setDisable(false);
+        Interface.answerBox.getChildren().add(text);
+      });
+    } else {
+      Platform.runLater(() -> Interface.answerBox.getChildren().add(text));
     }
-
-    Interface.answerBox.getChildren().add(text);
   }
 
-  private static void resetAll() {
+  private void resetAll() {
     isDiscontinuous = false;
     isTimeLimit = false;
   }
