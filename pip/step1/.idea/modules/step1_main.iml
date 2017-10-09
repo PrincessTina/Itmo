@@ -6,10 +6,6 @@
         <webroots>
           <root url="file://C:\Users\krist\Documents\itmo\pip\step1\src\main\webapp" relative="/" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/../../src/main/java" />
-          <root url="file://$MODULE_DIR$/../../src/main/resources" />
-        </sourceRoots>
       </configuration>
     </facet>
   </component>
@@ -22,5 +18,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: javax.ejb:javax.ejb-api:3.2" level="project" />
+    <orderEntry type="library" name="Gradle: javax.ws.rs:javax.ws.rs-api:2.1" level="project" />
+    <orderEntry type="library" name="Gradle: javax.transaction:javax.transaction-api:1.2" level="project" />
   </component>
 </module>

@@ -16,6 +16,11 @@
           <element id="module-output" name="step1_main" />
           <element id="dir-copy" path="$PROJECT_DIR$/out/production/resources" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: javax.ejb:javax.ejb-api:3.2" />
+          <element id="library" level="project" name="Gradle: javax.transaction:javax.transaction-api:1.2" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.ws.rs/javax.ws.rs-api/2.1/426a0862406536e690c7caa8bb6ed32191986fac/javax.ws.rs-api-2.1.jar" />
+        </element>
       </element>
     </root>
   </artifact>
