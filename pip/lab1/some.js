@@ -30,15 +30,15 @@ function exchangeParameters() {
                 var arr = str.split(";");
                 getRow(arr[3], arr[4], arr[5], arr[1], arr[2], arr[0], arr[6]);
 
-            } else {
-                alert(xmlhttp.statusText); // вызвать обработчик ошибки с текстом ответа
-            }
+            } //else {
+                //alert(xmlhttp.statusText); // вызвать обработчик ошибки с текстом ответа
+            //}
         }
     };
 
     xmlhttp.open("POST", "main.php", true);
     xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    xmlhttp.send("x=" + x + "&y=" + y + "&r=" + r);
+    xmlhttp.send("x=" + x + "&y=" + y + "&r=" + r + "&offset=" + new Date().getTimezoneOffset()/60);
 }
 
 function getRow(x, y, r, current_time, work_time, result, support) {

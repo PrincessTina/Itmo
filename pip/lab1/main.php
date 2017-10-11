@@ -7,6 +7,7 @@ $start = microtime(true);
 $x = $_POST['x'];
 $y = $_POST['y'];
 $r = $_POST['r'];
+$offset = $_POST['offset'];
 
 $x_value = floatval($x);
 $y_value = floatval($y);
@@ -58,10 +59,15 @@ if (extension_loaded('bcmath')) {
     }
 }
 
-//Перевожу время по линуксу на нормальное
+//Перевожу время на нормальное
 $date = date("H:i:s d/m/Y");
+$hour = substr($date, 0, 2);
 
-$hour = substr($date, 0, 2) - 1;
+if ($support == "no") {
+    $hour += $offset - 1;
+} else {
+    $hour += -$offset;
+}
 
 if ($hour < 10) {
     $hour = "0" . $hour;

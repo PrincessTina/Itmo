@@ -1,10 +1,16 @@
+
+#table-scroll {
+    height:150px;
+    overflow: auto;
+}
+
 * {
     margin: 0;
 }
 
 .secondString {
     background-image: url(ducks.jpg);
-    height: 400px;
+    height: 250px;
 }
 
 .text {
@@ -30,9 +36,9 @@
 }
 
 .result {
-    margin-top: 15px;
     text-align: center;
     word-break: break-all;
+    overflow: auto;
 }
 
 .result tr td {
