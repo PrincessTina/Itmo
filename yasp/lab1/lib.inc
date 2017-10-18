@@ -3,6 +3,10 @@ buf times 20 db 0
 
 section .text
 
+	exit:
+mov rax, 60
+syscall
+
 	string_length:
 mov rax, -1
  
@@ -81,7 +85,7 @@ pop rax
 ret 
 
 	read_word:                
-mov rdx, 256            
+mov rdx, 20           
 mov rdi, 0                
 mov rsi, buf   
 mov rax, 0                
