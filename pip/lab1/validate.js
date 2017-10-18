@@ -40,17 +40,14 @@ function exchangeParameters() {
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState === XMLHttpRequest.DONE ) {
             if (xmlhttp.status === 200) {
-                var arr = JSON.parse(xmlhttp.responseText);
+                var str = xmlhttp.responseText;
+                var arr = str.split(";");
+                getRow(arr[3], arr[4], arr[5], arr[1], arr[2], arr[0], arr[6]);
 
-                getRow(arr.x, arr.y, arr.r, arr.current_time, arr.work_time, arr.result);
                 unBlock('result_table');
                 document.getElementById("tab4").checked = true;
-            }
-            else if (xmlhttp.status === 400) {
-                alert('There is an error 400');
-            }
-            else {
-                alert('Unknown error');
+            } else {
+                alert(xmlhttp.statusText); // вызвать обработчик ошибки с текстом ответа
             }
         }
     };
@@ -60,10 +57,10 @@ function exchangeParameters() {
     xmlhttp.send("x=" + x + "&y=" + y + "&r=" + r);
 }
 
-function getRow(x, y, r, current_time, work_time, result) {
+function getRow(x, y, r, current_time, work_time, result, support) {
     var table = document.getElementById('result_table');
     table.innerHTML += "<tr> <td>"+x+"</td><td>"+y+"</td><td>"+r+"</td><td>"+current_time+"</td><td>"+work_time+"" +
-        "</td><td>"+result+"</td><tr>";
+        "</td><td>"+result+"</td><td>"+support+"</td><tr>";
 }
 
 function block(id) {

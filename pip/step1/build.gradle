@@ -1,0 +1,27 @@
+group 'courseWork'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'javax.ejb', name: 'javax.ejb-api', version: '3.2'
+    compile group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: '2.1'
+}
+
+task finalize << {
+    copy {
+        from "build/libs/step1-1.0-SNAPSHOT.war"
+        into "c:\\glassfish3\\glassfish\\domains\\domain1\\autodeploy"
+    }
+}
+
+build.finalizedBy(finalize)

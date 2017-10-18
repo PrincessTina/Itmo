@@ -1,0 +1,39 @@
+.root {
+-fx-background-color: #fcfcfc;
+}
+
+.button {
+-fx-background-color: linear-gradient(#000000, #2f4f4f);
+-fx-text-fill: #ffffff;
+-fx-font-family: "Monotype Corsiva", serif;
+-fx-font-size: 20px;
+}
+
+.button:hover {
+-fx-background-color: linear-gradient(#2f4f4f, #000000);
+}
+
+#comboBox {
+-fx-background-color: linear-gradient(#000000, #2f4f4f);
+}
+
+#comboBox:hover {
+-fx-background-color: linear-gradient(#000000, #a3bfbf);
+}
+
+#border {
+-fx-border-style: hidden hidden hidden solid;
+-fx-border-color: #000000;
+}
+
+#scroll {
+-fx-border-style: hidden hidden solid hidden;
+-fx-border-color: #000000;
+}
+
+#answer {
+-fx-font-family: "Monotype Corsiva", serif;
+-fx-font-size: 20px;
+-fx-text-fill: #ff00ff;
+}
+
