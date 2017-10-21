@@ -5,7 +5,7 @@ int is_prime(unsigned long number) {
     int count = 0;
 
     if ((number != 1) && (number != 0)) {
-        for (i = 2; i < number; i++) {
+        for (i = 2lu; i < number; i++) {
             if (number % i == 0) {
                 count++;
                 break;
