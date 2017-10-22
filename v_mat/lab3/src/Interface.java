@@ -1,0 +1,327 @@
+import javafx.application.Application;
+import javafx.collections.ObservableList;
+import javafx.geometry.Insets;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
+import javafx.scene.control.*;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
+import java.util.ArrayList;
+
+import static java.lang.Math.*;
+
+public class Interface extends Application {
+  private XYChart.Series<Number, Number> graph_real = new XYChart.Series<>();
+  private XYChart.Series<Number, Number> graph_hypo = new XYChart.Series<>();
+  private XYChart.Series<Number, Number> graph_point = new XYChart.Series<>();
+  private ArrayList<TextField> xArray = new ArrayList<>();
+  private ArrayList<TextField> yArray = new ArrayList<>();
+  private double x_array[]; //абсциссы
+  private double y_array[]; //ординаты
+  static double a_array[]; //коэффициенты в уравнении полинома
+  private int level; //степень полинома по умолчанию
+  private int count = 1; //количество столбцов в таблице по умолчанию
+
+  static void createInterface() {
+    launch();
+  }
+
+  public void start(Stage stage) {
+    TextField degreeField = new TextField();
+    degreeField.setPromptText("Степень полинома");
+    degreeField.setVisible(false);
+    degreeField.setPrefWidth(200);
+
+    ComboBox<String> typeBox = new ComboBox<>();
+    typeBox.getItems().addAll("Полином", "Не полином");
+    typeBox.setPromptText("Тип функции");
+    typeBox.setPrefWidth(200);
+
+    Button plus = new Button("+");
+    plus.setPrefSize(44, 40);
+    Button minus = new Button("-");
+    minus.setPrefSize(44, 40);
+    Button clear = new Button("Очистить");
+    clear.setPrefSize(200, 40);
+    Button goButton = new Button("Поехали!");
+    goButton.setPrefWidth(200);
+
+    LineChart<Number, Number> canvas = new LineChart<>(new NumberAxis(), new NumberAxis());
+    graph_real.setName("x");
+    graph_hypo.setName("cos(x)");
+    graph_point.setName("points");
+    canvas.getData().add(graph_point);
+    canvas.getData().add(graph_hypo);
+    canvas.getData().add(graph_real);
+
+    HBox operationsBox = new HBox(plus, minus, clear);
+    HBox chooseFunctionBox = new HBox(typeBox, degreeField);
+    HBox table = new HBox();
+    table.setId("table");
+    table.setPrefSize(878, 150);
+    resizeTable(table);
+
+    ScrollPane tableScroll = new ScrollPane(table);
+    tableScroll.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+    tableScroll.setHbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
+    tableScroll.setPrefSize(880, 150);
+
+    HBox.setMargin(typeBox, new Insets(10, 10, 0, 10));
+    HBox.setMargin(degreeField, new Insets(10, 10, 0, 10));
+    HBox.setMargin(plus, new Insets(20, 10, 0, 10));
+    HBox.setMargin(minus, new Insets(20, 10, 0, 10));
+    HBox.setMargin(clear, new Insets(20, 10, 0, 10));
+
+    VBox.setMargin(goButton, new Insets(10, 10, 0, 350));
+    VBox.setMargin(tableScroll, new Insets(10, 10, 0, 10));
+
+    VBox mainBox = new VBox(chooseFunctionBox, operationsBox, tableScroll, goButton, canvas);
+
+    Scene scene = new Scene(mainBox, 900, 700);
+    scene.getStylesheets().add(Interface.class.getResource("main.css").toExternalForm());
+    stage.setScene(scene);
+    stage.show();
+
+    //Events
+    goButton.setOnAction(event -> {
+      try {
+        graph_hypo.getData().clear();
+        graph_real.getData().clear();
+        graph_point.getData().clear();
+
+        readData(typeBox, degreeField);
+        Method.calculation();
+
+        for (double x = -10; x < 10; x++) {
+          graph_real.getData().add(new XYChart.Data<>(x, sin(x)));
+        }
+        buildGraph();
+      } catch (NumberFormatException ex) {
+        callErrorWindow("Проверьте корректность введенных данных");
+      } catch (NullPointerException ex) {
+        callErrorWindow("Выберите, пожалуйста, тип функции");
+      } catch (Exception ex) {
+        if (ex.getMessage().equals("NULL")) {
+          callErrorWindow("Из-за неточности/малого количества данных решение не может быть построено");
+        } else if (ex.getMessage().equals("INFINITY")) {
+          callErrorWindow("Из-за неточности введенных данных решение будет построено приблизительно");
+          buildGraph();
+        } else if (ex.getMessage().equals("LEVEL")) {
+          callErrorWindow("Степень полинома должна быть неотрицательной");
+        } else {
+          callErrorWindow(ex.getMessage());
+        }
+      }
+    });
+
+    plus.setOnAction(event -> {
+      count++;
+      resizeTable(table);
+    });
+
+    minus.setOnAction(event -> {
+      if (count > 1) {
+        count--;
+        resizeTable(table);
+      }
+    });
+
+    clear.setOnAction(event -> {
+      for (int i = 0; i < xArray.size(); i++) {
+        xArray.get(i).setText("");
+        yArray.get(i).setText("");
+      }
+    });
+
+    typeBox.setOnHidden(event -> {
+      try {
+        if (typeBox.getValue().equals("Полином")) {
+          degreeField.setVisible(true);
+        } else {
+          degreeField.setVisible(false);
+        }
+      } catch (NullPointerException ex) {
+        System.out.println();
+      }
+    });
+  }
+
+  private void resizeTable(HBox table) {
+    table.getChildren().clear();
+
+    //dangerous
+    ArrayList<String> list = new ArrayList<>();
+
+    for (int i = 0; i < xArray.size(); i++) {
+      list.add(xArray.get(i).getText());
+      list.add(yArray.get(i).getText());
+    }
+
+    xArray.clear();
+    yArray.clear();
+
+    Label space = new Label(" ");
+    Label x = new Label("x");
+    Label y = new Label("y");
+
+    VBox.setMargin(space, new Insets(15, 0, 0, 10));
+    VBox.setMargin(x, new Insets(7, 0, 0, 10));
+    VBox.setMargin(y, new Insets(7, 0, 0, 10));
+
+    table.getChildren().add(new VBox(space, x, y));
+
+    for (int i = 0; i < count; i++) {
+      Label number = new Label(String.valueOf(i + 1));
+      TextField x_field = new TextField();
+      xArray.add(x_field);
+      TextField y_field = new TextField();
+      yArray.add(y_field);
+
+      if (list.size() >= 2 * i + 1) {
+        x_field.setText(list.get(2 * i));
+        y_field.setText(list.get(2 * i + 1));
+      }
+
+      x_field.setPrefSize(55, 26);
+      y_field.setPrefSize(55, 26);
+      x_field.setMinSize(55, 26);
+      y_field.setMinSize(55, 26);
+
+      VBox.setMargin(number, new Insets(15, 0, 0, 28));
+      VBox.setMargin(x_field, new Insets(5, 0, 0, 5));
+      VBox.setMargin(y_field, new Insets(5, 0, 0, 5));
+
+      table.getChildren().add(new VBox(number, x_field, y_field));
+    }
+  }
+
+  private void readData(ComboBox typeBox, TextField degreeField) throws Exception {
+    x_array = new double[xArray.size()];
+    y_array = new double[yArray.size()];
+
+    for (int i = 0; i < xArray.size(); i++) {
+      x_array[i] = Double.parseDouble(xArray.get(i).getText());
+    }
+
+    for (int i = 0; i < yArray.size(); i++) {
+      y_array[i] = Double.parseDouble(yArray.get(i).getText());
+    }
+
+    if (typeBox.getValue().equals("Полином")) {
+      level = Integer.parseInt(degreeField.getText());
+
+      if (level < 0) {
+        throw new Exception("LEVEL");
+      }
+    }
+
+    setCoefficient();
+    setMems();
+  }
+
+  private void buildGraph() {
+    double max = x_array[0];
+    double min = x_array[0];
+
+    for (double x : x_array) {
+      if (x > max) {
+        max = x;
+      }
+
+      if (x < min) {
+        min = x;
+      }
+    }
+
+    if (max == min) {
+      max += 10;
+    }
+
+    for (double x = min - 4; x <= max + 1; x++) {
+      graph_hypo.getData().add(new XYChart.Data<>(x, f(x)));
+    }
+
+    for (int i = 0; i < x_array.length; i++) {
+      graph_point.getData().add(new XYChart.Data<>(x_array[i], y_array[i]));
+    }
+
+    //Для всплывающих подсказок
+    ObservableList<XYChart.Data<Number, Number>> dataList = graph_point.getData();
+
+    dataList.forEach(data -> {
+      Node node = data.getNode();
+      Tooltip tooltip = new Tooltip("(" + data.getXValue() + " ; " + data.getYValue() + ")");
+      Tooltip.install(node, tooltip);
+    });
+  }
+
+  private double f(double x) {
+    double y = 0;
+
+    for (int i = 0; i <= level; i++) {
+      y += a_array[i] * pow(x, i);
+    }
+
+    return y;
+  }
+
+  private void setCoefficient() {
+    double coefficient[][] = new double[level + 1][level + 1];
+
+    for (int i = 0; i <= level; i++) {
+      for (int j = 0; j <= level; j++) {
+        coefficient[i][j] = getSumOfX(i + j);
+      }
+    }
+    Method.coefficient = coefficient;
+  }
+
+  private void setMems() {
+    double mems[] = new double[level + 1];
+
+    for (int i = 0; i <= level; i++) {
+      mems[i] = getProduct(i);
+    }
+    Method.mems = mems;
+  }
+
+  private double getSumOfX(int degree) {
+    double sum = 0;
+
+    for (double x : x_array) {
+      sum += pow(x, degree);
+    }
+    return sum;
+  }
+
+  private double getProduct(int degree) {
+    double sum = 0;
+
+    for (int i = 0; i < x_array.length; i++) {
+      sum += y_array[i] * pow(x_array[i], degree);
+    }
+    return sum;
+  }
+
+  private void callErrorWindow(String message) {
+    Text text = new Text(message);
+    text.setWrappingWidth(250);
+    text.setTextAlignment(TextAlignment.CENTER);
+    VBox.setMargin(text, new Insets(10, 10, 0, 10));
+
+    Scene scene2 = new Scene(new VBox(text), 270, 100);
+    Stage stage2 = new Stage(StageStyle.DECORATED);
+    stage2.initModality(Modality.APPLICATION_MODAL);
+    stage2.setScene(scene2);
+    stage2.show();
+  }
+}
