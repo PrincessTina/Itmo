@@ -27,7 +27,7 @@
 }
  
 .chart-legend {
-	-fx-background-color: linear-gradient(#193d80, #ffffff, #193d80);
+	-fx-background-color: black;
 }
  
 .chart-legend-item-symbol{
@@ -35,7 +35,7 @@
 }
  
 .chart-legend-item{
-    	-fx-text-fill: #191970;
+    	-fx-text-fill: white;
 }
  
 .chart-plot-background {
@@ -71,9 +71,9 @@
 }
 
 .default-color0.chart-legend-item-symbol {
-    	-fx-background-color: black;
+    	-fx-background-color: #193d80;
  }
 
 .default-color1.chart-legend-item-symbol{
-    	-fx-background-color: #9c308d;
+    	-fx-background-color: white;
  }

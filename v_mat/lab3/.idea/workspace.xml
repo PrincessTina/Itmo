@@ -27,20 +27,24 @@
       <file leaf-file-name="Interface.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Interface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="634">
-              <caret line="118" column="71" lean-forward="false" selection-start-line="118" selection-start-column="71" selection-end-line="118" selection-end-column="71" />
+            <state relative-caret-position="-269">
+              <caret line="125" column="8" lean-forward="false" selection-start-line="125" selection-start-column="8" selection-end-line="125" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4624#4681#0" expanded="false" />
-                <element signature="e#4707#4799#0" expanded="false" />
-                <element signature="e#4825#4967#0" expanded="false" />
-                <element signature="e#4995#5263#0" expanded="false" />
+                <element signature="e#5263#5320#0" expanded="false" />
+                <element signature="e#5346#5438#0" expanded="false" />
+                <element signature="e#5464#5606#0" expanded="false" />
+                <element signature="e#5634#5902#0" expanded="false" />
                 <element signature="method#resizeTable#0;class#Interface#0" expanded="false" />
                 <element signature="method#readData#0;class#Interface#0" expanded="false" />
                 <element signature="method#buildGraph#0;class#Interface#0" expanded="false" />
+                <element signature="method#initialState#0;class#Interface#0" expanded="false" />
                 <element signature="method#f#0;class#Interface#0" expanded="false" />
                 <element signature="method#setCoefficient#0;class#Interface#0" expanded="false" />
                 <element signature="method#setMems#0;class#Interface#0" expanded="false" />
+                <element signature="method#setA#0;class#Interface#0" expanded="false" />
+                <element signature="method#setK#0;class#Interface#0" expanded="false" />
+                <element signature="method#getSumOfY#0;class#Interface#0" expanded="false" />
                 <element signature="method#getSumOfX#0;class#Interface#0" expanded="false" />
                 <element signature="method#getProduct#0;class#Interface#0" expanded="false" />
                 <element signature="method#callErrorWindow#0;class#Interface#0" expanded="false" />
@@ -147,7 +151,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wtf" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -213,12 +217,12 @@
       <option name="presentableId" value="Default" />
       <updated>1508588000327</updated>
       <workItem from="1508588016884" duration="6410000" />
-      <workItem from="1508611272753" duration="36859000" />
+      <workItem from="1508611272753" duration="58017000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43269000" />
+    <option name="totallyTimeSpent" value="64427000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -261,7 +265,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -282,16 +286,20 @@
           <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4624#4681#0" expanded="false" />
-            <element signature="e#4707#4799#0" expanded="false" />
-            <element signature="e#4825#4967#0" expanded="false" />
-            <element signature="e#4995#5263#0" expanded="false" />
+            <element signature="e#5263#5320#0" expanded="false" />
+            <element signature="e#5346#5438#0" expanded="false" />
+            <element signature="e#5464#5606#0" expanded="false" />
+            <element signature="e#5634#5902#0" expanded="false" />
             <element signature="method#resizeTable#0;class#Interface#0" expanded="false" />
             <element signature="method#readData#0;class#Interface#0" expanded="false" />
             <element signature="method#buildGraph#0;class#Interface#0" expanded="false" />
+            <element signature="method#initialState#0;class#Interface#0" expanded="false" />
             <element signature="method#f#0;class#Interface#0" expanded="false" />
             <element signature="method#setCoefficient#0;class#Interface#0" expanded="false" />
             <element signature="method#setMems#0;class#Interface#0" expanded="false" />
+            <element signature="method#setA#0;class#Interface#0" expanded="false" />
+            <element signature="method#setK#0;class#Interface#0" expanded="false" />
+            <element signature="method#getSumOfY#0;class#Interface#0" expanded="false" />
             <element signature="method#getSumOfX#0;class#Interface#0" expanded="false" />
             <element signature="method#getProduct#0;class#Interface#0" expanded="false" />
             <element signature="method#callErrorWindow#0;class#Interface#0" expanded="false" />
@@ -306,6 +314,22 @@
           <folding>
             <element signature="e#105#106#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/com/sun/javafx/event/EventHandlerManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="237" column="0" lean-forward="false" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/chart/XYChart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="1394" column="0" lean-forward="false" selection-start-line="1394" selection-start-column="0" selection-end-line="1394" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -328,20 +352,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Interface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="118" column="71" lean-forward="false" selection-start-line="118" selection-start-column="71" selection-end-line="118" selection-end-column="71" />
+        <state relative-caret-position="-269">
+          <caret line="125" column="8" lean-forward="false" selection-start-line="125" selection-start-column="8" selection-end-line="125" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4624#4681#0" expanded="false" />
-            <element signature="e#4707#4799#0" expanded="false" />
-            <element signature="e#4825#4967#0" expanded="false" />
-            <element signature="e#4995#5263#0" expanded="false" />
+            <element signature="e#5263#5320#0" expanded="false" />
+            <element signature="e#5346#5438#0" expanded="false" />
+            <element signature="e#5464#5606#0" expanded="false" />
+            <element signature="e#5634#5902#0" expanded="false" />
             <element signature="method#resizeTable#0;class#Interface#0" expanded="false" />
             <element signature="method#readData#0;class#Interface#0" expanded="false" />
             <element signature="method#buildGraph#0;class#Interface#0" expanded="false" />
+            <element signature="method#initialState#0;class#Interface#0" expanded="false" />
             <element signature="method#f#0;class#Interface#0" expanded="false" />
             <element signature="method#setCoefficient#0;class#Interface#0" expanded="false" />
             <element signature="method#setMems#0;class#Interface#0" expanded="false" />
+            <element signature="method#setA#0;class#Interface#0" expanded="false" />
+            <element signature="method#setK#0;class#Interface#0" expanded="false" />
+            <element signature="method#getSumOfY#0;class#Interface#0" expanded="false" />
             <element signature="method#getSumOfX#0;class#Interface#0" expanded="false" />
             <element signature="method#getProduct#0;class#Interface#0" expanded="false" />
             <element signature="method#callErrorWindow#0;class#Interface#0" expanded="false" />

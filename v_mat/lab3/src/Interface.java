@@ -1,19 +1,11 @@
 import javafx.application.Application;
-import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.chart.LineChart;
-import javafx.scene.chart.NumberAxis;
-import javafx.scene.chart.XYChart;
+import javafx.scene.*;
+import javafx.scene.chart.*;
 import javafx.scene.control.*;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextAlignment;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
+import javafx.scene.layout.*;
+import javafx.scene.text.*;
+import javafx.stage.*;
 
 import java.util.ArrayList;
 
@@ -28,8 +20,13 @@ public class Interface extends Application {
   private double x_array[]; //абсциссы
   private double y_array[]; //ординаты
   static double a_array[]; //коэффициенты в уравнении полинома
-  private int level; //степень полинома по умолчанию
+  private int level; //степень полинома
   private int count = 1; //количество столбцов в таблице по умолчанию
+  private int func_num;
+  private double a;
+  private double b;
+  private double k;
+  private double c = 0;
 
   static void createInterface() {
     launch();
@@ -42,7 +39,7 @@ public class Interface extends Application {
     degreeField.setPrefWidth(200);
 
     ComboBox<String> typeBox = new ComboBox<>();
-    typeBox.getItems().addAll("Полином", "Не полином");
+    typeBox.getItems().addAll("Полином", "Логарифмическая", "Показательная", "Степенная");
     typeBox.setPromptText("Тип функции");
     typeBox.setPrefWidth(200);
 
@@ -56,8 +53,8 @@ public class Interface extends Application {
     goButton.setPrefWidth(200);
 
     LineChart<Number, Number> canvas = new LineChart<>(new NumberAxis(), new NumberAxis());
-    graph_real.setName("x");
-    graph_hypo.setName("cos(x)");
+    graph_real.setName("graph_real");
+    graph_hypo.setName("graph_hypo");
     graph_point.setName("points");
     canvas.getData().add(graph_point);
     canvas.getData().add(graph_hypo);
@@ -99,12 +96,34 @@ public class Interface extends Application {
         graph_point.getData().clear();
 
         readData(typeBox, degreeField);
-        Method.calculation();
 
-        for (double x = -10; x < 10; x++) {
-          graph_real.getData().add(new XYChart.Data<>(x, sin(x)));
+        switch (func_num) {
+          case 0:
+            setCoefficient();
+            setMems();
+            Method.calculation();
+            break;
+          case 1:
+            setA();
+            setB();
+            break;
+          case 2:
+            initialState();
+            setK();
+            setA();
+            break;
+          case 3:
+            initialState();
+            setK();
+            setA();
+            break;
         }
         buildGraph();
+
+        //for (double x = -10; x < 10; x++) {
+        //graph_real.getData().add(new XYChart.Data<>(x, sin(x)));
+        //}
+        
       } catch (NumberFormatException ex) {
         callErrorWindow("Проверьте корректность введенных данных");
       } catch (NullPointerException ex) {
@@ -117,6 +136,12 @@ public class Interface extends Application {
           buildGraph();
         } else if (ex.getMessage().equals("LEVEL")) {
           callErrorWindow("Степень полинома должна быть неотрицательной");
+        } else if (ex.getMessage().equals("ODZ")) {
+          callErrorWindow("Введенные данные не удовлетворяют ОДЗ");
+        } else if (ex.getMessage().equals("NOT_ENOUGH")) {
+          callErrorWindow("Введите хотя бы еще одну точку");
+        } else if (ex.getMessage().equals("EQUALS")) {
+          callErrorWindow("Не может быть одинаковых значений x");
         } else {
           callErrorWindow(ex.getMessage());
         }
@@ -212,6 +237,15 @@ public class Interface extends Application {
       x_array[i] = Double.parseDouble(xArray.get(i).getText());
     }
 
+    //проверка на одинаковые значения x
+    for (int i = 0; i < x_array.length - 1; i++) {
+      for (int j = i + 1; j < x_array.length; j++) {
+        if (x_array[i] == x_array[j]) {
+          throw new Exception("EQUALS");
+        }
+      }
+    }
+
     for (int i = 0; i < yArray.size(); i++) {
       y_array[i] = Double.parseDouble(yArray.get(i).getText());
     }
@@ -222,10 +256,35 @@ public class Interface extends Application {
       if (level < 0) {
         throw new Exception("LEVEL");
       }
+      func_num = 0;
+    } else if (typeBox.getValue().equals("Логарифмическая")) {
+      for (double x : x_array) {
+        if (x <= 0) {
+          throw new Exception("ODZ");
+        }
+      }
+      func_num = 1;
+    } else if (typeBox.getValue().equals("Показательная")) {
+      if (x_array.length < 2) {
+        throw new Exception("NOT_ENOUGH");
+      }
+      for (double y : y_array) {
+        if (y <= 0) {
+          throw new Exception("ODZ");
+        }
+      }
+      func_num = 2;
+    } else if (typeBox.getValue().equals("Степенная")) {
+      if (x_array.length < 2) {
+        throw new Exception("NOT_ENOUGH");
+      }
+      for (int i = 0; i < x_array.length; i++) {
+        if ((y_array[i] <= 0) || (x_array[i] <= 0)) {
+          throw new Exception("ODZ");
+        }
+      }
+      func_num = 3;
     }
-
-    setCoefficient();
-    setMems();
   }
 
   private void buildGraph() {
@@ -246,29 +305,78 @@ public class Interface extends Application {
       max += 10;
     }
 
-    for (double x = min - 4; x <= max + 1; x++) {
-      graph_hypo.getData().add(new XYChart.Data<>(x, f(x)));
+    switch (func_num) {
+      case 0:
+        for (double x = min - 4; x <= max + 1; x++) {
+          graph_hypo.getData().add(new XYChart.Data<>(x, f(x)));
+        }
+        break;
+      case 1:
+        for (double x = min; x <= max + 1; x++) {
+          graph_hypo.getData().add(new XYChart.Data<>(x, f(x)));
+        }
+        break;
+      case 2:
+        for (double x = min; x <= max + 1; x++) {
+          graph_hypo.getData().add(new XYChart.Data<>(x, f(x) + c));
+        }
+        break;
+      case 3:
+        for (double x = min; x <= max + 1; x++) {
+          graph_hypo.getData().add(new XYChart.Data<>(x, f(x) + c));
+        }
+        break;
     }
 
     for (int i = 0; i < x_array.length; i++) {
-      graph_point.getData().add(new XYChart.Data<>(x_array[i], y_array[i]));
+      graph_point.getData().add(new XYChart.Data<>(x_array[i], y_array[i] + c));
     }
 
     //Для всплывающих подсказок
-    ObservableList<XYChart.Data<Number, Number>> dataList = graph_point.getData();
-
-    dataList.forEach(data -> {
+    graph_point.getData().forEach(data -> {
       Node node = data.getNode();
       Tooltip tooltip = new Tooltip("(" + data.getXValue() + " ; " + data.getYValue() + ")");
       Tooltip.install(node, tooltip);
     });
   }
 
+  private void initialState() {
+    double min = y_array[0];
+
+    for (double y : y_array) {
+      if (y < min) {
+        min = y;
+      }
+    }
+
+    if (min != round(min)) {
+      min = round(min);
+    } else {
+      min -= 0.2;
+    }
+
+
+    for (int i = 0; i < y_array.length; i++) {
+      y_array[i] -= min;
+    }
+
+    c = min;
+  }
+
   private double f(double x) {
     double y = 0;
 
-    for (int i = 0; i <= level; i++) {
-      y += a_array[i] * pow(x, i);
+    switch (func_num) {
+      case 0:
+        for (int i = 0; i <= level; i++) {
+          y += a_array[i] * pow(x, i);
+        }
+        break;
+      case 1:
+        y = a * log(x) + b;
+        break;
+      case 2:
+        y = a * pow(E, k * x);
     }
 
     return y;
@@ -294,21 +402,109 @@ public class Interface extends Application {
     Method.mems = mems;
   }
 
+  private void setA() {
+    switch (func_num) {
+      case 1:
+        a = getProduct(1) * x_array.length - getSumOfX(1) * getSumOfY();
+        a /= getSumOfX(2) * x_array.length - pow(getSumOfX(1), 2);
+        break;
+      case 2:
+        a = pow(E, (getSumOfY() - k * getSumOfX(1)) / x_array.length);
+        break;
+      case 3:
+        a = pow(E, (getSumOfY() - k * getSumOfX(1)) / x_array.length);
+        break;
+    }
+  }
+
+  private void setK() {
+    k = getProduct(1) * x_array.length - getSumOfX(1) * getSumOfY();
+    k /= getSumOfX(2) * x_array.length - pow(getSumOfX(1), 2);
+  }
+
+  private void setB() {
+    b = (getSumOfY() - a * getSumOfX(1)) / x_array.length;
+  }
+
+  private double getSumOfY() {
+    double sum = 0;
+
+    switch (func_num) {
+      case 1:
+        for (double y : y_array) {
+          sum += y;
+        }
+        break;
+      case 2:
+        for (double y : y_array) {
+          sum += log(y);
+        }
+        break;
+      case 3:
+        for (double y : y_array) {
+          sum += log(y);
+        }
+        break;
+    }
+
+    return sum;
+  }
+
   private double getSumOfX(int degree) {
     double sum = 0;
 
-    for (double x : x_array) {
-      sum += pow(x, degree);
+    switch (func_num) {
+      case 0:
+        for (double x : x_array) {
+          sum += pow(x, degree);
+        }
+        break;
+      case 1:
+        for (double x : x_array) {
+          sum += pow(log(x), degree);
+        }
+        break;
+      case 2:
+        for (double x : x_array) {
+          sum += pow(x, degree);
+        }
+        break;
+      case 3:
+        for (double x : x_array) {
+          sum += pow(log(x), degree);
+        }
+        break;
     }
+
     return sum;
   }
 
   private double getProduct(int degree) {
     double sum = 0;
 
-    for (int i = 0; i < x_array.length; i++) {
-      sum += y_array[i] * pow(x_array[i], degree);
+    switch (func_num) {
+      case 0:
+        for (int i = 0; i < x_array.length; i++) {
+          sum += y_array[i] * pow(x_array[i], degree);
+        }
+        break;
+      case 1:
+        for (int i = 0; i < x_array.length; i++) {
+          sum += y_array[i] * log(x_array[i]);
+        }
+        break;
+      case 2:
+        for (int i = 0; i < x_array.length; i++) {
+          sum += x_array[i] * log(y_array[i]);
+        }
+        break;
+      case 3:
+        for (int i = 0; i < x_array.length; i++) {
+          sum += log(x_array[i]) * log(y_array[i]);
+        }
+        break;
     }
+
     return sum;
   }
 
