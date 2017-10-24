@@ -26,7 +26,9 @@ public class Interface extends Application {
   private double a;
   private double b;
   private double k;
-  private double c = 0;
+  private double c;
+  private double point_x;
+  private double point_y;
 
   static void createInterface() {
     launch();
@@ -91,6 +93,7 @@ public class Interface extends Application {
     //Events
     goButton.setOnAction(event -> {
       try {
+        c = 0;
         graph_hypo.getData().clear();
         graph_real.getData().clear();
         graph_point.getData().clear();
@@ -102,28 +105,51 @@ public class Interface extends Application {
             setCoefficient();
             setMems();
             Method.calculation();
+            buildGraph();
+            findPoint();
+            c = 0;
+            setCoefficient();
+            setMems();
+            Method.calculation();
+            buildNewGraph();
             break;
           case 1:
             setA();
             setB();
+            buildGraph();
+            findPoint();
+            c = 0;
+            setA();
+            setB();
+            buildNewGraph();
             break;
           case 2:
             initialState();
             setK();
             setA();
+            buildGraph();
+            findPoint();
+            buildNewGraph();
+            c = 0;
+            initialState();
+            setK();
+            setA();
+            buildNewGraph();
             break;
           case 3:
             initialState();
             setK();
             setA();
+            buildGraph();
+            findPoint();
+            c = 0;
+            initialState();
+            setK();
+            setA();
+            buildNewGraph();
             break;
         }
-        buildGraph();
 
-        //for (double x = -10; x < 10; x++) {
-        //graph_real.getData().add(new XYChart.Data<>(x, sin(x)));
-        //}
-        
       } catch (NumberFormatException ex) {
         callErrorWindow("Проверьте корректность введенных данных");
       } catch (NullPointerException ex) {
@@ -178,6 +204,39 @@ public class Interface extends Application {
         System.out.println();
       }
     });
+  }
+
+  private void buildNewGraph() {
+    switch (func_num) {
+      case 0:
+        for (double x : x_array) {
+          if (x != point_x) {
+            graph_real.getData().add(new XYChart.Data<>(x, f(x)));
+          }
+        }
+        break;
+      case 1:
+        for (double x : x_array) {
+          if (x != point_x) {
+            graph_real.getData().add(new XYChart.Data<>(x, f(x)));
+          }
+        }
+        break;
+      case 2:
+        for (double x : x_array) {
+          if (x != point_x) {
+            graph_real.getData().add(new XYChart.Data<>(x, f(x) + c));
+          }
+        }
+        break;
+      case 3:
+        for (double x : x_array) {
+          if (x != point_x) {
+            graph_real.getData().add(new XYChart.Data<>(x, f(x) + c));
+          }
+        }
+        break;
+    }
   }
 
   private void resizeTable(HBox table) {
@@ -288,41 +347,24 @@ public class Interface extends Application {
   }
 
   private void buildGraph() {
-    double max = x_array[0];
-    double min = x_array[0];
-
-    for (double x : x_array) {
-      if (x > max) {
-        max = x;
-      }
-
-      if (x < min) {
-        min = x;
-      }
-    }
-
-    if (max == min) {
-      max += 10;
-    }
-
     switch (func_num) {
       case 0:
-        for (double x = min - 4; x <= max + 1; x++) {
+        for (double x : x_array) {
           graph_hypo.getData().add(new XYChart.Data<>(x, f(x)));
         }
         break;
       case 1:
-        for (double x = min; x <= max + 1; x++) {
+        for (double x : x_array) {
           graph_hypo.getData().add(new XYChart.Data<>(x, f(x)));
         }
         break;
       case 2:
-        for (double x = min; x <= max + 1; x++) {
+        for (double x : x_array) {
           graph_hypo.getData().add(new XYChart.Data<>(x, f(x) + c));
         }
         break;
       case 3:
-        for (double x = min; x <= max + 1; x++) {
+        for (double x : x_array) {
           graph_hypo.getData().add(new XYChart.Data<>(x, f(x) + c));
         }
         break;
@@ -338,6 +380,22 @@ public class Interface extends Application {
       Tooltip tooltip = new Tooltip("(" + data.getXValue() + " ; " + data.getYValue() + ")");
       Tooltip.install(node, tooltip);
     });
+  }
+
+  private void findPoint() {
+    point_x = 0;
+    point_y = 0;
+    double y_hypo;
+    double y_real;
+
+    for (int i = 0; i < x_array.length; i++) {
+      y_hypo = f(x_array[i]);
+      y_real = y_array[i];
+      if (abs(y_hypo - y_real) > point_x) {
+        point_x = x_array[i];
+        point_y = y_array[i];
+      }
+    }
   }
 
   private void initialState() {
@@ -432,17 +490,23 @@ public class Interface extends Application {
     switch (func_num) {
       case 1:
         for (double y : y_array) {
-          sum += y;
+          if (y != point_y) {
+            sum += y;
+          }
         }
         break;
       case 2:
         for (double y : y_array) {
-          sum += log(y);
+          if (y != point_y) {
+            sum += log(y);
+          }
         }
         break;
       case 3:
         for (double y : y_array) {
-          sum += log(y);
+          if (y != point_y) {
+            sum += log(y);
+          }
         }
         break;
     }
@@ -456,22 +520,30 @@ public class Interface extends Application {
     switch (func_num) {
       case 0:
         for (double x : x_array) {
-          sum += pow(x, degree);
+          if (x != point_x) {
+            sum += pow(x, degree);
+          }
         }
         break;
       case 1:
         for (double x : x_array) {
-          sum += pow(log(x), degree);
+          if (point_x != x) {
+            sum += pow(log(x), degree);
+          }
         }
         break;
       case 2:
         for (double x : x_array) {
-          sum += pow(x, degree);
+          if (x != point_x) {
+            sum += pow(x, degree);
+          }
         }
         break;
       case 3:
         for (double x : x_array) {
-          sum += pow(log(x), degree);
+          if (x != point_x) {
+            sum += pow(log(x), degree);
+          }
         }
         break;
     }
@@ -485,22 +557,30 @@ public class Interface extends Application {
     switch (func_num) {
       case 0:
         for (int i = 0; i < x_array.length; i++) {
-          sum += y_array[i] * pow(x_array[i], degree);
+          if (x_array[i] != point_x) {
+            sum += y_array[i] * pow(x_array[i], degree);
+          }
         }
         break;
       case 1:
         for (int i = 0; i < x_array.length; i++) {
-          sum += y_array[i] * log(x_array[i]);
+          if (x_array[i] != point_x) {
+            sum += y_array[i] * log(x_array[i]);
+          }
         }
         break;
       case 2:
         for (int i = 0; i < x_array.length; i++) {
-          sum += x_array[i] * log(y_array[i]);
+          if (x_array[i] != point_x) {
+            sum += x_array[i] * log(y_array[i]);
+          }
         }
         break;
       case 3:
         for (int i = 0; i < x_array.length; i++) {
-          sum += log(x_array[i]) * log(y_array[i]);
+          if (x_array[i] != point_x) {
+            sum += log(x_array[i]) * log(y_array[i]);
+          }
         }
         break;
     }

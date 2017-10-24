@@ -13,6 +13,7 @@ class Method extends Thread{
   static double precision;
   private static boolean isDiscontinuous = false;
   private static boolean isTimeLimit = false;
+  private static boolean isMinus = false;
 
   public void run() {
     checkBounds();
@@ -133,6 +134,9 @@ class Method extends Thread{
     mean = round(mean);
     mean *= precision;
 
+    if (isMinus) {
+      mean *= -1;
+    }
     return mean;
   }
 
@@ -141,6 +145,7 @@ class Method extends Thread{
       double m = a;
       a = b;
       b = m;
+      isMinus = true;
     }
   }
 
@@ -164,5 +169,6 @@ class Method extends Thread{
   private void resetAll() {
     isDiscontinuous = false;
     isTimeLimit = false;
+    isMinus = false;
   }
 }

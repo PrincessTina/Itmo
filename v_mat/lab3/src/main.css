@@ -70,10 +70,18 @@
     	-fx-background-color: transparent, transparent; 
 }
 
+.default-color2.chart-line-symbol { 
+    	-fx-background-color: transparent, transparent; 
+}
+
 .default-color0.chart-legend-item-symbol {
     	-fx-background-color: #193d80;
  }
 
 .default-color1.chart-legend-item-symbol{
     	-fx-background-color: white;
+ }
+
+.default-color2.chart-legend-item-symbol{
+    	-fx-background-color: green;
  }
