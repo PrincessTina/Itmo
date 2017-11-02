@@ -1,3 +1,3 @@
-C:/Users/krist/CLionProjects/PrimeNumberChecker/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/krist/CLionProjects/PrimeNumberChecker/cmake-build-debug/CMakeFiles/PrimeNumberChecker.dir
-C:/Users/krist/CLionProjects/PrimeNumberChecker/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/krist/Documents/itmo/yasp/PrimeNumberChecker/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/krist/Documents/itmo/yasp/PrimeNumberChecker/cmake-build-debug/CMakeFiles/PrimeNumberChecker.dir
+C:/Users/krist/Documents/itmo/yasp/PrimeNumberChecker/cmake-build-debug/CMakeFiles/rebuild_cache.dir

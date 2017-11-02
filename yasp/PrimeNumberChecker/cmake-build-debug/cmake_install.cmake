@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/krist/CLionProjects/PrimeNumberChecker
+# Install script for directory: C:/Users/krist/Documents/itmo/yasp/PrimeNumberChecker
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/krist/CLionProjects/PrimeNumberChecker/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/krist/Documents/itmo/yasp/PrimeNumberChecker/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

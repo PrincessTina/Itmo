@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/krist/CLionProjects/PrimeNumberChecker/main.cpp" "C:/Users/krist/CLionProjects/PrimeNumberChecker/cmake-build-debug/CMakeFiles/PrimeNumberChecker.dir/main.cpp.obj"
+  "C:/Users/krist/Documents/itmo/yasp/PrimeNumberChecker/main.cpp" "C:/Users/krist/Documents/itmo/yasp/PrimeNumberChecker/cmake-build-debug/CMakeFiles/PrimeNumberChecker.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

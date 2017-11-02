@@ -6,7 +6,9 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/krist/CLionProjects/PrimeNumberChecker/main.cpp
-stdio.h
+C:/Users/krist/Documents/itmo/yasp/lab4/main.cpp
+iostream
+-
+cstring
 -
 
