@@ -56,43 +56,121 @@ include CMakeFiles/lab4.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/lab4.dir/flags.make
 
-CMakeFiles/lab4.dir/main.cpp.obj: CMakeFiles/lab4.dir/flags.make
-CMakeFiles/lab4.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\krist\Documents\itmo\yasp\lab4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab4.dir/main.cpp.obj"
-	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lab4.dir\main.cpp.obj -c C:\Users\krist\Documents\itmo\yasp\lab4\main.cpp
+CMakeFiles/lab4.dir/main.c.obj: CMakeFiles/lab4.dir/flags.make
+CMakeFiles/lab4.dir/main.c.obj: ../main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\krist\Documents\itmo\yasp\lab4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/lab4.dir/main.c.obj"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\lab4.dir\main.c.obj   -c C:\Users\krist\Documents\itmo\yasp\lab4\main.c
 
-CMakeFiles/lab4.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab4.dir/main.cpp.i"
-	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\krist\Documents\itmo\yasp\lab4\main.cpp > CMakeFiles\lab4.dir\main.cpp.i
+CMakeFiles/lab4.dir/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab4.dir/main.c.i"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\krist\Documents\itmo\yasp\lab4\main.c > CMakeFiles\lab4.dir\main.c.i
 
-CMakeFiles/lab4.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab4.dir/main.cpp.s"
-	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\krist\Documents\itmo\yasp\lab4\main.cpp -o CMakeFiles\lab4.dir\main.cpp.s
+CMakeFiles/lab4.dir/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab4.dir/main.c.s"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\krist\Documents\itmo\yasp\lab4\main.c -o CMakeFiles\lab4.dir\main.c.s
 
-CMakeFiles/lab4.dir/main.cpp.obj.requires:
+CMakeFiles/lab4.dir/main.c.obj.requires:
 
-.PHONY : CMakeFiles/lab4.dir/main.cpp.obj.requires
+.PHONY : CMakeFiles/lab4.dir/main.c.obj.requires
 
-CMakeFiles/lab4.dir/main.cpp.obj.provides: CMakeFiles/lab4.dir/main.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\lab4.dir\build.make CMakeFiles/lab4.dir/main.cpp.obj.provides.build
-.PHONY : CMakeFiles/lab4.dir/main.cpp.obj.provides
+CMakeFiles/lab4.dir/main.c.obj.provides: CMakeFiles/lab4.dir/main.c.obj.requires
+	$(MAKE) -f CMakeFiles\lab4.dir\build.make CMakeFiles/lab4.dir/main.c.obj.provides.build
+.PHONY : CMakeFiles/lab4.dir/main.c.obj.provides
 
-CMakeFiles/lab4.dir/main.cpp.obj.provides.build: CMakeFiles/lab4.dir/main.cpp.obj
+CMakeFiles/lab4.dir/main.c.obj.provides.build: CMakeFiles/lab4.dir/main.c.obj
+
+
+CMakeFiles/lab4.dir/list_func.c.obj: CMakeFiles/lab4.dir/flags.make
+CMakeFiles/lab4.dir/list_func.c.obj: ../list_func.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\krist\Documents\itmo\yasp\lab4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/lab4.dir/list_func.c.obj"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\lab4.dir\list_func.c.obj   -c C:\Users\krist\Documents\itmo\yasp\lab4\list_func.c
+
+CMakeFiles/lab4.dir/list_func.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab4.dir/list_func.c.i"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\krist\Documents\itmo\yasp\lab4\list_func.c > CMakeFiles\lab4.dir\list_func.c.i
+
+CMakeFiles/lab4.dir/list_func.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab4.dir/list_func.c.s"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\krist\Documents\itmo\yasp\lab4\list_func.c -o CMakeFiles\lab4.dir\list_func.c.s
+
+CMakeFiles/lab4.dir/list_func.c.obj.requires:
+
+.PHONY : CMakeFiles/lab4.dir/list_func.c.obj.requires
+
+CMakeFiles/lab4.dir/list_func.c.obj.provides: CMakeFiles/lab4.dir/list_func.c.obj.requires
+	$(MAKE) -f CMakeFiles\lab4.dir\build.make CMakeFiles/lab4.dir/list_func.c.obj.provides.build
+.PHONY : CMakeFiles/lab4.dir/list_func.c.obj.provides
+
+CMakeFiles/lab4.dir/list_func.c.obj.provides.build: CMakeFiles/lab4.dir/list_func.c.obj
+
+
+CMakeFiles/lab4.dir/order_func.c.obj: CMakeFiles/lab4.dir/flags.make
+CMakeFiles/lab4.dir/order_func.c.obj: ../order_func.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\krist\Documents\itmo\yasp\lab4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/lab4.dir/order_func.c.obj"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\lab4.dir\order_func.c.obj   -c C:\Users\krist\Documents\itmo\yasp\lab4\order_func.c
+
+CMakeFiles/lab4.dir/order_func.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab4.dir/order_func.c.i"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\krist\Documents\itmo\yasp\lab4\order_func.c > CMakeFiles\lab4.dir\order_func.c.i
+
+CMakeFiles/lab4.dir/order_func.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab4.dir/order_func.c.s"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\krist\Documents\itmo\yasp\lab4\order_func.c -o CMakeFiles\lab4.dir\order_func.c.s
+
+CMakeFiles/lab4.dir/order_func.c.obj.requires:
+
+.PHONY : CMakeFiles/lab4.dir/order_func.c.obj.requires
+
+CMakeFiles/lab4.dir/order_func.c.obj.provides: CMakeFiles/lab4.dir/order_func.c.obj.requires
+	$(MAKE) -f CMakeFiles\lab4.dir\build.make CMakeFiles/lab4.dir/order_func.c.obj.provides.build
+.PHONY : CMakeFiles/lab4.dir/order_func.c.obj.provides
+
+CMakeFiles/lab4.dir/order_func.c.obj.provides.build: CMakeFiles/lab4.dir/order_func.c.obj
+
+
+CMakeFiles/lab4.dir/math_func.c.obj: CMakeFiles/lab4.dir/flags.make
+CMakeFiles/lab4.dir/math_func.c.obj: ../math_func.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\krist\Documents\itmo\yasp\lab4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/lab4.dir/math_func.c.obj"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\lab4.dir\math_func.c.obj   -c C:\Users\krist\Documents\itmo\yasp\lab4\math_func.c
+
+CMakeFiles/lab4.dir/math_func.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab4.dir/math_func.c.i"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\krist\Documents\itmo\yasp\lab4\math_func.c > CMakeFiles\lab4.dir\math_func.c.i
+
+CMakeFiles/lab4.dir/math_func.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab4.dir/math_func.c.s"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\krist\Documents\itmo\yasp\lab4\math_func.c -o CMakeFiles\lab4.dir\math_func.c.s
+
+CMakeFiles/lab4.dir/math_func.c.obj.requires:
+
+.PHONY : CMakeFiles/lab4.dir/math_func.c.obj.requires
+
+CMakeFiles/lab4.dir/math_func.c.obj.provides: CMakeFiles/lab4.dir/math_func.c.obj.requires
+	$(MAKE) -f CMakeFiles\lab4.dir\build.make CMakeFiles/lab4.dir/math_func.c.obj.provides.build
+.PHONY : CMakeFiles/lab4.dir/math_func.c.obj.provides
+
+CMakeFiles/lab4.dir/math_func.c.obj.provides.build: CMakeFiles/lab4.dir/math_func.c.obj
 
 
 # Object files for target lab4
 lab4_OBJECTS = \
-"CMakeFiles/lab4.dir/main.cpp.obj"
+"CMakeFiles/lab4.dir/main.c.obj" \
+"CMakeFiles/lab4.dir/list_func.c.obj" \
+"CMakeFiles/lab4.dir/order_func.c.obj" \
+"CMakeFiles/lab4.dir/math_func.c.obj"
 
 # External object files for target lab4
 lab4_EXTERNAL_OBJECTS =
 
-lab4.exe: CMakeFiles/lab4.dir/main.cpp.obj
+lab4.exe: CMakeFiles/lab4.dir/main.c.obj
+lab4.exe: CMakeFiles/lab4.dir/list_func.c.obj
+lab4.exe: CMakeFiles/lab4.dir/order_func.c.obj
+lab4.exe: CMakeFiles/lab4.dir/math_func.c.obj
 lab4.exe: CMakeFiles/lab4.dir/build.make
 lab4.exe: CMakeFiles/lab4.dir/linklibs.rsp
 lab4.exe: CMakeFiles/lab4.dir/objects1.rsp
 lab4.exe: CMakeFiles/lab4.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\krist\Documents\itmo\yasp\lab4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable lab4.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\krist\Documents\itmo\yasp\lab4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable lab4.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\lab4.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -100,7 +178,10 @@ CMakeFiles/lab4.dir/build: lab4.exe
 
 .PHONY : CMakeFiles/lab4.dir/build
 
-CMakeFiles/lab4.dir/requires: CMakeFiles/lab4.dir/main.cpp.obj.requires
+CMakeFiles/lab4.dir/requires: CMakeFiles/lab4.dir/main.c.obj.requires
+CMakeFiles/lab4.dir/requires: CMakeFiles/lab4.dir/list_func.c.obj.requires
+CMakeFiles/lab4.dir/requires: CMakeFiles/lab4.dir/order_func.c.obj.requires
+CMakeFiles/lab4.dir/requires: CMakeFiles/lab4.dir/math_func.c.obj.requires
 
 .PHONY : CMakeFiles/lab4.dir/requires
 

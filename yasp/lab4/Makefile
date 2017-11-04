@@ -1,7 +1,7 @@
-all: scalar prime
+COMP 	= gcc
+CFLAGS 	= -ansi -pedantic -Wall -Werror
+LIBS 	= -lm
+SOURCES = list_func.c main.c TARGET	= main
 
-scalar:
-	gcc -o scalarProduct -ansi -pedantic -Wall -Werror scalarProduct.c
-
-prime:
-	gcc -o primeNumberChecker -ansi -pedantic -Wall -Werror primeNumberChecker.c
+all: 
+	$(COMP) $(CFLAGS) $(LIBS) -o $(TARGET) $(SOURCES) 

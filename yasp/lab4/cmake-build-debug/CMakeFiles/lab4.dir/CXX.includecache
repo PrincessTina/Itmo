@@ -6,9 +6,13 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/krist/Documents/itmo/yasp/lab4/list_func.h
+
 C:/Users/krist/Documents/itmo/yasp/lab4/main.cpp
 iostream
 -
 cstring
 -
+list_func.h
+C:/Users/krist/Documents/itmo/yasp/lab4/list_func.h
 

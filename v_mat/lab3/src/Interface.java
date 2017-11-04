@@ -297,13 +297,13 @@ public class Interface extends Application {
     }
 
     //проверка на одинаковые значения x
-    for (int i = 0; i < x_array.length - 1; i++) {
-      for (int j = i + 1; j < x_array.length; j++) {
-        if (x_array[i] == x_array[j]) {
-          throw new Exception("EQUALS");
-        }
-      }
-    }
+ //   for (int i = 0; i < x_array.length - 1; i++) {
+   //   for (int j = i + 1; j < x_array.length; j++) {
+     //   if (x_array[i] == x_array[j]) {
+       //   throw new Exception("EQUALS");
+        //}
+      //}
+    //}
 
     for (int i = 0; i < yArray.size(); i++) {
       y_array[i] = Double.parseDouble(yArray.get(i).getText());
@@ -437,6 +437,7 @@ public class Interface extends Application {
         y = a * pow(E, k * x);
     }
 
+    System.out.println(y);
     return y;
   }
 

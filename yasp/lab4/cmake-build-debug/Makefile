@@ -122,32 +122,113 @@ lab4/fast:
 	$(MAKE) -f CMakeFiles\lab4.dir\build.make CMakeFiles/lab4.dir/build
 .PHONY : lab4/fast
 
-main.obj: main.cpp.obj
+list_func.obj: list_func.c.obj
+
+.PHONY : list_func.obj
+
+# target to build an object file
+list_func.c.obj:
+	$(MAKE) -f CMakeFiles\lab4.dir\build.make CMakeFiles/lab4.dir/list_func.c.obj
+.PHONY : list_func.c.obj
+
+list_func.i: list_func.c.i
+
+.PHONY : list_func.i
+
+# target to preprocess a source file
+list_func.c.i:
+	$(MAKE) -f CMakeFiles\lab4.dir\build.make CMakeFiles/lab4.dir/list_func.c.i
+.PHONY : list_func.c.i
+
+list_func.s: list_func.c.s
+
+.PHONY : list_func.s
+
+# target to generate assembly for a file
+list_func.c.s:
+	$(MAKE) -f CMakeFiles\lab4.dir\build.make CMakeFiles/lab4.dir/list_func.c.s
+.PHONY : list_func.c.s
+
+main.obj: main.c.obj
 
 .PHONY : main.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) -f CMakeFiles\lab4.dir\build.make CMakeFiles/lab4.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+main.c.obj:
+	$(MAKE) -f CMakeFiles\lab4.dir\build.make CMakeFiles/lab4.dir/main.c.obj
+.PHONY : main.c.obj
 
-main.i: main.cpp.i
+main.i: main.c.i
 
 .PHONY : main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles\lab4.dir\build.make CMakeFiles/lab4.dir/main.cpp.i
-.PHONY : main.cpp.i
+main.c.i:
+	$(MAKE) -f CMakeFiles\lab4.dir\build.make CMakeFiles/lab4.dir/main.c.i
+.PHONY : main.c.i
 
-main.s: main.cpp.s
+main.s: main.c.s
 
 .PHONY : main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles\lab4.dir\build.make CMakeFiles/lab4.dir/main.cpp.s
-.PHONY : main.cpp.s
+main.c.s:
+	$(MAKE) -f CMakeFiles\lab4.dir\build.make CMakeFiles/lab4.dir/main.c.s
+.PHONY : main.c.s
+
+math_func.obj: math_func.c.obj
+
+.PHONY : math_func.obj
+
+# target to build an object file
+math_func.c.obj:
+	$(MAKE) -f CMakeFiles\lab4.dir\build.make CMakeFiles/lab4.dir/math_func.c.obj
+.PHONY : math_func.c.obj
+
+math_func.i: math_func.c.i
+
+.PHONY : math_func.i
+
+# target to preprocess a source file
+math_func.c.i:
+	$(MAKE) -f CMakeFiles\lab4.dir\build.make CMakeFiles/lab4.dir/math_func.c.i
+.PHONY : math_func.c.i
+
+math_func.s: math_func.c.s
+
+.PHONY : math_func.s
+
+# target to generate assembly for a file
+math_func.c.s:
+	$(MAKE) -f CMakeFiles\lab4.dir\build.make CMakeFiles/lab4.dir/math_func.c.s
+.PHONY : math_func.c.s
+
+order_func.obj: order_func.c.obj
+
+.PHONY : order_func.obj
+
+# target to build an object file
+order_func.c.obj:
+	$(MAKE) -f CMakeFiles\lab4.dir\build.make CMakeFiles/lab4.dir/order_func.c.obj
+.PHONY : order_func.c.obj
+
+order_func.i: order_func.c.i
+
+.PHONY : order_func.i
+
+# target to preprocess a source file
+order_func.c.i:
+	$(MAKE) -f CMakeFiles\lab4.dir\build.make CMakeFiles/lab4.dir/order_func.c.i
+.PHONY : order_func.c.i
+
+order_func.s: order_func.c.s
+
+.PHONY : order_func.s
+
+# target to generate assembly for a file
+order_func.c.s:
+	$(MAKE) -f CMakeFiles\lab4.dir\build.make CMakeFiles/lab4.dir/order_func.c.s
+.PHONY : order_func.c.s
 
 # Help Target
 help:
@@ -158,9 +239,18 @@ help:
 	@echo ... edit_cache
 	@echo ... lab4
 	@echo ... rebuild_cache
+	@echo ... list_func.obj
+	@echo ... list_func.i
+	@echo ... list_func.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... math_func.obj
+	@echo ... math_func.i
+	@echo ... math_func.s
+	@echo ... order_func.obj
+	@echo ... order_func.i
+	@echo ... order_func.s
 .PHONY : help
 
 

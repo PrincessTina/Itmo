@@ -81,3 +81,7 @@
 .default-color1.chart-legend-item-symbol{
     	-fx-background-color: white;
  }
+
+.default-color2.chart-legend-item-symbol{
+    	-fx-background-color: green;
+ }

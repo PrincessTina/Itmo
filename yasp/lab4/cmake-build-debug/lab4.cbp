@@ -80,7 +80,25 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/krist/Documents/itmo/yasp/lab4/main.cpp">
+		<Unit filename="C:/Users/krist/Documents/itmo/yasp/lab4/list_func.c">
+			<Option target="lab4"/>
+		</Unit>
+		<Unit filename="C:/Users/krist/Documents/itmo/yasp/lab4/list_func.h">
+			<Option target="lab4"/>
+		</Unit>
+		<Unit filename="C:/Users/krist/Documents/itmo/yasp/lab4/main.c">
+			<Option target="lab4"/>
+		</Unit>
+		<Unit filename="C:/Users/krist/Documents/itmo/yasp/lab4/math_func.c">
+			<Option target="lab4"/>
+		</Unit>
+		<Unit filename="C:/Users/krist/Documents/itmo/yasp/lab4/math_func.h">
+			<Option target="lab4"/>
+		</Unit>
+		<Unit filename="C:/Users/krist/Documents/itmo/yasp/lab4/order_func.c">
+			<Option target="lab4"/>
+		</Unit>
+		<Unit filename="C:/Users/krist/Documents/itmo/yasp/lab4/order_func.h">
 			<Option target="lab4"/>
 		</Unit>
 		<Unit filename="C:/Users/krist/Documents/itmo/yasp/lab4/CMakeLists.txt">
