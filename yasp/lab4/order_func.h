@@ -27,4 +27,4 @@ int serialize(const node *linked_list, const char *filename);
 
 int deserialize(node *linked_list, const char *filename);
 
-#endif //LAB4_ORDER_FUNC_H
+#endif

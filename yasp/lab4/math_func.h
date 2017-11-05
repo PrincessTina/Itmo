@@ -28,4 +28,4 @@ int module(int x);
 
 int mul_two(int x);
 
-#endif //LAB4_MATH_FUNC_H
+#endif

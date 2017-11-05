@@ -1,7 +1,11 @@
-COMP 	= gcc
 CFLAGS 	= -ansi -pedantic -Wall -Werror
-LIBS 	= -lm
-SOURCES = list_func.c main.c TARGET	= main
+SOURCES = list_func.c math_func.c order_func.c main.c
 
-all: 
-	$(COMP) $(CFLAGS) $(LIBS) -o $(TARGET) $(SOURCES) 
+all: clean main
+
+clean:
+	touch main
+	rm main
+
+main:
+	gcc $(CFLAGS) -lm -o main $(SOURCES) 

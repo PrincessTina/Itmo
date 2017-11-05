@@ -29,4 +29,4 @@ int list_get(const node *linked_list, int key);
 
 void list_free(node *linked_list);
 
-#endif //LAB4_LIST_FUNC_H
+#endif
