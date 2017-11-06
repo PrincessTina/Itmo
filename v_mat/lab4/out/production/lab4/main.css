@@ -1,0 +1,65 @@
+.root {
+	-fx-background-image: url(artleo.jpg);
+	-fx-font-family: "Monotype Corsiva", serif;
+	-fx-font-size: 18px;
+}
+
+.combo-box {
+-fx-background-color: linear-gradient(#193d80, #ffffff);
+}
+
+.combo-box:hover {
+-fx-background-color: linear-gradient(#ffffff, #193d80);
+}
+
+.label {
+	-fx-text-fill: white;
+}
+
+.button {
+	-fx-background-color: linear-gradient(#193d80, #ffffff);
+}
+
+.button:hover {
+	-fx-background-color: linear-gradient(#ffffff, #193d80);
+}
+ 
+.chart-legend {
+	-fx-background-color: black;
+}
+ 
+.chart-legend-item-symbol{
+   	-fx-background-radius: 0;
+}
+ 
+.chart-legend-item{
+    	-fx-text-fill: white;
+}
+ 
+.chart-plot-background {
+    	-fx-background-color: transparent;
+}
+
+.chart-vertical-grid-lines {
+    	-fx-stroke: white;
+}
+
+.chart-horizontal-grid-lines {
+   	-fx-stroke: #3278fa;
+}
+
+.default-color0.chart-series-line { 
+	-fx-stroke: #ffffff; 
+}
+
+.default-color0.chart-line-symbol { 
+    	-fx-background-color: white, #193d80; 
+}
+
+.default-color0.chart-line-symbol:hover { 
+    	-fx-background-color: #193d80, white; 
+}
+
+.default-color0.chart-legend-item-symbol {
+    	-fx-background-color: #193d80;
+ }

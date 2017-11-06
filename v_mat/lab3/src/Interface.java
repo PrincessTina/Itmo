@@ -41,7 +41,7 @@ public class Interface extends Application {
     degreeField.setPrefWidth(200);
 
     ComboBox<String> typeBox = new ComboBox<>();
-    typeBox.getItems().addAll("Полином", "Логарифмическая", "Показательная", "Степенная");
+    typeBox.getItems().addAll("Полином", "Логарифмическая", "Экспонента");
     typeBox.setPromptText("Тип функции");
     typeBox.setPrefWidth(200);
 
@@ -136,18 +136,6 @@ public class Interface extends Application {
             setA();
             buildNewGraph();
             break;
-          case 3:
-            initialState();
-            setK();
-            setA();
-            buildGraph();
-            findPoint();
-            c = 0;
-            initialState();
-            setK();
-            setA();
-            buildNewGraph();
-            break;
         }
 
       } catch (NumberFormatException ex) {
@@ -166,8 +154,6 @@ public class Interface extends Application {
           callErrorWindow("Введенные данные не удовлетворяют ОДЗ");
         } else if (ex.getMessage().equals("NOT_ENOUGH")) {
           callErrorWindow("Введите хотя бы еще одну точку");
-        } else if (ex.getMessage().equals("EQUALS")) {
-          callErrorWindow("Не может быть одинаковых значений x");
         } else {
           callErrorWindow(ex.getMessage());
         }
@@ -296,15 +282,6 @@ public class Interface extends Application {
       x_array[i] = Double.parseDouble(xArray.get(i).getText());
     }
 
-    //проверка на одинаковые значения x
- //   for (int i = 0; i < x_array.length - 1; i++) {
-   //   for (int j = i + 1; j < x_array.length; j++) {
-     //   if (x_array[i] == x_array[j]) {
-       //   throw new Exception("EQUALS");
-        //}
-      //}
-    //}
-
     for (int i = 0; i < yArray.size(); i++) {
       y_array[i] = Double.parseDouble(yArray.get(i).getText());
     }
@@ -323,7 +300,7 @@ public class Interface extends Application {
         }
       }
       func_num = 1;
-    } else if (typeBox.getValue().equals("Показательная")) {
+    } else if (typeBox.getValue().equals("Экспонента")) {
       if (x_array.length < 2) {
         throw new Exception("NOT_ENOUGH");
       }
@@ -333,16 +310,6 @@ public class Interface extends Application {
         }
       }
       func_num = 2;
-    } else if (typeBox.getValue().equals("Степенная")) {
-      if (x_array.length < 2) {
-        throw new Exception("NOT_ENOUGH");
-      }
-      for (int i = 0; i < x_array.length; i++) {
-        if ((y_array[i] <= 0) || (x_array[i] <= 0)) {
-          throw new Exception("ODZ");
-        }
-      }
-      func_num = 3;
     }
   }
 
@@ -435,9 +402,9 @@ public class Interface extends Application {
         break;
       case 2:
         y = a * pow(E, k * x);
+        break;
     }
 
-    System.out.println(y);
     return y;
   }
 
@@ -470,9 +437,6 @@ public class Interface extends Application {
       case 2:
         a = pow(E, (getSumOfY() - k * getSumOfX(1)) / x_array.length);
         break;
-      case 3:
-        a = pow(E, (getSumOfY() - k * getSumOfX(1)) / x_array.length);
-        break;
     }
   }
 
@@ -497,13 +461,6 @@ public class Interface extends Application {
         }
         break;
       case 2:
-        for (double y : y_array) {
-          if (y != point_y) {
-            sum += log(y);
-          }
-        }
-        break;
-      case 3:
         for (double y : y_array) {
           if (y != point_y) {
             sum += log(y);
@@ -540,13 +497,6 @@ public class Interface extends Application {
           }
         }
         break;
-      case 3:
-        for (double x : x_array) {
-          if (x != point_x) {
-            sum += pow(log(x), degree);
-          }
-        }
-        break;
     }
 
     return sum;
@@ -574,13 +524,6 @@ public class Interface extends Application {
         for (int i = 0; i < x_array.length; i++) {
           if (x_array[i] != point_x) {
             sum += x_array[i] * log(y_array[i]);
-          }
-        }
-        break;
-      case 3:
-        for (int i = 0; i < x_array.length; i++) {
-          if (x_array[i] != point_x) {
-            sum += log(x_array[i]) * log(y_array[i]);
           }
         }
         break;
