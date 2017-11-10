@@ -1,5 +1,3 @@
-import jdk.nashorn.internal.runtime.ECMAException;
-
 import java.util.ArrayList;
 
 import static java.lang.Math.abs;
@@ -33,7 +31,15 @@ class Method {
     point_x.clear();
     point_y.clear();
 
+    long start = System.currentTimeMillis();
+    long currentTime;
+
     while (x != last + h) {
+      currentTime = System.currentTimeMillis();
+
+      if (currentTime - start > 6000) {
+        throw new Exception("TIME");
+      }
       y1 = y2;
 
       point_x.add(x);

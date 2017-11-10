@@ -92,6 +92,8 @@ public class Interface extends Application {
       } catch (Exception ex) {
         if (ex.getMessage().equals("NaN")) {
           callErrorWindow("Введенные данные не удовлетворяют ОДЗ");
+        } else if (ex.getMessage().equals("TIME")) {
+          callErrorWindow("Программа слишком долго считает для введенных данных");
         } else {
           callErrorWindow("Error: " + ex.getMessage());
         }

@@ -21,7 +21,7 @@ errno.h
 C:/Users/krist/Documents/itmo/yasp/lab4/main.c
 stdlib.h
 -
-mem.h
+string.h
 -
 stdio.h
 -
@@ -47,7 +47,7 @@ errno.h
 C:/Users/krist/Documents/itmo/yasp/lab4/order_func.c
 stdio.h
 -
-mem.h
+string.h
 -
 stdlib.h
 -

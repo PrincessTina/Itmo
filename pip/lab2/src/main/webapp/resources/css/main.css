@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    width: 100%;
+    border-spacing: 0;
+    vertical-align: top;
+    background-color: #4d1f80;
+}
+
+table *{
+    background-color: white;
+}
+
+th {
+    vertical-align: middle;
+    font-style: italic;
+    color: #4d1f80;
+    size: 16px;
+    height: 80px;
+    background-color: white;
+}
+
+td {
+    width: 50%;
+}
+
+.field {
+    width: 30%;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.label {
+    margin-left: 20px;
+    font-style: italic;
+}
+
+#button1 {
+    margin-left: 352px;
+    width: 30%;
+    padding: 5px;
+    border-color: #4d1f80;
+}
+
+#button2 {
+    margin-bottom: 50px;
+    margin-left: 100px;
+    width: 30%;
+    padding: 5px;
+    border-color: #4d1f80;
+}
+
+#table-scroll {
+    height:550px;
+    overflow: auto;
+}
+
+.result {
+    text-align: center;
+    word-break: break-all;
+    overflow: auto;
+}
+
+.result tr td {
+    width: 5%;
+}
+
+#title * {
+    vertical-align: middle;
+    color: white;
+    background: linear-gradient(#4d1f80, #a47cc2);
+}
+
+.span {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-style: italic;
+    color: #c70417;
+}
+
+.tick {
+    font-weight: bold;
+    font-style: italic;
+    color: #129e39;
+}
