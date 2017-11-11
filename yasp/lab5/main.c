@@ -1,130 +1,101 @@
 #include <stdio.h>
 #include <malloc.h>
-
-#pragma pack(push, 2)
-typedef struct bmpHeader {
-    unsigned char b1, b2; // Символы BM (2 байта)
-    unsigned long size; // Размер файла (4 байта)
-    unsigned short notUse1; // (2 байта)
-    unsigned short notUse2; // (2 байта)
-    unsigned long massPos; // Местанахождение данных растрового массива (4 байта)
-
-    unsigned long headerLength; // Длинна этого заголовка (4 байта)
-    unsigned int width; // Ширина изображения (4 байта)
-    unsigned int height; // Высота изображения (4 байта)
-    unsigned short colorPlaneNumber; // Число цветовых плоскостей (2 байта)
-    unsigned int bitPixel; // Бит/пиксель (2 байта)
-    unsigned long compressMethod; // Метод сжатия (4 байта)
-    unsigned long massLength; // Длинна массива с мусоро (4 байта)
-    unsigned long massWidth; // Ширина массива с мусором (4 байта)
-    unsigned long massHeight; // Высота массива с мусором (4 байта)
-    unsigned long colorNumber; // Число цветов изображения (4 байта)
-    unsigned long generalColorNumber; // Число основных цветов (4 байта)
-
-} bmpHeader;
-#pragma pack(pop)
-
-typedef struct pixel_t {
-    unsigned char b;
-    unsigned char g;
-    unsigned char r;
-} pixel_t;
-
-typedef struct image_t {
-    unsigned int width;
-    unsigned int width3;
-    unsigned int height;
-    pixel_t *array;
-} image_t;
-
-
-int readBMP(char *path);
-int saveBMP(char *path);
-void swap(struct pixel_t *a, struct pixel_t *b, unsigned int bytes);
+#include "main.h"
 
 bmpHeader header;
 image_t image;
+int condition;
 
 int main(void) {
-    if (readBMP("u_88f1435a74e6a038244bb6ba08fe13f2_800.bmp") == 0) {
-        printf("bad path");
-        return 0;
+    char *filename = "u_88f1435a74e6a038244bb6ba08fe13f2_800.bmp";
+    FILE *file = openFile(filename);
+
+    switch(condition) {
+        case READ_INVALID_SIGNATURE:
+            printf("Failed while reading from file. Maybe file is corrupted\n");
+            goto breakPoint;
+        default:
+            printf("Successfully read from file %s\n", filename);
     }
 
-    if (saveBMP("test.bmp") == 0) {
-        printf("bad path");
-        return 0;
+    readBMP(file);
+
+    switch(condition) {
+        case ROTATE_OK:
+            printf("Successfully created new array with rotated points of pixels\n");
+            break;
+        case READ_OK:
+            printf("Can read from file but cannot create new array with rotated points\n");
+        default:
+            printf("Something bad adventured while rotating\n");
+            goto breakPoint;
     }
+
+    filename = "test.bmp";
+    saveBMP(filename);
+
+    switch(condition) {
+        case WRITE_OK:
+            printf("Successfully write in file %s\n", filename);
+            break;
+        default:
+            printf("Something bad adventured while writing in file\n");
+    }
+
+    breakPoint:
     return 0;
 }
 
-int readBMP(char *path) {
-    //ToDO: организовать проверку ширины на кратность 4
-    FILE *file = fopen(path, "rb");
-    int i, size, k = 0;
-    double degree = 90;
-
-    if (file == NULL) {
-        return 0;
-    }
-
+FILE* openFile(char *filename) {
+    FILE *file = fopen(filename, "rb");
     fread(&header, sizeof(bmpHeader), 1, file);
 
-    if (header.b1 != 'B' || header.b2 != 'M' || header.bitPixel != 24) {
-        printf("corrupted file");
-        return 0;
+    if (header.b != 'B' || header.m != 'M' || header.biBitCount != 24) {
+        condition = READ_INVALID_SIGNATURE;
+    } else {
+        condition = OPEN_OK;
     }
+    return file;
+}
 
-    image.width = header.width;
-    image.height = header.height;
-    image.width3 = 3 * image.width;
+void rotate(double degree) {
+    int i, k = 0, j = 0, g = 0;
+    int size = image.width*image.height;
 
-    image.array = (pixel_t *) calloc(image.width3 * image.height, sizeof(char));
-    fread(image.array, 1, image.width3 * image.height, file);
-
-    size = image.height * image.width;
-
-    //переворачиваю
     if (degree == 90) {
-        //pixel_t *massiv = (pixel_t *) calloc(image.width3 * image.height, sizeof(char));
-        //int h = image.height;//8
-        //int j = 0;
-        //int c = 1;
-
-        //for (i = 0; i < size; i ++) {
-          //  if (j != image.width) {
-            //    massiv[h*(j + 1) - c] = image.array[i];
-              //  j ++;
-            //} else {
-              //  c ++;
-                //j = 0;
-            //}
-       // }
-        size_t width = image.height;
-        size_t height = image.width3;
-
-        pixel_t** pixels = (pixel_t**) calloc(height, sizeof(char*));
-        for (i = 0; i < width; i ++) {
-            pixels[i] = (pixel_t*) calloc(width, sizeof(char));
+        pixel_t** massiv = (pixel_t **) calloc(image.width3, sizeof(pixel_t));
+        for (i = 0; i < image.width3; i++) {
+            massiv[i] = (pixel_t*) calloc(image.height, sizeof(pixel_t));
         }
 
-        for (i = 0; i < height; i++) {
-            for (int j = 0; j < width; j++) {
-                int y = height - i - 1;
-                int x = width - j - 1;
-                pixels[y][x] = image.array[width * i - 1 + j]; //initial_pixels[i][j];
+        pixel_t** massiv2 = (pixel_t **) calloc(image.height, sizeof(pixel_t));
+        for (i = 0; i < image.height; i++) {
+            massiv2[i] = (pixel_t*) calloc(image.width3, sizeof(pixel_t));
+        }
+
+        for (i = 0; i < image.height; i ++) {
+            while (k != image.width) {
+                massiv[i][k] = image.array[j];
+                k ++;
+                j++;
+            }
+            k = 0;
+        }
+
+        for (i = 0; i < image.height; i++) {
+            while (k != image.width) {
+                massiv2[k][image.height - i - 1] = massiv[i][k];
+                k ++;
+            }
+            k = 0;
+        }
+
+        for (i = 0; i < image.width; i ++) {
+            for (j = 0; j < image.height; j ++) {
+                image.array[g] = massiv2[i][j];
+                g ++;
             }
         }
-
-        for (i = 0; i < height; i++) {
-            for (int j = 0; j < width; j++) {
-                image.array[width * i -1 + j] = pixels[i][j];
-            }
-        }
-
-        //for (i = 0; i < size; i++) {
-          //  image.array[i] = massiv[i];
-        //}
     } else if (degree == 180) {
         for (i = 0; i <= size / 2; i++) {
             pixel_t t = image.array[size - 1 - i];
@@ -132,30 +103,36 @@ int readBMP(char *path) {
             image.array[i] = t;
         }
     }
+}
 
+void readBMP(FILE *file) {
+    double degree = 90;
+
+    image.width = header.biWidth;
+    image.height = header.biHeight;
+    image.width3 = 3 * image.width;
+
+    while (image.width3 % 4 != 0) {
+        image.width3 ++;
+    }
+
+    image.array = (pixel_t *) calloc(image.width3 * image.height, sizeof(pixel_t));
+    fread(image.array, 1, image.width3 * image.height, file);
+
+    condition = READ_OK;
+
+    /* turn over file */
+    rotate(degree);
 
     fclose(file);
-    return 1;
+    condition = ROTATE_OK;
 }
 
-void swap(pixel_t* a, pixel_t* b, unsigned int bytes) {
-    pixel_t tmp;
-    while (bytes--) {
-        tmp = *a;
-        *a++ = *b;
-        *b++ = tmp;
-    }
-}
-
-int saveBMP(char *path) {
-    FILE *file = fopen(path, "wb");
-
-    if (file == NULL) {
-        return 0;
-    }
+void saveBMP(char *filename) {
+    FILE *file = fopen(filename, "wb");
 
     fwrite(&header, sizeof(bmpHeader), 1, file);
-    fwrite(image.array, sizeof(char), image.width3 * image.height, file);
+    fwrite(image.array, sizeof(pixel_t), image.width3 * image.height, file);
     fclose(file);
-    return 1;
+    condition = WRITE_OK;
 }

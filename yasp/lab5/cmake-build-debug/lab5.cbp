@@ -83,6 +83,9 @@
 		<Unit filename="C:/Users/krist/Documents/itmo/yasp/lab5/main.c">
 			<Option target="lab5"/>
 		</Unit>
+		<Unit filename="C:/Users/krist/Documents/itmo/yasp/lab5/main.h">
+			<Option target="lab5"/>
+		</Unit>
 		<Unit filename="C:/Users/krist/Documents/itmo/yasp/lab5/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
