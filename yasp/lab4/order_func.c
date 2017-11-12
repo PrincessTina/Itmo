@@ -78,9 +78,7 @@ void intoArray(const node *linked_list, char *array) {
         int value = list_get(linked_list, i);
         int j;
 
-        /*itoa(value, buf, 10);*/
-
-	sprintf(buf, "%d", value);
+	    sprintf(buf, "%d", value);
 
         for (j = 0; j < 10; j++) {
             char c = buf[j];

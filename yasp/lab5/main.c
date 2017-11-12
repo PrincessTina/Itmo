@@ -7,11 +7,9 @@ image_t image;
 int condition = 0;
 
 int main(void) {
-    //char* filename = "/home/princess/itmo/yasp/lab5/cmake-build-debug/7caRR5eMi.bmp";
     char* filename = "/home/princess/itmo/yasp/lab5/cmake-build-debug/u_88f1435a74e6a038244bb6ba08fe13f2_800.bmp";
-    FILE *file;
-
-    file = openFile(filename);
+    FILE *file = openFile(filename);
+    double degree = 90;
 
     switch (condition) {
         case READ_INVALID_SIGNATURE:
@@ -21,7 +19,7 @@ int main(void) {
             printf("Successfully read from file %s\n", filename);
     }
 
-    readBMP(file);
+    readBMP(file, degree);
 
     switch (condition) {
         case ROTATE_OK:
@@ -35,7 +33,7 @@ int main(void) {
     }
 
     filename = "test.bmp";
-    saveBMP(filename);
+    saveBMP(filename, degree);
 
     switch (condition) {
         case WRITE_OK:
@@ -49,7 +47,7 @@ int main(void) {
     return 0;
 }
 
-FILE *openFile(char *filename) {
+FILE* openFile(char *filename) {
     FILE *file = fopen(filename, "rb");
     fread(&header, sizeof(bmpHeader), 1, file);
 
@@ -64,8 +62,8 @@ FILE *openFile(char *filename) {
 void rotate(double degree) {
     int i, k = 0, j = 0;
     int size = image.width * image.height;
-    pixel_t **massiv;
-    pixel_t **massiv2;
+    pixel_t** massiv;
+    pixel_t** massiv2;
 
     if (degree == 90) {
         massiv = (pixel_t **) calloc(image.height, sizeof(pixel_t*));
@@ -93,8 +91,8 @@ void rotate(double degree) {
 
         k = 0;
 
-        for (i = 0; i < image.height; i++) {
-            for (j = 0; j < image.width; j++) {
+        for (i = 0; i < image.width; i++) {
+            for (j = 0; j < image.height; j++) {
                 image.array[k] = massiv2[i][j];
                 k ++;
             }
@@ -108,14 +106,20 @@ void rotate(double degree) {
     }
 }
 
-void readBMP(FILE *file) {
-    double degree = 90;
-
+void readBMP(FILE *file, double degree) {
     image.width = header.biWidth;
     image.height = header.biHeight;
 
+    if (image.width % 4 != 0) {
+        image.width ++;
+    }
+
+    if (image.height % 4 != 0) {
+        image.height ++;
+    }
+
     image.array = (pixel_t *) calloc(image.width * image.height, sizeof(pixel_t));
-    fread(image.array, 1, sizeof(pixel_t) * image.width * image.height, file);
+    fread(image.array, sizeof(pixel_t), image.width * image.height, file);
 
     condition = READ_OK;
 
@@ -126,11 +130,19 @@ void readBMP(FILE *file) {
     condition = ROTATE_OK;
 }
 
-void saveBMP(char *filename) {
-    FILE *file = fopen(filename, "wb");
+void saveBMP(char *filename, double degree) {
+    FILE* file = fopen(filename, "wb");
 
-    fwrite(&header, sizeof(bmpHeader), 1, file);
-    fwrite(image.array, sizeof(pixel_t), sizeof(pixel_t) * image.width * image.height, file);
+    if (degree == 90) {
+        header.biWidth = image.height;
+        header.biHeight = image.width;
+        header.bfOffBytes = sizeof(header);
+        header.headerSize = 40;
+    }
+
+    fwrite(&header, sizeof(header), 1, file);
+    fwrite(image.array, sizeof(pixel_t), image.width * image.height, file);
+
     fclose(file);
     condition = WRITE_OK;
 }

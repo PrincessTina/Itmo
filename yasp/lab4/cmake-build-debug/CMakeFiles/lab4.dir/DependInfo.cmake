@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/krist/Documents/itmo/yasp/lab4/list_func.c" "C:/Users/krist/Documents/itmo/yasp/lab4/cmake-build-debug/CMakeFiles/lab4.dir/list_func.c.obj"
-  "C:/Users/krist/Documents/itmo/yasp/lab4/main.c" "C:/Users/krist/Documents/itmo/yasp/lab4/cmake-build-debug/CMakeFiles/lab4.dir/main.c.obj"
-  "C:/Users/krist/Documents/itmo/yasp/lab4/math_func.c" "C:/Users/krist/Documents/itmo/yasp/lab4/cmake-build-debug/CMakeFiles/lab4.dir/math_func.c.obj"
-  "C:/Users/krist/Documents/itmo/yasp/lab4/order_func.c" "C:/Users/krist/Documents/itmo/yasp/lab4/cmake-build-debug/CMakeFiles/lab4.dir/order_func.c.obj"
+  "/home/princess/itmo/yasp/lab4/list_func.c" "/home/princess/itmo/yasp/lab4/cmake-build-debug/CMakeFiles/lab4.dir/list_func.c.o"
+  "/home/princess/itmo/yasp/lab4/main.c" "/home/princess/itmo/yasp/lab4/cmake-build-debug/CMakeFiles/lab4.dir/main.c.o"
+  "/home/princess/itmo/yasp/lab4/math_func.c" "/home/princess/itmo/yasp/lab4/cmake-build-debug/CMakeFiles/lab4.dir/math_func.c.o"
+  "/home/princess/itmo/yasp/lab4/order_func.c" "/home/princess/itmo/yasp/lab4/cmake-build-debug/CMakeFiles/lab4.dir/order_func.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

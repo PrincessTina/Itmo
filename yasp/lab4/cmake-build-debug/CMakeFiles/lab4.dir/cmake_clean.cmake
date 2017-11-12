@@ -1,12 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/lab4.dir/main.c.obj"
-  "CMakeFiles/lab4.dir/list_func.c.obj"
-  "CMakeFiles/lab4.dir/order_func.c.obj"
-  "CMakeFiles/lab4.dir/math_func.c.obj"
+  "CMakeFiles/lab4.dir/main.c.o"
+  "CMakeFiles/lab4.dir/list_func.c.o"
+  "CMakeFiles/lab4.dir/order_func.c.o"
+  "CMakeFiles/lab4.dir/math_func.c.o"
   "lab4.pdb"
-  "lab4.exe"
-  "lab4.exe.manifest"
-  "liblab4.dll.a"
+  "lab4"
 )
 
 # Per-language clean rules from dependency scanning.

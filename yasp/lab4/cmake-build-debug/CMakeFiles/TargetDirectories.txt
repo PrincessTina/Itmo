@@ -1,3 +1,3 @@
-C:/Users/krist/Documents/itmo/yasp/lab4/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/krist/Documents/itmo/yasp/lab4/cmake-build-debug/CMakeFiles/lab4.dir
-C:/Users/krist/Documents/itmo/yasp/lab4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/princess/itmo/yasp/lab4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/princess/itmo/yasp/lab4/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/princess/itmo/yasp/lab4/cmake-build-debug/CMakeFiles/lab4.dir
