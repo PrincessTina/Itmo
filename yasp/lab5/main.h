@@ -31,7 +31,6 @@ typedef struct pixel_t {
 
 typedef struct image_t {
     unsigned int width;
-    unsigned int width3;
     unsigned int height;
     pixel_t *array;
 } image_t;

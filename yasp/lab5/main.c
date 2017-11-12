@@ -7,7 +7,8 @@ image_t image;
 int condition = 0;
 
 int main(void) {
-    char *filename = "/home/princess/itmo/yasp/lab5/cmake-build-debug/1496934050_75.bmp";
+    //char* filename = "/home/princess/itmo/yasp/lab5/cmake-build-debug/7caRR5eMi.bmp";
+    char* filename = "/home/princess/itmo/yasp/lab5/cmake-build-debug/u_88f1435a74e6a038244bb6ba08fe13f2_800.bmp";
     FILE *file;
 
     file = openFile(filename);
@@ -61,43 +62,41 @@ FILE *openFile(char *filename) {
 }
 
 void rotate(double degree) {
-    int i, k = 0, j = 0, g = 0;
+    int i, k = 0, j = 0;
     int size = image.width * image.height;
     pixel_t **massiv;
     pixel_t **massiv2;
 
     if (degree == 90) {
-        massiv = (pixel_t **) calloc(image.width, sizeof(pixel_t*));
+        massiv = (pixel_t **) calloc(image.height, sizeof(pixel_t*));
+        for (i = 0; i < image.height; i++) {
+            massiv[i] = (pixel_t *) calloc(image.width, sizeof(pixel_t));
+        }
+
+        massiv2 = (pixel_t **) calloc(image.width, sizeof(pixel_t*));
         for (i = 0; i < image.width; i++) {
-            massiv[i] = (pixel_t *) calloc(image.height, sizeof(pixel_t));
-        }
-
-        massiv2 = (pixel_t **) calloc(image.height, sizeof(pixel_t*));
-        for (i = 0; i < image.height; i++) {
-            massiv2[i] = (pixel_t *) calloc(image.width, sizeof(pixel_t));
+            massiv2[i] = (pixel_t *) calloc(image.height, sizeof(pixel_t));
         }
 
         for (i = 0; i < image.height; i++) {
-            while (k != image.width) {
-                massiv[i][k] = image.array[j];
-                k++;
-                j++;
+            for (j = 0; j < image.width; j ++) {
+                massiv[i][j] = image.array[k];
+                k ++;
             }
-            k = 0;
         }
 
         for (i = 0; i < image.height; i++) {
-            while (k != image.width) {
-                massiv2[image.width - k - 1][i] = massiv[i][k];
-                k++;
+            for (j = 0; j < image.width; j++) {
+                massiv2[image.width - j - 1][i] = massiv[i][j];
             }
-            k = 0;
         }
 
-        for (i = 0; i < image.width; i++) {
-            for (j = 0; j < image.height; j++) {
-                image.array[g] = massiv2[i][j];
-                g++;
+        k = 0;
+
+        for (i = 0; i < image.height; i++) {
+            for (j = 0; j < image.width; j++) {
+                image.array[k] = massiv2[i][j];
+                k ++;
             }
         }
     } else if (degree == 180) {
@@ -114,14 +113,9 @@ void readBMP(FILE *file) {
 
     image.width = header.biWidth;
     image.height = header.biHeight;
-    image.width3 = 3 * image.width;
 
-    while (image.width3 % 4 != 0) {
-        image.width3++;
-    }
-
-    image.array = (pixel_t *) calloc(image.width3 * image.height, sizeof(pixel_t));
-    fread(image.array, 1, image.width3 * image.height, file);
+    image.array = (pixel_t *) calloc(image.width * image.height, sizeof(pixel_t));
+    fread(image.array, 1, sizeof(pixel_t) * image.width * image.height, file);
 
     condition = READ_OK;
 
@@ -136,7 +130,7 @@ void saveBMP(char *filename) {
     FILE *file = fopen(filename, "wb");
 
     fwrite(&header, sizeof(bmpHeader), 1, file);
-    fwrite(image.array, sizeof(pixel_t), image.width3 * image.height, file);
+    fwrite(image.array, sizeof(pixel_t), sizeof(pixel_t) * image.width * image.height, file);
     fclose(file);
     condition = WRITE_OK;
 }
