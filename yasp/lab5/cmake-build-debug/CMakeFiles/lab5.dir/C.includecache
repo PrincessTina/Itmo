@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/krist/Documents/itmo/yasp/lab5/main.c
+/home/princess/itmo/yasp/lab5/main.c
 stdio.h
 -
 malloc.h
 -
 main.h
-C:/Users/krist/Documents/itmo/yasp/lab5/main.h
+/home/princess/itmo/yasp/lab5/main.h
 
-C:/Users/krist/Documents/itmo/yasp/lab5/main.h
+/home/princess/itmo/yasp/lab5/main.h
 

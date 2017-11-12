@@ -59,7 +59,7 @@ int main(void) {
     }
 
     if (isOverflow) {
-        printf("One of the input cased overflow. Please, try again");
+        printf("One of the input cased overflow. Please, try again\n");
     } else {
         if (save(linked_list, filename)) {
             printf("\nList was successfully written in file %s", filename);

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/krist/Documents/itmo/yasp/lab5/main.c" "C:/Users/krist/Documents/itmo/yasp/lab5/cmake-build-debug/CMakeFiles/lab5.dir/main.c.obj"
+  "/home/princess/itmo/yasp/lab5/main.c" "/home/princess/itmo/yasp/lab5/cmake-build-debug/CMakeFiles/lab5.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

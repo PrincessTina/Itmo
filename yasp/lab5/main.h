@@ -1,24 +1,24 @@
 #ifndef LAB5_MAIN_H
 #define LAB5_MAIN_H
 
-#pragma pack(push, 1)
+#pragma pack(push, 2)
 typedef struct bmpHeader {
     unsigned char b, m; /* Символы BM*/
-    unsigned long bfSize; /* Размер файла*/
+    unsigned int bfSize; /* Размер файла*/
     unsigned short bfReserved1; /* Зарезервированное поле */
     unsigned short bfReserved2; /* Зарезервированное поле */
-    unsigned long bfOffBytes; /* Местанахождение данных растрового массива */
-    unsigned long biSize; /* Размер структуры */
+    unsigned int bfOffBytes; /* Местанахождение данных растрового массива */
+    unsigned int biSize; /* Размер структуры */
     unsigned int biWidth; /* Ширина изображения */
     unsigned int biHeight; /* Высота изображения */
     unsigned short biPlanes; /* Число цветовых плоскостей */
-    unsigned int biBitCount; /* Бит/пиксель */
-    unsigned long biCompression; /* Метод сжатия */
-    unsigned long biSIzeImage; /* Размер изображения в байт */
-    unsigned long biXPelsPerMeter; /* Горизонтальное разрешение */
-    unsigned long biYPelsPerMeter; /* Вертикальное разрешение */
-    unsigned long biClrUsed; /* Число цветов изображения */
-    unsigned long biClrImportant; /* Число основных цветов */
+    unsigned short biBitCount; /* Бит/пиксель */
+    unsigned int biCompression; /* Метод сжатия */
+    unsigned int biSIzeImage; /* Размер изображения в байт */
+    unsigned int biXPelsPerMeter; /* Горизонтальное разрешение */
+    unsigned int biYPelsPerMeter; /* Вертикальное разрешение */
+    unsigned int biClrUsed; /* Число цветов изображения */
+    unsigned int biClrImportant; /* Число основных цветов */
 
 } bmpHeader;
 #pragma pack(pop)

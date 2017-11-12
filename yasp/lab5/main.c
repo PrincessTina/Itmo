@@ -4,15 +4,17 @@
 
 bmpHeader header;
 image_t image;
-int condition;
+int condition = 0;
 
 int main(void) {
-    char *filename = "u_88f1435a74e6a038244bb6ba08fe13f2_800.bmp";
-    FILE *file = openFile(filename);
+    char *filename = "/home/princess/itmo/yasp/lab5/cmake-build-debug/1496934050_75.bmp";
+    FILE *file;
 
-    switch(condition) {
+    file = openFile(filename);
+
+    switch (condition) {
         case READ_INVALID_SIGNATURE:
-            printf("Failed while reading from file. Maybe file is corrupted\n");
+            printf("Failed while opening file. Maybe file is corrupted\n");
             goto breakPoint;
         default:
             printf("Successfully read from file %s\n", filename);
@@ -20,7 +22,7 @@ int main(void) {
 
     readBMP(file);
 
-    switch(condition) {
+    switch (condition) {
         case ROTATE_OK:
             printf("Successfully created new array with rotated points of pixels\n");
             break;
@@ -34,7 +36,7 @@ int main(void) {
     filename = "test.bmp";
     saveBMP(filename);
 
-    switch(condition) {
+    switch (condition) {
         case WRITE_OK:
             printf("Successfully write in file %s\n", filename);
             break;
@@ -46,7 +48,7 @@ int main(void) {
     return 0;
 }
 
-FILE* openFile(char *filename) {
+FILE *openFile(char *filename) {
     FILE *file = fopen(filename, "rb");
     fread(&header, sizeof(bmpHeader), 1, file);
 
@@ -60,23 +62,25 @@ FILE* openFile(char *filename) {
 
 void rotate(double degree) {
     int i, k = 0, j = 0, g = 0;
-    int size = image.width*image.height;
+    int size = image.width * image.height;
+    pixel_t **massiv;
+    pixel_t **massiv2;
 
     if (degree == 90) {
-        pixel_t** massiv = (pixel_t **) calloc(image.width3, sizeof(pixel_t));
-        for (i = 0; i < image.width3; i++) {
-            massiv[i] = (pixel_t*) calloc(image.height, sizeof(pixel_t));
+        massiv = (pixel_t **) calloc(image.width, sizeof(pixel_t*));
+        for (i = 0; i < image.width; i++) {
+            massiv[i] = (pixel_t *) calloc(image.height, sizeof(pixel_t));
         }
 
-        pixel_t** massiv2 = (pixel_t **) calloc(image.height, sizeof(pixel_t));
+        massiv2 = (pixel_t **) calloc(image.height, sizeof(pixel_t*));
         for (i = 0; i < image.height; i++) {
-            massiv2[i] = (pixel_t*) calloc(image.width3, sizeof(pixel_t));
+            massiv2[i] = (pixel_t *) calloc(image.width, sizeof(pixel_t));
         }
 
-        for (i = 0; i < image.height; i ++) {
+        for (i = 0; i < image.height; i++) {
             while (k != image.width) {
                 massiv[i][k] = image.array[j];
-                k ++;
+                k++;
                 j++;
             }
             k = 0;
@@ -84,16 +88,16 @@ void rotate(double degree) {
 
         for (i = 0; i < image.height; i++) {
             while (k != image.width) {
-                massiv2[k][image.height - i - 1] = massiv[i][k];
-                k ++;
+                massiv2[image.width - k - 1][i] = massiv[i][k];
+                k++;
             }
             k = 0;
         }
 
-        for (i = 0; i < image.width; i ++) {
-            for (j = 0; j < image.height; j ++) {
+        for (i = 0; i < image.width; i++) {
+            for (j = 0; j < image.height; j++) {
                 image.array[g] = massiv2[i][j];
-                g ++;
+                g++;
             }
         }
     } else if (degree == 180) {
@@ -113,7 +117,7 @@ void readBMP(FILE *file) {
     image.width3 = 3 * image.width;
 
     while (image.width3 % 4 != 0) {
-        image.width3 ++;
+        image.width3++;
     }
 
     image.array = (pixel_t *) calloc(image.width3 * image.height, sizeof(pixel_t));
