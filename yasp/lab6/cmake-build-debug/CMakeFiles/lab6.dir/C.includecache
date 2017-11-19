@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/princess/itmo/yasp/lab6/main.c
+stdio.h
+-
+mem.h
+/home/princess/itmo/yasp/lab6/mem.h
+
+/home/princess/itmo/yasp/lab6/mchunks.c
+stdio.h
+-
+stdlib.h
+-
+mchunks.h
+/home/princess/itmo/yasp/lab6/mchunks.h
+
+/home/princess/itmo/yasp/lab6/mchunks.h
+mem.h
+/home/princess/itmo/yasp/lab6/mem.h
+
+/home/princess/itmo/yasp/lab6/mem.c
+signal.h
+-
+mem.h
+/home/princess/itmo/yasp/lab6/mem.h
+mchunks.h
+/home/princess/itmo/yasp/lab6/mchunks.h
+
+/home/princess/itmo/yasp/lab6/mem.h
+stddef.h
+-
+stdint.h
+-
+stdio.h
+-
+sys/mman.h
+-
+
