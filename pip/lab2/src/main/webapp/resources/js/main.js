@@ -1,16 +1,47 @@
-function hello() {
-    var table = document.getElementById('result_table');
-    table.innerHTML += "<tr> <td>" + 1 + "</td><td>" + 1 + "</td><td>" + 1 + "</td><td>" + 1 + "</td><td>" + 1 + "" +
-        "</td><td>" + 1 + "</td><td>" + 1 + "</td><tr>";
-}
-
 var isGraphCreated = false;
 
-function addNewPoint() {
-    var x = parseFloat(document.getElementById('x').value);
-    var select = document.getElementById('y');
-    var y = parseFloat(select.options[select.selectedIndex].value);
+function update(condition, str, r) {
+    if (condition) {
+        // graph's part
+        document.getElementById('r').value = r;
+        createGraph(r);
+
+        var table = document.getElementById('result_table');
+        var array = str.split(";");
+
+        for (var i = 0; i < array.length; i++) {
+            var point = array[i].split(",");
+
+            addNewPoint(point[0], point[1]);
+            table.innerHTML += "<tr><td>" + point[0] + "</td><td>" + point[1] + "</td><td>" + point[2] + "</td><td>" + point[3];
+        }
+    }
+}
+
+function resizeGraph(condition, str) {
+    var r = parseFloat(document.getElementById('r').value);
+
+    if ((/^-?\d+\.?\d*$/.test(r)) && (r > 1) && (r < 4)) {
+        createGraph(r);
+
+        if (condition) {
+            var array = str.split(";");
+
+            for (var i = 0; i < array.length; i++) {
+                var point = array[i].split(",");
+
+                addNewPoint(point[0], point[1]);
+            }
+        }
+    } else {
+        alert("Don't worry. Try again");
+    }
+}
+
+function addNewPoint(x, y) {
     var chart = $('#container').highcharts();
+    x = parseFloat(x);
+    y = parseFloat(y);
 
     chart.series[3].addPoint([x, y]);
 }
@@ -56,19 +87,23 @@ function checkParams(a) {
     }
 }
 
-function createGraph() {
+function createGraph(R) {
+    var r;
     isGraphCreated = true;
-    var r = parseFloat(document.getElementById('r').value);
+
+    if (R === null) {
+        r = parseFloat(document.getElementById('r').value);
+    } else {
+        r = parseFloat(R);
+    }
 
     var chart = {
         events: {
             'click': function (e) {
-                // find the clicked values and the series
                 var x = e.xAxis[0].value,
-                    y = e.yAxis[0].value,
-                    series = this.series[3];
-                // Add it
-                series.addPoint([x, y]);
+                    y = e.yAxis[0].value;
+
+                document.location.href = 'main?r=' + r + '&x=' + x + '&y=' + y;
             }
         }
     };
@@ -116,6 +151,9 @@ function createGraph() {
             data: [[-r, 0], [-r * Math.sqrt(3 / 4), -r / 2], [-r / 2, -r * Math.sqrt(3 / 4)], [0, -r]],
             enableMouseTracking: false
         }, {
+            marker: {
+                symbol: 'diamond'
+            },
             color: 'black',
             type: 'scatter'
         }

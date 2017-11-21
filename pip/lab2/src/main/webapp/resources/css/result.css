@@ -1,0 +1,38 @@
+*:not(.circle-slide) {
+    background-color: #4d1f80;
+    color: white;
+    font-size: 20px;
+}
+
+.circle-slide {
+    background-color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    padding: 20px;
+    width: 150px;
+    height: 150px;
+    color: #4d1f80;
+    font-weight: 700;
+    word-break: break-all;
+}
+
+hr {
+    border: none;
+    background-color: #4d1f80;
+    height: 2px;
+}
+
+table {
+    margin-top: 100px;
+    margin-left: 4%;
+    width: 96%;
+    text-align: center;
+}
+
+td {
+    width: 25%;
+}
+
+tr {
+    height: 200px;
+}

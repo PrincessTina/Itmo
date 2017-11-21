@@ -6,10 +6,6 @@
         <webroots>
           <root url="file://C:\Users\krist\Documents\itmo\pip\servlet_example\src\main\webapp" relative="/" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/../../src/main/webapp/resources" />
-          <root url="file://$MODULE_DIR$/../../src/main/java" />
-        </sourceRoots>
       </configuration>
     </facet>
   </component>

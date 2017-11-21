@@ -1,17 +1,12 @@
 package web;
 
-/**
- * Синглтон-класс Bot.
- * Для чистоты эксперимента это будет синглтон.
- *
- * Created by promoscow on 26.07.17.
- */
 public class Bot {
   private Integer id;
   private String name;
   private String serial;
 
   private static Bot ourInstance = new Bot();
+
   public static Bot getInstance() {
     return ourInstance;
   }
@@ -29,7 +24,7 @@ public class Bot {
     return id;
   }
 
-  public void setId(Integer id) {
+  void setId(Integer id) {
     this.id = id;
   }
 
@@ -37,7 +32,7 @@ public class Bot {
     return name;
   }
 
-  public void setName(String name) {
+  void setName(String name) {
     this.name = name;
   }
 
@@ -45,7 +40,7 @@ public class Bot {
     return serial;
   }
 
-  public void setSerial(String serial) {
+  void setSerial(String serial) {
     this.serial = serial;
   }
 

@@ -18,10 +18,9 @@ public class BotServlet extends HttpServlet {
   }
 
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    System.out.println("Enter doGet");
-
     String action = request.getParameter("action");
     request.setAttribute("bot", bot);
+
     switch (action == null ? "info" : action) {
       case "update":
         request.getRequestDispatcher("/update.jsp").forward(request, response);

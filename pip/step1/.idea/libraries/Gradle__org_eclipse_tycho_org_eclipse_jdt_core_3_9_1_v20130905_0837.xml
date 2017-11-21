@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.eclipse.tycho:org.eclipse.jdt.core:3.9.1.v20130905-0837">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.tycho/org.eclipse.jdt.core/3.9.1.v20130905-0837/5b7db63348bf17983aaf0cc1f20c712a23103b73/org.eclipse.jdt.core-3.9.1.v20130905-0837.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.tycho/org.eclipse.jdt.core/3.9.1.v20130905-0837/9cfbb95cc11352e36afc58829662b67d5c89a1aa/org.eclipse.jdt.core-3.9.1.v20130905-0837-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
