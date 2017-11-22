@@ -1,25 +1,16 @@
+
+#table-scroll {
+    height:150px;
+    overflow: auto;
+}
+
 * {
     margin: 0;
 }
 
-table {
-    padding: 0;
-    border-spacing: 0;
-    width: 100%;
-    background-image: url(18-tekstura-dzhinsovoy-tkani.jpg);
-}
-
-th {
-    font-style: italic;
-    color: black;
-    size: 16px;
-    height: 80px;
-    background-color: white;
-}
-
 .secondString {
     background-image: url(ducks.jpg);
-    height: 500px;
+    height: 250px;
 }
 
 .text {
@@ -31,71 +22,27 @@ th {
     background-image: url(18-tekstura-dzhinsovoy-tkani.jpg);
 }
 
-.thirdString {
-    width: 83%;
-    height: 250px;
+.select {
+    width: 95%;
 }
 
-td img {
-    padding-bottom: 50px;
-    padding-top: 81px;
-    height: 235px;
-    width: 100%;
+.radio {
+    text-align: left;
+    margin-bottom: 15px;
 }
 
-.tabs {
-    position: relative;
-    height: 265px;
-    clear: both;
-}
-
-.tab {
-    float: left;
-}
-
-.tab [name="group1"] {
-    display: none;
-}
-
-.tab label {
-    background: #eee;
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin-left: -1px;
-    position: relative;
-    left: 1px;
-}
-
-label ~ * {
-    height: auto;
-    position: absolute;
-    top: 28px;
-    left: 0;
-    background: white;
-    right: 0;
-    bottom: 0;
-    padding: 5px;
-    border: 1px solid #ccc;
-}
-
-[type=radio]:checked ~ label {
-    background: white;
-    border-bottom: 1px solid white;
-    z-index: 2;
-}
-
-[type=radio]:checked ~ label ~ * {
-    z-index: 1;
+.button {
+    margin-top: 10px;
 }
 
 .result {
-    width: 100%;
     text-align: center;
     word-break: break-all;
+    overflow: auto;
 }
 
-.result tr > td {
-    max-width: 300px;
+.result tr td {
+    width: 5%;
 }
 
 #title {
@@ -103,35 +50,35 @@ label ~ * {
     background: linear-gradient(#0C3248, #95f3f5);
 }
 
+#x {
+    width: 90%;
+}
+
 #x_span {
-    margin-left: 10px;
-    color: maroon;
+    font-weight: bold;
+    color: #a70000;
 }
 
 #tick {
-    margin-left: 10px;
+    font-weight: bold;
     color: limegreen;
 }
 
-input[name = 'r'] {
-    margin-top: 15px;
-}
-
-.button {
-    margin-top: 10px;
+table {
     width: 100%;
-    height: 35px;
-    align-content: center;
-    background: linear-gradient(#0C3248, #95f3f5);
-    color: white;
-    border-width: 1px;
+    border-spacing: 0;
+    text-align: center;
+    vertical-align: top;
 }
 
-.button:hover {
-    background: linear-gradient(#95f3f5, #0C3248);
+th {
+    font-style: italic;
+    color: black;
+    size: 16px;
+    height: 80px;
+    background-color: white;
 }
 
-
-
-
-
+td {
+    width: 25%;
+}

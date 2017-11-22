@@ -16,7 +16,7 @@
     <tr>
         <th colspan="4">
             Performed by Orlova Kristina Aleksandrovna<br/>
-            Group P3202, Variant 550
+            Group P3202, Variant 510
         </th>
     </tr>
 

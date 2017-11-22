@@ -12,7 +12,7 @@ function update(condition, str, r) {
         for (var i = 0; i < array.length; i++) {
             var point = array[i].split(",");
 
-            addNewPoint(point[0], point[1]);
+            addNewPoint(point[0], point[1], point[3]);
             table.innerHTML += "<tr><td>" + point[0] + "</td><td>" + point[1] + "</td><td>" + point[2] + "</td><td>" + point[3];
         }
     }
@@ -30,7 +30,7 @@ function resizeGraph(condition, str) {
             for (var i = 0; i < array.length; i++) {
                 var point = array[i].split(",");
 
-                addNewPoint(point[0], point[1]);
+                addNewPoint(point[0], point[1], point[3]);
             }
         }
     } else {
@@ -38,11 +38,16 @@ function resizeGraph(condition, str) {
     }
 }
 
-function addNewPoint(x, y) {
+function addNewPoint(x, y, condition) {
     var chart = $('#container').highcharts();
     x = parseFloat(x);
     y = parseFloat(y);
 
+    if (condition === "Point is in the scope") {
+        chart.series[3].color = 'pink';
+    } else {
+        chart.series[3].color = 'black';
+    }
     chart.series[3].addPoint([x, y]);
 }
 
@@ -154,7 +159,7 @@ function createGraph(R) {
             marker: {
                 symbol: 'diamond'
             },
-            color: 'black',
+            //colors: ['red', 'green'],
             type: 'scatter'
         }
     ];

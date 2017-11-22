@@ -12,7 +12,6 @@ import static java.lang.Math.pow;
 
 @WebServlet(name = "checker", urlPatterns = {"/checker"})
 public class AreaCheckServlet extends HttpServlet {
-
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     ServletContext context = getServletContext();
     String result = null;
@@ -21,6 +20,7 @@ public class AreaCheckServlet extends HttpServlet {
       double x = Double.parseDouble(String.valueOf(context.getAttribute("x")));
       double y = Double.parseDouble(String.valueOf(context.getAttribute("y")));
       double r = Double.parseDouble(String.valueOf(context.getAttribute("r")));
+
 
       if (checkParams(x, y, r)) {
         if (checkPoint(x, y, r)) {
