@@ -7,7 +7,7 @@ image_t image;
 int condition = 0;
 
 int main(void) {
-    char* filename = "/home/princess/itmo/yasp/lab5/cmake-build-debug/u_88f1435a74e6a038244bb6ba08fe13f2_800.bmp";
+    char* filename = "/home/princess/itmo/yasp/lab5/cmake-build-debug/cat.bmp";
     FILE *file = openFile(filename);
     double degree = 90;
 
@@ -109,6 +109,11 @@ void rotate(double degree) {
 void readBMP(FILE *file, double degree) {
     image.width = header.biWidth;
     image.height = header.biHeight;
+    pixel_t nullable;
+    pixel_t *array;
+    nullable.b = 0;
+    nullable.g = 0;
+    nullable.r = 0;
 
     if (image.width % 4 != 0) {
         image.width ++;
@@ -120,6 +125,29 @@ void readBMP(FILE *file, double degree) {
 
     image.array = (pixel_t *) calloc(image.width * image.height, sizeof(pixel_t));
     fread(image.array, sizeof(pixel_t), image.width * image.height, file);
+
+    /*array = (pixel_t *) calloc(image.width * image.height, sizeof(pixel_t));
+    fread(array, sizeof(pixel_t), image.width * image.height, file);
+
+
+    image.array = (pixel_t *) calloc(image.width * image.height, sizeof(pixel_t)); */
+
+    /*for (int i = 1; i <= image.width*image.height; i++) {
+      if (i % image.height == 0) {
+          image.array[i - 1] = nullable;
+      }
+    }*/
+
+    /*int k = 0;
+
+    for (int i = 0; i < image.width*image.height; i++) {
+        if ((i + 1) % image.width == 0) {
+            image.array[i] = nullable;
+        } else {
+            image.array[i] = array[k];
+            k ++;
+        }
+    }*/
 
     condition = READ_OK;
 
