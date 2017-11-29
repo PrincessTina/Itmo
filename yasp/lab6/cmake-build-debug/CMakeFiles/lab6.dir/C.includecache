@@ -6,31 +6,29 @@
 
 #IncludeRegexTransform: 
 
-/home/princess/itmo/yasp/lab6/main.c
-stdio.h
--
-mem.h
-/home/princess/itmo/yasp/lab6/mem.h
+/home/princess/itmo/yasp/lab6/chunk.c
+chunk.h
+/home/princess/itmo/yasp/lab6/chunk.h
 
-/home/princess/itmo/yasp/lab6/mchunks.c
+/home/princess/itmo/yasp/lab6/chunk.h
 stdio.h
 -
 stdlib.h
 -
-mchunks.h
-/home/princess/itmo/yasp/lab6/mchunks.h
-
-/home/princess/itmo/yasp/lab6/mchunks.h
-mem.h
-/home/princess/itmo/yasp/lab6/mem.h
-
-/home/princess/itmo/yasp/lab6/mem.c
 signal.h
 -
 mem.h
 /home/princess/itmo/yasp/lab6/mem.h
-mchunks.h
-/home/princess/itmo/yasp/lab6/mchunks.h
+
+/home/princess/itmo/yasp/lab6/main.c
+mem.h
+/home/princess/itmo/yasp/lab6/mem.h
+
+/home/princess/itmo/yasp/lab6/mem.c
+mem.h
+/home/princess/itmo/yasp/lab6/mem.h
+chunk.h
+/home/princess/itmo/yasp/lab6/chunk.h
 
 /home/princess/itmo/yasp/lab6/mem.h
 stddef.h

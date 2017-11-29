@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/princess/itmo/yasp/lab6/chunk.c" "/home/princess/itmo/yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/chunk.c.o"
   "/home/princess/itmo/yasp/lab6/main.c" "/home/princess/itmo/yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/main.c.o"
-  "/home/princess/itmo/yasp/lab6/mchunks.c" "/home/princess/itmo/yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/mchunks.c.o"
   "/home/princess/itmo/yasp/lab6/mem.c" "/home/princess/itmo/yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/mem.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

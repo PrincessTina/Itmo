@@ -7,7 +7,7 @@ image_t image;
 int condition = 0;
 
 int main(void) {
-    char* filename = "/home/princess/itmo/yasp/lab5/cmake-build-debug/cat.bmp";
+    char *filename = "/home/princess/itmo/yasp/lab5/cmake-build-debug/cat.bmp";
     FILE *file = openFile(filename);
     double degree = 90;
 
@@ -47,7 +47,7 @@ int main(void) {
     return 0;
 }
 
-FILE* openFile(char *filename) {
+FILE *openFile(char *filename) {
     FILE *file = fopen(filename, "rb");
     fread(&header, sizeof(bmpHeader), 1, file);
 
@@ -56,30 +56,31 @@ FILE* openFile(char *filename) {
     } else {
         condition = OPEN_OK;
     }
+
     return file;
 }
 
 void rotate(double degree) {
     int i, k = 0, j = 0;
     int size = image.width * image.height;
-    pixel_t** massiv;
-    pixel_t** massiv2;
+    pixel_t **massiv;
+    pixel_t **massiv2;
 
     if (degree == 90) {
-        massiv = (pixel_t **) calloc(image.height, sizeof(pixel_t*));
+        massiv = (pixel_t **) calloc(image.height, sizeof(pixel_t *));
         for (i = 0; i < image.height; i++) {
             massiv[i] = (pixel_t *) calloc(image.width, sizeof(pixel_t));
         }
 
-        massiv2 = (pixel_t **) calloc(image.width, sizeof(pixel_t*));
+        massiv2 = (pixel_t **) calloc(image.width, sizeof(pixel_t *));
         for (i = 0; i < image.width; i++) {
             massiv2[i] = (pixel_t *) calloc(image.height, sizeof(pixel_t));
         }
 
         for (i = 0; i < image.height; i++) {
-            for (j = 0; j < image.width; j ++) {
+            for (j = 0; j < image.width; j++) {
                 massiv[i][j] = image.array[k];
-                k ++;
+                k++;
             }
         }
 
@@ -94,7 +95,7 @@ void rotate(double degree) {
         for (i = 0; i < image.width; i++) {
             for (j = 0; j < image.height; j++) {
                 image.array[k] = massiv2[i][j];
-                k ++;
+                k++;
             }
         }
     } else if (degree == 180) {
@@ -107,47 +108,26 @@ void rotate(double degree) {
 }
 
 void readBMP(FILE *file, double degree) {
+    int size;
+    int ideal_width;
+    int difference = 0;
+
     image.width = header.biWidth;
     image.height = header.biHeight;
-    pixel_t nullable;
-    pixel_t *array;
-    nullable.b = 0;
-    nullable.g = 0;
-    nullable.r = 0;
-
-    if (image.width % 4 != 0) {
-        image.width ++;
-    }
-
-    if (image.height % 4 != 0) {
-        image.height ++;
-    }
-
     image.array = (pixel_t *) calloc(image.width * image.height, sizeof(pixel_t));
-    fread(image.array, sizeof(pixel_t), image.width * image.height, file);
+    ideal_width = 3 * image.width;
 
-    /*array = (pixel_t *) calloc(image.width * image.height, sizeof(pixel_t));
-    fread(array, sizeof(pixel_t), image.width * image.height, file);
+    while (ideal_width % 4 != 0) {
+        ideal_width ++;
+        difference = ideal_width - 3 * image.width;
+    }
 
+    fseek(file, header.bfOffBytes, SEEK_SET);
 
-    image.array = (pixel_t *) calloc(image.width * image.height, sizeof(pixel_t)); */
-
-    /*for (int i = 1; i <= image.width*image.height; i++) {
-      if (i % image.height == 0) {
-          image.array[i - 1] = nullable;
-      }
-    }*/
-
-    /*int k = 0;
-
-    for (int i = 0; i < image.width*image.height; i++) {
-        if ((i + 1) % image.width == 0) {
-            image.array[i] = nullable;
-        } else {
-            image.array[i] = array[k];
-            k ++;
-        }
-    }*/
+    for (size = 0; size < image.height; size++) {
+        fread(image.array + image.width * size, sizeof(pixel_t), image.width, file);
+        fseek(file, (difference), SEEK_CUR);
+    }
 
     condition = READ_OK;
 
@@ -159,17 +139,39 @@ void readBMP(FILE *file, double degree) {
 }
 
 void saveBMP(char *filename, double degree) {
-    FILE* file = fopen(filename, "wb");
+    FILE *file = fopen(filename, "wb");
+    int size;
+    int ideal_width = 0;
+    int difference = 0;
+    int i = 0;
+    int j = 0;
 
     if (degree == 90) {
+        ideal_width = 3 * image.height;
+        i = image.width;
+        j = image.height;
         header.biWidth = image.height;
         header.biHeight = image.width;
-        header.bfOffBytes = sizeof(header);
-        header.headerSize = 40;
+    } else if (degree == 180) {
+        ideal_width = 3 * image.width;
+        i = image.height;
+        j = image.width;
     }
 
-    fwrite(&header, sizeof(header), 1, file);
-    fwrite(image.array, sizeof(pixel_t), image.width * image.height, file);
+    while (ideal_width % 4 != 0) {
+        ideal_width ++;
+        difference = ideal_width - 3 * j;
+    }
+
+    header.bfOffBytes = sizeof(header);
+    header.headerSize = 40;
+
+    fwrite(&header, sizeof(bmpHeader), 1, file);
+
+    for (size = 0; size < i; size++) {
+        fwrite(image.array + j * size, sizeof(pixel_t), (size_t) j, file);
+        fseek(file, difference, SEEK_CUR);
+    }
 
     fclose(file);
     condition = WRITE_OK;

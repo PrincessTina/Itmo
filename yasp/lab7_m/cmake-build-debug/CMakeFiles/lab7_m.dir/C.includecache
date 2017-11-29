@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/princess/itmo/yasp/lab7_m/main.c
+stdio.h
+-
+malloc.h
+-
+main.h
+/home/princess/itmo/yasp/lab7_m/main.h
+
+/home/princess/itmo/yasp/lab7_m/main.h
+

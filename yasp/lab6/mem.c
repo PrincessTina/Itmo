@@ -1,135 +1,117 @@
-#include <signal.h>
 #include "mem.h"
-#include "mchunks.h"
+#include "chunk.h"
 
-static size_t mem_from_pages(const size_t n) {
-    return PAGE_SIZE * n;
+size_t pages_for(const size_t size) {
+    return size < PAGE_SIZE ? PAGE_SIZE : PAGE_SIZE * (size / PAGE_SIZE);
 }
 
-static size_t pages_for(const size_t n) {
-    return (n / PAGE_SIZE + 1) * PAGE_SIZE;
+void allocate(char *pointer, size_t size) {
+    mmap(pointer, pages_for(size), PROT_READ | PROT_WRITE, MAP_ANONYMOUS | MAP_PRIVATE, -1, 0);
 }
 
-static void *allocate(char *ptr, size_t query) {
-    return mmap(ptr, pages_for(query), PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
-}
-
-static void *allocate_by_kernel(size_t query) {
-    return mmap(NULL, pages_for(query), PROT_WRITE | PROT_READ, MAP_ANONYMOUS | MAP_PRIVATE, -1, 0);
-}
-
-void *init(size_t initial_size) {
-    void *chunk = allocate(HEAP_START, mem_from_pages(initial_size));
-
+void init(size_t initial_size) {
     mem_t *head = HEAP_START;
-    head->next = NULL;
-    head->capacity = mem_from_pages(initial_size) - sizeof(mem_t);
-    head->is_free = 1;
 
-    return chunk;
+    allocate(HEAP_START, initial_size);
+
+    head->next = NULL;
+    head->capacity = pages_for(initial_size) - sizeof(mem_t);
+    head->is_free = 1;
 }
 
+mem_t *create_new_chunk(mem_t *last, size_t size) {
+    char *address = (char *) last + last->capacity + sizeof(mem_t);
 
-static mem_t *create_new_chunk(mem_t *last, size_t query) {
-    char *alloc_address = (char *) last + last->capacity + sizeof(mem_t);
-    size_t alloc_size = query + sizeof(mem_t);
-    size_t allocated_memory = 0;
+    size_t useful_memory = size + sizeof(mem_t);
+    size_t all_memory = pages_for(useful_memory);
     mem_t *chunk;
     mem_t *unused = NULL;
 
-    if ((chunk = allocate(alloc_address, alloc_size)) == MAP_FAILED && (chunk = allocate_by_kernel(alloc_size)) == MAP_FAILED) { //СЮДА НЕ ЗАХОДИМ
-        return NULL;
-    }
-    allocated_memory = pages_for(alloc_size);
+    allocate(address, all_memory);
+    chunk = (mem_t *) (address);
 
-    if (alloc_size + sizeof(mem_t) < allocated_memory) {
-        unused = (mem_t *) (alloc_address + alloc_size); //НЕВНЯТНОЕ ПОДОБИЕ ВЫДЕЛЕНИЯ ПАМЯТИ - ДЛЯ ЧЕГО?
-        unused->capacity = allocated_memory - alloc_size - sizeof(mem_t);
+
+    if (all_memory > useful_memory) {
+        unused = (mem_t *) (address + useful_memory);
+
+        unused->capacity = all_memory - useful_memory - sizeof(mem_t);
         unused->is_free = 1;
         unused->next = NULL;
     }
 
     last->next = chunk;
 
-    chunk->capacity = query;
+    chunk->capacity = size;
     chunk->is_free = 0;
     chunk->next = unused;
     return chunk;
 }
 
-static mem_t *enlarge(mem_t *chunk, size_t query) {
-    char *alloc_start = (char *) chunk + chunk->capacity + sizeof(mem_t);
-    size_t alloc_size = query - chunk->capacity;
-    size_t alloc_mem = 0;
+void enlarge(mem_t *chunk, size_t size) { /*С free БЛОКОМ МОЖЕТ ЗАЛЕЗТЬ НА ДРУГОЙ, НАХОДЯСЬ МЕЖДУ БЛОКАМИ*/
+    char *address = (char *) chunk + chunk->capacity + sizeof(mem_t);
+
+    size_t useful_memory = size - chunk->capacity;
+    size_t all_memory = pages_for(useful_memory);
     mem_t *unused = NULL;
 
-    if (query < chunk->capacity) { /* undefined situation for resizing */
-        raise(SIGILL);
+    allocate(address, all_memory);
+
+    if (all_memory > useful_memory) {
+        unused = (mem_t *) (address + useful_memory + sizeof(mem_t));
+
+        unused->capacity = all_memory - useful_memory - sizeof(mem_t);
+        unused->is_free = 1;
+        unused->next = NULL;
     }
 
-    if (allocate(alloc_start, alloc_size) != MAP_FAILED) {
-        alloc_mem = pages_for(alloc_size);
-        if (alloc_size + sizeof(mem_t) < alloc_mem) {
-            unused = (mem_t *) (alloc_start + alloc_size);
-            unused->capacity = alloc_mem - alloc_size - sizeof(mem_t);
-            unused->is_free = 1;
-            unused->next = NULL;
-        }
-
-        chunk->capacity = query;
-        chunk->next = unused;
-        return chunk;
-    } else {
-        return NULL;
-    }
+    chunk->capacity = size;
+    chunk->next = unused;
 }
 
-void *s_malloc(size_t query) {
-    mem_t *chunk = mchunks_look_up(HEAP_START, query); /*trying to find free block */
-    mem_t *new = NULL;
+void *_malloc(size_t size) {
+    mem_t *chunk = look_for(size);
 
     if (chunk) {
-        //ЧТО ЗА ХУЙНЯ
-        if (chunk->capacity == query || chunk->capacity - query - sizeof(mem_t) > chunk->capacity) {
-            /* if chunk is perfect for query or cannot be splited */
+        if (chunk->capacity == size) {
             chunk->is_free = 0;
-            return (char *) chunk + sizeof(mem_t);
-        }
-
-        /* else split chunk */
-        new = (mem_t *) ((unsigned char *) chunk + sizeof(mem_t) + query);
-
-        new->capacity = chunk->capacity - query - sizeof(mem_t);
-        new->is_free = 1;
-        new->next = chunk->next;
-        chunk->next = new;
-        chunk->capacity = query;
-        chunk->is_free = 0;
-    } else {
-        chunk = mchunks_last(HEAP_START);
-        if (chunk->is_free && enlarge(chunk, query)) {
-            chunk->is_free = 0;
-        } else if ((new = create_new_chunk(chunk, query))) {
-            chunk = new;
-            chunk->is_free = 0; //НЕ НУЖНО
         } else {
-            return NULL;
+            mem_t *new = (mem_t *) ((char *) chunk + size + sizeof(mem_t));
+            new->capacity = chunk->capacity - size - sizeof(mem_t);
+            new->is_free = 1;
+            new->next = chunk->next;
+
+            chunk->next = new;
+            chunk->capacity = size;
+            chunk->is_free = 0;
+        }
+    } else {
+        chunk = get_free();
+
+        if (chunk) {
+            enlarge(chunk, size);
+            chunk->is_free = 0;
+        } else {
+            chunk = create_new_chunk(get_last(), size);
         }
     }
-    return (char *) chunk + sizeof(mem_t); // НЕ НУЖНО
+
+    return (char *) chunk + sizeof(mem_t);
 }
 
-void s_free(void *mem) {
-    mem_t *chunk = mchunks_get(HEAP_START, (char *) mem);
-    mem_t *prev = mchunks_get_prev(HEAP_START, chunk);
+void _free(void *mem) {
+    mem_t *chunk = get((char *) mem);
+    mem_t *prev = get_prev(chunk);
+
     if (chunk) {
         chunk->is_free = 1;
+
         if (chunk->next) {
             if (chunk->next->is_free == 1) {
                 chunk->capacity += chunk->next->capacity + sizeof(mem_t);
                 chunk->next = chunk->next->next;
             }
         }
+
         if (prev) {
             if (prev->is_free == 1) {
                 prev->capacity += chunk->capacity + sizeof(mem_t);
@@ -139,21 +121,22 @@ void s_free(void *mem) {
     }
 }
 
-void memalloc_debug_struct_info(FILE *f, const mem_t *const address) {
+void memalloc_debug_struct_info(mem_t *address) {
     size_t i;
-    fprintf(f, "start: %p\nsize: %lu\nis_free: %d\n",
-            (void *) address,
-            address->capacity,
-            address->is_free);
+
+    printf("address: %p\nsize: %lu\nis_free: %d\n", (void *) address, address->capacity, address->is_free);
 
     for (i = 0; i < DEBUG_FIRST_BYTES && i < address->capacity; i++) {
-        fprintf(f, "%X", ((unsigned char *) address)[sizeof(mem_t) + i]);
-        putc('\n', f);
+        printf("%X\n", ((char *) address)[sizeof(mem_t) + i]);
     }
+
+    printf("\n");
 }
 
-void memalloc_debug_heap(FILE *f, const mem_t *ptr) {
-    for (; ptr; ptr = ptr->next) {
-        memalloc_debug_struct_info(f, ptr);
+void memalloc_debug_heap() {
+    mem_t *pointer = HEAP_START;
+
+    for (; pointer; pointer = pointer->next) {
+        memalloc_debug_struct_info(pointer);
     }
 }

@@ -81,33 +81,9 @@ CMakeFiles/lab6.dir/main.c.o.provides: CMakeFiles/lab6.dir/main.c.o.requires
 CMakeFiles/lab6.dir/main.c.o.provides.build: CMakeFiles/lab6.dir/main.c.o
 
 
-CMakeFiles/lab6.dir/mchunks.c.o: CMakeFiles/lab6.dir/flags.make
-CMakeFiles/lab6.dir/mchunks.c.o: ../mchunks.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/princess/itmo/yasp/lab6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/lab6.dir/mchunks.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lab6.dir/mchunks.c.o   -c /home/princess/itmo/yasp/lab6/mchunks.c
-
-CMakeFiles/lab6.dir/mchunks.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab6.dir/mchunks.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/princess/itmo/yasp/lab6/mchunks.c > CMakeFiles/lab6.dir/mchunks.c.i
-
-CMakeFiles/lab6.dir/mchunks.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab6.dir/mchunks.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/princess/itmo/yasp/lab6/mchunks.c -o CMakeFiles/lab6.dir/mchunks.c.s
-
-CMakeFiles/lab6.dir/mchunks.c.o.requires:
-
-.PHONY : CMakeFiles/lab6.dir/mchunks.c.o.requires
-
-CMakeFiles/lab6.dir/mchunks.c.o.provides: CMakeFiles/lab6.dir/mchunks.c.o.requires
-	$(MAKE) -f CMakeFiles/lab6.dir/build.make CMakeFiles/lab6.dir/mchunks.c.o.provides.build
-.PHONY : CMakeFiles/lab6.dir/mchunks.c.o.provides
-
-CMakeFiles/lab6.dir/mchunks.c.o.provides.build: CMakeFiles/lab6.dir/mchunks.c.o
-
-
 CMakeFiles/lab6.dir/mem.c.o: CMakeFiles/lab6.dir/flags.make
 CMakeFiles/lab6.dir/mem.c.o: ../mem.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/princess/itmo/yasp/lab6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/lab6.dir/mem.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/princess/itmo/yasp/lab6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/lab6.dir/mem.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lab6.dir/mem.c.o   -c /home/princess/itmo/yasp/lab6/mem.c
 
 CMakeFiles/lab6.dir/mem.c.i: cmake_force
@@ -129,18 +105,42 @@ CMakeFiles/lab6.dir/mem.c.o.provides: CMakeFiles/lab6.dir/mem.c.o.requires
 CMakeFiles/lab6.dir/mem.c.o.provides.build: CMakeFiles/lab6.dir/mem.c.o
 
 
+CMakeFiles/lab6.dir/chunk.c.o: CMakeFiles/lab6.dir/flags.make
+CMakeFiles/lab6.dir/chunk.c.o: ../chunk.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/princess/itmo/yasp/lab6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/lab6.dir/chunk.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lab6.dir/chunk.c.o   -c /home/princess/itmo/yasp/lab6/chunk.c
+
+CMakeFiles/lab6.dir/chunk.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab6.dir/chunk.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/princess/itmo/yasp/lab6/chunk.c > CMakeFiles/lab6.dir/chunk.c.i
+
+CMakeFiles/lab6.dir/chunk.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab6.dir/chunk.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/princess/itmo/yasp/lab6/chunk.c -o CMakeFiles/lab6.dir/chunk.c.s
+
+CMakeFiles/lab6.dir/chunk.c.o.requires:
+
+.PHONY : CMakeFiles/lab6.dir/chunk.c.o.requires
+
+CMakeFiles/lab6.dir/chunk.c.o.provides: CMakeFiles/lab6.dir/chunk.c.o.requires
+	$(MAKE) -f CMakeFiles/lab6.dir/build.make CMakeFiles/lab6.dir/chunk.c.o.provides.build
+.PHONY : CMakeFiles/lab6.dir/chunk.c.o.provides
+
+CMakeFiles/lab6.dir/chunk.c.o.provides.build: CMakeFiles/lab6.dir/chunk.c.o
+
+
 # Object files for target lab6
 lab6_OBJECTS = \
 "CMakeFiles/lab6.dir/main.c.o" \
-"CMakeFiles/lab6.dir/mchunks.c.o" \
-"CMakeFiles/lab6.dir/mem.c.o"
+"CMakeFiles/lab6.dir/mem.c.o" \
+"CMakeFiles/lab6.dir/chunk.c.o"
 
 # External object files for target lab6
 lab6_EXTERNAL_OBJECTS =
 
 lab6: CMakeFiles/lab6.dir/main.c.o
-lab6: CMakeFiles/lab6.dir/mchunks.c.o
 lab6: CMakeFiles/lab6.dir/mem.c.o
+lab6: CMakeFiles/lab6.dir/chunk.c.o
 lab6: CMakeFiles/lab6.dir/build.make
 lab6: CMakeFiles/lab6.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/princess/itmo/yasp/lab6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable lab6"
@@ -152,8 +152,8 @@ CMakeFiles/lab6.dir/build: lab6
 .PHONY : CMakeFiles/lab6.dir/build
 
 CMakeFiles/lab6.dir/requires: CMakeFiles/lab6.dir/main.c.o.requires
-CMakeFiles/lab6.dir/requires: CMakeFiles/lab6.dir/mchunks.c.o.requires
 CMakeFiles/lab6.dir/requires: CMakeFiles/lab6.dir/mem.c.o.requires
+CMakeFiles/lab6.dir/requires: CMakeFiles/lab6.dir/chunk.c.o.requires
 
 .PHONY : CMakeFiles/lab6.dir/requires
 

@@ -123,6 +123,33 @@ lab6/fast:
 	$(MAKE) -f CMakeFiles/lab6.dir/build.make CMakeFiles/lab6.dir/build
 .PHONY : lab6/fast
 
+chunk.o: chunk.c.o
+
+.PHONY : chunk.o
+
+# target to build an object file
+chunk.c.o:
+	$(MAKE) -f CMakeFiles/lab6.dir/build.make CMakeFiles/lab6.dir/chunk.c.o
+.PHONY : chunk.c.o
+
+chunk.i: chunk.c.i
+
+.PHONY : chunk.i
+
+# target to preprocess a source file
+chunk.c.i:
+	$(MAKE) -f CMakeFiles/lab6.dir/build.make CMakeFiles/lab6.dir/chunk.c.i
+.PHONY : chunk.c.i
+
+chunk.s: chunk.c.s
+
+.PHONY : chunk.s
+
+# target to generate assembly for a file
+chunk.c.s:
+	$(MAKE) -f CMakeFiles/lab6.dir/build.make CMakeFiles/lab6.dir/chunk.c.s
+.PHONY : chunk.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -149,33 +176,6 @@ main.s: main.c.s
 main.c.s:
 	$(MAKE) -f CMakeFiles/lab6.dir/build.make CMakeFiles/lab6.dir/main.c.s
 .PHONY : main.c.s
-
-mchunks.o: mchunks.c.o
-
-.PHONY : mchunks.o
-
-# target to build an object file
-mchunks.c.o:
-	$(MAKE) -f CMakeFiles/lab6.dir/build.make CMakeFiles/lab6.dir/mchunks.c.o
-.PHONY : mchunks.c.o
-
-mchunks.i: mchunks.c.i
-
-.PHONY : mchunks.i
-
-# target to preprocess a source file
-mchunks.c.i:
-	$(MAKE) -f CMakeFiles/lab6.dir/build.make CMakeFiles/lab6.dir/mchunks.c.i
-.PHONY : mchunks.c.i
-
-mchunks.s: mchunks.c.s
-
-.PHONY : mchunks.s
-
-# target to generate assembly for a file
-mchunks.c.s:
-	$(MAKE) -f CMakeFiles/lab6.dir/build.make CMakeFiles/lab6.dir/mchunks.c.s
-.PHONY : mchunks.c.s
 
 mem.o: mem.c.o
 
@@ -213,12 +213,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... lab6"
+	@echo "... chunk.o"
+	@echo "... chunk.i"
+	@echo "... chunk.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... mchunks.o"
-	@echo "... mchunks.i"
-	@echo "... mchunks.s"
 	@echo "... mem.o"
 	@echo "... mem.i"
 	@echo "... mem.s"

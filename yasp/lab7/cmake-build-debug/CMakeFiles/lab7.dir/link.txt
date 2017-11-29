@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/lab7.dir/strings.c.o CMakeFiles/lab7.dir/sepia_example.c.o CMakeFiles/lab7.dir/nfilerw.c.o CMakeFiles/lab7.dir/main.c.o CMakeFiles/lab7.dir/imagelib.c.o  -o lab7 

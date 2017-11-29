@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/lab6.dir/main.c.o CMakeFiles/lab6.dir/mchunks.c.o CMakeFiles/lab6.dir/mem.c.o  -o lab6 
+/usr/bin/cc -g   CMakeFiles/lab6.dir/main.c.o CMakeFiles/lab6.dir/mem.c.o CMakeFiles/lab6.dir/chunk.c.o  -o lab6 

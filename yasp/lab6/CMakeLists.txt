@@ -3,5 +3,5 @@ project(lab6)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.c mchunks.c mchunks.h mem.c mem.h)
+set(SOURCE_FILES main.c mem.c mem.h chunk.c chunk.h)
 add_executable(lab6 ${SOURCE_FILES})

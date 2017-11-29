@@ -84,13 +84,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/princess/itmo/yasp/lab6/chunk.c">
+			<Option target="lab6"/>
+		</Unit>
+		<Unit filename="/home/princess/itmo/yasp/lab6/chunk.h">
+			<Option target="lab6"/>
+		</Unit>
 		<Unit filename="/home/princess/itmo/yasp/lab6/main.c">
-			<Option target="lab6"/>
-		</Unit>
-		<Unit filename="/home/princess/itmo/yasp/lab6/mchunks.c">
-			<Option target="lab6"/>
-		</Unit>
-		<Unit filename="/home/princess/itmo/yasp/lab6/mchunks.h">
 			<Option target="lab6"/>
 		</Unit>
 		<Unit filename="/home/princess/itmo/yasp/lab6/mem.c">
