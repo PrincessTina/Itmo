@@ -45,7 +45,9 @@ typedef enum {
 
 FILE* openFile(char *filename);
 
-void rotate();
+void sepia(void *source, int length, void *dest);
+
+void yellow();
 
 void readBMP(FILE *file);
 

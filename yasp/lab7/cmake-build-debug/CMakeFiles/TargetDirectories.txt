@@ -1,3 +1,0 @@
-/home/princess/itmo/yasp/lab7/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/princess/itmo/yasp/lab7/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/princess/itmo/yasp/lab7/cmake-build-debug/CMakeFiles/lab7.dir

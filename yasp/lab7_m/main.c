@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <malloc.h>
+#include <time.h>
 #include "main.h"
 
 bmpHeader header;
@@ -22,10 +23,10 @@ int main(void) {
 
     switch (condition) {
         case ROTATE_OK:
-            printf("Successfully created new array with rotated points of pixels\n");
+            printf("Successfully created new array with yellowed points of pixels\n");
             break;
         case READ_OK:
-            printf("Can read from file but cannot create new array with rotated points\n");
+            printf("Can read from file but cannot create new array with yellowed points\n");
         default:
             printf("Something bad adventured while rotating\n");
             goto breakPoint;
@@ -63,7 +64,7 @@ unsigned char round(int x) {
     return (unsigned char) (x < 256 ? x : 255);
 }
 
-void rotate() {
+void yellow() {
     int i, k = 50;
     int size = image.width * image.height;
 
@@ -83,6 +84,7 @@ void readBMP(FILE *file) {
     int size;
     int ideal_width;
     int difference = 0;
+    double begin, end, time;
 
     image.width = header.biWidth;
     image.height = header.biHeight;
@@ -104,7 +106,17 @@ void readBMP(FILE *file) {
     condition = READ_OK;
 
     /* turn over file */
-    rotate();
+    begin = clock();
+    sepia(image.array, image.height * image.width, image.array);
+    end = clock();
+    time = (end - begin) / CLOCKS_PER_SEC;
+    printf("SSE sepia time: %f\n", time);
+
+    begin = clock();
+    yellow();
+    end = clock();
+    time = (end - begin) / CLOCKS_PER_SEC;
+    printf("C sepia time: %f\n", time);
 
     fclose(file);
     condition = ROTATE_OK;
