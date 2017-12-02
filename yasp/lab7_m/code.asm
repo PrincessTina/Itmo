@@ -20,18 +20,14 @@ global sepia
 
 ; rdi - array, rsi - array's length, rdx - new array's address
 sepia:
-    push r12
-    push r13
-    push r14
-
     mov array, rdi
     mov size, rsi
     mov address, rdx
 
     movaps xmm6, [max]
 
-    test size, size
-    jz .end
+    cmp size, 4
+    jb .end
 
 .loop:
 ;pinsrb - packed insert byte - первый аргумент xmm регистр, второй - байт памяти или 8-разрядный регистр. третий -
@@ -165,7 +161,5 @@ sepia:
         sub size, 4
         jnz .loop
 .end:
-    pop r14
-    pop r13
-    pop r12
     ret
+

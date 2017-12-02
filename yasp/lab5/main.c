@@ -7,7 +7,7 @@ image_t image;
 int condition = 0;
 
 int main(void) {
-    char *filename = "/home/princess/itmo/yasp/lab5/cmake-build-debug/cat.bmp";
+    char *filename = "/home/princess/itmo/yasp/lab5/cmake-build-debug/3.bmp";
     FILE *file = openFile(filename);
     double degree = 90;
 
@@ -131,6 +131,7 @@ void readBMP(FILE *file, double degree) {
 
     condition = READ_OK;
 
+
     /* turn over file */
     rotate(degree);
 
@@ -139,12 +140,13 @@ void readBMP(FILE *file, double degree) {
 }
 
 void saveBMP(char *filename, double degree) {
-    FILE *file = fopen(filename, "wb");
+    FILE *file = fopen(filename, "w");
     int size;
     int ideal_width = 0;
     int difference = 0;
     int i = 0;
     int j = 0;
+    pixel_t pixel = {255, 255, 255};
 
     if (degree == 90) {
         ideal_width = 3 * image.height;
@@ -168,10 +170,13 @@ void saveBMP(char *filename, double degree) {
 
     fwrite(&header, sizeof(bmpHeader), 1, file);
 
-    for (size = 0; size < i; size++) {
+    for (size = 0; size < i; size ++) {
         fwrite(image.array + j * size, sizeof(pixel_t), (size_t) j, file);
         fseek(file, difference, SEEK_CUR);
     }
+
+    /*strange fix for strange behaviour when image 1 x 1 and 3 x 1 from vk group*/
+    fwrite(&pixel, sizeof(pixel_t), 1, file);
 
     fclose(file);
     condition = WRITE_OK;

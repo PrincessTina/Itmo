@@ -127,6 +127,7 @@ void saveBMP(char *filename) {
     int size;
     int ideal_width = 3 * image.width;
     int difference = 0;
+    pixel_t pixel = {255, 255, 255};
 
     while (ideal_width % 4 != 0) {
         ideal_width++;
@@ -142,6 +143,8 @@ void saveBMP(char *filename) {
         fwrite(image.array + image.width * size, sizeof(pixel_t), (size_t) image.width, file);
         fseek(file, difference, SEEK_CUR);
     }
+
+    fwrite(&pixel, sizeof(pixel), 1, file);
 
     fclose(file);
     condition = WRITE_OK;

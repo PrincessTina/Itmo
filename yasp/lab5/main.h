@@ -5,8 +5,7 @@
 typedef struct bmpHeader {
     unsigned char b, m; /* Символы BM*/
     unsigned int bfSize; /* Размер файла*/
-    unsigned short bfReserved1; /* Зарезервированное поле */
-    unsigned short bfReserved2; /* Зарезервированное поле */
+    unsigned int bfReserved; /* Зарезервированное поле */
     unsigned int bfOffBytes; /* Местанахождение данных растрового массива */
     unsigned int headerSize; /* Размер структуры */
     unsigned int biWidth; /* Ширина изображения */

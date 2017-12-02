@@ -84,6 +84,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/princess/itmo/yasp/lab7_m/code.asm">
+			<Option target="lab7_m"/>
+		</Unit>
 		<Unit filename="/home/princess/itmo/yasp/lab7_m/main.c">
 			<Option target="lab7_m"/>
 		</Unit>
