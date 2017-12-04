@@ -1,0 +1,17 @@
+* {
+    margin-top: 2%;
+    background-color: #4d1f80;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.header {
+    font-style: italic;
+    height: 80px;
+}
+
+.clock{
+    width: 30%;
+    margin: 0 auto;
+}
