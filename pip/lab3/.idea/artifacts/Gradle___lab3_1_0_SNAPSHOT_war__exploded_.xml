@@ -23,9 +23,10 @@
           <element id="library" level="project" name="Gradle: jstl:jstl:1.2" />
           <element id="library" level="project" name="Gradle: mysql:mysql-connector-java:5.1.31" />
           <element id="library" level="project" name="Gradle: org.primefaces:primefaces:6.1" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.primefaces.extensions/primefaces-extensions/6.0.0/f1677a34684fbd35197a6571fd83134ed068a35b/primefaces-extensions-6.0.0.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a60a5e993c98c864010053cb901b7eab25306568/gson-2.2.4.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.1/905075e6c80f206bbe6cf1e809d2caa69f420c76/commons-lang3-3.1.jar" />
+          <element id="library" level="project" name="Gradle: org.primefaces.extensions:primefaces-extensions:6.0.0" />
+          <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.2.4" />
+          <element id="library" level="project" name="Gradle: org.apache.commons:commons-lang3:3.1" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.omnifaces/omnifaces/1.14/e9ac1ee6e19ec23969edbf283121d4976cf1471e/omnifaces-1.14.jar" />
         </element>
       </element>
     </root>
