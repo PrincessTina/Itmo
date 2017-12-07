@@ -9,6 +9,7 @@ int condition = 0;
 
 int main(void) {
     char *filename = "/home/princess/itmo/yasp/lab7_m/cmake-build-debug/test.bmp";
+    double begin, end, time;
     FILE *file = openFile(filename);
 
     switch (condition) {
@@ -32,7 +33,39 @@ int main(void) {
             goto breakPoint;
     }
 
-    filename = "sepia.bmp";
+    /* turn over file  ASM*/
+    begin = clock();
+    /*sepia(image.array, image.height * image.width, image.array);*/
+    doPartAsmSepia();
+    end = clock();
+    time = (end - begin) / CLOCKS_PER_SEC;
+    printf("SSE sepia time: %f\n", time);
+
+    filename = "sepiaA.bmp";
+    saveBMP(filename);
+
+    switch (condition) {
+        case WRITE_OK:
+            printf("Successfully write in file %s\n", filename);
+            break;
+        default:
+            printf("Something bad adventured while writing in file\n");
+    }
+
+
+    /* turn over file  SI*/
+    filename = "/home/princess/itmo/yasp/lab7_m/cmake-build-debug/test.bmp";
+    file = openFile(filename);
+    readBMP(file);
+
+    begin = clock();
+    /*yellow();*/
+    doPartSiSepia();
+    end = clock();
+    time = (end - begin) / CLOCKS_PER_SEC;
+    printf("C sepia time: %f\n", time);
+
+    filename = "sepiaS.bmp";
     saveBMP(filename);
 
     switch (condition) {
@@ -64,15 +97,54 @@ unsigned char round(int x) {
     return (unsigned char) (x < 256 ? x : 255);
 }
 
+void doPartAsmSepia() {
+    int i, j, e = 0, m_i = image.height / 2, m_j = image.width / 2, size = image.height * image.width;
+    pixel_t *array = (pixel_t *) calloc((size_t) size, sizeof(pixel_t));
+
+    sepia(image.array, size, array);
+
+    for (i = 0; i < image.height; i++) {
+        for (j = 0; j < image.width; j++) {
+            if (((image.height - i <= m_i) && (image.height - i <= m_i + (j - m_j) * m_i / m_j)) ||
+                ((i <= m_i) && (j >= m_j))) {
+                image.array[e] = array[e];
+            }
+
+            e++;
+        }
+    }
+}
+
+void doPartSiSepia() {
+    int i, j, k = 25, e = 0, m_i = image.height / 2, m_j = image.width / 2;
+
+    for (i = 0; i < image.height; i++) {
+        for (j = 0; j < image.width; j++) {
+            if (((image.height - i <= m_i) && (image.height - i <= m_i + (j - m_j) * m_i / m_j)) ||
+                ((i <= m_i) && (j >= m_j))) {
+                pixel_t new_pixel;
+                int s = (image.array[e].r + image.array[e].g + image.array[e].b) / 3;
+
+                new_pixel.r = round(s + 2 * k);
+                new_pixel.g = round(s + k);
+                new_pixel.b = round(s);
+
+                image.array[e] = new_pixel;
+            }
+
+            e++;
+        }
+    }
+}
+
 void yellow() {
-    int i, k = 50;
-    int size = image.width * image.height;
+    int i, k = 30, size = image.width * image.height;
 
     for (i = 0; i < size; i++) {
         pixel_t new_pixel;
-        int s = (image.array[i].r + image.array[i].g + image.array[i].b)/3;
+        int s = (image.array[i].r + image.array[i].g + image.array[i].b) / 3;
 
-        new_pixel.r = round(s + 2*k);
+        new_pixel.r = round(s + 2 * k);
         new_pixel.g = round(s + k);
         new_pixel.b = round(s);
 
@@ -84,7 +156,6 @@ void readBMP(FILE *file) {
     int size;
     int ideal_width;
     int difference = 0;
-    double begin, end, time;
 
     image.width = header.biWidth;
     image.height = header.biHeight;
@@ -105,18 +176,6 @@ void readBMP(FILE *file) {
 
     condition = READ_OK;
 
-    /* turn over file */
-    begin = clock();
-    sepia(image.array, image.height * image.width, image.array);
-    end = clock();
-    time = (end - begin) / CLOCKS_PER_SEC;
-    printf("SSE sepia time: %f\n", time);
-
-    begin = clock();
-    yellow();
-    end = clock();
-    time = (end - begin) / CLOCKS_PER_SEC;
-    printf("C sepia time: %f\n", time);
 
     fclose(file);
     condition = ROTATE_OK;

@@ -7,9 +7,9 @@ image_t image;
 int condition = 0;
 
 int main(void) {
-    char *filename = "/home/princess/itmo/yasp/lab5/cmake-build-debug/3.bmp";
+    char *filename = "/home/princess/itmo/yasp/lab5/cmake-build-debug/cat.bmp";
     FILE *file = openFile(filename);
-    double degree = 90;
+    double degree = 180;
 
     switch (condition) {
         case READ_INVALID_SIGNATURE:

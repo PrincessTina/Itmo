@@ -47,6 +47,10 @@ FILE* openFile(char *filename);
 
 void sepia(void *source, int length, void *dest);
 
+void doPartSiSepia();
+
+void doPartAsmSepia();
+
 void yellow();
 
 void readBMP(FILE *file);
