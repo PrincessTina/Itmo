@@ -1,0 +1,44 @@
+* {
+    vertical-align: top;
+    font-style: italic;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+td {
+    width: 50%;
+}
+
+table {
+    border-bottom: hidden;
+}
+
+.link {
+    margin-right: 10px;
+    color: #2f1550;
+}
+
+.button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 30%;
+    background-color: white;
+    border: solid 1px #2f1550;
+}
+
+.ui-widget-header .ui-state-default {
+    background-color: #2f1550;
+    color: white;
+}
+
+.ui-datatable-data .ui-widget-content {
+    background-color: white;
+    color: black;
+}
+
+#container {
+    margin-top: 20px;
+    width: 550px;
+    height: 400px;
+}
