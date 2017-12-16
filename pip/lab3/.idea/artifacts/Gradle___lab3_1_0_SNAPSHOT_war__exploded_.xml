@@ -24,9 +24,13 @@
           <element id="library" level="project" name="Gradle: mysql:mysql-connector-java:5.1.31" />
           <element id="library" level="project" name="Gradle: org.primefaces:primefaces:6.1" />
           <element id="library" level="project" name="Gradle: org.primefaces.extensions:primefaces-extensions:6.0.0" />
+          <element id="library" level="project" name="Gradle: org.omnifaces:omnifaces:1.14" />
+          <element id="library" level="project" name="Gradle: org.eclipse.persistence:eclipselink:2.5.1" />
           <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.2.4" />
           <element id="library" level="project" name="Gradle: org.apache.commons:commons-lang3:3.1" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.omnifaces/omnifaces/1.14/e9ac1ee6e19ec23969edbf283121d4976cf1471e/omnifaces-1.14.jar" />
+          <element id="library" level="project" name="Gradle: org.eclipse.persistence:javax.persistence:2.1.0" />
+          <element id="library" level="project" name="Gradle: org.eclipse.persistence:commonj.sdo:2.1.1" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/postgresql/postgresql/9.0-801.jdbc4/153f2f92a786f12fc111d0111f709012df87c808/postgresql-9.0-801.jdbc4.jar" />
         </element>
       </element>
     </root>
