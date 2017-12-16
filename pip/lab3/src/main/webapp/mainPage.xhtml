@@ -41,7 +41,7 @@
                 <h:form>
                     <p:growl id="grow1" life="2000"/>
                     <p:commandButton value="Create graph" id="button1" styleClass="button" update="grow1"
-                                     onclick="update()"/>
+                                     onclick="update(false)"/>
                 </h:form>
 
                 <h:form>
@@ -76,13 +76,14 @@
                             <p:commandLink value="4" actionListener="#{point.setY(4)}" update="y" styleClass="link"/>
                             <p:commandLink value="5" actionListener="#{point.setY(5)}" update="y" styleClass="link"/>
                         </p:outputPanel>
-
                     </h:panelGrid>
-                    <p:outputPanel>
-                        <p:commandButton value="Check!" id="button2" update="point_table" styleClass="button"
-                                         actionListener="#{point.add}" oncomplete="update()"/>
-                    </p:outputPanel>
 
+                    <p:commandButton value="Check!" id="button2" update="point_table" styleClass="button"
+                                     actionListener="#{point.add}" oncomplete="update(false)"/>
+                </h:form>
+
+                <h:form>
+                    <h:link value="Back" outcome="index" styleClass="backer"/>
                 </h:form>
             </td>
         </tr>
