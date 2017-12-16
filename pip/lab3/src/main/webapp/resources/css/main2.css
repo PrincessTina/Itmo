@@ -42,3 +42,15 @@ table {
     width: 550px;
     height: 400px;
 }
+
+.backer {
+    right: 50px;
+    bottom: 40px;
+    width: 6%;
+    padding: 6px;
+    background-color: #2f1550;
+    border: solid 1px white;
+    border-radius: 5px;
+    position: fixed;
+    color: white;
+}

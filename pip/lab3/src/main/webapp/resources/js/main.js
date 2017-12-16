@@ -3,6 +3,8 @@ window.onload = function () {
     button.disabled = true;
     button.classList.add("ui-state-disabled");
 
+    update(true);
+
     window.setInterval(
         function () {
             $("input[id$='y']")[0].readOnly = true;
@@ -11,8 +13,8 @@ window.onload = function () {
 
 var nonCorrect = false;
 
-function update() {
-    if (!nonCorrect) {
+function update(onLoad) {
+    if (!nonCorrect || onLoad) {
         createGraph();
 
         if ($('#point_table_data').find("tr")[0].children[0].innerHTML !== "No records found.") {
