@@ -4,12 +4,12 @@
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
     <persistence-unit name="MyPersistence" transaction-type="RESOURCE_LOCAL">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <class>entities.Point</class>
+        <class>classes.Point</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://pg:5432/studs" />
             <property name="javax.persistence.jdbc.user" value="s225074" />
-            <property name="javax.persistence.jdbc.password" value="" />
+            <property name="javax.persistence.jdbc.password" value="3HJiPRAH" />
             <property name="javax.persistence.schema-generation.database.action" value="create"/>
         </properties>
     </persistence-unit>

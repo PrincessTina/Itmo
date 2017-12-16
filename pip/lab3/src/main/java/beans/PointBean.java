@@ -8,6 +8,8 @@ import java.io.Serializable;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
+import javax.servlet.http.HttpSession;
 
 import static java.lang.Math.pow;
 
@@ -18,13 +20,15 @@ public class PointBean implements Serializable {
   private double y = -3;
   private double r = 1.0;
   private String result;
-  private static final ArrayList<Point> paints = new ArrayList<>();
+  private static final ArrayList<Point> points = new ArrayList<Point>();
 
   public void add() {
     check();
 
     if (result != null) {
-      paints.add(new Point(this.x, this.y, this.r, this.result));
+      DatabaseController.addPoint(new Point(getSessionId(), this.x, this.y, this.r, this.result));
+
+      points.add(new Point(this.x, this.y, this.r, this.result));
     }
   }
 
@@ -97,8 +101,8 @@ public class PointBean implements Serializable {
   public String getString() {
     StringBuilder answer = new StringBuilder();
 
-    for (int i = 0; i < paints.size(); i++) {
-      Point paint = paints.get(i);
+    for (int i = 0; i < points.size(); i++) {
+      Point paint = points.get(i);
 
       if (i > 0) {
         answer.append("; ");
@@ -116,8 +120,14 @@ public class PointBean implements Serializable {
     return answer.toString();
   }
 
-  public ArrayList<Point> getPaints() {
-    DatabaseController.getPoint(1);
-    return paints;
+  public ArrayList<Point> getPoints() {
+    return points;
+  }
+
+  private int getSessionId() {
+    FacesContext fCtx = FacesContext.getCurrentInstance();
+    HttpSession session = (HttpSession) fCtx.getExternalContext().getSession(false);
+    return session.getId().hashCode();
   }
 }
+

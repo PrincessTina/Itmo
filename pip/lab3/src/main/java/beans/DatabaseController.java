@@ -1,31 +1,41 @@
 package beans;
 
-import entities.Point;
+import classes.Point;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 @ManagedBean(name = "database_controller")
 @RequestScoped
 public class DatabaseController {
-  public static Point getPoint(int id) {
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory("MyPersistence");
-    EntityManager em = emf.createEntityManager();
 
-    try{
-      Point p =em.find(Point.class, id);
-      return p;
-    }finally{
-      em.close();
+  public static Point getPoint(int id) {
+    EntityManager entityManager = generateEntityManager();
+
+    try {
+      return entityManager.find(Point.class, id);
+    } finally {
+      entityManager.close();
     }
   }
 
   // Todo: add logic
-  public void addPoint(int x, int y) {
+  public static void addPoint(Point point) {
+    EntityManager entityManager = generateEntityManager();
 
+    try {
+      entityManager.getTransaction().begin();
+      entityManager.persist(point);
+      entityManager.getTransaction().commit();
+    } finally {
+      entityManager.close();
+    }
+  }
+
+  private static EntityManager generateEntityManager() {
+    return Persistence.createEntityManagerFactory("MyPersistence").createEntityManager();
   }
 
 }
