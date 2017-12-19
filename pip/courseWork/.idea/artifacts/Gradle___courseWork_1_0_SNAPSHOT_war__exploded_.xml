@@ -1,0 +1,39 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gradle : courseWork-1.0-SNAPSHOT.war (exploded)">
+    <output-path>$PROJECT_DIR$/build/libs/exploded/courseWork-1.0-SNAPSHOT.war</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$">
+        <manifest>TWFuaWZlc3QtVmVyc2lvbjogMS4wDQoNCg==</manifest>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/build/libs/exploded/courseWork-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="courseWork_main/web/Web Gradle : courseWork-1.0-SNAPSHOT.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="courseWork_main" />
+          <element id="dir-copy" path="$PROJECT_DIR$/out/production/resources" />
+          <element id="library" level="project" name="Gradle: org.primefaces.extensions:all-themes:pom:1.0.8" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: com.sun.faces:jsf-api:2.2.10" />
+          <element id="library" level="project" name="Gradle: com.sun.faces:jsf-impl:2.2.10" />
+          <element id="library" level="project" name="Gradle: jstl:jstl:1.2" />
+          <element id="library" level="project" name="Gradle: mysql:mysql-connector-java:5.1.31" />
+          <element id="library" level="project" name="Gradle: org.primefaces:primefaces:6.1" />
+          <element id="library" level="project" name="Gradle: org.primefaces.extensions:primefaces-extensions:6.0.0" />
+          <element id="library" level="project" name="Gradle: org.omnifaces:omnifaces:1.14" />
+          <element id="library" level="project" name="Gradle: org.eclipse.persistence:eclipselink:2.5.1" />
+          <element id="library" level="project" name="Gradle: postgresql:postgresql:9.0-801.jdbc4" />
+          <element id="library" level="project" name="Gradle: javax.servlet:javax.servlet-api:3.0.1" />
+          <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.2.4" />
+          <element id="library" level="project" name="Gradle: org.apache.commons:commons-lang3:3.1" />
+          <element id="library" level="project" name="Gradle: org.eclipse.persistence:javax.persistence:2.1.0" />
+          <element id="library" level="project" name="Gradle: org.eclipse.persistence:commonj.sdo:2.1.1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
