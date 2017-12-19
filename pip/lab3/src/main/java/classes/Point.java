@@ -9,22 +9,11 @@ public class Point {
   @Id
   @GeneratedValue
   private int id;
-
   private int sessionId;
-
   private double x;
   private double y;
   private double r;
   private String result;
-
-  public Point(int id, int sessionId, double x, double y, double r, String result) {
-    this.id = id;
-    this.sessionId = sessionId;
-    this.x = x;
-    this.y = y;
-    this.r = r;
-    this.result = result;
-  }
 
   public Point(int sessionId, double x, double y, double r, String result) {
     this.sessionId = sessionId;
@@ -41,9 +30,7 @@ public class Point {
     this.result = result;
   }
 
-  public Point() {
-
-  }
+  public Point() {}
 
   public int getSessionId() {
     return sessionId;

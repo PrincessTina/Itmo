@@ -4,7 +4,6 @@
 
 <html xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
 <h:head>
     <h:outputStylesheet library="css" name="main2.css"/>
@@ -17,7 +16,7 @@
         <tr>
             <td>
                 <p:dataTable var="row" id="point_table" scrollable="true" scrollHeight="700" height="100%"
-                             scrollWidth="100%" value="#{point.points}">
+                             scrollWidth="100%" value="#{pointBean.points}">
                     <p:column headerText="X">
                         <h:outputText value="#{row.x}"/>
                     </p:column>
@@ -50,36 +49,36 @@
                             <h:outputLabel value="Input R [1"/>
                             <h:outputLabel value="; 3]"/>
                         </p:outputPanel>
-                        <p:spinner id="r" size="18" value="#{point.r}" min="1" max="3" stepFactor="0.5"/>
+                        <p:spinner id="r" size="18" value="#{pointBean.r}" min="1" max="3" stepFactor="0.5"/>
 
 
                         <p:outputPanel>
                             <h:outputLabel value="Input X (-3"/>
                             <h:outputLabel value="; 5)"/>
                         </p:outputPanel>
-                        <p:inputText size="20" id="x" value="#{point.x}" pt:oninput="checkParams()"/>
+                        <p:inputText size="20" id="x" value="#{pointBean.x}" pt:oninput="checkParams()"/>
 
 
                         <p:outputPanel>
                             <h:outputLabel value="Choose Y ("/>
-                            <p:inputText size="3" id="y" value="#{point.y}" rendered="true"/>
+                            <p:inputText size="3" id="y" value="#{pointBean.y}" rendered="true"/>
                             <h:outputLabel value=")"/>
                         </p:outputPanel>
                         <p:outputPanel>
-                            <p:commandLink value="-3" actionListener="#{point.setY(-3)}" update="y" styleClass="link"/>
-                            <p:commandLink value="-2" actionListener="#{point.setY(-2)}" update="y" styleClass="link"/>
-                            <p:commandLink value="-1" actionListener="#{point.setY(-1)}" update="y" styleClass="link"/>
-                            <p:commandLink value="0" actionListener="#{point.setY(0)}" update="y" styleClass="link"/>
-                            <p:commandLink value="1" actionListener="#{point.setY(1)}" update="y" styleClass="link"/>
-                            <p:commandLink value="2" actionListener="#{point.setY(2)}" update="y" styleClass="link"/>
-                            <p:commandLink value="3" actionListener="#{point.setY(3)}" update="y" styleClass="link"/>
-                            <p:commandLink value="4" actionListener="#{point.setY(4)}" update="y" styleClass="link"/>
-                            <p:commandLink value="5" actionListener="#{point.setY(5)}" update="y" styleClass="link"/>
+                            <p:commandLink value="-3" actionListener="#{pointBean.setY(-3)}" update="y" styleClass="link"/>
+                            <p:commandLink value="-2" actionListener="#{pointBean.setY(-2)}" update="y" styleClass="link"/>
+                            <p:commandLink value="-1" actionListener="#{pointBean.setY(-1)}" update="y" styleClass="link"/>
+                            <p:commandLink value="0" actionListener="#{pointBean.setY(0)}" update="y" styleClass="link"/>
+                            <p:commandLink value="1" actionListener="#{pointBean.setY(1)}" update="y" styleClass="link"/>
+                            <p:commandLink value="2" actionListener="#{pointBean.setY(2)}" update="y" styleClass="link"/>
+                            <p:commandLink value="3" actionListener="#{pointBean.setY(3)}" update="y" styleClass="link"/>
+                            <p:commandLink value="4" actionListener="#{pointBean.setY(4)}" update="y" styleClass="link"/>
+                            <p:commandLink value="5" actionListener="#{pointBean.setY(5)}" update="y" styleClass="link"/>
                         </p:outputPanel>
                     </h:panelGrid>
 
                     <p:commandButton value="Check!" id="button2" update="point_table" styleClass="button"
-                                     actionListener="#{point.add}" oncomplete="update(false)"/>
+                                     actionListener="#{pointBean.add}" oncomplete="update(false)"/>
                 </h:form>
 
                 <h:form>

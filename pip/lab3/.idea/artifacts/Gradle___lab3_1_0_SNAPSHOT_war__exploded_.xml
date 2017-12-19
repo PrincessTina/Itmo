@@ -14,7 +14,7 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="lab3_main" />
-          <element id="dir-copy" path="$PROJECT_DIR$/build/resources/main" />
+          <element id="dir-copy" path="$PROJECT_DIR$/out/production/resources" />
           <element id="library" level="project" name="Gradle: org.primefaces.extensions:all-themes:pom:1.0.8" />
         </element>
         <element id="directory" name="lib">
@@ -27,11 +27,11 @@
           <element id="library" level="project" name="Gradle: org.omnifaces:omnifaces:1.14" />
           <element id="library" level="project" name="Gradle: org.eclipse.persistence:eclipselink:2.5.1" />
           <element id="library" level="project" name="Gradle: postgresql:postgresql:9.0-801.jdbc4" />
+          <element id="library" level="project" name="Gradle: javax.servlet:javax.servlet-api:3.0.1" />
           <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.2.4" />
           <element id="library" level="project" name="Gradle: org.apache.commons:commons-lang3:3.1" />
           <element id="library" level="project" name="Gradle: org.eclipse.persistence:javax.persistence:2.1.0" />
           <element id="library" level="project" name="Gradle: org.eclipse.persistence:commonj.sdo:2.1.1" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.0.1/6bf0ebb7efd993e222fc1112377b5e92a13b38dd/javax.servlet-api-3.0.1.jar" />
         </element>
       </element>
     </root>

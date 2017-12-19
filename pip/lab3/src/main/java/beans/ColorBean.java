@@ -2,12 +2,8 @@ package beans;
 
 import org.primefaces.extensions.component.analogclock.model.AnalogClockColorModel;
 import org.primefaces.extensions.component.analogclock.model.DefaultAnalogClockColorModel;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
 import java.awt.*;
 
-@ManagedBean(name = "colorBean")
-@RequestScoped
 public class ColorBean {
   private AnalogClockColorModel theme = new DefaultAnalogClockColorModel();
 

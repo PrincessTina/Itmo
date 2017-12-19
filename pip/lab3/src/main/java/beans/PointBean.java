@@ -1,20 +1,12 @@
 package beans;
 
 import classes.Point;
-
 import java.util.ArrayList;
-
 import java.io.Serializable;
-
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpSession;
-
 import static java.lang.Math.pow;
 
-@ManagedBean(name = "point")
-@SessionScoped
 public class PointBean implements Serializable {
   private double x;
   private double y = -3;
@@ -26,7 +18,7 @@ public class PointBean implements Serializable {
     check();
 
     if (result != null) {
-      DatabaseController.addPoint(new Point(getSessionId(), this.x, this.y, this.r, this.result));
+      DataBean.addPoint(new Point(getSessionId(), this.x, this.y, this.r, this.result));
 
       points.add(new Point(this.x, this.y, this.r, this.result));
     }
@@ -96,28 +88,6 @@ public class PointBean implements Serializable {
 
   public void setResult(String result) {
     this.result = result;
-  }
-
-  public String getString() {
-    StringBuilder answer = new StringBuilder();
-
-    for (int i = 0; i < points.size(); i++) {
-      Point paint = points.get(i);
-
-      if (i > 0) {
-        answer.append("; ");
-      }
-
-      answer.append(paint.getX());
-      answer.append(", ");
-      answer.append(paint.getY());
-      answer.append(", ");
-      answer.append(paint.getR());
-      answer.append(", ");
-      answer.append(paint.getResult());
-    }
-
-    return answer.toString();
   }
 
   public ArrayList<Point> getPoints() {
