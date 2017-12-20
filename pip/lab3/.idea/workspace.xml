@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bae94e55-fd54-4867-ae39-dda9c4df9c7f" name="Default" comment="Pip: finish lab3">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../courseWork/.idea/artifacts/Gradle___courseWork_1_0_SNAPSHOT_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../courseWork/.idea/artifacts/Gradle___courseWork_1_0_SNAPSHOT_war__exploded_.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../courseWork/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../courseWork/.idea/gradle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../courseWork/.idea/libraries/Gradle__junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../courseWork/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../courseWork/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../courseWork/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../courseWork/.idea/modules/courseWork.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../courseWork/.idea/modules/courseWork_main.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../courseWork/.idea/modules/courseWork_test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../step1/.idea/artifacts/Gradle___courseWork___step1_1_0_SNAPSHOT_war__exploded_.xml" afterPath="$PROJECT_DIR$/../step1/.idea/artifacts/Gradle___courseWork___step1_1_0_SNAPSHOT_war__exploded_.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../step1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../step1/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../step1/build/tmp/war/MANIFEST.MF" afterPath="$PROJECT_DIR$/../step1/build/tmp/war/MANIFEST.MF" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/beans/DataBean.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/beans/PointBean.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/classes/Point.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../courseWork/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/../courseWork/src/main/resources/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/src/main/webapp/WEB-INF/faces-config.xml" afterPath="$PROJECT_DIR$/../courseWork/src/main/webapp/WEB-INF/faces-config.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -1061,12 +1052,12 @@
       <workItem from="1513264305817" duration="11737000" />
       <workItem from="1513429507719" duration="3341000" />
       <workItem from="1513433624319" duration="2966000" />
-      <workItem from="1513701855971" duration="4397000" />
+      <workItem from="1513701855971" duration="4844000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108366000" />
+    <option name="totallyTimeSpent" value="108813000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
