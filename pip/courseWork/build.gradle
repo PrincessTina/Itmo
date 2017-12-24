@@ -16,6 +16,9 @@ dependencies {
     compile 'com.sun.faces:jsf-api:2.2.10'
     compile 'com.sun.faces:jsf-impl:2.2.10'
 
+    compile group: 'javax.ejb', name: 'javax.ejb-api', version: '3.2'
+    compile group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: '2.1'
+
     compile 'jstl:jstl:1.2'
     compile 'mysql:mysql-connector-java:5.1.31'
     compile group: 'org.primefaces', name: 'primefaces', version: '6.1'

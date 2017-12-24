@@ -12,6 +12,8 @@
     <orderEntry type="module" module-name="courseWork_main" />
     <orderEntry type="library" name="Gradle: com.sun.faces:jsf-api:2.2.10" level="project" />
     <orderEntry type="library" name="Gradle: com.sun.faces:jsf-impl:2.2.10" level="project" />
+    <orderEntry type="library" name="Gradle: javax.ejb:javax.ejb-api:3.2" level="project" />
+    <orderEntry type="library" name="Gradle: javax.ws.rs:javax.ws.rs-api:2.1" level="project" />
     <orderEntry type="library" name="Gradle: jstl:jstl:1.2" level="project" />
     <orderEntry type="library" name="Gradle: mysql:mysql-connector-java:5.1.31" level="project" />
     <orderEntry type="library" name="Gradle: org.primefaces:primefaces:6.1" level="project" />
@@ -21,6 +23,7 @@
     <orderEntry type="library" name="Gradle: org.eclipse.persistence:eclipselink:2.5.1" level="project" />
     <orderEntry type="library" name="Gradle: postgresql:postgresql:9.0-801.jdbc4" level="project" />
     <orderEntry type="library" name="Gradle: javax.servlet:javax.servlet-api:3.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: javax.transaction:javax.transaction-api:1.2" level="project" />
     <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.2.4" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.commons:commons-lang3:3.1" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.persistence:javax.persistence:2.1.0" level="project" />

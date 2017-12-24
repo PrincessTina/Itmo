@@ -12,7 +12,7 @@ public class PointBean implements Serializable {
   private double y = -3;
   private double r = 1.0;
   private String result;
-  private static final ArrayList<Point> points = new ArrayList<Point>();
+  private ArrayList<Point> points = new ArrayList<Point>();
 
   public void add() {
     check();
