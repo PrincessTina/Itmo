@@ -11,9 +11,9 @@ public class Image {
   private int id;
   private String link;
 
-  Image () {}
+  public Image () {}
 
-  Image (String link) {
+  public Image (String link) {
     this.link = link;
   }
 

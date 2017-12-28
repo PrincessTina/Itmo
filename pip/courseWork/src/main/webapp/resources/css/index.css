@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Monotype Corsiva, serif;
+}
+
+.ui-menubar {
+    width: 100%;
+    height: 10%;
+    background-color: black;
+    color: white;
+}
+
+.ui-widget-content a {
+    color: white;
+}
+
+.ui-widget-header .ui-inputfield, .ui-widget-content .ui-inputfield {
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+
+.ui-menubar .ui-menu-child .ui-menuitem-link {
+    background-color: black;
+}
+
+.ui-menubar .ui-menu-child .ui-menuitem-link {
+    background-color: black;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+.ui-menubar .ui-menu-child .ui-menuitem-link:hover {
+    color: white;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.regWindow {
+    background-color: rgba(0, 0, 0, 0.95);
+    color: white;
+    width: 360px;
+    height: 260px;
+    position: fixed;
+    z-index: 100;
+    line-height: 50px;
+    border: 1px solid #333;
+    border-radius: 2em;
+    top: 30%;
+    left: 40%;
+    text-align: center;
+}
+
+.ui-inputfield {
+    width: 200px;
+}
+
+.icon {
+    width: 17px;
+    height: 17px;
+    margin-left: 50px;
+    margin-right: 5px;
+}
+
+.ui-widget .ui-widget {
+    font-size: 1em;
+    font-family: Monotype Corsiva, serif;
+}

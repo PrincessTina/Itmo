@@ -1,4 +1,10 @@
-﻿CREATE TABLE Image (
+﻿5;
+CREATE SEQUENCE con_leg_seq 
+start with 0
+minvalue 0
+increment by 1;
+
+CREATE TABLE Image (
 
 id integer PRIMARY KEY,
 
@@ -168,6 +174,7 @@ five integer
 
 CREATE TABLE User_Legend (
 
+id integer PRIMARY KEY,
 user_id integer REFERENCES Users ON DELETE CASCADE,
 
 legend_id integer REFERENCES Legend ON DELETE CASCADE,
@@ -180,6 +187,7 @@ UNIQUE(user_id, legend_id)
 
 CREATE TABLE User_Award (
 
+id integer PRIMARY KEY,
 user_id integer REFERENCES Users ON DELETE CASCADE,
 
 award_id integer REFERENCES Award ON DELETE CASCADE,
@@ -192,11 +200,12 @@ UNIQUE(user_id, award_id)
 
 CREATE TABLE Character_Legend (
 
+id integer PRIMARY KEY,
 legend_id integer REFERENCES Legend ON DELETE CASCADE,
 
 character_id integer REFERENCES Character ON DELETE CASCADE,
 
-PRIMARY KEY(legend_id, character_id)
+UNIQUE(legend_id, character_id)
 
 );
 
@@ -204,11 +213,12 @@ PRIMARY KEY(legend_id, character_id)
 
 CREATE TABLE Character_Artifact (
 
+id integer PRIMARY KEY,
 character_id integer REFERENCES Character ON DELETE CASCADE,
 
 art_id integer REFERENCES Artifact ON DELETE CASCADE,
 
-PRIMARY KEY(character_id, art_id)
+UNIQUE(character_id, art_id)
 
 );
 
@@ -216,6 +226,7 @@ PRIMARY KEY(character_id, art_id)
 
 CREATE TABLE Country_Legend (
 
+id integer PRIMARY KEY default nextval('con_leg_seq'),
 country_id integer REFERENCES Country ON DELETE CASCADE,
 
 legend_id integer REFERENCES Legend ON DELETE CASCADE,
@@ -228,6 +239,7 @@ UNIQUE(country_id, legend_id)
 
 CREATE TABLE Country_Image (
 
+id integer PRIMARY KEY,
 country_id integer REFERENCES Country ON DELETE CASCADE,
 
 image_id integer REFERENCES Image ON DELETE CASCADE,
@@ -240,6 +252,7 @@ UNIQUE(country_id, image_id)
 
 CREATE TABLE Question_Answer (
 
+id integer PRIMARY KEY,
 question_id integer REFERENCES Phrase ON DELETE CASCADE,
 
 answer_id integer REFERENCES Phrase ON DELETE CASCADE,
@@ -252,6 +265,7 @@ UNIQUE(question_id, answer_id)
 
 CREATE TABLE Answer_Event (
 
+id integer PRIMARY KEY,
 answer_id integer REFERENCES Phrase ON DELETE CASCADE,
 
 event_id integer REFERENCES Event ON DELETE CASCADE,
@@ -270,8 +284,9 @@ CREATE OR REPLACE FUNCTION con_leg()
 RETURNS TRIGGER AS $$
 BEGIN
 
-INSERT INTO Country_Legend(country_id, legend_id)
- VALUES(new.country_id, new.id);
+INSERT INTO Country_Legend(id, country_id, legend_id)
+ VALUES(nextval('con_leg_seq'), new.country_id, new.id);
+
 RETURN new;
 
 END;

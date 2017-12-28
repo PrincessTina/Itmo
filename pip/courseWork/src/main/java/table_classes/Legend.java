@@ -1,8 +1,6 @@
 package table_classes;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Legend {
@@ -14,6 +12,10 @@ public class Legend {
   private int country_id;
   private int image_id;
   private String description;
+
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "country_id")
+  private Country country;
 
   public Legend() {
   }

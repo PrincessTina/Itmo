@@ -2,42 +2,87 @@ package cruds;
 
 import table_classes.Artifact;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 import javax.persistence.EntityManager;
 
+@RequestScoped
+@ManagedBean(name ="artifactBean")
 public class Crud_Artifact extends Crud_Api {
-  static Artifact read(int id) {
+  private int id;
+  private int image_id;
+  private String description;
+
+  public Artifact read() {
     EntityManager entityManager = generateEntityManager();
 
     try {
-      return entityManager.find(Artifact.class, id);
+      return entityManager.find(Artifact.class, this.id);
     } finally {
       entityManager.close();
     }
   }
 
-  static void delete(int id) {
+  public void create() {
+    Artifact row = new Artifact(this.image_id, this.description);
     EntityManager entityManager = generateEntityManager();
 
     try {
       entityManager.getTransaction().begin();
-      entityManager.remove(read(id));
+      entityManager.persist(row);
       entityManager.getTransaction().commit();
     } finally {
       entityManager.close();
     }
   }
 
-  static void update(int id, int image_id, String description) {
+  public void delete() {
     EntityManager entityManager = generateEntityManager();
-    Artifact row = read(id);
 
     try {
       entityManager.getTransaction().begin();
-      row.setDescription(description);
-      row.setImage_id(image_id);
+      entityManager.remove(read());
       entityManager.getTransaction().commit();
     } finally {
       entityManager.close();
     }
+  }
+
+  public void update() {
+    EntityManager entityManager = generateEntityManager();
+    Artifact row = read();
+
+    try {
+      entityManager.getTransaction().begin();
+      row.setDescription(this.description);
+      row.setImage_id(this.image_id);
+      entityManager.getTransaction().commit();
+    } finally {
+      entityManager.close();
+    }
+  }
+
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  public int getImage_id() {
+    return image_id;
+  }
+
+  public void setImage_id(int image_id) {
+    this.image_id = image_id;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
   }
 }

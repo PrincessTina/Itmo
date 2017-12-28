@@ -4,16 +4,60 @@
 
 <html xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:pe="http://primefaces.org/ui/extensions"
-      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
 
 <f:view>
     <h:head>
         <title>JSF Title</title>
+        <h:outputStylesheet library="css" name="index.css"/>
+        <h:outputScript library="js" name="index.js"/>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"/>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"/>
+
     </h:head>
 
     <h:body>
+        <p:growl id="messages"/>
+
+        <h:form>
+            <p:menubar id="menu">
+                <f:facet name="options">
+                    <p:inputText placeholder="Search" id="search"/>
+                </f:facet>
+
+                <p:submenu label="Страна">
+                    <p:menuitem value="Древняя Греция" url="#" id="country_Gr"/>
+                    <p:separator/>
+                    <p:menuitem value="Древний Рим" url="#" id="country_Ro"/>
+                    <p:separator/>
+                    <p:menuitem value="Русь" url="#" id="country_Ru"/>
+                    <p:separator/>
+                    <p:menuitem value="Египет" url="#" id="country_Eg"/>
+                </p:submenu>
+
+                <p:menuitem value="Новости" url="#" id="news"/>
+                <p:menuitem value="Истории" url="#" id="story"/>
+
+                <f:facet name="options">
+                    <p:commandLink id="login" update="messages" onclick="createRegWindow()">
+                        <h:outputText value="Войти" />
+                    </p:commandLink>
+                    <h:outputText value=" или " />
+                    <p:commandLink id="signUp" update="messages">
+                        <h:outputText value="Зарегистрироваться" />
+                    </p:commandLink>
+                </f:facet>
+            </p:menubar>
+        </h:form>
+
+        <p:imageSwitch effect="fade" style="height: 570px; width: 100%;">
+            <ui:repeat value="#{imageBean.images}" var="image">
+                <p:graphicImage url="#{image}"/>
+            </ui:repeat>
+        </p:imageSwitch>
+
         <p:outputPanel autoUpdate="true" styleClass="header">
             Performed by Orlova Kristina Aleksandrovna
             <br/>
@@ -23,9 +67,51 @@
         <h:form>
             <h:outputLabel value="Input description for Phrase"/>
             <p:inputText size="20" id="des" value="#{phraseBean.description}"/>
-
-            <p:commandButton value="Check!" id="button2" actionListener="#{phraseBean.create()}"/>
+            <p:commandButton value="Check!" id="button2" actionListener="#{phraseBean.create}"/>
+            <br/>
+            <h:outputText value="#{phraseBean.read().description}"/>
         </h:form>
+
+        <!--div class="regWindow">
+            <h:outputText value="Регистрация" style="text-align: center"/>
+            <p:separator/>
+
+            <h:panelGrid columns="1" id="matchGrid" cellpadding="5">
+                <p:outputPanel>
+                    <img class="icon" src="resources/images/icon1.png" alt=""/>
+                    <p:inputText placeholder="Username" />
+                </p:outputPanel>
+
+                <p:outputPanel>
+                    <img class="icon" src="resources/images/icon1.png" alt="" style="visibility: hidden"/>
+                    <p:inputText placeholder="Email" />
+                </p:outputPanel>
+
+                <p:outputPanel>
+                    <img class="icon" src="resources/images/icon2.png" alt=""/>
+                    <p:password id="pwd" required="true" placeholder="Password"/>
+                </p:outputPanel>
+            </h:panelGrid>
+            <p:commandButton value="Зарегистрироваться" id="regButton"/>
+        </div-->
+
+        <!--div class="regWindow">
+            <h:outputText value="Вход" style="text-align: center"/>
+            <p:separator/>
+
+            <h:panelGrid columns="1" cellpadding="5">
+                <p:outputPanel>
+                    <img class="icon" src="resources/images/icon1.png" alt=""/>
+                    <p:inputText placeholder="Username" />
+                </p:outputPanel>
+
+                <p:outputPanel>
+                    <img class="icon" src="resources/images/icon2.png" alt=""/>
+                    <p:password id="pwd" match="pwd2" required="true" placeholder="Password"/>
+                </p:outputPanel>
+            </h:panelGrid>
+            <p:commandButton value="Войти" id="loginButton"/>
+        </div-->
     </h:body>
 
 </f:view>

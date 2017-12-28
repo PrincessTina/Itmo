@@ -1,9 +1,14 @@
 package table_classes;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 public class Character_Legend {
+  @Id
+  @GeneratedValue
+  private int id;
   private int legend_id;
   private int character_id;
 
@@ -13,6 +18,14 @@ public class Character_Legend {
   public Character_Legend(int legend_id, int character_id) {
     this.legend_id = legend_id;
     this.character_id = character_id;
+  }
+
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
   }
 
   public int getLegend_id() {

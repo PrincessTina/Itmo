@@ -18,10 +18,29 @@ public class PointBean implements Serializable {
     check();
 
     if (result != null) {
-      DataBean.addPoint(new Point(getSessionId(), this.x, this.y, this.r, this.result));
-
-      points.add(new Point(this.x, this.y, this.r, this.result));
+      Point point = new Point(getSessionId(), this.x, this.y, this.r, this.result);
+      DataBean.addPoint(point);
+      points.add(point);
     }
+  }
+
+  public void update() {
+    for (int i = 0; i < points.size(); i++) {
+      Point point = points.get(i);
+
+      point.setR(r);
+      x = points.get(i).getX();
+      y = points.get(i).getY();
+      check();
+      point.setResult(result);
+
+      DataBean.updatePoint(point);
+      points.set(i, point);
+    }
+  }
+
+  public void updateTable() {
+    DataBean.updatePoint(points.get(0));
   }
 
   private void check() {

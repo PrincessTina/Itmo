@@ -2,44 +2,98 @@ package cruds;
 
 import table_classes.Users;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 import javax.persistence.EntityManager;
 import java.sql.Date;
 
+@RequestScoped
+@ManagedBean(name = "usersBean")
 public class Crud_Users extends Crud_Api {
-  static Users read(int id) {
+  private int id;
+  private String login;
+  private String password;
+  private Date date_of_check;
+
+  public Users read() {
     EntityManager entityManager = generateEntityManager();
 
     try {
-      return entityManager.find(Users.class, id);
+      return entityManager.find(Users.class, this.id);
     } finally {
       entityManager.close();
     }
   }
 
-  static void delete(int id) {
+  public void create() {
+    Users row = new Users(this.login, this.password, this.date_of_check);
     EntityManager entityManager = generateEntityManager();
 
     try {
       entityManager.getTransaction().begin();
-      entityManager.remove(read(id));
+      entityManager.persist(row);
       entityManager.getTransaction().commit();
     } finally {
       entityManager.close();
     }
   }
 
-  static void update(int id, String login, String password, Date date_of_check) {
+  public void delete() {
     EntityManager entityManager = generateEntityManager();
-    Users row = read(id);
 
     try {
       entityManager.getTransaction().begin();
-      row.setDate_of_check(date_of_check);
-      row.setLogin(login);
-      row.setPassword(password);
+      entityManager.remove(read());
       entityManager.getTransaction().commit();
     } finally {
       entityManager.close();
     }
+  }
+
+  public void update() {
+    EntityManager entityManager = generateEntityManager();
+    Users row = read();
+
+    try {
+      entityManager.getTransaction().begin();
+      row.setDate_of_check(this.date_of_check);
+      row.setLogin(this.login);
+      row.setPassword(this.password);
+      entityManager.getTransaction().commit();
+    } finally {
+      entityManager.close();
+    }
+  }
+
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  public String getLogin() {
+    return login;
+  }
+
+  public void setLogin(String login) {
+    this.login = login;
+  }
+
+  public String getPassword() {
+    return password;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
+  }
+
+  public Date getDate_of_check() {
+    return date_of_check;
+  }
+
+  public void setDate_of_check(Date date_of_check) {
+    this.date_of_check = date_of_check;
   }
 }

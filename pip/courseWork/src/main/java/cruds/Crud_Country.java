@@ -2,42 +2,87 @@ package cruds;
 
 import table_classes.Country;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 import javax.persistence.EntityManager;
 
-public class Crud_Country extends Crud_Api{
-    static Country read(int id) {
-      EntityManager entityManager = generateEntityManager();
+@RequestScoped
+@ManagedBean(name = "countryBean")
+public class Crud_Country extends Crud_Api {
+  private int id;
+  private String description;
+  private String name;
 
-      try {
-        return entityManager.find(Country.class, id);
-      } finally {
-        entityManager.close();
-      }
+  public Country read() {
+    EntityManager entityManager = generateEntityManager();
+
+    try {
+      return entityManager.find(Country.class, this.id);
+    } finally {
+      entityManager.close();
     }
+  }
 
-  static void delete(int id) {
+  public void create() {
+    Country row = new Country(this.name, this.description);
     EntityManager entityManager = generateEntityManager();
 
     try {
       entityManager.getTransaction().begin();
-      entityManager.remove(read(id));
+      entityManager.persist(row);
       entityManager.getTransaction().commit();
     } finally {
       entityManager.close();
     }
   }
 
-    static void update(int id, String name, String description) {
-      EntityManager entityManager = generateEntityManager();
-      Country country = read(id);
+  public void delete() {
+    EntityManager entityManager = generateEntityManager();
 
-      try {
-        entityManager.getTransaction().begin();
-        country.setDescription(description);
-        country.setName(name);
-        entityManager.getTransaction().commit();
-      } finally {
-        entityManager.close();
-      }
+    try {
+      entityManager.getTransaction().begin();
+      entityManager.remove(read());
+      entityManager.getTransaction().commit();
+    } finally {
+      entityManager.close();
     }
+  }
+
+  public void update() {
+    EntityManager entityManager = generateEntityManager();
+    Country country = read();
+
+    try {
+      entityManager.getTransaction().begin();
+      country.setDescription(this.description);
+      country.setName(this.name);
+      entityManager.getTransaction().commit();
+    } finally {
+      entityManager.close();
+    }
+  }
+
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
 }

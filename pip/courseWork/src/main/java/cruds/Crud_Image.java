@@ -1,42 +1,103 @@
 package cruds;
 
+import ejbs.Ejb_Image;
 import table_classes.Image;
 
+import javax.annotation.PostConstruct;
+import javax.ejb.EJB;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 import javax.persistence.EntityManager;
+import java.util.ArrayList;
 
-public class Crud_Image extends Crud_Api{
-  static Image read(int id) {
+@RequestScoped
+@ManagedBean(name = "imageBean")
+public class Crud_Image extends Crud_Api {
+  private int id;
+  private String link;
+
+  private ArrayList<String> images = new ArrayList<String>();
+
+  @EJB
+  private Ejb_Image ejb = new Ejb_Image();
+
+  @PostConstruct
+  public void init() {
+    ArrayList<Integer> listOfId = new ArrayList<Integer>();
+    listOfId.add(0);
+    listOfId.add(1);
+    listOfId.add(2);
+    listOfId.add(3);
+    listOfId.add(4);
+
+    this.images = ejb.readInitImages(listOfId);
+  }
+
+  public ArrayList<String> getImages() {
+    return images;
+  }
+
+  public Image read() {
     EntityManager entityManager = generateEntityManager();
 
     try {
-      return entityManager.find(Image.class, id);
+      return entityManager.find(Image.class, this.id);
     } finally {
       entityManager.close();
     }
   }
 
-  static void delete(int id) {
+  public void create() {
+    Image row = new Image(this.link);
     EntityManager entityManager = generateEntityManager();
 
     try {
       entityManager.getTransaction().begin();
-      entityManager.remove(read(id));
+      entityManager.persist(row);
       entityManager.getTransaction().commit();
     } finally {
       entityManager.close();
     }
   }
 
-  static void update(int id, String link) {
+  public void delete() {
     EntityManager entityManager = generateEntityManager();
-    Image row = read(id);
 
     try {
       entityManager.getTransaction().begin();
-      row.setLink(link);
+      entityManager.remove(read());
       entityManager.getTransaction().commit();
     } finally {
       entityManager.close();
     }
+  }
+
+  public void update() {
+    EntityManager entityManager = generateEntityManager();
+    Image row = read();
+
+    try {
+      entityManager.getTransaction().begin();
+      row.setLink(this.link);
+      entityManager.getTransaction().commit();
+    } finally {
+      entityManager.close();
+    }
+  }
+
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  public String getLink() {
+    return link;
+  }
+
+  public void setLink(String link) {
+    this.link = link;
   }
 }

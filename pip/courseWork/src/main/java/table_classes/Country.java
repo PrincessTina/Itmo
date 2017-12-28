@@ -3,6 +3,8 @@ package table_classes;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.ArrayList;
 
 @Entity
 public class Country {
@@ -11,6 +13,9 @@ public class Country {
   private int id;
   private String name;
   private String description;
+
+  @OneToMany(mappedBy = "country")
+  private ArrayList<Legend> legends;
 
   Country() {}
 

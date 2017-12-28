@@ -6,11 +6,28 @@ import javax.persistence.Persistence;
 
 public class DataBean {
 
-  static Point getPoint(int id) {
+  private static Point getPoint(int id) {
     EntityManager entityManager = generateEntityManager();
 
     try {
       return entityManager.find(Point.class, id);
+    } finally {
+      entityManager.close();
+    }
+  }
+
+  static void updatePoint(Point point) {
+    EntityManager entityManager = generateEntityManager();
+
+    try {
+      entityManager.getTransaction().begin();
+
+      entityManager
+      Point dataPoint = entityManager.find(Point.class, 2402);
+      //dataPoint.setResult(point.getResult());
+      dataPoint.setR(point.getId());
+
+      entityManager.getTransaction().commit();
     } finally {
       entityManager.close();
     }
@@ -23,6 +40,7 @@ public class DataBean {
       entityManager.getTransaction().begin();
       entityManager.persist(point);
       entityManager.getTransaction().commit();
+      //entityManager.flush();
     } finally {
       entityManager.close();
     }

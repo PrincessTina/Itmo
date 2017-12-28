@@ -2,17 +2,14 @@ package cruds;
 
 import table_classes.Phrase;
 
-import javax.ejb.Local;
-import javax.ejb.Stateful;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.faces.bean.RequestScoped;
 import javax.persistence.EntityManager;
-import javax.ws.rs.Path;
 
-@Path("phraseBean")
-@Stateful(name = "phraseBean")
+@RequestScoped
+@ManagedBean(name = "phraseBean")
 public class Crud_Phrase extends Crud_Api {
-  private int id;
+  private int id = 1001;
   private String description;
 
   public Phrase read() {

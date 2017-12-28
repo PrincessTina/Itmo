@@ -20,12 +20,28 @@ function update(onLoad) {
         if ($('#point_table_data').find("tr")[0].children[0].innerHTML !== "No records found.") {
             var points = getTablePoints();
 
+            if (points[0].r !== parseFloat($("input[id$='r_input']")[0].value)) {
+                $("button[id$='button3']")[0].click();
+            }
+
             for (var i = 0; i < points.length; i++) {
                 var point = points[i];
 
                 addNewPoint(point.x, point.y, point.result);
             }
         }
+    }
+}
+
+function finish() {
+    var points = getTablePoints();
+
+    alert(points[0].r);
+
+    for (var i = 0; i < points.length; i++) {
+        var point = points[i];
+
+        addNewPoint(point.x, point.y, point.result);
     }
 }
 
