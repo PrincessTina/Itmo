@@ -1,10 +1,12 @@
 package cruds;
 
-import table_classes.Artifact;
+import entities.Artifact;
+import entities.Character;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.persistence.EntityManager;
+import java.util.ArrayList;
 
 @RequestScoped
 @ManagedBean(name ="artifactBean")
@@ -12,6 +14,8 @@ public class Crud_Artifact extends Crud_Api {
   private int id;
   private int image_id;
   private String description;
+
+  private ArrayList<Character> characters;
 
   public Artifact read() {
     EntityManager entityManager = generateEntityManager();
@@ -84,5 +88,13 @@ public class Crud_Artifact extends Crud_Api {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+  public ArrayList<Character> getCharacters() {
+    return characters;
+  }
+
+  public void setCharacters(ArrayList<Character> characters) {
+    this.characters = characters;
   }
 }

@@ -1,11 +1,14 @@
 package cruds;
 
-import table_classes.Users;
+import entities.Award;
+import entities.Legend;
+import entities.Users;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.persistence.EntityManager;
 import java.sql.Date;
+import java.util.ArrayList;
 
 @RequestScoped
 @ManagedBean(name = "usersBean")
@@ -14,6 +17,9 @@ public class Crud_Users extends Crud_Api {
   private String login;
   private String password;
   private Date date_of_check;
+
+  private ArrayList<Award> awards;
+  private ArrayList<Legend> legends;
 
   public Users read() {
     EntityManager entityManager = generateEntityManager();
@@ -95,5 +101,21 @@ public class Crud_Users extends Crud_Api {
 
   public void setDate_of_check(Date date_of_check) {
     this.date_of_check = date_of_check;
+  }
+
+  public ArrayList<Award> getAwards() {
+    return awards;
+  }
+
+  public void setAwards(ArrayList<Award> awards) {
+    this.awards = awards;
+  }
+
+  public ArrayList<Legend> getLegends() {
+    return legends;
+  }
+
+  public void setLegends(ArrayList<Legend> legends) {
+    this.legends = legends;
   }
 }

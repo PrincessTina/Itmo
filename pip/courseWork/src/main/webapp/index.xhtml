@@ -69,7 +69,7 @@
             <p:inputText size="20" id="des" value="#{phraseBean.description}"/>
             <p:commandButton value="Check!" id="button2" actionListener="#{phraseBean.create}"/>
             <br/>
-            <h:outputText value="#{phraseBean.read().description}"/>
+            <h:outputText value="#{awardBean.read().users.get(0).password}"/>
         </h:form>
 
         <!--div class="regWindow">

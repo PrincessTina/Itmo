@@ -1,10 +1,13 @@
 package cruds;
 
-import table_classes.Character;
+import entities.Artifact;
+import entities.Character;
+import entities.Legend;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.persistence.EntityManager;
+import java.util.ArrayList;
 
 @RequestScoped
 @ManagedBean(name = "characterBean")
@@ -16,6 +19,9 @@ public class Crud_Character extends Crud_Api{
   private int father_id;
   private int mother_id;
   private int image_id;
+
+  private ArrayList<Artifact> artifacts;
+  private ArrayList<Legend> legends;
 
   public Character read() {
     EntityManager entityManager = generateEntityManager();
@@ -124,5 +130,21 @@ public class Crud_Character extends Crud_Api{
 
   public void setImage_id(int image_id) {
     this.image_id = image_id;
+  }
+
+  public ArrayList<Artifact> getArtifacts() {
+    return artifacts;
+  }
+
+  public void setArtifacts(ArrayList<Artifact> artifacts) {
+    this.artifacts = artifacts;
+  }
+
+  public ArrayList<Legend> getLegends() {
+    return legends;
+  }
+
+  public void setLegends(ArrayList<Legend> legends) {
+    this.legends = legends;
   }
 }

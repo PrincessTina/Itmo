@@ -1,6 +1,6 @@
 package cruds;
 
-import table_classes.Rating;
+import entities.Rating;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;

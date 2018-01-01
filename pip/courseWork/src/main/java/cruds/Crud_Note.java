@@ -1,6 +1,6 @@
 package cruds;
 
-import table_classes.Note;
+import entities.Note;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;

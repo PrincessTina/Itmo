@@ -36,8 +36,6 @@ function update(onLoad) {
 function finish() {
     var points = getTablePoints();
 
-    alert(points[0].r);
-
     for (var i = 0; i < points.length; i++) {
         var point = points[i];
 

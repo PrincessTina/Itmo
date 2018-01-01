@@ -1,6 +1,6 @@
 package ejbs;
 
-import table_classes.Image;
+import entities.Image;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;

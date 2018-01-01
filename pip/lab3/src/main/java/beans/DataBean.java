@@ -5,7 +5,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 
 public class DataBean {
-
   private static Point getPoint(int id) {
     EntityManager entityManager = generateEntityManager();
 
@@ -22,10 +21,9 @@ public class DataBean {
     try {
       entityManager.getTransaction().begin();
 
-      entityManager
-      Point dataPoint = entityManager.find(Point.class, 2402);
-      //dataPoint.setResult(point.getResult());
-      dataPoint.setR(point.getId());
+      Point dataPoint = entityManager.find(Point.class, point.getId());
+      dataPoint.setResult(point.getResult());
+      dataPoint.setR(point.getR());
 
       entityManager.getTransaction().commit();
     } finally {

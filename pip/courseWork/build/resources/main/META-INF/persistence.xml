@@ -4,26 +4,18 @@
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
     <persistence-unit name="MyPersistence" transaction-type="RESOURCE_LOCAL">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <class>table_classes.Phrase</class>
-        <class>table_classes.Award</class>
-        <class>table_classes.Artifact</class>
-        <class>table_classes.Author</class>
-        <class>table_classes.Character</class>
-        <class>table_classes.Country</class>
-        <class>table_classes.Event</class>
-        <class>table_classes.Image</class>
-        <class>table_classes.Legend</class>
-        <class>table_classes.Note</class>
-        <class>table_classes.Rating</class>
-        <class>table_classes.Users</class>
-        <class>table_classes.Answer_Event</class>
-        <class>table_classes.Character_Artifact</class>
-        <class>table_classes.Character_Legend</class>
-        <class>table_classes.Country_Image</class>
-        <class>table_classes.Country_Legend</class>
-        <class>table_classes.Question_Answer</class>
-        <class>table_classes.User_Award</class>
-        <class>table_classes.User_Legend</class>
+        <class>entities.Phrase</class>
+        <class>entities.Award</class>
+        <class>entities.Artifact</class>
+        <class>entities.Author</class>
+        <class>entities.Character</class>
+        <class>entities.Country</class>
+        <class>entities.Event</class>
+        <class>entities.Image</class>
+        <class>entities.Legend</class>
+        <class>entities.Note</class>
+        <class>entities.Rating</class>
+        <class>entities.Users</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://pg:5432/studs" />

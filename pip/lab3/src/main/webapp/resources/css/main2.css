@@ -27,6 +27,14 @@ table {
     border: solid 1px #2f1550;
 }
 
+.specialButton {
+    position: fixed;
+    z-index: 100;
+    bottom: 200px;
+    right: 200px;
+    visibility: hidden;
+}
+
 .ui-widget-header .ui-state-default {
     background-color: #2f1550;
     color: white;

@@ -1,16 +1,25 @@
 package cruds;
 
-import table_classes.Award;
+import entities.Award;
+import entities.Users;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.persistence.EntityManager;
+import java.util.ArrayList;
 
 @RequestScoped
 @ManagedBean(name = "awardBean")
 public class Crud_Award extends Crud_Api {
-  private int id;
+  /*
+  Тест ManyToMany
+  private int id = 1;
+  <h:outputText value="#{awardBean.read().users.get(0).password}"/>
+  */
+  private int id = 1;
   private String description;
+
+  private ArrayList<Users> users;
 
   public Award read() {
     EntityManager entityManager = generateEntityManager();
@@ -74,5 +83,13 @@ public class Crud_Award extends Crud_Api {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+  public ArrayList<Users> getUsers() {
+    return users;
+  }
+
+  public void setUsers(ArrayList<Users> users) {
+    this.users = users;
   }
 }

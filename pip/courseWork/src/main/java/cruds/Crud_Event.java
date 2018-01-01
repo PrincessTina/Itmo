@@ -1,6 +1,7 @@
 package cruds;
 
-import table_classes.Event;
+import entities.Event;
+import entities.Phrase;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
@@ -12,6 +13,8 @@ public class Crud_Event extends Crud_Api {
   private int id;
   private String description;
   private  int image_id;
+
+  private Phrase answer;
 
   public Event read() {
     EntityManager entityManager = generateEntityManager();
@@ -84,5 +87,13 @@ public class Crud_Event extends Crud_Api {
 
   public void setImage_id(int image_id) {
     this.image_id = image_id;
+  }
+
+  public Phrase getAnswer() {
+    return answer;
+  }
+
+  public void setAnswer(Phrase answer) {
+    this.answer = answer;
   }
 }

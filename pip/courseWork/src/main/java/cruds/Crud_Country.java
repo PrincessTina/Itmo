@@ -1,10 +1,13 @@
 package cruds;
 
-import table_classes.Country;
+import entities.Country;
+import entities.Image;
+import entities.Legend;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.persistence.EntityManager;
+import java.util.ArrayList;
 
 @RequestScoped
 @ManagedBean(name = "countryBean")
@@ -12,6 +15,9 @@ public class Crud_Country extends Crud_Api {
   private int id;
   private String description;
   private String name;
+
+  private ArrayList<Legend> legends;
+  private ArrayList<Image> images;
 
   public Country read() {
     EntityManager entityManager = generateEntityManager();
@@ -84,5 +90,21 @@ public class Crud_Country extends Crud_Api {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public ArrayList<Legend> getLegends() {
+    return legends;
+  }
+
+  public void setLegends(ArrayList<Legend> legends) {
+    this.legends = legends;
+  }
+
+  public ArrayList<Image> getImages() {
+    return images;
+  }
+
+  public void setImages(ArrayList<Image> images) {
+    this.images = images;
   }
 }

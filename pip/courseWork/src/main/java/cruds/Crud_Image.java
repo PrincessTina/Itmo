@@ -1,7 +1,8 @@
 package cruds;
 
 import ejbs.Ejb_Image;
-import table_classes.Image;
+import entities.Country;
+import entities.Image;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
@@ -15,8 +16,9 @@ import java.util.ArrayList;
 public class Crud_Image extends Crud_Api {
   private int id;
   private String link;
-
   private ArrayList<String> images = new ArrayList<String>();
+
+  private Country country;
 
   @EJB
   private Ejb_Image ejb = new Ejb_Image();
@@ -99,5 +101,13 @@ public class Crud_Image extends Crud_Api {
 
   public void setLink(String link) {
     this.link = link;
+  }
+
+  public Country getCountry() {
+    return country;
+  }
+
+  public void setCountry(Country country) {
+    this.country = country;
   }
 }

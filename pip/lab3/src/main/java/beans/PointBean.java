@@ -77,7 +77,8 @@ public class PointBean implements Serializable {
         (!String.valueOf(r).matches("^-?\\d+\\.?\\d*$")));
   }
 
-  public double getX() {
+  public double getX()
+  {
     return x;
   }
 

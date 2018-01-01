@@ -32,10 +32,6 @@
                     <p:column headerText="Result">
                         <h:outputText value="#{row.result}"/>
                     </p:column>
-
-                    <p:column headerText="Id">
-                        <h:outputText value="#{row.id}"/>
-                    </p:column>
                 </p:dataTable>
             </td>
             <td>
@@ -81,14 +77,11 @@
                         </p:outputPanel>
                     </h:panelGrid>
 
-                    <p:commandButton value="Check!" id="button2" update="point_table" styleClass="button"
-                                     actionListener="#{pointBean.add}" oncomplete="update(false)"/>
-
-                    <p:commandButton value="Don't touch!" id="button3" update="point_table" styleClass="button"
+                    <p:commandButton value="Don't touch!" id="button3" update="point_table" styleClass="specialButton"
                                      actionListener="#{pointBean.update()}" oncomplete="finish()"/>
 
-                    <p:commandButton value="Don't touch!" id="button4" update="point_table" styleClass="button"
-                                     actionListener="#{pointBean.updateTable()}"/>
+                    <p:commandButton value="Check!" id="button2" update="point_table" styleClass="button"
+                                     style="right: 65px;" actionListener="#{pointBean.add}" oncomplete="update(false)"/>
                 </h:form>
 
                 <h:form>

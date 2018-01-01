@@ -1,16 +1,32 @@
 package cruds;
 
-import table_classes.Phrase;
+import entities.Event;
+import entities.Phrase;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.persistence.EntityManager;
+import java.util.ArrayList;
 
 @RequestScoped
 @ManagedBean(name = "phraseBean")
 public class Crud_Phrase extends Crud_Api {
-  private int id = 1001;
+  /*
+  Тест ManyToOne
+  private int id = 1010;
+  <h:outputText value="#{phraseBean.read().answers.get(0).description}"/>
+  */
+
+  /*
+  Тест OneToOne
+  private int id = 1;
+  <h:outputText value="#{phraseBean.read().event.description}"/>
+  */
+  private int id;
   private String description;
+  private Event event;
+  private ArrayList<Phrase> answers;
+  private Phrase question;
 
   public Phrase read() {
     EntityManager entityManager = generateEntityManager();
@@ -74,5 +90,29 @@ public class Crud_Phrase extends Crud_Api {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+  public Event getEvent() {
+    return event;
+  }
+
+  public void setEvent(Event event) {
+    this.event = event;
+  }
+
+  public ArrayList<Phrase> getAnswers() {
+    return answers;
+  }
+
+  public void setAnswers(ArrayList<Phrase> answers) {
+    this.answers = answers;
+  }
+
+  public Phrase getQuestion() {
+    return question;
+  }
+
+  public void setQuestion(Phrase question) {
+    this.question = question;
   }
 }
