@@ -1,21 +1,20 @@
 package models.cruds;
 
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import models.entities.Users;
 import java.sql.Date;
 import java.util.Calendar;
 
-/**
- * Todo: make ejb
- */
+@Stateless
 public class UsersCrud extends Crud {
-  public static void registerUser(String login, String email, String password) {
+  public void registerUser(String login, String email, String password) {
     Date date = new Date(Calendar.getInstance().getTime().getTime());
 
     create(login, password, date, email);
   }
 
-  private static void create(String login, String password, Date date_of_check, String email) {
+  private void create(String login, String password, Date date_of_check, String email) {
     EntityManager entityManager = generateEntityManager();
     Users row = new Users(login, email, password, date_of_check);
 
@@ -24,13 +23,13 @@ public class UsersCrud extends Crud {
     entityManager.getTransaction().commit();
   }
 
-  private static Users read(int id) {
+  private Users read(int id) {
     EntityManager entityManager = generateEntityManager();
 
     return entityManager.find(Users.class, id);
   }
 
-  private static void delete(int id) {
+  private void delete(int id) {
     EntityManager entityManager = generateEntityManager();
 
     try {
@@ -42,7 +41,7 @@ public class UsersCrud extends Crud {
     }
   }
 
-  private static void update(int id, String login, String password, String email, Date date_of_check) {
+  private void update(int id, String login, String password, String email, Date date_of_check) {
     EntityManager entityManager = generateEntityManager();
     Users row = read(id);
 

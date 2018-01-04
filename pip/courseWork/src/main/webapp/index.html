@@ -1,43 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
     <head>
-        <title>JSF Title</title>
+        <!-- Общая информация -->
+        <title>Legends Site</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <!-- Сторонний css -->
         <link rel="stylesheet" type="text/css" href="resources/css/index.css"/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
-              integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-
-        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-                crossorigin="anonymous" type="text/javascript"></script>
-
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
-                integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
-                crossorigin="anonymous" type="text/javascript"></script>
-
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+        <!-- Сторонний js -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
 
+        <!-- Модели -->
         <script type="text/javascript" src="resources/js/models/UserModel.js"></script>
+        <script type="text/javascript" src="resources/js/models/ImageModel.js"></script>
+
+        <!-- Коллекции -->
+        <script type="text/javascript" src="resources/js/collections/ImagesCollection.js"></script>
+
+        <!-- Компоненты -->
         <script type="text/javascript" src="resources/js/LoginWindow.js"></script>
         <script type="text/javascript" src="resources/js/RegWindow.js"></script>
+        <script type="text/javascript" src="resources/js/ImagesCarousel.js"></script>
         <script type="text/javascript" src="resources/js/Index.js"></script>
     </head>
     <body>
+        <!-- Точка входа -->
         <script type="text/javascript">
-            $(document).ready(function () {
-                new Index();
+            $(document).ready(() => {
+                window.mainPage = new Index();
             });
         </script>
     </body>

@@ -1,5 +1,6 @@
 package controllers.api;
 
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,6 +15,9 @@ import org.json.JSONObject;
 
 @WebServlet(name = "users", urlPatterns = {"/users"})
 public class UsersController extends HttpServlet {
+
+  @EJB
+  private UsersCrud users;
 
   @Override
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -54,6 +58,6 @@ public class UsersController extends HttpServlet {
       throw new ServletException("Input error");
     }
 
-    UsersCrud.registerUser(login, email, password);
+    users.registerUser(login, email, password);
   }
 }

@@ -1,14 +1,14 @@
-$(document).ready(function () {
+$(document).ready(() => {
     window.LoginWindow = Backbone.View.extend({
         el: $('body'),
 
-        initialize: function () {
+        initialize() {
             _.bindAll(this, 'render');
 
             this.render();
         },
 
-        render: function () {
+        render() {
             $(this.el).append(`
         <div class="reg_window">
             <label style="text-align: center">Вход</label>

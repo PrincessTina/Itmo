@@ -1,38 +1,16 @@
-$(document).ready(function () {
+$(document).ready(() => {
     window.Index = Backbone.View.extend({
         el: $('body'),
-        carouselImageIndex: 1,
+        imagesCarousel: null,
 
-        initialize: function () {
+        initialize() {
             _.bindAll(this, 'render');
-            _.bindAll(this, 'changeCarouselImage');
-
             this.render();
-            this.changeCarouselImage();
+
+            this.imagesCarousel = new ImagesCarousel();
         },
 
-        changeCarouselImage: function() {
-            let slideElements = document.getElementsByClassName("mySlides");
-
-            // Убираем все
-            for (let i = 0; i < slideElements.length; i++) {
-                slideElements[i].style.display = "none";
-            }
-
-            // Проставляем carouselImageIndex, чтобы знать, какой нужно показать
-            this.carouselImageIndex++;
-            if (this.carouselImageIndex > slideElements.length) {
-                this.carouselImageIndex = 1
-            }
-
-            // Показываем нужный слайд
-            slideElements[this.carouselImageIndex-1].style.display = "block";
-
-            // Поставим вызов этой же функции через 4 секунды
-            setTimeout(this.changeCarouselImage, 4 * 1000);
-        },
-
-        render: function () {
+        render() {
             $(this.el).append(`
 <div>
 
@@ -58,20 +36,11 @@ $(document).ready(function () {
     </div>
   </div>
     
-  <!-- Новости -->
   <div class="w3-content" style="max-width:2000px;margin-top:46px">
-    <div class="mySlides w3-display-container w3-center">
-      <img src="https://www.w3schools.com/w3images/la.jpg" style="width:100%">
-    </div>
-   
-    <div class="mySlides w3-display-container w3-center">
-      <img src="https://www.w3schools.com/w3images/ny.jpg" style="width:100%">
-    </div>
+    <!-- Карусель картинок -->
+    <div class="images_carousel"></div>
     
-    <div class="mySlides w3-display-container w3-center">
-      <img src="https://www.w3schools.com/w3images/chicago.jpg" style="width:100%">
-    </div>
-  
+    <!-- Описание -->
     <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
       <h2 class="w3-wide">САЙТ ЛЕГЕНД</h2>
       <p class="w3-opacity"><i>Мы лююбим истории</i></p>
@@ -101,6 +70,7 @@ $(document).ready(function () {
       </p>
     </div>
     
+    <!-- Новости -->
     <div class="w3-black" id="tour">
       <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
         <h2 class="w3-wide w3-center">Новости</h2>
@@ -149,7 +119,7 @@ $(document).ready(function () {
   </footer>
 
 </div>
-      `);
-      }
-  });
+           `);
+        },
+    });
 });

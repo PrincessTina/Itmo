@@ -1,0 +1,1 @@
+ImageModel = Backbone.Model.extend();

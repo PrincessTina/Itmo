@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(() => {
     window.RegWindow = Backbone.View.extend({
         el: $('body'),
 
@@ -7,13 +7,13 @@ $(document).ready(function () {
             'click .cross': 'closeWindow',
         },
 
-        initialize: function () {
+        initialize() {
             _.bindAll(this, 'render');
 
             this.render();
         },
 
-        register: function () {
+        register() {
             let root = document.getElementsByClassName("reg_window")[0];
 
             let user = new UserModel({
@@ -26,11 +26,11 @@ $(document).ready(function () {
             user.save();
         },
 
-        closeWindow: function () {
+        closeWindow() {
             document.getElementsByClassName("reg_window")[0].remove(0);
         },
 
-        render: function () {
+        render() {
             $(this.el).append(`
         <div class="reg_window">
             <label style="text-align: center">Регистрация</label>
