@@ -40,7 +40,7 @@ img {
     height: 100%;
 }
 
-.regWindow {
+.reg_window {
     background-color: rgba(0, 0, 0, 0.95);
     color: white;
     width: 360px;
@@ -55,15 +55,44 @@ img {
     text-align: center;
 }
 
-.ui-inputfield {
+.reg_window .fields .field .input {
+    font-size: 16px;
+    padding: 3px;
     width: 200px;
 }
 
-.icon {
+.reg_window .fields .field .icon {
     width: 17px;
     height: 17px;
-    margin-left: 50px;
     margin-right: 5px;
+    vertical-align: middle;
+}
+
+.reg_window .cross {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 10px;
+    right: 21px;
+}
+
+.reg_window .cross:hover {
+    opacity: 0.8;
+}
+
+.reg_window .fields {
+    border-top: 1px solid white;
+}
+
+.reg_window .fields .regButton {
+    font-size: 16px;
+    margin-left: 25px;
+    padding: 3px;
+    width: 210px;
+}
+
+.ui-inputfield {
+    width: 200px;
 }
 
 .ui-widget .ui-widget {

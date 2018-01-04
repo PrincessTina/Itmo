@@ -110,8 +110,8 @@ login text UNIQUE not NULL,
 
 password text not NULL,
 
-date_of_check date not NULL CONSTRAINT first CHECK(date_of_check <= 'now')
-
+email text,
+date_of_check date not NULL
 );
 
 

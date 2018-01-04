@@ -1,8 +1,8 @@
 package cruds;
-
-import entities.Award;
-import entities.Legend;
-import entities.Users;
+/**
+import models.entities.Award;
+import models.entities.Legend;
+import models.entities.Users;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
@@ -119,3 +119,4 @@ public class Crud_Users extends Crud_Api {
     this.legends = legends;
   }
 }
+*/

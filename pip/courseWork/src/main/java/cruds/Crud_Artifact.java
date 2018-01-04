@@ -1,7 +1,8 @@
+/*
 package cruds;
 
-import entities.Artifact;
-import entities.Character;
+import models.entities.Artifact;
+import models.entities.Character;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
@@ -98,3 +99,5 @@ public class Crud_Artifact extends Crud_Api {
     this.characters = characters;
   }
 }
+
+*/

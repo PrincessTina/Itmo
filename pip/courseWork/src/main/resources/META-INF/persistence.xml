@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<persistence version="2.1"
-             xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
     <persistence-unit name="MyPersistence" transaction-type="RESOURCE_LOCAL">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <class>entities.Phrase</class>
-        <class>entities.Award</class>
-        <class>entities.Artifact</class>
-        <class>entities.Author</class>
-        <class>entities.Character</class>
-        <class>entities.Country</class>
-        <class>entities.Event</class>
-        <class>entities.Image</class>
-        <class>entities.Legend</class>
-        <class>entities.Note</class>
-        <class>entities.Rating</class>
-        <class>entities.Users</class>
+        <class>models.entities.Phrase</class>
+        <class>models.entities.Award</class>
+        <class>models.entities.Artifact</class>
+        <class>models.entities.Author</class>
+        <class>models.entities.Character</class>
+        <class>models.entities.Country</class>
+        <class>models.entities.Event</class>
+        <class>models.entities.Image</class>
+        <class>models.entities.Legend</class>
+        <class>models.entities.Note</class>
+        <class>models.entities.Rating</class>
+        <class>models.entities.Users</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://pg:5432/studs" />

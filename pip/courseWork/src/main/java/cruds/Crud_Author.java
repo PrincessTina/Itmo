@@ -1,6 +1,7 @@
+/*
 package cruds;
 
-import entities.Author;
+import models.entities.Author;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
@@ -86,3 +87,4 @@ public class Crud_Author extends Crud_Api{
     this.surname = surname;
   }
 }
+*/
