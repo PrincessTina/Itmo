@@ -4,6 +4,10 @@
     font-family: Monotype Corsiva, serif;
 }
 
+body {
+    font-family: "Lato", sans-serif
+}
+
 .ui-menubar {
     width: 100%;
     height: 10%;
@@ -98,4 +102,8 @@ img {
 .ui-widget .ui-widget {
     font-size: 1em;
     font-family: Monotype Corsiva, serif;
+}
+
+.mySlides {
+    display: none
 }

@@ -2,95 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bae94e55-fd54-4867-ae39-dda9c4df9c7f" name="Default" comment="Pip: finish lab3">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/.idea/libraries/Gradle__com_google_code_gson_gson_2_2_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/.idea/libraries/Gradle__com_sun_faces_jsf_api_2_2_10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/.idea/libraries/Gradle__com_sun_faces_jsf_impl_2_2_10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/.idea/libraries/Gradle__org_apache_commons_commons_lang3_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/.idea/libraries/Gradle__org_omnifaces_omnifaces_1_14.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/.idea/libraries/Gradle__org_primefaces_extensions_all_themes_pom_1_0_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/.idea/libraries/Gradle__org_primefaces_extensions_primefaces_extensions_6_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/.idea/libraries/Gradle__org_primefaces_primefaces_6_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/beans/ColorBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/cruds/Crud_Api.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/cruds/Crud_Artifact.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/cruds/Crud_Author.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/cruds/Crud_Award.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/cruds/Crud_Character.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/cruds/Crud_Country.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/cruds/Crud_Event.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/cruds/Crud_Image.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/cruds/Crud_Legend.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/cruds/Crud_Note.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/cruds/Crud_Phrase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/cruds/Crud_Rating.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/cruds/Crud_Users.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/ejbs/Ejb_Image.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/entities/Artifact.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/entities/Author.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/entities/Award.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/entities/Character.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/entities/Country.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/entities/Event.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/entities/Image.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/entities/Legend.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/entities/Note.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/entities/Phrase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/entities/Rating.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/build/classes/main/entities/Users.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/entities/Artifact.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/entities/Author.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/entities/Award.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/entities/Character.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/entities/Country.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/entities/Event.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/entities/Image.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/entities/Legend.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/entities/Note.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/entities/Phrase.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/entities/Rating.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/entities/Users.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/src/main/webapp/WEB-INF/faces-config.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/src/main/webapp/WEB-INF/glassfish-web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/src/main/webapp/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../courseWork/src/main/webapp/index.xhtml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/.gradle/3.5-rc-2/fileContent/annotation-processors.bin" afterPath="$PROJECT_DIR$/../courseWork/.gradle/3.5-rc-2/fileContent/annotation-processors.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/.gradle/3.5-rc-2/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/../courseWork/.gradle/3.5-rc-2/fileContent/fileContent.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../courseWork/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" afterPath="$PROJECT_DIR$/../courseWork/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/../courseWork/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/.gradle/3.5-rc-2/taskHistory/jvmClassSignatures.bin" afterPath="$PROJECT_DIR$/../courseWork/.gradle/3.5-rc-2/taskHistory/jvmClassSignatures.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/../courseWork/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/../courseWork/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/build/libs/courseWork-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/../courseWork/build/libs/courseWork-1.0-SNAPSHOT.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/.idea/artifacts/Gradle___courseWork_1_0_SNAPSHOT_war__exploded_.xml" afterPath="$PROJECT_DIR$/../courseWork/.idea/artifacts/Gradle___courseWork_1_0_SNAPSHOT_war__exploded_.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/../courseWork/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/.idea/misc.xml" afterPath="$PROJECT_DIR$/../courseWork/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/.idea/modules/courseWork.iml" afterPath="$PROJECT_DIR$/../courseWork/.idea/modules/courseWork.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/.idea/modules/courseWork_main.iml" afterPath="$PROJECT_DIR$/../courseWork/.idea/modules/courseWork_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/.idea/modules/courseWork_test.iml" afterPath="$PROJECT_DIR$/../courseWork/.idea/modules/courseWork_test.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../courseWork/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/build.gradle" afterPath="$PROJECT_DIR$/../courseWork/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/build/resources/main/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/../courseWork/build/resources/main/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/../courseWork/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Api.java" afterPath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Api.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Artifact.java" afterPath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Artifact.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Author.java" afterPath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Author.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Award.java" afterPath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Award.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Character.java" afterPath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Character.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Country.java" afterPath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Country.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Event.java" afterPath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Event.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Image.java" afterPath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Image.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Legend.java" afterPath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Legend.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Note.java" afterPath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Note.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Phrase.java" afterPath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Phrase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Rating.java" afterPath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Rating.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Users.java" afterPath="$PROJECT_DIR$/../courseWork/src/main/java/cruds/Crud_Users.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/ejbs/Ejb_Image.java" afterPath="$PROJECT_DIR$/../courseWork/src/main/java/ejbs/Ejb_Image.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/../courseWork/src/main/resources/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/../courseWork/src/main/webapp/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/src/main/webapp/resources/css/index.css" afterPath="$PROJECT_DIR$/../courseWork/src/main/webapp/resources/css/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/src/main/webapp/resources/js/index.js" afterPath="$PROJECT_DIR$/../courseWork/src/main/webapp/resources/js/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scripts/create.sql" afterPath="$PROJECT_DIR$/../scripts/create.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scripts/insert.sql" afterPath="$PROJECT_DIR$/../scripts/insert.sql" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
