@@ -2,44 +2,145 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a32c1388-fc1c-46f6-8fde-58e44b271a17" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_1_7_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controllers/api/ImagesController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/models/cruds/ImagesCrud.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/ImagesCarousel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/collections/ImagesCollection.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/models/ImageModel.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/ejbs/Ejb_Image.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/annotation-processors.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/annotation-processors.bin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/components/IndexSlider.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Index.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/controllers/api/ImagesController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/controllers/api/UsersController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/cruds/Crud.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/cruds/ImagesCrud.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/cruds/UsersCrud.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Artifact.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Author.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Award.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Character.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Country.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Event.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Image.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Legend.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Note.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Phrase.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Rating.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Users.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/controllers/api/UsersController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/cruds/Crud.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/cruds/UsersCrud.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Artifact.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Author.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Award.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Character.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Country.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Event.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Image.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Legend.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Note.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Phrase.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Rating.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Users.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/ImagesCarousel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/collections/ImagesCollection.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/models/ImageModel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/models/UserModel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.gradle/3.5-rc-2/file-changes/last-build.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.gradle/3.5-rc-2/fileContent/annotation-processors.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.gradle/3.5-rc-2/fileContent/fileContent.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.gradle/3.5-rc-2/taskHistory/jvmClassSignatures.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.gradle/buildOutputCleanup/built.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.gradle/buildOutputCleanup/cache.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.gradle/buildOutputCleanup/cache.properties.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/artifacts/Gradle___proba_1_0_SNAPSHOT_war.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/artifacts/Gradle___proba_1_0_SNAPSHOT_war__exploded_.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/gradle.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/libraries/Gradle__javax_ejb_javax_ejb_api_3_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/libraries/Gradle__javax_servlet_javax_servlet_api_3_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/libraries/Gradle__javax_transaction_javax_transaction_api_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/libraries/Gradle__javax_ws_rs_javax_ws_rs_api_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/libraries/Gradle__junit_junit_4_12.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/modules/proba.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/modules/proba_main.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/modules/proba_test.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/build/classes/main/ejb/HelloWorldBean.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/build/classes/main/ejb/IHelloWorld.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/build/classes/main/servlets/ServletHello.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/build/libs/proba-1.0-SNAPSHOT.war" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/build/tmp/war/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/gradle/wrapper/gradle-wrapper.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/gradle/wrapper/gradle-wrapper.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/gradlew" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/gradlew.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/settings.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/src/main/java/ejb/HelloWorldBean.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/src/main/java/ejb/IHelloWorld.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/src/main/java/servlets/ServletHello.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/src/main/webapp/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/src/main/webapp/index.jsp" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/controllers/api/ImagesController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/ImageController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/controllers/api/UsersController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/UsersController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Api.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Api.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Artifact.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Artifact.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Author.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Author.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Award.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Award.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Character.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Character.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Country.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Country.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Event.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Event.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Image.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Image.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Legend.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Legend.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Note.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Note.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Phrase.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Phrase.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Rating.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Rating.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Users.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Users.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/cruds/Crud.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/Access.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/cruds/ImagesCrud.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/ImageAccess.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/cruds/UsersCrud.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/UsersAccess.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Artifact.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Artifact.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Author.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Author.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Award.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Award.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Character.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Character.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Country.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Country.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Event.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Event.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Image.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Image.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Legend.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Legend.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Note.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Note.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Phrase.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Phrase.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Rating.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Rating.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Users.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Users.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/LoginWindow.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/components/LoginWindow.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/RegWindow.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/fileContent.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/jvmClassSignatures.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/jvmClassSignatures.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/controllers/api/UsersController.class" afterPath="$PROJECT_DIR$/build/classes/main/controllers/api/UsersController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/models/cruds/Crud.class" afterPath="$PROJECT_DIR$/build/classes/main/models/cruds/Crud.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/models/cruds/UsersCrud.class" afterPath="$PROJECT_DIR$/build/classes/main/models/cruds/UsersCrud.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/courseWork-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/build/libs/courseWork-1.0-SNAPSHOT.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Gradle___courseWork_1_0_SNAPSHOT_war__exploded_.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Gradle___courseWork_1_0_SNAPSHOT_war__exploded_.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/courseWork.iml" afterPath="$PROJECT_DIR$/.idea/modules/courseWork.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/courseWork_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/courseWork_test.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/courseWork_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/courseWork_main.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/LanguageTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/LanguageTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/build/resources/main/META-INF/persistence.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-LanguageTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-LanguageTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/api/UsersController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/api/UsersController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/models/cruds/Crud.java" afterPath="$PROJECT_DIR$/src/main/java/models/cruds/Crud.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/models/cruds/UsersCrud.java" afterPath="$PROJECT_DIR$/src/main/java/models/cruds/UsersCrud.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/index.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/LoginWindow.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/LoginWindow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/RegWindow.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/RegWindow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/index.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../lab3/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../lab3/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scripts/insert.sql" afterPath="$PROJECT_DIR$/../scripts/insert.sql" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -75,104 +176,62 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="599">
-              <caret line="37" column="38" lean-forward="true" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+            <state relative-caret-position="441">
+              <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LanguageTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/LanguageTest.java">
+      <file leaf-file-name="RegWindow.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/Index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-385">
-              <caret line="74" column="11" lean-forward="true" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserModel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/models/UserModel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageModel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/models/ImageModel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImagesCarousel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/ImagesCarousel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state relative-caret-position="1155">
+              <caret line="55" column="26" lean-forward="true" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
               <folding>
-                <marker date="1515101479485" expanded="true" signature="1656:1785" ph="..." />
-                <marker date="1515101479485" expanded="true" signature="1735:1745" ph="..." />
+                <marker date="1515192930911" expanded="true" signature="1304:2938" ph="..." />
+                <marker date="1515192930911" expanded="true" signature="1362:2929" ph="..." />
+                <marker date="1515192930911" expanded="true" signature="1383:1444" ph="..." />
+                <marker date="1515192930911" expanded="true" signature="1495:2914" ph="..." />
+                <marker date="1515192930911" expanded="true" signature="1536:1936" ph="..." />
+                <marker date="1515192930911" expanded="true" signature="1582:1743" ph="..." />
+                <marker date="1515192930911" expanded="true" signature="1674:1715" ph="..." />
+                <marker date="1515192930911" expanded="true" signature="1819:1913" ph="..." />
+                <marker date="1515192930911" expanded="true" signature="1975:2207" ph="..." />
+                <marker date="1515192930911" expanded="true" signature="2059:2085" ph="..." />
+                <marker date="1515192930911" expanded="true" signature="2172:2183" ph="..." />
+                <marker date="1515192930911" expanded="true" signature="2248:2474" ph="..." />
+                <marker date="1515192930911" expanded="true" signature="2332:2358" ph="..." />
+                <marker date="1515192930911" expanded="true" signature="2439:2450" ph="..." />
+                <marker date="1515192930911" expanded="true" signature="2515:2749" ph="..." />
+                <marker date="1515192930911" expanded="true" signature="2599:2624" ph="..." />
+                <marker date="1515192930911" expanded="true" signature="2715:2725" ph="..." />
+                <marker date="1515192930911" expanded="true" signature="2839:2867" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="persistence.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <file leaf-file-name="LoginWindow.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/LoginWindow.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImagesCollection.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/collections/ImagesCollection.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImagesController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/api/ImagesController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="32" column="33" lean-forward="false" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+            <state relative-caret-position="367">
+              <caret line="39" column="48" lean-forward="false" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1230#1239#0" expanded="true" />
+                <marker date="1515192931037" expanded="true" signature="800:2082" ph="..." />
+                <marker date="1515192931037" expanded="true" signature="821:882" ph="..." />
+                <marker date="1515192931037" expanded="true" signature="933:2067" ph="..." />
+                <marker date="1515192931037" expanded="true" signature="974:1367" ph="..." />
+                <marker date="1515192931037" expanded="true" signature="1020:1181" ph="..." />
+                <marker date="1515192931037" expanded="true" signature="1112:1153" ph="..." />
+                <marker date="1515192931037" expanded="true" signature="1257:1344" ph="..." />
+                <marker date="1515192931037" expanded="true" signature="1406:1638" ph="..." />
+                <marker date="1515192931037" expanded="true" signature="1490:1516" ph="..." />
+                <marker date="1515192931037" expanded="true" signature="1603:1614" ph="..." />
+                <marker date="1515192931037" expanded="true" signature="1679:1913" ph="..." />
+                <marker date="1515192931037" expanded="true" signature="1763:1788" ph="..." />
+                <marker date="1515192931037" expanded="true" signature="1879:1889" ph="..." />
+                <marker date="1515192931037" expanded="true" signature="2005:2033" ph="..." />
               </folding>
             </state>
           </provider>
@@ -220,8 +279,8 @@
       <find>ImageModel</find>
       <find>img</find>
       <find>carouselImages</find>
-      <find>console.log</find>
       <find>у</find>
+      <find>console.log</find>
     </findStrings>
     <replaceStrings>
       <replace>public</replace>
@@ -234,6 +293,9 @@
       <replace>() =&gt;</replace>
       <replace>()</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>C:\Users\krist\Documents\itmo\pip\courseWork\src\main\java\models\entities</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -425,7 +487,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4543802768758" />
+        <entry key="$PROJECT_DIR$" value="4543802790826" />
         <entry key="$PROJECT_DIR$/build.gradle" value="776316517" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="615277776" />
       </map>
@@ -601,21 +663,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/entities/Phrase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Event.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Award.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Artifact.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Character.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Country.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Image.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Legend.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Users.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/login_window.js" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/api/ApiController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/cruds/Users.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cruds/Crud_Users.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cruds/Crud_Artifact.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cruds/Crud_Author.java" />
         <option value="$PROJECT_DIR$/src/main/java/cruds/Crud_Character.java" />
         <option value="$PROJECT_DIR$/src/main/java/cruds/Crud_Event.java" />
         <option value="$PROJECT_DIR$/src/main/java/cruds/Crud_Award.java" />
@@ -637,21 +684,36 @@
         <option value="$PROJECT_DIR$/src/test/java/LanguageTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/cruds/Crud.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/cruds/UsersCrud.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/index.css" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/api/UsersController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/Carousel.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/RegWindow.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/LoginWindow.js" />
         <option value="$PROJECT_DIR$/src/main/java/models/cruds/ImagesCrud.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/api/ImagesController.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/entities/Image.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/carousel.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/models/ImageModel.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/collections/ImagesCollection.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/Index.js" />
+        <option value="$PROJECT_DIR$/src/main/java/ejb/UsersCrud.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/ImagesController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ejb/ImagesCrud.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/UsersController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/backbone_models/ImageVodel.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/backbone_models/ImageModel.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/backbone_collections/ImagesCollection.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/ImagesCarousel.js" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/ImageController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/IndexSlider.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/Index.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/backbone_models/UserModel.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/RegWindow.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/index.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/LoginWindow.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/IndexSlider.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Index.js" />
       </list>
     </option>
   </component>
@@ -692,6 +754,7 @@
       <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -699,18 +762,88 @@
               <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
               <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
+            <path>
+              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
     <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Problems" />
@@ -719,22 +852,25 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\krist\Documents\itmo\pip\courseWork\src\main\webapp\resources\js\pages" />
+      <recent name="C:\Users\krist\Documents\itmo\pip\courseWork\src\main\webapp\resources\js\components" />
+      <recent name="C:\Users\krist\Documents\itmo\pip\courseWork\src\main\resources" />
+      <recent name="C:\Users\krist\Documents\itmo\pip\courseWork\src\main\webapp" />
+      <recent name="C:\Users\krist\Documents\itmo\pip\courseWork\src\main\webapp\resources\js" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
       <recent name="models" />
       <recent name="controllers" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="classes" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\krist\Documents\itmo\pip\courseWork\src\main\webapp" />
       <recent name="C:\Users\krist\Documents\itmo\pip\courseWork\src\main\java" />
       <recent name="C:\Users\krist\Documents\itmo\pip\courseWork\src\main\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="classes" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\krist\Documents\itmo\pip\courseWork\src\main\resources" />
-      <recent name="C:\Users\krist\Documents\itmo\pip\courseWork\src\main\webapp" />
-      <recent name="C:\Users\krist\Documents\itmo\pip\courseWork\src\main\webapp\resources\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -909,7 +1045,8 @@
       <workItem from="1514376223049" duration="9770000" />
       <workItem from="1514838202159" duration="12708000" />
       <workItem from="1514987984293" duration="15662000" />
-      <workItem from="1515027338758" duration="28348000" />
+      <workItem from="1515027338758" duration="30370000" />
+      <workItem from="1515157997443" duration="21028000" />
     </task>
     <servers />
   </component>
@@ -931,7 +1068,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150039000" />
+    <option name="totallyTimeSpent" value="173089000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -956,13 +1093,12 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39907727" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871974" sideWeight="0.49166217" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22004609" sideWeight="0.49166217" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25490198" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27218935" sideWeight="0.50691247" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27218935" sideWeight="0.49140894" order="0" side_tool="false" content_ui="combo" />
@@ -976,42 +1112,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5083378" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974717" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959655" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976957" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.49166217" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27218935" sideWeight="0.50691247" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27218935" sideWeight="0.49140894" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27218935" sideWeight="0.50859106" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27218935" sideWeight="0.50691247" order="6" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1052,109 +1155,66 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/entities/Character.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/beans/ColorBean.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/entities/Rating.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cruds/Crud_Author.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/old_cruds/Crud_Author.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
           <caret line="89" column="2" lean-forward="false" selection-start-line="89" selection-start-column="2" selection-end-line="89" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#1827#0" expanded="false" />
-            <marker date="1514986972118" expanded="false" signature="351:533" ph="{...}" />
-            <marker date="1514986972118" expanded="false" signature="558:865" ph="{...}" />
-            <marker date="1514986972118" expanded="false" signature="890:1145" ph="{...}" />
-            <marker date="1514986972118" expanded="false" signature="1170:1480" ph="{...}" />
-            <marker date="1514986972118" expanded="false" signature="1502:1509" ph=" { " />
-            <marker date="1514986972118" expanded="false" signature="1519:1523" ph=" }" />
-            <marker date="1514986972118" expanded="false" signature="1552:1559" ph=" { " />
-            <marker date="1514986972118" expanded="false" signature="1572:1576" ph=" }" />
-            <marker date="1514986972118" expanded="false" signature="1603:1610" ph=" { " />
-            <marker date="1514986972118" expanded="false" signature="1622:1626" ph=" }" />
-            <marker date="1514986972118" expanded="false" signature="1662:1669" ph=" { " />
-            <marker date="1514986972118" expanded="false" signature="1686:1690" ph=" }" />
-            <marker date="1514986972118" expanded="false" signature="1720:1727" ph=" { " />
-            <marker date="1514986972118" expanded="false" signature="1742:1746" ph=" }" />
-            <marker date="1514986972118" expanded="false" signature="1788:1795" ph=" { " />
-            <marker date="1514986972118" expanded="false" signature="1818:1822" ph=" }" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cruds/Crud_Character.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/old_cruds/Crud_Character.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="461">
           <caret line="39" column="4" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cruds/Crud_Event.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/old_cruds/Crud_Event.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="40" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cruds/Crud_Award.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/old_cruds/Crud_Award.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="25" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cruds/Crud_Country.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/old_cruds/Crud_Country.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="693">
           <caret line="94" column="41" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cruds/Crud_Legend.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/old_cruds/Crud_Legend.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="768">
           <caret line="123" column="31" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cruds/Crud_Note.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/old_cruds/Crud_Note.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="69" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cruds/Crud_Phrase.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/old_cruds/Crud_Phrase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="17" column="6" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cruds/Crud_Rating.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/old_cruds/Crud_Rating.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1512">
           <caret line="72" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1173,43 +1233,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cruds/Crud_Api.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/old_cruds/Crud_Api.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#278#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cruds/Crud_Artifact.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/old_cruds/Crud_Artifact.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
           <caret line="102" column="2" lean-forward="false" selection-start-line="102" selection-start-column="2" selection-end-line="102" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#2199#0" expanded="false" />
-            <marker date="1514986970125" expanded="false" signature="232:281" ph="@{...}" />
-            <marker date="1514986970125" expanded="false" signature="679:998" ph="{...}" />
-            <marker date="1514986970125" expanded="false" signature="1023:1278" ph="{...}" />
-            <marker date="1514986970125" expanded="false" signature="1303:1631" ph="{...}" />
-            <marker date="1514986970125" expanded="false" signature="1653:1660" ph=" { " />
-            <marker date="1514986970125" expanded="false" signature="1670:1674" ph=" }" />
-            <marker date="1514986970125" expanded="false" signature="1703:1710" ph=" { " />
-            <marker date="1514986970125" expanded="false" signature="1723:1727" ph=" }" />
-            <marker date="1514986970125" expanded="false" signature="1755:1762" ph=" { " />
-            <marker date="1514986970125" expanded="false" signature="1778:1782" ph=" }" />
-            <marker date="1514986970125" expanded="false" signature="1823:1830" ph=" { " />
-            <marker date="1514986970125" expanded="false" signature="1855:1859" ph=" }" />
-            <marker date="1514986970125" expanded="false" signature="1893:1900" ph=" { " />
-            <marker date="1514986970125" expanded="false" signature="1919:1923" ph=" }" />
-            <marker date="1514986970125" expanded="false" signature="1973:1980" ph=" { " />
-            <marker date="1514986970125" expanded="false" signature="2011:2015" ph=" }" />
-            <marker date="1514986970125" expanded="false" signature="2062:2069" ph=" { " />
-            <marker date="1514986970125" expanded="false" signature="2087:2091" ph=" }" />
-            <marker date="1514986970125" expanded="false" signature="2153:2160" ph=" { " />
-            <marker date="1514986970125" expanded="false" signature="2189:2193" ph=" }" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1230,7 +1264,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/entities/Author.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Author.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
@@ -1238,51 +1272,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/entities/Artifact.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cruds/Crud_Users.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/old_cruds/Crud_Users.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="768">
           <caret line="71" column="3" lean-forward="false" selection-start-line="23" selection-start-column="2" selection-end-line="71" selection-end-column="3" />
-          <folding>
-            <marker date="1514986970285" expanded="false" signature="278:325" ph="@{...}" />
-            <marker date="1514986970285" expanded="false" signature="1122:1377" ph="{...}" />
-            <marker date="1514986970285" expanded="false" signature="1402:1763" ph="{...}" />
-            <marker date="1514986970285" expanded="false" signature="1785:1792" ph=" { " />
-            <marker date="1514986970285" expanded="false" signature="1802:1806" ph=" }" />
-            <marker date="1514986970285" expanded="false" signature="1835:1842" ph=" { " />
-            <marker date="1514986970285" expanded="false" signature="1855:1859" ph=" }" />
-            <marker date="1514986970285" expanded="false" signature="1887:1894" ph=" { " />
-            <marker date="1514986970285" expanded="false" signature="1907:1911" ph=" }" />
-            <marker date="1514986970285" expanded="false" signature="1949:1956" ph=" { " />
-            <marker date="1514986970285" expanded="false" signature="1975:1979" ph=" }" />
-            <marker date="1514986970285" expanded="false" signature="2010:2017" ph=" { " />
-            <marker date="1514986970285" expanded="false" signature="2033:2037" ph=" }" />
-            <marker date="1514986970285" expanded="false" signature="2081:2088" ph=" { " />
-            <marker date="1514986970285" expanded="false" signature="2113:2117" ph=" }" />
-            <marker date="1514986970285" expanded="false" signature="2151:2158" ph=" { " />
-            <marker date="1514986970285" expanded="false" signature="2179:2183" ph=" }" />
-            <marker date="1514986970285" expanded="false" signature="2235:2242" ph=" { " />
-            <marker date="1514986970285" expanded="false" signature="2277:2281" ph=" }" />
-            <marker date="1514986970285" expanded="false" signature="2320:2327" ph=" { " />
-            <marker date="1514986970285" expanded="false" signature="2341:2345" ph=" }" />
-            <marker date="1514986970285" expanded="false" signature="2395:2402" ph=" { " />
-            <marker date="1514986970285" expanded="false" signature="2423:2427" ph=" }" />
-            <marker date="1514986970285" expanded="false" signature="2468:2475" ph=" { " />
-            <marker date="1514986970285" expanded="false" signature="2490:2494" ph=" }" />
-            <marker date="1514986970285" expanded="false" signature="2547:2554" ph=" { " />
-            <marker date="1514986970285" expanded="false" signature="2577:2581" ph=" }" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/entities/Award.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Award.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="31" column="3" lean-forward="false" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
@@ -1294,11 +1291,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/entities/Phrase.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Phrase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
@@ -1306,41 +1302,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/entities/Users.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Users.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#503#539#0" expanded="false" />
+            <element signature="e#494#530#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cruds/Crud_Image.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/old_cruds/Crud_Image.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
           <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-          <folding>
-            <marker date="1514986970369" expanded="false" signature="528:536" ph="&lt;~&gt;" />
-            <marker date="1514986970369" expanded="false" signature="725:734" ph="&lt;~&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/cruds/Crud.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1348,7 +1324,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1356,7 +1331,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="1019" column="4" lean-forward="false" selection-start-line="1019" selection-start-column="4" selection-end-line="1019" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1364,7 +1338,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="404" column="18" lean-forward="false" selection-start-line="404" selection-start-column="18" selection-end-line="404" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1372,39 +1345,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/cruds/UsersCrud.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#create#0;class#UsersCrud#0" expanded="false" />
-            <element signature="method#read#0;class#UsersCrud#0" expanded="false" />
-            <element signature="method#delete#0;class#UsersCrud#0" expanded="false" />
-            <element signature="method#update#0;class#UsersCrud#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/LoginWindow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="3" />
-          <folding>
-            <marker date="1515092366504" expanded="true" signature="260:921" ph="..." />
-            <marker date="1515092366504" expanded="true" signature="310:328" ph="..." />
-            <marker date="1515092366504" expanded="true" signature="375:921" ph="..." />
-            <marker date="1515092366504" expanded="true" signature="411:600" ph="..." />
-            <marker date="1515092366504" expanded="true" signature="636:834" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/entities/Image.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Image.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
@@ -1412,134 +1356,251 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/api/UsersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="46" column="27" lean-forward="true" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/RegWindow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-          <folding>
-            <marker date="1515092366395" expanded="true" signature="946:1931" ph="..." />
-            <marker date="1515092366395" expanded="true" signature="974:992" ph="..." />
-            <marker date="1515092366395" expanded="true" signature="1119:1916" ph="..." />
-            <marker date="1515092366395" expanded="true" signature="1155:1354" ph="..." />
-            <marker date="1515092366395" expanded="true" signature="1390:1583" ph="..." />
-            <marker date="1515092366395" expanded="true" signature="1619:1827" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/cruds/ImagesCrud.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#316#323#0" expanded="true" />
-            <marker date="1515094926120" expanded="true" signature="200:638" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/api/ImagesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="32" column="33" lean-forward="false" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1230#1239#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejbs/Ejb_Image.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="33" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/models/UserModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/models/ImageModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/collections/ImagesCollection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/ImagesCarousel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <marker date="1515101479485" expanded="true" signature="1656:1785" ph="..." />
-            <marker date="1515101479485" expanded="true" signature="1735:1745" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/Index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-385">
-          <caret line="74" column="11" lean-forward="true" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="37" column="38" lean-forward="true" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejbs/Ejb_Image.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/LanguageTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
-          <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+          <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+        <state relative-caret-position="483">
+          <caret line="23" column="80" lean-forward="false" selection-start-line="23" selection-start-column="80" selection-end-line="23" selection-end-column="80" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Artifact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/Access.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/ImageAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+          <folding>
+            <element signature="method#readInitImages#0;class#ImageAccess#0" expanded="false" />
+            <element signature="method#read#0;class#ImageAccess#0" expanded="false" />
+            <marker date="1515178013398" expanded="true" signature="186:544" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/backbone_collections/ImageCollection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="3" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/backbone_models/ImageModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="37" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/backbone_models/ImageModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/backbone_collections/ImagesCollection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ImageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-200">
+          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding>
+            <element signature="method#getSliderContent#0;class#ImageController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/backbone_models/UserModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/UsersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="56" column="95" lean-forward="true" selection-start-line="56" selection-start-column="95" selection-end-line="56" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/UsersAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="41" column="95" lean-forward="false" selection-start-line="41" selection-start-column="95" selection-end-line="41" selection-end-column="95" />
+          <folding>
+            <element signature="method#create#0;class#UsersAccess#0" expanded="false" />
+            <element signature="method#read#0;class#UsersAccess#0" expanded="false" />
+            <element signature="method#delete#0;class#UsersAccess#0" expanded="false" />
+            <element signature="method#update#0;class#UsersAccess#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/LoginWindow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="39" column="48" lean-forward="false" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
+          <folding>
+            <marker date="1515192931037" expanded="true" signature="800:2082" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="821:882" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="933:2067" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="974:1367" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="1020:1181" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="1112:1153" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="1257:1344" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="1406:1638" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="1490:1516" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="1603:1614" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="1679:1913" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="1763:1788" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="1879:1889" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="2005:2033" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/IndexSlider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <folding>
+            <marker date="1515193631030" expanded="true" signature="1501:1649" ph="..." />
+            <marker date="1515193631030" expanded="true" signature="1580:1609" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+          <folding>
+            <marker date="1515193630923" expanded="true" signature="305:1896" ph="..." />
+            <marker date="1515193630923" expanded="true" signature="355:1879" ph="..." />
+            <marker date="1515193630923" expanded="true" signature="484:584" ph="..." />
+            <marker date="1515193630923" expanded="true" signature="744:1288" ph="..." />
+            <marker date="1515193630923" expanded="true" signature="943:1267" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/pages/Index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="48" column="22" lean-forward="false" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+          <folding>
+            <marker date="1515193769635" expanded="true" signature="380:4204" ph="..." />
+            <marker date="1515193769635" expanded="false" signature="493:525" ph="..." />
+            <marker date="1515193769635" expanded="true" signature="526:3762" ph="..." />
+            <marker date="1515193769635" expanded="false" signature="719:734" ph="..." />
+            <marker date="1515193769635" expanded="true" signature="745:1203" ph="..." />
+            <marker date="1515193769635" expanded="true" signature="908:1184" ph="..." />
+            <marker date="1515193769635" expanded="true" signature="1290:3745" ph="..." />
+            <marker date="1515193769635" expanded="false" signature="1364:1379" ph="..." />
+            <marker date="1515193769635" expanded="true" signature="1380:3726" ph="..." />
+            <marker date="1515193769635" expanded="false" signature="1563:1577" ph="..." />
+            <marker date="1515193769635" expanded="true" signature="1578:3705" ph="..." />
+            <marker date="1515193769635" expanded="true" signature="1636:2266" ph="..." />
+            <marker date="1515193769635" expanded="false" signature="1738:1748" ph="..." />
+            <marker date="1515193769635" expanded="true" signature="1830:2241" ph="..." />
+            <marker date="1515193769635" expanded="true" signature="2100:2214" ph="..." />
+            <marker date="1515193769635" expanded="true" signature="2343:2965" ph="..." />
+            <marker date="1515193769635" expanded="false" signature="2440:2450" ph="..." />
+            <marker date="1515193769635" expanded="true" signature="2532:2940" ph="..." />
+            <marker date="1515193769635" expanded="true" signature="2799:2913" ph="..." />
+            <marker date="1515193769635" expanded="true" signature="3042:3682" ph="..." />
+            <marker date="1515193769635" expanded="false" signature="3149:3159" ph="..." />
+            <marker date="1515193769635" expanded="true" signature="3241:3657" ph="..." />
+            <marker date="1515193769635" expanded="true" signature="3516:3630" ph="..." />
+            <marker date="1515193769635" expanded="true" signature="3908:4189" ph="..." />
+            <marker date="1515193769635" expanded="true" signature="4190:4204" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="55" column="26" lean-forward="true" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+          <folding>
+            <marker date="1515192930911" expanded="true" signature="1304:2938" ph="..." />
+            <marker date="1515192930911" expanded="true" signature="1362:2929" ph="..." />
+            <marker date="1515192930911" expanded="true" signature="1383:1444" ph="..." />
+            <marker date="1515192930911" expanded="true" signature="1495:2914" ph="..." />
+            <marker date="1515192930911" expanded="true" signature="1536:1936" ph="..." />
+            <marker date="1515192930911" expanded="true" signature="1582:1743" ph="..." />
+            <marker date="1515192930911" expanded="true" signature="1674:1715" ph="..." />
+            <marker date="1515192930911" expanded="true" signature="1819:1913" ph="..." />
+            <marker date="1515192930911" expanded="true" signature="1975:2207" ph="..." />
+            <marker date="1515192930911" expanded="true" signature="2059:2085" ph="..." />
+            <marker date="1515192930911" expanded="true" signature="2172:2183" ph="..." />
+            <marker date="1515192930911" expanded="true" signature="2248:2474" ph="..." />
+            <marker date="1515192930911" expanded="true" signature="2332:2358" ph="..." />
+            <marker date="1515192930911" expanded="true" signature="2439:2450" ph="..." />
+            <marker date="1515192930911" expanded="true" signature="2515:2749" ph="..." />
+            <marker date="1515192930911" expanded="true" signature="2599:2624" ph="..." />
+            <marker date="1515192930911" expanded="true" signature="2715:2725" ph="..." />
+            <marker date="1515192930911" expanded="true" signature="2839:2867" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

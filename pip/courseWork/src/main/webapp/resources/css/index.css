@@ -7,100 +7,16 @@ body {
     font-family: "Lato", sans-serif
 }
 
-.ui-menubar {
-    width: 100%;
-    height: 10%;
-    background-color: black;
-    color: white;
-}
-
-.ui-widget-content a {
-    color: white;
-}
-
-.ui-widget-header .ui-inputfield, .ui-widget-content .ui-inputfield {
-    margin-right: 10px;
-    border-radius: 4px;
-}
-
-
-.ui-menubar .ui-menu-child .ui-menuitem-link {
-    background-color: black;
-}
-
-.ui-menubar .ui-menu-child .ui-menuitem-link {
-    background-color: black;
-    font-style: italic;
-    border-radius: 4px;
-}
-
-.ui-menubar .ui-menu-child .ui-menuitem-link:hover {
-    color: white;
-}
-
-img {
-    width: 100%;
-    height: 100%;
-}
-
-.reg_window {
-    background-color: rgba(0, 0, 0, 0.95);
-    color: white;
-    width: 360px;
-    height: 260px;
-    position: fixed;
-    z-index: 100;
-    line-height: 50px;
-    border: 1px solid #333;
-    border-radius: 2em;
-    top: 30%;
-    left: 40%;
-    text-align: center;
-}
-
-.reg_window .fields .field .input {
-    font-size: 16px;
-    padding: 3px;
-    width: 200px;
-}
-
-.reg_window .fields .field .icon {
-    width: 17px;
-    height: 17px;
-    margin-right: 5px;
-    vertical-align: middle;
-}
-
-.reg_window .cross {
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    top: 10px;
-    right: 21px;
-}
-
-.reg_window .cross:hover {
+.cross:hover {
     opacity: 0.8;
 }
 
-.reg_window .fields {
-    border-top: 1px solid white;
+.regWindow {
+    background-color: rgba(0, 0, 0, 0.95);
 }
 
-.reg_window .fields .regButton {
-    font-size: 16px;
-    margin-left: 25px;
-    padding: 3px;
-    width: 210px;
-}
-
-.ui-inputfield {
-    width: 200px;
-}
-
-.ui-widget .ui-widget {
-    font-size: 1em;
-    font-family: Monotype Corsiva, serif;
+.loginWindow {
+    background-color: rgba(0, 0, 0, 0.95);
 }
 
 .mySlides {

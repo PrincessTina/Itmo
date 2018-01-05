@@ -28,7 +28,7 @@
           <element id="library" level="project" name="Gradle: javax.transaction:javax.transaction-api:1.2" />
           <element id="library" level="project" name="Gradle: org.eclipse.persistence:javax.persistence:2.1.0" />
           <element id="library" level="project" name="Gradle: org.eclipse.persistence:commonj.sdo:2.1.1" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/1.7.2/112366d8158749e25532ebce162232c6e0fb20a5/gson-1.7.2.jar" />
+          <element id="library" level="project" name="Gradle: com.google.code.gson:gson:1.7.2" />
         </element>
       </element>
     </root>

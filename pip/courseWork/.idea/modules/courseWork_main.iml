@@ -36,13 +36,9 @@
     <orderEntry type="library" name="Gradle: org.eclipse.persistence:eclipselink:2.5.1" level="project" />
     <orderEntry type="library" name="Gradle: postgresql:postgresql:9.0-801.jdbc4" level="project" />
     <orderEntry type="library" name="Gradle: javax.servlet:javax.servlet-api:3.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.code.gson:gson:1.7.2" level="project" />
     <orderEntry type="library" name="Gradle: javax.transaction:javax.transaction-api:1.2" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.persistence:javax.persistence:2.1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.persistence:commonj.sdo:2.1.1" level="project" />
-    <orderEntry type="library" name="backbone" level="application" />
-    <orderEntry type="library" name="jquery-latest" level="application" />
-    <orderEntry type="library" name="underscore" level="application" />
-    <orderEntry type="library" name="popper" level="application" />
-    <orderEntry type="library" name="bootstrap" level="application" />
   </component>
 </module>
