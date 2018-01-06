@@ -20,16 +20,45 @@ $(document).ready(() => {
         },
 
         register() {
-            let root = document.getElementsByClassName("regWindow")[0];
+            let username = document.getElementsByClassName("_username")[0];
+            let email = document.getElementsByClassName("_email")[0];
+            let password = document.getElementsByClassName("_password")[0];
 
-            let user = new UserModel({
-                action: "reg",
-                login: root.getElementsByClassName("_username")[0].value,
-                email: root.getElementsByClassName("_email")[0].value,
-                password: root.getElementsByClassName("_password")[0].value,
-            });
+            if (this.validate(username, email, password)) {
+                let user = new UserModel({
+                    action: "reg",
+                    login: username.value,
+                    email: email.value,
+                    password: password.value,
+                });
 
-            user.save();
+                user.save();
+            }
+        },
+
+        validate(username, email, password) {
+            //start condition
+            username.classList.remove("w3-border-0", "w3-pale-red", "w3-leftbar", "w3-border-red");
+            email.classList.remove("w3-border-0", "w3-pale-red", "w3-leftbar", "w3-border-red");
+            password.classList.remove("w3-border-0", "w3-pale-red", "w3-leftbar", "w3-border-red");
+
+            if (username.value === "" || /\s+/.test(username.value)) {
+                username.classList.add("w3-border-0", "w3-pale-red", "w3-leftbar", "w3-border-red");
+                return false;
+            }
+
+            if (email.value === "" || /\s+/.test(email.value) ||
+                !/@(mail.ru|bk.ru|list.ru|inbox.ru|gmail.ru)$/.test(email.value)) {
+                email.classList.add("w3-border-0", "w3-pale-red", "w3-leftbar", "w3-border-red");
+                return false;
+            }
+
+            if (password.value === "" || /\s+/.test(password.value)) {
+                password.classList.add("w3-border-0", "w3-pale-red", "w3-leftbar", "w3-border-red");
+                return false;
+            }
+
+            return true;
         },
 
         closeWindow() {

@@ -55,7 +55,9 @@ public class UsersController extends HttpServlet {
   }
 
   private void tryAddUser(String login, String password, String email) throws ServletException {
-    if (login.isEmpty() || email.isEmpty() || password.isEmpty()) {
+    if (login.isEmpty() || email.isEmpty() || password.isEmpty() || password.matches(".*\\s+") ||
+        login.matches(".*\\s+") || email.matches(".*\\s+") ||
+        !email.matches(".*@(mail.ru|bk.ru|list.ru|inbox.ru|gmail.ru)$")) {
       throw new ServletException("Incorrect input");
     }
 

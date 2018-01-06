@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="LanguageTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-01-05T18:55:35" hostname="LAPTOP-CN4TD6JS" time="0.005">
+<testsuite name="LanguageTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-01-06T00:49:34" hostname="LAPTOP-CN4TD6JS" time="0.031">
   <properties/>
-  <testcase name="testSqlDate" classname="LanguageTest" time="0.005"/>
-  <system-out><![CDATA[2018-01-05
+  <testcase name="testSqlDate" classname="LanguageTest" time="0.031"/>
+  <system-out><![CDATA[2018-01-06
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

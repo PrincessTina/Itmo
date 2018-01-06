@@ -2,145 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a32c1388-fc1c-46f6-8fde-58e44b271a17" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/components/IndexSlider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Index.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/controllers/api/ImagesController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/controllers/api/UsersController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/cruds/Crud.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/cruds/ImagesCrud.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/cruds/UsersCrud.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Artifact.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Author.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Award.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Character.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Country.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Event.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Image.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Legend.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Note.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Phrase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Rating.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/models/entities/Users.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/controllers/api/UsersController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/cruds/Crud.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/cruds/UsersCrud.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Artifact.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Author.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Award.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Character.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Country.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Event.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Image.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Legend.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Note.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Phrase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Rating.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/models/entities/Users.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/ImagesCarousel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/collections/ImagesCollection.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/models/ImageModel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/models/UserModel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.gradle/3.5-rc-2/file-changes/last-build.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.gradle/3.5-rc-2/fileContent/annotation-processors.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.gradle/3.5-rc-2/fileContent/fileContent.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.gradle/3.5-rc-2/taskHistory/jvmClassSignatures.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.gradle/buildOutputCleanup/built.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.gradle/buildOutputCleanup/cache.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.gradle/buildOutputCleanup/cache.properties.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/artifacts/Gradle___proba_1_0_SNAPSHOT_war.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/artifacts/Gradle___proba_1_0_SNAPSHOT_war__exploded_.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/gradle.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/libraries/Gradle__javax_ejb_javax_ejb_api_3_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/libraries/Gradle__javax_servlet_javax_servlet_api_3_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/libraries/Gradle__javax_transaction_javax_transaction_api_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/libraries/Gradle__javax_ws_rs_javax_ws_rs_api_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/libraries/Gradle__junit_junit_4_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/modules/proba.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/modules/proba_main.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/modules/proba_test.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/build/classes/main/ejb/HelloWorldBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/build/classes/main/ejb/IHelloWorld.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/build/classes/main/servlets/ServletHello.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/build/libs/proba-1.0-SNAPSHOT.war" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/build/tmp/war/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/gradle/wrapper/gradle-wrapper.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/gradle/wrapper/gradle-wrapper.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/gradlew" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/gradlew.bat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/settings.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/src/main/java/ejb/HelloWorldBean.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/src/main/java/ejb/IHelloWorld.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/src/main/java/servlets/ServletHello.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/src/main/webapp/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../proba/src/main/webapp/index.jsp" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/controllers/api/ImagesController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/ImageController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/controllers/api/UsersController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/UsersController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Api.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Api.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Artifact.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Artifact.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Author.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Author.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Award.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Award.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Character.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Character.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Country.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Country.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Event.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Event.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Image.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Image.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Legend.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Legend.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Note.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Note.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Phrase.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Phrase.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Rating.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Rating.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cruds/Crud_Users.java" afterPath="$PROJECT_DIR$/src/main/java/old_cruds/Crud_Users.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/cruds/Crud.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/Access.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/cruds/ImagesCrud.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/ImageAccess.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/cruds/UsersCrud.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/UsersAccess.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Artifact.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Artifact.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Author.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Author.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Award.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Award.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Character.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Character.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Country.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Country.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Event.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Event.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Image.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Image.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Legend.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Legend.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Note.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Note.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Phrase.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Phrase.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Rating.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Rating.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entities/Users.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Users.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/LoginWindow.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/components/LoginWindow.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/RegWindow.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/fileContent.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/jvmClassSignatures.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/jvmClassSignatures.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/controllers/UsersController.class" afterPath="$PROJECT_DIR$/build/classes/main/controllers/UsersController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/courseWork-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/build/libs/courseWork-1.0-SNAPSHOT.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Gradle___courseWork_1_0_SNAPSHOT_war__exploded_.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Gradle___courseWork_1_0_SNAPSHOT_war__exploded_.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/courseWork_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/courseWork_main.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/courseWork_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/courseWork_test.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/LanguageTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/LanguageTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/build/resources/main/META-INF/persistence.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-LanguageTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-LanguageTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/index.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../lab3/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../lab3/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scripts/insert.sql" afterPath="$PROJECT_DIR$/../scripts/insert.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/UsersController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/UsersController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../lab1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../lab1/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -177,37 +59,8 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="441">
-              <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+              <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegWindow.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1155">
-              <caret line="55" column="26" lean-forward="true" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-              <folding>
-                <marker date="1515192930911" expanded="true" signature="1304:2938" ph="..." />
-                <marker date="1515192930911" expanded="true" signature="1362:2929" ph="..." />
-                <marker date="1515192930911" expanded="true" signature="1383:1444" ph="..." />
-                <marker date="1515192930911" expanded="true" signature="1495:2914" ph="..." />
-                <marker date="1515192930911" expanded="true" signature="1536:1936" ph="..." />
-                <marker date="1515192930911" expanded="true" signature="1582:1743" ph="..." />
-                <marker date="1515192930911" expanded="true" signature="1674:1715" ph="..." />
-                <marker date="1515192930911" expanded="true" signature="1819:1913" ph="..." />
-                <marker date="1515192930911" expanded="true" signature="1975:2207" ph="..." />
-                <marker date="1515192930911" expanded="true" signature="2059:2085" ph="..." />
-                <marker date="1515192930911" expanded="true" signature="2172:2183" ph="..." />
-                <marker date="1515192930911" expanded="true" signature="2248:2474" ph="..." />
-                <marker date="1515192930911" expanded="true" signature="2332:2358" ph="..." />
-                <marker date="1515192930911" expanded="true" signature="2439:2450" ph="..." />
-                <marker date="1515192930911" expanded="true" signature="2515:2749" ph="..." />
-                <marker date="1515192930911" expanded="true" signature="2599:2624" ph="..." />
-                <marker date="1515192930911" expanded="true" signature="2715:2725" ph="..." />
-                <marker date="1515192930911" expanded="true" signature="2839:2867" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -233,6 +86,45 @@
                 <marker date="1515192931037" expanded="true" signature="1879:1889" ph="..." />
                 <marker date="1515192931037" expanded="true" signature="2005:2033" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegWindow.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="514">
+              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+              <folding>
+                <marker date="1515198971884" expanded="true" signature="2588:4222" ph="..." />
+                <marker date="1515198971884" expanded="true" signature="2646:4213" ph="..." />
+                <marker date="1515198971884" expanded="true" signature="2667:2728" ph="..." />
+                <marker date="1515198971884" expanded="true" signature="2779:4198" ph="..." />
+                <marker date="1515198971884" expanded="true" signature="2820:3220" ph="..." />
+                <marker date="1515198971884" expanded="true" signature="2866:3027" ph="..." />
+                <marker date="1515198971884" expanded="true" signature="2958:2999" ph="..." />
+                <marker date="1515198971884" expanded="true" signature="3103:3197" ph="..." />
+                <marker date="1515198971884" expanded="true" signature="3259:3491" ph="..." />
+                <marker date="1515198971884" expanded="true" signature="3343:3369" ph="..." />
+                <marker date="1515198971884" expanded="true" signature="3456:3467" ph="..." />
+                <marker date="1515198971884" expanded="true" signature="3532:3758" ph="..." />
+                <marker date="1515198971884" expanded="true" signature="3616:3642" ph="..." />
+                <marker date="1515198971884" expanded="true" signature="3723:3734" ph="..." />
+                <marker date="1515198971884" expanded="true" signature="3799:4033" ph="..." />
+                <marker date="1515198971884" expanded="true" signature="3883:3908" ph="..." />
+                <marker date="1515198971884" expanded="true" signature="3999:4009" ph="..." />
+                <marker date="1515198971884" expanded="true" signature="4123:4151" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -487,7 +379,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4543802790826" />
+        <entry key="$PROJECT_DIR$" value="4543906581968" />
         <entry key="$PROJECT_DIR$/build.gradle" value="776316517" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="615277776" />
       </map>
@@ -688,7 +580,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/Carousel.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/LoginWindow.js" />
         <option value="$PROJECT_DIR$/src/main/java/models/cruds/ImagesCrud.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/api/ImagesController.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/entities/Image.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/carousel.js" />
@@ -697,7 +588,6 @@
         <option value="$PROJECT_DIR$/src/main/java/ejb/UsersCrud.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/ImagesController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/ImagesCrud.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/UsersController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/backbone_models/ImageVodel.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/backbone_models/ImageModel.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/backbone_collections/ImagesCollection.js" />
@@ -709,11 +599,13 @@
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/RegWindow.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/index.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/LoginWindow.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/IndexSlider.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Index.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/UsersController.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
   </component>
@@ -843,7 +735,7 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab1" />
     <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Problems" />
@@ -1046,7 +938,7 @@
       <workItem from="1514838202159" duration="12708000" />
       <workItem from="1514987984293" duration="15662000" />
       <workItem from="1515027338758" duration="30370000" />
-      <workItem from="1515157997443" duration="21028000" />
+      <workItem from="1515157997443" duration="26753000" />
     </task>
     <servers />
   </component>
@@ -1068,7 +960,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173089000" />
+    <option name="totallyTimeSpent" value="178814000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1081,6 +973,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1935" height="1038" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5083378" order="7" side_tool="true" content_ui="tabs" />
@@ -1101,7 +994,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25490198" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27218935" sideWeight="0.50691247" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27218935" sideWeight="0.49140894" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27218935" sideWeight="0.49140894" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27218935" sideWeight="0.50859106" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1364,14 +1257,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
@@ -1440,28 +1325,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ImageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-200">
-          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding>
-            <element signature="method#getSliderContent#0;class#ImageController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/backbone_models/UserModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/UsersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="56" column="95" lean-forward="true" selection-start-line="56" selection-start-column="95" selection-end-line="56" selection-end-column="95" />
           <folding />
         </state>
       </provider>
@@ -1484,29 +1351,6 @@
         <state relative-caret-position="189">
           <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/LoginWindow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="39" column="48" lean-forward="false" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
-          <folding>
-            <marker date="1515192931037" expanded="true" signature="800:2082" ph="..." />
-            <marker date="1515192931037" expanded="true" signature="821:882" ph="..." />
-            <marker date="1515192931037" expanded="true" signature="933:2067" ph="..." />
-            <marker date="1515192931037" expanded="true" signature="974:1367" ph="..." />
-            <marker date="1515192931037" expanded="true" signature="1020:1181" ph="..." />
-            <marker date="1515192931037" expanded="true" signature="1112:1153" ph="..." />
-            <marker date="1515192931037" expanded="true" signature="1257:1344" ph="..." />
-            <marker date="1515192931037" expanded="true" signature="1406:1638" ph="..." />
-            <marker date="1515192931037" expanded="true" signature="1490:1516" ph="..." />
-            <marker date="1515192931037" expanded="true" signature="1603:1614" ph="..." />
-            <marker date="1515192931037" expanded="true" signature="1679:1913" ph="..." />
-            <marker date="1515192931037" expanded="true" signature="1763:1788" ph="..." />
-            <marker date="1515192931037" expanded="true" signature="1879:1889" ph="..." />
-            <marker date="1515192931037" expanded="true" signature="2005:2033" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1569,38 +1413,91 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ImageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#getSliderContent#0;class#ImageController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/LoginWindow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="39" column="48" lean-forward="false" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
+          <folding>
+            <marker date="1515192931037" expanded="true" signature="800:2082" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="821:882" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="933:2067" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="974:1367" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="1020:1181" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="1112:1153" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="1257:1344" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="1406:1638" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="1490:1516" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="1603:1614" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="1679:1913" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="1763:1788" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="1879:1889" ph="..." />
+            <marker date="1515192931037" expanded="true" signature="2005:2033" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/UsersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="56" column="95" lean-forward="false" selection-start-line="56" selection-start-column="95" selection-end-line="56" selection-end-column="95" />
+          <folding>
+            <element signature="method#doPost#0;class#UsersController#0" expanded="false" />
+            <element signature="method#tryAddUser#0;class#UsersController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
-          <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+          <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="55" column="26" lean-forward="true" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+        <state relative-caret-position="514">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding>
-            <marker date="1515192930911" expanded="true" signature="1304:2938" ph="..." />
-            <marker date="1515192930911" expanded="true" signature="1362:2929" ph="..." />
-            <marker date="1515192930911" expanded="true" signature="1383:1444" ph="..." />
-            <marker date="1515192930911" expanded="true" signature="1495:2914" ph="..." />
-            <marker date="1515192930911" expanded="true" signature="1536:1936" ph="..." />
-            <marker date="1515192930911" expanded="true" signature="1582:1743" ph="..." />
-            <marker date="1515192930911" expanded="true" signature="1674:1715" ph="..." />
-            <marker date="1515192930911" expanded="true" signature="1819:1913" ph="..." />
-            <marker date="1515192930911" expanded="true" signature="1975:2207" ph="..." />
-            <marker date="1515192930911" expanded="true" signature="2059:2085" ph="..." />
-            <marker date="1515192930911" expanded="true" signature="2172:2183" ph="..." />
-            <marker date="1515192930911" expanded="true" signature="2248:2474" ph="..." />
-            <marker date="1515192930911" expanded="true" signature="2332:2358" ph="..." />
-            <marker date="1515192930911" expanded="true" signature="2439:2450" ph="..." />
-            <marker date="1515192930911" expanded="true" signature="2515:2749" ph="..." />
-            <marker date="1515192930911" expanded="true" signature="2599:2624" ph="..." />
-            <marker date="1515192930911" expanded="true" signature="2715:2725" ph="..." />
-            <marker date="1515192930911" expanded="true" signature="2839:2867" ph="..." />
+            <marker date="1515198971884" expanded="true" signature="2588:4222" ph="..." />
+            <marker date="1515198971884" expanded="true" signature="2646:4213" ph="..." />
+            <marker date="1515198971884" expanded="true" signature="2667:2728" ph="..." />
+            <marker date="1515198971884" expanded="true" signature="2779:4198" ph="..." />
+            <marker date="1515198971884" expanded="true" signature="2820:3220" ph="..." />
+            <marker date="1515198971884" expanded="true" signature="2866:3027" ph="..." />
+            <marker date="1515198971884" expanded="true" signature="2958:2999" ph="..." />
+            <marker date="1515198971884" expanded="true" signature="3103:3197" ph="..." />
+            <marker date="1515198971884" expanded="true" signature="3259:3491" ph="..." />
+            <marker date="1515198971884" expanded="true" signature="3343:3369" ph="..." />
+            <marker date="1515198971884" expanded="true" signature="3456:3467" ph="..." />
+            <marker date="1515198971884" expanded="true" signature="3532:3758" ph="..." />
+            <marker date="1515198971884" expanded="true" signature="3616:3642" ph="..." />
+            <marker date="1515198971884" expanded="true" signature="3723:3734" ph="..." />
+            <marker date="1515198971884" expanded="true" signature="3799:4033" ph="..." />
+            <marker date="1515198971884" expanded="true" signature="3883:3908" ph="..." />
+            <marker date="1515198971884" expanded="true" signature="3999:4009" ph="..." />
+            <marker date="1515198971884" expanded="true" signature="4123:4151" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
