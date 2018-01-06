@@ -1,26 +1,91 @@
 $(document).ready(() => {
+    var ContextModel = Backbone.Model.extend();
+
+    var UserModel = Backbone.Model.extend({
+        urlRoot: 'users'
+    });
+
+    var ContextCollection = Backbone.Collection.extend({
+        model: ContextModel,
+        url: 'context?action=get_user'
+    });
+
     window.Menu = Backbone.View.extend({
-        el: null,
+        el: $('body'),
+
+        events: {
+            'click .exitButton': 'exit'
+        },
 
         initialize() {
             this.el = $('.menu');
 
             _.bindAll(this, 'render');
+            _.bindAll(this, 'chooseBlock');
 
+            this.collection = new ContextCollection();
             this.render();
+
+            this.collection.fetch({
+                success: () => {
+                    this.chooseBlock();
+                },
+                fail: () => {
+                    throw "Error in slider";
+                }
+            });
+        },
+
+        exit: function () {
+            let user = new UserModel({
+                action: "exit",
+                login: "",
+                email: "UN",
+                password: "",
+            });
+
+            user.save();
+
+            document.getElementsByClassName("registrationForm")[0].style.display = "block";
+            document.getElementsByClassName("cabinetForm")[0].style.display = "none";
+            document.getElementsByClassName("_login")[0].innerHTML = "";
+        },
+
+        chooseBlock: function () {
+            let login = this.collection.models[0].attributes.login;
+
+            if (login === "") {
+                document.getElementsByClassName("registrationForm")[0].style.display = "block";
+                document.getElementsByClassName("cabinetForm")[0].style.display = "none";
+                document.getElementsByClassName("_login")[0].innerHTML = "";
+            } else {
+                document.getElementsByClassName("registrationForm")[0].style.display = "none";
+                document.getElementsByClassName("cabinetForm")[0].style.display = "block";
+                document.getElementsByClassName("_login")[0].innerHTML = "Привет, " + login;
+
+                let iconId = Math.floor(Math.random() * 4);
+                let icons = ["resources/images/profile1.png", "resources/images/profile2.jpg",
+                    "resources/images/profile3.png", "resources/images/profile4.jpg"];
+
+                if (iconId === 4) {
+                    iconId = 3;
+                }
+
+                document.getElementsByClassName("icon")[0].src = icons[iconId];
+            }
         },
 
         render() {
             $(this.el).append(`
             <div class="w3-top">
-            <div class="w3-bar w3-black w3-card">
+            <div class="w3-bar w3-black w3-card w3-border-bottom w3-border-white">
               <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" 
                onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
               <a href="#" class="w3-bar-item w3-button w3-padding-large">ГЛАВНАЯ</a>
               
               <div class="w3-dropdown-hover w3-hide-small">
                 <button class="w3-padding-large w3-button" title="More">СТРАНА <i class="fa fa-caret-down"></i></button>     
-                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-black">
                   <a href="#" class="w3-bar-item w3-button">Древняя Русь</a>
                   <a href="#" class="w3-bar-item w3-button">Древний Рим</a>
                   <a href="#" class="w3-bar-item w3-button">Египет</a>  
@@ -30,9 +95,24 @@ $(document).ready(() => {
               
               <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ТОП-10</a>
               <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">НОВОСТИ</a>
-              <div class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" onclick="new RegWindow();">Зарегистрироваться</div>
-              <div class="w3-bar-item w3-padding-large w3-hide-small w3-right">или</div>
-              <div class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" onclick="new LoginWindow();">Войти</div>
+              
+              <div class="registrationForm" style="display: block">
+                <div class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" onclick="new RegWindow();">Зарегистрироваться</div>
+                <div class="w3-bar-item w3-padding-large w3-hide-small w3-right">или</div>
+                <div class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" onclick="new LoginWindow();">Войти</div>
+              </div>
+              
+              <div class="cabinetForm w3-right w3-dropdown-hover" style="width: 100px;margin-right: 7%;display: none;">
+                <img src="resources/images/profile1.png" class="w3-dropdown-hover w3-circle icon" alt="Norway" style="width: 30%;
+                margin-top: 5%"> 
+                <i class="fa fa-caret-down" style="margin-top: 30%"></i>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-black">
+                  <a class="w3-bar-item _login"></a>
+                  <a href="#" class="w3-bar-item w3-button exitButton">Выйти</a>
+                  <a href="#" class="w3-bar-item w3-button">Пройти тест</a>    
+                </div>
+              </div>
+              
             </div>
           </div>
             `);

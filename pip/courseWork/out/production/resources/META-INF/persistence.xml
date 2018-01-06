@@ -5,18 +5,18 @@
              version="2.0">
     <persistence-unit name="MyPersistence" transaction-type="RESOURCE_LOCAL">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <class>models.entities.Phrase</class>
-        <class>models.entities.Award</class>
-        <class>models.entities.Artifact</class>
-        <class>models.entities.Author</class>
-        <class>models.entities.Character</class>
-        <class>models.entities.Country</class>
-        <class>models.entities.Event</class>
-        <class>models.entities.Image</class>
-        <class>models.entities.Legend</class>
-        <class>models.entities.Note</class>
-        <class>models.entities.Rating</class>
-        <class>models.entities.Users</class>
+        <class>entity.Phrase</class>
+        <class>entity.Award</class>
+        <class>entity.Artifact</class>
+        <class>entity.Author</class>
+        <class>entity.Character</class>
+        <class>entity.Country</class>
+        <class>entity.Event</class>
+        <class>entity.Image</class>
+        <class>entity.Legend</class>
+        <class>entity.Note</class>
+        <class>entity.Rating</class>
+        <class>entity.Users</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://pg:5432/studs" />

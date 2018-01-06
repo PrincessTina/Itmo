@@ -2,11 +2,14 @@ package ejb;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import javax.servlet.ServletException;
 
 import entity.Users;
 
 import java.sql.Date;
 import java.util.Calendar;
+import java.util.List;
 
 @Stateless
 public class UsersAccess extends Access {
@@ -14,6 +17,18 @@ public class UsersAccess extends Access {
     Date date = new Date(Calendar.getInstance().getTime().getTime());
 
     create(login, password, date, email);
+  }
+
+  public void checkUser(String login, String password) throws ServletException {
+    EntityManager entityManager = generateEntityManager();
+
+    Query query = entityManager.createQuery("Select e.password from Users e where e.login = :login");
+    query.setParameter("login", login);
+    List<String> list = query.getResultList();
+
+    if (!list.get(0).equals(password)) {
+      throw new ServletException(list.get(0));
+    }
   }
 
   private void create(String login, String password, Date date_of_check, String email) {

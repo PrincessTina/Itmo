@@ -1,24 +1,70 @@
 $(document).ready(() => {
+    var UserModel = Backbone.Model.extend({
+        urlRoot: 'users'
+    });
+
     window.LoginWindow = Backbone.View.extend({
         el: $('body'),
 
         events: {
-            'click .loginWindow .cross': 'closeWindow'
+            'click .loginWindow .cross': 'closeWindow',
+            'click .loginButton': 'check'
         },
 
         initialize() {
             _.bindAll(this, 'render');
             _.bindAll(this, 'closeRegWindow');
+            _.bindAll(this, 'closeWindow');
 
+            this.closeWindow();
             this.closeRegWindow();
             this.render();
         },
 
-        closeWindow() {
-            document.getElementsByClassName("loginWindow")[0].remove(0);
+        check: function () {
+            let username = document.getElementsByClassName("_username")[0];
+            let password = document.getElementsByClassName("_password")[0];
+
+            //start condition
+            username.classList.remove("w3-border-0", "w3-pale-red", "w3-leftbar", "w3-border-red");
+            password.classList.remove("w3-border-0", "w3-pale-red", "w3-leftbar", "w3-border-red");
+
+            let user = new UserModel({
+                action: "check",
+                login: username.value,
+                email: "UN",
+                password: password.value,
+            });
+
+            let result = user.save();
+
+            setTimeout(function () {
+                if (result.statusText === "OK") {
+                    let element = document.getElementsByClassName("loginWindow")[0];
+
+                    if (element !== undefined) {
+                        element.remove(0);
+                    }
+
+                    document.getElementsByClassName("registrationForm")[0].style.display = "none";
+                    document.getElementsByClassName("cabinetForm")[0].style.display = "block";
+                    document.getElementsByClassName("_login")[0].innerHTML = "Привет, " + username.value;
+                } else if (result.statusText === "Internal Server Error") {
+                    username.classList.add("w3-border-0", "w3-pale-red", "w3-leftbar", "w3-border-red");
+                    password.classList.add("w3-border-0", "w3-pale-red", "w3-leftbar", "w3-border-red");
+                }
+            }, 200);
         },
 
-        closeRegWindow() {
+        closeWindow: function() {
+            let element = document.getElementsByClassName("loginWindow")[0];
+
+            if (element !== undefined) {
+                element.remove(0);
+            }
+        },
+
+        closeRegWindow: function() {
             let element = document.getElementsByClassName("regWindow")[0];
 
             if (element !== undefined) {
@@ -29,7 +75,7 @@ $(document).ready(() => {
         render() {
             $(this.el).append(`
         <div class="w3-card-4 w3-round-large w3-padding loginWindow" 
-            style="width: 60%; position: fixed; z-index: 100; top: 30%; left: 0;">
+            style="width: 60%; position: fixed; z-index: 100; top: 30%; left: 20%;">
 
             <div class="w3-container w3-center">
                 <div class="w3-section">
