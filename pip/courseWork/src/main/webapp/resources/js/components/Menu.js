@@ -1,12 +1,9 @@
 $(document).ready(() => {
-    var ContextModel = Backbone.Model.extend();
-
     var UserModel = Backbone.Model.extend({
         urlRoot: 'users'
     });
 
-    var ContextCollection = Backbone.Collection.extend({
-        model: ContextModel,
+    var UserCollection = Backbone.Collection.extend({
         url: 'context?action=get_user'
     });
 
@@ -23,7 +20,7 @@ $(document).ready(() => {
             _.bindAll(this, 'render');
             _.bindAll(this, 'chooseBlock');
 
-            this.collection = new ContextCollection();
+            this.collection = new UserCollection();
             this.render();
 
             this.collection.fetch({
@@ -31,7 +28,7 @@ $(document).ready(() => {
                     this.chooseBlock();
                 },
                 fail: () => {
-                    throw "Error in slider";
+                    throw "Error in getting user from context";
                 }
             });
         },

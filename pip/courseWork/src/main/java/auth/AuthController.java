@@ -2,10 +2,12 @@ package auth;
 
 import context.ContextController;
 import controllers.UsersController;
+import ejb.UsersAccess;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,6 +24,9 @@ import java.util.Random;
 
 @WebServlet(name = "auth", urlPatterns = {"/auth"})
 public class AuthController extends HttpServlet {
+  @EJB
+  private UsersAccess users;
+
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
     String code = request.getParameter("code");
@@ -82,21 +87,19 @@ public class AuthController extends HttpServlet {
 
   private void registerUser(JSONObject link, String email, String service, HttpServletRequest request)
       throws JSONException, ServletException{
-    UsersController usersController = new UsersController();
     ContextController context = new ContextController();
 
     JSONObject arrayOfProfileAttributes = (JSONObject) link.getJSONArray("response").get(0);
 
     String screenName = arrayOfProfileAttributes.getString("screen_name");
-    String firstName = arrayOfProfileAttributes.getString("first_name");
+    String name = arrayOfProfileAttributes.getString("first_name");
 
-    String name = createName(screenName, firstName);
     String login = createLogin(screenName, service);
-    String password = usersController.findUser(login);
+    String password = findUser(login);
 
     if (password == null) {
       password = createPassword();
-      usersController.tryAddUser(login, password, email);
+      tryAddUser(login, password, email);
     }
 
     context.addUserInContext(login, password, request);
@@ -119,16 +122,12 @@ public class AuthController extends HttpServlet {
     return password.toString();
   }
 
-  private String createName(String screenName, String firstName) {
-    String name;
+  private String findUser(String login) throws ServletException {
+   return users.findUser(login);
+  }
 
-    if (screenName.matches("^id\\d+$")) {
-      name = firstName;
-    } else {
-      name = screenName;
-    }
-
-    return name;
+  private void tryAddUser(String login, String password, String email) {
+    users.addNewUser(login, email, password);
   }
 
   private JSONObject getResponseFromApi(String link) throws IOException, JSONException {

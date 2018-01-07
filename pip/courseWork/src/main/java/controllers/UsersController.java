@@ -63,7 +63,7 @@ public class UsersController extends HttpServlet {
     }
   }
 
-  public void tryAddUser(String login, String password, String email) throws ServletException {
+  private void tryAddUser(String login, String password, String email) throws ServletException {
     if (login.isEmpty() || email.isEmpty() || password.isEmpty() || password.matches(".*\\s+") ||
         login.matches(".*\\s+") || email.matches(".*\\s+") ||
         !email.matches(".*@(mail.ru|bk.ru|list.ru|inbox.ru|gmail.ru)$")) {
@@ -75,13 +75,5 @@ public class UsersController extends HttpServlet {
 
   private void checkUser(String login, String password) throws ServletException {
     users.checkUser(login, password);
-  }
-
-  /**
-   * @param login
-   * @return password
-   */
-  public String findUser(String login) {
-    return users.findUser(login);
   }
 }
