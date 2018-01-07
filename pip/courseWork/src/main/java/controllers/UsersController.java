@@ -6,12 +6,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.BufferedReader;
 import java.io.IOException;
 
+import context.ContextController;
 import ejb.UsersAccess;
-import entity.Users;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -26,6 +25,7 @@ public class UsersController extends HttpServlet {
     BufferedReader reader = request.getReader();
     StringBuilder builder = new StringBuilder();
     String line;
+    ContextController context = new ContextController();
 
     String action;
     String password;
@@ -51,18 +51,19 @@ public class UsersController extends HttpServlet {
       throw new ServletException("Action is null");
     } else if (action.equals("reg")) {
       tryAddUser(login, password, email);
-      addRegistration(login, password, request);
+      context.addUserInContext(login, password, request);
     } else if (action.equals("check")) {
       checkUser(login, password);
-      addRegistration(login, password, request);
+      context.addUserInContext(login, password, request);
     } else if (action.equals("exit")) {
-      removeRegistration(request);
+      context.removeUserFromContext(request);
+      context.removeNameFromContext(request);
     } else {
       throw new ServletException("Unknown action");
     }
   }
 
-  private void tryAddUser(String login, String password, String email) throws ServletException {
+  public void tryAddUser(String login, String password, String email) throws ServletException {
     if (login.isEmpty() || email.isEmpty() || password.isEmpty() || password.matches(".*\\s+") ||
         login.matches(".*\\s+") || email.matches(".*\\s+") ||
         !email.matches(".*@(mail.ru|bk.ru|list.ru|inbox.ru|gmail.ru)$")) {
@@ -76,23 +77,11 @@ public class UsersController extends HttpServlet {
     users.checkUser(login, password);
   }
 
-  private void addRegistration(String login, String password, HttpServletRequest request) {
-    HttpSession session = request.getSession();
-
-    Users user = new Users();
-    user.setLogin(login);
-    user.setPassword(password);
-
-    session.setAttribute("user", user);
-  }
-
-  private void removeRegistration(HttpServletRequest request) {
-    HttpSession session = request.getSession();
-
-    Users user = new Users();
-    user.setLogin("");
-    user.setPassword("");
-
-    session.setAttribute("user", user);
+  /**
+   * @param login
+   * @return password
+   */
+  public String findUser(String login) {
+    return users.findUser(login);
   }
 }

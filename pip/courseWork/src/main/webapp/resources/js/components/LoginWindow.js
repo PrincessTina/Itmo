@@ -8,7 +8,8 @@ $(document).ready(() => {
 
         events: {
             'click .loginWindow .cross': 'closeWindow',
-            'click .loginButton': 'check'
+            'click .loginButton': 'check',
+            'click ._vk': 'vkAuth'
         },
 
         initialize() {
@@ -19,6 +20,17 @@ $(document).ready(() => {
             this.closeWindow();
             this.closeRegWindow();
             this.render();
+        },
+
+        vkAuth: function () {
+            let location = "vk";
+
+            window.location.href = "https://oauth.vk.com/authorize?" +
+                "client_id=6323215&" +
+                "display=popup&" +
+                "scope=email&" +
+                "redirect_uri=http://localhost:62434/courseWork-12295115019915848166.0-SNAPSHOT/" +
+                "auth?address=" + location + window.location;
         },
 
         check: function () {
@@ -56,7 +68,7 @@ $(document).ready(() => {
             }, 200);
         },
 
-        closeWindow: function() {
+        closeWindow: function () {
             let element = document.getElementsByClassName("loginWindow")[0];
 
             if (element !== undefined) {
@@ -64,7 +76,7 @@ $(document).ready(() => {
             }
         },
 
-        closeRegWindow: function() {
+        closeRegWindow: function () {
             let element = document.getElementsByClassName("regWindow")[0];
 
             if (element !== undefined) {
@@ -96,6 +108,13 @@ $(document).ready(() => {
 	            </div>
 	            
 	            <button class="w3-button w3-lime w3-center loginButton" style="width: 59%; margin-left: 2%;">Войти</button>
+	            
+	            <footer class="w3-container w3-white w3-padding w3-large" style="margin-left: 1%;margin-top: 2%;opacity: 0.9;">
+                  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                  <i class="fa fa-instagram w3-hover-opacity"></i>
+                  <i class="fa fa-twitter w3-hover-opacity"></i>
+                  <i class="fa fa-vk w3-hover-opacity _vk"></i>      
+                </footer>
             </div>
         </div>
         `);
