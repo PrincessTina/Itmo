@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 @WebServlet(name = "images", urlPatterns = {"/images"})
 public class ImageController extends HttpServlet {
@@ -26,8 +27,8 @@ public class ImageController extends HttpServlet {
     if (action.isEmpty()) {
       throw new ServletException("Action is null");
     } else if (action.equals("get_sl")) {
-      ArrayList<Image> images = getSliderContent();
-      String answer = new Gson().toJson(images);
+      ArrayList<Image> imageList = getContent(new ArrayList<Integer>(Arrays.asList(0, 1, 2, 3, 4)));
+      String answer = new Gson().toJson(imageList);
 
       response.setContentType("application/json");
       response.setCharacterEncoding("UTF-8");
@@ -37,14 +38,7 @@ public class ImageController extends HttpServlet {
     }
   }
 
-  private ArrayList<Image> getSliderContent() {
-    ArrayList<Integer> listOfId = new ArrayList<Integer>();
-    listOfId.add(0);
-    listOfId.add(1);
-    listOfId.add(2);
-    listOfId.add(3);
-    listOfId.add(4);
-
+  private ArrayList<Image> getContent(ArrayList<Integer> listOfId) {
     return images.readInitImages(listOfId);
   }
 }

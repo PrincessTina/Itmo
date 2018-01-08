@@ -28,7 +28,7 @@ $(document).ready(() => {
             });
         },
 
-        changeSliderImage: function() {
+        changeSliderImage() {
             let slides = document.getElementsByClassName("mySlides");
 
             if (this.imageCount !== 0) {

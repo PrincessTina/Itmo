@@ -1,9 +1,7 @@
 package auth;
 
-import context.ContextController;
-import controllers.UsersController;
+import context.ContextAccess;
 import ejb.UsersAccess;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -18,14 +16,20 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
 @WebServlet(name = "auth", urlPatterns = {"/auth"})
 public class AuthController extends HttpServlet {
+
   @EJB
   private UsersAccess users;
+
+  @EJB
+  private ContextAccess context;
 
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -76,7 +80,7 @@ public class AuthController extends HttpServlet {
 
       JSONObject link = getResponseFromApi("https://api.vk.com/method/users.get?" +
           "uids=" + userId + "&" +
-          "fields=first_name,screen_name,photo_50&" +
+          "fields=first_name,screen_name,photo_200&" +
           "access_token=" + accessToken);
 
       registerUser(link, email, service, request);
@@ -86,13 +90,12 @@ public class AuthController extends HttpServlet {
   }
 
   private void registerUser(JSONObject link, String email, String service, HttpServletRequest request)
-      throws JSONException, ServletException{
-    ContextController context = new ContextController();
-
+      throws JSONException, ServletException, IOException {
     JSONObject arrayOfProfileAttributes = (JSONObject) link.getJSONArray("response").get(0);
 
     String screenName = arrayOfProfileAttributes.getString("screen_name");
     String name = arrayOfProfileAttributes.getString("first_name");
+    String icon = arrayOfProfileAttributes.getString("photo_200");
 
     String login = createLogin(screenName, service);
     String password = findUser(login);
@@ -104,6 +107,7 @@ public class AuthController extends HttpServlet {
 
     context.addUserInContext(login, password, request);
     context.addNameInContext(name, request);
+    context.setIcon(icon, request);
   }
 
   private String createLogin(String screenName, String service) {
@@ -122,6 +126,12 @@ public class AuthController extends HttpServlet {
     return password.toString();
   }
 
+  /**
+   *
+   * @param login
+   * @return password or null
+   * @throws ServletException
+   */
   private String findUser(String login) throws ServletException {
    return users.findUser(login);
   }
@@ -142,7 +152,7 @@ public class AuthController extends HttpServlet {
       builder.append(line);
     }
 
-    jsonObject = new JSONObject(builder.toString());
+    jsonObject = new JSONObject(URLDecoder.decode(URLEncoder.encode(builder.toString(), "iso8859-1"),"UTF-8"));
     return jsonObject;
   }
 }

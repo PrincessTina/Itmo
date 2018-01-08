@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 
-import context.ContextController;
+import context.ContextAccess;
 import ejb.UsersAccess;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -20,13 +20,14 @@ public class UsersController extends HttpServlet {
   @EJB
   private UsersAccess users;
 
+  @EJB
+  private ContextAccess context;
+
   @Override
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     BufferedReader reader = request.getReader();
     StringBuilder builder = new StringBuilder();
     String line;
-    ContextController context = new ContextController();
-
     String action;
     String password;
     String login;
@@ -57,16 +58,13 @@ public class UsersController extends HttpServlet {
       context.addUserInContext(login, password, request);
     } else if (action.equals("exit")) {
       context.removeUserFromContext(request);
-      context.removeNameFromContext(request);
     } else {
       throw new ServletException("Unknown action");
     }
   }
 
   private void tryAddUser(String login, String password, String email) throws ServletException {
-    if (login.isEmpty() || email.isEmpty() || password.isEmpty() || password.matches(".*\\s+") ||
-        login.matches(".*\\s+") || email.matches(".*\\s+") ||
-        !email.matches(".*@(mail.ru|bk.ru|list.ru|inbox.ru|gmail.ru)$")) {
+    if (login == null || password == null) {
       throw new ServletException("Incorrect input");
     }
 

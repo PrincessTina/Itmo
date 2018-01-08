@@ -46,9 +46,10 @@ $(document).ready(() => {
                         }
 
                         document.getElementsByClassName("notice")[0].style.display = "block";
-                        document.getElementsByClassName("registrationForm")[0].style.display = "none";
-                        document.getElementsByClassName("cabinetForm")[0].style.display = "block";
-                        document.getElementsByClassName("_login")[0].innerHTML = "Привет, " + username.value;
+
+                        setTimeout(function () {
+                            location.reload();
+                        }, 200);
                     } else if (result.statusText === "Internal Server Error") {
                         username.classList.add("w3-border-0", "w3-pale-red", "w3-leftbar", "w3-border-red");
                         username.title = "This username is already used"
@@ -72,7 +73,7 @@ $(document).ready(() => {
             }
 
             if (email.value === "" || /\s+/.test(email.value) ||
-                !/.+@(mail.ru|bk.ru|list.ru|inbox.ru|gmail.ru)$/.test(email.value)) {
+                !/.+@(mail.ru|bk.ru|list.ru|inbox.ru|gmail.com|yandex.ru)$/.test(email.value)) {
                 email.classList.add("w3-border-0", "w3-pale-red", "w3-leftbar", "w3-border-red");
                 condition = false;
             }

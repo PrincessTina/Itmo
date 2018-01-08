@@ -22,7 +22,7 @@ $(document).ready(() => {
             this.render();
         },
 
-        vkAuth: function () {
+        vkAuth() {
             let location = "vk";
 
             window.location.href = "https://oauth.vk.com/authorize?" +
@@ -33,7 +33,7 @@ $(document).ready(() => {
                 "auth?address=" + location + window.location;
         },
 
-        check: function () {
+        check() {
             let username = document.getElementsByClassName("_username")[0];
             let password = document.getElementsByClassName("_password")[0];
 
@@ -58,9 +58,7 @@ $(document).ready(() => {
                         element.remove(0);
                     }
 
-                    document.getElementsByClassName("registrationForm")[0].style.display = "none";
-                    document.getElementsByClassName("cabinetForm")[0].style.display = "block";
-                    document.getElementsByClassName("_login")[0].innerHTML = "Привет, " + username.value;
+                    location.reload();
                 } else if (result.statusText === "Internal Server Error") {
                     username.classList.add("w3-border-0", "w3-pale-red", "w3-leftbar", "w3-border-red");
                     password.classList.add("w3-border-0", "w3-pale-red", "w3-leftbar", "w3-border-red");
@@ -68,7 +66,7 @@ $(document).ready(() => {
             }, 200);
         },
 
-        closeWindow: function () {
+        closeWindow() {
             let element = document.getElementsByClassName("loginWindow")[0];
 
             if (element !== undefined) {
@@ -76,7 +74,7 @@ $(document).ready(() => {
             }
         },
 
-        closeRegWindow: function () {
+        closeRegWindow() {
             let element = document.getElementsByClassName("regWindow")[0];
 
             if (element !== undefined) {

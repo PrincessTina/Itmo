@@ -3,8 +3,8 @@ $(document).ready(() => {
         urlRoot: 'users'
     });
 
-    var UserCollection = Backbone.Collection.extend({
-        url: 'context?action=get_user'
+    var UserModel2 = Backbone.Model.extend({
+       url:  'context?action=get_user'
     });
 
     window.Menu = Backbone.View.extend({
@@ -20,10 +20,10 @@ $(document).ready(() => {
             _.bindAll(this, 'render');
             _.bindAll(this, 'chooseBlock');
 
-            this.collection = new UserCollection();
+            this.user = new UserModel2();
             this.render();
 
-            this.collection.fetch({
+            this.user.fetch({
                 success: () => {
                     this.chooseBlock();
                 },
@@ -49,7 +49,9 @@ $(document).ready(() => {
         },
 
         chooseBlock: function () {
-            let login = this.collection.models[0].attributes.login;
+            let login = this.user.attributes.login;
+            let name = this.user.attributes.name;
+            let icon = this.user.attributes.icon;
 
             if (login === "") {
                 document.getElementsByClassName("registrationForm")[0].style.display = "block";
@@ -58,17 +60,15 @@ $(document).ready(() => {
             } else {
                 document.getElementsByClassName("registrationForm")[0].style.display = "none";
                 document.getElementsByClassName("cabinetForm")[0].style.display = "block";
-                document.getElementsByClassName("_login")[0].innerHTML = "Привет, " + login;
+                document.getElementsByClassName("_login")[0].innerHTML = "Привет, ";
 
-                let iconId = Math.floor(Math.random() * 4);
-                let icons = ["resources/images/profile1.png", "resources/images/profile2.jpg",
-                    "resources/images/profile3.png", "resources/images/profile4.jpg"];
-
-                if (iconId === 4) {
-                    iconId = 3;
+                if (name === "") {
+                    document.getElementsByClassName("_login")[0].innerHTML += login;
+                } else {
+                    document.getElementsByClassName("_login")[0].innerHTML += name;
                 }
 
-                document.getElementsByClassName("icon")[0].src = icons[iconId];
+                document.getElementsByClassName("icon")[0].src = icon;
             }
         },
 

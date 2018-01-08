@@ -1,6 +1,5 @@
 package ejb;
 
-import javax.ejb.Stateful;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -12,7 +11,7 @@ import java.sql.Date;
 import java.util.Calendar;
 import java.util.List;
 
-@Stateful
+@Stateless
 public class UsersAccess extends Access {
   public void addNewUser(String login, String email, String password) {
     Date date = new Date(Calendar.getInstance().getTime().getTime());
@@ -26,6 +25,12 @@ public class UsersAccess extends Access {
     }
   }
 
+  /**
+   *
+   * @param login
+   * @return password or null
+   * @throws ServletException
+   */
   public String findUser(String login) throws ServletException {
     EntityManager entityManager = generateEntityManager();
 

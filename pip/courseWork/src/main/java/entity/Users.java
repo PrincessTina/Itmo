@@ -13,6 +13,10 @@ public class Users {
   private String email;
   private String password;
   private Date date_of_check;
+  @Transient
+  private String name;
+  @Transient
+  private String icon;
 
   @ManyToMany(fetch = FetchType.EAGER)
   @JoinTable(
@@ -79,5 +83,21 @@ public class Users {
 
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getIcon() {
+    return icon;
+  }
+
+  public void setIcon(String icon) {
+    this.icon = icon;
   }
 }
