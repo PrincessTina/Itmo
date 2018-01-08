@@ -25,13 +25,12 @@
           <element id="library" level="project" name="Gradle: org.eclipse.persistence:eclipselink:2.5.1" />
           <element id="library" level="project" name="Gradle: postgresql:postgresql:9.0-801.jdbc4" />
           <element id="library" level="project" name="Gradle: javax.servlet:javax.servlet-api:3.0.1" />
-          <element id="library" level="project" name="Gradle: com.rabbitmq:amqp-client:2.3.1" />
           <element id="library" level="project" name="Gradle: com.google.code.gson:gson:1.7.2" />
           <element id="library" level="project" name="Gradle: javax.transaction:javax.transaction-api:1.2" />
           <element id="library" level="project" name="Gradle: org.eclipse.persistence:javax.persistence:2.1.0" />
           <element id="library" level="project" name="Gradle: org.eclipse.persistence:commonj.sdo:2.1.1" />
-          <element id="library" level="project" name="Gradle: commons-cli:commons-cli:1.1" />
-          <element id="library" level="project" name="Gradle: commons-io:commons-io:1.2" />
+          <element id="library" level="project" name="Gradle: com.rabbitmq:amqp-client:5.1.1" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.25" />
         </element>
       </element>
     </root>

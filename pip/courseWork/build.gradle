@@ -25,9 +25,9 @@ dependencies {
 
     compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
 
-    compile group: 'com.rabbitmq', name: 'amqp-client', version: '2.3.1'
-
     compile group: 'com.google.code.gson', name: 'gson', version: '1.7.2'
+
+    compile 'com.rabbitmq:amqp-client:5.1.1'
 }
 
 task finalize << {
