@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="jms.notifications.NotificationsProducerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-01-09T15:32:19" hostname="LAPTOP-CN4TD6JS" time="0.909">
+<testsuite name="jms.notifications.NotificationsProducerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-01-09T15:54:55" hostname="LAPTOP-CN4TD6JS" time="0.646">
   <properties/>
-  <testcase name="produceTest" classname="jms.notifications.NotificationsProducerTest" time="0.909"/>
+  <testcase name="produceTest" classname="jms.notifications.NotificationsProducerTest" time="0.646"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation

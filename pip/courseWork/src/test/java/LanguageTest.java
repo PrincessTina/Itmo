@@ -1,4 +1,4 @@
-import ejb.Access;
+import ejb.data.Access;
 import org.junit.Test;
 
 public class LanguageTest extends Access{
