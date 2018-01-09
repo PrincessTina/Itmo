@@ -9,7 +9,8 @@ $(document).ready(() => {
         events: {
             'click .loginWindow .cross': 'closeWindow',
             'click .loginButton': 'check',
-            'click ._vk': 'vkAuth'
+            'click ._vk': 'vkAuth',
+            'click ._in': 'inAuth',
         },
 
         initialize() {
@@ -29,7 +30,18 @@ $(document).ready(() => {
                 "client_id=6323215&" +
                 "display=popup&" +
                 "scope=email&" +
-                "redirect_uri=http://localhost:62434/courseWork-12295115019915848166.0-SNAPSHOT/" +
+                "redirect_uri=" + window.location +
+                "auth?address=" + location + window.location;
+        },
+
+        inAuth() {
+            let location = "in";
+            let url = "http://localhost:62434/courseWork-1.0-SNAPSHOT/"; //то, что зашито в инсте
+
+            window.location.href = "https://api.instagram.com/oauth/authorize/?" +
+                "client_id=39649a7b64a54a898f1f972c68eb1e26&" +
+                "&response_type=code&" +
+                "redirect_uri=" + url +
                 "auth?address=" + location + window.location;
         },
 
@@ -109,7 +121,7 @@ $(document).ready(() => {
 	            
 	            <footer class="w3-container w3-white w3-padding w3-large" style="margin-left: 1%;margin-top: 2%;opacity: 0.9;">
                   <i class="fa fa-facebook-official w3-hover-opacity"></i>
-                  <i class="fa fa-instagram w3-hover-opacity"></i>
+                  <i class="fa fa-instagram w3-hover-opacity _in"></i>
                   <i class="fa fa-twitter w3-hover-opacity"></i>
                   <i class="fa fa-vk w3-hover-opacity _vk"></i>      
                 </footer>

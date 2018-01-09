@@ -1,6 +1,11 @@
 package jms.notifications;
 
-import com.rabbitmq.client.*;
+import com.rabbitmq.client.Channel;
+import com.rabbitmq.client.Connection;
+import com.rabbitmq.client.ConnectionFactory;
+/*import com.rabbitmq.client.DefaultConsumer;
+import com.rabbitmq.client.Envelope;
+import com.rabbitmq.client.AMQP;*/
 
 import javax.ejb.Stateful;
 import java.io.IOException;
@@ -41,13 +46,13 @@ public class NotificationsReceiver {
     channel.queueDeclare(queueName, true, false, false, null);
     channel.queueBind(queueName, notificationType, "");
 
-    channel.basicConsume(queueName, true, new DefaultConsumer(channel) {
+    /*channel.basicConsume(queueName, true, new DefaultConsumer(channel) {
       @Override
       public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
         String message = new String(body, "UTF-8");
         notificationId = Integer.parseInt(message);
       }
-    });
+    });*/
 
     return notificationId;
   }

@@ -18,9 +18,11 @@ public class ImageAccess extends Access {
     return images;
   }
 
-  private Image read(int id) {
+  public Image read(int id) {
     EntityManager entityManager = generateEntityManager();
+    Image image = entityManager.find(Image.class, id);
 
-    return entityManager.find(Image.class, id);
+    entityManager.close();
+    return image;
   }
 }

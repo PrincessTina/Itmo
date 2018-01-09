@@ -6,12 +6,14 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import javax.ejb.EJB;
+import javax.net.ssl.HttpsURLConnection;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
@@ -37,14 +39,15 @@ public class AuthController extends HttpServlet {
     String service = request.getParameter("address").substring(0, 2);
     String address = request.getParameter("address").substring(2);
 
-
     if (code == null) {
       response.sendRedirect(address);
     } else {
       if (service.equals("vk")) {
         authorizeWithVk(code, response, service, address, request);
+      } else if (service.equals("in")) {
+        authorizeWithIn(code, response, service, address, request);
       } else {
-        throw new ServletException("Unknown service");
+        throw new ServletException("Unknown service: " + service);
       }
     }
   }
@@ -60,7 +63,7 @@ public class AuthController extends HttpServlet {
           "client_id=6323215&" +
           "client_secret=jWRjPW1pjkZbHGJ1SCHN&" +
           "code=" + code + "&" +
-          "redirect_uri=localhost:62434/courseWork-12295115019915848166.0-SNAPSHOT/" +
+          "redirect_uri=" + address +
           "auth?address=" + service + address);
 
       userId = link.getInt("user_id");
@@ -83,13 +86,42 @@ public class AuthController extends HttpServlet {
           "fields=first_name,screen_name,photo_200&" +
           "access_token=" + accessToken);
 
-      registerUser(link, email, service, request);
+      registerUserWithVk(link, email, service, request);
     } catch (JSONException ex) {
       throw new ServletException(ex.getMessage());
     }
   }
 
-  private void registerUser(JSONObject link, String email, String service, HttpServletRequest request)
+  private void authorizeWithIn(String code, HttpServletResponse response, String service, String address,
+                               HttpServletRequest request) throws IOException, ServletException {
+    JSONObject user;
+
+    try {
+      JSONObject link = getFromPostCall(code, address, service);
+
+      response.sendRedirect(address);
+
+      user = link.getJSONObject("user");
+
+      String username = user.getString("username");
+      String icon = user.getString("profile_picture");
+      String login = createLogin(username, service);
+      String password = findUser(login);
+
+      if (password == null) {
+        password = createPassword();
+        tryAddUser(login, password, "null");
+      }
+
+      context.addUserInContext(login, password, request);
+      context.addNameInContext(username, request);
+      context.setIcon(icon, request);
+    } catch (JSONException ex) {
+      throw new ServletException(ex.getMessage());
+    }
+  }
+
+  private void registerUserWithVk(JSONObject link, String email, String service, HttpServletRequest request)
       throws JSONException, ServletException, IOException {
     JSONObject arrayOfProfileAttributes = (JSONObject) link.getJSONArray("response").get(0);
 
@@ -127,13 +159,12 @@ public class AuthController extends HttpServlet {
   }
 
   /**
-   *
    * @param login
    * @return password or null
    * @throws ServletException
    */
   private String findUser(String login) throws ServletException {
-   return users.findUser(login);
+    return users.findUser(login);
   }
 
   private void tryAddUser(String login, String password, String email) {
@@ -152,7 +183,41 @@ public class AuthController extends HttpServlet {
       builder.append(line);
     }
 
-    jsonObject = new JSONObject(URLDecoder.decode(URLEncoder.encode(builder.toString(), "iso8859-1"),"UTF-8"));
+    jsonObject = new JSONObject(URLDecoder.decode(URLEncoder.encode(builder.toString(), "iso8859-1"), "UTF-8"));
+    return jsonObject;
+  }
+
+  private JSONObject getFromPostCall(String code, String address, String service) throws IOException, JSONException {
+    StringBuilder builder = new StringBuilder();
+    String line;
+    URL url = new URL("https://api.instagram.com/oauth/access_token?");
+    HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
+    BufferedReader reader;
+    JSONObject jsonObject;
+
+    connection.setRequestMethod("POST");
+    String urlParameters = "client_id=39649a7b64a54a898f1f972c68eb1e26&" +
+        "client_secret=7bfd8e758f8b4626b5cc50572d9ab54f&" +
+        "grant_type=authorization_code&" +
+        "code=" + code + "&" +
+        "redirect_uri=" + address +
+        "auth?address=" + service + address;
+
+    // Send post request
+    connection.setDoOutput(true);
+    DataOutputStream wr = new DataOutputStream(connection.getOutputStream());
+    wr.writeBytes(urlParameters);
+    wr.flush();
+    wr.close();
+
+    reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+
+    while ((line = reader.readLine()) != null) {
+      builder.append(line);
+    }
+
+    jsonObject = new JSONObject(URLDecoder.decode(URLEncoder.encode(builder.toString(), "iso8859-1"), "UTF-8"));
+
     return jsonObject;
   }
 }

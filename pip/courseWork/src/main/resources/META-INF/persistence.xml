@@ -17,6 +17,7 @@
         <class>entity.Note</class>
         <class>entity.Rating</class>
         <class>entity.Users</class>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://pg:5432/studs" />

@@ -2,7 +2,6 @@ package jms.notifications;
 
 import com.google.gson.Gson;
 import context.ContextAccess;
-import entity.Image;
 
 import javax.ejb.EJB;
 import javax.servlet.ServletException;

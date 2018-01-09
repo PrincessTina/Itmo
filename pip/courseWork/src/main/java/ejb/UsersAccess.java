@@ -39,6 +39,8 @@ public class UsersAccess extends Access {
 
     List<String> list = query.getResultList();
 
+    entityManager.close();
+
     if (list.size() == 0) {
       return null;
     } else {
@@ -53,12 +55,15 @@ public class UsersAccess extends Access {
     entityManager.getTransaction().begin();
     entityManager.persist(row);
     entityManager.getTransaction().commit();
+    entityManager.close();
   }
 
   private Users read(int id) {
     EntityManager entityManager = generateEntityManager();
+    Users user = entityManager.find(Users.class, id);
 
-    return entityManager.find(Users.class, id);
+    entityManager.close();
+    return user;
   }
 
   private void delete(int id) {
@@ -67,6 +72,7 @@ public class UsersAccess extends Access {
     entityManager.getTransaction().begin();
     entityManager.remove(read(id));
     entityManager.getTransaction().commit();
+    entityManager.close();
   }
 
   private void update(int id, String login, String password, String email, Date date_of_check) {
@@ -79,5 +85,6 @@ public class UsersAccess extends Access {
     row.setLogin(login);
     row.setPassword(password);
     entityManager.getTransaction().commit();
+    entityManager.close();
   }
 }
