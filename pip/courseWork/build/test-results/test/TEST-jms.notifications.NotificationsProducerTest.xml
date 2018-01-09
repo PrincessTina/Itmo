@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="jms.notifications.NotificationsProducerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-01-09T15:54:55" hostname="LAPTOP-CN4TD6JS" time="0.646">
+<testsuite name="jms.notifications.NotificationsProducerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-01-09T16:44:24" hostname="LAPTOP-CN4TD6JS" time="0.646">
   <properties/>
   <testcase name="produceTest" classname="jms.notifications.NotificationsProducerTest" time="0.646"/>
   <system-out><![CDATA[]]></system-out>

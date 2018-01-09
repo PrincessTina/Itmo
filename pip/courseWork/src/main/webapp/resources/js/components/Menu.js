@@ -69,6 +69,12 @@ $(document).ready(() => {
                 }
 
                 document.getElementsByClassName("icon")[0].src = icon;
+
+                if (login === "VKkristi_tulpan") {
+                    $('.cabinetBlock').append(`
+                    <a href="admin.html" class="w3-bar-item w3-button">Админка</a>   
+                    `);
+                }
             }
         },
 
@@ -103,7 +109,7 @@ $(document).ready(() => {
                 <img src="resources/images/profile1.png" class="w3-dropdown-hover w3-circle icon" alt="Norway" style="width: 30%;
                 margin-top: 5%"> 
                 <i class="fa fa-caret-down" style="margin-top: 30%"></i>
-                <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-black">
+                <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-black cabinetBlock">
                   <a class="w3-bar-item _login"></a>
                   <a href="" class="w3-bar-item w3-button exitButton">Выйти</a>
                   <a href="#" class="w3-bar-item w3-button">Пройти тест</a>    
