@@ -24,18 +24,12 @@ public class UsersAccess extends Access {
   }
 
   public void checkUser(String login, String password) throws ServletException {
-    if (!password.equals(findUser(login))) {
+    if (!password.equals(findUserPassword(login))) {
       throw new ServletException("Wrong password or login");
     }
   }
 
-  /**
-   *
-   * @param login
-   * @return password or null
-   * @throws ServletException
-   */
-  public String findUser(String login) throws ServletException {
+  public String findUserPassword(String login) throws ServletException {
     EntityManager entityManager = generateEntityManager();
 
     Query query = entityManager.createQuery("Select e.password from Users e where e.login = :login");
@@ -47,6 +41,23 @@ public class UsersAccess extends Access {
 
     if (list.size() == 0) {
       return null;
+    } else {
+      return list.get(0);
+    }
+  }
+
+  public int findUserId(String login) throws ServletException {
+    EntityManager entityManager = generateEntityManager();
+
+    Query query = entityManager.createQuery("Select e.id from Users e where e.login = :login");
+    query.setParameter("login", login);
+
+    List<Integer> list = query.getResultList();
+
+    entityManager.close();
+
+    if (list.size() == 0) {
+      return -1;
     } else {
       return list.get(0);
     }

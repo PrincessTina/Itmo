@@ -86,7 +86,7 @@ public class AuthLogic {
       String username = user.getString("username");
       String icon = user.getString("profile_picture");
       String login = createLogin(username, service);
-      String password = users.findUser(login);
+      String password = users.findUserPassword(login);
 
       if (password == null) {
         password = createPassword();
@@ -110,7 +110,7 @@ public class AuthLogic {
     String icon = arrayOfProfileAttributes.getString("photo_200");
 
     String login = createLogin(screenName, service);
-    String password = users.findUser(login);
+    String password = users.findUserPassword(login);
 
     if (password == null) {
       password = createPassword();

@@ -45,7 +45,7 @@ public class UsersController extends HttpServlet {
       password = jsonObject.getString("password");
       email = jsonObject.getString("email");
     } catch (JSONException e) {
-      throw new IOException("Error parsing JSON request string");
+      throw new ServletException("Error parsing JSON request string");
     }
 
     if (action.isEmpty()) {

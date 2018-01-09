@@ -27,11 +27,11 @@
           <element id="library" level="project" name="Gradle: javax.servlet:javax.servlet-api:3.0.1" />
           <element id="library" level="project" name="Gradle: com.google.code.gson:gson:1.7.2" />
           <element id="library" level="project" name="Gradle: com.rabbitmq:amqp-client:5.1.1" />
+          <element id="library" level="project" name="Gradle: javax.validation:validation-api:1.0.0.GA" />
           <element id="library" level="project" name="Gradle: javax.transaction:javax.transaction-api:1.2" />
           <element id="library" level="project" name="Gradle: org.eclipse.persistence:javax.persistence:2.1.0" />
           <element id="library" level="project" name="Gradle: org.eclipse.persistence:commonj.sdo:2.1.1" />
           <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.25" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.validation/validation-api/1.0.0.GA/b6bd7f9d78f6fdaa3c37dae18a4bd298915f328e/validation-api-1.0.0.GA.jar" />
         </element>
       </element>
     </root>

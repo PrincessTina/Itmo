@@ -70,6 +70,7 @@ $(document).ready(() => {
 
                 document.getElementsByClassName("icon")[0].src = icon;
 
+                //Check for admin logins
                 if (login === "VKkristi_tulpan") {
                     $('.cabinetBlock').append(`
                     <a href="admin.html" class="w3-bar-item w3-button">Админка</a>   

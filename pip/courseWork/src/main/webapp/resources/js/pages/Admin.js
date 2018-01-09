@@ -1,16 +1,61 @@
 $(document).ready(() => {
+    var NotificationModel = Backbone.Model.extend({
+        urlRoot: 'notifications'
+    });
+
     window.Admin = Backbone.View.extend({
         el: $('body'),
 
         events: {
             'click .close': 'w3_close',
             'click .open': 'w3_open',
+            'click .send_new': 'sendNew',
+            'click .gCross': 'closeGNotice',
+            'click .bCross': 'closeBNotice',
+            'click .clear': 'clear',
         },
 
         initialize() {
             _.bindAll(this, 'render');
 
             this.render();
+        },
+
+        sendNew() {
+            let link = document.getElementsByClassName("_link")[0];
+            let description = document.getElementsByClassName("_description")[0];
+
+            let news = new NotificationModel({
+                type: "new",
+                link: link.value,
+                description: description.value,
+            });
+
+            let result = news.save();
+
+            setTimeout(function () {
+                if (result.statusText === "OK") {
+                   document.getElementsByClassName("gNotice")[0].style.display = "block";
+                } else if (result.statusText === "Internal Server Error") {
+                    document.getElementsByClassName("bNotice")[0].style.display = "block";
+                }
+            }, 200);
+        },
+
+        clear() {
+            let link = document.getElementsByClassName("_link")[0];
+            let description = document.getElementsByClassName("_description")[0];
+            
+            link.value = "";
+            description.value = "";
+        },
+
+        closeGNotice() {
+            document.getElementsByClassName("gNotice")[0].style.display = "none";
+        },
+
+        closeBNotice() {
+            document.getElementsByClassName("bNotice")[0].style.display = "none";
         },
 
         w3_open() {
@@ -69,14 +114,28 @@ $(document).ready(() => {
                     </p>
             
                     <p>
-                        <label class="w3-text-grey">Description</label>
+                        <label class="w3-text-grey">Description <i>(Please, write english)</i></label>
                         <textarea class="w3-input w3-border _description" style="height: 200px;resize:none;"></textarea>
                     </p> <br/>
             
                     <p>
-                        <button type="button" class="w3-btn w3-padding w3-purple send" style="width:120px">Send &nbsp; ❯</button>
+                        <button type="button" class="w3-btn w3-padding w3-purple send_new" style="width:120px">Send &nbsp; ❯</button>
+                        <button type="button" class="w3-btn w3-right w3-padding w3-black clear" style="width:120px">Clear</button>
                     </p>
                 </div>
+            </div>
+            
+            <div class="w3-card-4 w3-padding w3-panel w3-green w3-display-container gNotice" style="position: fixed; top: 30%; 
+            right: 0; display: none">
+              <span class="w3-button w3-green w3-large w3-display-topright gCross">×</span>
+              <h3>Success!</h3>
+              <p>You have successfully posted new note</p>
+            </div>
+            
+            <div class="w3-card-4 w3-padding w3-panel w3-red w3-display-container bNotice" style="position: fixed; top: 30%; 
+            right: 0; display: none">
+              <span class="w3-button w3-green w3-large w3-display-topright bCross">×</span>
+              <h3>Error :(</h3>
             </div>
         `);
         },

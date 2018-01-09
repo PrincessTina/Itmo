@@ -22,7 +22,7 @@ $(document).ready(() => {
             this.render();
         },
 
-        register: function() {
+        register() {
             let username = document.getElementsByClassName("_username")[0];
             let email = document.getElementsByClassName("_email")[0];
             let password = document.getElementsByClassName("_password")[0];
@@ -58,7 +58,7 @@ $(document).ready(() => {
             }
         },
 
-        validate: function(username, email, password) {
+        validate(username, email, password) {
             //start condition
             username.classList.remove("w3-border-0", "w3-pale-red", "w3-leftbar", "w3-border-red");
             username.title = "";
@@ -86,7 +86,7 @@ $(document).ready(() => {
             return condition;
         },
 
-        closeNotice: function() {
+        closeNotice() {
             let element = document.getElementsByClassName("notice")[0];
 
             if (element !== undefined) {
@@ -94,7 +94,7 @@ $(document).ready(() => {
             }
         },
 
-        closeWindow: function() {
+        closeWindow() {
             let element = document.getElementsByClassName("regWindow")[0];
 
             if (element !== undefined) {
@@ -102,7 +102,7 @@ $(document).ready(() => {
             }
         },
 
-        closeLoginWindow: function() {
+        closeLoginWindow() {
             let element = document.getElementsByClassName("loginWindow")[0];
 
             if (element !== undefined) {

@@ -134,7 +134,7 @@ owner_id integer,
 
 image_id integer REFERENCES Image ON DELETE CASCADE,
 
-date date not NULL CONSTRAINT first CHECK(date <= 'now'),
+date date not NULL,
 
 description text
 
