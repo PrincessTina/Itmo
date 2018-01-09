@@ -2,72 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a32c1388-fc1c-46f6-8fde-58e44b271a17" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/context/ContextAccess.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/auth/AuthController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/context/ContextController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/controllers/ImageController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/controllers/UsersController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/ejb/Access.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/ejb/ImageAccess.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/ejb/UsersAccess.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Artifact.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Author.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Award.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Character.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Country.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Event.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Image.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Legend.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Note.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Phrase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Rating.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Users.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/jms/newsNotifications/NewsProducer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/jms/newsNotifications/NewsReceiver$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/jms/newsNotifications/NewsReceiver.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/resources/META-INF/persistence.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/classes/LanguageTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/classes/jms/newsNotifications/NewsProducerTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/classes/jms/newsNotifications/NewsReceiverTest.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/annotation-processors.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/annotation-processors.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/fileContent.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/jvmClassSignatures.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/jvmClassSignatures.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/0facdae2-4582-483d-a829-bc29164845c2/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/0facdae2-4582-483d-a829-bc29164845c2/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/0facdae2-4582-483d-a829-bc29164845c2/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/0facdae2-4582-483d-a829-bc29164845c2/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/auth/AuthController.class" afterPath="$PROJECT_DIR$/build/classes/main/auth/AuthController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/context/ContextController.class" afterPath="$PROJECT_DIR$/build/classes/main/context/ContextController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/controllers/ImageController.class" afterPath="$PROJECT_DIR$/build/classes/main/controllers/ImageController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/controllers/UsersController.class" afterPath="$PROJECT_DIR$/build/classes/main/controllers/UsersController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/ejb/UsersAccess.class" afterPath="$PROJECT_DIR$/build/classes/main/ejb/UsersAccess.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/entity/Users.class" afterPath="$PROJECT_DIR$/build/classes/main/entity/Users.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/courseWork-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/build/libs/courseWork-1.0-SNAPSHOT.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/0facdae2-4582-483d-a829-bc29164845c2.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/0facdae2-4582-483d-a829-bc29164845c2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/jms/notifications/Notification.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/jms/notifications/NotificationTypes.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsProducer.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/jms/newsNotifications/NewsProducer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../yasp/lab5/.idea/workspace.xml___jb_tmp___" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/jms/newsNotifications/NewsReceiver.java" afterPath="$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsReceiver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/jms/newsNotifications/NewsProducerTest.java" afterPath="$PROJECT_DIR$/src/test/java/jms/notifications/NotificationsProducerTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/jms/newsNotifications/NewsReceiverTest.java" afterPath="$PROJECT_DIR$/src/test/java/jms/notifications/NotificationsReceiverTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/LanguageTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/LanguageTest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-LanguageTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-LanguageTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/auth/AuthController.java" afterPath="$PROJECT_DIR$/src/main/java/auth/AuthController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/context/ContextController.java" afterPath="$PROJECT_DIR$/src/main/java/context/ContextController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/ImageController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/ImageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/UsersController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/UsersController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ejb/UsersAccess.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/UsersAccess.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entity/Users.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Users.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/components/IndexSlider.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/components/IndexSlider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/components/LoginWindow.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/components/LoginWindow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/jms/newsNotifications/NewsReceiverTest.java" afterPath="$PROJECT_DIR$/src/test/java/jms/newsNotifications/NewsReceiverTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scripts/insert.sql" afterPath="$PROJECT_DIR$/../scripts/insert.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab5/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../yasp/lab5/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -107,55 +53,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ContextController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/context/ContextController.java">
+      <file leaf-file-name="NotificationsReceiver.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsReceiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="31" column="33" lean-forward="false" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContextAccess.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/context/ContextAccess.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+            <state relative-caret-position="645">
+              <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#721#730#0" expanded="true" />
-                <element signature="method#removeUserFromContext#0;class#ContextAccess#0" expanded="false" />
-                <element signature="method#setIcon#0;class#ContextAccess#0" expanded="false" />
-                <element signature="method#addNameInContext#0;class#ContextAccess#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Menu.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js">
+      <file leaf-file-name="NotificationsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1134">
-              <caret line="102" column="56" lean-forward="false" selection-start-line="102" selection-start-column="56" selection-end-line="102" selection-end-column="56" />
+            <state relative-caret-position="54">
+              <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Notification.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/Notification.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NotificationTypes.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/NotificationTypes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="3" column="45" lean-forward="false" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NotificationsProducer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsProducer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
               <folding>
-                <element signature="e#832#1294#0" expanded="false" />
-                <marker date="1515377683706" expanded="true" signature="2500:4970" ph="..." />
-                <marker date="1515377683706" expanded="true" signature="2500:4983" ph="..." />
-                <marker date="1515377683706" expanded="true" signature="2583:4953" ph="..." />
-                <marker date="1515377683706" expanded="true" signature="2583:4970" ph="..." />
-                <marker date="1515377683706" expanded="true" signature="2712:2812" ph="..." />
-                <marker date="1515377683706" expanded="true" signature="2972:3525" ph="..." />
-                <marker date="1515377683706" expanded="true" signature="3180:3504" ph="..." />
-                <marker date="1515377683706" expanded="true" signature="3805:3814" ph="..." />
-                <marker date="1515377683706" expanded="true" signature="3805:3819" ph="..." />
-                <marker date="1515377683706" expanded="true" signature="3820:4207" ph="..." />
-                <marker date="1515377683706" expanded="true" signature="4297:4341" ph="..." />
-                <marker date="1515377683706" expanded="true" signature="4342:4919" ph="..." />
-                <marker date="1515377683706" expanded="true" signature="4462:4504" ph="..." />
-                <marker date="1515377683706" expanded="true" signature="4559:4574" ph="..." />
-                <marker date="1515377683706" expanded="true" signature="4661:4898" ph="..." />
-                <marker date="1515377683706" expanded="true" signature="4935:4953" ph="..." />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -586,15 +532,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/models/UserModel.js" />
-        <option value="$PROJECT_DIR$/src/main/java/models/entities/Award.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/models/entities/Users.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/cruds/Crud.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/cruds/UsersCrud.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/api/UsersController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/Carousel.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/LoginWindow.js" />
         <option value="$PROJECT_DIR$/src/main/java/models/cruds/ImagesCrud.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/api/ImagesController.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/entities/Image.java" />
@@ -621,9 +558,7 @@
         <option value="$PROJECT_DIR$/src/main/java/auth/ApiController.java" />
         <option value="$PROJECT_DIR$/src/main/java/jms/NewsNotifications.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/jms/newsNotifications/NewsProducer.java" />
         <option value="$PROJECT_DIR$/src/main/java/jms/newsNotifications/NewsConsumer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jms/newsNotifications/NewsReceiver.java" />
         <option value="$PROJECT_DIR$/src/test/java/jms/newsNotifications/NewsProducerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/jms/newsNotifications/NewsReceiverTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js" />
@@ -637,6 +572,17 @@
         <option value="$PROJECT_DIR$/src/main/java/context/ContextController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/UsersController.java" />
         <option value="$PROJECT_DIR$/src/main/java/context/ContextAccess.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jms/newsNotifications/NewsProducer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jms/newsNotifications/NotificationsProducer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jms/newsNotifications/NewsReceiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jms/newsNotifications/NotificationsReceiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jms/notifications/NotificationTypes.java" />
+        <option value="$PROJECT_DIR$/src/test/java/jms/notifications/NotificationsProducerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsProducer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jms/notifications/Notification.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/jms/notifications/NotificationsReceiverTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsReceiver.java" />
       </list>
     </option>
   </component>
@@ -728,7 +674,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
@@ -736,23 +682,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="context" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ejb" type="462c0819:PsiDirectoryNode" />
+              <item name="notifications" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
@@ -760,33 +690,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -843,7 +746,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.build">
+  <component name="RunManager">
     <configuration name="LanguageTest.testSqlDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="courseWork_test" />
@@ -864,18 +767,18 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="NewsProducerTest.produceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NotificationsProducerTest.produceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="jms.newsNotifications.*" />
+          <option name="PATTERN" value="jms.notifications.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="courseWork_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="jms.newsNotifications" />
-      <option name="MAIN_CLASS_NAME" value="jms.newsNotifications.NewsProducerTest" />
+      <option name="PACKAGE_NAME" value="jms.notifications" />
+      <option name="MAIN_CLASS_NAME" value="jms.notifications.NotificationsProducerTest" />
       <option name="METHOD_NAME" value="produceTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -889,18 +792,43 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="NewsReceiverTest.receiveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NotificationsReceiverTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="jms.newsNotifications.*" />
+          <option name="PATTERN" value="jms.notifications.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="courseWork_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="jms.newsNotifications" />
-      <option name="MAIN_CLASS_NAME" value="jms.newsNotifications.NewsReceiverTest" />
+      <option name="PACKAGE_NAME" value="jms.notifications" />
+      <option name="MAIN_CLASS_NAME" value="jms.notifications.NotificationsReceiverTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="NotificationsReceiverTest.receiveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="jms.notifications.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="courseWork_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="jms.notifications" />
+      <option name="MAIN_CLASS_NAME" value="jms.notifications.NotificationsReceiverTest" />
       <option name="METHOD_NAME" value="receiveTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -1023,18 +951,20 @@
         <option name="LOCAL" value="false" />
       </RunnerSettings>
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Gradle.build" />
       <item index="1" class="java.lang.String" itemvalue="Remote.debug" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.LanguageTest.testSqlDate" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.NewsProducerTest.produceTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.NewsReceiverTest.receiveTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.NotificationsProducerTest.produceTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.NotificationsReceiverTest.receiveTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.NotificationsReceiverTest" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.NewsReceiverTest.receiveTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.NewsProducerTest.produceTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.LanguageTest.testSqlDate" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.NotificationsProducerTest.produceTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.NotificationsReceiverTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.NotificationsReceiverTest.receiveTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.LanguageTest.testSqlDate" />
       </list>
     </recent_temporary>
   </component>
@@ -1060,44 +990,44 @@
       <workItem from="1515027338758" duration="30370000" />
       <workItem from="1515157997443" duration="26974000" />
       <workItem from="1515241345288" duration="28437000" />
-      <workItem from="1515381156517" duration="19137000" />
+      <workItem from="1515381156517" duration="29435000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LanguageTest_testSqlDate - 2018.01.06 at 23h 38m 41s.xml">
-      <configuration name="LanguageTest.testSqlDate" configurationId="JUnit" />
+    <history-entry file="NotificationsProducerTest_produceTest - 2018.01.08 at 23h 29m 26s.xml">
+      <configuration name="NotificationsProducerTest.produceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LanguageTest_testSqlDate - 2018.01.06 at 23h 39m 12s.xml">
-      <configuration name="LanguageTest.testSqlDate" configurationId="JUnit" />
+    <history-entry file="NotificationsProducerTest_produceTest - 2018.01.08 at 23h 30m 46s.xml">
+      <configuration name="NotificationsProducerTest.produceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LanguageTest_testSqlDate - 2018.01.06 at 23h 39m 58s.xml">
-      <configuration name="LanguageTest.testSqlDate" configurationId="JUnit" />
+    <history-entry file="NotificationsProducerTest_produceTest - 2018.01.08 at 23h 42m 42s.xml">
+      <configuration name="NotificationsProducerTest.produceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LanguageTest_testSqlDate - 2018.01.06 at 23h 40m 29s.xml">
-      <configuration name="LanguageTest.testSqlDate" configurationId="JUnit" />
+    <history-entry file="NotificationsProducerTest_produceTest - 2018.01.08 at 23h 47m 30s.xml">
+      <configuration name="NotificationsProducerTest.produceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LanguageTest_testSqlDate - 2018.01.06 at 23h 41m 27s.xml">
-      <configuration name="LanguageTest.testSqlDate" configurationId="JUnit" />
+    <history-entry file="NotificationsReceiverTest - 2018.01.08 at 23h 53m 28s.xml">
+      <configuration name="NotificationsReceiverTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NewsProducerTest_produceTest - 2018.01.08 at 02h 06m 21s.xml">
-      <configuration name="NewsProducerTest.produceTest" configurationId="JUnit" />
+    <history-entry file="NotificationsReceiverTest_receiveTest - 2018.01.08 at 23h 27m 40s.xml">
+      <configuration name="NotificationsReceiverTest.receiveTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NewsProducerTest_produceTest - 2018.01.08 at 02h 07m 21s.xml">
-      <configuration name="NewsProducerTest.produceTest" configurationId="JUnit" />
+    <history-entry file="NotificationsReceiverTest_receiveTest - 2018.01.08 at 23h 28m 53s.xml">
+      <configuration name="NotificationsReceiverTest.receiveTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NewsReceiverTest_receiveTest - 2018.01.08 at 02h 27m 16s.xml">
-      <configuration name="NewsReceiverTest.receiveTest" configurationId="JUnit" />
+    <history-entry file="NotificationsReceiverTest_receiveTest - 2018.01.08 at 23h 30m 28s.xml">
+      <configuration name="NotificationsReceiverTest.receiveTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NewsReceiverTest_receiveTest - 2018.01.08 at 02h 28m 14s.xml">
-      <configuration name="NewsReceiverTest.receiveTest" configurationId="JUnit" />
+    <history-entry file="NotificationsReceiverTest_receiveTest - 2018.01.08 at 23h 42m 42s.xml">
+      <configuration name="NotificationsReceiverTest.receiveTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NewsReceiverTest_receiveTest - 2018.01.08 at 02h 28m 48s.xml">
-      <configuration name="NewsReceiverTest.receiveTest" configurationId="JUnit" />
+    <history-entry file="NotificationsReceiverTest_receiveTest - 2018.01.08 at 23h 45m 56s.xml">
+      <configuration name="NotificationsReceiverTest.receiveTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="282103000" />
+    <option name="totallyTimeSpent" value="292401000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1121,13 +1051,14 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959655" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39907727" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38824886" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27419356" sideWeight="0.49166217" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27419356" sideWeight="0.49166217" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2546083" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27218935" sideWeight="0.50691247" order="8" side_tool="true" content_ui="tabs" />
@@ -1142,9 +1073,42 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5083378" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974717" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959655" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39907727" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27419356" sideWeight="0.49166217" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2546083" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27218935" sideWeight="0.50691247" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2802582" sideWeight="0.49140894" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27218935" sideWeight="0.50859106" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27218935" sideWeight="0.50691247" order="6" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1182,64 +1146,23 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/jms/newsNotifications/NewsProducerTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/jms/notifications/NotificationsProducerTest.java</url>
           <line>10</line>
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/jms/newsNotifications/NewsReceiver.java</url>
-          <line>37</line>
+          <url>file://$PROJECT_DIR$/src/test/java/jms/notifications/NotificationsReceiverTest.java</url>
+          <line>10</line>
           <properties />
-          <option name="timeStamp" value="14" />
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="16" />
+      <option name="time" value="26" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejbs/Ejb_Image.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="80" lean-forward="false" selection-start-line="23" selection-start-column="80" selection-end-line="23" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Artifact.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/backbone_collections/ImageCollection.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/backbone_models/ImageModel.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/backbone_models/ImageModel.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/backbone_collections/ImagesCollection.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/backbone_models/UserModel.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/context/ApplicationContext.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/home.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/auth0/LoginServlet.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/auth0/AuthenticationControllerProvider.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="16" column="93" lean-forward="true" selection-start-line="16" selection-start-column="93" selection-end-line="16" selection-end-column="93" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/auth0/ApiController.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/net/URL.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
@@ -1295,31 +1218,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jms/newsNotifications/NewsConsumer.java" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.rabbitmq/amqp-client/5.1.1/e32a0a72bce2cc27421dfc8b99f96a209855a66e/amqp-client-5.1.1-sources.jar!/com/rabbitmq/client/DefaultConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="34" column="18" lean-forward="true" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.rabbitmq/amqp-client/5.1.1/e32a0a72bce2cc27421dfc8b99f96a209855a66e/amqp-client-5.1.1-sources.jar!/com/rabbitmq/client/impl/ConsumerDispatcher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
           <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jms/newsNotifications/NewsReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1331,19 +1239,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jms/newsNotifications/NewsProducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entity/Author.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1352,21 +1253,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="48" column="22" lean-forward="false" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/jms/newsNotifications/NewsProducerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/jms/newsNotifications/NewsReceiverTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1556,22 +1442,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ImageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/UsersController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
           <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#tryAddUser#0;class#UsersController#0" expanded="false" />
             <element signature="method#checkUser#0;class#UsersController#0" expanded="false" />
           </folding>
@@ -1588,14 +1464,191 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/context/ContextAccess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        <state relative-caret-position="236">
+          <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#721#730#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="method#getUserFromContext#0;class#ContextAccess#0" expanded="false" />
+            <element signature="method#addUserInContext#0;class#ContextAccess#0" expanded="false" />
+            <element signature="e#721#730#0" expanded="false" />
             <element signature="method#removeUserFromContext#0;class#ContextAccess#0" expanded="false" />
             <element signature="method#setIcon#0;class#ContextAccess#0" expanded="false" />
             <element signature="method#addNameInContext#0;class#ContextAccess#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.rabbitmq/amqp-client/5.1.1/e32a0a72bce2cc27421dfc8b99f96a209855a66e/amqp-client-5.1.1-sources.jar!/com/rabbitmq/client/impl/recovery/AutorecoveringChannel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="539" column="0" lean-forward="false" selection-start-line="539" selection-start-column="0" selection-end-line="539" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.rabbitmq/amqp-client/5.1.1/e32a0a72bce2cc27421dfc8b99f96a209855a66e/amqp-client-5.1.1-sources.jar!/com/rabbitmq/client/DefaultConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="85" column="16" lean-forward="false" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/reflect/Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="497" column="0" lean-forward="false" selection-start-line="497" selection-start-column="0" selection-end-line="497" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/runners/BlockJUnit4ClassRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/runners/ParentRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="324" column="0" lean-forward="false" selection-start-line="324" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/statements/InvokeMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/runners/model/FrameworkMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="e#1464#1658#0" expanded="false" />
+            <element signature="e#1657#1658#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.rabbitmq/amqp-client/5.1.1/e32a0a72bce2cc27421dfc8b99f96a209855a66e/amqp-client-5.1.1-sources.jar!/com/rabbitmq/client/RpcServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="59" column="36" lean-forward="true" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/jms/notifications/NotificationsProducerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.rabbitmq/amqp-client/5.1.1/e32a0a72bce2cc27421dfc8b99f96a209855a66e/amqp-client-5.1.1-sources.jar!/com/rabbitmq/client/Channel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="875" column="69" lean-forward="true" selection-start-line="875" selection-start-column="69" selection-end-line="875" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Note.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ImageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="37" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/jms/notifications/NotificationsReceiverTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="55" lean-forward="false" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/NotificationTypes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="45" lean-forward="false" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/Notification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
