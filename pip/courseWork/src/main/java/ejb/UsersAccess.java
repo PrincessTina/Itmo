@@ -13,7 +13,11 @@ import java.util.List;
 
 @Stateless
 public class UsersAccess extends Access {
-  public void addNewUser(String login, String email, String password) {
+  public void addNewUser(String login, String email, String password) throws ServletException {
+    if (login == null || password == null) {
+      throw new ServletException("Login or password is null");
+    }
+
     Date date = new Date(Calendar.getInstance().getTime().getTime());
 
     create(login, password, date, email);

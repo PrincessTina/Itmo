@@ -67,7 +67,7 @@ $(document).ready(() => {
 
             let condition = true;
 
-            if (username.value === "" || /\s+/.test(username.value)) {
+            if (username.value === "" || /\s+/.test(username.value) || /^VK.*$/.test(username.value) || /^IN.*$/.test(username.value)) {
                 username.classList.add("w3-border-0", "w3-pale-red", "w3-leftbar", "w3-border-red");
                 condition = false;
             }

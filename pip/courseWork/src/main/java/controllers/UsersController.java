@@ -51,27 +51,15 @@ public class UsersController extends HttpServlet {
     if (action.isEmpty()) {
       throw new ServletException("Action is null");
     } else if (action.equals("reg")) {
-      tryAddUser(login, password, email);
+      users.addNewUser(login, password, email);
       context.addUserInContext(login, password, request);
     } else if (action.equals("check")) {
-      checkUser(login, password);
+      users.checkUser(login, password);
       context.addUserInContext(login, password, request);
     } else if (action.equals("exit")) {
       context.removeUserFromContext(request);
     } else {
       throw new ServletException("Unknown action");
     }
-  }
-
-  private void tryAddUser(String login, String password, String email) throws ServletException {
-    if (login == null || password == null) {
-      throw new ServletException("Incorrect input");
-    }
-
-    users.addNewUser(login, email, password);
-  }
-
-  private void checkUser(String login, String password) throws ServletException {
-    users.checkUser(login, password);
   }
 }

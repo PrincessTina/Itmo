@@ -4,12 +4,20 @@ $(document).ready(() => {
         slider: null,
         menu: null,
 
+        events: {
+          'click ._myVkPage': 'goToMyVkPage'
+        },
+
         initialize() {
             _.bindAll(this, 'render');
             this.render();
 
             this.menu = new Menu();
             this.slider = new IndexSlider();
+        },
+
+        goToMyVkPage() {
+          window.open("https://vk.com/kristi_tulpan");
         },
 
         render() {
@@ -78,9 +86,7 @@ $(document).ready(() => {
         
           <!-- Футер с контактами -->
           <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-            <i class="fa fa-facebook-official w3-hover-opacity"></i>
-            <i class="fa fa-instagram w3-hover-opacity"></i>
-            <i class="fa fa-twitter w3-hover-opacity"></i>    
+            <i class="fa fa-vk w3-hover-opacity _myVkPage"></i>   
             <p class="w3-medium"><i>Powered by PrincessTina</i></p>
           </footer>
         </div>
