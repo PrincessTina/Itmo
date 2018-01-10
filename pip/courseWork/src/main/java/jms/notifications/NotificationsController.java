@@ -2,6 +2,7 @@ package jms.notifications;
 
 import com.google.gson.Gson;
 import ejb.context.ContextAccess;
+import ejb.logic.NotificationAccess;
 
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -10,13 +11,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.concurrent.TimeoutException;
 
 @WebServlet(name = "notifications", urlPatterns = "/notifications")
 public class NotificationsController extends HttpServlet {
 
   @EJB
   NotificationsReceiver notificationsReceiver;
+
+  @EJB
+  NotificationAccess notificationAccess;
 
   @EJB
   ContextAccess context;
@@ -30,10 +33,10 @@ public class NotificationsController extends HttpServlet {
 
     try {
       int notificationId = notificationsReceiver.receive(NotificationTypes.NEWS, context.getUserFromContext(request).getLogin());
-      Notification notification = new Notification(notificationId, NotificationTypes.NEWS);
+      Notification notification = notificationAccess.createById(notificationId, NotificationTypes.NEWS);
       answer = new Gson().toJson(notification);
-    } catch (TimeoutException e) {
-      answer = new Gson().toJson(new Object());
+    } catch (Exception e) {
+      answer = new Gson().toJson((Object) null);
     }
 
     response.setContentType("application/json");

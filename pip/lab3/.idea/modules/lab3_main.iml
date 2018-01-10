@@ -7,13 +7,13 @@
           <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/../../src/main/webapp/WEB-INF/web.xml" />
         </descriptors>
         <webroots>
-          <root url="file://C:\Users\krist\Documents\itmo\pip\lab3\src\main\webapp" relative="/" />
+          <root url="file://$MODULE_DIR$/../../src/main/webapp" relative="/" />
         </webroots>
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6">
-    <output url="file://$MODULE_DIR$/../../out/production/classes" />
+    <output url="file://$MODULE_DIR$/../../build/classes/main" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../src/main">
       <sourceFolder url="file://$MODULE_DIR$/../../src/main/java" isTestSource="false" />

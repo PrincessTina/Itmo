@@ -20,7 +20,7 @@ public class NotificationsProducer {
 
     Connection connection = factory.newConnection();
     Channel channel = connection.createChannel();
-    channel.exchangeDeclare(notificationType, "fanout");
+    channel.exchangeDeclare(notificationType, "fanout", true, false, null);
 
     channel.basicPublish(notificationType, "", null, String.valueOf(id).getBytes());
 
