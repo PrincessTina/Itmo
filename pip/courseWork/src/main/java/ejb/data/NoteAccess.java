@@ -4,6 +4,7 @@ import entity.Note;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+<<<<<<< HEAD
 import java.sql.Date;
 import java.util.Calendar;
 
@@ -19,5 +20,17 @@ public class NoteAccess extends Access{
     entityManager.persist(row);
     entityManager.getTransaction().commit();
     entityManager.close();
+=======
+
+/**
+ * Класс для доступа к таблице Note
+ */
+@Stateless
+public class NoteAccess extends Access {
+  public Note getById(int id) {
+    EntityManager entityManager = generateEntityManager();
+
+    return entityManager.find(Note.class, id);
+>>>>>>> pip/course_project/notifications
   }
 }

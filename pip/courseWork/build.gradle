@@ -27,7 +27,7 @@ dependencies {
 
     compile group: 'com.google.code.gson', name: 'gson', version: '1.7.2'
 
-    compile 'com.rabbitmq:amqp-client:5.1.1'
+    compile 'com.rabbitmq:amqp-client:3.0.1'
 
     compile group: 'javax.validation', name: 'validation-api', version: '1.0.0.GA'
 }
