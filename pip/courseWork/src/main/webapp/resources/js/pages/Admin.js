@@ -1,6 +1,6 @@
 $(document).ready(() => {
     var NotificationModel = Backbone.Model.extend({
-        urlRoot: 'notifications'
+        urlRoot: 'notes'
     });
 
     window.Admin = Backbone.View.extend({

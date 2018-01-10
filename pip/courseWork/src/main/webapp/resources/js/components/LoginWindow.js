@@ -24,25 +24,32 @@ $(document).ready(() => {
         },
 
         vkAuth() {
-            let location = "vk";
+            let service = "vk";
+            let url = "http://localhost:62434/courseWork-1.0-SNAPSHOT/"; //то, что зашито
+            let address = window.location.href;
+
+            window.location.href = url;
 
             window.location.href = "https://oauth.vk.com/authorize?" +
                 "client_id=6323215&" +
                 "display=popup&" +
                 "scope=email&" +
-                "redirect_uri=" + window.location +
-                "auth?address=" + location + window.location;
+                "redirect_uri=" + url +
+                "auth?address=" + service + address;
         },
 
         inAuth() {
-            let location = "in";
+            let service = "in";
+            let address = window.location.href;
             let url = "http://localhost:62434/courseWork-1.0-SNAPSHOT/"; //то, что зашито в инсте
+
+            window.location.href = url;
 
             window.location.href = "https://api.instagram.com/oauth/authorize/?" +
                 "client_id=39649a7b64a54a898f1f972c68eb1e26&" +
                 "&response_type=code&" +
                 "redirect_uri=" + url +
-                "auth?address=" + location + window.location;
+                "auth?address=" + service + address;
         },
 
         check() {

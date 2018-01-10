@@ -3,6 +3,7 @@ package entity;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 import java.sql.Date;
 
 @Entity
@@ -14,6 +15,8 @@ public class Note {
   private int image_id;
   private Date date;
   private String description;
+  @Transient
+  private Image image;
 
   public Note() {
   }
@@ -63,5 +66,13 @@ public class Note {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+  public Image getImage() {
+    return image;
+  }
+
+  public void setImage(Image image) {
+    this.image = image;
   }
 }

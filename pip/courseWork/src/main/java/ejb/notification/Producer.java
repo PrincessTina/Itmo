@@ -17,11 +17,11 @@ import java.util.concurrent.TimeoutException;
 public class Producer {
   public void produce(String exchange, String message) throws IOException, TimeoutException {
     ConnectionFactory factory = new ConnectionFactory();
-    factory.setUsername("s225074");
-    factory.setPassword("3HJiPRAH");
+    factory.setUsername("tina");
+    factory.setPassword("19031999");
     factory.setVirtualHost("/");
-    factory.setHost("helios.cs.ifmo.ru");
-    factory.setPort(2222);
+    factory.setHost("188.166.39.53");
+    factory.setPort(5672);
 
     Connection connection = factory.newConnection();
     Channel channel = connection.createChannel();

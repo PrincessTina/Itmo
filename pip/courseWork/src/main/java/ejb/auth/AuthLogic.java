@@ -44,7 +44,7 @@ public class AuthLogic {
           "client_id=6323215&" +
           "client_secret=jWRjPW1pjkZbHGJ1SCHN&" +
           "code=" + code + "&" +
-          "redirect_uri=" + address +
+          "redirect_uri=" + "http://localhost:62434/courseWork-1.0-SNAPSHOT/" + //зашито
           "auth?address=" + service + address);
 
       userId = link.getInt("user_id");

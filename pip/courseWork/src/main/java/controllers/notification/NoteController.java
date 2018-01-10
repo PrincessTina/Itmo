@@ -1,13 +1,9 @@
 package controllers.notification;
 
-import classes.Notification;
-import classes.QueueNames;
 import com.google.gson.Gson;
 import ejb.data.Controller;
-import ejb.context.ContextAccess;
+import ejb.data.NoteAccess;
 import ejb.notification.NotificationLogic;
-import ejb.notification.Producer;
-import ejb.notification.Receiver;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -18,21 +14,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.concurrent.TimeoutException;
 
-@WebServlet(name = "notifications", urlPatterns = {"/notifications"})
-public class NotificationController extends HttpServlet {
+@WebServlet(name = "notes", urlPatterns = {"/notes"})
+public class NoteController extends HttpServlet {
   @EJB
   private NotificationLogic notificationLogic;
 
   @EJB
-  private Producer producer;
-
-  @EJB
-  private Receiver receiver;
-
-  @EJB
-  private ContextAccess context;
+  private NoteAccess notes;
 
   @EJB
   private Controller controller;
@@ -52,7 +41,6 @@ public class NotificationController extends HttpServlet {
         String description = jsonObject.getString("description");
 
         notificationLogic.addNewNote(link, description, request);
-        //producer.produce(QueueNames.NEWS, description);
       } else {
         throw new ServletException("Unknown type");
       }
@@ -66,14 +54,11 @@ public class NotificationController extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     try {
-      if (receiver.receive(QueueNames.NEWS, context.getUserFromContext(request).getLogin()) != null) {
-        Notification news = new Notification("new", "We got the updates");
-        String answer = new Gson().toJson(news);
+      String answer = new Gson().toJson(notes.getAllNotes());
 
-        response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
-        response.getWriter().write(answer);
-      }
+      response.setContentType("application/json");
+      response.setCharacterEncoding("UTF-8");
+      response.getWriter().write(answer);
     } catch (Exception ex) {
       throw new ServletException(ex.getMessage());
     }

@@ -27,7 +27,7 @@ public class ImageController extends HttpServlet {
     if (action.isEmpty()) {
       throw new ServletException("Action is null");
     } else if (action.equals("get_sl")) {
-      ArrayList<Image> imageList = getContent(new ArrayList<Integer>(Arrays.asList(0, 1, 2, 3, 4)));
+      ArrayList<Image> imageList = images.readInitImages(new ArrayList<Integer>(Arrays.asList(0, 1, 2, 3, 4)));
       String answer = new Gson().toJson(imageList);
 
       response.setContentType("application/json");
@@ -36,9 +36,5 @@ public class ImageController extends HttpServlet {
     } else {
       throw new ServletException("Unknown action");
     }
-  }
-
-  private ArrayList<Image> getContent(ArrayList<Integer> listOfId) {
-    return images.readInitImages(listOfId);
   }
 }

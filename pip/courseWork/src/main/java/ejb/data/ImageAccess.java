@@ -2,18 +2,14 @@ package ejb.data;
 
 import entity.Image;
 
-import javax.ejb.LocalBean;
-import javax.ejb.Stateless;
-import javax.ejb.TransactionManagement;
-import javax.ejb.TransactionManagementType;
+import javax.ejb.*;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import javax.servlet.ServletException;
 import java.util.ArrayList;
 import java.util.List;
 
-@Stateless
-@LocalBean
+@Stateful
 @TransactionManagement(TransactionManagementType.BEAN)
 public class ImageAccess extends Access {
   public ArrayList<Image> readInitImages(ArrayList<Integer> listOfId) {
@@ -26,7 +22,7 @@ public class ImageAccess extends Access {
     return images;
   }
 
-  private Image read(int id) {
+  public Image read(int id) {
     EntityManager entityManager = generateEntityManager();
     Image image = entityManager.find(Image.class, id);
 
