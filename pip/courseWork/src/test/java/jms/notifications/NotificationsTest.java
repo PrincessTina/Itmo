@@ -1,21 +1,27 @@
 package jms.notifications;
 
+import classes.QueueNames;
+import ejb.notification.Producer;
+import ejb.notification.Receiver;
 import org.junit.Test;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 public class NotificationsTest {
-  private NotificationsProducer producer = new NotificationsProducer();
-  private NotificationsReceiver receiver = new NotificationsReceiver();
+  private Producer producer = new Producer();
+  private Receiver receiver = new Receiver();
 
   @Test
   public void produceTest() throws InterruptedException, TimeoutException, IOException {
-    int expectedNewsId = 123;
+    String request = "Hello";
+    String response;
 
-    producer.produce(NotificationTypes.NEWS, expectedNewsId);
-    int receivedNewsId = receiver.receive(NotificationTypes.NEWS, "tina");
+    producer.produce(QueueNames.NEWS, request);
+    response = receiver.receive(QueueNames.NEWS, "marco");
 
-    assert(expectedNewsId == receivedNewsId);
+    System.out.println(response);
+
+    assert (request.equals(response));
   }
 }

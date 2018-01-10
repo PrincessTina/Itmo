@@ -1,6 +1,7 @@
 package entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Award {
@@ -9,14 +10,14 @@ public class Award {
   private int id;
   private String description;
 
-  /*@ManyToMany(fetch = FetchType.EAGER)
+  @ManyToMany(fetch = FetchType.EAGER)
   @JoinTable(
       name = "user_award",
       joinColumns = @JoinColumn(name = "award_id"),
       inverseJoinColumns = @JoinColumn(name = "user_id")
   )
   private List<Users> users;
-  */
+
 
   public Award() {
   }

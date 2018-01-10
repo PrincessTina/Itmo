@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/courseWork.iml" filepath="$PROJECT_DIR$/.idea/modules/courseWork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/courseWork.iml" filepath="$PROJECT_DIR$/courseWork.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/courseWork_main.iml" filepath="$PROJECT_DIR$/.idea/modules/courseWork_main.iml" group="courseWork" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/courseWork_test.iml" filepath="$PROJECT_DIR$/.idea/modules/courseWork_test.iml" group="courseWork" />
     </modules>

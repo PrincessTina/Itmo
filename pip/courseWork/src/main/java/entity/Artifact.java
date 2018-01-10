@@ -1,7 +1,7 @@
 package entity;
 
 import javax.persistence.*;
-import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Artifact {
@@ -17,7 +17,7 @@ public class Artifact {
       joinColumns = @JoinColumn(name = "art_id"),
       inverseJoinColumns = @JoinColumn(name = "character_id")
   )
-  private ArrayList<entity.Character> characters;
+  private List<entity.Character> characters;
 
   public Artifact() {
   }
@@ -51,11 +51,11 @@ public class Artifact {
     this.description = description;
   }
 
-  public ArrayList<entity.Character> getCharacters() {
+  public List<entity.Character> getCharacters() {
     return characters;
   }
 
-  public void setCharacters(ArrayList<entity.Character> characters) {
+  public void setCharacters(List<entity.Character> characters) {
     this.characters = characters;
   }
 }

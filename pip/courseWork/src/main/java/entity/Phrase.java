@@ -2,6 +2,7 @@ package entity;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Phrase {
@@ -24,7 +25,7 @@ public class Phrase {
       joinColumns = @JoinColumn(name = "question_id"),
       inverseJoinColumns = @JoinColumn(name = "answer_id")
   )
-  private ArrayList<Phrase> answers;
+  private List<Phrase> answers;
 
   @ManyToOne(fetch = FetchType.EAGER)
   @JoinTable(
@@ -72,7 +73,7 @@ public class Phrase {
     this.question = question;
   }
 
-  public ArrayList<Phrase> getAnswers() {
+  public List<Phrase> getAnswers() {
     return answers;
   }
 

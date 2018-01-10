@@ -2,10 +2,10 @@ package classes;
 
 public class Notification {
   private String type;
-  private String body;
+  private String description;
 
   public Notification(String type, String body) {
-    this.body = body;
+    this.description = body;
     this.type = type;
   }
 
@@ -17,11 +17,11 @@ public class Notification {
     this.type = type;
   }
 
-  public String getBody() {
-    return body;
+  public String getDescription() {
+    return description;
   }
 
-  public void setBody(String body) {
-    this.body = body;
+  public void setDescription(String description) {
+    this.description = description;
   }
 }
