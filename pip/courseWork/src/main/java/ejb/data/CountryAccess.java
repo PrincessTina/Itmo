@@ -1,0 +1,45 @@
+package ejb.data;
+
+import entity.Country;
+import entity.Image;
+import entity.Legend;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import javax.servlet.ServletException;
+import java.util.List;
+
+@Stateless
+@LocalBean
+public class CountryAccess extends Access {
+  public List<Legend> getLegends(String name) throws ServletException {
+    Country country = find(name);
+
+    return country.getLegends();
+  }
+
+  public List<Image> getImages(String name) throws ServletException {
+    Country country = find(name);
+
+    return country.getImages();
+  }
+
+  public Country find(String name) throws ServletException {
+    EntityManager entityManager = generateEntityManager();
+
+    Query query = entityManager.createQuery("Select e from Country e where e.name = :name");
+    query.setParameter("name", name);
+
+    List<Country> list = query.getResultList();
+
+    entityManager.close();
+
+    if (list.size() == 0) {
+      return null;
+    } else {
+      return list.get(0);
+    }
+  }
+}

@@ -28,7 +28,7 @@ public class Legend {
       joinColumns = @JoinColumn(name = "legend_id"),
       inverseJoinColumns = @JoinColumn(name = "character_id")
   )
-  private List<Legend> characters;
+  private List<Character> characters;
 
   @ManyToMany(fetch = FetchType.EAGER)
   @JoinTable(
@@ -97,11 +97,11 @@ public class Legend {
     this.description = description;
   }
 
-  public List<Legend> getCharacters() {
+  public List<Character> getCharacters() {
     return characters;
   }
 
-  public void setCharacters(List<Legend> characters) {
+  public void setCharacters(List<Character> characters) {
     this.characters = characters;
   }
 

@@ -41,4 +41,12 @@ public class Award {
   public void setDescription(String description) {
     this.description = description;
   }
+
+  public List<Users> getUsers() {
+    return users;
+  }
+
+  public void setUsers(List<Users> users) {
+    this.users = users;
+  }
 }
