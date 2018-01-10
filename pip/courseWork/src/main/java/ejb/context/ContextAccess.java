@@ -5,6 +5,7 @@ import entity.Image;
 import entity.Users;
 
 import javax.ejb.EJB;
+import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 @Stateless
+@LocalBean
 public class ContextAccess {
 
   @EJB

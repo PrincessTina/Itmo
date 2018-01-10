@@ -6,6 +6,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import javax.ejb.EJB;
+import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.net.ssl.HttpsURLConnection;
 import javax.servlet.ServletException;
@@ -24,6 +25,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 @Stateless
+@LocalBean
 public class AuthLogic {
 
   @EJB

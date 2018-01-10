@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
 <<<<<<< HEAD
     <list default="true" id="a32c1388-fc1c-46f6-8fde-58e44b271a17" name="Default" comment="">
+<<<<<<< Updated upstream
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/classes/Notification.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/components/NotificationChecker.js" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jms/notifications/NotificationsController.class" afterPath="" />
@@ -112,6 +113,15 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../lab3/.idea/modules/lab3_test.iml" afterPath="$PROJECT_DIR$/../lab3/.idea/modules/lab3_test.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../lab3/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../lab3/.idea/workspace.xml" />
 >>>>>>> pip/course_project/notifications
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ejb/auth/AuthLogic.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/auth/AuthLogic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ejb/context/ContextAccess.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/context/ContextAccess.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ejb/data/Access.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/data/Access.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ejb/data/ImageAccess.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/data/ImageAccess.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ejb/data/NoteAccess.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/data/NoteAccess.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ejb/data/UsersAccess.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/data/UsersAccess.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ejb/notification/NotificationLogic.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/notification/NotificationLogic.java" />
+>>>>>>> Stashed changes
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -199,6 +209,7 @@
     <favorites_list name="courseWork" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
 =======
@@ -210,31 +221,69 @@
               <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="AuthLogic.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ejb/auth/AuthLogic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="27" column="10" lean-forward="false" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+              <folding>
+                <element signature="method#authorizeWithIn#0;class#AuthLogic#0" expanded="false" />
+                <element signature="method#registerUserWithVk#0;class#AuthLogic#0" expanded="false" />
+                <element signature="method#createPassword#0;class#AuthLogic#0" expanded="false" />
+                <element signature="method#getResponseFromApi#0;class#AuthLogic#0" expanded="false" />
+                <element signature="method#getFromPostCall#0;class#AuthLogic#0" expanded="false" />
+>>>>>>> Stashed changes
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="ContextController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/context/ContextController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
               <folding />
+=======
+      <file leaf-file-name="ContextAccess.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ejb/context/ContextAccess.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+              <folding>
+                <element signature="method#getUserFromContext#0;class#ContextAccess#0" expanded="false" />
+                <element signature="method#addUserInContext#0;class#ContextAccess#0" expanded="false" />
+                <element signature="method#removeUserFromContext#0;class#ContextAccess#0" expanded="false" />
+                <element signature="method#setIcon#0;class#ContextAccess#0" expanded="false" />
+                <element signature="method#addNameInContext#0;class#ContextAccess#0" expanded="false" />
+              </folding>
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="Channel.java" pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.rabbitmq/amqp-client/3.0.1/4508fa6be357a6595cda29b73b722f786d52405d/amqp-client-3.0.1-sources.jar!/com/rabbitmq/client/Channel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="253">
               <caret line="622" column="48" lean-forward="false" selection-start-line="622" selection-start-column="48" selection-end-line="622" selection-end-column="48" />
+=======
+      <file leaf-file-name="Access.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/Access.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+>>>>>>> Stashed changes
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="NotificationsTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/jms/notifications/NotificationsTest.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -242,11 +291,25 @@
               <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+=======
+      <file leaf-file-name="ImageAccess.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/ImageAccess.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+              <folding>
+                <element signature="method#readInitImages#0;class#ImageAccess#0" expanded="false" />
+                <element signature="method#read#0;class#ImageAccess#0" expanded="false" />
+                <element signature="method#create#0;class#ImageAccess#0" expanded="false" />
+                <element signature="docComment;method#findImage#0;class#ImageAccess#0" expanded="false" />
+                <element signature="method#findImage#0;class#ImageAccess#0" expanded="false" />
+>>>>>>> Stashed changes
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="NotificationsController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -254,11 +317,21 @@
               <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
+=======
+      <file leaf-file-name="NoteAccess.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/NoteAccess.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+              <folding>
+                <element signature="method#create#0;class#NoteAccess#0" expanded="false" />
+>>>>>>> Stashed changes
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="ContextAccess.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ejb/context/ContextAccess.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -277,11 +350,28 @@
               <folding>
                 <element signature="e#1145#1146#0" expanded="true" />
                 <element signature="e#1167#1168#0" expanded="true" />
+=======
+      <file leaf-file-name="UsersAccess.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/UsersAccess.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+              <folding>
+                <element signature="method#addNewUser#0;class#UsersAccess#0" expanded="false" />
+                <element signature="method#checkUser#0;class#UsersAccess#0" expanded="false" />
+                <element signature="method#findUserPassword#0;class#UsersAccess#0" expanded="false" />
+                <element signature="method#findUserId#0;class#UsersAccess#0" expanded="false" />
+                <element signature="method#create#0;class#UsersAccess#0" expanded="false" />
+                <element signature="method#read#0;class#UsersAccess#0" expanded="false" />
+                <element signature="method#delete#0;class#UsersAccess#0" expanded="false" />
+                <element signature="method#update#0;class#UsersAccess#0" expanded="false" />
+>>>>>>> Stashed changes
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="Object.java" pinned="false" current-in-tab="false">
         <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/Object.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -309,13 +399,27 @@
               <caret line="27" column="22" lean-forward="false" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
+=======
+      <file leaf-file-name="NotificationLogic.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ejb/notification/NotificationLogic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+              <folding>
+                <element signature="method#addNewNote#0;class#NotificationLogic#0" expanded="false" />
+                <element signature="method#getNewImageId#0;class#NotificationLogic#0" expanded="false" />
+                <element signature="method#getCurrentUserId#0;class#NotificationLogic#0" expanded="false" />
+>>>>>>> Stashed changes
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+<<<<<<< Updated upstream
 >>>>>>> pip/course_project/notifications
+=======
+>>>>>>> Stashed changes
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -780,9 +884,6 @@
         <option value="$PROJECT_DIR$/src/main/java/controllers/UsersController.java" />
         <option value="$PROJECT_DIR$/src/main/java/auth/AuthLogic.java" />
         <option value="$PROJECT_DIR$/src/main/java/auth/AuthController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ejb/data/Access.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ejb/auth/AuthLogic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ejb/context/ContextAccess.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/data/ImageController.java" />
 <<<<<<< HEAD
 =======
@@ -794,9 +895,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/ejb-jar.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/admin.html" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/data/UsersController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ejb/data/UsersAccess.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ejb/data/NoteAccess.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ejb/notification/NotificationLogic.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Admin.js" />
@@ -810,7 +908,11 @@
         <option value="$PROJECT_DIR$/src/main/java/jms/notifications/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/NotificationChecker.js" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ejb/auth/AuthLogic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ejb/context/ContextAccess.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ejb/data/Access.java" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/data/ImageAccess.java" />
+<<<<<<< Updated upstream
 =======
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/context/ContextController.java" />
@@ -823,6 +925,11 @@
         <option value="$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsReceiver.java" />
         <option value="$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsController.java" />
 >>>>>>> pip/course_project/notifications
+=======
+        <option value="$PROJECT_DIR$/src/main/java/ejb/data/NoteAccess.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ejb/data/UsersAccess.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ejb/notification/NotificationLogic.java" />
+>>>>>>> Stashed changes
       </list>
     </option>
   </component>
@@ -926,6 +1033,15 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ejb" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ejb" type="462c0819:PsiDirectoryNode" />
               <item name="context" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -943,7 +1059,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="ejb" type="462c0819:PsiDirectoryNode" />
+              <item name="notification" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
@@ -1892,11 +2009,15 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     <option name="totallyTimeSpent" value="335523000" />
 =======
     <option name="totallyTimeSpent" value="324795000" />
 >>>>>>> pip/course_project/notifications
+=======
+    <option name="totallyTimeSpent" value="335659000" />
+>>>>>>> Stashed changes
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1910,6 +2031,7 @@
   <component name="ToolWindowManager">
 <<<<<<< HEAD
     <frame x="-8" y="0" width="1935" height="1038" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27419356" sideWeight="0.5104895" order="7" side_tool="true" content_ui="tabs" />
@@ -1938,11 +2060,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27419356" sideWeight="0.48951048" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27419356" sideWeight="0.48951048" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2546083" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27218935" sideWeight="0.50691247" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2845616" sideWeight="0.49140894" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2845616" sideWeight="0.49140894" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27218935" sideWeight="0.50859106" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -2783,6 +2905,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/1.7.2/a6fe3006df46174a9c1c56b3c51357b9bfde5874/gson-1.7.2-sources.jar!/com/google/gson/Gson.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
@@ -2797,6 +2920,67 @@
 <<<<<<< HEAD
         <state relative-caret-position="504">
           <caret line="45" column="35" lean-forward="false" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="35" />
+=======
+    <entry file="file://$PROJECT_DIR$/build/classes/main/ejb/data/ImageAccess.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-231">
+          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#1651#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/Notification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/NotificationTypes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/auth/AuthLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="27" column="10" lean-forward="false" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="method#authorizeWithIn#0;class#AuthLogic#0" expanded="false" />
             <element signature="method#registerUserWithVk#0;class#AuthLogic#0" expanded="false" />
@@ -2818,7 +3002,7 @@
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
         <state relative-caret-position="105">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
           <folding>
             <element signature="method#getUserFromContext#0;class#ContextAccess#0" expanded="false" />
             <element signature="method#addUserInContext#0;class#ContextAccess#0" expanded="false" />
@@ -2831,6 +3015,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/Access.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="84">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
 =======
@@ -2845,6 +3030,10 @@
         <state relative-caret-position="253">
           <caret line="622" column="48" lean-forward="false" selection-start-line="622" selection-start-column="48" selection-end-line="622" selection-end-column="48" />
 >>>>>>> pip/course_project/notifications
+=======
+        <state relative-caret-position="105">
+          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
@@ -2853,7 +3042,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/ImageAccess.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
           <folding>
             <element signature="method#readInitImages#0;class#ImageAccess#0" expanded="false" />
             <element signature="method#read#0;class#ImageAccess#0" expanded="false" />
@@ -2872,6 +3061,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/build/classes/main/ejb/data/ImageAccess.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -2884,10 +3074,12 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/NoteAccess.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
           <folding>
             <element signature="method#create#0;class#NoteAccess#0" expanded="false" />
 =======
@@ -2914,7 +3106,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/UsersAccess.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
           <folding>
             <element signature="method#addNewUser#0;class#UsersAccess#0" expanded="false" />
             <element signature="method#checkUser#0;class#UsersAccess#0" expanded="false" />
@@ -2940,7 +3132,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/ejb/notification/NotificationLogic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
           <folding>
             <element signature="method#addNewNote#0;class#NotificationLogic#0" expanded="false" />
             <element signature="method#getNewImageId#0;class#NotificationLogic#0" expanded="false" />
@@ -2957,6 +3149,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -3004,6 +3197,8 @@
     </entry>
 =======
 >>>>>>> pip/course_project/notifications
+=======
+>>>>>>> Stashed changes
   </component>
   <component name="masterDetails">
     <states>

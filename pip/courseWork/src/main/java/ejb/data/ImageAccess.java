@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Stateless
+@LocalBean
 public class ImageAccess extends Access {
   public ArrayList<Image> readInitImages(ArrayList<Integer> listOfId) {
     ArrayList<Image> images = new ArrayList<Image>();

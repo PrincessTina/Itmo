@@ -2,6 +2,7 @@ package ejb.data;
 
 import entity.Note;
 
+import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 <<<<<<< HEAD
@@ -9,6 +10,7 @@ import java.sql.Date;
 import java.util.Calendar;
 
 @Stateless
+@LocalBean
 public class NoteAccess extends Access{
   public void create(int owner_id, int image_id, String description) {
     EntityManager entityManager = generateEntityManager();

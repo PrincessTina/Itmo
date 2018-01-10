@@ -1,5 +1,6 @@
 package ejb.data;
 
+import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -12,6 +13,7 @@ import java.util.Calendar;
 import java.util.List;
 
 @Stateless
+@LocalBean
 public class UsersAccess extends Access {
   public void addNewUser(String login, String email, String password) throws ServletException {
     if (login == null || password == null) {
