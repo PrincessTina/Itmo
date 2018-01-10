@@ -6,6 +6,8 @@ import entity.Legend;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
+import javax.ejb.TransactionManagement;
+import javax.ejb.TransactionManagementType;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import javax.servlet.ServletException;
@@ -13,6 +15,7 @@ import java.util.List;
 
 @Stateless
 @LocalBean
+@TransactionManagement(TransactionManagementType.BEAN)
 public class CharacterAccess extends Access {
   public List<Artifact> getArtifacts(String name) throws ServletException {
     Character character = find(name);

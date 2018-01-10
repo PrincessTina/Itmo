@@ -134,7 +134,7 @@ $(document).ready(() => {
             
             <div class="w3-card-4 w3-padding w3-panel w3-red w3-display-container bNotice" style="position: fixed; top: 30%; 
             right: 0; display: none">
-              <span class="w3-button w3-green w3-large w3-display-topright bCross">×</span>
+              <span class="w3-button w3-red w3-large w3-display-topright bCross">×</span>
               <h3>Error :(</h3>
             </div>
         `);

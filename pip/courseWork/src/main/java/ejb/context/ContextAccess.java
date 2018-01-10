@@ -4,9 +4,7 @@ import ejb.data.ImageAccess;
 import entity.Image;
 import entity.Users;
 
-import javax.ejb.EJB;
-import javax.ejb.LocalBean;
-import javax.ejb.Stateless;
+import javax.ejb.*;
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,6 +12,7 @@ import java.util.Random;
 
 @Stateless
 @LocalBean
+@TransactionManagement(TransactionManagementType.BEAN)
 public class ContextAccess {
 
   @EJB

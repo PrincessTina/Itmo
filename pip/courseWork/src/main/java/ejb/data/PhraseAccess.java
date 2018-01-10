@@ -5,6 +5,8 @@ import entity.Phrase;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
+import javax.ejb.TransactionManagement;
+import javax.ejb.TransactionManagementType;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import javax.servlet.ServletException;
@@ -12,6 +14,7 @@ import java.util.List;
 
 @Stateless
 @LocalBean
+@TransactionManagement(TransactionManagementType.BEAN)
 public class PhraseAccess extends Access {
   public List<Phrase> getAnswers(String description) throws ServletException {
     Phrase question = find(description);

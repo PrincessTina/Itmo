@@ -4,6 +4,8 @@ import entity.Rating;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
+import javax.ejb.TransactionManagement;
+import javax.ejb.TransactionManagementType;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import javax.servlet.ServletException;
@@ -11,6 +13,7 @@ import java.util.List;
 
 @Stateless
 @LocalBean
+@TransactionManagement(TransactionManagementType.BEAN)
 public class RatingAccess extends Access {
   public int getGrade(int object_id) throws ServletException {
     Rating rating = find(object_id);

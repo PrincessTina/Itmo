@@ -4,11 +4,14 @@ import com.rabbitmq.client.*;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
+import javax.ejb.TransactionManagement;
+import javax.ejb.TransactionManagementType;
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 @Stateless
 @LocalBean
+@TransactionManagement(TransactionManagementType.BEAN)
 public class Receiver {
   private static String response = null;
 

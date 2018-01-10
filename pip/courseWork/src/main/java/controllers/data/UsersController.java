@@ -6,10 +6,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedReader;
 import java.io.IOException;
 
 import ejb.context.ContextAccess;
+import ejb.data.Controller;
 import ejb.data.UsersAccess;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -23,22 +23,18 @@ public class UsersController extends HttpServlet {
   @EJB
   private ContextAccess context;
 
+  @EJB
+  private Controller controller;
+
   @Override
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    BufferedReader reader = request.getReader();
-    StringBuilder builder = new StringBuilder();
-    String line;
     String action;
     String password;
     String login;
     String email;
 
     try {
-      while ((line = reader.readLine()) != null) {
-        builder.append(line);
-      }
-
-      JSONObject jsonObject = new JSONObject(builder.toString());
+      JSONObject jsonObject = controller.getAnswerFromPost(request);
 
       action = jsonObject.getString("action");
       login = jsonObject.getString("login");

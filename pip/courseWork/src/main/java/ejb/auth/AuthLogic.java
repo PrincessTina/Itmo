@@ -5,9 +5,7 @@ import ejb.data.UsersAccess;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import javax.ejb.EJB;
-import javax.ejb.LocalBean;
-import javax.ejb.Stateless;
+import javax.ejb.*;
 import javax.net.ssl.HttpsURLConnection;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -26,13 +24,14 @@ import java.util.Random;
 
 @Stateless
 @LocalBean
+@TransactionManagement(TransactionManagementType.BEAN)
 public class AuthLogic {
 
   @EJB
-  ContextAccess context;
+  private ContextAccess context;
 
   @EJB
-  UsersAccess users;
+  private UsersAccess users;
 
   public void authorizeWithVk(String code, HttpServletResponse response, String service, String address,
                                HttpServletRequest request) throws IOException, ServletException {
@@ -169,7 +168,7 @@ public class AuthLogic {
         "client_secret=7bfd8e758f8b4626b5cc50572d9ab54f&" +
         "grant_type=authorization_code&" +
         "code=" + code + "&" +
-        "redirect_uri=" + address +
+        "redirect_uri=" + "http://localhost:62434/courseWork-1.0-SNAPSHOT/" + //зашито
         "auth?address=" + service + address;
 
     // Send post request

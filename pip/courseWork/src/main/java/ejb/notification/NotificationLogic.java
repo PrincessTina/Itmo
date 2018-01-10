@@ -6,14 +6,13 @@ import ejb.data.NoteAccess;
 import ejb.data.UsersAccess;
 import entity.Users;
 
-import javax.ejb.EJB;
-import javax.ejb.LocalBean;
-import javax.ejb.Stateless;
+import javax.ejb.*;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 
 @Stateless
 @LocalBean
+@TransactionManagement(TransactionManagementType.BEAN)
 public class NotificationLogic {
   @EJB
   private ImageAccess images;

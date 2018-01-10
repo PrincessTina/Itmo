@@ -2,6 +2,8 @@ package ejb.data;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
+import javax.ejb.TransactionManagement;
+import javax.ejb.TransactionManagementType;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import javax.servlet.ServletException;
@@ -14,6 +16,7 @@ import java.util.List;
 
 @Stateless
 @LocalBean
+@TransactionManagement(TransactionManagementType.BEAN)
 public class UsersAccess extends Access {
   public void addNewUser(String login, String email, String password) throws ServletException {
     if (login == null || password == null) {

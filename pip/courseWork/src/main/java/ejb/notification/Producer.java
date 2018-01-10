@@ -6,11 +6,14 @@ import com.rabbitmq.client.ConnectionFactory;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
+import javax.ejb.TransactionManagement;
+import javax.ejb.TransactionManagementType;
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 @Stateless
 @LocalBean
+@TransactionManagement(TransactionManagementType.BEAN)
 public class Producer {
   public void produce(String exchange, String message) throws IOException, TimeoutException {
     ConnectionFactory factory = new ConnectionFactory();

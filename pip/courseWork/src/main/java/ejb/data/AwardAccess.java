@@ -5,6 +5,8 @@ import entity.Users;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
+import javax.ejb.TransactionManagement;
+import javax.ejb.TransactionManagementType;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import javax.servlet.ServletException;
@@ -12,6 +14,7 @@ import java.util.List;
 
 @Stateless
 @LocalBean
+@TransactionManagement(TransactionManagementType.BEAN)
 public class AwardAccess extends Access {
   public List<Users> getUsers(String description) throws ServletException {
     Award award = find(description);
