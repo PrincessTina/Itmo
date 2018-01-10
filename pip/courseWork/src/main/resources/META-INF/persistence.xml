@@ -20,9 +20,9 @@
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://pg:5432/studs" />
-            <property name="javax.persistence.jdbc.user" value="s225074" />
-            <property name="javax.persistence.jdbc.password" value="3HJiPRAH" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://188.166.39.53:5432/course" />
+            <property name="javax.persistence.jdbc.user" value="tina" />
+            <property name="javax.persistence.jdbc.password" value="" />
         </properties>
     </persistence-unit>
 </persistence>

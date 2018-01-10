@@ -2,40 +2,73 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a32c1388-fc1c-46f6-8fde-58e44b271a17" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controllers/notification/NotificationController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ejb/data/NoteAccess.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ejb/notification/NotificationLogic.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/classes/Notification.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/components/NotificationChecker.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/jms/notifications/NotificationsController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/resources/main/META-INF/ejb-jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/controllers/auth/AuthController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/controllers/context/ContextController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/controllers/data/ImageController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/controllers/data/UsersController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/controllers/notification/NotificationController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/ejb/auth/AuthLogic.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/ejb/context/ContextAccess.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/ejb/data/Access.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/ejb/data/ImageAccess.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/ejb/data/NoteAccess.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/ejb/data/UsersAccess.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/ejb/notification/NotificationLogic.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Artifact.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Author.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Award.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Character.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Country.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Event.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Image.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Legend.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Note.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Phrase.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Rating.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/entity/Users.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/jms/notifications/Notification.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/jms/notifications/NotificationTypes.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/jms/notifications/NotificationsController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/jms/notifications/NotificationsProducer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/jms/notifications/NotificationsReceiver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/resources/META-INF/ejb-jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/resources/META-INF/persistence.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/classes/LanguageTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/classes/jms/notifications/NotificationsProducerTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/classes/jms/notifications/NotificationsReceiverTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/ejb-jar.xml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsController.java" afterPath="$PROJECT_DIR$/src/main/java/jms/notifications/Controller.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/jvmClassSignatures.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/jvmClassSignatures.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/controllers/data/UsersController.class" afterPath="$PROJECT_DIR$/build/classes/main/controllers/data/UsersController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/ejb/auth/AuthLogic.class" afterPath="$PROJECT_DIR$/build/classes/main/ejb/auth/AuthLogic.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/controllers/notification/NotificationController.class" afterPath="$PROJECT_DIR$/build/classes/main/controllers/notification/NotificationController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/ejb/data/ImageAccess.class" afterPath="$PROJECT_DIR$/build/classes/main/ejb/data/ImageAccess.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/ejb/data/UsersAccess.class" afterPath="$PROJECT_DIR$/build/classes/main/ejb/data/UsersAccess.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/courseWork-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/build/libs/courseWork-1.0-SNAPSHOT.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Gradle___courseWork_1_0_SNAPSHOT_war__exploded_.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Gradle___courseWork_1_0_SNAPSHOT_war__exploded_.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/LanguageTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/LanguageTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/jms.notifications.NotificationsProducerTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/jms.notifications.NotificationsProducerTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/jms.notifications.NotificationsReceiverTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/jms.notifications.NotificationsReceiverTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/jms.notifications.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/jms.notifications.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/build/resources/main/META-INF/persistence.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-LanguageTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-LanguageTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-jms.notifications.NotificationsProducerTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-jms.notifications.NotificationsProducerTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-jms.notifications.NotificationsReceiverTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-jms.notifications.NotificationsReceiverTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/data/UsersController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/data/UsersController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ejb/auth/AuthLogic.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/auth/AuthLogic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/notification/NotificationController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/notification/NotificationController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ejb/data/ImageAccess.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/data/ImageAccess.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ejb/data/UsersAccess.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/data/UsersAccess.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Admin.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Admin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scripts/create.sql" afterPath="$PROJECT_DIR$/../scripts/create.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab5/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../yasp/lab5/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -74,76 +107,7 @@
     <favorites_list name="courseWork" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Admin.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/pages/Admin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1336">
-              <caret line="47" column="12" lean-forward="false" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
-              <folding>
-                <element signature="e#1626#1719#0" expanded="false" />
-                <element signature="e#1745#1838#0" expanded="false" />
-                <element signature="e#1859#2018#0" expanded="false" />
-                <element signature="e#2040#2197#0" expanded="false" />
-                <marker date="1515532258694" expanded="true" signature="2388:3155" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="2413:2472" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="2604:2671" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="2631:2656" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="2750:3136" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="3308:3430" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="3582:3613" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="3614:3676" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="3767:3802" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="3803:5179" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="3894:3909" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="3910:4075" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="4007:4034" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="4141:4204" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="4270:5160" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="4333:4518" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="4555:4804" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="4741:4767" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="4847:5137" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="4947:4958" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="4965:4971" ph="&amp;nbsp;" />
-                <marker date="1515532258694" expanded="true" signature="5086:5097" ph="..." />
-                <marker date="1515532258694" expanded="false" signature="5294:5357" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="5358:5560" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="5673:5736" ph="..." />
-                <marker date="1515532258694" expanded="true" signature="5737:5880" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NotificationController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/notification/NotificationController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="38" column="38" lean-forward="false" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NotificationLogic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ejb/notification/NotificationLogic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="27" column="110" lean-forward="false" selection-start-line="27" selection-start-column="110" selection-end-line="27" selection-end-column="110" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#addNewNote#0;class#NotificationLogic#0" expanded="false" />
-                <element signature="method#getNewImageId#0;class#NotificationLogic#0" expanded="false" />
-                <element signature="method#getCurrentUserId#0;class#NotificationLogic#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -569,9 +533,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/auth/ApiController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jms/NewsNotifications.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jms/newsNotifications/NewsConsumer.java" />
         <option value="$PROJECT_DIR$/src/test/java/jms/newsNotifications/NewsProducerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/jms/newsNotifications/NewsReceiverTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/IndexSlider.js" />
@@ -588,11 +549,9 @@
         <option value="$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsProducer.java" />
         <option value="$PROJECT_DIR$/src/main/java/jms/notifications/Notification.java" />
         <option value="$PROJECT_DIR$/src/test/java/jms/notifications/NotificationsReceiverTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsReceiver.java" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/ImageAccess.java" />
         <option value="$PROJECT_DIR$/src/main/java/entity/Image.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/LoginWindow.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Index.js" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/UsersAccess.java" />
@@ -603,23 +562,28 @@
         <option value="$PROJECT_DIR$/src/main/java/ejb/auth/AuthLogic.java" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/context/ContextAccess.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/data/ImageController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/context/ContextController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/auth/AuthController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/фвьшт.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/admin.html" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/ejb-jar.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/admin.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/data/UsersController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ejb/data/ImageAccess.java" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/data/UsersAccess.java" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/data/NoteAccess.java" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/notification/NotificationLogic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/notification/NotificationController.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Admin.js" />
+        <option value="$PROJECT_DIR$/src/main/java/classes/Notification.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/context/ContextController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/notification/NotificationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jms/notifications/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/NotificationChecker.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ejb/data/ImageAccess.java" />
       </list>
     </option>
   </component>
@@ -712,16 +676,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="ejb" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
@@ -730,6 +685,7 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ejb" type="462c0819:PsiDirectoryNode" />
+              <item name="context" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
@@ -745,14 +701,30 @@
               <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
               <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="notifications" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="old_cruds" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -760,9 +732,8 @@
               <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
@@ -770,9 +741,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1110,7 +1078,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="324633000" />
+    <option name="totallyTimeSpent" value="335523000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1123,10 +1091,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1935" height="1038" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5083378" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27419356" sideWeight="0.5104895" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1141,11 +1108,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27419356" sideWeight="0.49166217" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27419356" sideWeight="0.48951048" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2546083" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27218935" sideWeight="0.50691247" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2845616" sideWeight="0.49140894" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2845616" sideWeight="0.49140894" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27218935" sideWeight="0.50859106" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1223,41 +1190,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.rabbitmq/amqp-client/5.1.1/e32a0a72bce2cc27421dfc8b99f96a209855a66e/amqp-client-5.1.1-sources.jar!/com/rabbitmq/client/impl/recovery/AutorecoveringChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="539" column="0" lean-forward="false" selection-start-line="539" selection-start-column="0" selection-end-line="539" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.rabbitmq/amqp-client/5.1.1/e32a0a72bce2cc27421dfc8b99f96a209855a66e/amqp-client-5.1.1-sources.jar!/com/rabbitmq/client/DefaultConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="85" column="16" lean-forward="false" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/reflect/Method.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="497" column="0" lean-forward="false" selection-start-line="497" selection-start-column="0" selection-end-line="497" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -1304,6 +1236,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="875" column="69" lean-forward="true" selection-start-line="875" selection-start-column="69" selection-end-line="875" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1311,13 +1244,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsProducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1325,21 +1252,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -1368,73 +1280,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/Access.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/data/ImageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="method#doGet#0;class#ImageController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/auth/AuthController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="method#doGet#0;class#AuthController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/context/ContextAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="method#getUserFromContext#0;class#ContextAccess#0" expanded="false" />
-            <element signature="method#addUserInContext#0;class#ContextAccess#0" expanded="false" />
-            <element signature="method#removeUserFromContext#0;class#ContextAccess#0" expanded="false" />
-            <element signature="method#setIcon#0;class#ContextAccess#0" expanded="false" />
-            <element signature="method#addNameInContext#0;class#ContextAccess#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/context/ContextController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="method#doGet#0;class#ContextController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/auth/AuthLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding>
-            <element signature="method#authorizeWithVk#0;class#AuthLogic#0" expanded="false" />
-            <element signature="method#authorizeWithIn#0;class#AuthLogic#0" expanded="false" />
-            <element signature="method#registerUserWithVk#0;class#AuthLogic#0" expanded="false" />
-            <element signature="method#createPassword#0;class#AuthLogic#0" expanded="false" />
-            <element signature="method#getResponseFromApi#0;class#AuthLogic#0" expanded="false" />
-            <element signature="method#getFromPostCall#0;class#AuthLogic#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/фвьшт.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -1451,11 +1296,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/ejb-jar.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+          <folding>
+            <element signature="e#122#125#0" expanded="false" />
+            <element signature="e#342#378#0" expanded="false" />
+            <element signature="e#566#602#0" expanded="false" />
+            <element signature="method#Users#0;class#Users#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Image.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/jms/notifications/NotificationsReceiverTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/jms/notifications/NotificationsProducerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="35" column="25" lean-forward="false" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/classes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/classes/Notification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="method#Notification#0;class#Notification#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/IndexSlider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <folding>
+            <element signature="e#811#1276#0" expanded="false" />
+            <marker date="1515419026132" expanded="true" signature="1501:1649" ph="..." />
+            <marker date="1515419026132" expanded="true" signature="1580:1609" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1493,208 +1413,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/LoginWindow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+          <folding>
+            <element signature="e#654#991#0" expanded="false" />
+            <element signature="e#1011#1444#0" expanded="false" />
+            <element signature="e#1463#2748#0" expanded="false" />
+            <element signature="e#2773#2952#0" expanded="false" />
+            <element signature="e#2980#3157#0" expanded="false" />
+            <marker date="1515510313793" expanded="true" signature="3279:4869" ph="..." />
+            <marker date="1515510313793" expanded="true" signature="3300:3363" ph="..." />
+            <marker date="1515510313793" expanded="true" signature="3414:4854" ph="..." />
+            <marker date="1515510313793" expanded="true" signature="3455:3848" ph="..." />
+            <marker date="1515510313793" expanded="true" signature="3501:3662" ph="..." />
+            <marker date="1515510313793" expanded="true" signature="3593:3634" ph="..." />
+            <marker date="1515510313793" expanded="true" signature="3738:3825" ph="..." />
+            <marker date="1515510313793" expanded="true" signature="3887:4119" ph="..." />
+            <marker date="1515510313793" expanded="true" signature="3971:3997" ph="..." />
+            <marker date="1515510313793" expanded="true" signature="4084:4095" ph="..." />
+            <marker date="1515510313793" expanded="true" signature="4160:4394" ph="..." />
+            <marker date="1515510313793" expanded="true" signature="4244:4269" ph="..." />
+            <marker date="1515510313793" expanded="true" signature="4360:4370" ph="..." />
+            <marker date="1515510313793" expanded="true" signature="4486:4514" ph="..." />
+            <marker date="1515510313793" expanded="false" signature="4623:4667" ph="..." />
+            <marker date="1515510313793" expanded="true" signature="4668:4835" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="119" lean-forward="true" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="119" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="77" column="17" lean-forward="true" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
-          <folding>
-            <marker date="1515526705023" expanded="true" signature="2769:5251" ph="..." />
-            <marker date="1515526705023" expanded="true" signature="2769:5264" ph="..." />
-            <marker date="1515526705023" expanded="true" signature="2852:5234" ph="..." />
-            <marker date="1515526705023" expanded="true" signature="2852:5251" ph="..." />
-            <marker date="1515526705023" expanded="true" signature="2981:3081" ph="..." />
-            <marker date="1515526705023" expanded="true" signature="3241:3794" ph="..." />
-            <marker date="1515526705023" expanded="true" signature="3449:3773" ph="..." />
-            <marker date="1515526705023" expanded="true" signature="4074:4083" ph="..." />
-            <marker date="1515526705023" expanded="true" signature="4074:4088" ph="..." />
-            <marker date="1515526705023" expanded="true" signature="4089:4476" ph="..." />
-            <marker date="1515526705023" expanded="true" signature="4566:4610" ph="..." />
-            <marker date="1515526705023" expanded="true" signature="4611:5200" ph="..." />
-            <marker date="1515526705023" expanded="true" signature="4731:4773" ph="..." />
-            <marker date="1515526705023" expanded="true" signature="4828:4843" ph="..." />
-            <marker date="1515526705023" expanded="true" signature="4943:5179" ph="..." />
-            <marker date="1515526705023" expanded="true" signature="5216:5234" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
-          <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+          <caret line="19" column="92" lean-forward="false" selection-start-line="19" selection-start-column="92" selection-end-line="19" selection-end-column="92" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/context/ContextController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="84">
+          <caret line="15" column="56" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="56" />
           <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/Notification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/IndexSlider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-          <folding>
-            <element signature="e#811#1276#0" expanded="false" />
-            <marker date="1515419026132" expanded="true" signature="1501:1649" ph="..." />
-            <marker date="1515419026132" expanded="true" signature="1580:1609" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/data/UsersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="26" column="119" lean-forward="false" selection-start-line="26" selection-start-column="119" selection-end-line="26" selection-end-column="119" />
-          <folding>
-            <element signature="method#doPost#0;class#UsersController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding>
-            <element signature="e#122#125#0" expanded="false" />
-            <element signature="e#342#378#0" expanded="false" />
-            <element signature="e#566#602#0" expanded="false" />
-            <element signature="method#Users#0;class#Users#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Image.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/ImageAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="47" column="60" lean-forward="false" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="60" />
-          <folding>
-            <element signature="method#readInitImages#0;class#ImageAccess#0" expanded="false" />
-            <element signature="method#read#0;class#ImageAccess#0" expanded="false" />
-            <element signature="method#create#0;class#ImageAccess#0" expanded="false" />
-            <element signature="docComment;method#findImage#0;class#ImageAccess#0" expanded="false" />
-            <element signature="method#findImage#0;class#ImageAccess#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/UsersAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="15" column="94" lean-forward="false" selection-start-line="15" selection-start-column="94" selection-end-line="15" selection-end-column="94" />
-          <folding>
-            <element signature="method#addNewUser#0;class#UsersAccess#0" expanded="false" />
-            <element signature="method#checkUser#0;class#UsersAccess#0" expanded="false" />
-            <element signature="method#findUserPassword#0;class#UsersAccess#0" expanded="false" />
-            <element signature="method#findUserId#0;class#UsersAccess#0" expanded="false" />
-            <element signature="method#create#0;class#UsersAccess#0" expanded="false" />
-            <element signature="method#read#0;class#UsersAccess#0" expanded="false" />
-            <element signature="method#delete#0;class#UsersAccess#0" expanded="false" />
-            <element signature="method#update#0;class#UsersAccess#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/NoteAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#create#0;class#NoteAccess#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/NotificationTypes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="45" lean-forward="false" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/jms/notifications/NotificationsReceiverTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/jms/notifications/NotificationsProducerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="35" column="25" lean-forward="false" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/notification/NotificationLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="27" column="110" lean-forward="false" selection-start-line="27" selection-start-column="110" selection-end-line="27" selection-end-column="110" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#addNewNote#0;class#NotificationLogic#0" expanded="false" />
-            <element signature="method#getNewImageId#0;class#NotificationLogic#0" expanded="false" />
-            <element signature="method#getCurrentUserId#0;class#NotificationLogic#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/notification/NotificationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="38" column="38" lean-forward="false" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#doGet#0;class#ContextController#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
+        <state relative-caret-position="357">
           <caret line="104" column="24" lean-forward="false" selection-start-line="104" selection-start-column="24" selection-end-line="104" selection-end-column="24" />
           <folding>
             <element signature="e#635#2057#0" expanded="false" />
@@ -1726,70 +1495,291 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/LoginWindow.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="123" column="18" lean-forward="false" selection-start-line="123" selection-start-column="18" selection-end-line="123" selection-end-column="65" />
+        <state relative-caret-position="1146">
+          <caret line="79" column="42" lean-forward="false" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="42" />
           <folding>
-            <element signature="e#1463#2748#0" expanded="false" />
-            <element signature="e#2773#2952#0" expanded="false" />
-            <element signature="e#2980#3157#0" expanded="false" />
-            <marker date="1515510313793" expanded="true" signature="3279:4869" ph="..." />
-            <marker date="1515510313793" expanded="true" signature="3300:3363" ph="..." />
-            <marker date="1515510313793" expanded="true" signature="3414:4854" ph="..." />
-            <marker date="1515510313793" expanded="true" signature="3455:3848" ph="..." />
-            <marker date="1515510313793" expanded="true" signature="3501:3662" ph="..." />
-            <marker date="1515510313793" expanded="true" signature="3593:3634" ph="..." />
-            <marker date="1515510313793" expanded="true" signature="3738:3825" ph="..." />
-            <marker date="1515510313793" expanded="true" signature="3887:4119" ph="..." />
-            <marker date="1515510313793" expanded="true" signature="3971:3997" ph="..." />
-            <marker date="1515510313793" expanded="true" signature="4084:4095" ph="..." />
-            <marker date="1515510313793" expanded="true" signature="4160:4394" ph="..." />
-            <marker date="1515510313793" expanded="true" signature="4244:4269" ph="..." />
-            <marker date="1515510313793" expanded="true" signature="4360:4370" ph="..." />
-            <marker date="1515510313793" expanded="true" signature="4486:4514" ph="..." />
-            <marker date="1515510313793" expanded="false" signature="4623:4667" ph="..." />
-            <marker date="1515510313793" expanded="true" signature="4668:4835" ph="..." />
+            <element signature="e#832#1294#0" expanded="false" />
+            <marker date="1515534047302" expanded="true" signature="2813:5295" ph="..." />
+            <marker date="1515534047302" expanded="true" signature="2813:5308" ph="..." />
+            <marker date="1515534047302" expanded="true" signature="2896:5278" ph="..." />
+            <marker date="1515534047302" expanded="true" signature="2896:5295" ph="..." />
+            <marker date="1515534047302" expanded="true" signature="3025:3125" ph="..." />
+            <marker date="1515534047302" expanded="true" signature="3285:3838" ph="..." />
+            <marker date="1515534047302" expanded="true" signature="3493:3817" ph="..." />
+            <marker date="1515534047302" expanded="true" signature="4118:4127" ph="..." />
+            <marker date="1515534047302" expanded="true" signature="4118:4132" ph="..." />
+            <marker date="1515534047302" expanded="true" signature="4133:4520" ph="..." />
+            <marker date="1515534047302" expanded="true" signature="4610:4654" ph="..." />
+            <marker date="1515534047302" expanded="true" signature="4655:5244" ph="..." />
+            <marker date="1515534047302" expanded="true" signature="4775:4817" ph="..." />
+            <marker date="1515534047302" expanded="true" signature="4872:4887" ph="..." />
+            <marker date="1515534047302" expanded="true" signature="4987:5223" ph="..." />
+            <marker date="1515534047302" expanded="true" signature="5260:5278" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/ejb-jar.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="22" column="106" lean-forward="false" selection-start-line="22" selection-start-column="100" selection-end-line="22" selection-end-column="106" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/notification/NotificationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#doPost#0;class#NotificationController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/data/UsersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="method#doPost#0;class#UsersController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/data/ImageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="method#doGet#0;class#ImageController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/classes/main/controllers/context/ContextController.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#1471#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/auth/AuthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="27" column="10" lean-forward="true" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/pages/Admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1336">
-          <caret line="47" column="12" lean-forward="false" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
+        <state relative-caret-position="2394">
+          <caret line="124" column="22" lean-forward="false" selection-start-line="124" selection-start-column="22" selection-end-line="124" selection-end-column="22" />
           <folding>
-            <element signature="e#1626#1719#0" expanded="false" />
-            <element signature="e#1745#1838#0" expanded="false" />
-            <element signature="e#1859#2018#0" expanded="false" />
-            <element signature="e#2040#2197#0" expanded="false" />
-            <marker date="1515532258694" expanded="true" signature="2388:3155" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="2413:2472" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="2604:2671" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="2631:2656" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="2750:3136" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="3308:3430" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="3582:3613" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="3614:3676" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="3767:3802" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="3803:5179" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="3894:3909" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="3910:4075" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="4007:4034" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="4141:4204" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="4270:5160" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="4333:4518" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="4555:4804" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="4741:4767" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="4847:5137" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="4947:4958" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="4965:4971" ph="&amp;nbsp;" />
-            <marker date="1515532258694" expanded="true" signature="5086:5097" ph="..." />
-            <marker date="1515532258694" expanded="false" signature="5294:5357" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="5358:5560" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="5673:5736" ph="..." />
-            <marker date="1515532258694" expanded="true" signature="5737:5880" ph="..." />
+            <element signature="e#1614#1707#0" expanded="false" />
+            <element signature="e#1733#1826#0" expanded="false" />
+            <element signature="e#1847#2006#0" expanded="false" />
+            <element signature="e#2028#2185#0" expanded="false" />
+            <marker date="1515532313324" expanded="true" signature="2376:3143" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="2401:2460" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="2592:2659" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="2619:2644" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="2738:3124" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="3296:3418" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="3570:3601" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="3602:3664" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="3755:3790" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="3791:5167" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="3882:3897" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="3898:4063" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="3995:4022" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="4129:4192" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="4258:5148" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="4321:4506" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="4543:4792" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="4729:4755" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="4835:5125" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="4935:4946" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="4953:4959" ph="&amp;nbsp;" />
+            <marker date="1515532313324" expanded="true" signature="5074:5085" ph="..." />
+            <marker date="1515532313324" expanded="false" signature="5282:5345" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="5346:5548" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="5661:5724" ph="..." />
+            <marker date="1515532313324" expanded="true" signature="5725:5868" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/NotificationChecker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#945#1270#0" expanded="false" />
+            <marker date="1515540441868" expanded="true" signature="1086:1138" ph="..." />
+            <marker date="1515540441868" expanded="true" signature="1086:1139" ph="..." />
+            <marker date="1515540441868" expanded="true" signature="1086:1257" ph="..." />
+            <marker date="1515540441868" expanded="true" signature="1140:1243" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/auth/AuthLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="45" column="35" lean-forward="false" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="35" />
+          <folding>
+            <element signature="method#authorizeWithIn#0;class#AuthLogic#0" expanded="false" />
+            <element signature="method#registerUserWithVk#0;class#AuthLogic#0" expanded="false" />
+            <element signature="method#createPassword#0;class#AuthLogic#0" expanded="false" />
+            <element signature="method#getResponseFromApi#0;class#AuthLogic#0" expanded="false" />
+            <element signature="method#getFromPostCall#0;class#AuthLogic#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/context/ContextAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="method#getUserFromContext#0;class#ContextAccess#0" expanded="false" />
+            <element signature="method#addUserInContext#0;class#ContextAccess#0" expanded="false" />
+            <element signature="method#removeUserFromContext#0;class#ContextAccess#0" expanded="false" />
+            <element signature="method#setIcon#0;class#ContextAccess#0" expanded="false" />
+            <element signature="method#addNameInContext#0;class#ContextAccess#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/Access.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/ImageAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="method#readInitImages#0;class#ImageAccess#0" expanded="false" />
+            <element signature="method#read#0;class#ImageAccess#0" expanded="false" />
+            <element signature="method#create#0;class#ImageAccess#0" expanded="false" />
+            <element signature="docComment;method#findImage#0;class#ImageAccess#0" expanded="false" />
+            <element signature="method#findImage#0;class#ImageAccess#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/classes/main/ejb/data/ImageAccess.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-231">
+          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#1651#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/NoteAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="method#create#0;class#NoteAccess#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/UsersAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="method#addNewUser#0;class#UsersAccess#0" expanded="false" />
+            <element signature="method#checkUser#0;class#UsersAccess#0" expanded="false" />
+            <element signature="method#findUserPassword#0;class#UsersAccess#0" expanded="false" />
+            <element signature="method#findUserId#0;class#UsersAccess#0" expanded="false" />
+            <element signature="method#create#0;class#UsersAccess#0" expanded="false" />
+            <element signature="method#read#0;class#UsersAccess#0" expanded="false" />
+            <element signature="method#delete#0;class#UsersAccess#0" expanded="false" />
+            <element signature="method#update#0;class#UsersAccess#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/notification/NotificationLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="method#addNewNote#0;class#NotificationLogic#0" expanded="false" />
+            <element signature="method#getNewImageId#0;class#NotificationLogic#0" expanded="false" />
+            <element signature="method#getCurrentUserId#0;class#NotificationLogic#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/Notification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/NotificationsReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jms/notifications/NotificationTypes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

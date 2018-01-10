@@ -76,6 +76,8 @@ $(document).ready(() => {
                     <a href="admin.html" class="w3-bar-item w3-button">Админка</a>   
                     `);
                 }
+
+                new NotificationChecker();
             }
         },
 

@@ -45,7 +45,7 @@ $(document).ready(() => {
         clear() {
             let link = document.getElementsByClassName("_link")[0];
             let description = document.getElementsByClassName("_description")[0];
-            
+
             link.value = "";
             description.value = "";
         },

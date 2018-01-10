@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="jms.notifications.NotificationsProducerTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2018-01-09T20:44:21" hostname="LAPTOP-CN4TD6JS" time="0.723">
+<testsuite name="jms.notifications.NotificationsProducerTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2018-01-10T00:09:55" hostname="LAPTOP-CN4TD6JS" time="0.901">
   <properties/>
-  <testcase name="produceTest" classname="jms.notifications.NotificationsProducerTest" time="0.723">
+  <testcase name="produceTest" classname="jms.notifications.NotificationsProducerTest" time="0.901">
     <failure message="java.lang.AssertionError" type="java.lang.AssertionError">java.lang.AssertionError
 	at jms.notifications.NotificationsProducerTest.produceTest(NotificationsProducerTest.java:13)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)

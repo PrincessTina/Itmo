@@ -1,5 +1,7 @@
 package controllers.notification;
 
+import classes.Notification;
+import com.google.gson.Gson;
 import ejb.notification.NotificationLogic;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -41,11 +43,27 @@ public class NotificationController extends HttpServlet {
         String description = jsonObject.getString("description");
 
         notificationLogic.addNewNote(link, description, request);
+        //Producer.produce()
       } else {
         throw new ServletException("Unknown type");
       }
     } catch (JSONException e) {
       throw new ServletException("Error parsing JSON request string");
+    }
+  }
+
+  @Override
+  protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    boolean condition = true;
+
+    //if Reciever.receive() == true, type = new
+    if (condition) {
+      Notification news = new Notification("new", "We got the updates");
+      String answer = new Gson().toJson(news);
+
+      response.setContentType("application/json");
+      response.setCharacterEncoding("UTF-8");
+      response.getWriter().write(answer);
     }
   }
 }
