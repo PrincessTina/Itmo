@@ -27,7 +27,7 @@ public class ImageController extends HttpServlet {
     if (action.isEmpty()) {
       throw new ServletException("Action is null");
     } else if (action.equals("get_sl")) {
-      ArrayList<Image> imageList = images.readInitImages(new ArrayList<Integer>(Arrays.asList(0, 1, 2, 3, 4)));
+      ArrayList<Image> imageList = images.readInitImages(new ArrayList<Integer>(Arrays.asList(900, 1, 2, 3, 4)));
       String answer = new Gson().toJson(imageList);
 
       response.setContentType("application/json");

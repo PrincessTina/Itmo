@@ -16,7 +16,7 @@ $(document).ready(() => {
 
         initialize() {
             _.bindAll(this, 'render');
-            _.bindAll(this, 'paint');
+            _.bindAll(this, 'paste');
 
             this.collection = new NoteCollection();
             this.render();
@@ -25,7 +25,7 @@ $(document).ready(() => {
 
             this.collection.fetch({
                 success: () => {
-                    this.paint();
+                    this.paste();
                 },
                 fail: () => {
                     throw "Error in getting news";
@@ -33,7 +33,7 @@ $(document).ready(() => {
             });
         },
 
-        paint() {
+        paste() {
             this.collection.models.forEach((note) => {
                 if (document.getElementsByClassName("newsBlock")[0].children.length < 4) {
                     document.getElementsByClassName("newsBlock")[0].innerHTML += `

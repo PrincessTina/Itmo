@@ -1,2 +1,3 @@
-insert into image values(0, 'http://imhotour.ru/wp-content/uploads/2017/09/4235027-egypt.jpg'), (1, 'https://img2.goodfon.ru/original/2560x1440/f/bd/egipet-pustyni-verbliudy-rassvety-i-zakaty-cairo-pesok.jpg'), (2, 'http://vgostikskazke.ru/wp-content/uploads/2017/04/bogatyrskaya-zastava.jpg'), (3, 'http://wallpapersin4k.net/wp-content/uploads/2017/02/Cerberus-Fantasy-Wallpapers-7.jpg?pfdrid_c=true'), (4, 'http://puzzleit.ru/files/puzzles/153/153242/_original.jpg'), 
-(5, 'resources/images/profile1.png'), (6, 'resources/images/profile2.jpg'), (7, 'resources/images/profile3.png'), (8, 'resources/images/profile4.jpg'), (9, 'http://www.parisvox.info/wp-content/uploads/2016/04/logo_sport_combat.png'), (10, 'https://img.fireden.net/v/image/1455/06/1455061687691.png'), (11, 'http://orig03.deviantart.net/5bec/f/2012/331/b/7/assassins_creed_iii_by_magroxela-d5mev20.png'), (12, 'https://image.shutterstock.com/z/stock-vector-samoyed-the-buddy-dog-135215195.jpg'), (13, 'https://appstickers-cdn.appadvice.com/1155105424/818922020/7eda368e8efef7fd5fc98e3772de7470-2.png');
+﻿5;
+
+

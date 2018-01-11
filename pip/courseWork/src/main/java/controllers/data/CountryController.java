@@ -2,6 +2,7 @@ package controllers.data;
 
 import com.google.gson.Gson;
 import ejb.data.CountryAccess;
+import entity.Country;
 
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -20,31 +21,14 @@ public class CountryController extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     try {
-      String action = request.getParameter("action");
-      String name = request.getParameter("name");
-      String answer;
+      int id = Integer.parseInt(request.getParameter("id"));
+      Country country = countries.read(id);
 
-      if (action == null) {
-        throw new ServletException("Action is null");
-      } else if (action.equals("country")) {
-        answer = new Gson().toJson(countries.find(name));
+      String answer = new Gson().toJson(country);
 
-        response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
-        response.getWriter().write(answer);
-      } else if (action.equals("images")) {
-        answer = new Gson().toJson(countries.getImages(name));
-
-        response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
-        response.getWriter().write(answer);
-      } else if(action.equals("legends")) {
-        answer = new Gson().toJson(countries.getLegends(name));
-
-        response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
-        response.getWriter().write(answer);
-      }
+      response.setContentType("application/json");
+      response.setCharacterEncoding("UTF-8");
+      response.getWriter().write(answer);
     } catch (Exception ex) {
       throw new ServletException(ex.getMessage());
     }

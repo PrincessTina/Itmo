@@ -17,18 +17,6 @@ import java.util.List;
 @LocalBean
 @TransactionManagement(TransactionManagementType.BEAN)
 public class CountryAccess extends Access {
-  public List<Legend> getLegends(String name) throws ServletException {
-    Country country = find(name);
-
-    return country.getLegends();
-  }
-
-  public List<Image> getImages(String name) throws ServletException {
-    Country country = find(name);
-
-    return country.getImages();
-  }
-
   public Country find(String name) throws ServletException {
     EntityManager entityManager = generateEntityManager();
 
@@ -44,5 +32,13 @@ public class CountryAccess extends Access {
     } else {
       return list.get(0);
     }
+  }
+
+  public Country read(int id) {
+    EntityManager entityManager = generateEntityManager();
+    Country user = entityManager.find(Country.class, id);
+
+    entityManager.close();
+    return user;
   }
 }

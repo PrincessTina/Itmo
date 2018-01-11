@@ -26,7 +26,7 @@ $(document).ready(() => {
 
             this.collection.fetch({
                 success: () => {
-                    this.paint();
+                    this.paste();
                 },
                 fail: () => {
                     throw "Error in getting news";
@@ -34,7 +34,7 @@ $(document).ready(() => {
             });
         },
 
-        paint() {
+        paste() {
             for (let i = 0; i < 3; i++) {
                 let note = this.collection.models[i];
 
@@ -43,7 +43,7 @@ $(document).ready(() => {
                     <img src="${note.attributes.image.link}" style="width:100%" class="w3-hover-opacity">
                     <div class="w3-container w3-white">
                       <p class="w3-opacity">${note.attributes.date}</p>
-                      <p>${note.attributes.description}</p>
+                      <p><i>${note.attributes.description}</i></p>
                     </div>
                   </div>
                 `;

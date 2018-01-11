@@ -9,14 +9,6 @@ public class Image {
   private int id;
   private String link;
 
-  @ManyToOne(fetch = FetchType.EAGER)
-  @JoinTable(
-      name = "country_image",
-      joinColumns = @JoinColumn(name = "image_id"),
-      inverseJoinColumns = @JoinColumn(name = "country_id")
-  )
-  private Country country;
-
   public Image () {}
 
   public Image (String link) {
@@ -37,13 +29,5 @@ public class Image {
 
   public void setId(int id) {
     this.id = id;
-  }
-
-  public Country getCountry() {
-    return country;
-  }
-
-  public void setCountry(Country country) {
-    this.country = country;
   }
 }
