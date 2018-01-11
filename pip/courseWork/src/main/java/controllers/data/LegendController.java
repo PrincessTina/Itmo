@@ -1,7 +1,10 @@
 package controllers.data;
 
 import com.google.gson.Gson;
+import ejb.data.Controller;
 import ejb.data.LegendAccess;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -16,6 +19,29 @@ public class LegendController extends HttpServlet {
 
   @EJB
   private LegendAccess legends;
+
+  @EJB
+  private Controller controller;
+
+  @Override
+  protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    try {
+      JSONObject jsonObject = controller.getAnswerFromPost(request);
+
+      String link = jsonObject.getString("link");
+      String description = jsonObject.getString("description");
+      String authorName = jsonObject.getString("authorName");
+      String authorSurname = jsonObject.getString("authorSurname");
+      String name = jsonObject.getString("name");
+      int country_id = Integer.parseInt(jsonObject.getString("country_id"));
+
+      legends.create(authorName, authorSurname, link, name, description, country_id);
+    } catch (JSONException e) {
+      throw new ServletException("Error parsing JSON request string");
+    } catch (Exception ex) {
+      throw new ServletException(ex.getMessage());
+    }
+  }
 
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -1,10 +1,17 @@
 package ejb.data;
 
+import ejb.context.ContextAccess;
+import ejb.data.Access;
+import ejb.data.ImageAccess;
+import ejb.data.UsersAccess;
 import entity.Note;
+import entity.Users;
 
 import javax.ejb.*;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
 import java.sql.Date;
 import java.util.Calendar;
 import java.util.List;
@@ -13,11 +20,19 @@ import java.util.List;
 @LocalBean
 @TransactionManagement(TransactionManagementType.BEAN)
 public class NoteAccess extends Access {
-
   @EJB
   private ImageAccess images;
 
-  public void create(int owner_id, int image_id, String description) {
+  @EJB
+  private ContextAccess context;
+
+  @EJB
+  private UsersAccess users;
+
+  public void addNewNote(String link, String description, HttpServletRequest request) throws ServletException {
+    int image_id = getNewImageId(link);
+    int owner_id = getCurrentUserId(request);
+
     EntityManager entityManager = generateEntityManager();
     Date date = new Date(Calendar.getInstance().getTime().getTime());
 
@@ -27,6 +42,19 @@ public class NoteAccess extends Access {
     entityManager.persist(row);
     entityManager.getTransaction().commit();
     entityManager.close();
+  }
+
+  private int getNewImageId(String link) throws ServletException {
+    images.create(link);
+
+    return images.findImage(link);
+  }
+
+  private int getCurrentUserId(HttpServletRequest request) throws ServletException {
+    Users currentUser = context.getUserFromContext(request);
+    String login = currentUser.getLogin();
+
+    return users.findUserId(login);
   }
 
   public List<Note> getAllNotes() {

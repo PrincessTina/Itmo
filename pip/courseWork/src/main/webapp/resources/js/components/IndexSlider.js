@@ -52,8 +52,8 @@ $(document).ready(() => {
                 viewHtml += ` 
                                 <div class="mySlides w3-display-container w3-center">
                                   <img src="${image.attributes.link}" style="width:100%; max-height: 700px">
-                                </div>
-            `;});
+                                </div>`;
+            });
 
             $(this.el).html(viewHtml);
         }

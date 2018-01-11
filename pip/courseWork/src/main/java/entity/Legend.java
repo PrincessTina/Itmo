@@ -9,9 +9,9 @@ public class Legend {
   @GeneratedValue
   private int id;
   private String name;
-  private int author_id;
+  private Integer author_id;
   private int country_id;
-  private int image_id;
+  private Integer image_id;
   private String description;
 
   @ManyToOne(fetch = FetchType.EAGER)
@@ -41,7 +41,7 @@ public class Legend {
   public Legend() {
   }
 
-  public Legend(String name, int author_id, int country_id, int image_id, String description) {
+  public Legend(String name, Integer author_id, int country_id, Integer image_id, String description) {
     this.name = name;
     this.author_id = author_id;
     this.country_id = country_id;

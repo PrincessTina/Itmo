@@ -3,7 +3,6 @@ package controllers.notification;
 import com.google.gson.Gson;
 import ejb.data.Controller;
 import ejb.data.NoteAccess;
-import ejb.notification.NotificationLogic;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -18,9 +17,6 @@ import java.io.IOException;
 @WebServlet(name = "notes", urlPatterns = {"/notes"})
 public class NoteController extends HttpServlet {
   @EJB
-  private NotificationLogic notificationLogic;
-
-  @EJB
   private NoteAccess notes;
 
   @EJB
@@ -28,22 +24,13 @@ public class NoteController extends HttpServlet {
 
   @Override
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    String type;
-
     try {
       JSONObject jsonObject = controller.getAnswerFromPost(request);
-      type = jsonObject.getString("type");
 
-      if (type.isEmpty()) {
-        throw new ServletException("Type is null");
-      } else if (type.equals("new")) {
-        String link = jsonObject.getString("link");
-        String description = jsonObject.getString("description");
+      String link = jsonObject.getString("link");
+      String description = jsonObject.getString("description");
 
-        notificationLogic.addNewNote(link, description, request);
-      } else {
-        throw new ServletException("Unknown type");
-      }
+      notes.addNewNote(link, description, request);
     } catch (JSONException e) {
       throw new ServletException("Error parsing JSON request string");
     } catch (Exception ex) {

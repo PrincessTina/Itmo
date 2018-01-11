@@ -73,7 +73,7 @@ $(document).ready(() => {
                 //Check for admin logins
                 if (login === "VKkristi_tulpan") {
                     $('.cabinetBlock').append(`
-                    <a href="admin.html" class="w3-bar-item w3-button">Админка</a>   
+                    <a href="admin.html#news" class="w3-bar-item w3-button">Админка</a>   
                     `);
                 }
 

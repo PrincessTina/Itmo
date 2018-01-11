@@ -1,6 +1,10 @@
 $(document).ready(() => {
-    var NotificationModel = Backbone.Model.extend({
+    var NoteModel = Backbone.Model.extend({
         urlRoot: 'notes'
+    });
+
+    var LegendModel = Backbone.Model.extend({
+        urlRoot: 'legends'
     });
 
     window.Admin = Backbone.View.extend({
@@ -10,23 +14,153 @@ $(document).ready(() => {
             'click .close': 'w3_close',
             'click .open': 'w3_open',
             'click .send_new': 'sendNew',
+            'click .send_legend': 'sendLegend',
             'click .gCross': 'closeGNotice',
             'click .bCross': 'closeBNotice',
             'click .clear': 'clear',
+            'click .news': 'checkNewsForm',
+            'click .legend': 'checkLegendForm',
         },
 
         initialize() {
             _.bindAll(this, 'render');
 
             this.render();
+            this.checkNewsForm();
+        },
+
+        checkNewsForm() {
+            document.getElementsByClassName("w3-main")[0].innerHTML = `
+                    <div class="w3-container" id="news" style="margin-top:75px">
+                        <h1 class="w3-xxxlarge"><b>News</b></h1>
+                        <hr style="width:50px;border:5px solid" class="w3-round">
+                    </div>
+                
+                    <div class="w3-container w3-purple">
+                        <h2>Input Form</h2>
+                    </div>
+                
+                    <div class="w3-container w3-card-4">
+                        <br/>
+                        <p>
+                            <label class="w3-text-grey">Image link</label>
+                            <input class="w3-input w3-border _link" type="text" required="">
+                        </p>
+                
+                        <p>
+                            <label class="w3-text-grey">Description <i>(Please, write english)</i></label>
+                            <textarea class="w3-input w3-border _description" style="height: 200px;resize:none;"></textarea>
+                        </p> <br/>
+                
+                        <p>
+                            <button type="button" class="w3-btn w3-padding w3-purple send_new" style="width:120px">Send &nbsp; ❯</button>
+                            <button type="button" class="w3-btn w3-right w3-padding w3-black clear" style="width:120px">Clear</button>
+                        </p>
+                    </div>
+            `;
+        },
+
+        checkLegendForm() {
+            document.getElementsByClassName("w3-main")[0].innerHTML = `
+                    <div class="w3-container" id="news" style="margin-top:75px">
+                        <h1 class="w3-xxxlarge"><b>Legend</b></h1>
+                        <hr style="width:50px;border:5px solid" class="w3-round">
+                    </div>
+                
+                    <div class="w3-container w3-purple">
+                        <h2>Input Form</h2>
+                    </div>
+                
+                    <div class="w3-container w3-card-4">
+                        <br/>
+                        <p>
+                            <label class="w3-text-grey">Author name</label>
+                            <input class="w3-input w3-border _author_name" type="text">
+                        </p> <br/>
+                        <p>
+                            <label class="w3-text-grey">Author surname</label>
+                            <input class="w3-input w3-border _author_surname" type="text">
+                        </p> <br/>
+                        <p>
+                            <label class="w3-text-grey">Name</label>
+                            <input class="w3-input w3-border _name" type="text" required="">
+                        </p> <br/>
+                        <p>
+                            <label class="w3-text-grey">Image link</label>
+                            <input class="w3-input w3-border _link" type="text" required="">
+                        </p> <br/>
+                        <p>
+                            <label class="w3-text-grey">Country</label>
+                            <div>
+                                <input class="w3-radio" type="radio" name="country" value="1" checked="">
+                                <label>Greece</label>
+                                <br/>
+                                <input class="w3-radio" type="radio" name="country" value="2">
+                                <label>Rome</label>
+                                <br/>
+                                <input class="w3-radio" type="radio" name="country" value="3">
+                                <label>Rus</label>
+                                <br/>
+                                <input class="w3-radio" type="radio" name="country" value="4">
+                                <label>Egypt</label>
+                            </div>
+                        </p> <br/>
+                        <p>
+                            <label class="w3-text-grey">Description <i>(Please, write english)</i></label>
+                            <textarea class="w3-input w3-border _description" style="height: 200px;resize:none;"></textarea>
+                        </p> <br/>
+                
+                        <p>
+                            <button type="button" class="w3-btn w3-padding w3-purple send_legend" style="width:120px">Send &nbsp; ❯</button>
+                            <button type="button" class="w3-btn w3-right w3-padding w3-black clear" style="width:120px">Clear</button>
+                        </p>
+                    </div>
+            `;
+        },
+
+        sendLegend() {
+            let authorName = document.getElementsByClassName("_author_name")[0].value;
+            let authorSurname = document.getElementsByClassName("_author_surname")[0].value;
+            let name = document.getElementsByClassName("_name")[0].value;
+            let link = document.getElementsByClassName("_link")[0].value;
+            let description = document.getElementsByClassName("_description")[0].value;
+            let country_id;
+
+            document.getElementsByName("country").forEach((element) => {
+               if (element.checked) {
+                   country_id = element.value;
+               }
+            });
+
+            let legend = new LegendModel({
+                name: name,
+                authorName: authorName,
+                authorSurname: authorSurname,
+                link: link,
+                description: description,
+                country_id: country_id,
+            });
+
+            let result = legend.save();
+
+            setTimeout(function () {
+                if (result.statusText === "OK") {
+                    document.getElementsByClassName("gNotice")[0].style.display = "block";
+                } else if (result.statusText === "Internal Server Error") {
+                    document.getElementsByClassName("bNotice")[0].style.display = "block";
+                }
+            }, 200);
+
+            setTimeout(function () {
+                document.getElementsByClassName("gNotice")[0].style.display = "none";
+            }, 2*1000);
         },
 
         sendNew() {
             let link = document.getElementsByClassName("_link")[0];
             let description = document.getElementsByClassName("_description")[0];
 
-            let news = new NotificationModel({
-                type: "new",
+            let news = new NoteModel({
                 link: link.value,
                 description: description.value,
             });
@@ -35,19 +169,31 @@ $(document).ready(() => {
 
             setTimeout(function () {
                 if (result.statusText === "OK") {
-                   document.getElementsByClassName("gNotice")[0].style.display = "block";
+                    document.getElementsByClassName("gNotice")[0].style.display = "block";
+
+                    setTimeout(function () {
+                        document.getElementsByClassName("gNotice")[0].style.display = "none";
+                    }, 2*1000);
                 } else if (result.statusText === "Internal Server Error") {
                     document.getElementsByClassName("bNotice")[0].style.display = "block";
+
+                    setTimeout(function () {
+                        document.getElementsByClassName("bNotice")[0].style.display = "none";
+                    }, 2*1000);
                 }
             }, 200);
         },
 
         clear() {
-            let link = document.getElementsByClassName("_link")[0];
-            let description = document.getElementsByClassName("_description")[0];
+            let elements = document.getElementsByTagName("input");
 
-            link.value = "";
-            description.value = "";
+            for (let i = 0; i < elements.length; i ++) {
+                if (i < 4) {
+                    elements[i].value = "";
+                }
+            }
+
+            document.getElementsByTagName("textarea")[0].value = "";
         },
 
         closeGNotice() {
@@ -78,9 +224,9 @@ $(document).ready(() => {
             
             
                 <div class="w3-bar-block w3-margin">
-                    <a href="index.html" class="close w3-border-bottom w3-border-black w3-bar-item w3-button w3-hover-white">Главная</a>
-                    <a href="#news" class="close w3-border-bottom w3-border-black w3-bar-item w3-button w3-hover-white">Новости</a>
-                    <a href="" class="close w3-bar-item w3-button w3-hover-white">Легенды</a>
+                    <a href="index.html" class="close w3-border-bottom w3-border-black w3-bar-item w3-button w3-hover-white">Home</a>
+                    <a href="#news" class="news close w3-border-bottom w3-border-black w3-bar-item w3-button w3-hover-white">News</a>
+                    <a href="#legend" class="legend close w3-bar-item w3-button w3-hover-white">Legend</a>
                 </div>
             </nav>
             
@@ -94,36 +240,7 @@ $(document).ready(() => {
                  title="close side menu" id="myOverlay"></div>
             
             <!-- !PAGE CONTENT! -->
-            <div class="w3-main" style="margin-left:340px;margin-right:40px">
-                <!-- News -->
-                <div class="w3-container" id="news" style="margin-top:75px">
-                    <h1 class="w3-xxxlarge"><b>Новости</b></h1>
-                    <hr style="width:50px;border:5px solid" class="w3-round">
-                </div>
-            
-                <div class="w3-container w3-purple">
-                    <h2>Input Form</h2>
-                </div>
-            
-                <div class="w3-container w3-card-4">
-                    <br/>
-            
-                    <p>
-                        <label class="w3-text-grey">Image link</label>
-                        <input class="w3-input w3-border _link" type="text" required="">
-                    </p>
-            
-                    <p>
-                        <label class="w3-text-grey">Description <i>(Please, write english)</i></label>
-                        <textarea class="w3-input w3-border _description" style="height: 200px;resize:none;"></textarea>
-                    </p> <br/>
-            
-                    <p>
-                        <button type="button" class="w3-btn w3-padding w3-purple send_new" style="width:120px">Send &nbsp; ❯</button>
-                        <button type="button" class="w3-btn w3-right w3-padding w3-black clear" style="width:120px">Clear</button>
-                    </p>
-                </div>
-            </div>
+            <div class="w3-main" style="margin-left:340px;margin-right:40px"></div>
             
             <div class="w3-card-4 w3-padding w3-panel w3-green w3-display-container gNotice" style="position: fixed; top: 30%; 
             right: 0; display: none">
