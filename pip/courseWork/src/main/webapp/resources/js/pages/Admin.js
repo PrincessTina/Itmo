@@ -74,14 +74,6 @@ $(document).ready(() => {
                     <div class="w3-container w3-card-4">
                         <br/>
                         <p>
-                            <label class="w3-text-grey">Author name</label>
-                            <input class="w3-input w3-border _author_name" type="text">
-                        </p> <br/>
-                        <p>
-                            <label class="w3-text-grey">Author surname</label>
-                            <input class="w3-input w3-border _author_surname" type="text">
-                        </p> <br/>
-                        <p>
                             <label class="w3-text-grey">Name</label>
                             <input class="w3-input w3-border _name" type="text" required="">
                         </p> <br/>
@@ -119,8 +111,6 @@ $(document).ready(() => {
         },
 
         sendLegend() {
-            let authorName = document.getElementsByClassName("_author_name")[0].value;
-            let authorSurname = document.getElementsByClassName("_author_surname")[0].value;
             let name = document.getElementsByClassName("_name")[0].value;
             let link = document.getElementsByClassName("_link")[0].value;
             let description = document.getElementsByClassName("_description")[0].value;
@@ -134,8 +124,6 @@ $(document).ready(() => {
 
             let legend = new LegendModel({
                 name: name,
-                authorName: authorName,
-                authorSurname: authorSurname,
                 link: link,
                 description: description,
                 country_id: country_id,

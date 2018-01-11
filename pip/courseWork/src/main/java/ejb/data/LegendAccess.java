@@ -19,9 +19,6 @@ public class LegendAccess extends Access {
   @EJB
   private ImageAccess images;
 
-  @EJB
-  private AuthorAccess authors;
-
   public List<Users> getUsers(String name) throws ServletException {
     Legend legend = find(name);
 
@@ -32,12 +29,6 @@ public class LegendAccess extends Access {
     Legend legend = find(name);
 
     return legend.getCharacters();
-  }
-
-  public Country getCountry(String name) throws ServletException {
-    Legend legend = find(name);
-
-    return legend.getCountry();
   }
 
   public Legend find(String name) throws ServletException {
@@ -57,24 +48,18 @@ public class LegendAccess extends Access {
     }
   }
 
-  public void create(String authorName, String authorSurname, String link, String name, String description, int country_id)
+  public void create(String link, String name, String description, int country_id)
       throws ServletException {
 
     Integer image_id = null;
-    Integer author_id = null;
 
     if (!link.isEmpty()) {
       images.create(link);
       image_id = images.findImage(link);
     }
 
-    if (!authorName.isEmpty()) {
-      authors.create(authorName, authorSurname);
-      author_id = authors.findAuthor(authorName, authorSurname);
-    }
-
     EntityManager entityManager = generateEntityManager();
-    Legend row = new Legend(name, author_id, country_id, image_id, description);
+    Legend row = new Legend(name, country_id, image_id, description);
 
     entityManager.getTransaction().begin();
     entityManager.persist(row);

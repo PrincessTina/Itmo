@@ -68,7 +68,7 @@ $(document).ready(() => {
          
          <!-- Новости -->
          <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
-              <h1 class="w3-center">Новости</h1>
+              <h1 class="w3-center">News</h1>
               <div class="w3-row-padding w3-padding-16 w3-center newsBlock"></div>
         </div>
         

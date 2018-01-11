@@ -60,7 +60,7 @@ $(document).ready(() => {
             } else {
                 document.getElementsByClassName("registrationForm")[0].style.display = "none";
                 document.getElementsByClassName("cabinetForm")[0].style.display = "block";
-                document.getElementsByClassName("_login")[0].innerHTML = "Привет, ";
+                document.getElementsByClassName("_login")[0].innerHTML = "Hello, ";
 
                 if (name === "") {
                     document.getElementsByClassName("_login")[0].innerHTML += login;
@@ -73,7 +73,7 @@ $(document).ready(() => {
                 //Check for admin logins
                 if (login === "VKkristi_tulpan") {
                     $('.cabinetBlock').append(`
-                    <a href="admin.html#news" class="w3-bar-item w3-button">Админка</a>   
+                    <a href="admin.html#news" class="w3-bar-item w3-button">Admin</a>   
                     `);
                 }
 
@@ -87,25 +87,25 @@ $(document).ready(() => {
             <div class="w3-bar w3-black w3-card w3-border-bottom w3-border-white">
               <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" 
                onclick="search()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-              <a href="index.html" class="w3-bar-item w3-button w3-padding-large">ГЛАВНАЯ</a>
+              <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
               
               <div class="w3-dropdown-hover w3-hide-small">
-                <button class="w3-padding-large w3-button" title="More">СТРАНА <i class="fa fa-caret-down"></i></button>     
+                <button class="w3-padding-large w3-button" title="More">MYTHOLOGY <i class="fa fa-caret-down"></i></button>     
                 <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-black">
-                  <a href="country.html?3" class="w3-bar-item w3-button">Древняя Русь</a>
-                  <a href="country.html?2" class="w3-bar-item w3-button">Древний Рим</a>
-                  <a href="country.html?4" class="w3-bar-item w3-button">Египет</a>  
-                  <a href="country.html?1" class="w3-bar-item w3-button">Греция</a>    
+                  <a href="country.html?3" class="w3-bar-item w3-button">ANCIENT RUS</a>
+                  <a href="country.html?2" class="w3-bar-item w3-button">ANCIENT ROME</a>
+                  <a href="country.html?4" class="w3-bar-item w3-button">ANCIENT EGYPT</a>  
+                  <a href="country.html?1" class="w3-bar-item w3-button">ANCIENT GREECE</a>    
                 </div>
               </div>
               
-              <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ТОП-10</a>
-              <a href="news.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">НОВОСТИ</a>
+              <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TOP-10</a>
+              <a href="news.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">NEWS</a>
               
               <div class="registrationForm" style="display: block">
-                <div class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" onclick="new RegWindow();">Зарегистрироваться</div>
-                <div class="w3-bar-item w3-padding-large w3-hide-small w3-right">или</div>
-                <div class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" onclick="new LoginWindow();">Войти</div>
+                <div class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" onclick="new RegWindow();">Sign up</div>
+                <div class="w3-bar-item w3-padding-large w3-hide-small w3-right">or</div>
+                <div class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" onclick="new LoginWindow();">Login</div>
               </div>
               
               <div class="cabinetForm w3-right w3-dropdown-hover" style="width: 100px;margin-right: 7%;display: none;">
@@ -114,8 +114,8 @@ $(document).ready(() => {
                 <i class="fa fa-caret-down" style="margin-top: 30%"></i>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-black cabinetBlock">
                   <a class="w3-bar-item _login"></a>
-                  <a href="" class="w3-bar-item w3-button exitButton">Выйти</a>
-                  <a href="#" class="w3-bar-item w3-button">Пройти тест</a>    
+                  <a href="" class="w3-bar-item w3-button exitButton">Logout</a>
+                  <a href="#" class="w3-bar-item w3-button">Pass the test</a>    
                 </div>
               </div>
               

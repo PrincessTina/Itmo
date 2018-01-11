@@ -30,12 +30,10 @@ public class LegendController extends HttpServlet {
 
       String link = jsonObject.getString("link");
       String description = jsonObject.getString("description");
-      String authorName = jsonObject.getString("authorName");
-      String authorSurname = jsonObject.getString("authorSurname");
       String name = jsonObject.getString("name");
       int country_id = Integer.parseInt(jsonObject.getString("country_id"));
 
-      legends.create(authorName, authorSurname, link, name, description, country_id);
+      legends.create(link, name, description, country_id);
     } catch (JSONException e) {
       throw new ServletException("Error parsing JSON request string");
     } catch (Exception ex) {
@@ -66,12 +64,6 @@ public class LegendController extends HttpServlet {
         response.getWriter().write(answer);
       } else if(action.equals("legend")) {
         answer = new Gson().toJson(legends.find(name));
-
-        response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
-        response.getWriter().write(answer);
-      } else if (action.equals("country")) {
-        answer = new Gson().toJson(legends.getCountry(name));
 
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");

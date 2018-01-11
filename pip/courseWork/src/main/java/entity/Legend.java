@@ -9,18 +9,9 @@ public class Legend {
   @GeneratedValue
   private int id;
   private String name;
-  private Integer author_id;
   private int country_id;
   private Integer image_id;
   private String description;
-
-  @ManyToOne(fetch = FetchType.EAGER)
-  @JoinTable(
-      name = "country_legend",
-      joinColumns = @JoinColumn(name = "legend_id"),
-      inverseJoinColumns = @JoinColumn(name = "country_id")
-  )
-  private Country country;
 
   @ManyToMany(fetch = FetchType.EAGER)
   @JoinTable(
@@ -41,9 +32,8 @@ public class Legend {
   public Legend() {
   }
 
-  public Legend(String name, Integer author_id, int country_id, Integer image_id, String description) {
+  public Legend(String name, int country_id, Integer image_id, String description) {
     this.name = name;
-    this.author_id = author_id;
     this.country_id = country_id;
     this.image_id = image_id;
     this.description = description;
@@ -63,14 +53,6 @@ public class Legend {
 
   public void setName(String name) {
     this.name = name;
-  }
-
-  public int getAuthor_id() {
-    return author_id;
-  }
-
-  public void setAuthor_id(int author_id) {
-    this.author_id = author_id;
   }
 
   public int getCountry_id() {
@@ -103,14 +85,6 @@ public class Legend {
 
   public void setCharacters(List<Character> characters) {
     this.characters = characters;
-  }
-
-  public Country getCountry() {
-    return country;
-  }
-
-  public void setCountry(Country country) {
-    this.country = country;
   }
 
   public List<Users> getUsers() {

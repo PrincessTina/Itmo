@@ -1,4 +1,4 @@
-package controllers.notification;
+package controllers.data;
 
 import com.google.gson.Gson;
 import ejb.data.Controller;

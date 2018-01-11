@@ -35,6 +35,7 @@ $(document).ready(() => {
             let description = this.country.attributes.description;
             let image1 = this.country.attributes.images[0];
             let image2 = this.country.attributes.images[1];
+            let legendCollection = this.country.attributes.legends;
             let verticalImage;
             let horizontalImage;
 
@@ -51,6 +52,12 @@ $(document).ready(() => {
             document.getElementsByClassName("_description")[0].innerHTML = description;
             document.getElementsByClassName("verticalImage")[0].src = verticalImage;
             document.getElementsByClassName("horizontalImage")[0].src = horizontalImage;
+
+            legendCollection.forEach((legend) => {
+               document.getElementsByClassName("w3-ul")[0].innerHTML += `
+                <li><a href="">${legend.name}</a></li>
+               `;
+            });
         },
 
         search() {
@@ -102,15 +109,7 @@ $(document).ready(() => {
           <div class="w3-container">
             <h2 class="w3-center">Legends</h2>
             <input class="w3-input w3-border-black w3-margin w3-round w3-padding" type="text" placeholder="Search.." id="search">
-            <ul class="w3-ul w3-margin-top" id="myUL">
-                <li>Adele</li>
-                <li style="">Agnes</li>
-                <li style="">Billy</li>
-                <li style="">Bob</li>
-                <li style="">Calvin</li>
-                <li style="">Christina</li>
-                <li>Cindy</li>
-            </ul>
+            <ul class="w3-ul w3-margin-top" id="myUL"></ul>
           </div>
         
           <!-- Футер с контактами -->

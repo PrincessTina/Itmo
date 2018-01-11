@@ -66,19 +66,19 @@ $(document).ready(() => {
             
             <!-- Описание -->
             <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-              <h2 class="w3-wide">МИФОЛОГИЯ РАЗНЫХ СТРАН</h2>
-              <p class="w3-opacity"><i>Мы любим истории</i></p>
+              <h2 class="w3-wide">Mythology of different countries</h2>
+              <p class="w3-opacity"><i>We love stories</i></p>
               <p class="w3-justify">
                <br/>
-               Данный ресурс предоставляет вохможности сыграть в игру, прочесть и оценить мифы и легенды, представленные на сайте,
-               пройти короткий тест, который даст нам возможность подсказывать вам истории по интересам.
+               This resource gives a possibly to play a game, to read and evaluate myths and legends presented on the 
+               website, pass a short test which will give us the opportunity to tell you stories of interest.
               </p>
             </div>
             
             <!-- Новости -->
             <div class="w3-black" id="tour">
               <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-                <h2 class="w3-wide w3-center">Новости</h2>
+                <h2 class="w3-wide w3-center">News</h2>
                 <p class="w3-opacity w3-center"></p><br>
                 <div class="w3-row-padding w3-padding-32 noteBlock" style="margin:0 -16px"> </div>
               </div>
