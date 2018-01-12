@@ -78,7 +78,7 @@ public class UsersAccess extends Access {
     entityManager.close();
   }
 
-  private Users read(int id) {
+  public Users read(int id) {
     EntityManager entityManager = generateEntityManager();
     Users user = entityManager.find(Users.class, id);
 

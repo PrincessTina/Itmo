@@ -41,9 +41,9 @@ $(document).ready(() => {
                     document.getElementsByClassName("block")[0].innerHTML += `
                     <div class="w3-quarter w3-display-container">
                       <img class="w3-hover-grayscale" src="${legend.attributes.image.link}" alt="Sandwich" style="width:100%">
-                      <div class="w3-display-topmiddle w3-text-black w3-xlarge">${legend.attributes.rating}</div>
+                      <div class="w3-display-topmiddle w3-text-white w3-large">${legend.attributes.rating}</div>
                       <h3>${count}</h3>
-                      <p><a href="legend.html#${legend.attributes.id}">${legend.attributes.name}</a></p>
+                      <p><a href="legend.html?${legend.attributes.id}">${legend.attributes.name}</a></p>
                     </div>`;
                 } else {
                     document.getElementsByClassName("block")[0].classList.remove("block");
@@ -54,9 +54,9 @@ $(document).ready(() => {
                     document.getElementsByClassName("block")[0].innerHTML += `
                     <div class="w3-quarter w3-display-container">
                       <img class="w3-hover-grayscale" src="${legend.attributes.image.link}" alt="Sandwich" style="width:100%">
-                      <div class="w3-display-topmiddle w3-text-black w3-xlarge">${legend.attributes.rating}</div>
+                      <div class="w3-display-topmiddle w3-text-white w3-xlarge">${legend.attributes.rating}</div>
                       <h3>${count}</h3>
-                      <p><a href="legend.html#${legend.attributes.id}">${legend.attributes.name}</a></p>
+                      <p><a href="legend.html?${legend.attributes.id}">${legend.attributes.name}</a></p>
                     </div>`;
                 }
                 count ++;

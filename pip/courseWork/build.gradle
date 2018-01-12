@@ -30,6 +30,8 @@ dependencies {
     compile 'com.rabbitmq:amqp-client:3.0.1'
 
     compile group: 'javax.validation', name: 'validation-api', version: '1.0.0.GA'
+
+    compile group: 'javax.inject', name: 'javax.inject', version: '1'
 }
 
 test {

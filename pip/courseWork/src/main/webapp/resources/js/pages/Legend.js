@@ -1,6 +1,14 @@
 $(document).ready(() => {
     var LegendModel = Backbone.Model.extend({
-        url:  'legends?id=' + window.location.href.substr(window.location.href.lastIndexOf("#") + 1),
+        url:  'legends?id=' + window.location.href.substr(window.location.href.lastIndexOf("?") + 1),
+    });
+
+    var UserModel = Backbone.Model.extend({
+       url: 'context?action=get_user',
+    });
+
+    var LikeModel = Backbone.Model.extend({
+        urlRoot: 'legends#',
     });
 
     window.Legend = Backbone.View.extend({
@@ -9,12 +17,14 @@ $(document).ready(() => {
 
         events: {
             'click ._myVkPage': 'goToMyVkPage',
+            'click ._like': 'like',
         },
 
         initialize() {
             _.bindAll(this, 'render');
 
             this.legend = new LegendModel();
+            this.user = new UserModel();
             this.render();
 
             this.menu = new Menu();
@@ -22,11 +32,53 @@ $(document).ready(() => {
             this.legend.fetch({
                 success: () => {
                     this.paste();
+
+                    this.user.fetch({
+                        success: () => {
+                            this.checkLike();
+                        },
+                        fail: () => {
+                            throw "Error in getting news";
+                        }
+                    });
                 },
                 fail: () => {
                     throw "Error in getting news";
                 }
             });
+        },
+
+        like() {
+            let legend_like = new LikeModel({
+                description: "like",
+                id: window.location.href.substr(window.location.href.lastIndexOf("?") + 1),
+                user_id: this.user.attributes.id,
+            });
+
+            legend_like.save();
+
+            document.getElementsByClassName("_rating")[0].innerHTML = this.legend.attributes.rating + 1;
+            document.getElementsByClassName("_like")[0].disabled = true;
+            document.getElementsByClassName("_like")[0].classList.remove("w3-text-white");
+            document.getElementsByClassName("_like")[0].classList.add("w3-text-black");
+        },
+
+        checkLike() {
+            let condition = false;
+
+            if (this.legend.attributes.users !== undefined) {
+                this.legend.attributes.users.forEach((user) => {
+                    if (user.login === this.user.attributes.login) {
+                        condition = true;
+                    }
+                });
+            }
+
+            if (this.user.attributes.login === "" || condition) {
+                document.getElementsByClassName("_like")[0].disabled = true;
+                document.getElementsByClassName("_like")[0].classList.remove("w3-text-white");
+                document.getElementsByClassName("_like")[0].classList.add("w3-text-black");
+            }
         },
 
         paste() {
@@ -45,13 +97,12 @@ $(document).ready(() => {
                     <div class="w3-half">
                     <img class="_image w3-opacity w3-hover-opacity-off" style="width:100%">
                     <img src="http://passport.777ru.ru/sites/default/files/images/Greece_ancient_capital_of_antiquity_00.jpg" style="width:100%">
-                    <img src="https://i.pinimg.com/736x/f2/ab/1c/f2ab1cfb20f1f96826b13d10637dfa9e--greece-vacation-greece-trip.jpg" style="width:100%">
                     <img class="w3-opacity w3-hover-opacity-off" src="http://clubtravel39.ru/wp-content/uploads/2017/03/tP6toVHnWJk.jpg" style="width:100%">
                   </div>
                 
                   <div class="w3-half">
                     <img src="https://majbutne.com.ua/wp-content/uploads/2016/03/GreeceOM_15.jpg" style="width:100%">
-                    <img class="w3-opacity w3-hover-opacity-off" src="http://bigpicture.ru/wp-content/uploads/2013/06/Places05.jpg" style="width:100%">
+                    <img class="w3-opacity w3-hover-opacity-off" src="https://i.pinimg.com/736x/f2/ab/1c/f2ab1cfb20f1f96826b13d10637dfa9e--greece-vacation-greece-trip.jpg" style="width:100%">
                     <img class="w3-opacity w3-hover-opacity-off" src="http://wallpaperscraft.ru/image/gorod_afiny_parfenon_dostoprimechatelnost_greciya_58007_1024x768.jpg" style="width:100%">
                     <img src="https://img1.goodfon.ru/original/1920x1280/1/fa/greciya-santorini-nebo-oblaka.jpg" style="width:100%">
                   </div>
@@ -133,7 +184,7 @@ $(document).ready(() => {
             <!-- Футер с лайками -->
             <footer class="w3-container w3-padding-64 w3-right w3-opacity w3-pink w3-large">
               <p class="w3-medium w3-text-white _rating"></p>
-              <i class="fa fa-heart w3-hover-opacity w3-text-white"></i>   
+              <i class="fa fa-heart w3-hover-opacity w3-text-white _like"></i>   
             </footer>
             
             <!-- Legend description -->

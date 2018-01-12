@@ -2,6 +2,7 @@ package controllers.context;
 
 import com.google.gson.Gson;
 import ejb.context.ContextAccess;
+import ejb.data.UsersAccess;
 import entity.Users;
 
 import javax.ejb.EJB;
@@ -18,6 +19,9 @@ public class ContextController extends HttpServlet {
   @EJB
   private ContextAccess context;
 
+  @EJB
+  private UsersAccess users;
+
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     String action = request.getParameter("action");
@@ -31,6 +35,15 @@ public class ContextController extends HttpServlet {
       }
 
       Users user = context.getUserFromContext(request);
+      int id;
+
+      if (!user.getLogin().equals("")) {
+        id = users.findUserId(user.getLogin());
+      } else {
+        id = -1;
+      }
+
+      user.setId(id);
 
       response.setContentType("application/json");
       response.setCharacterEncoding("UTF-8");

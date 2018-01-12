@@ -24,12 +24,7 @@ public class Legend {
   )
   private List<Character> characters;
 
-  @ManyToMany(fetch = FetchType.EAGER)
-  @JoinTable(
-      name = "user_legend",
-      joinColumns = @JoinColumn(name = "user_id"),
-      inverseJoinColumns = @JoinColumn(name = "legend_id")
-  )
+  @Transient
   private List<Users> users;
 
   public Legend() {
@@ -40,6 +35,15 @@ public class Legend {
     this.country_id = country_id;
     this.image_id = image_id;
     this.description = description;
+  }
+
+  public Legend(int id, String name, int country_id, Integer image_id, String description, int rating) {
+    this.name = name;
+    this.country_id = country_id;
+    this.image_id = image_id;
+    this.description = description;
+    this.rating = rating;
+    this.id = id;
   }
 
   public int getId() {
@@ -108,5 +112,13 @@ public class Legend {
 
   public void setRating(int rating) {
     this.rating = rating;
+  }
+
+  public List<Users> getUsers() {
+    return users;
+  }
+
+  public void setUsers(List<Users> users) {
+    this.users = users;
   }
 }

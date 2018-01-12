@@ -34,6 +34,8 @@ $(document).ready(() => {
         },
 
         exit: function () {
+            let position = window.location.href;
+
             let user = new UserModel({
                 action: "exit",
                 login: "",

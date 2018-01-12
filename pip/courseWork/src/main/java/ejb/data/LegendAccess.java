@@ -1,12 +1,14 @@
 package ejb.data;
 
-import entity.Character;
 import entity.Legend;
+import entity.User_Legend;
+import entity.Users;
 
 import javax.ejb.*;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import javax.servlet.ServletException;
+import java.util.ArrayList;
 import java.util.List;
 
 @Stateless
@@ -17,11 +19,8 @@ public class LegendAccess extends Access {
   @EJB
   private ImageAccess images;
 
-  public List<Character> getCharacters(String name) throws ServletException {
-    Legend legend = find(name);
-
-    return legend.getCharacters();
-  }
+  @EJB
+  private UsersAccess users;
 
   public Legend find(String name) throws ServletException {
     EntityManager entityManager = generateEntityManager();
@@ -29,14 +28,14 @@ public class LegendAccess extends Access {
     Query query = entityManager.createQuery("Select e from Legend e where e.name = :name");
     query.setParameter("name", name);
 
-    List<Legend> list = query.getResultList();
+    List list = query.getResultList();
 
     entityManager.close();
 
     if (list.size() == 0) {
       return null;
     } else {
-      return list.get(0);
+      return (Legend) list.get(0);
     }
   }
 
@@ -87,5 +86,34 @@ public class LegendAccess extends Access {
 
       return list;
     }
+  }
+
+  public void setLike(int id, int user_id) throws ServletException {
+    EntityManager entityManager = generateEntityManager();
+
+    User_Legend row = new User_Legend(user_id, id);
+
+    entityManager.getTransaction().begin();
+    entityManager.persist(row);
+    entityManager.getTransaction().commit();
+    entityManager.close();
+  }
+
+  public List<Users> getUsers(int id) throws ServletException {
+    EntityManager entityManager = generateEntityManager();
+
+    Query query = entityManager.createQuery("Select e from User_Legend e where e.legend_id = :id");
+    query.setParameter("id", id);
+
+    List<User_Legend> list = query.getResultList();
+    entityManager.close();
+
+    List<Users> usersList = new ArrayList<Users>();
+
+    for (User_Legend user_legend: list) {
+      usersList.add(users.read(user_legend.getUser_id()));
+    }
+
+    return usersList;
   }
 }

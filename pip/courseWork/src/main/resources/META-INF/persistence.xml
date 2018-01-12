@@ -15,6 +15,7 @@
         <class>entity.Legend</class>
         <class>entity.Note</class>
         <class>entity.Users</class>
+        <class>entity.User_Legend</class>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
