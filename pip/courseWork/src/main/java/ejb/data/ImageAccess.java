@@ -9,7 +9,7 @@ import javax.servlet.ServletException;
 import java.util.ArrayList;
 import java.util.List;
 
-@Stateful
+@Stateless
 @TransactionManagement(TransactionManagementType.BEAN)
 public class ImageAccess extends Access {
   public ArrayList<Image> readInitImages(ArrayList<Integer> listOfId) {

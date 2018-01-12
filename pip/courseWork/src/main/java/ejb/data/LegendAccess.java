@@ -68,4 +68,24 @@ public class LegendAccess extends Access {
     legend.setImage(images.read(legend.getImage_id()));
     return legend;
   }
+
+  public List<Legend> getTop() throws ServletException {
+    EntityManager entityManager = generateEntityManager();
+
+    Query query = entityManager.createQuery("Select e from Legend e order by e.rating desc");
+
+    List<Legend> list = query.setMaxResults(10).getResultList();
+
+    entityManager.close();
+
+    if (list.size() == 0) {
+      return null;
+    } else {
+      for (Legend legend : list) {
+        legend.setImage(images.read(legend.getImage_id()));
+      }
+
+      return list;
+    }
+  }
 }

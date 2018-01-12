@@ -10,6 +10,8 @@ $(document).ready(() => {
         events: {
             'click ._myVkPage': 'goToMyVkPage',
             'keyup #search': 'search',
+            'click .alphabet': 'alphabetSort',
+            'click .rating': 'ratingSort',
         },
 
         initialize() {
@@ -36,6 +38,16 @@ $(document).ready(() => {
             let image1 = this.country.attributes.images[0];
             let image2 = this.country.attributes.images[1];
             let legendCollection = this.country.attributes.legends;
+
+            legendCollection = legendCollection.sort(function (a, b)
+            {
+                if (a.name > b.name) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
+
             let verticalImage;
             let horizontalImage;
 
@@ -55,6 +67,42 @@ $(document).ready(() => {
 
             legendCollection.forEach((legend) => {
                document.getElementsByClassName("w3-ul")[0].innerHTML += `
+                <li><a href="legend.html#${legend.id}">${legend.name}</a></li>
+               `;
+            });
+        },
+
+        alphabetSort() {
+            let legendCollection = this.country.attributes.legends;
+            legendCollection = legendCollection.sort(function (a, b)
+            {
+                if (a.name > b.name) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
+
+            document.getElementsByClassName("w3-ul")[0].innerHTML = ``;
+
+            legendCollection.forEach((legend) => {
+                document.getElementsByClassName("w3-ul")[0].innerHTML += `
+                <li><a href="legend.html#${legend.id}">${legend.name}</a></li>
+               `;
+            });
+        },
+
+        ratingSort() {
+            let legendCollection = this.country.attributes.legends;
+            legendCollection = legendCollection.sort(function (a, b)
+            {
+                return a.rating - b.rating;
+            });
+
+            document.getElementsByClassName("w3-ul")[0].innerHTML = ``;
+
+            legendCollection.forEach((legend) => {
+                document.getElementsByClassName("w3-ul")[0].innerHTML += `
                 <li><a href="legend.html#${legend.id}">${legend.name}</a></li>
                `;
             });
@@ -109,6 +157,16 @@ $(document).ready(() => {
           <div class="w3-container">
             <h2 class="w3-center">Legends</h2>
             <input class="w3-input w3-border-black w3-margin w3-round w3-padding" type="text" placeholder="Search.." id="search">
+            
+            <div class="w3-container w3-center w3-margin">
+                <div class="w3-half w3-border-right">
+                    <h4><a style="cursor: pointer; text-decoration: underline" class="alphabet">По алфавиту</a></h4>
+                </div>
+                <div class="w3-half">
+                    <h4><a style="cursor: pointer; text-decoration: underline" class="rating">По рейтингу</a></h4>
+                </div>
+            </div>
+            
             <ul class="w3-ul w3-margin-top" id="myUL"></ul>
           </div>
         

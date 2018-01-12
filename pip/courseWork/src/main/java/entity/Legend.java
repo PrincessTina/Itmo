@@ -12,6 +12,7 @@ public class Legend {
   private int country_id;
   private Integer image_id;
   private String description;
+  private int rating;
   @Transient
   private Image image;
 
@@ -99,5 +100,13 @@ public class Legend {
 
   public void setImage_id(Integer image_id) {
     this.image_id = image_id;
+  }
+
+  public int getRating() {
+    return rating;
+  }
+
+  public void setRating(int rating) {
+    this.rating = rating;
   }
 }

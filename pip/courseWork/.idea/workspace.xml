@@ -2,22 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1449685-279d-4587-b2bb-af2e8d06cd8f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/controllers/data/RatingController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/ejb/data/RatingAccess.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/entity/Rating.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/data/LegendController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/data/LegendController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/data/NoteController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/data/NoteController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ejb/data/CountryAccess.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/data/CountryAccess.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ejb/data/ImageAccess.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/data/ImageAccess.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ejb/data/LegendAccess.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/data/LegendAccess.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ejb/data/NoteAccess.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/data/NoteAccess.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entity/Legend.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Legend.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entity/Note.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Note.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entity/Users.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Users.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/components/LoginWindow.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/components/LoginWindow.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Country.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Country.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Legend.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Legend.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -73,62 +65,62 @@
       <file leaf-file-name="Legend.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/pages/Legend.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="80" column="16" lean-forward="true" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
+            <state relative-caret-position="2835">
+              <caret line="135" column="66" lean-forward="false" selection-start-line="135" selection-start-column="66" selection-end-line="135" selection-end-column="66" />
               <folding>
-                <marker date="1515719621540" expanded="true" signature="1354:1926" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="1435:1445" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="1581:1591" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="1733:1743" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="1890:1900" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="1983:2603" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="2090:2100" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="2242:2252" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="2434:2444" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="2567:2577" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="2771:3333" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="2820:2830" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="2989:2999" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="3130:3140" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="3297:3307" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="3390:4004" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="3519:3529" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="3689:3699" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="3847:3857" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="3968:3978" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="4172:4704" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="4221:4231" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="4369:4379" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="4544:4554" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="4668:4678" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="4761:5358" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="4889:4899" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="5044:5054" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="5173:5183" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="5322:5332" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="5526:6064" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="5607:5617" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="5705:5715" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="5846:5856" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="6028:6038" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="6121:6735" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="6219:6229" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="6402:6412" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="6563:6573" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="6699:6709" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="7009:8502" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="7122:7138" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="7139:8186" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="7212:7227" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="7228:7382" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="7288:7363" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="7480:7499" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="7500:7501" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="7649:7805" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="7964:8171" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="8024:8039" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="8040:8152" ph="..." />
-                <marker date="1515719621540" expanded="true" signature="8332:8487" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="1488:2060" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="1569:1579" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="1715:1725" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="1867:1877" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="2024:2034" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="2117:2737" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="2224:2234" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="2376:2386" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="2568:2578" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="2701:2711" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="2905:3467" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="2954:2964" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="3123:3133" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="3264:3274" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="3431:3441" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="3524:4138" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="3653:3663" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="3823:3833" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="3981:3991" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="4102:4112" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="4306:4838" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="4355:4365" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="4503:4513" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="4678:4688" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="4802:4812" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="4895:5492" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="5023:5033" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="5178:5188" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="5307:5317" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="5456:5466" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="5660:6198" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="5741:5751" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="5839:5849" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="5980:5990" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="6162:6172" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="6255:6869" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="6353:6363" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="6536:6546" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="6697:6707" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="6833:6843" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="7143:8640" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="7256:7272" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="7273:8324" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="7346:7361" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="7362:7516" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="7422:7497" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="7614:7633" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="7634:7635" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="7783:7943" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="8102:8309" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="8162:8177" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="8178:8290" ph="..." />
+                <marker date="1515722831414" expanded="true" signature="8470:8625" ph="..." />
               </folding>
             </state>
           </provider>
@@ -137,54 +129,79 @@
       <file leaf-file-name="LegendController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/data/LegendController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="45" column="118" lean-forward="false" selection-start-line="45" selection-start-column="118" selection-end-line="45" selection-end-column="118" />
+            <state relative-caret-position="84">
+              <caret line="49" column="45" lean-forward="false" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
               <folding>
                 <element signature="method#doPost#0;class#LegendController#0" expanded="false" />
-                <element signature="method#doGet#0;class#LegendController#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LegendAccess.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Top.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/pages/Top.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="56" column="68" lean-forward="false" selection-start-line="56" selection-start-column="68" selection-end-line="56" selection-end-column="68" />
+              <folding>
+                <marker date="1515727776012" expanded="true" signature="1160:1573" ph="..." />
+                <marker date="1515727776012" expanded="true" signature="1276:1286" ph="..." />
+                <marker date="1515727776012" expanded="true" signature="1401:1573" ph="..." />
+                <marker date="1515727776012" expanded="true" signature="2006:2069" ph="..." />
+                <marker date="1515727776012" expanded="true" signature="2006:2419" ph="..." />
+                <marker date="1515727776012" expanded="true" signature="2006:2637" ph="..." />
+                <marker date="1515727776012" expanded="true" signature="2122:2132" ph="..." />
+                <marker date="1515727776012" expanded="false" signature="2792:2825" ph="..." />
+                <marker date="1515727776012" expanded="true" signature="2826:2979" ph="..." />
+                <marker date="1515727776012" expanded="true" signature="3123:3278" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageAccess.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/ImageAccess.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+              <folding>
+                <element signature="method#readInitImages#0;class#ImageAccess#0" expanded="false" />
+                <element signature="method#read#0;class#ImageAccess#0" expanded="false" />
+                <element signature="method#create#0;class#ImageAccess#0" expanded="false" />
+                <element signature="docComment;method#findImage#0;class#ImageAccess#0" expanded="false" />
+                <element signature="method#findImage#0;class#ImageAccess#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NoteAccess.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/NoteAccess.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#addNewNote#0;class#NoteAccess#0" expanded="false" />
+                <element signature="method#getNewImageId#0;class#NoteAccess#0" expanded="false" />
+                <element signature="method#getAllNotes#0;class#NoteAccess#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LegendAccess.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/LegendAccess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="61" column="29" lean-forward="false" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
+            <state relative-caret-position="356">
+              <caret line="71" column="55" lean-forward="false" selection-start-line="71" selection-start-column="55" selection-end-line="71" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#getCharacters#0;class#LegendAccess#0" expanded="false" />
                 <element signature="method#find#0;class#LegendAccess#0" expanded="false" />
                 <element signature="method#create#0;class#LegendAccess#0" expanded="false" />
                 <element signature="method#read#0;class#LegendAccess#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Country.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/pages/Country.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="97" column="47" lean-forward="false" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
-              <folding>
-                <element signature="e#818#2039#0" expanded="false" />
-                <element signature="e#2059#2565#0" expanded="false" />
-                <marker date="1515709140966" expanded="true" signature="2725:4448" ph="..." />
-                <marker date="1515709140966" expanded="true" signature="2870:2902" ph="..." />
-                <marker date="1515709140966" expanded="true" signature="2913:3201" ph="..." />
-                <marker date="1515709140966" expanded="true" signature="3095:3181" ph="..." />
-                <marker date="1515709140966" expanded="true" signature="3255:3271" ph="..." />
-                <marker date="1515709140966" expanded="true" signature="3272:3830" ph="..." />
-                <marker date="1515709140966" expanded="true" signature="3332:3813" ph="..." />
-                <marker date="1515709140966" expanded="true" signature="3403:3588" ph="..." />
-                <marker date="1515709140966" expanded="true" signature="3502:3565" ph="..." />
-                <marker date="1515709140966" expanded="true" signature="3658:3792" ph="..." />
-                <marker date="1515709140966" expanded="true" signature="3765:3769" ph="..." />
-                <marker date="1515709140966" expanded="true" signature="3878:4132" ph="..." />
-                <marker date="1515709140966" expanded="true" signature="4110:4115" ph="..." />
-                <marker date="1515709140966" expanded="true" signature="4278:4433" ph="..." />
+                <element signature="method#getTop#0;class#LegendAccess#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -193,9 +210,13 @@
       <file leaf-file-name="Legend.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/entity/Legend.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="31" column="28" lean-forward="false" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-              <folding />
+            <state relative-caret-position="504">
+              <caret line="26" column="2" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+              <folding>
+                <element signature="e#101#104#0" expanded="false" />
+                <element signature="method#Legend#0;class#Legend#0" expanded="false" />
+                <element signature="method#Legend#1;class#Legend#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -218,6 +239,7 @@
       <find>w3-opacity</find>
       <find>w3-opacity-min</find>
       <find>w3-opacity-max</find>
+      <find>country_id</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -591,8 +613,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/controllers/data/CharacterController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/data/EventController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/data/PhraseController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/data/RatingController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/context/ContextAccess.java" />
@@ -613,7 +633,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/news.html" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/notification/NotificationController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ejb/data/ImageAccess.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/country.html" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/data/CountryController.java" />
         <option value="$PROJECT_DIR$/src/main/java/entity/Country.java" />
@@ -626,22 +645,25 @@
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Admin.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Index.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/pages/News.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Country.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/legend.html" />
         <option value="$PROJECT_DIR$/src/main/java/entity/Users.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/data/LegendController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/data/CountryAccess.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ejb/data/LegendAccess.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entity/Legend.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js" />
         <option value="$PROJECT_DIR$/src/main/java/entity/Note.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/data/NoteController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js" />
-        <option value="$PROJECT_DIR$/src/main/java/ejb/data/NoteAccess.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/LoginWindow.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Legend.js" />
         <option value="$PROJECT_DIR$/src/main/java/entity/Rating.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/entity/Legend.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Legend.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Country.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/top.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/data/LegendController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ejb/data/LegendAccess.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ejb/data/ImageAccess.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ejb/data/NoteAccess.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Top.js" />
       </list>
     </option>
   </component>
@@ -982,7 +1004,7 @@
       <option name="presentableId" value="Default" />
       <updated>1515544448593</updated>
       <workItem from="1515544450436" duration="6930000" />
-      <workItem from="1515553252118" duration="64906000" />
+      <workItem from="1515553252118" duration="72088000" />
     </task>
     <servers />
   </component>
@@ -1019,7 +1041,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71836000" />
+    <option name="totallyTimeSpent" value="79018000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1935" height="1038" extended-state="0" />
@@ -1042,7 +1064,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.49811727" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32949308" sideWeight="0.49811727" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25336203" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1072,56 +1094,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://JavaScript-modules-diagram/C:/Users/krist/Documents/itmo/pip/courseWork/src/main/java">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JavaScript-modules-diagram</ID>
-          <OriginalElement>$PROJECT_DIR$/src/main/java</OriginalElement>
-          <nodes />
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="694.0" y="259.5" />
-          <SelectedNodes />
-          <Categories>
-            <Category>All</Category>
-          </Categories>
-          <VISIBILITY>Details</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/controllers.data.ArtifactController">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>controllers.data.ArtifactController</OriginalElement>
-          <nodes>
-            <node x="" y="">controllers.data.ImageController</node>
-            <node x="" y="">controllers.data.UsersController</node>
-            <node x="" y="">controllers.data.LegendController</node>
-            <node x="" y="">controllers.data.CountryController</node>
-            <node x="" y="">controllers.data.CharacterController</node>
-            <node x="" y="">controllers.data.ArtifactController</node>
-            <node x="" y="">controllers.data.PhraseController</node>
-            <node x="" y="">controllers.data.AwardController</node>
-            <node x="" y="">controllers.data.EventController</node>
-            <node x="" y="">controllers.data.RatingController</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.7951834862385321" x="758.9126045572541" y="505.17248341505626" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-            <Category>Properties</Category>
-            <Category>Inner Classes</Category>
-          </Categories>
-          <SCOPE>Project Files</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JAVA/controllers.context.ContextController">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1379,20 +1351,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/ImageAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="63" column="3" lean-forward="true" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
-          <folding>
-            <element signature="method#readInitImages#0;class#ImageAccess#0" expanded="false" />
-            <element signature="method#read#0;class#ImageAccess#0" expanded="false" />
-            <element signature="method#create#0;class#ImageAccess#0" expanded="false" />
-            <element signature="docComment;method#findImage#0;class#ImageAccess#0" expanded="false" />
-            <element signature="method#findImage#0;class#ImageAccess#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entity/Country.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1433,14 +1391,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="30" column="7" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entity/Users.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -1468,58 +1418,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Legend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="31" column="28" lean-forward="false" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/pages/Country.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="97" column="47" lean-forward="false" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
-          <folding>
-            <element signature="e#818#2039#0" expanded="false" />
-            <element signature="e#2059#2565#0" expanded="false" />
-            <marker date="1515709140966" expanded="true" signature="2725:4448" ph="..." />
-            <marker date="1515709140966" expanded="true" signature="2870:2902" ph="..." />
-            <marker date="1515709140966" expanded="true" signature="2913:3201" ph="..." />
-            <marker date="1515709140966" expanded="true" signature="3095:3181" ph="..." />
-            <marker date="1515709140966" expanded="true" signature="3255:3271" ph="..." />
-            <marker date="1515709140966" expanded="true" signature="3272:3830" ph="..." />
-            <marker date="1515709140966" expanded="true" signature="3332:3813" ph="..." />
-            <marker date="1515709140966" expanded="true" signature="3403:3588" ph="..." />
-            <marker date="1515709140966" expanded="true" signature="3502:3565" ph="..." />
-            <marker date="1515709140966" expanded="true" signature="3658:3792" ph="..." />
-            <marker date="1515709140966" expanded="true" signature="3765:3769" ph="..." />
-            <marker date="1515709140966" expanded="true" signature="3878:4132" ph="..." />
-            <marker date="1515709140966" expanded="true" signature="4110:4115" ph="..." />
-            <marker date="1515709140966" expanded="true" signature="4278:4433" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/PhraseAccess.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Note.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-          <folding>
-            <element signature="e#209#212#0" expanded="false" />
-            <element signature="method#Note#0;class#Note#0" expanded="false" />
-            <element signature="method#Note#1;class#Note#0" expanded="false" />
-            <element signature="e#1058#1059#0" expanded="true" />
-            <element signature="e#1080#1081#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1582,44 +1485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="97" column="87" lean-forward="false" selection-start-line="97" selection-start-column="87" selection-end-line="97" selection-end-column="87" />
-          <folding>
-            <marker date="1515714213681" expanded="true" signature="2815:5365" ph="..." />
-            <marker date="1515714213681" expanded="true" signature="2898:5348" ph="..." />
-            <marker date="1515714213681" expanded="true" signature="3027:3123" ph="..." />
-            <marker date="1515714213681" expanded="true" signature="3289:3912" ph="..." />
-            <marker date="1515714213681" expanded="true" signature="3500:3891" ph="..." />
-            <marker date="1515714213681" expanded="false" signature="4197:4211" ph="..." />
-            <marker date="1515714213681" expanded="true" signature="4212:4587" ph="..." />
-            <marker date="1515714213681" expanded="false" signature="4677:4721" ph="..." />
-            <marker date="1515714213681" expanded="true" signature="4722:5314" ph="..." />
-            <marker date="1515714213681" expanded="false" signature="4842:4884" ph="..." />
-            <marker date="1515714213681" expanded="false" signature="4939:4954" ph="..." />
-            <marker date="1515714213681" expanded="true" signature="5054:5293" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/pages/News.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="70" column="40" lean-forward="false" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
-          <folding>
-            <marker date="1515708762792" expanded="true" signature="1101:1368" ph="..." />
-            <marker date="1515708762792" expanded="true" signature="1215:1225" ph="..." />
-            <marker date="1515708762792" expanded="true" signature="1796:2063" ph="..." />
-            <marker date="1515708762792" expanded="true" signature="1910:1920" ph="..." />
-            <marker date="1515708762792" expanded="true" signature="2396:2429" ph="..." />
-            <marker date="1515708762792" expanded="true" signature="2430:2574" ph="..." />
-            <marker date="1515708762792" expanded="true" signature="2553:2559" ph="..." />
-            <marker date="1515708762792" expanded="true" signature="2718:2873" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -1644,17 +1509,6 @@
             <marker date="1515717729500" expanded="false" signature="5532:5560" ph="..." />
             <marker date="1515717729500" expanded="false" signature="5717:5780" ph="..." />
             <marker date="1515717729500" expanded="true" signature="5781:5977" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/data/LegendController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="45" column="118" lean-forward="false" selection-start-line="45" selection-start-column="118" selection-end-line="45" selection-end-column="118" />
-          <folding>
-            <element signature="method#doPost#0;class#LegendController#0" expanded="false" />
-            <element signature="method#doGet#0;class#LegendController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1708,9 +1562,147 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/pages/Country.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="34" column="16" lean-forward="false" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+          <folding>
+            <element signature="e#908#2373#0" expanded="false" />
+            <element signature="e#2399#3033#0" expanded="false" />
+            <element signature="e#3057#3592#0" expanded="false" />
+            <element signature="e#3612#4118#0" expanded="false" />
+            <element signature="e#4144#4212#0" expanded="false" />
+            <marker date="1515724212096" expanded="true" signature="4278:6475" ph="..." />
+            <marker date="1515724212096" expanded="true" signature="4423:4455" ph="..." />
+            <marker date="1515724212096" expanded="true" signature="4466:4754" ph="..." />
+            <marker date="1515724212096" expanded="true" signature="4648:4734" ph="..." />
+            <marker date="1515724212096" expanded="true" signature="4808:4824" ph="..." />
+            <marker date="1515724212096" expanded="true" signature="4825:5383" ph="..." />
+            <marker date="1515724212096" expanded="true" signature="4885:5366" ph="..." />
+            <marker date="1515724212096" expanded="true" signature="4956:5141" ph="..." />
+            <marker date="1515724212096" expanded="true" signature="5055:5118" ph="..." />
+            <marker date="1515724212096" expanded="true" signature="5211:5345" ph="..." />
+            <marker date="1515724212096" expanded="true" signature="5318:5322" ph="..." />
+            <marker date="1515724212096" expanded="true" signature="5431:6159" ph="..." />
+            <marker date="1515724212096" expanded="true" signature="5680:6069" ph="..." />
+            <marker date="1515724212096" expanded="true" signature="5734:5874" ph="..." />
+            <marker date="1515724212096" expanded="true" signature="5770:5813" ph="..." />
+            <marker date="1515724212096" expanded="true" signature="5912:6050" ph="..." />
+            <marker date="1515724212096" expanded="true" signature="5948:5991" ph="..." />
+            <marker date="1515724212096" expanded="true" signature="6137:6142" ph="..." />
+            <marker date="1515724212096" expanded="true" signature="6305:6460" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Legend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="26" column="2" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+          <folding>
+            <element signature="e#101#104#0" expanded="false" />
+            <element signature="method#Legend#0;class#Legend#0" expanded="false" />
+            <element signature="method#Legend#1;class#Legend#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="99" column="31" lean-forward="false" selection-start-line="99" selection-start-column="31" selection-end-line="99" selection-end-column="31" />
+          <folding>
+            <element signature="e#832#1294#0" expanded="false" />
+            <element signature="e#1330#2686#0" expanded="false" />
+            <marker date="1515725279723" expanded="true" signature="2771:5328" ph="..." />
+            <marker date="1515725279723" expanded="true" signature="2854:5311" ph="..." />
+            <marker date="1515725279723" expanded="true" signature="2983:3079" ph="..." />
+            <marker date="1515725279723" expanded="true" signature="3245:3868" ph="..." />
+            <marker date="1515725279723" expanded="true" signature="3456:3847" ph="..." />
+            <marker date="1515725279723" expanded="false" signature="4160:4174" ph="..." />
+            <marker date="1515725279723" expanded="true" signature="4175:4550" ph="..." />
+            <marker date="1515725279723" expanded="false" signature="4640:4684" ph="..." />
+            <marker date="1515725279723" expanded="true" signature="4685:5277" ph="..." />
+            <marker date="1515725279723" expanded="false" signature="4805:4847" ph="..." />
+            <marker date="1515725279723" expanded="false" signature="4902:4917" ph="..." />
+            <marker date="1515725279723" expanded="true" signature="5017:5256" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/top.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/pages/News.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="82" column="3" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="82" selection-end-column="3" />
+          <folding>
+            <marker date="1515708762792" expanded="true" signature="1101:1368" ph="..." />
+            <marker date="1515708762792" expanded="true" signature="1215:1225" ph="..." />
+            <marker date="1515708762792" expanded="true" signature="1796:2063" ph="..." />
+            <marker date="1515708762792" expanded="true" signature="1910:1920" ph="..." />
+            <marker date="1515708762792" expanded="true" signature="2396:2429" ph="..." />
+            <marker date="1515708762792" expanded="true" signature="2430:2574" ph="..." />
+            <marker date="1515708762792" expanded="true" signature="2553:2559" ph="..." />
+            <marker date="1515708762792" expanded="true" signature="2718:2873" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Note.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <folding>
+            <element signature="e#209#212#0" expanded="false" />
+            <element signature="method#Note#0;class#Note#0" expanded="false" />
+            <element signature="method#Note#1;class#Note#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/data/LegendController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="49" column="45" lean-forward="false" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
+          <folding>
+            <element signature="method#doPost#0;class#LegendController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/LegendAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="71" column="55" lean-forward="false" selection-start-line="71" selection-start-column="55" selection-end-line="71" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getCharacters#0;class#LegendAccess#0" expanded="false" />
+            <element signature="method#find#0;class#LegendAccess#0" expanded="false" />
+            <element signature="method#create#0;class#LegendAccess#0" expanded="false" />
+            <element signature="method#read#0;class#LegendAccess#0" expanded="false" />
+            <element signature="method#getTop#0;class#LegendAccess#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/data/NoteController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
+        <state relative-caret-position="510">
           <caret line="47" column="41" lean-forward="true" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1719,10 +1711,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/pages/Legend.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2835">
+          <caret line="135" column="66" lean-forward="false" selection-start-line="135" selection-start-column="66" selection-end-line="135" selection-end-column="66" />
+          <folding>
+            <marker date="1515722831414" expanded="true" signature="1488:2060" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="1569:1579" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="1715:1725" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="1867:1877" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="2024:2034" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="2117:2737" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="2224:2234" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="2376:2386" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="2568:2578" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="2701:2711" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="2905:3467" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="2954:2964" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="3123:3133" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="3264:3274" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="3431:3441" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="3524:4138" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="3653:3663" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="3823:3833" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="3981:3991" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="4102:4112" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="4306:4838" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="4355:4365" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="4503:4513" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="4678:4688" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="4802:4812" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="4895:5492" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="5023:5033" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="5178:5188" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="5307:5317" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="5456:5466" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="5660:6198" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="5741:5751" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="5839:5849" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="5980:5990" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="6162:6172" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="6255:6869" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="6353:6363" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="6536:6546" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="6697:6707" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="6833:6843" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="7143:8640" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="7256:7272" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="7273:8324" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="7346:7361" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="7362:7516" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="7422:7497" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="7614:7633" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="7634:7635" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="7783:7943" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="8102:8309" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="8162:8177" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="8178:8290" ph="..." />
+            <marker date="1515722831414" expanded="true" signature="8470:8625" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/NoteAccess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        <state relative-caret-position="336">
+          <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#addNewNote#0;class#NoteAccess#0" expanded="false" />
@@ -1732,78 +1786,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/pages/Legend.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/ImageAccess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="80" column="16" lean-forward="true" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
+        <state relative-caret-position="84">
+          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
           <folding>
-            <marker date="1515719621540" expanded="true" signature="1354:1926" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="1435:1445" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="1581:1591" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="1733:1743" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="1890:1900" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="1983:2603" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="2090:2100" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="2242:2252" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="2434:2444" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="2567:2577" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="2771:3333" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="2820:2830" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="2989:2999" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="3130:3140" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="3297:3307" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="3390:4004" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="3519:3529" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="3689:3699" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="3847:3857" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="3968:3978" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="4172:4704" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="4221:4231" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="4369:4379" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="4544:4554" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="4668:4678" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="4761:5358" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="4889:4899" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="5044:5054" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="5173:5183" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="5322:5332" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="5526:6064" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="5607:5617" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="5705:5715" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="5846:5856" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="6028:6038" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="6121:6735" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="6219:6229" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="6402:6412" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="6563:6573" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="6699:6709" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="7009:8502" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="7122:7138" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="7139:8186" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="7212:7227" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="7228:7382" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="7288:7363" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="7480:7499" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="7500:7501" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="7649:7805" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="7964:8171" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="8024:8039" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="8040:8152" ph="..." />
-            <marker date="1515719621540" expanded="true" signature="8332:8487" ph="..." />
+            <element signature="method#readInitImages#0;class#ImageAccess#0" expanded="false" />
+            <element signature="method#read#0;class#ImageAccess#0" expanded="false" />
+            <element signature="method#create#0;class#ImageAccess#0" expanded="false" />
+            <element signature="docComment;method#findImage#0;class#ImageAccess#0" expanded="false" />
+            <element signature="method#findImage#0;class#ImageAccess#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/LegendAccess.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/pages/Top.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="61" column="29" lean-forward="false" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
+        <state relative-caret-position="357">
+          <caret line="56" column="68" lean-forward="false" selection-start-line="56" selection-start-column="68" selection-end-line="56" selection-end-column="68" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getCharacters#0;class#LegendAccess#0" expanded="false" />
-            <element signature="method#find#0;class#LegendAccess#0" expanded="false" />
-            <element signature="method#create#0;class#LegendAccess#0" expanded="false" />
-            <element signature="method#read#0;class#LegendAccess#0" expanded="false" />
+            <marker date="1515727776012" expanded="true" signature="1160:1573" ph="..." />
+            <marker date="1515727776012" expanded="true" signature="1276:1286" ph="..." />
+            <marker date="1515727776012" expanded="true" signature="1401:1573" ph="..." />
+            <marker date="1515727776012" expanded="true" signature="2006:2069" ph="..." />
+            <marker date="1515727776012" expanded="true" signature="2006:2419" ph="..." />
+            <marker date="1515727776012" expanded="true" signature="2006:2637" ph="..." />
+            <marker date="1515727776012" expanded="true" signature="2122:2132" ph="..." />
+            <marker date="1515727776012" expanded="false" signature="2792:2825" ph="..." />
+            <marker date="1515727776012" expanded="true" signature="2826:2979" ph="..." />
+            <marker date="1515727776012" expanded="true" signature="3123:3278" ph="..." />
           </folding>
         </state>
       </provider>

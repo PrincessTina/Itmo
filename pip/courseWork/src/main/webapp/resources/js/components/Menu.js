@@ -76,8 +76,6 @@ $(document).ready(() => {
                     <a href="admin.html#news" class="w3-bar-item w3-button">Admin</a>   
                     `);
                 }
-
-                new NotificationChecker();
             }
         },
 
@@ -99,7 +97,7 @@ $(document).ready(() => {
                 </div>
               </div>
               
-              <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TOP-10</a>
+              <a href="top.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TOP-10</a>
               <a href="news.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">NEWS</a>
               
               <div class="registrationForm" style="display: block">

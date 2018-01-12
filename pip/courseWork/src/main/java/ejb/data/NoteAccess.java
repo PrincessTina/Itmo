@@ -10,7 +10,8 @@ import java.sql.Date;
 import java.util.Calendar;
 import java.util.List;
 
-@Stateful
+@Stateless
+@LocalBean
 @TransactionManagement(TransactionManagementType.BEAN)
 public class NoteAccess extends Access {
   @EJB

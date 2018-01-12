@@ -34,9 +34,11 @@ $(document).ready(() => {
             let description = this.legend.attributes.description;
             let link = this.legend.attributes.image.link;
             let country_id = this.legend.attributes.country_id;
+            let rating = this.legend.attributes.rating;
 
             document.getElementsByClassName("_name")[0].innerHTML = "❝" + name + "❞";
             document.getElementsByClassName("_description")[0].innerHTML = description;
+            document.getElementsByClassName("_rating")[0].innerHTML = rating;
 
             if (country_id === 1) {
                 document.getElementById("myGrid").innerHTML = `
@@ -130,8 +132,8 @@ $(document).ready(() => {
             
             <!-- Футер с лайками -->
             <footer class="w3-container w3-padding-64 w3-right w3-opacity w3-pink w3-large">
-              <p class="w3-medium w3-text-black">19</p>
-              <i class="fa fa-heart w3-hover-grayscale w3-text-black"></i>   
+              <p class="w3-medium w3-text-white _rating"></p>
+              <i class="fa fa-heart w3-hover-opacity w3-text-white"></i>   
             </footer>
             
             <!-- Legend description -->

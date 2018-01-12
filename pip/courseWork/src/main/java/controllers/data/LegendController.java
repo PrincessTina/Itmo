@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(name = "legends", urlPatterns = {"/legends"})
 public class LegendController extends HttpServlet {
@@ -45,14 +46,24 @@ public class LegendController extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     try {
-      int id = Integer.parseInt(request.getParameter("id"));
-      Legend legend = legends.read(id);
+      if (request.getParameter("id").equals("all")) {
+        List<Legend> array = legends.getTop();
 
-      String answer = new Gson().toJson(legend);
+        String answer = new Gson().toJson(array);
 
-      response.setContentType("application/json");
-      response.setCharacterEncoding("UTF-8");
-      response.getWriter().write(answer);
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        response.getWriter().write(answer);
+      } else {
+        int id = Integer.parseInt(request.getParameter("id"));
+        Legend legend = legends.read(id);
+
+        String answer = new Gson().toJson(legend);
+
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        response.getWriter().write(answer);
+      }
     } catch (Exception ex) {
       throw new ServletException(ex.getMessage());
     }
