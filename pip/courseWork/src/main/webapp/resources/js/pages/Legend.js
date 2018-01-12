@@ -11,6 +11,13 @@ $(document).ready(() => {
         urlRoot: 'legends#',
     });
 
+    var CharacterModel = Backbone.Model.extend();
+
+    var CharacterCollection = Backbone.Collection.extend({
+        model: CharacterModel,
+        url: 'characters?action=get'
+    });
+
     window.Legend = Backbone.View.extend({
         el: $('body'),
         menu: null,
@@ -23,6 +30,7 @@ $(document).ready(() => {
         initialize() {
             _.bindAll(this, 'render');
 
+            this.collection = new CharacterCollection();
             this.legend = new LegendModel();
             this.user = new UserModel();
             this.render();
@@ -41,6 +49,16 @@ $(document).ready(() => {
                             throw "Error in getting news";
                         }
                     });
+
+                    this.collection.fetch({
+                        success: () => {
+                            this.searchCharacters();
+                        },
+                        fail: () => {
+                            throw "Error in slider";
+                        }
+                    });
+
                 },
                 fail: () => {
                     throw "Error in getting news";
@@ -61,6 +79,25 @@ $(document).ready(() => {
             document.getElementsByClassName("_like")[0].disabled = true;
             document.getElementsByClassName("_like")[0].classList.remove("w3-text-white");
             document.getElementsByClassName("_like")[0].classList.add("w3-text-black");
+        },
+
+        searchCharacters() {
+            this.collection.models.forEach((character) => {
+                let name = character.attributes.name;
+                let description = character.attributes.description;
+                let type = character.attributes.type;
+
+                let index = document.getElementsByClassName("_description")[0].innerHTML.lastIndexOf(name);
+                let length = name.length;
+
+                let part = document.getElementsByClassName("_description")[0].innerHTML.substr(0, index);
+                part += `<a class="w3-text-aqua" title="${type}\n${description}">`;
+                part += document.getElementsByClassName("_description")[0].innerHTML.substr(index, length);
+                part += `</a>`;
+                part += document.getElementsByClassName("_description")[0].innerHTML.substr(index + length);
+
+                document.getElementsByClassName("_description")[0].innerHTML = part;
+            });
         },
 
         checkLike() {

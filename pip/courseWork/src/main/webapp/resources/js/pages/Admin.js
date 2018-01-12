@@ -7,6 +7,10 @@ $(document).ready(() => {
         urlRoot: 'legends'
     });
 
+    var CharacterModel = Backbone.Model.extend({
+        urlRoot: 'characters'
+    });
+
     window.Admin = Backbone.View.extend({
         el: $('body'),
 
@@ -15,11 +19,13 @@ $(document).ready(() => {
             'click .open': 'w3_open',
             'click .send_new': 'sendNew',
             'click .send_legend': 'sendLegend',
+            'click .send_character': 'sendCharacter',
             'click .gCross': 'closeGNotice',
             'click .bCross': 'closeBNotice',
             'click .clear': 'clear',
             'click .news': 'checkNewsForm',
             'click .legend': 'checkLegendForm',
+            'click .character': 'checkCharacterForm',
         },
 
         initialize() {
@@ -108,6 +114,66 @@ $(document).ready(() => {
                         </p>
                     </div>
             `;
+        },
+
+        checkCharacterForm() {
+            document.getElementsByClassName("w3-main")[0].innerHTML = `
+                    <div class="w3-container" id="news" style="margin-top:75px">
+                        <h1 class="w3-xxxlarge"><b>Character</b></h1>
+                        <hr style="width:50px;border:5px solid" class="w3-round">
+                    </div>
+                
+                    <div class="w3-container w3-purple">
+                        <h2>Input Form</h2>
+                    </div>
+                
+                    <div class="w3-container w3-card-4">
+                        <br/>
+                        <p>
+                            <label class="w3-text-grey">Name</label>
+                            <input class="w3-input w3-border _name" type="text" required="">
+                        </p> <br/>
+                        <p>
+                            <label class="w3-text-grey">Type</label>
+                            <input class="w3-input w3-border _type" type="text" required="">
+                        </p> <br/>
+                        <p>
+                            <label class="w3-text-grey">Description <i>(Please, write english)</i></label>
+                            <textarea class="w3-input w3-border _description" style="height: 200px;resize:none;"></textarea>
+                        </p> <br/>
+                
+                        <p>
+                            <button type="button" class="w3-btn w3-padding w3-purple send_character" style="width:120px">Send &nbsp; ❯</button>
+                            <button type="button" class="w3-btn w3-right w3-padding w3-black clear" style="width:120px">Clear</button>
+                        </p>
+                    </div>
+            `;
+        },
+
+        sendCharacter() {
+            let name = document.getElementsByClassName("_name")[0].value;
+            let type = document.getElementsByClassName("_type")[0].value;
+            let description = document.getElementsByClassName("_description")[0].value;
+
+            let character = new CharacterModel({
+                name: name,
+                type: type,
+                description: description,
+            });
+
+            let result = character.save();
+
+            setTimeout(function () {
+                if (result.statusText === "OK") {
+                    document.getElementsByClassName("gNotice")[0].style.display = "block";
+                } else if (result.statusText === "Internal Server Error") {
+                    document.getElementsByClassName("bNotice")[0].style.display = "block";
+                }
+            }, 200);
+
+            setTimeout(function () {
+                document.getElementsByClassName("gNotice")[0].style.display = "none";
+            }, 2*1000);
         },
 
         sendLegend() {
@@ -214,7 +280,8 @@ $(document).ready(() => {
                 <div class="w3-bar-block w3-margin">
                     <a href="index.html" class="close w3-border-bottom w3-border-black w3-bar-item w3-button w3-hover-white">Home</a>
                     <a href="#news" class="news close w3-border-bottom w3-border-black w3-bar-item w3-button w3-hover-white">News</a>
-                    <a href="#legend" class="legend close w3-bar-item w3-button w3-hover-white">Legend</a>
+                    <a href="#legend" class="legend close w3-border-bottom w3-bar-item w3-button w3-hover-white">Legend</a>
+                    <a href="#character" class="character close w3-bar-item w3-button w3-hover-white">Character</a>
                 </div>
             </nav>
             

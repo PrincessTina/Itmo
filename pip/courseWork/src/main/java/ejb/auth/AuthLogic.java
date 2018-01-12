@@ -23,8 +23,6 @@ import java.util.Arrays;
 import java.util.Random;
 
 @Stateless
-@LocalBean
-@TransactionManagement(TransactionManagementType.BEAN)
 public class AuthLogic {
 
   @EJB

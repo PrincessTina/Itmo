@@ -2,6 +2,9 @@ package controllers.data;
 
 import com.google.gson.Gson;
 import ejb.data.CharacterAccess;
+import ejb.data.Controller;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -17,34 +20,33 @@ public class CharacterController extends HttpServlet {
   @EJB
   private CharacterAccess characters;
 
+  @EJB
+  private Controller controller;
+
+  @Override
+  protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    try {
+      JSONObject jsonObject = controller.getAnswerFromPost(request);
+      String description = jsonObject.getString("description");
+      String type = jsonObject.getString("type");
+      String name = jsonObject.getString("name");
+
+      characters.create(name, type, description);
+    } catch (JSONException e) {
+      throw new ServletException("Error parsing JSON request string ");
+    } catch (Exception ex) {
+      throw new ServletException(ex.getMessage());
+    }
+  }
+
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     try {
-      String action = request.getParameter("action");
-      String name = request.getParameter("name");
-      String answer;
+      String answer = new Gson().toJson(characters.getAll());
 
-      if (action == null) {
-        throw new ServletException("Action is null");
-      } else if (action.equals("character")) {
-        answer = new Gson().toJson(characters.find(name));
-
-        response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
-        response.getWriter().write(answer);
-      } else if (action.equals("artifacts")) {
-        answer = new Gson().toJson(characters.getArtifacts(name));
-
-        response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
-        response.getWriter().write(answer);
-      } else if(action.equals("legends")) {
-        answer = new Gson().toJson(characters.getLegends(name));
-
-        response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
-        response.getWriter().write(answer);
-      }
+      response.setContentType("application/json");
+      response.setCharacterEncoding("UTF-8");
+      response.getWriter().write(answer);
     } catch (Exception ex) {
       throw new ServletException(ex.getMessage());
     }

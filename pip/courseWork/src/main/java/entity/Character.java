@@ -12,9 +12,6 @@ public class Character {
   private String name;
   private String type;
   private String description;
-  private int image_id;
-  private int father_id;
-  private int mother_id;
 
   @ManyToMany(fetch = FetchType.EAGER)
   @JoinTable(
@@ -32,13 +29,10 @@ public class Character {
   )
   private List<Legend> legends;
 
-  public Character(String name, String type, String description, int image_id, int father_id, int mother_id) {
+  public Character(String name, String type, String description) {
     this.name = name;
     this.type = type;
     this.description = description;
-    this.image_id = image_id;
-    this.father_id = father_id;
-    this.mother_id = mother_id;
   }
 
   public Character() {}
@@ -73,30 +67,6 @@ public class Character {
 
   public void setDescription(String description) {
     this.description = description;
-  }
-
-  public int getImage_id() {
-    return image_id;
-  }
-
-  public void setImage_id(int image_id) {
-    this.image_id = image_id;
-  }
-
-  public int getFather_id() {
-    return father_id;
-  }
-
-  public void setFather_id(int father_id) {
-    this.father_id = father_id;
-  }
-
-  public int getMother_id() {
-    return mother_id;
-  }
-
-  public void setMother_id(int mother_id) {
-    this.mother_id = mother_id;
   }
 
   public List<Artifact> getArtifacts() {

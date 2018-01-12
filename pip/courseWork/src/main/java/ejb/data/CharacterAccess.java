@@ -45,4 +45,29 @@ public class CharacterAccess extends Access {
       return list.get(0);
     }
   }
+
+  public void create(String name, String type, String description) throws ServletException {
+    EntityManager entityManager = generateEntityManager();
+    Character row = new Character(name, type, description);
+
+    entityManager.getTransaction().begin();
+    entityManager.persist(row);
+    entityManager.getTransaction().commit();
+    entityManager.close();
+  }
+
+  public List<Character> getAll() {
+    EntityManager entityManager = generateEntityManager();
+
+    Query query = entityManager.createQuery("Select e from Character e");
+    List<Character> list = query.getResultList();
+
+    entityManager.close();
+
+    if (list.size() == 0) {
+      return null;
+    } else {
+      return list;
+    }
+  }
 }
