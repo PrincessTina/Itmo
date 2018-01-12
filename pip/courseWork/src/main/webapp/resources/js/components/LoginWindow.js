@@ -112,7 +112,7 @@ $(document).ready(() => {
                         <img class="cross" src="resources/images/cross.png" alt="" style="margin-top: 0; width: 17px; height: 17px;">
                     </div>
                     <div class="w3-center w3-border-bottom w3-border-lime">
-                        <h5 class="w3-text-white">Вход</h5>
+                        <h5 class="w3-text-white">Login</h5>
                     </div>
                 </div>
  	            <div class="w3-section">
@@ -124,11 +124,11 @@ $(document).ready(() => {
     	            <input class="_password" type="password" placeholder="Password" style="width: 60%">   
 	            </div>
 	            
-	            <button class="w3-button w3-lime w3-center loginButton" style="width: 59%; margin-left: 2%;">Войти</button>
+	            <button class="w3-button w3-lime w3-center loginButton" style="width: 59%; margin-left: 2%;">Login</button>
 	            
-	            <footer class="w3-container w3-white w3-padding w3-large" style="margin-left: 1%;margin-top: 2%;opacity: 0.9;">
-                  <i class="fa fa-instagram w3-hover-opacity _in"></i>
-                  <i class="fa fa-vk w3-hover-opacity _vk"></i>      
+	            <footer class="w3-container w3-padding w3-large" style="margin-left: 1%;margin-top: 2%;opacity: 0.9;">
+                  <i class="fa fa-instagram w3-text-white w3-hover-opacity _in"></i>
+                  <i class="fa fa-vk w3-text-white w3-hover-opacity _vk"></i>      
                 </footer>
             </div>
         </div>

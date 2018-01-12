@@ -8,14 +8,12 @@
         <class>entity.Phrase</class>
         <class>entity.Award</class>
         <class>entity.Artifact</class>
-        <class>entity.Author</class>
         <class>entity.Character</class>
         <class>entity.Country</class>
         <class>entity.Event</class>
         <class>entity.Image</class>
         <class>entity.Legend</class>
         <class>entity.Note</class>
-        <class>entity.Rating</class>
         <class>entity.Users</class>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>

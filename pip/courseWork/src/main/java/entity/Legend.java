@@ -12,6 +12,8 @@ public class Legend {
   private int country_id;
   private Integer image_id;
   private String description;
+  @Transient
+  private Image image;
 
   @ManyToMany(fetch = FetchType.EAGER)
   @JoinTable(
@@ -87,11 +89,15 @@ public class Legend {
     this.characters = characters;
   }
 
-  public List<Users> getUsers() {
-    return users;
+  public Image getImage() {
+    return image;
   }
 
-  public void setUsers(List<Users> users) {
-    this.users = users;
+  public void setImage(Image image) {
+    this.image = image;
+  }
+
+  public void setImage_id(Integer image_id) {
+    this.image_id = image_id;
   }
 }

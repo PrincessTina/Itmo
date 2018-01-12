@@ -11,7 +11,6 @@ public class Note {
   @Id
   @GeneratedValue
   private int id;
-  private int owner_id;
   private int image_id;
   private Date date;
   private String description;
@@ -21,8 +20,7 @@ public class Note {
   public Note() {
   }
 
-  public Note(int owner_id, int image_id, Date date, String description) {
-    this.owner_id = owner_id;
+  public Note(int image_id, Date date, String description) {
     this.image_id = image_id;
     this.date = date;
     this.description = description;
@@ -34,14 +32,6 @@ public class Note {
 
   public void setId(int id) {
     this.id = id;
-  }
-
-  public int getOwner_id() {
-    return owner_id;
-  }
-
-  public void setOwner_id(int owner_id) {
-    this.owner_id = owner_id;
   }
 
   public int getImage_id() {

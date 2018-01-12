@@ -30,7 +30,7 @@ public class NoteController extends HttpServlet {
       String link = jsonObject.getString("link");
       String description = jsonObject.getString("description");
 
-      notes.addNewNote(link, description, request);
+      notes.addNewNote(link, description);
     } catch (JSONException e) {
       throw new ServletException("Error parsing JSON request string");
     } catch (Exception ex) {

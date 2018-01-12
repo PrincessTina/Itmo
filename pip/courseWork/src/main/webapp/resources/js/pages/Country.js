@@ -55,7 +55,7 @@ $(document).ready(() => {
 
             legendCollection.forEach((legend) => {
                document.getElementsByClassName("w3-ul")[0].innerHTML += `
-                <li><a href="">${legend.name}</a></li>
+                <li><a href="legend.html#${legend.id}">${legend.name}</a></li>
                `;
             });
         },

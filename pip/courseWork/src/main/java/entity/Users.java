@@ -26,15 +26,6 @@ public class Users {
   )
   private List<Award> awards;
 
-  @ManyToMany(fetch = FetchType.EAGER)
-  @JoinTable(
-      name = "user_legend",
-      joinColumns = @JoinColumn(name = "user_id"),
-      inverseJoinColumns = @JoinColumn(name = "legend_id")
-  )
-  private List<Legend> legends;
-
-
   public Users() {
   }
 

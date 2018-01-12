@@ -36,9 +36,9 @@ public class CountryAccess extends Access {
 
   public Country read(int id) {
     EntityManager entityManager = generateEntityManager();
-    Country user = entityManager.find(Country.class, id);
+    Country country = entityManager.find(Country.class, id);
 
     entityManager.close();
-    return user;
+    return country;
   }
 }

@@ -1,9 +1,7 @@
 package ejb.data;
 
 import entity.Character;
-import entity.Country;
 import entity.Legend;
-import entity.Users;
 
 import javax.ejb.*;
 import javax.persistence.EntityManager;
@@ -18,12 +16,6 @@ public class LegendAccess extends Access {
 
   @EJB
   private ImageAccess images;
-
-  public List<Users> getUsers(String name) throws ServletException {
-    Legend legend = find(name);
-
-    return legend.getUsers();
-  }
 
   public List<Character> getCharacters(String name) throws ServletException {
     Legend legend = find(name);
@@ -65,5 +57,15 @@ public class LegendAccess extends Access {
     entityManager.persist(row);
     entityManager.getTransaction().commit();
     entityManager.close();
+  }
+
+  public Legend read(int id) {
+    EntityManager entityManager = generateEntityManager();
+    Legend legend = entityManager.find(Legend.class, id);
+
+    entityManager.close();
+
+    legend.setImage(images.read(legend.getImage_id()));
+    return legend;
   }
 }

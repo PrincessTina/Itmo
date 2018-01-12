@@ -3,6 +3,7 @@ package controllers.data;
 import com.google.gson.Gson;
 import ejb.data.Controller;
 import ejb.data.LegendAccess;
+import entity.Legend;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -44,31 +45,14 @@ public class LegendController extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     try {
-      String action = request.getParameter("action");
-      String name = request.getParameter("name");
-      String answer;
+      int id = Integer.parseInt(request.getParameter("id"));
+      Legend legend = legends.read(id);
 
-      if (action == null) {
-        throw new ServletException("Action is null");
-      } else if (action.equals("characters")) {
-        answer = new Gson().toJson(legends.getCharacters(name));
+      String answer = new Gson().toJson(legend);
 
-        response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
-        response.getWriter().write(answer);
-      } else if (action.equals("users")) {
-        answer = new Gson().toJson(legends.getUsers(name));
-
-        response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
-        response.getWriter().write(answer);
-      } else if(action.equals("legend")) {
-        answer = new Gson().toJson(legends.find(name));
-
-        response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
-        response.getWriter().write(answer);
-      }
+      response.setContentType("application/json");
+      response.setCharacterEncoding("UTF-8");
+      response.getWriter().write(answer);
     } catch (Exception ex) {
       throw new ServletException(ex.getMessage());
     }

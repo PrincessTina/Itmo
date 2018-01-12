@@ -92,10 +92,10 @@ $(document).ready(() => {
               <div class="w3-dropdown-hover w3-hide-small">
                 <button class="w3-padding-large w3-button" title="More">MYTHOLOGY <i class="fa fa-caret-down"></i></button>     
                 <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-black">
-                  <a href="country.html?3" class="w3-bar-item w3-button">ANCIENT RUS</a>
-                  <a href="country.html?2" class="w3-bar-item w3-button">ANCIENT ROME</a>
-                  <a href="country.html?4" class="w3-bar-item w3-button">ANCIENT EGYPT</a>  
-                  <a href="country.html?1" class="w3-bar-item w3-button">ANCIENT GREECE</a>    
+                  <a href="country.html?3" class="w3-bar-item w3-button">Ancient Rus</a>
+                  <a href="country.html?2" class="w3-bar-item w3-button">Ancient Rome</a>
+                  <a href="country.html?4" class="w3-bar-item w3-button">Ancient Egypt</a>  
+                  <a href="country.html?1" class="w3-bar-item w3-button">Ancient Greece</a>    
                 </div>
               </div>
               

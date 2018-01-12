@@ -121,7 +121,7 @@ $(document).ready(() => {
                         <img class="cross" src="resources/images/cross.png" alt="" style="margin-top: 0; width: 17px; height: 17px;">
                     </div>
                     <div class="w3-center w3-border-bottom w3-border-lime">
-                        <h5 class="w3-text-white">Регистрация</h5>
+                        <h5 class="w3-text-white">Registration</h5>
                     </div>
                 </div>
  	            <div class="w3-section">
@@ -137,7 +137,7 @@ $(document).ready(() => {
     	            <input class="_password" type="password" placeholder="Password" style="width: 60%">   
 	            </div>
 	            
-	            <button class="w3-button w3-lime w3-center regButton" style="width: 59%; margin-left: 2%;">Зарегистрироваться</button>
+	            <button class="w3-button w3-lime w3-center regButton" style="width: 59%; margin-left: 2%;">Sign in</button>
             </div>
         </div>
         
