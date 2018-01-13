@@ -52,24 +52,12 @@ public class Users {
     this.login = login;
   }
 
-  public String getPassword() {
-    return password;
-  }
-
   public void setPassword(String password) {
     this.password = password;
   }
 
-  public Date getDate_of_check() {
-    return date_of_check;
-  }
-
   public void setDate_of_check(Date date_of_check) {
     this.date_of_check = date_of_check;
-  }
-
-  public String getEmail() {
-    return email;
   }
 
   public void setEmail(String email) {
@@ -82,10 +70,6 @@ public class Users {
 
   public void setName(String name) {
     this.name = name;
-  }
-
-  public String getIcon() {
-    return icon;
   }
 
   public void setIcon(String icon) {

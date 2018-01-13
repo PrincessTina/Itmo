@@ -1,8 +1,6 @@
 package ejb.data;
 
-import entity.Artifact;
 import entity.Character;
-import entity.Legend;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
@@ -17,18 +15,6 @@ import java.util.List;
 @LocalBean
 @TransactionManagement(TransactionManagementType.BEAN)
 public class CharacterAccess extends Access {
-  public List<Artifact> getArtifacts(String name) throws ServletException {
-    Character character = find(name);
-
-    return character.getArtifacts();
-  }
-
-  public List<Legend> getLegends(String name) throws ServletException {
-    Character character = find(name);
-
-    return character.getLegends();
-  }
-
   public Character find(String name) throws ServletException {
     EntityManager entityManager = generateEntityManager();
 

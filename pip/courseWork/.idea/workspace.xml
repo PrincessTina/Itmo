@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1449685-279d-4587-b2bb-af2e8d06cd8f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/data/LegendController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/data/LegendController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/data/NoteController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/data/NoteController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ejb/data/CharacterAccess.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/data/CharacterAccess.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ejb/data/CountryAccess.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/data/CountryAccess.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ejb/data/UsersAccess.java" afterPath="$PROJECT_DIR$/src/main/java/ejb/data/UsersAccess.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entity/Character.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Character.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entity/Country.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Country.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entity/Legend.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Legend.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entity/Note.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Note.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entity/User_Legend.java" afterPath="$PROJECT_DIR$/src/main/java/entity/User_Legend.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entity/Users.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Users.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Legend.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Legend.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -57,13 +66,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Legend.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Legend.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/pages/Legend.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="100" column="17" lean-forward="false" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="17" />
+            <state relative-caret-position="1470">
+              <caret line="83" column="27" lean-forward="false" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
               <folding>
                 <element signature="e#1884#2527#0" expanded="false" />
+                <element signature="e#2557#3576#0" expanded="false" />
                 <element signature="e#3599#4285#0" expanded="false" />
                 <element signature="e#4304#10393#0" expanded="false" />
                 <element signature="e#10419#10487#0" expanded="false" />
@@ -119,6 +129,31 @@
                 <marker date="1515862059108" expanded="true" signature="11578:11593" ph="..." />
                 <marker date="1515862059108" expanded="true" signature="11594:11706" ph="..." />
                 <marker date="1515862059108" expanded="true" signature="11886:12041" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Menu.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="13" column="40" lean-forward="false" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+              <folding>
+                <element signature="e#833#1345#0" expanded="false" />
+                <element signature="e#1381#2737#0" expanded="false" />
+                <marker date="1515877469583" expanded="true" signature="2822:5298" ph="..." />
+                <marker date="1515877469583" expanded="true" signature="2905:5281" ph="..." />
+                <marker date="1515877469583" expanded="true" signature="3034:3130" ph="..." />
+                <marker date="1515877469583" expanded="true" signature="3296:3919" ph="..." />
+                <marker date="1515877469583" expanded="true" signature="3507:3898" ph="..." />
+                <marker date="1515877469583" expanded="false" signature="4211:4225" ph="..." />
+                <marker date="1515877469583" expanded="true" signature="4226:4601" ph="..." />
+                <marker date="1515877469583" expanded="false" signature="4691:4735" ph="..." />
+                <marker date="1515877469583" expanded="true" signature="4736:5247" ph="..." />
+                <marker date="1515877469583" expanded="false" signature="4856:4898" ph="..." />
+                <marker date="1515877469583" expanded="false" signature="4953:4968" ph="..." />
+                <marker date="1515877469583" expanded="true" signature="5068:5226" ph="..." />
               </folding>
             </state>
           </provider>
@@ -527,7 +562,6 @@
         <option value="$PROJECT_DIR$/src/main/java/controllers/notification/NotificationController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/country.html" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/data/CountryController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entity/Country.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/data/ImageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/entity/Image.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/IndexSlider.js" />
@@ -537,8 +571,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Index.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/pages/News.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/legend.html" />
-        <option value="$PROJECT_DIR$/src/main/java/entity/Users.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entity/Note.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/LoginWindow.js" />
         <option value="$PROJECT_DIR$/src/main/java/entity/Rating.java" />
@@ -546,33 +578,36 @@
         <option value="$PROJECT_DIR$/src/main/java/controllers/data/UsersController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/context/ContextController.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/data/NoteController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/data/RatingAccess.java" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/context/ContextAccess.java" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/data/Access.java" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/data/ArtifactAccess.java" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/data/AwardAccess.java" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/data/Controller.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ejb/data/CountryAccess.java" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/data/EventAccess.java" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/data/ImageAccess.java" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/data/NoteAccess.java" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/data/PhraseAccess.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ejb/data/UsersAccess.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entity/User_Legend.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/entity/Legend.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/data/LegendController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Country.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Top.js" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/data/LegendAccess.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entity/Character.java" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/auth/AuthLogic.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Admin.js" />
-        <option value="$PROJECT_DIR$/src/main/java/ejb/data/CharacterAccess.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/data/CharacterController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/pages/Legend.js" />
+        <option value="$PROJECT_DIR$/src/main/java/entity/Character.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entity/Country.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entity/Legend.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entity/Note.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entity/User_Legend.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entity/Users.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ejb/data/CharacterAccess.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ejb/data/CountryAccess.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ejb/data/UsersAccess.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/data/NoteController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/data/LegendController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js" />
       </list>
     </option>
   </component>
@@ -643,37 +678,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
@@ -893,7 +897,7 @@
       <option name="presentableId" value="Default" />
       <updated>1515544448593</updated>
       <workItem from="1515544450436" duration="6930000" />
-      <workItem from="1515553252118" duration="105645000" />
+      <workItem from="1515553252118" duration="107358000" />
     </task>
     <servers />
   </component>
@@ -930,7 +934,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112575000" />
+    <option name="totallyTimeSpent" value="114288000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1935" height="1038" extended-state="0" />
@@ -983,133 +987,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Rating.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/RatingAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/pages/News.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="82" column="3" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="82" selection-end-column="3" />
-          <folding>
-            <marker date="1515708762792" expanded="true" signature="1101:1368" ph="..." />
-            <marker date="1515708762792" expanded="true" signature="1215:1225" ph="..." />
-            <marker date="1515708762792" expanded="true" signature="1796:2063" ph="..." />
-            <marker date="1515708762792" expanded="true" signature="1910:1920" ph="..." />
-            <marker date="1515708762792" expanded="true" signature="2396:2429" ph="..." />
-            <marker date="1515708762792" expanded="true" signature="2430:2574" ph="..." />
-            <marker date="1515708762792" expanded="true" signature="2553:2559" ph="..." />
-            <marker date="1515708762792" expanded="true" signature="2718:2873" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Note.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-          <folding>
-            <element signature="e#209#212#0" expanded="false" />
-            <element signature="method#Note#0;class#Note#0" expanded="false" />
-            <element signature="method#Note#1;class#Note#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="33" column="69" lean-forward="false" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/RatingAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/Access.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="11" column="2" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/AwardAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="16" column="2" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="15" column="2" lean-forward="false" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-          <folding>
-            <element signature="method#getAnswerFromPost#0;class#Controller#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/EventAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="16" column="2" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/PhraseAccess.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="16" column="2" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Country.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/User_Legend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="42" column="30" lean-forward="false" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
-          <folding>
-            <element signature="e#158#161#0" expanded="false" />
-            <element signature="method#User_Legend#1;class#User_Legend#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1127,24 +1009,6 @@
             <marker date="1515760798357" expanded="false" signature="2791:2824" ph="..." />
             <marker date="1515760798357" expanded="true" signature="2825:2978" ph="..." />
             <marker date="1515760798357" expanded="true" signature="3122:3277" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/auth/AuthController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-106">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/context/ContextController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="25" column="118" lean-forward="false" selection-start-line="25" selection-start-column="118" selection-end-line="25" selection-end-column="118" />
-          <folding>
-            <element signature="method#doGet#0;class#ContextController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1181,59 +1045,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/data/NoteController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="42" column="119" lean-forward="true" selection-start-line="42" selection-start-column="119" selection-end-line="42" selection-end-column="119" />
-          <folding>
-            <element signature="method#doPost#0;class#NoteController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/ImageAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="13" column="2" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-          <folding>
-            <element signature="method#readInitImages#0;class#ImageAccess#0" expanded="false" />
-            <element signature="method#read#0;class#ImageAccess#0" expanded="false" />
-            <element signature="method#create#0;class#ImageAccess#0" expanded="false" />
-            <element signature="docComment;method#findImage#0;class#ImageAccess#0" expanded="false" />
-            <element signature="method#findImage#0;class#ImageAccess#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/LegendAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="101" column="62" lean-forward="false" selection-start-line="101" selection-start-column="62" selection-end-line="101" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#create#0;class#LegendAccess#0" expanded="false" />
-            <element signature="method#read#0;class#LegendAccess#0" expanded="false" />
-            <element signature="method#getTop#0;class#LegendAccess#0" expanded="false" />
-            <element signature="method#setLike#0;class#LegendAccess#0" expanded="false" />
-            <element signature="method#getUsers#0;class#LegendAccess#0" expanded="false" />
-            <element signature="e#2897#2904#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/NoteAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#addNewNote#0;class#NoteAccess#0" expanded="false" />
-            <element signature="method#getNewImageId#0;class#NoteAccess#0" expanded="false" />
-            <element signature="method#getAllNotes#0;class#NoteAccess#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/RegWindow.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2358">
@@ -1262,122 +1073,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/data/LegendController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="49" column="3" lean-forward="true" selection-start-line="28" selection-start-column="2" selection-end-line="49" selection-end-column="3" />
-          <folding>
-            <element signature="method#doPost#0;class#LegendController#0" expanded="false" />
-            <element signature="method#doPut#0;class#LegendController#0" expanded="false" />
-            <element signature="method#doGet#0;class#LegendController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/UsersAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="78" column="3" lean-forward="true" selection-start-line="70" selection-start-column="2" selection-end-line="78" selection-end-column="3" />
-          <folding>
-            <element signature="method#addNewUser#0;class#UsersAccess#0" expanded="false" />
-            <element signature="method#checkUser#0;class#UsersAccess#0" expanded="false" />
-            <element signature="method#findUserPassword#0;class#UsersAccess#0" expanded="false" />
-            <element signature="method#findUserId#0;class#UsersAccess#0" expanded="false" />
-            <element signature="method#create#0;class#UsersAccess#0" expanded="false" />
-            <element signature="method#read#0;class#UsersAccess#0" expanded="false" />
-            <element signature="method#delete#0;class#UsersAccess#0" expanded="false" />
-            <element signature="method#update#0;class#UsersAccess#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/data/UsersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="59" column="3" lean-forward="true" selection-start-line="59" selection-start-column="3" selection-end-line="59" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#doPost#0;class#UsersController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Character.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="69" column="3" lean-forward="false" selection-start-line="69" selection-start-column="3" selection-end-line="69" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/3777480a/e75be8a3-3b22-423b-ab23-0c92c74d477b/studs.s225074.character">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/context/ContextAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-          <folding>
-            <element signature="method#addUserInContext#0;class#ContextAccess#0" expanded="false" />
-            <element signature="method#removeUserFromContext#0;class#ContextAccess#0" expanded="false" />
-            <element signature="method#setIcon#0;class#ContextAccess#0" expanded="false" />
-            <element signature="method#addNameInContext#0;class#ContextAccess#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/CharacterAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="58" column="34" lean-forward="false" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
-          <folding>
-            <element signature="method#getArtifacts#0;class#CharacterAccess#0" expanded="false" />
-            <element signature="method#getLegends#0;class#CharacterAccess#0" expanded="false" />
-            <element signature="method#find#0;class#CharacterAccess#0" expanded="false" />
-            <element signature="method#create#0;class#CharacterAccess#0" expanded="false" />
-            <element signature="method#getAll#0;class#CharacterAccess#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/data/CharacterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="42" column="118" lean-forward="false" selection-start-line="42" selection-start-column="118" selection-end-line="42" selection-end-column="118" />
-          <folding>
-            <element signature="method#doPost#0;class#CharacterController#0" expanded="false" />
-            <element signature="method#doGet#0;class#CharacterController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/auth/AuthLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Legend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-673">
-          <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-          <folding>
-            <element signature="e#101#104#0" expanded="false" />
-            <element signature="e#309#345#0" expanded="false" />
-            <element signature="method#Legend#0;class#Legend#0" expanded="false" />
-            <element signature="method#Legend#1;class#Legend#0" expanded="false" />
-            <element signature="method#Legend#2;class#Legend#0" expanded="false" />
-            <element signature="e#2268#2269#0" expanded="true" />
-            <element signature="e#2290#2291#0" expanded="true" />
-            <element signature="e#2335#2336#0" expanded="true" />
-            <element signature="e#2363#2364#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1479,46 +1178,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-          <folding>
-            <element signature="e#1014#1526#0" expanded="false" />
-            <element signature="e#1562#2918#0" expanded="false" />
-            <marker date="1515768110041" expanded="true" signature="3003:5588" ph="..." />
-            <marker date="1515768110041" expanded="true" signature="3086:5571" ph="..." />
-            <marker date="1515768110041" expanded="true" signature="3215:3311" ph="..." />
-            <marker date="1515768110041" expanded="true" signature="3477:4100" ph="..." />
-            <marker date="1515768110041" expanded="true" signature="3688:4079" ph="..." />
-            <marker date="1515768110041" expanded="false" signature="4392:4406" ph="..." />
-            <marker date="1515768110041" expanded="true" signature="4407:4782" ph="..." />
-            <marker date="1515768110041" expanded="false" signature="4872:4916" ph="..." />
-            <marker date="1515768110041" expanded="true" signature="4917:5537" ph="..." />
-            <marker date="1515768110041" expanded="false" signature="5037:5079" ph="..." />
-            <marker date="1515768110041" expanded="false" signature="5134:5149" ph="..." />
-            <marker date="1515768110041" expanded="true" signature="5249:5516" ph="..." />
-            <marker date="1515768110041" expanded="true" signature="5457:5471" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/ArtifactAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="15" column="2" lean-forward="false" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/CountryAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="17" column="2" lean-forward="false" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/IndexSlider.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -1578,22 +1237,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/classes/Notification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/admin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1610,6 +1253,260 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Character.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-105">
+          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding>
+            <element signature="e#1076#1077#0" expanded="false" />
+            <element signature="e#1116#1117#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Country.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="66" column="3" lean-forward="false" selection-start-line="66" selection-start-column="3" selection-end-line="66" selection-end-column="3" />
+          <folding>
+            <element signature="method#Country#1;class#Country#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Note.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="38" column="3" lean-forward="false" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
+          <folding>
+            <element signature="e#209#212#0" expanded="false" />
+            <element signature="method#Note#0;class#Note#0" expanded="false" />
+            <element signature="method#Note#1;class#Note#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/User_Legend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <element signature="e#158#161#0" expanded="false" />
+            <element signature="method#User_Legend#1;class#User_Legend#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Legend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding>
+            <element signature="e#101#104#0" expanded="false" />
+            <element signature="method#Legend#0;class#Legend#0" expanded="false" />
+            <element signature="method#Legend#1;class#Legend#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Image.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="72" column="3" lean-forward="false" selection-start-line="72" selection-start-column="3" selection-end-line="72" selection-end-column="3" />
+          <folding>
+            <element signature="method#Users#1;class#Users#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/auth/AuthLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2310">
+          <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/context/ContextAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <folding>
+            <element signature="method#addUserInContext#0;class#ContextAccess#0" expanded="false" />
+            <element signature="method#removeUserFromContext#0;class#ContextAccess#0" expanded="false" />
+            <element signature="method#setIcon#0;class#ContextAccess#0" expanded="false" />
+            <element signature="method#addNameInContext#0;class#ContextAccess#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/Access.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="11" column="2" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/ArtifactAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="15" column="2" lean-forward="false" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/CharacterAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="method#find#0;class#CharacterAccess#0" expanded="false" />
+            <element signature="method#create#0;class#CharacterAccess#0" expanded="false" />
+            <element signature="method#getAll#0;class#CharacterAccess#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="15" column="2" lean-forward="false" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+          <folding>
+            <element signature="method#getAnswerFromPost#0;class#Controller#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/CountryAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="e#318#328#0" expanded="false" />
+            <element signature="method#find#0;class#CountryAccess#0" expanded="false" />
+            <element signature="method#read#0;class#CountryAccess#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/EventAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#338#348#0" expanded="false" />
+            <element signature="method#getAnswer#0;class#EventAccess#0" expanded="false" />
+            <element signature="method#find#0;class#EventAccess#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/LegendAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="101" column="62" lean-forward="false" selection-start-line="101" selection-start-column="62" selection-end-line="101" selection-end-column="62" />
+          <folding>
+            <element signature="e#273#283#0" expanded="false" />
+            <element signature="method#find#0;class#LegendAccess#0" expanded="false" />
+            <element signature="method#create#0;class#LegendAccess#0" expanded="false" />
+            <element signature="method#read#0;class#LegendAccess#0" expanded="false" />
+            <element signature="method#getTop#0;class#LegendAccess#0" expanded="false" />
+            <element signature="method#setLike#0;class#LegendAccess#0" expanded="false" />
+            <element signature="method#getUsers#0;class#LegendAccess#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/NoteAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <folding>
+            <element signature="method#addNewNote#0;class#NoteAccess#0" expanded="false" />
+            <element signature="method#getNewImageId#0;class#NoteAccess#0" expanded="false" />
+            <element signature="method#getAllNotes#0;class#NoteAccess#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/UsersAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="86" column="3" lean-forward="false" selection-start-line="86" selection-start-column="3" selection-end-line="86" selection-end-column="3" />
+          <folding>
+            <element signature="method#addNewUser#0;class#UsersAccess#0" expanded="false" />
+            <element signature="method#checkUser#0;class#UsersAccess#0" expanded="false" />
+            <element signature="method#findUserPassword#0;class#UsersAccess#0" expanded="false" />
+            <element signature="method#findUserId#0;class#UsersAccess#0" expanded="false" />
+            <element signature="method#create#0;class#UsersAccess#0" expanded="false" />
+            <element signature="method#read#0;class#UsersAccess#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/data/ImageAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="13" column="2" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+          <folding>
+            <element signature="method#readInitImages#0;class#ImageAccess#0" expanded="false" />
+            <element signature="method#read#0;class#ImageAccess#0" expanded="false" />
+            <element signature="method#create#0;class#ImageAccess#0" expanded="false" />
+            <element signature="docComment;method#findImage#0;class#ImageAccess#0" expanded="false" />
+            <element signature="method#findImage#0;class#ImageAccess#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/notification/Producer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/notification/Receiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/classes/Notification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/classes/QueueNames.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -1618,12 +1515,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/pages/Legend.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/auth/AuthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/context/ContextController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="25" column="118" lean-forward="false" selection-start-line="25" selection-start-column="118" selection-end-line="25" selection-end-column="118" />
+          <folding>
+            <element signature="method#doGet#0;class#ContextController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/data/UsersController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="100" column="17" lean-forward="false" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="17" />
+          <caret line="59" column="3" lean-forward="true" selection-start-line="59" selection-start-column="3" selection-end-line="59" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#doPost#0;class#UsersController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/data/NoteController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="method#doPost#0;class#NoteController#0" expanded="false" />
+            <element signature="method#doGet#0;class#NoteController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/data/CharacterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="42" column="118" lean-forward="false" selection-start-line="42" selection-start-column="118" selection-end-line="42" selection-end-column="118" />
+          <folding>
+            <element signature="method#doPost#0;class#CharacterController#0" expanded="false" />
+            <element signature="method#doGet#0;class#CharacterController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/data/CountryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="method#doGet#0;class#CountryController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/data/ImageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="method#doGet#0;class#ImageController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/data/LegendController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="29" column="119" lean-forward="false" selection-start-line="29" selection-start-column="119" selection-end-line="29" selection-end-column="119" />
+          <folding>
+            <element signature="method#doPost#0;class#LegendController#0" expanded="false" />
+            <element signature="method#doPut#0;class#LegendController#0" expanded="false" />
+            <element signature="method#doGet#0;class#LegendController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/pages/Legend.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="83" column="27" lean-forward="false" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
           <folding>
             <element signature="e#1884#2527#0" expanded="false" />
+            <element signature="e#2557#3576#0" expanded="false" />
             <element signature="e#3599#4285#0" expanded="false" />
             <element signature="e#4304#10393#0" expanded="false" />
             <element signature="e#10419#10487#0" expanded="false" />
@@ -1679,6 +1660,29 @@
             <marker date="1515862059108" expanded="true" signature="11578:11593" ph="..." />
             <marker date="1515862059108" expanded="true" signature="11594:11706" ph="..." />
             <marker date="1515862059108" expanded="true" signature="11886:12041" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/components/Menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="13" column="40" lean-forward="false" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+          <folding>
+            <element signature="e#833#1345#0" expanded="false" />
+            <element signature="e#1381#2737#0" expanded="false" />
+            <marker date="1515877469583" expanded="true" signature="2822:5298" ph="..." />
+            <marker date="1515877469583" expanded="true" signature="2905:5281" ph="..." />
+            <marker date="1515877469583" expanded="true" signature="3034:3130" ph="..." />
+            <marker date="1515877469583" expanded="true" signature="3296:3919" ph="..." />
+            <marker date="1515877469583" expanded="true" signature="3507:3898" ph="..." />
+            <marker date="1515877469583" expanded="false" signature="4211:4225" ph="..." />
+            <marker date="1515877469583" expanded="true" signature="4226:4601" ph="..." />
+            <marker date="1515877469583" expanded="false" signature="4691:4735" ph="..." />
+            <marker date="1515877469583" expanded="true" signature="4736:5247" ph="..." />
+            <marker date="1515877469583" expanded="false" signature="4856:4898" ph="..." />
+            <marker date="1515877469583" expanded="false" signature="4953:4968" ph="..." />
+            <marker date="1515877469583" expanded="true" signature="5068:5226" ph="..." />
           </folding>
         </state>
       </provider>

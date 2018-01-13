@@ -85,26 +85,4 @@ public class UsersAccess extends Access {
     entityManager.close();
     return user;
   }
-
-  private void delete(int id) {
-    EntityManager entityManager = generateEntityManager();
-
-    entityManager.getTransaction().begin();
-    entityManager.remove(read(id));
-    entityManager.getTransaction().commit();
-    entityManager.close();
-  }
-
-  private void update(int id, String login, String password, String email, Date date_of_check) {
-    EntityManager entityManager = generateEntityManager();
-    Users row = read(id);
-
-    entityManager.getTransaction().begin();
-    row.setEmail(email);
-    row.setDate_of_check(date_of_check);
-    row.setLogin(login);
-    row.setPassword(password);
-    entityManager.getTransaction().commit();
-    entityManager.close();
-  }
 }

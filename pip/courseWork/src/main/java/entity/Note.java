@@ -38,18 +38,6 @@ public class Note {
     return image_id;
   }
 
-  public void setImage_id(int image_id) {
-    this.image_id = image_id;
-  }
-
-  public Date getDate() {
-    return date;
-  }
-
-  public void setDate(Date date) {
-    this.date = date;
-  }
-
   public String getDescription() {
     return description;
   }

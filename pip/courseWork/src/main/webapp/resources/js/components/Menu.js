@@ -12,7 +12,6 @@ $(document).ready(() => {
 
         events: {
             'click .exitButton': 'exit',
-            'click ._test': 'createTestWindow',
         },
 
         initialize() {
@@ -32,12 +31,6 @@ $(document).ready(() => {
                     throw "Error in getting user from context";
                 }
             });
-        },
-
-        createTestWindow() {
-          document.getElementsByTagName("body")[0].innerHTML += `
-            
-          `;
         },
 
         exit: function () {
@@ -121,8 +114,7 @@ $(document).ready(() => {
                 <i class="fa fa-caret-down" style="margin-top: 30%"></i>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-black cabinetBlock">
                   <a class="w3-bar-item _login"></a>
-                  <a href="" class="w3-bar-item w3-button exitButton">Logout</a>
-                  <a href="" class="w3-bar-item w3-button _test" style="display: none;">Pass the test</a>    
+                  <a href="" class="w3-bar-item w3-button exitButton">Logout</a> 
                 </div>
               </div>
               

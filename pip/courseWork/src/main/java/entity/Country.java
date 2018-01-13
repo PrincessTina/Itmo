@@ -65,12 +65,4 @@ public class Country {
   public void setImages(List<Image> images) {
     this.images = images;
   }
-
-  public List<Legend> getLegends() {
-    return legends;
-  }
-
-  public void setLegends(List<Legend> legends) {
-    this.legends = legends;
-  }
 }

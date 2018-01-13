@@ -1,8 +1,6 @@
 package ejb.data;
 
 import entity.Country;
-import entity.Image;
-import entity.Legend;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;

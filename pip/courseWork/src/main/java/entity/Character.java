@@ -1,7 +1,6 @@
 package entity;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -20,14 +19,6 @@ public class Character {
       inverseJoinColumns = @JoinColumn(name = "art_id")
   )
   private List<Artifact> artifacts;
-
-  @ManyToMany(fetch = FetchType.EAGER)
-  @JoinTable(
-      name = "character_legend",
-      joinColumns = @JoinColumn(name = "character_id"),
-      inverseJoinColumns = @JoinColumn(name = "legend_id")
-  )
-  private List<Legend> legends;
 
   public Character(String name, String type, String description) {
     this.name = name;
@@ -71,17 +62,5 @@ public class Character {
 
   public List<Artifact> getArtifacts() {
     return artifacts;
-  }
-
-  public void setArtifacts(ArrayList<Artifact> artifacts) {
-    this.artifacts = artifacts;
-  }
-
-  public List<Legend> getLegends() {
-    return legends;
-  }
-
-  public void setLegends(ArrayList<Legend> legends) {
-    this.legends = legends;
   }
 }

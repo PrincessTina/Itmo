@@ -28,9 +28,6 @@ public class LegendController extends HttpServlet {
 
   @Override
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    int id = -1;
-    int user_id = -1;
-
     try {
       JSONObject jsonObject = controller.getAnswerFromPost(request);
 
