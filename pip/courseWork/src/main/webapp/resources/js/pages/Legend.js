@@ -84,19 +84,21 @@ $(document).ready(() => {
         searchCharacters() {
             this.collection.models.forEach((character) => {
                 let name = character.attributes.name;
+                let length = name.length;
                 let description = character.attributes.description;
                 let type = character.attributes.type;
 
                 let index = document.getElementsByClassName("_description")[0].innerHTML.lastIndexOf(name);
-                let length = name.length;
 
-                let part = document.getElementsByClassName("_description")[0].innerHTML.substr(0, index);
-                part += `<a class="w3-text-aqua" title="${type}\n${description}">`;
-                part += document.getElementsByClassName("_description")[0].innerHTML.substr(index, length);
-                part += `</a>`;
-                part += document.getElementsByClassName("_description")[0].innerHTML.substr(index + length);
+                if (index !== - 1) {
+                    let part = document.getElementsByClassName("_description")[0].innerHTML.substr(0, index);
+                    part += `<a class="w3-text-aqua" title="${type}\n${description}">`;
+                    part += document.getElementsByClassName("_description")[0].innerHTML.substr(index, length);
+                    part += `</a>`;
+                    part += document.getElementsByClassName("_description")[0].innerHTML.substr(index + length);
 
-                document.getElementsByClassName("_description")[0].innerHTML = part;
+                    document.getElementsByClassName("_description")[0].innerHTML = part;
+                }
             });
         },
 
