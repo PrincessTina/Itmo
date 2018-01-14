@@ -137,13 +137,13 @@ $(document).ready(() => {
                     <img class="_image w3-opacity w3-hover-opacity-off" style="width:100%">
                     <img src="http://passport.777ru.ru/sites/default/files/images/Greece_ancient_capital_of_antiquity_00.jpg" style="width:100%">
                     <img class="w3-opacity w3-hover-opacity-off" src="http://clubtravel39.ru/wp-content/uploads/2017/03/tP6toVHnWJk.jpg" style="width:100%">
+                    <img src="https://img1.goodfon.ru/original/1920x1280/1/fa/greciya-santorini-nebo-oblaka.jpg" style="width:100%">
                   </div>
                 
                   <div class="w3-half">
                     <img src="https://majbutne.com.ua/wp-content/uploads/2016/03/GreeceOM_15.jpg" style="width:100%">
                     <img class="w3-opacity w3-hover-opacity-off" src="https://i.pinimg.com/736x/f2/ab/1c/f2ab1cfb20f1f96826b13d10637dfa9e--greece-vacation-greece-trip.jpg" style="width:100%">
                     <img class="w3-opacity w3-hover-opacity-off" src="http://wallpaperscraft.ru/image/gorod_afiny_parfenon_dostoprimechatelnost_greciya_58007_1024x768.jpg" style="width:100%">
-                    <img src="https://img1.goodfon.ru/original/1920x1280/1/fa/greciya-santorini-nebo-oblaka.jpg" style="width:100%">
                   </div>
                 `;
             } else if (country_id === 2) {

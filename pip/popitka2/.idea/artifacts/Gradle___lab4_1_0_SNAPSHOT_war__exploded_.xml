@@ -1,0 +1,41 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gradle : lab4-1.0-SNAPSHOT.war (exploded)">
+    <output-path>$PROJECT_DIR$/build/libs/exploded/lab4-1.0-SNAPSHOT.war</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$">
+        <manifest>TWFuaWZlc3QtVmVyc2lvbjogMS4wDQoNCg==</manifest>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/build/libs/exploded/lab4-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="popitka2_main/web/Web Gradle : lab4-1.0-SNAPSHOT.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="popitka2_main" />
+          <element id="dir-copy" path="$PROJECT_DIR$/out/production/resources" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: org.springframework:spring-context:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.aspectj:aspectjrt:1.7.4" />
+          <element id="library" level="project" name="Gradle: javax.inject:javax.inject:1" />
+          <element id="library" level="project" name="Gradle: javax.servlet:servlet-api:2.5" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.5" />
+          <element id="library" level="project" name="Gradle: org.slf4j:jcl-over-slf4j:1.7.5" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-log4j12:1.7.5" />
+          <element id="library" level="project" name="Gradle: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-aop:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-beans:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-core:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-expression:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-web:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.1.1" />
+          <element id="library" level="project" name="Gradle: log4j:log4j:1.2.17" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

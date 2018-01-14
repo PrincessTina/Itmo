@@ -14,7 +14,7 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="lab3_main" />
-          <element id="dir-copy" path="$PROJECT_DIR$/build/resources/main" />
+          <element id="dir-copy" path="$PROJECT_DIR$/out/production/resources" />
           <element id="library" level="project" name="Gradle: org.primefaces.extensions:all-themes:pom:1.0.8" />
         </element>
         <element id="directory" name="lib">
