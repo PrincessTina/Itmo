@@ -18,7 +18,7 @@ public class HomeController {
   /**
    * Simply selects the home view to render by returning its name.
    */
-  @RequestMapping(value = "/", method = RequestMethod.GET)
+  @RequestMapping(value = "/b", method = RequestMethod.GET)
   public String home(Locale locale, Model model) {
     Date date = new Date();
     DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
@@ -30,7 +30,7 @@ public class HomeController {
     return "start";
   }
 
-  @RequestMapping(value = "users", method = RequestMethod.POST)
+  @RequestMapping(value = "usershb", method = RequestMethod.POST)
   public String user(@Validated User user, Model model) {
     model.addAttribute("userName", user.getUserName());
 
