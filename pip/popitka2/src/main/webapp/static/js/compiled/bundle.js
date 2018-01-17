@@ -20158,7 +20158,10 @@ var StartPage = function (_React$Component) {
                 var login = document.getElementsByClassName("_login")[0].value;
                 var password = document.getElementsByClassName("_password")[0].value;
 
-                _axios2.default.post("/lab4-1.0-SNAPSHOT/users?login=" + login + "&password=" + password).then(function (response) {
+                _axios2.default.post('/api/users', {
+                    login: login,
+                    password: password
+                }).then(function (response) {
                     console.log(response);
                 }).catch(function (error) {
                     console.log(error);
@@ -20193,7 +20196,13 @@ var StartPage = function (_React$Component) {
                 _react2.default.createElement(
                     "div",
                     { className: "w3-card-4 w3-round-large w3-padding",
-                        style: { width: '60%', border: '1px dashed #e91e63', marginTop: '9%', marginLeft: '20%', background: '#1b1520fa' } },
+                        style: {
+                            width: '60%',
+                            border: '1px dashed #e91e63',
+                            marginTop: '9%',
+                            marginLeft: '20%',
+                            background: '#1b1520fa'
+                        } },
                     _react2.default.createElement(
                         "div",
                         { className: "w3-container w3-center" },
@@ -20205,7 +20214,8 @@ var StartPage = function (_React$Component) {
                                 { className: "w3-half w3-border-bottom w3-border-pink w3-hover-opacity" },
                                 _react2.default.createElement(
                                     "h5",
-                                    { className: "w3-text-pink", style: { cursor: 'pointer' }, onClick: StartPage.getLoginContent },
+                                    { className: "w3-text-pink", style: { cursor: 'pointer' },
+                                        onClick: StartPage.getLoginContent },
                                     "Login"
                                 )
                             ),
