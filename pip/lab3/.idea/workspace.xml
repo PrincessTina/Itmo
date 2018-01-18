@@ -2,64 +2,115 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bae94e55-fd54-4867-ae39-dda9c4df9c7f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/artifacts/Gradle___lab4_1_0_SNAPSHOT_war.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/artifacts/Gradle___lab4_1_0_SNAPSHOT_war__exploded_.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/dataSources.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__aopalliance_aopalliance_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__commons_logging_commons_logging_1_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__javax_inject_javax_inject_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__javax_servlet_jstl_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__javax_servlet_servlet_api_2_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__junit_junit_4_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__log4j_log4j_1_2_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__mysql_mysql_connector_java_5_1_31.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_aspectj_aspectjrt_1_7_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_atteo_evo_inflector_1_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_eclipse_persistence_commonj_sdo_2_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_eclipse_persistence_eclipselink_2_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_eclipse_persistence_javax_persistence_2_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_objenesis_objenesis_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_slf4j_jcl_over_slf4j_1_7_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_slf4j_slf4j_log4j12_1_7_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_springframework_boot_spring_boot_1_0_2_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_springframework_boot_spring_boot_autoconfigure_1_0_2_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_springframework_data_spring_data_commons_1_7_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_springframework_data_spring_data_commons_core_1_1_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_springframework_data_spring_data_jpa_1_0_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_springframework_data_spring_data_rest_core_2_0_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_springframework_hateoas_spring_hateoas_0_9_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_springframework_plugin_spring_plugin_core_1_0_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_springframework_spring_aop_4_0_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_springframework_spring_beans_4_0_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_springframework_spring_context_4_0_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_springframework_spring_core_4_0_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_springframework_spring_expression_4_0_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_springframework_spring_jdbc_3_0_5_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_springframework_spring_orm_3_0_5_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_springframework_spring_tx_3_2_8_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_springframework_spring_web_4_0_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/.idea/libraries/Gradle__org_springframework_spring_webmvc_4_0_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/java/all/Configuration.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/java/all/controllers/UsersController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/images/icon1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/images/icon2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Components/Redux/Actions.jsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Components/Redux/PointsReducer.jsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Components/Redux/Store.jsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/compiled/bundle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/static/js/Components/Redux/Actions.jsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/static/js/Components/Redux/PointsReducer.jsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/static/js/Components/Redux/Store.jsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/static/js/Pages/StartPage.jsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/static/js/compiled/bundle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/static/js/compiled/index.jsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/static/resources/images/icon1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/static/resources/images/icon2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/views/main.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/views/start.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/views/test.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/artifacts/Gradle___courseWork___step1_1_0_SNAPSHOT_war.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/artifacts/Gradle___courseWork___step1_1_0_SNAPSHOT_war__exploded_.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/gradle.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__ant_ant_1_6_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__antlr_antlr_2_7_7.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__avalon_framework_avalon_framework_4_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__com_fasterxml_classmate_1_3_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__commons_collections_commons_collections_3_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__commons_logging_commons_logging_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__dom4j_dom4j_1_6_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__freemarker_freemarker_2_3_8.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_annotation_jsr250_api_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_ejb_javax_ejb_api_3_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_el_el_api_2_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_enterprise_cdi_api_1_1_PFD.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_inject_javax_inject_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_servlet_servlet_api_2_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_transaction_javax_transaction_api_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_transaction_jta_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_ws_rs_javax_ws_rs_api_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__junit_junit_4_12.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__log4j_log4j_1_2_12.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__log4j_log4j_1_2_13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__logkit_logkit_1_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__mysql_mysql_connector_java_5_1_31.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_apache_geronimo_specs_geronimo_jta_1_1_spec_1_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_core_commands_3_3_0_I20070605_0010.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_core_contenttype_3_4_200_v20140207_1251.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_core_jobs_3_6_0_v20140424_0053.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_core_runtime_3_9_0_v20130326_1255.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_equinox_app_1_3_200_v20130910_1609.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_equinox_common_3_6_200_v20130402_1505.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_equinox_preferences_3_5_200_v20140224_1527.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_equinox_registry_3_5_400_v20140428_1507.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_osgi_3_10_0_v20140606_1445.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_text_3_3_0_v20070606_0010.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_tycho_org_eclipse_jdt_core_3_9_1_v20130905_0837.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_hibernate_annotations_3_5_6_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_hibernate_commons_annotations_3_2_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_hibernate_core_5_2_1_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_hibernate_entitymanager_5_1_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_hibernate_gradle_plugin_5_2_1_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_hibernate_tools_5_0_1_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_javax_persistence_hibernate_jpa_2_0_api_1_0_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_jtidy_r8_20060801.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_javassist_javassist_3_20_0_GA.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_jboss_jandex_2_0_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_jboss_logging_jboss_logging_3_3_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_jboss_spec_javax_interceptor_jboss_interceptors_api_1_1_spec_1_0_0_Beta1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_25.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_slf4j_slf4j_log4j12_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__postgresql_postgresql_9_0_801_jdbc4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__xml_apis_xml_apis_1_0_b2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/modules/step1.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/modules/step1_main.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/modules/step1_test.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/gradle/wrapper/gradle-wrapper.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/gradle/wrapper/gradle-wrapper.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/gradlew" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/gradlew.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/out/production/classes/ApplicationConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/out/production/classes/Test.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/out/production/classes/ejbs/TimeBean.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/settings.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/java/ApplicationConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/java/Test.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/java/ejbs/TimeBean.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/java/models/User.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/resources/META-INF/persistence.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/webapp/WEB-INF/glassfish-web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/webapp/index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/webapp/resources/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/webapp/resources/js/backbone.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../popitka2/src/main/java/all/models/UsersRepository.java" afterPath="$PROJECT_DIR$/../popitka2/src/main/java/all/controllers/UsersRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../.gitignore" afterPath="$PROJECT_DIR$/../../.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../courseWork/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/src/main/java/controllers/context/ContextController.java" afterPath="$PROJECT_DIR$/../courseWork/src/main/java/controllers/context/ContextController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/src/test/java/LanguageTest.java" afterPath="$PROJECT_DIR$/../courseWork/src/test/java/LanguageTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../popitka2/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/../popitka2/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/.idea/misc.xml" afterPath="$PROJECT_DIR$/../popitka2/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/.idea/modules/popitka2_main.iml" afterPath="$PROJECT_DIR$/../popitka2/.idea/modules/popitka2_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/.idea/modules/popitka2_test.iml" afterPath="$PROJECT_DIR$/../popitka2/.idea/modules/popitka2_test.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../popitka2/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/build.gradle" afterPath="$PROJECT_DIR$/../popitka2/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/src/main/java/all/Application.java" afterPath="$PROJECT_DIR$/../popitka2/src/main/java/all/Application.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/src/main/java/all/entity/User.java" afterPath="$PROJECT_DIR$/../popitka2/src/main/java/all/entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/src/main/java/all/models/UsersRepository.java" afterPath="$PROJECT_DIR$/../popitka2/src/main/java/all/models/UsersRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/../popitka2/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/static/js/Pages/StartPage.jsx" afterPath="$PROJECT_DIR$/../popitka2/src/main/webapp/static/js/Pages/StartPage.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/static/js/compiled/bundle.js" afterPath="$PROJECT_DIR$/../popitka2/src/main/webapp/static/js/compiled/bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/index.html" afterPath="$PROJECT_DIR$/../popitka2/src/main/resources/static/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Pages/StartPage.jsx" afterPath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Pages/StartPage.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/compiled/index.jsx" afterPath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/compiled/index.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -94,110 +145,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="persistence.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="75" lean-forward="false" selection-start-line="12" selection-start-column="75" selection-end-line="12" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ColorBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/beans/ColorBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.xhtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="25" column="55" lean-forward="false" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="10" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/beans/DataBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-              <folding>
-                <element signature="method#getPoint#0;class#DataBean#0" expanded="false" />
-                <element signature="method#addPoint#0;class#DataBean#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="glassfish-web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/glassfish-web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PointBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/beans/PointBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="faces-config.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml">
-          <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="mainPage.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/mainPage.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" column="66" lean-forward="false" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="66" />
+            <state relative-caret-position="232">
+              <caret line="36" column="16" lean-forward="true" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1344">
+              <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="159" selection-end-column="1" />
+              <folding>
+                <element signature="n#!!block;n#createGraph#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -587,7 +552,7 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="width" value="1935" />
     <option name="height" value="1038" />
@@ -608,10 +573,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -666,12 +627,33 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab3" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab3" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1132,11 +1114,12 @@
       <workItem from="1515028786951" duration="387000" />
       <workItem from="1515270843783" duration="785000" />
       <workItem from="1515933021696" duration="6060000" />
+      <workItem from="1516236653938" duration="243000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159489000" />
+    <option name="totallyTimeSpent" value="159732000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1148,7 +1131,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32801822" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1163,7 +1147,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1557465" sideWeight="0.48854962" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15789473" sideWeight="0.48854962" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1221,9 +1205,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#getPoint#0;class#DataBean#0" expanded="false" />
-            <element signature="method#updatePoint#0;class#DataBean#0" expanded="false" />
             <element signature="method#addPoint#0;class#DataBean#0" expanded="false" />
           </folding>
         </state>
@@ -1241,7 +1223,7 @@
         <state relative-caret-position="315">
           <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1265,9 +1247,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1284,9 +1263,7 @@
         <state relative-caret-position="270">
           <caret line="24" column="15" lean-forward="false" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#getPoint#0;class#DataBean#0" expanded="false" />
-            <element signature="method#updatePoint#0;class#DataBean#0" expanded="false" />
             <element signature="method#addPoint#0;class#DataBean#0" expanded="false" />
           </folding>
         </state>
@@ -1304,7 +1281,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1343,9 +1320,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1354,9 +1328,7 @@
         <state relative-caret-position="285">
           <caret line="19" column="15" lean-forward="false" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#getPoint#0;class#DataBean#0" expanded="false" />
-            <element signature="method#updatePoint#0;class#DataBean#0" expanded="false" />
             <element signature="method#addPoint#0;class#DataBean#0" expanded="false" />
           </folding>
         </state>
@@ -1398,9 +1370,7 @@
         <state relative-caret-position="126">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#getPoint#0;class#DataBean#0" expanded="false" />
-            <element signature="method#updatePoint#0;class#DataBean#0" expanded="false" />
             <element signature="method#addPoint#0;class#DataBean#0" expanded="false" />
           </folding>
         </state>
@@ -1480,16 +1450,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1503,10 +1463,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/beans/ColorBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
+        <state relative-caret-position="126">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1515,15 +1475,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="16" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainPage.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="66" lean-forward="false" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1562,17 +1513,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
+        <state relative-caret-position="525">
           <caret line="25" column="55" lean-forward="false" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
           <folding />
         </state>
@@ -1586,6 +1529,32 @@
         <state relative-caret-position="651">
           <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainPage.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="36" column="16" lean-forward="true" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1344">
+          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="159" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!block;n#createGraph#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

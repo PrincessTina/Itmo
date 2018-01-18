@@ -27,6 +27,7 @@ dependencies {
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+
 jar {
     baseName = 'lab4'
     version =  '0.1.0'

@@ -6,16 +6,18 @@ import javax.persistence.*;
 @Table(name = "client")
 public class User {
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "cl_seq")
+  @SequenceGenerator(name="cl_seq", sequenceName="cl_seq", allocationSize=1)
   private int id;
   private String login;
   private String password;
 
   public User() {}
 
-  public User(String login, String password) {
+  public User(int id, String login, String password) {
     this.login = login;
     this.password = password;
+    this.id = id;
   }
 
   public int getId() {
