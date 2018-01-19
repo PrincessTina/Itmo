@@ -122,26 +122,6 @@ export default class StartPage extends React.Component {
             });
     }
 
-    //need to delete
-    sendPutCall() {
-        let login = document.getElementsByClassName("_login")[0];
-        let password = document.getElementsByClassName("_password")[0];
-        let id = 9; //response.data._links.href.substr(response.data._links.href.lastIndexOf("/") + 1)
-
-        axios.put('/api/users/' + id,
-            {
-                login: login.value,
-                password: password.value
-            }
-        )
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-    }
-
     checkCall() {
         let button = document.getElementsByClassName("w3-button")[0];
 

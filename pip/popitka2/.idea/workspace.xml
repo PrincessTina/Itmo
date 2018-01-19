@@ -7,19 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="743bebce-6be3-4a8b-a2fb-08752259e279" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/compiled/bundle.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/Components/Actions.jsx" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/Actions.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/Components/Reducer.jsx" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/Reducer.jsx" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/journaldev/spring/controllers/HomeController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/journaldev/spring/models/User.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/Components/PageElements/Chart.jsx" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../.gitignore" afterPath="$PROJECT_DIR$/../../.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../courseWork/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../lab3/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../lab3/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/Pages/MainPage.jsx" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Pages/MainPage.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/Pages/StartPage.jsx" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Pages/StartPage.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/compiled/index.jsx" afterPath="$PROJECT_DIR$/src/main/resources/static/js/compiled/index.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/main.html" afterPath="$PROJECT_DIR$/src/main/resources/static/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/compiled/bundle.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/compiled/bundle.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -119,18 +115,19 @@
       <file leaf-file-name="StartPage.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Pages/StartPage.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="137" column="33" lean-forward="false" selection-start-line="137" selection-start-column="33" selection-end-line="137" selection-end-column="33" />
+            <state relative-caret-position="219">
+              <caret line="122" column="5" lean-forward="false" selection-start-line="122" selection-start-column="5" selection-end-line="122" selection-end-column="5" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="e#246#931#0" expanded="false" />
                 <element signature="e#953#1573#0" expanded="false" />
                 <element signature="e#1599#1880#0" expanded="false" />
                 <element signature="e#1901#3425#0" expanded="false" />
-                <element signature="e#5620#5951#0" expanded="false" />
-                <element signature="e#5976#6175#0" expanded="false" />
-                <element signature="e#6192#6250#0" expanded="false" />
-                <element signature="e#6265#8728#0" expanded="false" />
+                <element signature="e#3445#4975#0" expanded="false" />
+                <element signature="e#4993#5324#0" expanded="false" />
+                <element signature="e#5349#5548#0" expanded="false" />
+                <element signature="e#5565#5623#0" expanded="false" />
+                <element signature="e#5638#8101#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -139,59 +136,20 @@
       <file leaf-file-name="MainPage.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Pages/MainPage.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="260" column="13" lean-forward="false" selection-start-line="260" selection-start-column="13" selection-end-line="260" selection-end-column="13" />
+            <state relative-caret-position="387">
+              <caret line="309" column="29" lean-forward="true" selection-start-line="309" selection-start-column="29" selection-end-line="309" selection-end-column="29" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#503#558#0" expanded="false" />
-                <element signature="e#4098#4858#0" expanded="false" />
-                <element signature="e#4873#5745#0" expanded="false" />
-                <element signature="e#5770#6055#0" expanded="false" />
-                <element signature="e#6077#6128#0" expanded="false" />
-                <element signature="e#6149#8077#0" expanded="false" />
-                <element signature="e#8092#10670#0" expanded="false" />
-                <marker date="1516322345728" expanded="true" signature="5295:5359" ph="..." />
-                <marker date="1516322345728" expanded="true" signature="5295:5477" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Actions.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/Actions.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="46" lean-forward="false" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
-              <folding>
-                <element signature="n#!!block;n#addPoint#0" expanded="false" />
-                <element signature="n#!!block;n#setNullPoints#0" expanded="false" />
-                <element signature="n#!!block;n#setUser#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Reducer.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/Reducer.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="20" column="53" lean-forward="false" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-                <element signature="n#!!block;n#userReducer#0" expanded="false" />
-                <element signature="n#!!block;n#pointsReducer#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Chart.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Components/PageElements/Chart.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="80" selection-end-column="5" />
-              <folding>
-                <element signature="e#153#2110#0" expanded="false" />
+                <element signature="e#411#466#0" expanded="false" />
+                <element signature="e#487#1651#0" expanded="false" />
+                <element signature="e#1669#3324#0" expanded="false" />
+                <element signature="e#3342#4773#0" expanded="false" />
+                <element signature="e#4788#5835#0" expanded="false" />
+                <element signature="e#5860#6145#0" expanded="false" />
+                <element signature="e#6167#6218#0" expanded="false" />
+                <element signature="e#6239#8167#0" expanded="false" />
+                <marker date="1516329119477" expanded="true" signature="5385:5449" ph="..." />
+                <marker date="1516329119477" expanded="true" signature="5385:5567" ph="..." />
               </folding>
             </state>
           </provider>
@@ -607,9 +565,9 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/Reducer.jsx" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/Components/PageElements/Table.jsx" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/Pages/StartPage.jsx" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/Components/PageElements/Chart.jsx" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/compiled/index.jsx" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/Pages/StartPage.jsx" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/Pages/MainPage.jsx" />
       </list>
     </option>
@@ -697,24 +655,6 @@
               <item name="popitka2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="all" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="popitka2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="popitka2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="all" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="popitka2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="popitka2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -743,17 +683,6 @@
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="Components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="popitka2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="popitka2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="PageElements" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="popitka2" type="b2602c69:ProjectViewProjectNode" />
@@ -983,6 +912,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SpringRepositoriesView">
+    <option name="showModules" value="false" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -994,12 +926,12 @@
       <option name="presentableId" value="Default" />
       <updated>1515928991146</updated>
       <workItem from="1515928996162" duration="74817000" />
-      <workItem from="1516107317041" duration="65241000" />
+      <workItem from="1516107317041" duration="70867000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140058000" />
+    <option name="totallyTimeSpent" value="145684000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1019,11 +951,11 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3257403" sideWeight="0.50805587" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3257403" sideWeight="0.5102041" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3257403" sideWeight="0.49194413" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3257403" sideWeight="0.48979592" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.49785176" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1365,18 +1297,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/Actions.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="46" lean-forward="false" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
-          <folding>
-            <element signature="n#!!block;n#addPoint#0" expanded="false" />
-            <element signature="n#!!block;n#setNullPoints#0" expanded="false" />
-            <element signature="n#!!block;n#setUser#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1396,20 +1316,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Pages/StartPage.jsx">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Components/PageElements/Chart.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="137" column="33" lean-forward="false" selection-start-line="137" selection-start-column="33" selection-end-line="137" selection-end-column="33" />
+        <state relative-caret-position="147">
+          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="80" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/Actions.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="46" lean-forward="false" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#246#931#0" expanded="false" />
-            <element signature="e#953#1573#0" expanded="false" />
-            <element signature="e#1599#1880#0" expanded="false" />
-            <element signature="e#1901#3425#0" expanded="false" />
-            <element signature="e#5620#5951#0" expanded="false" />
-            <element signature="e#5976#6175#0" expanded="false" />
-            <element signature="e#6192#6250#0" expanded="false" />
-            <element signature="e#6265#8728#0" expanded="false" />
+            <element signature="n#!!block;n#addPoint#0" expanded="false" />
+            <element signature="n#!!block;n#setNullPoints#0" expanded="false" />
+            <element signature="n#!!block;n#setUser#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1426,31 +1348,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Components/PageElements/Chart.jsx">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Pages/StartPage.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="80" selection-end-column="5" />
+        <state relative-caret-position="219">
+          <caret line="122" column="5" lean-forward="false" selection-start-line="122" selection-start-column="5" selection-end-line="122" selection-end-column="5" />
           <folding>
-            <element signature="e#153#2110#0" expanded="false" />
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#246#931#0" expanded="false" />
+            <element signature="e#953#1573#0" expanded="false" />
+            <element signature="e#1599#1880#0" expanded="false" />
+            <element signature="e#1901#3425#0" expanded="false" />
+            <element signature="e#3445#4975#0" expanded="false" />
+            <element signature="e#4993#5324#0" expanded="false" />
+            <element signature="e#5349#5548#0" expanded="false" />
+            <element signature="e#5565#5623#0" expanded="false" />
+            <element signature="e#5638#8101#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Pages/MainPage.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="260" column="13" lean-forward="false" selection-start-line="260" selection-start-column="13" selection-end-line="260" selection-end-column="13" />
+        <state relative-caret-position="387">
+          <caret line="309" column="29" lean-forward="true" selection-start-line="309" selection-start-column="29" selection-end-line="309" selection-end-column="29" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#503#558#0" expanded="false" />
-            <element signature="e#4098#4858#0" expanded="false" />
-            <element signature="e#4873#5745#0" expanded="false" />
-            <element signature="e#5770#6055#0" expanded="false" />
-            <element signature="e#6077#6128#0" expanded="false" />
-            <element signature="e#6149#8077#0" expanded="false" />
-            <element signature="e#8092#10670#0" expanded="false" />
-            <marker date="1516322345728" expanded="true" signature="5295:5359" ph="..." />
-            <marker date="1516322345728" expanded="true" signature="5295:5477" ph="..." />
+            <element signature="e#411#466#0" expanded="false" />
+            <element signature="e#487#1651#0" expanded="false" />
+            <element signature="e#1669#3324#0" expanded="false" />
+            <element signature="e#3342#4773#0" expanded="false" />
+            <element signature="e#4788#5835#0" expanded="false" />
+            <element signature="e#5860#6145#0" expanded="false" />
+            <element signature="e#6167#6218#0" expanded="false" />
+            <element signature="e#6239#8167#0" expanded="false" />
+            <marker date="1516329119477" expanded="true" signature="5385:5449" ph="..." />
+            <marker date="1516329119477" expanded="true" signature="5385:5567" ph="..." />
           </folding>
         </state>
       </provider>

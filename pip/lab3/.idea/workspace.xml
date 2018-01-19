@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bae94e55-fd54-4867-ae39-dda9c4df9c7f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/compiled/bundle.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Components/Actions.jsx" afterPath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Components/Redux/Actions.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Components/Reducer.jsx" afterPath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Components/Redux/Reducer.jsx" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/java/com/journaldev/spring/controllers/HomeController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/java/com/journaldev/spring/models/User.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Components/PageElements/Chart.jsx" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../.gitignore" afterPath="$PROJECT_DIR$/../../.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../courseWork/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../popitka2/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/../popitka2/src/main/resources/application.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Pages/MainPage.jsx" afterPath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Pages/MainPage.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Pages/StartPage.jsx" afterPath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Pages/StartPage.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/compiled/index.jsx" afterPath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/compiled/index.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/main.html" afterPath="$PROJECT_DIR$/../popitka2/src/main/resources/static/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/compiled/bundle.js" afterPath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/compiled/bundle.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />

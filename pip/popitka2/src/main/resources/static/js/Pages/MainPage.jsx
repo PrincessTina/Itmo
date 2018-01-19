@@ -1,8 +1,6 @@
 import React from "react";
 import axios from "axios";
 
-import ReactDOM from "react-dom";
-import Chart from "../Components/PageElements/Chart.jsx";
 import {setNullPoints} from "../Components/Redux/Actions.jsx";
 import {addPoint} from "../Components/Redux/Actions.jsx";
 
@@ -26,11 +24,6 @@ export default class MainPage extends React.Component {
         r.classList.remove("w3-border-0", "w3-pale-red", "w3-leftbar", "w3-border-red");
 
         if (this.validate(r.value) && value > 0 && value <= 3) {
-            ReactDOM.render(
-                <Chart r={r.value}/>,
-                document.getElementsByClassName("chart")[0]
-            );
-
             this.props.store.getState().pointsReducer.points.forEach((point) => {
                 let id = point.id;
                 let result = self.getResult(point.x, point.y, r.value);
@@ -45,7 +38,6 @@ export default class MainPage extends React.Component {
                     }
                 )
                     .then(function (response) {
-                        console.log(response);
                     })
                     .catch(function (error) {
                         console.log(error);
@@ -61,31 +53,21 @@ export default class MainPage extends React.Component {
     sendPoint() {
         let x = document.getElementsByClassName("_x")[0];
         let y = document.getElementsByClassName("_y")[0];
-        let r = document.getElementsByClassName("_r")[0];
+        let r;
         let result;
         let self = this;
         let x_value = parseFloat(x.value);
         let y_value = parseFloat(y.value);
         let condition = true;
-        let r_value;
 
         x.classList.remove("w3-border-0", "w3-pale-red", "w3-leftbar", "w3-border-red");
         y.classList.remove("w3-border-0", "w3-pale-red", "w3-leftbar", "w3-border-red");
-        r.classList.remove("w3-border-0", "w3-pale-red", "w3-leftbar", "w3-border-red");
 
         if (this.props.store.getState().pointsReducer.points[0] !== undefined) {
-            r_value = this.props.store.getState().pointsReducer.points[0].r;
+            r = this.props.store.getState().pointsReducer.points[0].r;
         } else {
-            r_value = parseFloat(document.getElementsByClassName("_r")[0].value);
-
-            if (this.validate(r.value) && r_value > 0 && r_value <= 3) {
-
-            } else {
-                condition = false;
-                r.classList.add("w3-border-0", "w3-pale-red", "w3-leftbar", "w3-border-red");
-            }
+            r = 3;
         }
-
 
         if (this.validate(x.value) && x_value >= -5 && x_value <= 3) {
 
@@ -102,12 +84,12 @@ export default class MainPage extends React.Component {
         }
 
         if (condition) {
-            result = this.getResult(x_value, y_value, r_value);
+            result = this.getResult(x_value, y_value, r);
 
             axios.post('/api/points', {
                 x: x_value,
                 y: y_value,
-                r: r_value,
+                r: r,
                 result: result,
                 userid: self.props.store.getState().userReducer.user.id,
             })
@@ -134,9 +116,23 @@ export default class MainPage extends React.Component {
                     self.props.store.dispatch(addPoint(id, point.x, point.y, point.r, point.result));
                 });
 
-                console.log(self.props.store.getState());
+                self.props.store.dispatch(setNullPoints());
 
-                self.redraw();
+                axios.get('/api/points/search/findByUserid?userid=' + userid)
+                    .then(function (response) {
+                        response.data._embedded.points.forEach((point) => {
+                            let id = point._links.point.href.substr(point._links.point.href.lastIndexOf("/") + 1);
+
+                            self.props.store.dispatch(addPoint(id, point.x, point.y, point.r, point.result));
+                        });
+
+                        console.log(self.props.store.getState());
+
+                        self.redraw();
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
             })
             .catch(function (error) {
                 console.log(error);
@@ -144,10 +140,16 @@ export default class MainPage extends React.Component {
     }
 
     redraw() {
-        let chart = $('.chart').highcharts();
+        let r = 3;
+
+        if (this.props.store.getState().pointsReducer.points[0] !== undefined) {
+            r = this.props.store.getState().pointsReducer.points[0].r;
+        }
 
         //redraw chart
-        chart.series[3].data = null;
+        this.createGraph(r);
+
+        let chart = $('.chart').highcharts();
 
         //redraw table body
         document.getElementsByTagName("tbody")[0].innerHTML = ``;
@@ -280,10 +282,10 @@ export default class MainPage extends React.Component {
                         <tbody/>
                     </table>
                 </div>
-                <div className="w3-container w3-rest" style={{verticalAlign: 'top', padding: '0'}}>
+                <div className="w3-container w3-half" style={{verticalAlign: 'top', padding: '0'}}>
                     <div className={"chart"}/>
 
-                    <div className="w3-container w3-padding w3-margin">
+                    <div className="w3-container w3-padding">
                         <input type="text"
                                className="_r w3-padding-small w3-margin w3-animate-input w3-border w3-border-black"
                                placeholder="Input r (0; 3]" style={{width: '46%'}}/>
@@ -301,6 +303,11 @@ export default class MainPage extends React.Component {
                                 style={{width: '40%', marginLeft: '33%'}}
                                 onClick={this.sendPoint.bind(this)}>Check point
                         </button>
+
+                        <a href={"/index.html"}>
+                            <img src="../../images/door.png" className={"w3-hover-sepia"}
+                                 style={{position: 'absolute', right: '2%', bottom: '4%', width: '3%'}}/>
+                        </a> 
                     </div>
                 </div>
             </div>
