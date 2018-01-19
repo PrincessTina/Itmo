@@ -2,115 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bae94e55-fd54-4867-ae39-dda9c4df9c7f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/images/icon1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/images/icon2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Components/Redux/Actions.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Components/Redux/PointsReducer.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Components/Redux/Store.jsx" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/compiled/bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/static/js/Components/Redux/Actions.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/static/js/Components/Redux/PointsReducer.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/static/js/Components/Redux/Store.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/static/js/Pages/StartPage.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/static/js/compiled/bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/static/js/compiled/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/static/resources/images/icon1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/static/resources/images/icon2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/views/main.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/views/start.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../popitka2/src/main/webapp/views/test.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/artifacts/Gradle___courseWork___step1_1_0_SNAPSHOT_war.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/artifacts/Gradle___courseWork___step1_1_0_SNAPSHOT_war__exploded_.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/gradle.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__ant_ant_1_6_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__antlr_antlr_2_7_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__avalon_framework_avalon_framework_4_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__com_fasterxml_classmate_1_3_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__commons_collections_commons_collections_3_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__commons_logging_commons_logging_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__dom4j_dom4j_1_6_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__freemarker_freemarker_2_3_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_annotation_jsr250_api_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_ejb_javax_ejb_api_3_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_el_el_api_2_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_enterprise_cdi_api_1_1_PFD.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_inject_javax_inject_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_servlet_servlet_api_2_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_transaction_javax_transaction_api_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_transaction_jta_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_ws_rs_javax_ws_rs_api_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__junit_junit_4_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__log4j_log4j_1_2_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__log4j_log4j_1_2_13.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__logkit_logkit_1_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__mysql_mysql_connector_java_5_1_31.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_apache_geronimo_specs_geronimo_jta_1_1_spec_1_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_core_commands_3_3_0_I20070605_0010.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_core_contenttype_3_4_200_v20140207_1251.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_core_jobs_3_6_0_v20140424_0053.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_core_runtime_3_9_0_v20130326_1255.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_equinox_app_1_3_200_v20130910_1609.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_equinox_common_3_6_200_v20130402_1505.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_equinox_preferences_3_5_200_v20140224_1527.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_equinox_registry_3_5_400_v20140428_1507.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_osgi_3_10_0_v20140606_1445.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_text_3_3_0_v20070606_0010.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_tycho_org_eclipse_jdt_core_3_9_1_v20130905_0837.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_hibernate_annotations_3_5_6_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_hibernate_commons_annotations_3_2_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_hibernate_core_5_2_1_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_hibernate_entitymanager_5_1_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_hibernate_gradle_plugin_5_2_1_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_hibernate_tools_5_0_1_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_javax_persistence_hibernate_jpa_2_0_api_1_0_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_jtidy_r8_20060801.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_javassist_javassist_3_20_0_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_jboss_jandex_2_0_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_jboss_logging_jboss_logging_3_3_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_jboss_spec_javax_interceptor_jboss_interceptors_api_1_1_spec_1_0_0_Beta1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_25.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_slf4j_slf4j_log4j12_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__postgresql_postgresql_9_0_801_jdbc4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__xml_apis_xml_apis_1_0_b2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/modules/step1.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/modules/step1_main.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/modules/step1_test.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/gradle/wrapper/gradle-wrapper.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/gradle/wrapper/gradle-wrapper.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/gradlew" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/gradlew.bat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/out/production/classes/ApplicationConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/out/production/classes/Test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/out/production/classes/ejbs/TimeBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/settings.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/java/ApplicationConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/java/Test.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/java/ejbs/TimeBean.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/java/models/User.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/resources/META-INF/persistence.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/webapp/WEB-INF/glassfish-web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/webapp/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/webapp/resources/css/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/webapp/resources/js/backbone.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../popitka2/src/main/java/all/models/UsersRepository.java" afterPath="$PROJECT_DIR$/../popitka2/src/main/java/all/controllers/UsersRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Components/Actions.jsx" afterPath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Components/Redux/Actions.jsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Components/Reducer.jsx" afterPath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Components/Redux/Reducer.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../.gitignore" afterPath="$PROJECT_DIR$/../../.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../courseWork/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../popitka2/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/build.gradle" afterPath="$PROJECT_DIR$/../popitka2/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/src/main/java/all/entity/User.java" afterPath="$PROJECT_DIR$/../popitka2/src/main/java/all/entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/index.html" afterPath="$PROJECT_DIR$/../popitka2/src/main/resources/static/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/../popitka2/src/main/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Pages/MainPage.jsx" afterPath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Pages/MainPage.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Pages/StartPage.jsx" afterPath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/Pages/StartPage.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/compiled/index.jsx" afterPath="$PROJECT_DIR$/../popitka2/src/main/resources/static/js/compiled/index.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../popitka2/src/main/resources/static/main.html" afterPath="$PROJECT_DIR$/../popitka2/src/main/resources/static/main.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -148,8 +52,8 @@
       <file leaf-file-name="mainPage.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/mainPage.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="36" column="16" lean-forward="true" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+            <state relative-caret-position="189">
+              <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -158,11 +62,9 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1344">
-              <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="159" selection-end-column="1" />
-              <folding>
-                <element signature="n#!!block;n#createGraph#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="-41">
+              <caret line="74" column="24" lean-forward="true" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -650,10 +552,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1114,12 +1016,13 @@
       <workItem from="1515028786951" duration="387000" />
       <workItem from="1515270843783" duration="785000" />
       <workItem from="1515933021696" duration="6060000" />
-      <workItem from="1516236653938" duration="243000" />
+      <workItem from="1516236653938" duration="2681000" />
+      <workItem from="1516297955530" duration="1723000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159732000" />
+    <option name="totallyTimeSpent" value="163893000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1147,7 +1050,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15789473" sideWeight="0.48854962" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16004297" sideWeight="0.48854962" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1542,19 +1445,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/mainPage.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="36" column="16" lean-forward="true" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+        <state relative-caret-position="189">
+          <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1344">
-          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="159" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!block;n#createGraph#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="-41">
+          <caret line="74" column="24" lean-forward="true" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>

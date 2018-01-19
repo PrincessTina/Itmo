@@ -2,11 +2,11 @@ import React from "react";
 import axios from "axios";
 import ReactDOM from "react-dom";
 
-import Store from "../Components/Reducer.jsx";
+import Store from "../Components/Redux/Reducer.jsx";
 import StartPage from "../Pages/StartPage.jsx";
 import MainPage from "../Pages/MainPage.jsx";
 
-import {setUser} from "../Components/Actions.jsx";
+import {setUser} from "../Components/Redux/Actions.jsx";
 
 document.onreadystatechange = () => {
     let index = window.location.href.lastIndexOf("#") + 1;

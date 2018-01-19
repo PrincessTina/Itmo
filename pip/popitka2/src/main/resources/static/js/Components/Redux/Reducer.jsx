@@ -2,6 +2,7 @@ import {combineReducers} from 'redux'
 import {createStore} from 'redux'
 import {ADD_USER} from './Actions.jsx'
 import {ADD_POINT} from "./Actions.jsx";
+import {NULL} from "./Actions.jsx";
 
 function userReducer(state = {user: {}}, action) {
     switch (action.type) {
@@ -22,10 +23,21 @@ function pointsReducer(state = {points: []}, action) {
         case ADD_POINT:
             return {
                 points: state.points.concat([{
+                    id: action.id,
                     x: action.x,
-                    y: action.y
+                    y: action.y,
+                    r: action.r,
+                    result: action.result,
                 }]),
             };
+            break;
+
+        case NULL:
+            return {
+              points: [],
+            };
+            break;
+
         default:
             return state;
     }

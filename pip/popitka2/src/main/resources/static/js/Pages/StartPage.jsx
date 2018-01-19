@@ -1,8 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-import {setUser} from "../Components/Actions.jsx";
-import {addPoint} from "../Components/Actions.jsx";
+import {setUser} from "../Components/Redux/Actions.jsx";
 
 export default class StartPage extends React.Component {
     constructor(props) {
@@ -161,7 +160,6 @@ export default class StartPage extends React.Component {
         console.log(this.props.store.getState());
 
         this.props.store.dispatch(setUser(id, login));
-        this.props.store.dispatch(addPoint(1, 2));
         console.log(this.props.store.getState());
     }
 
@@ -221,16 +219,3 @@ export default class StartPage extends React.Component {
         );
     }
 }
-
-/*<div>
-                <Header />
-                <div classNameName="login_form">
-                    <div>
-                        <div>Login:</div>
-                        <input className="_login" type="text" />
-                    </div>
-
-                    <button onClick={this.onLoginSubmit} >Sumbit</button>
-                    <button onClick={this.setUser} >TEST REDUX BABY</button>
-                </div>
-            </div>*/

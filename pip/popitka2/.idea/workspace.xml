@@ -7,116 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="743bebce-6be3-4a8b-a2fb-08752259e279" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Components/Actions.jsx" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/icon1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/icon2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/Actions.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/PointsReducer.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/Store.jsx" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/compiled/bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/static/js/Components/Redux/Actions.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/static/js/Components/Redux/PointsReducer.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/static/js/Components/Redux/Store.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/static/js/Pages/StartPage.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/static/js/compiled/bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/static/js/compiled/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/static/resources/images/icon1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/static/resources/images/icon2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/views/main.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/views/start.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/views/test.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/artifacts/Gradle___courseWork___step1_1_0_SNAPSHOT_war.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/artifacts/Gradle___courseWork___step1_1_0_SNAPSHOT_war__exploded_.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/gradle.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__ant_ant_1_6_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__antlr_antlr_2_7_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__avalon_framework_avalon_framework_4_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__com_fasterxml_classmate_1_3_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__commons_collections_commons_collections_3_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__commons_logging_commons_logging_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__dom4j_dom4j_1_6_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__freemarker_freemarker_2_3_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_annotation_jsr250_api_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_ejb_javax_ejb_api_3_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_el_el_api_2_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_enterprise_cdi_api_1_1_PFD.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_inject_javax_inject_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_servlet_servlet_api_2_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_transaction_javax_transaction_api_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_transaction_jta_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__javax_ws_rs_javax_ws_rs_api_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__junit_junit_4_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__log4j_log4j_1_2_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__log4j_log4j_1_2_13.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__logkit_logkit_1_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__mysql_mysql_connector_java_5_1_31.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_apache_geronimo_specs_geronimo_jta_1_1_spec_1_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_core_commands_3_3_0_I20070605_0010.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_core_contenttype_3_4_200_v20140207_1251.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_core_jobs_3_6_0_v20140424_0053.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_core_runtime_3_9_0_v20130326_1255.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_equinox_app_1_3_200_v20130910_1609.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_equinox_common_3_6_200_v20130402_1505.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_equinox_preferences_3_5_200_v20140224_1527.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_equinox_registry_3_5_400_v20140428_1507.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_osgi_3_10_0_v20140606_1445.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_text_3_3_0_v20070606_0010.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_eclipse_tycho_org_eclipse_jdt_core_3_9_1_v20130905_0837.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_hibernate_annotations_3_5_6_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_hibernate_commons_annotations_3_2_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_hibernate_core_5_2_1_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_hibernate_entitymanager_5_1_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_hibernate_gradle_plugin_5_2_1_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_hibernate_tools_5_0_1_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_javax_persistence_hibernate_jpa_2_0_api_1_0_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_hibernate_jtidy_r8_20060801.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_javassist_javassist_3_20_0_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_jboss_jandex_2_0_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_jboss_logging_jboss_logging_3_3_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_jboss_spec_javax_interceptor_jboss_interceptors_api_1_1_spec_1_0_0_Beta1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_25.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__org_slf4j_slf4j_log4j12_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__postgresql_postgresql_9_0_801_jdbc4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/libraries/Gradle__xml_apis_xml_apis_1_0_b2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/modules/step1.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/modules/step1_main.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/modules/step1_test.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/gradle/wrapper/gradle-wrapper.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/gradle/wrapper/gradle-wrapper.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/gradlew" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/gradlew.bat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/out/production/classes/ApplicationConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/out/production/classes/Test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/out/production/classes/ejbs/TimeBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/settings.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/java/ApplicationConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/java/Test.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/java/ejbs/TimeBean.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/java/models/User.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/resources/META-INF/persistence.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/webapp/WEB-INF/glassfish-web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/webapp/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/webapp/resources/css/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../step1/src/main/webapp/resources/js/backbone.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/all/models/UsersRepository.java" afterPath="$PROJECT_DIR$/src/main/java/all/controllers/UsersRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/Components/Actions.jsx" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/Actions.jsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/Components/Reducer.jsx" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/Reducer.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../.gitignore" afterPath="$PROJECT_DIR$/../../.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../courseWork/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../courseWork/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../lab3/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../lab3/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/all/entity/User.java" afterPath="$PROJECT_DIR$/src/main/java/all/entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/Pages/MainPage.jsx" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Pages/MainPage.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/Pages/StartPage.jsx" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Pages/StartPage.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/compiled/index.jsx" afterPath="$PROJECT_DIR$/src/main/resources/static/js/compiled/index.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/main.html" afterPath="$PROJECT_DIR$/src/main/resources/static/main.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -203,23 +106,11 @@
       <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/compiled/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+            <state relative-caret-position="347">
+              <caret line="32" column="65" lean-forward="false" selection-start-line="32" selection-start-column="65" selection-end-line="32" selection-end-column="65" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <element signature="n#!!block;n#checkPage#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainPage.jsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Pages/MainPage.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#919#1064#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -228,37 +119,79 @@
       <file leaf-file-name="StartPage.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Pages/StartPage.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="175" column="91" lean-forward="false" selection-start-line="175" selection-start-column="80" selection-end-line="175" selection-end-column="91" />
+            <state relative-caret-position="303">
+              <caret line="137" column="33" lean-forward="false" selection-start-line="137" selection-start-column="33" selection-end-line="137" selection-end-column="33" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#292#977#0" expanded="false" />
-                <element signature="e#999#1619#0" expanded="false" />
-                <element signature="e#1645#1926#0" expanded="false" />
-                <element signature="e#1947#3471#0" expanded="false" />
-                <element signature="e#3491#5021#0" expanded="false" />
-                <element signature="e#5062#5648#0" expanded="false" />
-                <element signature="e#5666#5997#0" expanded="false" />
-                <element signature="e#6022#6272#0" expanded="false" />
-                <element signature="e#6289#6347#0" expanded="false" />
-                <marker date="1516236915460" expanded="true" signature="6397:8788" ph="..." />
-                <marker date="1516236915460" expanded="true" signature="6499:6514" ph="..." />
-                <marker date="1516236915460" expanded="true" signature="6587:6741" ph="..." />
-                <marker date="1516236915460" expanded="true" signature="6838:6899" ph="..." />
-                <marker date="1516236915460" expanded="true" signature="7182:8765" ph="..." />
-                <marker date="1516236915460" expanded="true" signature="7247:7844" ph="..." />
-                <marker date="1516236915460" expanded="true" signature="7350:7554" ph="..." />
-                <marker date="1516236915460" expanded="true" signature="7421:7430" ph="..." />
-                <marker date="1516236915460" expanded="true" signature="7672:7813" ph="..." />
-                <marker date="1516236915460" expanded="true" signature="7716:7725" ph="..." />
-                <marker date="1516236915460" expanded="true" signature="7964:8210" ph="..." />
-                <marker date="1516236915460" expanded="true" signature="8162:8170" ph="..." />
-                <marker date="1516236915460" expanded="true" signature="8264:8516" ph="..." />
-                <marker date="1516236915460" expanded="true" signature="8468:8476" ph="..." />
-                <marker date="1516236915460" expanded="true" signature="8665:8673" ph="..." />
-                <marker date="1516236915460" expanded="true" signature="8835:9265" ph="..." />
-                <marker date="1516236915460" expanded="true" signature="8911:9246" ph="..." />
-                <marker date="1516236915460" expanded="true" signature="8937:9071" ph="..." />
+                <element signature="e#246#931#0" expanded="false" />
+                <element signature="e#953#1573#0" expanded="false" />
+                <element signature="e#1599#1880#0" expanded="false" />
+                <element signature="e#1901#3425#0" expanded="false" />
+                <element signature="e#5620#5951#0" expanded="false" />
+                <element signature="e#5976#6175#0" expanded="false" />
+                <element signature="e#6192#6250#0" expanded="false" />
+                <element signature="e#6265#8728#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainPage.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Pages/MainPage.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="260" column="13" lean-forward="false" selection-start-line="260" selection-start-column="13" selection-end-line="260" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#503#558#0" expanded="false" />
+                <element signature="e#4098#4858#0" expanded="false" />
+                <element signature="e#4873#5745#0" expanded="false" />
+                <element signature="e#5770#6055#0" expanded="false" />
+                <element signature="e#6077#6128#0" expanded="false" />
+                <element signature="e#6149#8077#0" expanded="false" />
+                <element signature="e#8092#10670#0" expanded="false" />
+                <marker date="1516322345728" expanded="true" signature="5295:5359" ph="..." />
+                <marker date="1516322345728" expanded="true" signature="5295:5477" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Actions.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/Actions.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" column="46" lean-forward="false" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+              <folding>
+                <element signature="n#!!block;n#addPoint#0" expanded="false" />
+                <element signature="n#!!block;n#setNullPoints#0" expanded="false" />
+                <element signature="n#!!block;n#setUser#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Reducer.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/Reducer.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="20" column="53" lean-forward="false" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+                <element signature="n#!!block;n#userReducer#0" expanded="false" />
+                <element signature="n#!!block;n#pointsReducer#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Chart.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Components/PageElements/Chart.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="80" selection-end-column="5" />
+              <folding>
+                <element signature="e#153#2110#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -291,11 +224,14 @@
       <find>style</find>
       <find>render</find>
       <find>sendPostCall</find>
+      <find>var</find>
+      <find>getResult</find>
     </findStrings>
     <replaceStrings>
       <replace>div className</replace>
       <replace>&lt;* className</replace>
       <replace>CLOSE_ACTION</replace>
+      <replace>let</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -624,10 +560,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/js/Components/Redux.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/js/Components/Redux.jsx" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/js/Components/Redux/actions.jsx" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/js/Components/Redux/Stores.jsx" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/js/Components/Redux/Store.jsx" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/js/index.jsx" />
@@ -657,7 +589,6 @@
         <option value="$PROJECT_DIR$/src/main/java/all/models/UsersRepository.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/js/Pages/StartPage.jsx" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
@@ -667,13 +598,18 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/UserReducer.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/UserStore.jsx" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/UserReducer.jsx" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/Reducer.jsx" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/Actions.jsx" />
         <option value="$PROJECT_DIR$/src/main/java/all/controllers/UsersRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/main.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/compiled/index.jsx" />
+        <option value="$PROJECT_DIR$/src/main/java/all/entity/Point.java" />
+        <option value="$PROJECT_DIR$/src/main/java/all/controllers/PointsRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/Actions.jsx" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/Reducer.jsx" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/Components/PageElements/Table.jsx" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/Pages/StartPage.jsx" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/Components/PageElements/Chart.jsx" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/compiled/index.jsx" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/Pages/MainPage.jsx" />
       </list>
     </option>
@@ -806,7 +742,7 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="compiled" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="popitka2" type="b2602c69:ProjectViewProjectNode" />
@@ -817,6 +753,18 @@
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="PageElements" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="popitka2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="popitka2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="Redux" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="popitka2" type="b2602c69:ProjectViewProjectNode" />
@@ -865,21 +813,25 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\krist\Documents\itmo\pip\popitka2\src\main\resources\static\js\Components\Redux" />
       <recent name="C:\Users\krist\Documents\itmo\pip\popitka2\src\main\resources\static" />
       <recent name="C:\Users\krist\Documents\itmo\pip\popitka2\src\main\webapp\static\js\compiled" />
       <recent name="C:\Users\krist\Documents\itmo\pip\popitka2\src\main\webapp\static" />
       <recent name="C:\Users\krist\Documents\itmo\pip\popitka2\src\main\webapp\static\js\Pages" />
-      <recent name="C:\Users\krist\Documents\itmo\pip\popitka2\src\main\webapp\static\js\ReactComponents" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="all.entity" />
+      <recent name="all.controllers" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\krist\Documents\itmo\pip\popitka2\src\main\resources\static\js\Components\PageElements" />
       <recent name="C:\Users\krist\Documents\itmo\pip\popitka2\src\main\resources\static\js\Pages" />
       <recent name="C:\Users\krist\Documents\itmo\pip\popitka2\src\main\resources\static" />
       <recent name="C:\Users\krist\Documents\itmo\pip\popitka2\src\main\resources" />
       <recent name="C:\Users\krist\Documents\itmo\pip\popitka2\src\main\resources\static\static\resources\images" />
-      <recent name="C:\Users\krist\Documents\itmo\pip\popitka2\src\main\webapp\WEB-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1042,12 +994,12 @@
       <option name="presentableId" value="Default" />
       <updated>1515928991146</updated>
       <workItem from="1515928996162" duration="74817000" />
-      <workItem from="1516107317041" duration="35637000" />
+      <workItem from="1516107317041" duration="65241000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110454000" />
+    <option name="totallyTimeSpent" value="140058000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1067,7 +1019,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3257403" sideWeight="0.50805587" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3257403" sideWeight="0.50805587" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3257403" sideWeight="0.49194413" order="10" side_tool="false" content_ui="tabs" />
@@ -1138,26 +1090,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/journaldev/spring/models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/journaldev/spring/controllers/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="20" column="29" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/all/models/UsersRepositoryClass.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/all/proba/EmployeeService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/all/proba/EmployeeServiceImpl.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/all/proba/EmployeeRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/all/proba/Employee.java" />
@@ -1339,14 +1271,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/fa563e9e/72f83cfa-f969-4545-9c31-76cba0c3eb85/studs.s225074.client">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1391,67 +1315,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/all/controllers/UsersRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        <state relative-caret-position="273">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/compiled/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="n#!!block;n#checkPage#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Pages/StartPage.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="175" column="91" lean-forward="false" selection-start-line="175" selection-start-column="80" selection-end-line="175" selection-end-column="91" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#292#977#0" expanded="false" />
-            <element signature="e#999#1619#0" expanded="false" />
-            <element signature="e#1645#1926#0" expanded="false" />
-            <element signature="e#1947#3471#0" expanded="false" />
-            <element signature="e#3491#5021#0" expanded="false" />
-            <element signature="e#5062#5648#0" expanded="false" />
-            <element signature="e#5666#5997#0" expanded="false" />
-            <element signature="e#6022#6272#0" expanded="false" />
-            <element signature="e#6289#6347#0" expanded="false" />
-            <marker date="1516236915460" expanded="true" signature="6397:8788" ph="..." />
-            <marker date="1516236915460" expanded="true" signature="6499:6514" ph="..." />
-            <marker date="1516236915460" expanded="true" signature="6587:6741" ph="..." />
-            <marker date="1516236915460" expanded="true" signature="6838:6899" ph="..." />
-            <marker date="1516236915460" expanded="true" signature="7182:8765" ph="..." />
-            <marker date="1516236915460" expanded="true" signature="7247:7844" ph="..." />
-            <marker date="1516236915460" expanded="true" signature="7350:7554" ph="..." />
-            <marker date="1516236915460" expanded="true" signature="7421:7430" ph="..." />
-            <marker date="1516236915460" expanded="true" signature="7672:7813" ph="..." />
-            <marker date="1516236915460" expanded="true" signature="7716:7725" ph="..." />
-            <marker date="1516236915460" expanded="true" signature="7964:8210" ph="..." />
-            <marker date="1516236915460" expanded="true" signature="8162:8170" ph="..." />
-            <marker date="1516236915460" expanded="true" signature="8264:8516" ph="..." />
-            <marker date="1516236915460" expanded="true" signature="8468:8476" ph="..." />
-            <marker date="1516236915460" expanded="true" signature="8665:8673" ph="..." />
-            <marker date="1516236915460" expanded="true" signature="8835:9265" ph="..." />
-            <marker date="1516236915460" expanded="true" signature="8911:9246" ph="..." />
-            <marker date="1516236915460" expanded="true" signature="8937:9071" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1463,34 +1331,126 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Components/Actions.jsx">
+    <entry file="file://$PROJECT_DIR$/src/main/java/all/entity/Point.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        <state relative-caret-position="84">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="method#Point#1;class#Point#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/all/controllers/UsersRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/all/controllers/PointsRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="12" column="41" lean-forward="false" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Components/PageElements/Table.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/Actions.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="46" lean-forward="false" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
           <folding>
             <element signature="n#!!block;n#addPoint#0" expanded="false" />
+            <element signature="n#!!block;n#setNullPoints#0" expanded="false" />
             <element signature="n#!!block;n#setUser#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Components/Reducer.jsx">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="5" column="49" lean-forward="false" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+        <state relative-caret-position="126">
+          <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/compiled/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="32" column="65" lean-forward="false" selection-start-line="32" selection-start-column="65" selection-end-line="32" selection-end-column="65" />
           <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#919#1064#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Pages/StartPage.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="137" column="33" lean-forward="false" selection-start-line="137" selection-start-column="33" selection-end-line="137" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#246#931#0" expanded="false" />
+            <element signature="e#953#1573#0" expanded="false" />
+            <element signature="e#1599#1880#0" expanded="false" />
+            <element signature="e#1901#3425#0" expanded="false" />
+            <element signature="e#5620#5951#0" expanded="false" />
+            <element signature="e#5976#6175#0" expanded="false" />
+            <element signature="e#6192#6250#0" expanded="false" />
+            <element signature="e#6265#8728#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Components/Redux/Reducer.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="20" column="53" lean-forward="false" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
             <element signature="n#!!block;n#userReducer#0" expanded="false" />
             <element signature="n#!!block;n#pointsReducer#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Components/PageElements/Chart.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="80" selection-end-column="5" />
+          <folding>
+            <element signature="e#153#2110#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Pages/MainPage.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+        <state relative-caret-position="513">
+          <caret line="260" column="13" lean-forward="false" selection-start-line="260" selection-start-column="13" selection-end-line="260" selection-end-column="13" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#503#558#0" expanded="false" />
+            <element signature="e#4098#4858#0" expanded="false" />
+            <element signature="e#4873#5745#0" expanded="false" />
+            <element signature="e#5770#6055#0" expanded="false" />
+            <element signature="e#6077#6128#0" expanded="false" />
+            <element signature="e#6149#8077#0" expanded="false" />
+            <element signature="e#8092#10670#0" expanded="false" />
+            <marker date="1516322345728" expanded="true" signature="5295:5359" ph="..." />
+            <marker date="1516322345728" expanded="true" signature="5295:5477" ph="..." />
           </folding>
         </state>
       </provider>
