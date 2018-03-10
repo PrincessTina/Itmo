@@ -21662,7 +21662,7 @@ var MainPage = function (_React$Component) {
                         _react2.default.createElement(
                             "a",
                             { href: "/index.html" },
-                            _react2.default.createElement("img", { src: "../../images/door.png", className: "w3-hover-sepia",
+                            _react2.default.createElement("img", { src: "../../images/door.png", className: "w3-hover-sepia", title: "Exit",
                                 style: { position: 'absolute', right: '2%', bottom: '4%', width: '3%' } })
                         )
                     )

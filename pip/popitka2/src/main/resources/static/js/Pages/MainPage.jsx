@@ -305,9 +305,9 @@ export default class MainPage extends React.Component {
                         </button>
 
                         <a href={"/index.html"}>
-                            <img src="../../images/door.png" className={"w3-hover-sepia"}
+                            <img src="../../images/door.png" className={"w3-hover-sepia"} title={"Exit"}
                                  style={{position: 'absolute', right: '2%', bottom: '4%', width: '3%'}}/>
-                        </a> 
+                        </a>
                     </div>
                 </div>
             </div>
