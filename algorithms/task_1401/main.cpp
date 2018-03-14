@@ -29,6 +29,17 @@ int findBelongingToSquare(int x, int y, int number) {
     }
 }
 
+int findDepth(int number) {
+    int result = 0;
+
+    while (number >= 8) {
+        result++;
+        number /= 2;
+    }
+
+    return result;
+}
+
 bool findBelongingToOneSquare(int x1, int y1, int x2, int y2, int number) {
     int square1 = findBelongingToSquare(x1, y1, number);
     int square2 = findBelongingToSquare(x2, y2, number);
@@ -63,10 +74,46 @@ void changeCoordinate(int numberOfSquare, int squareSize, int *i1, int *j1, int 
     }
 }
 
-void changeSquare(int number, int *squareSize, int *numberOfSquare, int i1, int j1) {
-    *numberOfSquare = *numberOfSquare + 1;
+void incLastInList() {
+    int value = depth.back();
+
     depth.pop_back();
-    depth.push_back(*numberOfSquare);
+    value++;
+    depth.push_back(value);
+}
+
+void insertList(int number) {
+    int c = findDepth(number);
+
+    while (depth.size() < c) {
+        depth.push_back(1);
+    }
+}
+
+void setCoordinate(int *i1, int *j1, int number) {
+    int i0 = 0;
+    int j0 = 0;
+    int size = number;
+
+    for (int n: depth) {
+        changeCoordinate(n, size, i1, j1, i0, j0);
+        i0 = *i1;
+        j0 = *j1;
+        size /= 2;
+    }
+}
+
+void changeSquare(int number, int *squareSize, int *numberOfSquare, int i1, int j1) {
+    insertList(number);
+    incLastInList();
+
+    while (depth.size() > 1 && depth.back() == 5) {
+        depth.pop_back();
+        incLastInList();
+    }
+    insertList(number);
+
+    *numberOfSquare = *numberOfSquare + 1;
 
     if (*squareSize == 4 && *numberOfSquare > 4) {
         *squareSize *= 2;
@@ -80,8 +127,6 @@ void changeSquare(int number, int *squareSize, int *numberOfSquare, int i1, int 
             *numberOfSquare = *numberOfSquare + 1;
             continue;
         } else {
-            *numberOfSquare = *numberOfSquare + 1;
-            //changeCoordinate(*numberOfSquare, *squareSize, i0, j0, 0, 0);
             *numberOfSquare = 1;
         }
     }
@@ -95,8 +140,6 @@ void doTask(int number, int x, int y) {
     int j1 = 0;
     int x1;
     int y1;
-    int i0 = 0;
-    int j0 = 0;
     int squareSize = number;
     int numberOfSquare = 1;
 
@@ -124,13 +167,12 @@ void doTask(int number, int x, int y) {
     if (number > 4) {
         while (true) {
             if (squareSize >= 4) {
-                //выбрать координаты для квадрата
-                changeCoordinate(numberOfSquare, squareSize, &i1, &j1, i0, j0);
-
                 if (squareSize > 4) {
                     squareSize /= 2;
-                    depth.push_back(numberOfSquare);
                 }
+
+                //выбрать координаты для квадрата
+                setCoordinate(&i1, &j1, number);
 
                 half = squareSize / 2;
 
@@ -169,7 +211,7 @@ void doTask(int number, int x, int y) {
                 //смена квадрата внутри квадрата и, если надо, координат внешнего квадрата
                 squareSize *= 2;
 
-                changeSquare(number, &squareSize, &numberOfSquare, i1, j1, &i0, &j0);
+                changeSquare(number, &squareSize, &numberOfSquare, i1, j1);
 
                 if (numberOfSquare == 5) {
                     break;
@@ -178,12 +220,42 @@ void doTask(int number, int x, int y) {
         }
     }
 
+    i1 = 0;
+    j1 = -2;
+
+    while (i1 + 2 != number || j1 + 2 != number) {
+        j1 += 2;
+
+        if (j1 == number) {
+            i1 += 2;
+            j1 = 0;
+        }
+
+        if (array[i1][j1] == -1) {
+            array[i1][j1] = k;
+        }
+
+        if (array[i1][j1 + 1] == -1) {
+            array[i1][j1 + 1] = k;
+        }
+
+        if (array[i1 + 1][j1] == -1) {
+            array[i1 + 1][j1] = k;
+        }
+
+        if (array[i1 + 1][j1 + 1] == -1) {
+            array[i1 + 1][j1 + 1] = k;
+        }
+
+        k++;
+    }
+
     //write matrix
     cout << "Answer: " << endl;
 
     for (int i = 0; i < number; i++) {
         for (int j = 0; j < number; j++) {
-            cout << setw(3) << array[i][j];
+            cout << setw(6) << array[i][j];
         }
         cout << endl;
     }
