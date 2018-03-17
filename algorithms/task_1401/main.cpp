@@ -220,6 +220,7 @@ void doTask(int number, int x, int y) {
         }
     }
 
+    //дозаполнение квадратов 2 x 2
     i1 = 0;
     j1 = -2;
 
