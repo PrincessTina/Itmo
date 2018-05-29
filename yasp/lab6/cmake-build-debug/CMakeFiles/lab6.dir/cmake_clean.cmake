@@ -1,9 +1,11 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/lab6.dir/main.c.o"
-  "CMakeFiles/lab6.dir/mem.c.o"
-  "CMakeFiles/lab6.dir/chunk.c.o"
+  "CMakeFiles/lab6.dir/main.c.obj"
+  "CMakeFiles/lab6.dir/mem.c.obj"
+  "CMakeFiles/lab6.dir/chunk.c.obj"
   "lab6.pdb"
-  "lab6"
+  "lab6.exe"
+  "lab6.exe.manifest"
+  "liblab6.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
