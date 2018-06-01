@@ -1,3 +1,0 @@
-C:/Users/krist/Documents/itmo/algorithms/task_1726/cmake-build-debug/CMakeFiles/task_1726.dir
-C:/Users/krist/Documents/itmo/algorithms/task_1726/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/krist/Documents/itmo/algorithms/task_1726/cmake-build-debug/CMakeFiles/rebuild_cache.dir
