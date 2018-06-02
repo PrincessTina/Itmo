@@ -90,14 +90,14 @@ void getAnswer(string *array) {
 }
 
 int main() {
-    n = 7;
-    //cin >> n;
-    string array[n] {"WINNT\\SYSTEM32\\CONFIG", "GAMES", "WINNT\\DRIVERS", "HOME", "WIN\\SOFT", "GAMES\\DRIVERS",
-                     "WINNT\\SYSTEM32\\CERTSRV\\CERTCO~1\\X86"};
+    //n = 7;
+    cin >> n;
+    string array[n]; //{"WINNT\\SYSTEM32\\CONFIG", "GAMES", "WINNT\\DRIVERS", "HOME", "WIN\\SOFT", "GAMES\\DRIVERS",
+                     //"WINNT\\SYSTEM32\\CERTSRV\\CERTCO~1\\X86"};
 
-    //for (int i = 0; i < n; i++) {
-    //    cin >> array[i];
-    //}
+    for (int i = 0; i < n; i++) {
+        cin >> array[i];
+    }
 
     getAnswer(array);
 
