@@ -1,12 +1,11 @@
 #include <iostream>
 #include <vector>
-#include <cstring>
 #include <algorithm>
 
 using namespace std;
 
 typedef struct radix {
-    int day = 1;
+    unsigned int day = 1;
 } radix;
 
 typedef struct billionaire {
@@ -18,21 +17,30 @@ typedef struct billionaire {
 typedef struct town {
     string name;
     unsigned long long capital = 0;
-    int recordDays = 0;
+    unsigned int recordDays = 0;
 } town;
 
-struct comparator {
+struct townComparator {
     inline bool operator() (const town &town1, const town &town2) {
         return (town1.name < town2.name);
     }
-} comparator;
+} townComparator;
 
-int n; //count of billionaires
-int m; //count of days
-int k; //count of migrations
+struct billionaireComparator {
+    inline bool operator() (const billionaire &billionaire1, const billionaire &billionaire2) {
+        return (billionaire1.surname < billionaire2.surname);
+    }
+} billionaireComparator;
+
+unsigned int n; //count of billionaires
+unsigned int m; //count of days
+unsigned int k; //count of migrations
+radix root;
+vector<town> towns;
+vector<billionaire> billionaires;
 
 // if town was found by name, returns it's index; else returns -1
-int findTown(vector<town> towns, const string &name) {
+int findTown(const string &name) {
     for (int i = 0; i < towns.size(); i++) {
         if (towns[i].name == name) {
             return i;
@@ -42,17 +50,34 @@ int findTown(vector<town> towns, const string &name) {
     return -1;
 }
 
-int findBillionaire(vector<billionaire> billionaires, const string &surname) {
-    for (int i = 0; i < billionaires.size(); i++) {
+int findBillionaire(const string &surname) {
+    int l = 0;
+    int r = billionaires.size() - 1;
+
+    while (true) {
+        int partSize = (r - l) / 2;
+        int index = l + partSize;
+        string middle = billionaires[index].surname;
+
+        if (surname == middle) {
+            return index;
+        } else if (surname > middle) {
+            l = index + 1;
+        } else {
+            r = index - 1;
+        }
+    }
+
+    /*for (int i = 0; i < billionaires.size(); i++) {
         if (billionaires[i].surname == surname) {
             return i;
         }
-    }
+    }*/
 }
 
 // if town was found by name, only returns it's index; else add it and returns index of the last
-int addTown(vector<town> &towns, const town town) {
-    int index = findTown(towns, town.name);
+int addTown(const town town) {
+    int index = findTown(town.name);
 
     if (index != -1) {
         towns[index].capital += town.capital;
@@ -63,7 +88,7 @@ int addTown(vector<town> &towns, const town town) {
     }
 }
 
-void findLeadingTown(vector<town> &towns, int days) {
+void findLeadingTown(unsigned int days) {
     int indexOfLeadingTown = 0;
     unsigned long long maxCapital = towns[0].capital;
     bool notOne = false;
@@ -88,12 +113,12 @@ void findLeadingTown(vector<town> &towns, int days) {
     }
 }
 
-void changeTownCapitals(vector<town> &towns, int currentTown, int newTown, unsigned long long wealth) {
+void changeTownCapitals(int currentTown, int newTown, unsigned long long wealth) {
     towns[currentTown].capital -= wealth;
     towns[newTown].capital += wealth;
 }
 
-void inputInitialStates(vector<billionaire> &billionaires, vector<town> &towns) {
+void inputInitialStates() {
     for (int i = 0; i < n; i++) {
         billionaire billionaire;
         town town;
@@ -105,14 +130,16 @@ void inputInitialStates(vector<billionaire> &billionaires, vector<town> &towns) 
             billionaire.townOfPresence = 0;
             towns.push_back(town);
         } else {
-            billionaire.townOfPresence = addTown(towns, town);
+            billionaire.townOfPresence = addTown(town);
         }
         billionaires.push_back(billionaire);
     }
+
+    sort(billionaires.begin(), billionaires.end(), billionaireComparator);
 }
 
-void goThroughTheJournal(vector<town> &towns, vector<billionaire> &billionaires, radix *root) {
-    int day;
+void goThroughTheJournal() {
+    unsigned int day;
     string surname;
     town town;
 
@@ -123,26 +150,28 @@ void goThroughTheJournal(vector<town> &towns, vector<billionaire> &billionaires,
 
         cin >> day >> surname >> town.name;
 
-        findLeadingTown(towns, day - root->day + 1);
+        if (day >= root.day) {
+            findLeadingTown(day - root.day + 1);
 
-        root->day = day + 1;
+            root.day = day + 1;
+        }
 
-        billionaire = findBillionaire(billionaires, surname);
-        newTown = addTown(towns, town);
+        billionaire = findBillionaire(surname);
+        newTown = addTown(town);
         currentTown = billionaires[billionaire].townOfPresence;
         billionaires[billionaire].townOfPresence = newTown;
 
-        changeTownCapitals(towns, currentTown, newTown, billionaires[billionaire].wealth);
+        changeTownCapitals(currentTown, newTown, billionaires[billionaire].wealth);
     }
 }
 
-void supplementTheJournal(vector<town> &towns, radix *root) {
-    findLeadingTown(towns, m - root->day + 1);
+void supplementTheJournal() {
+    findLeadingTown(m - root.day + 1);
 
-    root->day = m + 1;
+    root.day = m + 1;
 }
 
-void findNecessaryTowns(vector<town> towns, vector<town> &searchedTowns) {
+void findNecessaryTowns(vector<town> &searchedTowns) {
     for (int i = 0; i < towns.size(); i++) {
         if (towns[i].recordDays != 0) {
             searchedTowns.push_back(towns[i]);
@@ -150,26 +179,13 @@ void findNecessaryTowns(vector<town> towns, vector<town> &searchedTowns) {
     }
 }
 
-void sortTowns(vector<town> &searchedTowns) {
-    for (int i = 0; i < searchedTowns.size() - 1; i++) {
-        for (int j = i + 1; j < searchedTowns.size(); j++) {
-            if (strcmp(searchedTowns[j].name.c_str(), searchedTowns[i].name.c_str()) < 0) {
-                town timing = searchedTowns[i];
-                searchedTowns[i] = searchedTowns[j];
-                searchedTowns[j] = timing;
-            }
-        }
-    }
-}
-
-void printTowns(vector<town> towns) {
+void printTowns() {
     vector<town> searchedTowns;
 
-    findNecessaryTowns(towns, searchedTowns);
+    findNecessaryTowns(searchedTowns);
 
     if (!searchedTowns.empty()) {
-        //sortTowns(searchedTowns);
-        sort(searchedTowns.begin(), searchedTowns.end(), comparator);
+        sort(searchedTowns.begin(), searchedTowns.end(), townComparator);
 
         for (int i = 0; i < searchedTowns.size(); i++) {
             cout << searchedTowns[i].name << " " << searchedTowns[i].recordDays << endl;
@@ -178,17 +194,13 @@ void printTowns(vector<town> towns) {
 }
 
 int main() {
-    radix root;
-    vector<billionaire> billionaires;
-    vector<town> towns;
-
     cin >> n;
-    inputInitialStates(billionaires, towns); // be ready to input n rows
+    inputInitialStates(); // be ready to input n rows
     cin >> m >> k;
-    goThroughTheJournal(towns, billionaires, &root); // be ready to input k rows
-    supplementTheJournal(towns, &root);
+    goThroughTheJournal(); // be ready to input k rows
+    supplementTheJournal();
 
-    printTowns(towns);
+    printTowns();
 
     return 0;
 }

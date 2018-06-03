@@ -1,53 +1,20 @@
 #include <iostream>
 #include <algorithm>
+#include <vector>
 
 using namespace std;
 
 long long n;
 
-void qsort(long long *array, const long long rightRange) {
-    long long middle = array[rightRange / 2];
-    long long l = 0;
-    long long r = rightRange;
-
-    while (l < r) {
-        while (array[l] < middle) {
-            l++;
-        }
-
-        while (array[r] > middle) {
-            r--;
-        }
-
-        //change
-        if (l <= r) {
-            long long timing = array[l];
-            array[l] = array[r];
-            array[r] = timing;
-
-            l++;
-            r--;
-        }
-    }
-
-    if (r > 0) {
-        qsort(array, r);
-    }
-
-    if (l < rightRange) {
-        qsort(&array[l], rightRange - l);
-    }
-}
-
 void print(long long average) {
     cout << average;
 }
 
-void getAverage(const long long *x, const long long *y) {
+void getAverage(vector<int> x, vector<int> y) {
     long long average = 0;
 
-    for (long long i = 0; i < n - 1; i++) {
-        average += (x[i + 1] - x[i] + y[i + 1] - y[i]) * 2 * (i + 1) * (n - i - 1);
+    for (int i = 0; i < n - 1; i++) {
+        average += ((long long) (x[i + 1] - x[i] + y[i + 1] - y[i]) * 2 * (i + 1) * (n - i - 1));
     }
 
     average /= n * (n - 1);
@@ -57,15 +24,21 @@ void getAverage(const long long *x, const long long *y) {
 
 int main() {
     cin >> n;
-    long long x[n];
-    long long y[n];
+    vector<int> x;
+    vector<int> y;
 
-    for (long long i = 0; i < n; i++) {
-        cin >> x[i] >> y[i];
+    for (int i = 0; i < n; i++) {
+        int xMean;
+        int yMean;
+
+        cin >> xMean >> yMean;
+
+        x.push_back(xMean);
+        y.push_back(yMean);
     }
 
-    qsort(x, n - 1);
-    qsort(y, n - 1);
+    sort(x.begin(), x.end());
+    sort(y.begin(), y.end());
 
     getAverage(x, y);
 
