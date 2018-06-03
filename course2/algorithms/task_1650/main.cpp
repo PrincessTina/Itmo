@@ -4,10 +4,6 @@
 
 using namespace std;
 
-typedef struct radix {
-    unsigned int day = 1;
-} radix;
-
 typedef struct billionaire {
     string surname;
     unsigned long long wealth;
@@ -20,22 +16,16 @@ typedef struct town {
     unsigned int recordDays = 0;
 } town;
 
-struct townComparator {
-    inline bool operator() (const town &town1, const town &town2) {
+struct nameTownComparator {
+    inline bool operator()(const town &town1, const town &town2) {
         return (town1.name < town2.name);
     }
-} townComparator;
-
-struct billionaireComparator {
-    inline bool operator() (const billionaire &billionaire1, const billionaire &billionaire2) {
-        return (billionaire1.surname < billionaire2.surname);
-    }
-} billionaireComparator;
+} nameTownComparator;
 
 unsigned int n; //count of billionaires
 unsigned int m; //count of days
 unsigned int k; //count of migrations
-radix root;
+unsigned int root = 1;
 vector<town> towns;
 vector<billionaire> billionaires;
 
@@ -51,28 +41,11 @@ int findTown(const string &name) {
 }
 
 int findBillionaire(const string &surname) {
-    int l = 0;
-    int r = billionaires.size() - 1;
-
-    while (true) {
-        int partSize = (r - l) / 2;
-        int index = l + partSize;
-        string middle = billionaires[index].surname;
-
-        if (surname == middle) {
-            return index;
-        } else if (surname > middle) {
-            l = index + 1;
-        } else {
-            r = index - 1;
-        }
-    }
-
-    /*for (int i = 0; i < billionaires.size(); i++) {
+    for (int i = 0; i < billionaires.size(); i++) {
         if (billionaires[i].surname == surname) {
             return i;
         }
-    }*/
+    }
 }
 
 // if town was found by name, only returns it's index; else add it and returns index of the last
@@ -134,8 +107,6 @@ void inputInitialStates() {
         }
         billionaires.push_back(billionaire);
     }
-
-    sort(billionaires.begin(), billionaires.end(), billionaireComparator);
 }
 
 void goThroughTheJournal() {
@@ -150,10 +121,10 @@ void goThroughTheJournal() {
 
         cin >> day >> surname >> town.name;
 
-        if (day >= root.day) {
-            findLeadingTown(day - root.day + 1);
+        if (day >= root) {
+            findLeadingTown(day - root + 1);
 
-            root.day = day + 1;
+            root = day + 1;
         }
 
         billionaire = findBillionaire(surname);
@@ -166,9 +137,9 @@ void goThroughTheJournal() {
 }
 
 void supplementTheJournal() {
-    findLeadingTown(m - root.day + 1);
+    findLeadingTown(m - root + 1);
 
-    root.day = m + 1;
+    root = m + 1;
 }
 
 void findNecessaryTowns(vector<town> &searchedTowns) {
@@ -185,7 +156,7 @@ void printTowns() {
     findNecessaryTowns(searchedTowns);
 
     if (!searchedTowns.empty()) {
-        sort(searchedTowns.begin(), searchedTowns.end(), townComparator);
+        sort(searchedTowns.begin(), searchedTowns.end(), nameTownComparator);
 
         for (int i = 0; i < searchedTowns.size(); i++) {
             cout << searchedTowns[i].name << " " << searchedTowns[i].recordDays << endl;
