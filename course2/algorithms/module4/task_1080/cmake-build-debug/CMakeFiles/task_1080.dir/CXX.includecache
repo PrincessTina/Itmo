@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/krist/Documents/itmo/course2/algorithms/task_1080/main.cpp
+iostream
+-
+map
+-
+set
+-
+vector
+-
+

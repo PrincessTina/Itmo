@@ -58,17 +58,6 @@ CMAKE_BINARY_DIR = C:\Users\krist\Documents\itmo\course2\algorithms\module2\task
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@echo No interactive CMake dialog available...
-	"C:\Program Files\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -E echo "No interactive CMake dialog available."
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@echo Running CMake to regenerate build system...
@@ -79,6 +68,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@echo No interactive CMake dialog available...
+	"C:\Program Files\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -113,44 +113,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named cmTC_2fe88
+# Target rules for targets named cmTC_9b24c
 
 # Build rule for target.
-cmTC_2fe88: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 cmTC_2fe88
-.PHONY : cmTC_2fe88
+cmTC_9b24c: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 cmTC_9b24c
+.PHONY : cmTC_9b24c
 
 # fast build rule for target.
-cmTC_2fe88/fast:
-	$(MAKE) -f CMakeFiles\cmTC_2fe88.dir\build.make CMakeFiles/cmTC_2fe88.dir/build
-.PHONY : cmTC_2fe88/fast
+cmTC_9b24c/fast:
+	$(MAKE) -f CMakeFiles\cmTC_9b24c.dir\build.make CMakeFiles/cmTC_9b24c.dir/build
+.PHONY : cmTC_9b24c/fast
 
-testCXXCompiler.obj: testCXXCompiler.cxx.obj
+CMakeCXXCompilerABI.obj: CMakeCXXCompilerABI.cpp.obj
 
-.PHONY : testCXXCompiler.obj
+.PHONY : CMakeCXXCompilerABI.obj
 
 # target to build an object file
-testCXXCompiler.cxx.obj:
-	$(MAKE) -f CMakeFiles\cmTC_2fe88.dir\build.make CMakeFiles/cmTC_2fe88.dir/testCXXCompiler.cxx.obj
-.PHONY : testCXXCompiler.cxx.obj
+CMakeCXXCompilerABI.cpp.obj:
+	$(MAKE) -f CMakeFiles\cmTC_9b24c.dir\build.make CMakeFiles/cmTC_9b24c.dir/CMakeCXXCompilerABI.cpp.obj
+.PHONY : CMakeCXXCompilerABI.cpp.obj
 
-testCXXCompiler.i: testCXXCompiler.cxx.i
+CMakeCXXCompilerABI.i: CMakeCXXCompilerABI.cpp.i
 
-.PHONY : testCXXCompiler.i
+.PHONY : CMakeCXXCompilerABI.i
 
 # target to preprocess a source file
-testCXXCompiler.cxx.i:
-	$(MAKE) -f CMakeFiles\cmTC_2fe88.dir\build.make CMakeFiles/cmTC_2fe88.dir/testCXXCompiler.cxx.i
-.PHONY : testCXXCompiler.cxx.i
+CMakeCXXCompilerABI.cpp.i:
+	$(MAKE) -f CMakeFiles\cmTC_9b24c.dir\build.make CMakeFiles/cmTC_9b24c.dir/CMakeCXXCompilerABI.cpp.i
+.PHONY : CMakeCXXCompilerABI.cpp.i
 
-testCXXCompiler.s: testCXXCompiler.cxx.s
+CMakeCXXCompilerABI.s: CMakeCXXCompilerABI.cpp.s
 
-.PHONY : testCXXCompiler.s
+.PHONY : CMakeCXXCompilerABI.s
 
 # target to generate assembly for a file
-testCXXCompiler.cxx.s:
-	$(MAKE) -f CMakeFiles\cmTC_2fe88.dir\build.make CMakeFiles/cmTC_2fe88.dir/testCXXCompiler.cxx.s
-.PHONY : testCXXCompiler.cxx.s
+CMakeCXXCompilerABI.cpp.s:
+	$(MAKE) -f CMakeFiles\cmTC_9b24c.dir\build.make CMakeFiles/cmTC_9b24c.dir/CMakeCXXCompilerABI.cpp.s
+.PHONY : CMakeCXXCompilerABI.cpp.s
 
 # Help Target
 help:
@@ -158,12 +158,12 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... cmTC_2fe88
-	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... testCXXCompiler.obj
-	@echo ... testCXXCompiler.i
-	@echo ... testCXXCompiler.s
+	@echo ... cmTC_9b24c
+	@echo ... edit_cache
+	@echo ... CMakeCXXCompilerABI.obj
+	@echo ... CMakeCXXCompilerABI.i
+	@echo ... CMakeCXXCompilerABI.s
 .PHONY : help
 
 

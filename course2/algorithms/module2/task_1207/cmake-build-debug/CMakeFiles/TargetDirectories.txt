@@ -1,3 +1,0 @@
-C:/Users/krist/Documents/itmo/algorithms/module2/task_1207/cmake-build-debug/CMakeFiles/task_1207.dir
-C:/Users/krist/Documents/itmo/algorithms/module2/task_1207/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/krist/Documents/itmo/algorithms/module2/task_1207/cmake-build-debug/CMakeFiles/rebuild_cache.dir

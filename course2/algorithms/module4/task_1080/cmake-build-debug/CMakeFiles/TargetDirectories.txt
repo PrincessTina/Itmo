@@ -1,0 +1,3 @@
+C:/Users/krist/Documents/itmo/course2/algorithms/task_1080/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/krist/Documents/itmo/course2/algorithms/task_1080/cmake-build-debug/CMakeFiles/task_1080.dir
+C:/Users/krist/Documents/itmo/course2/algorithms/task_1080/cmake-build-debug/CMakeFiles/rebuild_cache.dir

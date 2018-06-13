@@ -62,39 +62,39 @@ CMAKE_SOURCE_DIR = C:\Users\krist\Documents\itmo\course2\algorithms\module2\task
 CMAKE_BINARY_DIR = C:\Users\krist\Documents\itmo\course2\algorithms\module2\task_1604\cmake-build-debug\CMakeFiles\CMakeTmp
 
 #=============================================================================
-# Target rules for target CMakeFiles/cmTC_2fe88.dir
+# Target rules for target CMakeFiles/cmTC_9b24c.dir
 
 # All Build rule for target.
-CMakeFiles/cmTC_2fe88.dir/all:
-	$(MAKE) -f CMakeFiles\cmTC_2fe88.dir\build.make CMakeFiles/cmTC_2fe88.dir/depend
-	$(MAKE) -f CMakeFiles\cmTC_2fe88.dir\build.make CMakeFiles/cmTC_2fe88.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\krist\Documents\itmo\course2\algorithms\module2\task_1604\cmake-build-debug\CMakeFiles\CMakeTmp\CMakeFiles --progress-num=1,2 "Built target cmTC_2fe88"
-.PHONY : CMakeFiles/cmTC_2fe88.dir/all
+CMakeFiles/cmTC_9b24c.dir/all:
+	$(MAKE) -f CMakeFiles\cmTC_9b24c.dir\build.make CMakeFiles/cmTC_9b24c.dir/depend
+	$(MAKE) -f CMakeFiles\cmTC_9b24c.dir\build.make CMakeFiles/cmTC_9b24c.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\krist\Documents\itmo\course2\algorithms\module2\task_1604\cmake-build-debug\CMakeFiles\CMakeTmp\CMakeFiles --progress-num=1,2 "Built target cmTC_9b24c"
+.PHONY : CMakeFiles/cmTC_9b24c.dir/all
 
 # Include target in all.
-all: CMakeFiles/cmTC_2fe88.dir/all
+all: CMakeFiles/cmTC_9b24c.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/cmTC_2fe88.dir/rule: cmake_check_build_system
+CMakeFiles/cmTC_9b24c.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\krist\Documents\itmo\course2\algorithms\module2\task_1604\cmake-build-debug\CMakeFiles\CMakeTmp\CMakeFiles 2
-	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/cmTC_2fe88.dir/all
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/cmTC_9b24c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\krist\Documents\itmo\course2\algorithms\module2\task_1604\cmake-build-debug\CMakeFiles\CMakeTmp\CMakeFiles 0
-.PHONY : CMakeFiles/cmTC_2fe88.dir/rule
+.PHONY : CMakeFiles/cmTC_9b24c.dir/rule
 
 # Convenience name for target.
-cmTC_2fe88: CMakeFiles/cmTC_2fe88.dir/rule
+cmTC_9b24c: CMakeFiles/cmTC_9b24c.dir/rule
 
-.PHONY : cmTC_2fe88
-
-# clean rule for target.
-CMakeFiles/cmTC_2fe88.dir/clean:
-	$(MAKE) -f CMakeFiles\cmTC_2fe88.dir\build.make CMakeFiles/cmTC_2fe88.dir/clean
-.PHONY : CMakeFiles/cmTC_2fe88.dir/clean
+.PHONY : cmTC_9b24c
 
 # clean rule for target.
-clean: CMakeFiles/cmTC_2fe88.dir/clean
+CMakeFiles/cmTC_9b24c.dir/clean:
+	$(MAKE) -f CMakeFiles\cmTC_9b24c.dir\build.make CMakeFiles/cmTC_9b24c.dir/clean
+.PHONY : CMakeFiles/cmTC_9b24c.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/cmTC_9b24c.dir/clean
 
 .PHONY : clean
 
