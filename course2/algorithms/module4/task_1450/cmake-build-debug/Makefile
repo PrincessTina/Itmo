@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\krist\Documents\itmo\course2\algorithms\task_1450
+CMAKE_SOURCE_DIR = C:\Users\krist\Documents\itmo\course2\algorithms\module4\task_1450
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\krist\Documents\itmo\course2\algorithms\task_1450\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\krist\Documents\itmo\course2\algorithms\module4\task_1450\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\krist\Documents\itmo\course2\algorithms\task_1450\cmake-build-debug\CMakeFiles C:\Users\krist\Documents\itmo\course2\algorithms\task_1450\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\krist\Documents\itmo\course2\algorithms\module4\task_1450\cmake-build-debug\CMakeFiles C:\Users\krist\Documents\itmo\course2\algorithms\module4\task_1450\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\krist\Documents\itmo\course2\algorithms\task_1450\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\krist\Documents\itmo\course2\algorithms\module4\task_1450\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target

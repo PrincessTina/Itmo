@@ -124,6 +124,7 @@ int main() {
 
             cin >> num;
         }
+
         countries[i + 1] = neighbours;
         country_color[i + 1] = -1;
     }

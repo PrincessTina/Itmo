@@ -53,45 +53,45 @@ RM = "C:\Program Files\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\krist\Documents\itmo\course2\algorithms\module4\task_1080
+CMAKE_SOURCE_DIR = C:\Users\krist\Documents\itmo\course2\algorithms\module4\task_1160
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\krist\Documents\itmo\course2\algorithms\module4\task_1080\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\krist\Documents\itmo\course2\algorithms\module4\task_1160\cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/task_1080.dir
+# Target rules for target CMakeFiles/task_1160.dir
 
 # All Build rule for target.
-CMakeFiles/task_1080.dir/all:
-	$(MAKE) -f CMakeFiles\task_1080.dir\build.make CMakeFiles/task_1080.dir/depend
-	$(MAKE) -f CMakeFiles\task_1080.dir\build.make CMakeFiles/task_1080.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\krist\Documents\itmo\course2\algorithms\module4\task_1080\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target task_1080"
-.PHONY : CMakeFiles/task_1080.dir/all
+CMakeFiles/task_1160.dir/all:
+	$(MAKE) -f CMakeFiles\task_1160.dir\build.make CMakeFiles/task_1160.dir/depend
+	$(MAKE) -f CMakeFiles\task_1160.dir\build.make CMakeFiles/task_1160.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\krist\Documents\itmo\course2\algorithms\module4\task_1160\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target task_1160"
+.PHONY : CMakeFiles/task_1160.dir/all
 
 # Include target in all.
-all: CMakeFiles/task_1080.dir/all
+all: CMakeFiles/task_1160.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/task_1080.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\krist\Documents\itmo\course2\algorithms\module4\task_1080\cmake-build-debug\CMakeFiles 2
-	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/task_1080.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\krist\Documents\itmo\course2\algorithms\module4\task_1080\cmake-build-debug\CMakeFiles 0
-.PHONY : CMakeFiles/task_1080.dir/rule
+CMakeFiles/task_1160.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\krist\Documents\itmo\course2\algorithms\module4\task_1160\cmake-build-debug\CMakeFiles 2
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/task_1160.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\krist\Documents\itmo\course2\algorithms\module4\task_1160\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/task_1160.dir/rule
 
 # Convenience name for target.
-task_1080: CMakeFiles/task_1080.dir/rule
+task_1160: CMakeFiles/task_1160.dir/rule
 
-.PHONY : task_1080
-
-# clean rule for target.
-CMakeFiles/task_1080.dir/clean:
-	$(MAKE) -f CMakeFiles\task_1080.dir\build.make CMakeFiles/task_1080.dir/clean
-.PHONY : CMakeFiles/task_1080.dir/clean
+.PHONY : task_1160
 
 # clean rule for target.
-clean: CMakeFiles/task_1080.dir/clean
+CMakeFiles/task_1160.dir/clean:
+	$(MAKE) -f CMakeFiles\task_1160.dir\build.make CMakeFiles/task_1160.dir/clean
+.PHONY : CMakeFiles/task_1160.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/task_1160.dir/clean
 
 .PHONY : clean
 
