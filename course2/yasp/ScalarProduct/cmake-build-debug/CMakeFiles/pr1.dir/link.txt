@@ -1,3 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\pr1.dir/objects.a
-C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\ar.exe cr CMakeFiles\pr1.dir/objects.a @CMakeFiles\pr1.dir\objects1.rsp
-C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE -g   -Wl,--whole-archive CMakeFiles\pr1.dir/objects.a -Wl,--no-whole-archive  -o pr1.exe -Wl,--out-implib,libpr1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\pr1.dir\linklibs.rsp
