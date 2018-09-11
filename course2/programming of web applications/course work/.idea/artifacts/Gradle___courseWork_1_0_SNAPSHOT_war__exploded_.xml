@@ -28,10 +28,10 @@
           <element id="library" level="project" name="Gradle: com.google.code.gson:gson:1.7.2" />
           <element id="library" level="project" name="Gradle: com.rabbitmq:amqp-client:3.0.1" />
           <element id="library" level="project" name="Gradle: javax.validation:validation-api:1.0.0.GA" />
+          <element id="library" level="project" name="Gradle: javax.inject:javax.inject:1" />
           <element id="library" level="project" name="Gradle: javax.transaction:javax.transaction-api:1.2" />
           <element id="library" level="project" name="Gradle: org.eclipse.persistence:javax.persistence:2.1.0" />
           <element id="library" level="project" name="Gradle: org.eclipse.persistence:commonj.sdo:2.1.1" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar" />
         </element>
       </element>
     </root>

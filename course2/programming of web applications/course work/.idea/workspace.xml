@@ -1,324 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f1449685-279d-4587-b2bb-af2e8d06cd8f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/.idea/task_1005(v2).iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/CMakeLists.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeCache.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/3.8.2/CMakeCCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/3.8.2/CMakeCXXCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_CXX.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/3.8.2/CMakeRCCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/3.8.2/CMakeSystem.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/CMakeCCompilerId.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/a.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/Makefile2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/clion-environment.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/cmake.check_cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/feature_tests.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/feature_tests.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/feature_tests.cxx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/progress.marks" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/task_1005_v2_.dir/CXX.includecache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/task_1005_v2_.dir/DependInfo.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/task_1005_v2_.dir/build.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/task_1005_v2_.dir/cmake_clean.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/task_1005_v2_.dir/depend.internal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/task_1005_v2_.dir/depend.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/task_1005_v2_.dir/flags.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/task_1005_v2_.dir/link.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/task_1005_v2_.dir/linklibs.rsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/task_1005_v2_.dir/main.cpp.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/task_1005_v2_.dir/objects.a" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/task_1005_v2_.dir/objects1.rsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/CMakeFiles/task_1005_v2_.dir/progress.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/cmake_install.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/task_1005_v2_.cbp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/cmake-build-debug/task_1005_v2_.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1005(v2)/main.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/.idea/task_1155.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/CMakeLists.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeCache.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/3.8.2/CMakeCCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/3.8.2/CMakeCXXCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_CXX.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/3.8.2/CMakeRCCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/3.8.2/CMakeSystem.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/CMakeCCompilerId.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/a.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/Makefile2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/clion-environment.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/cmake.check_cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/feature_tests.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/feature_tests.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/feature_tests.cxx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/progress.marks" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/task_1155.dir/CXX.includecache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/task_1155.dir/DependInfo.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/task_1155.dir/build.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/task_1155.dir/cmake_clean.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/task_1155.dir/depend.internal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/task_1155.dir/depend.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/task_1155.dir/flags.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/task_1155.dir/link.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/task_1155.dir/linklibs.rsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/task_1155.dir/main.cpp.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/task_1155.dir/objects.a" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/task_1155.dir/objects1.rsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/CMakeFiles/task_1155.dir/progress.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/cmake_install.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/task_1155.cbp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/cmake-build-debug/task_1155.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1155/main.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/.idea/task_1296.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/CMakeLists.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeCache.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/3.8.2/CMakeCCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/3.8.2/CMakeCXXCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_CXX.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/3.8.2/CMakeRCCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/3.8.2/CMakeSystem.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/CMakeCCompilerId.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/a.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/Makefile2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/clion-environment.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/cmake.check_cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/feature_tests.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/feature_tests.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/feature_tests.cxx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/progress.marks" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/task_1296.dir/CXX.includecache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/task_1296.dir/DependInfo.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/task_1296.dir/build.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/task_1296.dir/cmake_clean.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/task_1296.dir/depend.internal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/task_1296.dir/depend.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/task_1296.dir/flags.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/task_1296.dir/link.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/task_1296.dir/linklibs.rsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/task_1296.dir/main.cpp.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/task_1296.dir/objects.a" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/task_1296.dir/objects1.rsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/CMakeFiles/task_1296.dir/progress.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/cmake_install.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/task_1296.cbp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/cmake-build-debug/task_1296.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1296/main.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/.idea/task_1401.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/CMakeLists.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeCache.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/3.8.2/CMakeCCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/3.8.2/CMakeCXXCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_CXX.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/3.8.2/CMakeRCCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/3.8.2/CMakeSystem.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/CMakeCCompilerId.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/a.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/Makefile2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/clion-environment.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/cmake.check_cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/feature_tests.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/feature_tests.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/feature_tests.cxx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/progress.marks" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/task_1401.dir/CXX.includecache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/task_1401.dir/DependInfo.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/task_1401.dir/build.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/task_1401.dir/cmake_clean.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/task_1401.dir/depend.internal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/task_1401.dir/depend.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/task_1401.dir/flags.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/task_1401.dir/link.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/task_1401.dir/linklibs.rsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/task_1401.dir/main.cpp.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/task_1401.dir/objects.a" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/task_1401.dir/objects1.rsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/CMakeFiles/task_1401.dir/progress.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/cmake_install.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/task_1401.cbp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/cmake-build-debug/task_1401.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_1401/main.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/.idea/task_2025.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/CMakeLists.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeCache.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/3.8.2/CMakeCCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/3.8.2/CMakeCXXCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_CXX.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/3.8.2/CMakeRCCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/3.8.2/CMakeSystem.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/CMakeCCompilerId.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/a.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/Makefile2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/clion-environment.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/cmake.check_cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/feature_tests.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/feature_tests.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/feature_tests.cxx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/progress.marks" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/task_2025.dir/CXX.includecache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/task_2025.dir/DependInfo.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/task_2025.dir/build.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/task_2025.dir/cmake_clean.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/task_2025.dir/depend.internal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/task_2025.dir/depend.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/task_2025.dir/flags.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/task_2025.dir/link.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/task_2025.dir/linklibs.rsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/task_2025.dir/main.cpp.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/task_2025.dir/objects.a" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/task_2025.dir/objects1.rsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/CMakeFiles/task_2025.dir/progress.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/cmake_install.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/task_2025.cbp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/cmake-build-debug/task_2025.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/task_2025/main.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/.idea/untitled.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/CMakeLists.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeCache.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/3.8.2/CMakeCCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/3.8.2/CMakeCXXCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_CXX.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/3.8.2/CMakeRCCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/3.8.2/CMakeSystem.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/CMakeCCompilerId.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/a.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/Makefile2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/clion-environment.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/cmake.check_cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/feature_tests.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/feature_tests.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/feature_tests.cxx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/progress.marks" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/untitled.dir/build.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/untitled.dir/cmake_clean.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/untitled.dir/depend.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/untitled.dir/flags.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/untitled.dir/link.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/untitled.dir/linklibs.rsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/untitled.dir/objects1.rsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/CMakeFiles/untitled.dir/progress.make" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/cmake_install.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/cmake-build-debug/untitled.cbp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../algorithms/untitled/main.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/a.out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/C.includecache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/chunk.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/depend.internal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/main.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/mem.c.o" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../algorithms/task_1207/cmake-build-debug/CMakeFiles/task_1207.dir/main.cpp.obj" afterPath="$PROJECT_DIR$/../../algorithms/task_1207/cmake-build-debug/CMakeFiles/task_1207.dir/main.cpp.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../algorithms/task_1207/cmake-build-debug/CMakeFiles/task_1207.dir/objects.a" afterPath="$PROJECT_DIR$/../../algorithms/task_1207/cmake-build-debug/CMakeFiles/task_1207.dir/objects.a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../algorithms/task_1207/cmake-build-debug/task_1207.exe" afterPath="$PROJECT_DIR$/../../algorithms/task_1207/cmake-build-debug/task_1207.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_CXX.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/feature_tests.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../algorithms/task_1207/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../algorithms/task_1207/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../algorithms/task_1207/main.cpp" afterPath="$PROJECT_DIR$/../../algorithms/task_1207/main.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../yasp/lab6/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/3.8.2/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/3.8.2/CMakeCCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/3.8.2/CMakeCXXCompiler.cmake" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/3.8.2/CMakeCXXCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/3.8.2/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/3.8.2/CMakeSystem.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/CMakeCCompilerId.c" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/CMakeCCompilerId.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/Makefile.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/Makefile2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/clion-environment.txt" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/clion-environment.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/clion-log.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/cmake.check_cache" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/cmake.check_cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/feature_tests.c" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/feature_tests.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/feature_tests.cxx" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/feature_tests.cxx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/build.make" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/cmake_clean.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/depend.make" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/depend.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/flags.make" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/flags.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/link.txt" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/progress.make" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/lab6.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/CMakeFiles/progress.marks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/lab6.cbp" afterPath="$PROJECT_DIR$/../../yasp/lab6/cmake-build-debug/lab6.cbp" />
-    </list>
+    <list default="true" id="f1449685-279d-4587-b2bb-af2e8d06cd8f" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -373,33 +56,59 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+            <state relative-caret-position="0">
+              <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/pages/Index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="294">
+              <caret line="14" column="44" lean-forward="true" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
               <folding>
-                <marker date="1515708762924" expanded="true" signature="1087:1440" ph="..." />
-                <marker date="1515708762924" expanded="false" signature="1157:1167" ph="..." />
-                <marker date="1515708762924" expanded="true" signature="1249:1415" ph="..." />
-                <marker date="1515708762924" expanded="true" signature="1642:3229" ph="..." />
-                <marker date="1515708762924" expanded="false" signature="1755:1787" ph="..." />
-                <marker date="1515708762924" expanded="true" signature="1788:2913" ph="..." />
-                <marker date="1515708762924" expanded="false" signature="1981:1996" ph="..." />
-                <marker date="1515708762924" expanded="true" signature="2007:2467" ph="..." />
-                <marker date="1515708762924" expanded="true" signature="2179:2448" ph="..." />
-                <marker date="1515708762924" expanded="true" signature="2554:2896" ph="..." />
-                <marker date="1515708762924" expanded="false" signature="2628:2643" ph="..." />
-                <marker date="1515708762924" expanded="true" signature="2644:2877" ph="..." />
-                <marker date="1515708762924" expanded="false" signature="2834:2848" ph="..." />
-                <marker date="1515708762924" expanded="true" signature="3059:3214" ph="..." />
+                <marker date="1531849891965" expanded="true" signature="1087:1440" ph="..." />
+                <marker date="1531849891965" expanded="false" signature="1157:1167" ph="..." />
+                <marker date="1531849891965" expanded="true" signature="1249:1415" ph="..." />
+                <marker date="1531849891965" expanded="true" signature="1642:3229" ph="..." />
+                <marker date="1531849891965" expanded="false" signature="1755:1787" ph="..." />
+                <marker date="1531849891965" expanded="true" signature="1788:2913" ph="..." />
+                <marker date="1531849891965" expanded="false" signature="1981:1996" ph="..." />
+                <marker date="1531849891965" expanded="true" signature="2007:2467" ph="..." />
+                <marker date="1531849891965" expanded="true" signature="2179:2448" ph="..." />
+                <marker date="1531849891965" expanded="true" signature="2554:2896" ph="..." />
+                <marker date="1531849891965" expanded="false" signature="2628:2643" ph="..." />
+                <marker date="1531849891965" expanded="true" signature="2644:2877" ph="..." />
+                <marker date="1531849891965" expanded="false" signature="2834:2848" ph="..." />
+                <marker date="1531849891965" expanded="true" signature="3059:3214" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/auth/AuthController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthLogic.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ejb/auth/AuthLogic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-785">
+              <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+              <folding>
+                <element signature="method#authorizeWithIn#0;class#AuthLogic#0" expanded="false" />
+                <element signature="method#registerUserWithVk#0;class#AuthLogic#0" expanded="false" />
+                <element signature="method#createPassword#0;class#AuthLogic#0" expanded="false" />
+                <element signature="method#getResponseFromApi#0;class#AuthLogic#0" expanded="false" />
+                <element signature="method#getFromPostCall#0;class#AuthLogic#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -429,6 +138,7 @@
       <find>http://bigpicture.ru/wp-content/uploads/2013/06/Places05.jpg</find>
       <find>//@Transaction.*</find>
       <find>header</find>
+      <find>get</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -440,7 +150,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
@@ -629,7 +339,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4544440622254" />
+        <entry key="$PROJECT_DIR$" value="4595549672476" />
         <entry key="$PROJECT_DIR$/build.gradle" value="1002460361" />
       </map>
     </option>
@@ -898,44 +608,35 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="course work" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="course work" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="course work" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="course work" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="course work" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -943,16 +644,16 @@
             </path>
             <path>
               <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="course work" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="context" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="course work" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -960,124 +661,27 @@
             </path>
             <path>
               <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="course work" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ejb" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ejb" type="462c0819:PsiDirectoryNode" />
-              <item name="notification" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courseWork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="notifications" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab4" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -1098,7 +702,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LanguageTest.testSqlDate">
+  <component name="RunManager">
     <configuration name="Build" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -1246,11 +850,6 @@
       <item index="1" class="java.lang.String" itemvalue="JUnit.NotificationsTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.LanguageTest.testSqlDate" />
     </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.LanguageTest.testSqlDate" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -1270,6 +869,10 @@
       <workItem from="1516765739538" duration="614000" />
       <workItem from="1527029493125" duration="1242000" />
       <workItem from="1527536257216" duration="270000" />
+      <workItem from="1532184282713" duration="27000" />
+      <workItem from="1532184344564" duration="20000" />
+      <workItem from="1534846557886" duration="135000" />
+      <workItem from="1535998966963" duration="1071000" />
     </task>
     <servers />
   </component>
@@ -1306,7 +909,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134683000" />
+    <option name="totallyTimeSpent" value="135936000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1935" height="1038" extended-state="0" />
@@ -1330,9 +933,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26465842" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2759548" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1342,7 +946,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.49811727" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1358,13 +961,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://table:/3777480a/e75be8a3-3b22-423b-ab23-0c92c74d477b/studs.s225074.character">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://table:/3777480a/e75be8a3-3b22-423b-ab23-0c92c74d477b/studs.s225074.character" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/pages/Admin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
@@ -1467,13 +1064,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="72" column="3" lean-forward="false" selection-start-line="72" selection-start-column="3" selection-end-line="72" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/auth/AuthLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2310">
-          <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -1621,64 +1211,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="930">
           <caret line="214" column="17" lean-forward="false" selection-start-line="214" selection-start-column="17" selection-end-line="214" selection-end-column="17" />
-          <folding>
-            <element signature="e#1884#2527#0" expanded="false" />
-            <element signature="e#2557#3576#0" expanded="false" />
-            <element signature="e#3599#4285#0" expanded="false" />
-            <element signature="e#10419#10487#0" expanded="false" />
-            <marker date="1515878385010" expanded="true" signature="5010:5563" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="5091:5101" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="5237:5247" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="5394:5404" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="5527:5537" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="5620:6147" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="5727:5737" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="5919:5929" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="6111:6121" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="6315:6877" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="6364:6374" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="6533:6543" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="6674:6684" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="6841:6851" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="6934:7548" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="7063:7073" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="7233:7243" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="7391:7401" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="7512:7522" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="7716:8248" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="7765:7775" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="7913:7923" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="8088:8098" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="8212:8222" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="8305:8902" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="8433:8443" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="8588:8598" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="8717:8727" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="8866:8876" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="9070:9608" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="9151:9161" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="9249:9259" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="9390:9400" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="9572:9582" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="9665:10279" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="9763:9773" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="9946:9956" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="10107:10117" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="10243:10253" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="10553:12056" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="10666:10682" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="10683:11740" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="10756:10771" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="10772:10926" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="10832:10907" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="11024:11043" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="11044:11045" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="11193:11359" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="11518:11725" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="11578:11593" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="11594:11706" ph="..." />
-            <marker date="1515878385010" expanded="true" signature="11886:12041" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1700,27 +1232,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="62" column="12" lean-forward="false" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="99" />
-          <folding>
-            <marker date="1515717729500" expanded="true" signature="4091:5611" ph="..." />
-            <marker date="1515717729500" expanded="false" signature="4112:4175" ph="..." />
-            <marker date="1515717729500" expanded="true" signature="4226:5596" ph="..." />
-            <marker date="1515717729500" expanded="true" signature="4267:4668" ph="..." />
-            <marker date="1515717729500" expanded="true" signature="4313:4474" ph="..." />
-            <marker date="1515717729500" expanded="false" signature="4405:4446" ph="..." />
-            <marker date="1515717729500" expanded="true" signature="4550:4645" ph="..." />
-            <marker date="1515717729500" expanded="true" signature="4707:4926" ph="..." />
-            <marker date="1515717729500" expanded="false" signature="4778:4804" ph="..." />
-            <marker date="1515717729500" expanded="false" signature="4891:4902" ph="..." />
-            <marker date="1515717729500" expanded="true" signature="4967:5180" ph="..." />
-            <marker date="1515717729500" expanded="false" signature="5038:5064" ph="..." />
-            <marker date="1515717729500" expanded="false" signature="5145:5156" ph="..." />
-            <marker date="1515717729500" expanded="true" signature="5221:5442" ph="..." />
-            <marker date="1515717729500" expanded="false" signature="5292:5317" ph="..." />
-            <marker date="1515717729500" expanded="false" signature="5408:5418" ph="..." />
-            <marker date="1515717729500" expanded="false" signature="5532:5560" ph="..." />
-            <marker date="1515717729500" expanded="false" signature="5717:5780" ph="..." />
-            <marker date="1515717729500" expanded="true" signature="5781:5977" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1728,7 +1239,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="20" column="87" lean-forward="false" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1736,7 +1246,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="23" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1751,13 +1260,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
           <caret line="86" column="3" lean-forward="false" selection-start-line="86" selection-start-column="3" selection-end-line="86" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/auth/AuthController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1784,31 +1286,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+        <state relative-caret-position="0">
+          <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/pages/Index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="294">
+          <caret line="14" column="44" lean-forward="true" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
           <folding>
-            <marker date="1515708762924" expanded="true" signature="1087:1440" ph="..." />
-            <marker date="1515708762924" expanded="false" signature="1157:1167" ph="..." />
-            <marker date="1515708762924" expanded="true" signature="1249:1415" ph="..." />
-            <marker date="1515708762924" expanded="true" signature="1642:3229" ph="..." />
-            <marker date="1515708762924" expanded="false" signature="1755:1787" ph="..." />
-            <marker date="1515708762924" expanded="true" signature="1788:2913" ph="..." />
-            <marker date="1515708762924" expanded="false" signature="1981:1996" ph="..." />
-            <marker date="1515708762924" expanded="true" signature="2007:2467" ph="..." />
-            <marker date="1515708762924" expanded="true" signature="2179:2448" ph="..." />
-            <marker date="1515708762924" expanded="true" signature="2554:2896" ph="..." />
-            <marker date="1515708762924" expanded="false" signature="2628:2643" ph="..." />
-            <marker date="1515708762924" expanded="true" signature="2644:2877" ph="..." />
-            <marker date="1515708762924" expanded="false" signature="2834:2848" ph="..." />
-            <marker date="1515708762924" expanded="true" signature="3059:3214" ph="..." />
+            <marker date="1531849891965" expanded="true" signature="1087:1440" ph="..." />
+            <marker date="1531849891965" expanded="false" signature="1157:1167" ph="..." />
+            <marker date="1531849891965" expanded="true" signature="1249:1415" ph="..." />
+            <marker date="1531849891965" expanded="true" signature="1642:3229" ph="..." />
+            <marker date="1531849891965" expanded="false" signature="1755:1787" ph="..." />
+            <marker date="1531849891965" expanded="true" signature="1788:2913" ph="..." />
+            <marker date="1531849891965" expanded="false" signature="1981:1996" ph="..." />
+            <marker date="1531849891965" expanded="true" signature="2007:2467" ph="..." />
+            <marker date="1531849891965" expanded="true" signature="2179:2448" ph="..." />
+            <marker date="1531849891965" expanded="true" signature="2554:2896" ph="..." />
+            <marker date="1531849891965" expanded="false" signature="2628:2643" ph="..." />
+            <marker date="1531849891965" expanded="true" signature="2644:2877" ph="..." />
+            <marker date="1531849891965" expanded="false" signature="2834:2848" ph="..." />
+            <marker date="1531849891965" expanded="true" signature="3059:3214" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/auth/AuthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/auth/AuthLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-785">
+          <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+          <folding>
+            <element signature="method#authorizeWithIn#0;class#AuthLogic#0" expanded="false" />
+            <element signature="method#registerUserWithVk#0;class#AuthLogic#0" expanded="false" />
+            <element signature="method#createPassword#0;class#AuthLogic#0" expanded="false" />
+            <element signature="method#getResponseFromApi#0;class#AuthLogic#0" expanded="false" />
+            <element signature="method#getFromPostCall#0;class#AuthLogic#0" expanded="false" />
           </folding>
         </state>
       </provider>

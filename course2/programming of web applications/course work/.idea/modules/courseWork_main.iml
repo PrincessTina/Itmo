@@ -14,7 +14,7 @@
     <facet type="web" name="Web Gradle : courseWork-1.0-SNAPSHOT.war">
       <configuration>
         <webroots>
-          <root url="file://C:\Users\krist\Documents\itmo\pip\courseWork\src\main\webapp" relative="/" />
+          <root url="file://C:\Users\krist\Documents\repo\itmo\course2\programming of web applications\course work\src\main\webapp" relative="/" />
         </webroots>
       </configuration>
     </facet>
