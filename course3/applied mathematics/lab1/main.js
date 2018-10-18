@@ -6,29 +6,12 @@ let realLength = 0;
 main();
 
 function main() {
-    //let stdIn = process.openStdin();
+    let stdIn = process.openStdin();
 
     console.log('Input the filename (ex: doc.txt)\nDefault directory: text_files');
 
-    let filename = "text_files//crimsonSails III.txt";
-
-    try {
-        readFile(filename);
-
-        console.log('Result:');
-
-        fillAdditionalInfo();
-        printAlphabet();
-        printEntropy();
-        printLinkedEntropy();
-    } catch (err) {
-        console.log('Error: no such txt file ' + err)
-    }
-
-    /*stdIn.on('data', function (filename) {
+    stdIn.on('data', function (filename) {
         filename = "text_files//" + filename.toString().substr(0, filename.length - 1);
-
-        console.log(filename);
 
         try {
             readFile(filename);
@@ -44,7 +27,7 @@ function main() {
         }
 
         process.exit();
-    });*/
+    });
 }
 
 /**
