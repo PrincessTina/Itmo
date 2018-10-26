@@ -59,7 +59,8 @@ function readFile(fileName) {
 }
 
 /**
- * Добавляет в alphabet информацию о вероятности и энтропии для каждого символа
+ * Добавляет в alphabet информацию о вероятности, кодовом слове и его длине Хаффмана и Шеннона Фано для каждого символа,
+ * формирует huffArray, fanoArray на основе посчитанной вероятности
  */
 function fillAdditionalInfo() {
     for (let key in alphabet) {
