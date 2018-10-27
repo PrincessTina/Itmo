@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e8279b42-ac95-4004-beca-d983bf9435e0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="e8279b42-ac95-4004-beca-d983bf9435e0" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,23 +14,9 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
+            <state relative-caret-position="21">
               <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-              <folding>
-                <element signature="n#!!block;n#main#0" expanded="false" />
-                <element signature="n#!!doc;n#readFile#0" expanded="false" />
-                <element signature="n#!!block;n#readFile#0" expanded="false" />
-                <element signature="n#!!doc;n#fillAdditionalInfo#0" expanded="false" />
-                <element signature="n#!!block;n#fillAdditionalInfo#0" expanded="false" />
-                <element signature="n#!!doc;n#printAlphabet#0" expanded="false" />
-                <element signature="n#!!block;n#printAlphabet#0" expanded="false" />
-                <element signature="n#!!doc;n#printEntropy#0" expanded="false" />
-                <element signature="n#!!block;n#printEntropy#0" expanded="false" />
-                <element signature="n#!!doc;n#escapeExpressions#0" expanded="false" />
-                <element signature="n#!!block;n#escapeExpressions#0" expanded="false" />
-                <element signature="n#!!doc;n#printLinkedEntropy#0" expanded="false" />
-                <element signature="n#!!block;n#printLinkedEntropy#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -76,9 +59,6 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
-  </component>
   <component name="PhpServers">
     <servers />
   </component>
@@ -106,6 +86,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -118,7 +99,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -165,17 +145,18 @@
       <workItem from="1539820660328" duration="842000" />
       <workItem from="1539884628248" duration="2863000" />
       <workItem from="1540402973028" duration="615000" />
+      <workItem from="1540654874676" duration="34000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48786000" />
+    <option name="totallyTimeSpent" value="48820000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1046" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27497315" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27447918" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -212,21 +193,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!doc;n#readFile#0" expanded="false" />
-            <element signature="n#!!block;n#readFile#0" expanded="false" />
-            <element signature="n#!!doc;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!block;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!doc;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!block;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!doc;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!doc;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!block;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!doc;n#printLinkedEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printLinkedEntropy#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -234,21 +201,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!doc;n#readFile#0" expanded="false" />
-            <element signature="n#!!block;n#readFile#0" expanded="false" />
-            <element signature="n#!!doc;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!block;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!doc;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!block;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!doc;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!doc;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!block;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!doc;n#printLinkedEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printLinkedEntropy#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -256,21 +209,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!doc;n#readFile#0" expanded="false" />
-            <element signature="n#!!block;n#readFile#0" expanded="false" />
-            <element signature="n#!!doc;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!block;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!doc;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!block;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!doc;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!doc;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!block;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!doc;n#printLinkedEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printLinkedEntropy#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -278,21 +217,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!doc;n#readFile#0" expanded="false" />
-            <element signature="n#!!block;n#readFile#0" expanded="false" />
-            <element signature="n#!!doc;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!block;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!doc;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!block;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!doc;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!doc;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!block;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!doc;n#printLinkedEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printLinkedEntropy#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -300,21 +225,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!doc;n#readFile#0" expanded="false" />
-            <element signature="n#!!block;n#readFile#0" expanded="false" />
-            <element signature="n#!!doc;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!block;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!doc;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!block;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!doc;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!doc;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!block;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!doc;n#printLinkedEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printLinkedEntropy#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -322,59 +233,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!doc;n#readFile#0" expanded="false" />
-            <element signature="n#!!block;n#readFile#0" expanded="false" />
-            <element signature="n#!!doc;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!block;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!doc;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!block;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!doc;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!doc;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!block;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!doc;n#printLinkedEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printLinkedEntropy#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.jade" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15289">
-          <caret line="1" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore" />
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="48" lean-forward="false" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-          <folding>
-            <element signature="n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!doc;n#readFile#0" expanded="false" />
-            <element signature="n#!!block;n#readFile#0" expanded="false" />
-            <element signature="n#!!doc;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!block;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!doc;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!block;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!doc;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!doc;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!block;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!doc;n#printLinkedEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printLinkedEntropy#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -382,109 +241,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!doc;n#readFile#0" expanded="false" />
-            <element signature="n#!!block;n#readFile#0" expanded="false" />
-            <element signature="n#!!doc;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!block;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!doc;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!block;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!doc;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!doc;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!block;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!doc;n#printLinkedEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printLinkedEntropy#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!doc;n#readFile#0" expanded="false" />
-            <element signature="n#!!block;n#readFile#0" expanded="false" />
-            <element signature="n#!!doc;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!block;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!doc;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!block;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!doc;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!doc;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!block;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!doc;n#printLinkedEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printLinkedEntropy#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!doc;n#readFile#0" expanded="false" />
-            <element signature="n#!!block;n#readFile#0" expanded="false" />
-            <element signature="n#!!doc;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!block;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!doc;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!block;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!doc;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!doc;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!block;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!doc;n#printLinkedEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printLinkedEntropy#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!doc;n#readFile#0" expanded="false" />
-            <element signature="n#!!block;n#readFile#0" expanded="false" />
-            <element signature="n#!!doc;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!block;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!doc;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!block;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!doc;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!doc;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!block;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!doc;n#printLinkedEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printLinkedEntropy#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!doc;n#readFile#0" expanded="false" />
-            <element signature="n#!!block;n#readFile#0" expanded="false" />
-            <element signature="n#!!doc;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!block;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!doc;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!block;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!doc;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!doc;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!block;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!doc;n#printLinkedEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printLinkedEntropy#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -500,23 +257,67 @@
     <entry file="file://$PROJECT_DIR$/.gitignore" />
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
+        <state relative-caret-position="252">
+          <caret line="12" column="48" lean-forward="false" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.jade" />
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json" />
+    <entry file="file://$PROJECT_DIR$/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
           <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding>
-            <element signature="n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!doc;n#readFile#0" expanded="false" />
-            <element signature="n#!!block;n#readFile#0" expanded="false" />
-            <element signature="n#!!doc;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!block;n#fillAdditionalInfo#0" expanded="false" />
-            <element signature="n#!!doc;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!block;n#printAlphabet#0" expanded="false" />
-            <element signature="n#!!doc;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printEntropy#0" expanded="false" />
-            <element signature="n#!!doc;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!block;n#escapeExpressions#0" expanded="false" />
-            <element signature="n#!!doc;n#printLinkedEntropy#0" expanded="false" />
-            <element signature="n#!!block;n#printLinkedEntropy#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
