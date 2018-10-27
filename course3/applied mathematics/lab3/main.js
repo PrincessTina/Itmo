@@ -1,13 +1,14 @@
 const fs = require("fs");
+const bigdecimal = require("bigdecimal");
 let fileContent;
 let alphabet = {}; // объект, поля которого - символы, а их значение - вероятность
 let codeArray = []; // массив кодов блоков символов
 let searchedContent = ''; // сообщение после декодирования
 let cumulative = []; // массив кумулативных вероятностей
-let realLength = 0;
-let blockLength = 2; // длина блока считываемых символов
+let textLength = 0;
+let blockLength = 4; // длина блока считываемых символов
 
-debug();
+main();
 
 function main() {
     let stdIn = process.openStdin();
@@ -21,40 +22,22 @@ function main() {
             readFile(filename);
 
             console.log('Result:');
+            console.log('Length of block:', blockLength);
 
             setProbability();
-            huffmanAlgorithm();
-            fanoAlgorithm();
-            printAlphabet();
-            printEntropy();
+            countCumulativeProbability();
+            console.time('Coding time');
+            coding();
+            console.timeEnd('Coding time');
+            printCompressionCoefficient();
+            decoding();
+            checkContentOnIdentity();
         } catch (err) {
-            console.log('Error: no such txt file')
+            console.log('Error:', err)
         }
 
         process.exit();
     });
-}
-
-function debug() {
-    console.log('Input the filename (ex: doc.txt)\nDefault directory: text_files');
-
-    let filename = "text_files//test.txt";
-
-    try {
-        readFile(filename);
-
-        console.log('Result:');
-        console.log('Length of block:', blockLength);
-
-        setProbability();
-        countCumulativeProbability();
-        coding();
-        printCompressionCoefficient();
-        decoding();
-        checkContentOnIdentity();
-    } catch (err) {
-        console.log('Error: no such txt file')
-    }
 }
 
 /**
@@ -64,32 +47,17 @@ function debug() {
  */
 function readFile(fileName) {
     fileContent = fs.readFileSync(fileName, 'utf8');
-    const textLength = fileContent.length;
+    textLength = fileContent.length;
 
     for (let i = 0; i < textLength; i++) {
         let symbol = fileContent[i];
-
-        /*if (symbol.charCodeAt(0) >= 32 && symbol.charCodeAt(0) <= 126) {
-            if (alphabet[symbol] === undefined) {
-                alphabet[symbol] = 1;
-            } else {
-                alphabet[symbol]++;
-            }
-
-            realLength++;
-        }*/
 
         if (alphabet[symbol] === undefined) {
             alphabet[symbol] = 1;
         } else {
             alphabet[symbol]++;
         }
-
-        realLength++;
     }
-
-    /*alphabet = {"c": 1, "b": 4, "a": 2, "d": 3};
-    realLength = 10;*/
 }
 
 /**
@@ -97,7 +65,7 @@ function readFile(fileName) {
  */
 function setProbability() {
     for (let key in alphabet) {
-        alphabet[key] = alphabet[key] / realLength;
+        alphabet[key] = alphabet[key] / textLength;
     }
 }
 
@@ -144,17 +112,24 @@ function translateIntoBinary(digit, ranks) {
  * Арифметическое кодирование
  */
 function coding() {
-    for (let blockStartingSymbolIndex = 0; blockStartingSymbolIndex < realLength; blockStartingSymbolIndex += blockLength) {
-        let leftLimit = 0;
-        let rightLimit = 1;
-        let intervalLength = 1;
+    let cumulativeBig = [];
+
+    cumulative.forEach((probability) => {
+       cumulativeBig.push(new bigdecimal.BigDecimal(probability));
+    });
+
+    for (let blockStartingSymbolIndex = 0; blockStartingSymbolIndex < textLength; blockStartingSymbolIndex += blockLength) {
+        let leftLimit = new bigdecimal.BigDecimal(0);
+        let rightLimit = new bigdecimal.BigDecimal(1);
+        let intervalLength = new bigdecimal.BigDecimal(1);
+
         let blockEndingSymbolIndex = 0;
 
-        if (blockStartingSymbolIndex + blockLength > realLength - 1) {
+        if (blockStartingSymbolIndex + blockLength > textLength - 1) {
             if (blockStartingSymbolIndex === 0) {
-                blockEndingSymbolIndex = realLength;
+                blockEndingSymbolIndex = textLength;
             } else {
-                blockEndingSymbolIndex = blockStartingSymbolIndex + (realLength - 1) % blockStartingSymbolIndex + 1;
+                blockEndingSymbolIndex = blockStartingSymbolIndex + (textLength - 1) % blockStartingSymbolIndex + 1;
             }
         } else {
             blockEndingSymbolIndex = blockStartingSymbolIndex + blockLength;
@@ -162,15 +137,17 @@ function coding() {
 
         for (let blockSymbolIndex = blockStartingSymbolIndex; blockSymbolIndex < blockEndingSymbolIndex; blockSymbolIndex++) {
             const id = Object.keys(alphabet).indexOf(fileContent[blockSymbolIndex]);
-            const newLeftLimit = leftLimit + intervalLength * cumulative[id];
+            const newLeftLimit = leftLimit.add(intervalLength.multiply(cumulativeBig[id]));
 
-            rightLimit = leftLimit + intervalLength * cumulative[id + 1];
+            rightLimit = leftLimit.add(intervalLength.multiply(cumulativeBig[id + 1]));
             leftLimit = newLeftLimit;
-            intervalLength = rightLimit - leftLimit;
+            intervalLength = rightLimit.subtract(leftLimit);
         }
 
-        codeArray.push({'decimal': leftLimit, 'binary':
-            translateIntoBinary(leftLimit, Math.ceil(Math.abs(Math.log(intervalLength) / Math.log(2))))});
+        codeArray.push({
+            'decimal': leftLimit, 'binary': translateIntoBinary(leftLimit,
+                Math.ceil(Math.abs(Math.log(parseFloat(intervalLength)) / Math.log(2))))
+        });
     }
 }
 
@@ -184,8 +161,8 @@ function printCompressionCoefficient() {
         codeSize += object.binary.toString().length;
     });
 
-    console.log('Compression coefficient:', Math.round((codeSize / fileContent.length) * 100) + '%',
-        (codeSize > fileContent.length) ? '(not efficient)' : '');
+    console.log('Compression coefficient:', Math.round((codeSize / (8 * textLength)) * 100) + '%',
+        (codeSize > (8 * textLength)) ? '(not efficient)' : '');
 }
 
 /**
@@ -197,13 +174,20 @@ function printCompressionCoefficient() {
 function getSupposedSymbolIndex(digit) {
     let supposedSymbolIndex = 0;
 
-    cumulative.forEach((probability) => {
-        if (digit >= probability.toFixed(15)) {
+    for (let i = 0; i < cumulative.length; i++) {
+        const probability = cumulative[i];
+
+        if (digit >= probability && digit < 1) {
             supposedSymbolIndex = cumulative.indexOf(probability);
         } else {
+            if ((Math.abs(digit - cumulative[supposedSymbolIndex + 1]) <
+                    Math.abs(digit - cumulative[supposedSymbolIndex]) * 0.01) && digit < 1) {
+                return supposedSymbolIndex + 1;
+            }
+
             return supposedSymbolIndex;
         }
-    });
+    }
 
     return supposedSymbolIndex;
 }
@@ -217,22 +201,18 @@ function decoding() {
         let digit = object.decimal;
 
         if (codeArray.length === 1) {
-            digitCount = realLength;
+            digitCount = textLength;
         } else if (codeArray.indexOf(object) === codeArray.length - 1) {
-            digitCount = realLength - (codeArray.length - 1) * blockLength;
+            digitCount = textLength - (codeArray.length - 1) * blockLength;
         }
 
         for (let i = 0; i < digitCount; i++) {
-            if (digit.toString().match(/9{2,}/) !== null) {
-                digit = parseFloat(digit.toFixed(digit.toString().match(/9{2,}/).index - 2));
-            }
-
             const supposedSymbolIndex = getSupposedSymbolIndex(digit);
 
             searchedContent += Object.keys(alphabet)[supposedSymbolIndex];
 
-            digit = (digit - cumulative[supposedSymbolIndex]) /
-                (cumulative[supposedSymbolIndex + 1] - cumulative[supposedSymbolIndex]);
+            digit = Math.abs((digit - cumulative[supposedSymbolIndex]) /
+                (cumulative[supposedSymbolIndex + 1] - cumulative[supposedSymbolIndex]));
         }
     });
 }
@@ -241,6 +221,15 @@ function decoding() {
  * Проверяет соответствие полученного текста после декодирования исходному и печатает результат
  */
 function checkContentOnIdentity() {
-    console.log('The content obtained after decoding', (fileContent === searchedContent) ? 'is' : 'isn\'t',
-        'identical to the original');
+    let countOfOtherSymbols = 0;
+
+    for (let i = 0; i < textLength; i++) {
+        if (fileContent[i] !== searchedContent[i]) {
+            countOfOtherSymbols++;
+        }
+    }
+
+    const percent = Math.round(100 * (textLength - countOfOtherSymbols) / textLength);
+
+    console.log('Original text and text after decoding are identical', (percent !== 100) ? 'on ' + percent + '%' : '');
 }
