@@ -6,11 +6,28 @@ let realLength = 0;
 main();
 
 function main() {
-    readFile("document.txt");
-    fillAdditionalInfo();
-    printAlphabet();
-    printEntropy();
-    printLinkedEntropy();
+    let stdIn = process.openStdin();
+
+    console.log('Input the filename (ex: doc.txt)\nDefault directory: text_files');
+
+    stdIn.on('data', function (filename) {
+        filename = "text_files//" + filename.toString().substr(0, filename.length - 1);
+
+        try {
+            readFile(filename);
+
+            console.log('Result:');
+
+            fillAdditionalInfo();
+            printAlphabet();
+            printEntropy();
+            printLinkedEntropy();
+        } catch (err) {
+            console.log('Error: no such txt file')
+        }
+
+        process.exit();
+    });
 }
 
 /**
@@ -89,7 +106,17 @@ function printEntropy() {
         entropy += alphabet[key].probability * alphabet[key].entropy;
     }
 
-    console.log("\nЭнтропия файла равна " + entropy.toFixed(4));
+    console.log("\nЭнтропия файла равна " + entropy.toFixed(4) + " нит");
+}
+
+/**
+ * Экранирует спецсимволы в строке
+ *
+ * @param str
+ * @return {string}
+ */
+function escapeExpressions(str) {
+    return str.replace(/(?=[-(){}./?|"])/g, '\\');
 }
 
 /**
@@ -97,28 +124,29 @@ function printEntropy() {
  */
 function printLinkedEntropy() {
     let entropy = 0;
-    let alphabetSymbols = '';
+    let alphabetSymbols = '[';
 
     for (let key in alphabet) {
-        alphabetSymbols += key + '|';
+        alphabetSymbols += key;
     }
 
-    alphabetSymbols = alphabetSymbols.substr(0, alphabetSymbols.length - 1);
+    alphabetSymbols += "]";
+    alphabetSymbols = escapeExpressions(alphabetSymbols);
 
     for (let j in alphabet) {
-        const allPairsCount = fileContent.match(new RegExp('(?=' + j + '(' + alphabetSymbols + '))', 'gi')) === null ? 0 :
-            fileContent.match(new RegExp('(?=' + j + '(' + alphabetSymbols + '))', 'gi')).length;
+        const allPairsCount = fileContent.match(new RegExp('(?=' + escapeExpressions(j) + '(' + alphabetSymbols + '))', 'gi')) === null ? 0 :
+            fileContent.match(new RegExp('(?=' + escapeExpressions(j) + '(' + alphabetSymbols + '))', 'gi')).length;
 
         for (let i in alphabet) {
-            const searchedPairsCount = fileContent.match(new RegExp(j + i, 'ig')) === null ? 0 :
-                fileContent.match(new RegExp(j + i, 'ig')).length;
+            const searchedPairsCount = fileContent.match(new RegExp(escapeExpressions(j) + escapeExpressions(i), 'gi')) === null ? 0 :
+                fileContent.match(new RegExp(escapeExpressions(j) + escapeExpressions(i), 'gi')).length;
             const probability = searchedPairsCount / allPairsCount;
 
-            if (probability !== 0) {
+            if (probability !== 0 && allPairsCount !== 0) {
                 entropy += probability * alphabet[j].probability * -Math.log(probability);
             }
         }
     }
 
-    console.log("Энтропия файла при наличии односвязной цепи равна " + entropy.toFixed(4));
+    console.log("Энтропия файла при наличии односвязной цепи равна " + entropy.toFixed(4) + " нит");
 }
