@@ -1,0 +1,143 @@
+#!/usr/bin/ksh
+
+menu="1. Print the name of the current directory
+ 2. Change current directory
+ 3. Print the contents of the current directory
+ 4. Create the file
+ 5. Delete the file
+ 6. Exit the program"
+
+errorFile=$HOME/lab1_err
+errorFileSize=`cat $errorFile | wc -c`
+
+function outputError {
+	echo "\033[31;40m$1\033[0m" >&2 
+}
+
+function output {
+	echo "\033[36;40m$1\033[0m"
+}
+
+function checkErrorPresence {
+	currentErrorFileSize=`cat $errorFile | wc -c`
+
+	if [ "$currentErrorFileSize" -gt "$errorFileSize" ]
+	then
+		outputError "$@"	
+	fi
+
+	errorFileSize=$currentErrorFileSize
+}
+
+function checkOnExist {
+	if [ -"$2" "$1" ]
+	then
+		echo 0
+	else
+		echo 1
+	fi
+}
+
+function startNewLoop {
+	exitPoint=0;	
+	
+	echo "\033[36;40m\n $menu\n\033[0m"
+
+	while [ exitPoint -eq 0 ]
+	do
+		read commandNumber
+
+		if [ `echo $?` -eq 1 ]
+		then
+			break
+		fi
+
+		case $commandNumber in
+		1)
+			pwd 2>> $errorFile
+			checkErrorPresence "Cannot access to parent directory";;	
+	
+		2)
+			output "Input the path to directory"
+			IFS= read -r path
+				
+			if [ `echo "$path" | egrep "^$" | wc -l` -eq 1 ]
+			then
+				outputError "Empty path"	
+			else
+				if [ `echo "$path" | egrep "^-" | wc -l` -eq 1 ]
+				then
+					path="./$path"
+				fi
+	
+				resultExist=$(checkOnExist "$path" "d")
+	
+				if [ "$resultExist" -eq 1 ]
+				then
+					outputError "There is no such path to directory"
+				else
+					cd -- "$path" 2>> $errorFile 
+			
+					checkErrorPresence "Permission denied"
+				fi
+			fi;;
+			
+		3)
+			ls 2>> $errorFile
+
+			checkErrorPresence "Permission denied";;
+	
+		4)
+			output "Input the path to file"
+			IFS= read -r path
+			
+			if [ `echo "$path" | egrep "^$" | wc -l` -eq 1 ]
+			then
+				outputError "Empty path"	
+			else
+				touch -- "$path" 2>> $errorFile 
+
+				checkErrorPresence "There is no such path"
+			fi;;
+
+		5)
+			output "Input the path to file"
+			IFS= read -r path
+				
+			if [ `echo "$path" | egrep "^$" | wc -l` -eq 1 ]
+			then
+				outputError "Empty path"	
+			else
+				resultExist=$(checkOnExist "$path" "f")
+	
+				if [ "$resultExist" -eq 1 ]
+				then
+					outputError "There is no such file"
+				else
+					output "rm: remove $path (yes/no)?"	
+					read answer 
+
+					if [ `echo "$answer" | egrep "^y(e|es)?$" | wc -l` -eq 1 ]
+					then	
+						rm -- "$path" 2>> $errorFile 
+			
+						checkErrorPresence "Permission denied"
+					fi
+				fi
+			fi;;
+
+		6)
+			exitPoint=1;;
+
+		*)
+			output "Wrong. Try again (exit by the 6)";;
+		esac
+	
+		if [ exitPoint -eq 0 ]
+		then
+			echo "\033[36;40m\n $menu\n\033[0m"
+		fi	
+	done
+}	
+
+startNewLoop
