@@ -1,0 +1,19 @@
+#!/usr/bin/ksh
+LANG=en_US.UTF-8
+
+filename=`echo "$1" | gsed 's/*/star/'`
+
+if [ "$filename" == "star" ]
+then
+	ls -lt | awk '$1 ~ /^l/' | gsed 's/.\+[0-9]\{2\} \(.\+\) -> .\+/\1/'
+else
+	for linkId in `ls -lti | awk '$2 ~ /^l/ {print $1}'`
+	do
+		name=`ls -li | nawk -v linkId=$linkId '$1 == linkId' | gsed 's/.\+-> \(.\+\)/\1/' | gsed 's/*/star/'`
+	
+		if [ "($name)" == "($filename)" ] 
+		then
+			gfind -inum "$linkId" | sed s/\\\.\\\///
+		fi
+	done
+fi
