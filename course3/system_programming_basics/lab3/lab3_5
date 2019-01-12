@@ -9,7 +9,6 @@ fileType=$(ls -ld -- $folderName | nawk '{print $1}' | cut -c 1)
 userReadingRoot=$(ls -ld -- $folderName | nawk '{print $1}' | cut -c 2) 
 otherReadingRoot=$(ls -ld -- $folderName | nawk '{print $1}' | cut -c 8) 
 groupReadingRoot=$(ls -ld -- $folderName | nawk '{print $1}' | cut -c 5) 
-otherReadingRoot=$(ls -ld -- $folderName | nawk '{print $1}' | cut -c 8) 
 userName=$(ls -ld -- $folderName | nawk '{print $3}')
 groupName=$(ls -ld -- $folderName | nawk '{print $4}')
 result="/home/s225074/repo/itmo/course3/system_programming_basics/lab3/result"

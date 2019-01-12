@@ -1,0 +1,47 @@
+#!/usr/bin/ksh
+LANG=en_US.UTF-8
+
+userName=$1
+result="/home/s225074/repo/itmo/course3/system_programming_basics/lab3/result"
+groupUsers="/home/s225074/repo/itmo/course3/system_programming_basics/lab3/groupUsers"
+
+touch $result $groupUsers 
+
+for row in $(ls -l) 
+do
+	fileName=$(echo $row | awk '{print $9}')	
+	user=$(echo $row | awk '{print $3}')	
+	group=$(echo $row | awk '{print $4}')	
+	fileType=$(echo $row | awk '{print $1}' | cut -c 1)	
+	userWritingRoot=$(echo $row | awk '{print $1}' | cut -c 3)	
+	groupWritingRoot=$(echo $row | awk '{print $1}' | cut -c 6)	
+	otherWritingRoot=$(echo $row | awk '{print $1}' | cut -c 9)
+
+	if [ $fileType = "d" ]
+	then
+		if [ $userName = $user ] 
+		then
+			if [ $userWritingRoot = "w" ]
+			then
+				echo $fileName >> $result
+			fi
+		else
+			if [ $(groups $userName | grep -w $group) ] 
+			then
+				if [ $groupWritingRoot = "w" ]
+				then
+					echo $fileName >> $result
+				fi
+			else
+				if [ $otherWritingRoot = "w" ]
+				then
+					echo $fileName >> $result
+				fi
+			fi
+		fi	
+	fi
+done 
+
+cat $result
+rm $result	
+
