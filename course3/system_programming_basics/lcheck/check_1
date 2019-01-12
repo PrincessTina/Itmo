@@ -1,0 +1,743 @@
+#!/usr/bin/bash +H
+# 1'st labwork
+# ./1 variant current_testing_script
+# $Id: check_1 250 2015-03-24 11:48:37Z s182403 $
+
+export LC_ALL=C
+export LANG=C
+IFS=$'\t\n'
+PREFIX="$HOME/lcheck/tmp"
+readWait=1
+R=$RANDOM
+PATH_TEST="$PREFIX/$R"
+PANIC_RETURN=`/bin/pwd`
+
+# Panic, remove pipes and exit
+panic() {
+   cd "$PANIC_RETURN"
+   echo -e "\rerror: $* " >&2 
+   echo "Test failed!"
+   delete_tmp
+   exit 1 
+}
+#Delite temporary files
+delete_tmp() { 
+   cd $PANIC_RETURN
+   chmod -R 777 "$PREFIX"  && \
+   /usr/xpg4/bin/rm -rf -- "$PREFIX";
+}
+#Check rights of script
+[ -x "${2:?no script}" -a -r "${2:?no script}" ] \
+|| panic "The script must be executable."
+
+# Create dir hierarchy
+[ ! -d "$PREFIX" ] && { mkdir -p "$PREFIX" || panic "Unable to create $PREFIX"; }
+
+#Create temporary files
+# Vars needed 5,8,11.. points
+mkdir -p "$PREFIX/$R" || panic "Unable to create temp directory"
+mkdir "$PATH_TEST/testdir"
+echo "text" | tee "$PATH_TEST/one" | tee "$PATH_TEST/two" |
+tee "$PATH_TEST/three" | tee "$PATH_TEST/four" > "$PATH_TEST/-p five"
+
+IN_FIFO="$PREFIX/in_fifo"
+OUT_FIFO="$PREFIX/out_fifo"
+ERR_FIFO="$PREFIX/err_fifo"
+USR_ERR="$HOME/lab1_err"
+
+# remove obsolete pipes
+rm -- "$IN_FIFO" "$OUT_FIFO" "$ERR_FIFO" &>/dev/null
+# create pipes
+mkfifo "$IN_FIFO" "$OUT_FIFO" "$ERR_FIFO"  2>/dev/null
+# open fifo
+exec 13<>"$IN_FIFO" 14<>"$OUT_FIFO" 15<>"$ERR_FIFO" 16<>"$USR_ERR" 
+
+#change work directory and start execute
+cd "$PATH_TEST"
+STUD_LAB="$2"
+[[ "${STUD_LAB:?no script}" == /* ]] || STUD_LAB="$OLDPWD/$STUD_LAB" 
+
+# user's script
+<&13 start_lab "${STUD_LAB:?no script}" >&14 2>&15 &
+pid=$!
+
+#Reaction test script on a non existent file
+check_exist() {
+
+   echo "$1" >&13 ;
+   read -t $readWait MESSAGE <&14 || panic "No requests for input"
+   echo "iDoNotExist" >&13 ;
+}
+check_n_exist_two_args() {
+
+   echo "$1" >&13 ;
+   read -t $readWait MESSAGE <&14 || panic "No requests for input"
+   echo "iDoNotExist" >&13 ;
+   read -t $readWait MESSAGE <&14 || panic "No requests for input"
+   echo "SecondArg" >&13 ;
+
+   check_errors "$1"
+}
+
+#Read message from log and stderr
+check_errors() {
+   read -t $readWait str <&15 || panic "Incorrect error output. Point $1"
+   sleep 1
+   read -t $readWait str <&16 || panic "Incorrect error log file. Point $1"
+}
+TEST(){ openssl base64 -d "$@";}
+TEST=TEST
+
+#Check comfirmation on deliting ( func 5, 8, 19 )
+check_confirm_deleting() {
+   echo "yes" >&13
+   read -t $readWait str <&14 || panic "Incorrects output. Point $1"
+   echo "checking confirm dialog: $str" >> $HOME/stud_dirs/course3/spb/lab1/lab1_debug 
+   [[ $str =~ "rm" ]] || panic "Not found confirmation deleting. Point $1"
+}
+
+#Skip six line
+skip() { 
+   while read -t $readWait trash <&14 ;do : skipping menu ;done
+   test -z "$trash" && panic "No menu detected"
+}
+
+
+#-----------------------------------------
+func1() {
+   echo "$1" >&13
+   arg=`/bin/pwd`
+   arg="${arg##*/}"
+   read -t $readWait MESSAGE <&14 || panic "Incorrect read from fifo. Point $1"
+   [ "$MESSAGE" == "${arg:-/}" -o "$MESSAGE" == `/bin/pwd` ] || panic "Incorrect output. Point $1"
+}
+
+#----------------------------------------
+func2() {
+   STUD_DIR=`/bin/pwd` || \
+   panic "Error test, please refer to the developer or try again"
+
+   #Check the response to a non-existent file
+   check_exist "$1"
+   check_errors "$1"
+   
+   #Check *
+   mkdir -p "$PATH_TEST/star3/star19"
+   echo "$1" >&13
+   read -t $readWait MESSAGE <&14 || panic "Incorrect read from fifo. Point $1"
+   echo "$PATH_TEST/star3" >&13
+   read -t $readWait MESSAGE <&15 && panic "Incorrect output. Point $1"
+   
+   # "*" does not exist
+   echo "$1" >&13
+   read -t $readWait MESSAGE <&14 || panic "Incorrect read from fifo. Point $1"
+   echo "*" >&13
+   check_errors "$1"
+ 
+   #Go to the directory for testing
+   echo "$1" >&13
+   read -t $readWait MESSAGE <&14 || panic "Incorrect read from fifo. Point $1"
+   echo "$PATH_TEST" >&13
+   read -t $readWait MESSAGE <&15 && panic "Incorrect output. Point $1"
+  
+    #Check -q
+   mkdir -p "$PATH_TEST/-q"
+
+   echo "$1" >&13
+   read -t $readWait MESSAGE <&14 || panic "Incorrect read from fifo. Point $1"
+   echo "-q" >&13
+   read -t $readWait MESSAGE <&15 && panic "Incorrect output. Point $1"
+   
+   #Return to the student directory
+   echo "$1" >&13
+   read -t $readWait MESSAGE <&14 || panic "Incorrect read from fifo. Point $1"
+   echo "$STUD_DIR" >&13
+   read -t $readWait MESSAGE <&15 && panic "Incorrect output. Point $1"
+}
+
+#-----------------------------------------
+func3() {
+   echo "$1" >&13
+   for arg in * ; do
+      read -t $readWait str <&14 || panic "Incorrect read from fifo. Point $1"   
+      [ "$str" == "$arg" ] || panic "Incorrect output. Point $1" 
+   done
+
+   #ls permssion denied
+   skip
+   chmod 111 .
+   echo "$1" >&13
+   check_errors "$1"
+   chmod 777 .
+}
+
+#-----------------------------------------
+func4() {
+   echo "$1" >&13
+   FILE_NAME="$PATH_TEST/-p newfive"
+   read -t $readWait MESSAGE <&14 || panic "No requests for input"
+   echo "$FILE_NAME" >&13
+   sleep 1 
+   [ -f "$FILE_NAME" ] || panic "Incorrect output. Point $1"
+
+   skip
+   echo "$1" >&13
+   read -t $readWait MESSAGE <&14 || panic "No requests for input"
+   echo "/my_file" >&13
+   sleep 1 
+   check_errors "$1"
+
+}
+
+#-----------------------------------------
+func5() {
+   for arg in "*" "-x" "test" "~" " " ;do
+
+      echo "$1" >&13
+
+      #Remember files of directory
+      ls $PATH_TEST > "$PREFIX/test_${R}_a"
+      : >> "$PATH_TEST/$arg"
+
+      read -t $readWait MESSAGE <&14 || panic "No requests for input"
+      echo "$arg" >&13 
+      sleep 1
+
+      check_confirm_deleting $1
+      skip
+
+      ls $PATH_TEST > "$PREFIX/test_${R}_b"
+      /usr/bin/diff -ru "$PREFIX/test_${R}_a" "$PREFIX/test_${R}_b" >& /dev/null || \
+      panic "Incorrect output. Point $1"
+
+   done
+   #check nonexistant file
+   check_exist "$1"
+   echo "start" >> $HOME/stud_dirs/course3/spb/lab1/lab1_debug
+   read -t $readWait str <&15 || panic "Incorrect error output. Point $1"
+   echo "passed" >> $HOME/stud_dirs/course3/spb/lab1/lab1_debug 
+
+   skip
+   RM_TEST="$PATH_TEST/no_rights"
+   mkdir "$RM_TEST"
+   touch "$RM_TEST/$R"
+   chmod 555 "$RM_TEST"
+   echo $1 >&13
+   read -t $readWait MESSAGE <&14 || panic "No requests for input"
+   echo "$RM_TEST/$R" >&13 
+   sleep 1
+   check_confirm_deleting $1
+   check_errors $1
+}
+
+#-----------------------------------------
+func6() {
+   echo "$1" >&13
+   ps -o pid | grep "$pid" >/dev/null &&  panic "Incorrect ouput. Point $1" 
+}
+
+#-----------------------------------------
+func7() {
+   echo "$1" >&13
+   arg="$PATH_TEST/-p newdir"
+   read MESSAGE <&14 || panic "No requests for input"
+   echo "$arg" >&13
+   sleep 1
+   [ -d "$arg" ] || panic "Incorrect output. Point $1"
+
+   skip
+   echo $1 >&13
+   read MESSAGE <&14 || panic "No requests for input"
+   echo "/dir" >&13
+   check_errors $1
+}
+
+#-----------------------------------------
+func8() {
+   for arg in "*" "-x" "test" "~" " " ;do
+
+      echo "$1" >&13
+
+      #Remember files of directory
+      ls $PATH_TEST > "$PREFIX/test_${R}_a"
+      mkdir -- "$arg"
+
+      read -t $readWait MESSAGE <&14 || panic "No requests for input"
+      echo "$arg" >&13 
+      sleep 1
+
+      check_confirm_deleting $1/
+      skip
+
+      ls $PATH_TEST > "$PREFIX/test_${R}_b"
+      /usr/bin/diff -ru "$PREFIX/test_${R}_a" "$PREFIX/test_${R}_b" >& /dev/null \
+      || panic "Incorrect output. Point $1"
+
+   done
+   #check nonexistant file
+   check_exist "$1"
+   read -t $readWait str <&15 || panic "Incorrect error output. Point $1"
+ 
+   RM_TEST="$PATH_TEST/no_rights"
+   mkdir -p "$RM_TEST/$R"
+   chmod 555 "$RM_TEST"
+   skip
+   echo $1 >&13
+   read -t $readWait MESSAGE <&14 || panic "No requests for input"
+   echo "$RM_TEST/$R" >&13 
+   sleep 1
+   check_confirm_deleting $1
+   check_errors $1
+
+}
+#-----------------------------------------
+func9() {
+   echo "$1" >&13
+
+   FILE_NAME="-p $RANDOM"
+   : >> "$PATH_TEST/$FILE_NAME"
+
+   echo "$PATH_TEST/$FILE_NAME" >&13
+   find $PATH_TEST -name "$FILE_NAME" ! -perm -o=r ! -perm -o=w ! -perm -o=x -type f >/dev/null ||
+      panic "Incorrect out. Point $1"
+
+   #check nonexistant file
+   check_exist "$1"
+   check_errors "$1"
+}
+
+#-----------------------------------------
+func10() {
+   echo "$1"  >&13
+   FILE_NAME="-p $RANDOM"
+   : >> "$PREFIX/$FILE_NAME"
+
+   echo "$PREFIX/$FILE_NAME" >&13
+   find $PREFIX -name "$FILE_NAME" ! -perm -u=w -type f >/dev/null || panic "Incorrect out. Point $1"
+   #check nonexistant file
+   check_exist "$1"
+   check_errors "$1"
+}
+
+#-----------------------------------------
+func11() {
+   for FILE_NAME_B in "-p mv" "test" "*" "?" ;do
+      case $FILE_NAME_B in
+         "-p mv")
+            FILE_NAME_A="mv_l" ;;
+         "test")
+            FILE_NAME_A="test_l" ;;
+         "*")
+            FILE_NAME_A="link" ;;
+         "?")
+            FILE_NAME_A="link2" ;;   
+         *)
+            panic "Internal error. Contact maintainer." ;;
+      esac
+      echo "$1"  >&13
+
+      : >> "$PATH_TEST/$FILE_NAME_B"
+      
+      echo "$FILE_NAME_B" >&13
+      echo "$FILE_NAME_A" >&13
+      sleep 1
+      [ ! -f "$PATH_TEST/$FILE_NAME_B" ] && [ -f "$PATH_TEST/$FILE_NAME_A" ] \
+      ||  panic "Incorrect output. Point $1"
+   
+   done
+
+   #check nonexistant file
+   check_n_exist_two_args "$1"
+}
+
+#-----------------------------------------
+func12() {
+   echo "$1" >&13
+   for arg in `ps -Ao user= | sort -u`; do
+      read -t $readWait str <&14 || panic "Incorrect read from fifo. Point $1"
+      [ "$str" == "$arg" ] || panic "Incorrect output. Point $1"
+   done
+}
+
+#----------------------------------------
+func13() {
+   FILE_NAME=$RANDOM
+   DIR_NAME=$PATH_TEST/$RANDOM
+   > "$PATH_TEST/$FILE_NAME"
+   > "$PATH_TEST/*"
+   > "$PATH_TEST/?"
+   > "$PATH_TEST/["
+   > "$PATH_TEST/]"
+   > "$PATH_TEST/-a"
+   > "$PATH_TEST/~a"
+   > "$PATH_TEST/ " 
+   mkdir $DIR_NAME
+
+   #full path to full path & new name
+   NEW_FILE_NAME=$RANDOM
+   echo "$1" >&13
+   echo "$PATH_TEST/$FILE_NAME" >&13
+   echo "$DIR_NAME/$NEW_FILE_NAME" >&13
+   sleep 1
+   [ -f "$DIR_NAME/$NEW_FILE_NAME" ] || panic "Incorrect output. Point $1"
+
+   #copy *, ?, [, ], -, ~
+   for arg in "*" "?" "[" "]" "-a" "~a" "$FILE_NAME"  
+   do
+      echo "$1" >&13
+      echo "$arg" >&13
+      echo "$DIR_NAME" >&13
+      sleep 1
+   done
+IFS=$' \t\n'
+   count=`ls -q "$DIR_NAME" | wc -l`
+   [ $count == "8" ] || panic "Incorrect output. Point $1"
+IFS=$'\t\n'
+   #check nonexistant file
+   check_n_exist_two_args "$1"
+}
+
+#-----------------------------------------
+func14() {
+   echo "$1" >&13
+   read -t $readWait str <&14 || panic "Incorrect read from fifo. Point $1"
+   ( eval `$TEST<<<ZGF0ZSAnKyVhICViICVlICVIOiVNICVaICVZJwo=` | grep "$str" >/dev/null ) || panic "Incorrect output. Point $1"
+}
+
+#-----------------------------------------
+func15() {
+   for arg in "one" "two" "three" "four" "-p five"; do
+      echo "$1" >&13
+      echo "$arg" >&13
+      for i in `cat -- "$arg" >/dev/null`; do 
+         read -t $readWait str <&14 || panic "Incorrect read from fifo. Point $1"   
+         [ "$str" == "$i" ] || panic "Incorrect output. Point $1" 
+      done
+   done
+
+   #check nonexistant file
+   echo "$1" >&13 ;
+   read -t $readWait MESSAGE <&14 || panic "No requests for input"
+   echo "iDoNotExist" >&13 ;
+   read -t $readWait str <&15 || panic "Incorrect error output. Point $1"
+}
+
+#-----------------------------------------
+func16() {
+   FILE_NAME="$PATH_TEST/-p $RANDOM"
+   echo "$1" >&13
+   echo "$PATH_TEST/*" >&13
+   echo "$FILE_NAME" >&13
+   [ `ls -i $PATH_TEST | grep "^\*$" | awk '{print $1}'` == `ls -i $PATH_TEST | grep "$FILE_NAME" | awk '{print $1}'` ] || panic "Incorrect output. Point $1"
+   #check nonexistant file
+   check_n_exist_two_args "$1"
+}
+
+#-----------------------------------------
+func17() {
+   for FILE_NAME in "two" "one" "-p five" ;do
+      case $FILE_NAME in
+         "two")
+            LINK_NAME="two_l" ;;
+         "one")
+            LINK_NAME="-p l" ;;
+         *"five")
+            LINK_NAME="link" ;;
+         "*")
+            LINK_NAME="?" ;; 
+         *)
+            panic "Internal error. Contact maintainer." ;;
+      esac
+      echo "$1" >&13
+      read -t $readWait MESSAGE <&14 || panic "No output message. Point $1"
+      ln -s -- "$PATH_TEST/$FILE_NAME" "$PATH_TEST/$LINK_NAME"
+      echo "$LINK_NAME" >&13   
+      sleep 1
+      check_confirm_deleting $1
+      skip
+      [ -f "$PATH_TEST/$LINK_NAME" ] && panic "Incorrect output. Point $1"
+   done
+
+   : >> $PATH_TEST/ln_test
+   echo "$1" >&13
+   read -t $readWait MESSAGE <&14 || panic "No output message. Point $1"
+   echo "$PATH_TEST/ln_test" >&13
+   sleep 1
+   [ -f "$PATH_TEST/ln_test" ] || panic "Incorrect output. Point $1"
+   read -t $readWait str <&15 || panic "Incorrect error output. Point $1"
+   skip   
+   #check nonexistant file
+   check_exist "$1"
+   check_errors "$1"
+}
+
+#-----------------------------------------
+func18() {
+   echo "$1" >&13
+   read -t $readWait MESSAGE <&14 || panic "No output message"
+   echo "ls" >&13
+   for arg in *; do
+      read -t $readWait str <&14 || panic "Incorrect read from fifo. Point $1"   
+      [ "$str" == "$arg" ] || panic "Incorrect output. Point $1_1" 
+   done
+   skip
+   echo "$1" >&13
+   read -t $readWait MESSAGE <&14 || panic "No output message"
+   echo "/usr/bin/pwd" >&13
+   read -t $readWait str <&14 || panic "Incorrect read from fifo. Point $1"
+   [ "x$str" == "x`/usr/bin/pwd`" ] || panic "Incorrect output. Point $1_2"
+}
+
+#-----------------------------------------
+func19() { FILE_NAME="-p $RANDOM"
+   DIR_NAME=$PATH_TEST/$RANDOM
+   mkdir "$DIR_NAME"
+   : >> "$DIR_NAME/$FILE_NAME"
+   : >> "$PATH_TEST/$FILE_NAME"
+
+   #test *
+   echo "$1" >&13
+   read -t $readWait MESSAGE <&14 || panic "No output message"
+   echo "$DIR_NAME/*" >&13
+   sleep 1
+   [ -f "$DIR_NAME/$FILE_NAME" ] || panic "Incorrect output. Point $1"
+   skip
+   #test file
+   echo "$1" >&13
+   read -t $readWait MESSAGE <&14 || panic "No output message"
+   echo "$PATH_TEST/$FILE_NAME" >&13
+   sleep 1
+   [ -f "$PATH_TEST/$FILE_NAME" ]  || panic "Incorrect output. Point $1"
+   skip
+   #now delete dir
+   echo "$1" >&13
+   read -t $readWait MESSAGE <&14 || panic "No output message"
+   echo "$DIR_NAME" > "$IN_FIFO"
+   check_confirm_deleting $1
+   sleep 1
+   [ -d "$DIR_NAME" ]  && panic "Incorrect output. Point $1"
+   skip
+   #check nonexistant file
+   check_exist "$1"
+   read -t $readWait str <&15 || panic "Incorrect error output. Point $1"
+
+   skip
+   RM_TEST="$PATH_TEST/no_rights"
+   mkdir -p "$RM_TEST/$R"
+   chmod 555 "$RM_TEST"
+   echo $1 >&13
+   read -t $readWait MESSAGE <&14 || panic "No requests for input"
+   echo "$RM_TEST/$R" >&13 
+   sleep 1
+   check_confirm_deleting $1
+   check_errors $1
+}
+
+#-----------------------------------------
+func20() {
+   echo "$1" >&13
+   echo "${PATH_TEST}/-p five" >&13
+   gfind "$PATH_TEST" -maxdepth 1 -name "-p five" -perm -222 > /dev/null || panic "Incorrect output. Point $1"
+   #check nonexistant file
+   check_exist "$1"
+   check_errors "$1"
+}
+
+#-----------------------------------------
+func21() {
+   echo "$1" >&13
+   chmod 700 "${PATH_TEST}/testdir"
+   #chmod 700 "$PATH_TEST"
+   chmod 700 "${PATH_TEST}/two"
+   #test *
+   echo "${PATH_TEST}/*" >&13
+   find $PATH_TEST -perm 700 -type d >/dev/null || panic "Incorrect output. Point $1"
+
+   #test file
+   echo "${PATH_TEST}/two" >&13
+   find $PATH_TEST -name "two" -perm 700 -type f >/dev/null || panic "Incorrect output. Point $1"
+
+   #test dir
+   echo "${PATH_TEST}/testdir" >&13
+   find $PATH_TEST -name "testdir" -perm 722 -type d >/dev/null || panic "Incorrect output. Point $1"
+
+   #check nonexistant file
+   check_exist "$1"
+   check_errors "$1"
+
+}
+
+#-----------------------------------------
+func22() {
+   echo "$1" >&13
+   chmod 777 "${PATH_TEST}/testdir"
+   chmod 777 "$PATH_TEST"
+   chmod 777 "${PATH_TEST}/two"
+   #test *
+   echo "${PATH_TEST}/*" >&13
+   find $PATH_TEST -perm 777 -type d >/dev/null || panic "Incorrect output. Point $1"
+
+   #test file
+   echo "${PATH_TEST}/two" >&13
+   find $PATH_TEST -name "two" -perm 777 -type f >/dev/null || panic "Incorrect output. Point $1"
+
+   #test dir
+   echo "${PATH_TEST}/testdir" >&13
+   find $PATH_TEST -name "testdir" -perm 555 -type d >/dev/null || panic "Incorrect output. Point $1"
+
+   #check nonexistant file
+   check_exist "$1"
+   check_errors "$1"
+}
+
+#-----------------------------------------
+func23() {
+   for FILE_NAME in "two" "one" "-p five" ;do
+      case $FILE_NAME in
+         two)
+            LINK_NAME="two_l" ;;
+         one)
+            LINK_NAME="-p l" ;;
+         *five)
+            LINK_NAME="link" ;;
+         *)
+            panic "Internal error. Contact maintainer." ;;
+      esac
+
+      echo -e "$1\n$FILE_NAME\n$LINK_NAME" >&13
+      sleep 1
+     [ -n "`gfind -L "$PATH_TEST" -maxdepth 1 \
+         -name "$LINK_NAME" -xtype l`" ] ||
+         panic "Incorrect output. Point $1"
+   done
+}
+
+skip
+case $1 in
+   1) func1 "1" ;skip
+      func2 "2" ;skip
+      func3 "3" ;skip
+      func4 "4" ;skip
+      func5 "5" ;skip
+      func6 "6" ;
+      ;;
+   2) func1 "1" ;skip
+      func3 "2" ;skip
+      func7 "3" ;skip
+      func2 "4" ;skip
+      func8 "5" ;skip
+      func6 "6"
+      ;;
+   3) func1 "1" ;skip
+      func4 "2" ;skip
+      func9 "3" ;skip
+      func10 "4" ;skip
+      func11 "5" ;skip
+      func6 "6";;
+   4) func1 "1" ;skip
+      func2 "2" ;skip
+      func12 "3" ;skip
+      func4 "4" ;skip
+      func13 "5" ;skip
+      func6 "6";;
+   5) func1 "1" ;skip
+      func3 "2" ;skip
+      func14 "3" ;skip
+      func15 "4" ;skip
+      func5 "5" ;skip
+      func6 "6";;
+   6) func1 "1" ;skip
+      func2 "2" ;skip
+      func3 "3" ;skip
+      func16 "4" ;skip
+      func17 "5" ;skip
+      func6 "6";;
+   7) func1 "1" ;skip
+      func2 "2" ;skip
+      func18 "3" ;skip
+      func7 "4" ;skip
+      func19 "5" ;skip
+      func6 "6";;
+   8) func1 "1" ;skip
+      func2 "2" ;skip
+      func4 "3" ;skip
+      func20 "4" ;skip
+      func5 "5" ;skip
+      func6 "6";;
+   9) func1 "1" ;skip
+      func3 "2" ;skip
+      func7 "3" ;skip
+      func21 "4" ;skip
+      func22 "5" ;skip
+      func6 "6";;
+   10) func1 "1" ;skip
+      func2 "2" ;skip
+      func14 "3" ;skip
+      func15 "4" ;skip
+      func13 "5" ;skip
+      func6 "6";;
+   11) func1 "1" ;skip
+      func2 "2" ;skip
+      func3 "3" ;skip
+      func23 "4" ;skip
+      func18 "5" ;skip
+      func6 "6";;
+   12) func7 "1" ;skip
+      func2 "2" ;skip
+      func3 "3" ;skip
+      func11 "4" ;skip
+      func19 "5" ;skip
+      func6 "6";;
+esac
+
+
+# close fifo
+exec 13<&-
+exec 14<&-
+exec 15<&-
+exec 16<&-
+
+rm -- "$OUT_FIFO"
+# check EOF
+# create pipes
+mkfifo "$OUT_FIFO" 2>/dev/null
+# open fifo
+exec 14<>"$OUT_FIFO"
+
+# user's script
+(
+   :| "${2:?no script}" >&14 2>/dev/null &
+)
+
+i=0
+while read -t $readWait str <&14; do
+   (( i++ ))
+   [ $i -eq 100 ] && {
+   pkill -9 -P $$ -f "$2" &>/dev/null
+   panic "do not fucking use while true!!!" 
+}
+done
+# close fifo
+exec 14<&-
+echo $1 | egrep '^[0-9][01]?$' >/dev/null && 
+{
+   PWD_TEST="$PATH_TEST/${R}1/tmp"
+   mkdir -p "$PWD_TEST"
+   cd -- "$PWD_TEST"
+   exec 13<>"$IN_FIFO" 14<>"$OUT_FIFO" 15<>"$ERR_FIFO" 16<>"$USR_ERR" 
+   <&13 "${STUD_LAB:?no script}" >&14 2>&15 &
+   skip
+   cd -- "$HOME" 
+   /usr/xpg4/bin/rm -r "$PWD_TEST" 
+   echo 1 >&13
+   check_errors 1 
+}
+
+exec 13<&-
+exec 14<&-
+exec 15<&-
+exec 16<&-
+
+#Remove temporary files
+delete_tmp
+echo -e "\rTest succeeded!                                     "

@@ -1,0 +1,22 @@
+start
+checking confirm dialog: [36;40mrm: remove * (yes/no)?[0m
+checking confirm dialog: [36;40mrm: remove -x (yes/no)?[0m
+checking confirm dialog: [36;40mrm: remove test (yes/no)?[0m
+checking confirm dialog: [36;40mrm: remove ~ (yes/no)?[0m
+checking confirm dialog: [36;40m
+checking confirm dialog: [36;40mrm: remove * (yes/no)?[0m
+checking confirm dialog: [36;40mrm: remove -x (yes/no)?[0m
+checking confirm dialog: [36;40mrm: remove test (yes/no)?[0m
+checking confirm dialog: [36;40mrm: remove ~ (yes/no)?[0m
+checking confirm dialog: [36;40mrm: remove   (yes/no)?[0m
+start
+passed
+checking confirm dialog: [36;40mrm: remove /home/s225074/lcheck/tmp/10427/no_rights/10427 (yes/no)?[0m
+checking confirm dialog: [36;40mrm: remove * (yes/no)?[0m
+checking confirm dialog: [36;40mrm: remove -x (yes/no)?[0m
+checking confirm dialog: [36;40mrm: remove test (yes/no)?[0m
+checking confirm dialog: [36;40mrm: remove ~ (yes/no)?[0m
+checking confirm dialog: [36;40mrm: remove   (yes/no)?[0m
+start
+passed
+checking confirm dialog: [36;40mrm: remove /home/s225074/lcheck/tmp/16214/no_rights/16214 (yes/no)?[0m

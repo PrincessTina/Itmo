@@ -1,0 +1,81 @@
+#!/usr/bin/bash +H
+# ./lcheck lab variant checking_script
+
+# kill guests
+kill_cleanup() {
+   cleanup
+   pkill -9 -f check &>/dev/null
+}
+cleanup() {
+   rm -- "$LOCK"
+   kill -9 "${cpid:?}" &>/dev/null
+   kill -9 "${tpid:?}" &>/dev/null
+}
+
+# handle SIGINT
+trap kill_cleanup 2
+
+# check arguments
+lab=${1:?lab not specified}
+case $lab in [123]) ;; *) echo "No such lab" >&2 ;exit 1 ;; esac
+: "${2:?variant not specified}
+: "${3:?script not specified}
+
+# delete lab number from arglist
+shift 1
+
+# check lock
+LOCK="$HOME/lcheck.lock"
+[ -f "$LOCK" ] && {
+echo "$LOCK exists. Please kill another instances and rm it." >&2
+exit 2
+}
+: > "$LOCK"
+
+# casuality
+{
+   set P r e p a r e _ y o u r _ l a b w o r k
+
+   while /usr/local/bin/usleep 200000
+   do
+      case $x in
+         -) x=\\
+            ;;
+         \\) x='|'
+            ;;
+         /) x=-
+            ;;
+         *) x=/ ;;
+      esac
+      echo -ne "\r$x $msg"
+
+      case $1 in 
+         _) msg="$msg "
+            ;;
+         *) msg="$msg$1"
+            ;;
+      esac
+      shift 1
+   done
+} &
+cpid=$!
+
+# run check
+check_${lab} "$@" &
+pid=$!
+
+# wait timeout
+{
+   sleep $((60 * 10))
+   rm -- "$LOCK"
+   kill -9 $cpid &>/dev/null
+   kill -9 $pid &>/dev/null
+   pkill -9 check &>/dev/null
+} &
+tpid=$!
+
+# wait check_X before timeout and exit
+wait $pid
+rc=$?
+cleanup
+exit $rc
