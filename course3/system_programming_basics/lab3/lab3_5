@@ -1,0 +1,78 @@
+#!/usr/bin/ksh
+
+LANG=en_US.UTF-8
+
+touch /home/s225074/repo/itmo/course3/system_programming_basics/lab3/result /home/s225074/repo/itmo/course3/system_programming_basics/lab3/timingResult /home/s225074/repo/itmo/course3/system_programming_basics/lab3/groupUsers
+
+folderName=$1
+fileType=$(ls -ld -- $folderName | nawk '{print $1}' | cut -c 1) 
+userReadingRoot=$(ls -ld -- $folderName | nawk '{print $1}' | cut -c 2) 
+otherReadingRoot=$(ls -ld -- $folderName | nawk '{print $1}' | cut -c 8) 
+groupReadingRoot=$(ls -ld -- $folderName | nawk '{print $1}' | cut -c 5) 
+otherReadingRoot=$(ls -ld -- $folderName | nawk '{print $1}' | cut -c 8) 
+userName=$(ls -ld -- $folderName | nawk '{print $3}')
+groupName=$(ls -ld -- $folderName | nawk '{print $4}')
+result="/home/s225074/repo/itmo/course3/system_programming_basics/lab3/result"
+timingResult="/home/s225074/repo/itmo/course3/system_programming_basics/lab3/timingResult"
+groupUsers="/home/s225074/repo/itmo/course3/system_programming_basics/lab3/groupUsers"
+
+cat /dev/null > $result # cleans the file
+cat /dev/null > $groupUsers 
+
+function writeGroup {
+	for user in `getent passwd | awk -F: '{print $1}'`
+	do
+		if [ `groups $user | grep -w "$groupName" | wc -l` -eq 1 ]
+		then
+			echo $user >> $groupUsers  
+		fi
+	done 
+}
+
+if [ $fileType = "d" ]
+then
+	writeGroup
+
+	if [ $otherReadingRoot = "r" ]
+	then
+		getent passwd | awk -F: '{print $1}' >> $result
+	fi
+
+	if [ $groupReadingRoot = "r" ]
+	then
+		for user in $(cat $groupUsers)
+		do
+			if [ !$(cat $result | grep -w $user) ]
+			then
+				echo $user >> $result 
+			fi
+		done	
+	else
+		if [ $(cat $groupUsers | wc -l) -ne 0 ]
+		then
+	
+			for user in $(cat $groupUsers)
+			do
+				cp $result $timingResult	
+				cat $timingResult | grep -vw "$user" > $result	
+			done	
+		fi
+	fi
+
+	if [ $userReadingRoot = "r" ]
+	then
+		if [ !$(cat $result | grep -w $userName) ]
+		then
+			echo $userName >> $result
+		fi
+	else
+		cat $result | grep -vw "$userName" > $timingResult
+		cat $timingResult > $result  
+	fi
+else
+	echo "No such file." > $result
+fi
+
+cat $result 
+
+rm $result $timingResult $groupUsers 
