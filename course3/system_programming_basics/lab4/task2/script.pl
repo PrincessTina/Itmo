@@ -20,10 +20,6 @@ foreach my $arg (@ARGV) {
 	my $file;
 	my @rows = ();
 
-	if ($length > 1) {
-		print "==> $arg <==\n"
-	}
-	
 	if ("$arg" eq "-") {
 		$file  = *STDIN;
 	} else {
@@ -35,6 +31,10 @@ foreach my $arg (@ARGV) {
 			push(@rows, "$_");	
 		}	
 	}	
+
+	if ($length > 1) {
+		print "==> $arg <==\n"
+	}
 	
 	foreach my $row (@rows) {
 		print "$row";
