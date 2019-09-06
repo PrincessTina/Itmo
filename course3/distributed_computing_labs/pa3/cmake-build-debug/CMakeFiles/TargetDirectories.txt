@@ -1,0 +1,3 @@
+/home/princess/distributed_computing_labs/pa3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/princess/distributed_computing_labs/pa3/cmake-build-debug/CMakeFiles/pa3.dir
+/home/princess/distributed_computing_labs/pa3/cmake-build-debug/CMakeFiles/edit_cache.dir

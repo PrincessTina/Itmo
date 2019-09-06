@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/pa6.dir/main.c.o CMakeFiles/pa6.dir/ipc.c.o CMakeFiles/pa6.dir/lamport_time.c.o CMakeFiles/pa6.dir/critical_section.c.o  -o pa6 /home/princess/distributed_computing_labs/pa2/lib64/libruntime.so 

@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/princess/distributed_computing_labs/pa1/common.h
+
+/home/princess/distributed_computing_labs/pa1/ipc.h
+stddef.h
+-
+stdint.h
+-
+
+/home/princess/distributed_computing_labs/pa1/main.c
+main.h
+/home/princess/distributed_computing_labs/pa1/main.h
+
+/home/princess/distributed_computing_labs/pa1/main.h
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+unistd.h
+-
+wait.h
+-
+sys/types.h
+-
+common.h
+/home/princess/distributed_computing_labs/pa1/common.h
+ipc.h
+/home/princess/distributed_computing_labs/pa1/ipc.h
+pa1.h
+/home/princess/distributed_computing_labs/pa1/pa1.h
+
+/home/princess/distributed_computing_labs/pa1/pa1.h
+

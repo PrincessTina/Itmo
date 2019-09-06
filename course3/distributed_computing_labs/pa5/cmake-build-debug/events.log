@@ -1,0 +1,2920 @@
+0: process 1 (pid 25407, parent 25406) has STARTED with balance $10
+0: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 2 (pid 25408, parent 25406) has STARTED with balance $20
+0: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 3 (pid 25409, parent 25406) has STARTED with balance $30
+0: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 2 (pid 26360, parent 26358) has STARTED with balance $20
+0: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 1 (pid 26359, parent 26358) has STARTED with balance $10
+0: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 3 (pid 26361, parent 26358) has STARTED with balance $30
+0: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 3 (pid 26578, parent 26575) has STARTED with balance $30
+0: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 2 (pid 26577, parent 26575) has STARTED with balance $20
+0: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 1 (pid 26576, parent 26575) has STARTED with balance $10
+0: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 1 (pid 27007, parent 27006) has STARTED with balance $10
+0: process 1 received all STARTED messages
+1: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 3 (pid 27009, parent 27006) has STARTED with balance $30
+0: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 2 (pid 27008, parent 27006) has STARTED with balance $20
+0: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 1 (pid 27135, parent 27134) has STARTED with balance $10
+0: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 3 (pid 27137, parent 27134) has STARTED with balance $30
+0: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 2 (pid 27136, parent 27134) has STARTED with balance $20
+0: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 1 (pid 27173, parent 27172) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 3 (pid 27175, parent 27172) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 2 (pid 27174, parent 27172) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 1 (pid 27224, parent 27223) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 3 (pid 27226, parent 27223) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 2 (pid 27225, parent 27223) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 1 (pid 27291, parent 27290) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 2 (pid 27292, parent 27290) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 3 (pid 27293, parent 27290) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 1 (pid 27338, parent 27337) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 2 (pid 27339, parent 27337) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 3 (pid 27340, parent 27337) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 1 (pid 27382, parent 27381) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 3 (pid 27384, parent 27381) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 2 (pid 27383, parent 27381) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 1 (pid 27403, parent 27402) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 2 (pid 27404, parent 27402) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 3 (pid 27405, parent 27402) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 1 (pid 27442, parent 27438) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 2 (pid 27443, parent 27438) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 3 (pid 27444, parent 27438) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 1 (pid 27560, parent 27555) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 2 (pid 27561, parent 27555) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 3 (pid 27562, parent 27555) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 1 (pid 27710, parent 27706) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 2 (pid 27711, parent 27706) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 3 (pid 27712, parent 27706) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 1 (pid 27866, parent 27862) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 2 (pid 27867, parent 27862) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 3 (pid 27868, parent 27862) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 1 (pid 28046, parent 28042) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 2 (pid 28047, parent 28042) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 3 (pid 28048, parent 28042) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 1 (pid 28090, parent 28085) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 3 (pid 28092, parent 28085) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 2 (pid 28091, parent 28085) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 1 (pid 28152, parent 28148) has STARTED with balance $10
+0: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 3 (pid 28154, parent 28148) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 2 (pid 28153, parent 28148) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 1 (pid 31380, parent 31376) has STARTED with balance $10
+0: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 3 (pid 31382, parent 31376) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 2 (pid 31381, parent 31376) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 1 (pid 31487, parent 31486) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+0: process 3 (pid 31489, parent 31486) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 2 (pid 31488, parent 31486) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 1 (pid 31519, parent 31518) has STARTED with balance $10
+0: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 1 (pid 31578, parent 31577) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 2 (pid 31579, parent 31577) has STARTED with balance $20
+0: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 3 (pid 31580, parent 31577) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 1 (pid 31616, parent 31615) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 3 (pid 31618, parent 31615) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 2 (pid 31617, parent 31615) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 1 (pid 31728, parent 31727) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 3 (pid 31730, parent 31727) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 2 (pid 31729, parent 31727) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 1 (pid 31786, parent 31785) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 3 (pid 31788, parent 31785) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 2 (pid 31787, parent 31785) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 1 (pid 32098, parent 32097) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 3 (pid 32100, parent 32097) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 2 (pid 32099, parent 32097) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 1 (pid 32243, parent 32239) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 3 (pid 32245, parent 32239) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 2 (pid 32244, parent 32239) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 1 (pid 32347, parent 32346) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 2 (pid 32348, parent 32346) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 3 (pid 32349, parent 32346) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 2 (pid 32384, parent 32382) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 1 (pid 32383, parent 32382) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 3 (pid 32385, parent 32382) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 1 (pid 32416, parent 32412) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+3: process 1 received $ 1 from process 3
+3: process 1 has DONE with balance $10
+3: process 1 received all DONE messages
+0: process 3 (pid 32418, parent 32412) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 1 to process 1
+3: process 3 has DONE with balance $31
+3: process 3 received all DONE messages
+0: process 2 (pid 32417, parent 32412) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+3: process 2 has DONE with balance $19
+3: process 2 received all DONE messages
+0: process 0 received all STARTED messages
+3: process 0 received all DONE messages
+0: process 1 (pid   929, parent   927) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 4 (pid   933, parent   927) has STARTED with balance $40
+2: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+3: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 3 (pid   932, parent   927) has STARTED with balance $30
+2: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 5 (pid   934, parent   927) has STARTED with balance $90
+2: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+4: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 1 (pid   952, parent   951) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 2 (pid   953, parent   951) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 3 (pid   954, parent   951) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 4 (pid   955, parent   951) has STARTED with balance $40
+1: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+3: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 5 (pid   956, parent   951) has STARTED with balance $90
+1: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+4: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+0: process 1 (pid  1061, parent  1060) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 2 (pid  1062, parent  1060) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 3 (pid  1063, parent  1060) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 5 (pid  1065, parent  1060) has STARTED with balance $90
+1: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+4: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 4 (pid  1064, parent  1060) has STARTED with balance $40
+1: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+3: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+0: process 1 (pid  1318, parent  1317) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 3 (pid  1320, parent  1317) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 2 (pid  1319, parent  1317) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 1 (pid  1342, parent  1341) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 2 (pid  1343, parent  1341) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 3 (pid  1344, parent  1341) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 5 (pid  1346, parent  1341) has STARTED with balance $90
+1: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+4: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 4 (pid  1345, parent  1341) has STARTED with balance $40
+1: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+3: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+0: process 1 (pid  1367, parent  1365) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 2 (pid  1368, parent  1365) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 3 (pid  1370, parent  1365) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 5 (pid  1372, parent  1365) has STARTED with balance $90
+1: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+4: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 4 (pid  1371, parent  1365) has STARTED with balance $40
+1: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+3: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+0: process 1 (pid  1399, parent  1394) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 2 (pid  1402, parent  1394) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 3 (pid  1404, parent  1394) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 4 (pid  1406, parent  1394) has STARTED with balance $40
+1: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+3: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 5 (pid  1407, parent  1394) has STARTED with balance $90
+1: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+4: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+0: process 1 (pid  1437, parent  1433) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 2 (pid  1438, parent  1433) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 3 (pid  1439, parent  1433) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 5 (pid  1441, parent  1433) has STARTED with balance $90
+1: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+4: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 4 (pid  1440, parent  1433) has STARTED with balance $40
+1: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+3: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+0: process 1 (pid  1551, parent  1550) has STARTED with balance $10
+1: process 1 received all STARTED messages
+0: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 2 (pid  1552, parent  1550) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+1: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 3 (pid  1553, parent  1550) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+2: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 5 (pid  1556, parent  1550) has STARTED with balance $90
+1: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+4: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 4 (pid  1555, parent  1550) has STARTED with balance $40
+1: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+3: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+0: process 2 (pid  1694, parent  1691) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+2: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 1 (pid  1692, parent  1691) has STARTED with balance $10
+1: process 1 received all STARTED messages
+1: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 4 (pid  1700, parent  1691) has STARTED with balance $40
+1: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+4: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 5 (pid  1701, parent  1691) has STARTED with balance $90
+1: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+5: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 3 (pid  1699, parent  1691) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+3: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+0: process 1 (pid  1884, parent  1883) has STARTED with balance $10
+1: process 1 received all STARTED messages
+1: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 1 (pid  1955, parent  1953) has STARTED with balance $10
+1: process 1 received all STARTED messages
+1: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 2 (pid  1956, parent  1953) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+2: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 3 (pid  1959, parent  1953) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+3: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 4 (pid  1965, parent  1953) has STARTED with balance $40
+1: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+4: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 5 (pid  1966, parent  1953) has STARTED with balance $90
+1: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+5: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+0: process 1 (pid  1986, parent  1985) has STARTED with balance $10
+1: process 1 received all STARTED messages
+1: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 2 (pid  1987, parent  1985) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+2: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 3 (pid  1988, parent  1985) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+3: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 5 (pid  1990, parent  1985) has STARTED with balance $90
+1: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+5: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 4 (pid  1989, parent  1985) has STARTED with balance $40
+1: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+4: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+0: process 1 (pid  2015, parent  2014) has STARTED with balance $10
+1: process 1 received all STARTED messages
+1: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 2 (pid  2016, parent  2014) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+2: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 3 (pid  2017, parent  2014) has STARTED with balance $30
+2: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+3: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 5 (pid  2022, parent  2014) has STARTED with balance $90
+2: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+5: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 4 (pid  2018, parent  2014) has STARTED with balance $40
+1: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+4: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+0: process 1 (pid  2046, parent  2045) has STARTED with balance $10
+1: process 1 received all STARTED messages
+1: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 2 (pid  2047, parent  2045) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+2: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 3 (pid  2048, parent  2045) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+3: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 4 (pid  2049, parent  2045) has STARTED with balance $40
+1: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+4: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 5 (pid  2050, parent  2045) has STARTED with balance $90
+1: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+5: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+0: process 1 (pid  2070, parent  2069) has STARTED with balance $10
+1: process 1 received all STARTED messages
+1: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 2 (pid  2071, parent  2069) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+2: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 3 (pid  2072, parent  2069) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+3: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 5 (pid  2074, parent  2069) has STARTED with balance $90
+1: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+5: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 4 (pid  2073, parent  2069) has STARTED with balance $40
+1: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+4: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+0: process 1 (pid  2096, parent  2095) has STARTED with balance $10
+1: process 1 received all STARTED messages
+1: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 2 (pid  2097, parent  2095) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+2: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 3 (pid  2098, parent  2095) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+3: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 4 (pid  2099, parent  2095) has STARTED with balance $40
+1: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+4: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 5 (pid  2100, parent  2095) has STARTED with balance $90
+1: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+5: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+0: process 1 (pid  2122, parent  2121) has STARTED with balance $10
+1: process 1 received all STARTED messages
+1: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 2 (pid  2123, parent  2121) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+2: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 3 (pid  2124, parent  2121) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+3: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 5 (pid  2126, parent  2121) has STARTED with balance $90
+1: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+5: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 4 (pid  2125, parent  2121) has STARTED with balance $40
+1: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+4: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+0: process 1 (pid  2145, parent  2144) has STARTED with balance $10
+0: process 1 received all STARTED messages
+1: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 2 (pid  2146, parent  2144) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+2: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 3 (pid  2147, parent  2144) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+3: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 4 (pid  2148, parent  2144) has STARTED with balance $40
+3: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+4: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 5 (pid  2149, parent  2144) has STARTED with balance $90
+2: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+5: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+0: process 1 (pid  2168, parent  2167) has STARTED with balance $10
+1: process 1 received all STARTED messages
+1: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 2 (pid  2169, parent  2167) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+2: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 3 (pid  2170, parent  2167) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+3: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 4 (pid  2171, parent  2167) has STARTED with balance $40
+1: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+4: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 5 (pid  2172, parent  2167) has STARTED with balance $90
+1: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+5: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+0: process 1 (pid  2190, parent  2189) has STARTED with balance $10
+1: process 1 received all STARTED messages
+1: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 1 (pid  2216, parent  2215) has STARTED with balance $10
+1: process 1 received all STARTED messages
+1: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 2 (pid  2217, parent  2215) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+2: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 3 (pid  2218, parent  2215) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+3: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 4 (pid  2219, parent  2215) has STARTED with balance $40
+1: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+4: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 5 (pid  2220, parent  2215) has STARTED with balance $90
+1: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+5: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+0: process 1 (pid  2241, parent  2240) has STARTED with balance $10
+1: process 1 received all STARTED messages
+1: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 2 (pid  2242, parent  2240) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+2: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 3 (pid  2243, parent  2240) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+3: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 4 (pid  2244, parent  2240) has STARTED with balance $40
+1: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+4: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 5 (pid  2245, parent  2240) has STARTED with balance $90
+1: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+5: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+0: process 1 (pid  2263, parent  2262) has STARTED with balance $10
+1: process 1 received all STARTED messages
+1: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 3 (pid  2266, parent  2262) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+3: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 2 (pid  2265, parent  2262) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+2: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 4 (pid  2267, parent  2262) has STARTED with balance $40
+1: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+4: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 5 (pid  2268, parent  2262) has STARTED with balance $90
+2: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+5: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+0: process 1 (pid  6288, parent  6285) has STARTED with balance $10
+0: process 1 received all STARTED messages
+1: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 3 (pid  6290, parent  6285) has STARTED with balance $30
+0: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+3: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 4 (pid  6291, parent  6285) has STARTED with balance $40
+0: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+4: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 2 (pid  6289, parent  6285) has STARTED with balance $20
+0: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+2: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 5 (pid  6292, parent  6285) has STARTED with balance $90
+0: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+5: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+0: process 1 (pid  9052, parent  9051) has STARTED with balance $10
+1: process 1 received all STARTED messages
+1: process 1 transferred $ 1 to process 2
+5: process 1 received $ 1 from process 5
+5: process 1 has DONE with balance $10
+5: process 1 received all DONE messages
+0: process 2 (pid  9053, parent  9051) has STARTED with balance $20
+1: process 2 received all STARTED messages
+1: process 2 received $ 1 from process 1
+2: process 2 transferred $ 2 to process 3
+5: process 2 has DONE with balance $19
+5: process 2 received all DONE messages
+0: process 3 (pid  9054, parent  9051) has STARTED with balance $30
+1: process 3 received all STARTED messages
+2: process 3 received $ 2 from process 2
+3: process 3 transferred $ 3 to process 4
+5: process 3 has DONE with balance $29
+5: process 3 received all DONE messages
+0: process 5 (pid  9056, parent  9051) has STARTED with balance $90
+1: process 5 received all STARTED messages
+4: process 5 received $ 4 from process 4
+5: process 5 transferred $ 1 to process 1
+5: process 5 has DONE with balance $93
+5: process 5 received all DONE messages
+0: process 4 (pid  9055, parent  9051) has STARTED with balance $40
+1: process 4 received all STARTED messages
+3: process 4 received $ 3 from process 3
+4: process 4 transferred $ 4 to process 5
+5: process 4 has DONE with balance $39
+5: process 4 received all DONE messages
+0: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 1 (pid 13894, parent 13893) has STARTED with balance $10
+5: process 1 received all STARTED messages
+9: process 1 transferred $ 1 to process 2
+35: process 1 received $ 1 from process 5
+39: process 1 has DONE with balance $10
+43: process 1 received all DONE messages
+1: process 2 (pid 13895, parent 13893) has STARTED with balance $20
+5: process 2 received all STARTED messages
+11: process 2 received $ 1 from process 1
+15: process 2 transferred $ 2 to process 3
+39: process 2 has DONE with balance $19
+43: process 2 received all DONE messages
+1: process 3 (pid 13896, parent 13893) has STARTED with balance $30
+5: process 3 received all STARTED messages
+17: process 3 received $ 2 from process 2
+21: process 3 transferred $ 3 to process 4
+39: process 3 has DONE with balance $29
+43: process 3 received all DONE messages
+1: process 4 (pid 13897, parent 13893) has STARTED with balance $40
+5: process 4 received all STARTED messages
+23: process 4 received $ 3 from process 3
+27: process 4 transferred $ 4 to process 5
+39: process 4 has DONE with balance $39
+43: process 4 received all DONE messages
+1: process 5 (pid 13898, parent 13893) has STARTED with balance $90
+5: process 5 received all STARTED messages
+29: process 5 received $ 4 from process 4
+33: process 5 transferred $ 1 to process 1
+39: process 5 has DONE with balance $93
+43: process 5 received all DONE messages
+6: process 0 received all STARTED messages
+44: process 0 received all DONE messages
+1: process 1 (pid 14580, parent 14579) has STARTED with balance $10
+5: process 1 received all STARTED messages
+9: process 1 transferred $ 1 to process 2
+35: process 1 received $ 1 from process 5
+39: process 1 has DONE with balance $10
+46: process 1 received all DONE messages
+1: process 4 (pid 14583, parent 14579) has STARTED with balance $40
+5: process 4 received all STARTED messages
+23: process 4 received $ 3 from process 3
+27: process 4 transferred $ 4 to process 5
+39: process 4 has DONE with balance $39
+45: process 4 received all DONE messages
+1: process 3 (pid 14582, parent 14579) has STARTED with balance $30
+5: process 3 received all STARTED messages
+17: process 3 received $ 2 from process 2
+21: process 3 transferred $ 3 to process 4
+39: process 3 has DONE with balance $29
+45: process 3 received all DONE messages
+1: process 5 (pid 14584, parent 14579) has STARTED with balance $90
+5: process 5 received all STARTED messages
+29: process 5 received $ 4 from process 4
+33: process 5 transferred $ 1 to process 1
+39: process 5 has DONE with balance $93
+45: process 5 received all DONE messages
+1: process 1 (pid 14647, parent 14646) has STARTED with balance $10
+5: process 1 received all STARTED messages
+9: process 1 transferred $ 1 to process 2
+35: process 1 received $ 1 from process 5
+39: process 1 has DONE with balance $10
+43: process 1 received all DONE messages
+1: process 2 (pid 14648, parent 14646) has STARTED with balance $20
+5: process 2 received all STARTED messages
+11: process 2 received $ 1 from process 1
+15: process 2 transferred $ 2 to process 3
+39: process 2 has DONE with balance $19
+43: process 2 received all DONE messages
+1: process 3 (pid 14649, parent 14646) has STARTED with balance $30
+5: process 3 received all STARTED messages
+17: process 3 received $ 2 from process 2
+21: process 3 transferred $ 3 to process 4
+39: process 3 has DONE with balance $29
+43: process 3 received all DONE messages
+1: process 4 (pid 14650, parent 14646) has STARTED with balance $40
+5: process 4 received all STARTED messages
+23: process 4 received $ 3 from process 3
+27: process 4 transferred $ 4 to process 5
+39: process 4 has DONE with balance $39
+43: process 4 received all DONE messages
+1: process 5 (pid 14651, parent 14646) has STARTED with balance $90
+5: process 5 received all STARTED messages
+29: process 5 received $ 4 from process 4
+33: process 5 transferred $ 1 to process 1
+39: process 5 has DONE with balance $93
+43: process 5 received all DONE messages
+6: process 0 received all STARTED messages
+44: process 0 received all DONE messages
+1: process 1 (pid 14684, parent 14680) has STARTED with balance $10
+5: process 1 received all STARTED messages
+9: process 1 transferred $ 1 to process 2
+35: process 1 received $ 1 from process 5
+39: process 1 has DONE with balance $10
+43: process 1 received all DONE messages
+1: process 3 (pid 14686, parent 14680) has STARTED with balance $30
+5: process 3 received all STARTED messages
+17: process 3 received $ 2 from process 2
+21: process 3 transferred $ 3 to process 4
+39: process 3 has DONE with balance $29
+43: process 3 received all DONE messages
+1: process 5 (pid 14688, parent 14680) has STARTED with balance $90
+5: process 5 received all STARTED messages
+29: process 5 received $ 4 from process 4
+33: process 5 transferred $ 1 to process 1
+39: process 5 has DONE with balance $93
+43: process 5 received all DONE messages
+1: process 4 (pid 14687, parent 14680) has STARTED with balance $40
+5: process 4 received all STARTED messages
+23: process 4 received $ 3 from process 3
+27: process 4 transferred $ 4 to process 5
+39: process 4 has DONE with balance $39
+43: process 4 received all DONE messages
+1: process 2 (pid 14685, parent 14680) has STARTED with balance $20
+5: process 2 received all STARTED messages
+11: process 2 received $ 1 from process 1
+15: process 2 transferred $ 2 to process 3
+39: process 2 has DONE with balance $19
+43: process 2 received all DONE messages
+1: process 1 (pid 14929, parent 14928) has STARTED with balance $10
+5: process 1 received all STARTED messages
+9: process 1 transferred $ 1 to process 2
+35: process 1 received $ 1 from process 5
+39: process 1 has DONE with balance $10
+43: process 1 received all DONE messages
+1: process 2 (pid 14930, parent 14928) has STARTED with balance $20
+5: process 2 received all STARTED messages
+11: process 2 received $ 1 from process 1
+15: process 2 transferred $ 2 to process 3
+39: process 2 has DONE with balance $19
+43: process 2 received all DONE messages
+1: process 3 (pid 14931, parent 14928) has STARTED with balance $30
+5: process 3 received all STARTED messages
+17: process 3 received $ 2 from process 2
+21: process 3 transferred $ 3 to process 4
+39: process 3 has DONE with balance $29
+43: process 3 received all DONE messages
+1: process 4 (pid 14932, parent 14928) has STARTED with balance $40
+5: process 4 received all STARTED messages
+23: process 4 received $ 3 from process 3
+27: process 4 transferred $ 4 to process 5
+39: process 4 has DONE with balance $39
+43: process 4 received all DONE messages
+1: process 5 (pid 14933, parent 14928) has STARTED with balance $90
+5: process 5 received all STARTED messages
+29: process 5 received $ 4 from process 4
+33: process 5 transferred $ 1 to process 1
+39: process 5 has DONE with balance $93
+43: process 5 received all DONE messages
+6: process 0 received all STARTED messages
+44: process 0 received all DONE messages
+1: process 1 (pid 15343, parent 15342) has STARTED with balance $10
+5: process 1 received all STARTED messages
+9: process 1 transferred $ 1 to process 2
+40: process 1 received $ 1 from process 5
+44: process 1 has DONE with balance $10
+48: process 1 received all DONE messages
+1: process 2 (pid 15344, parent 15342) has STARTED with balance $20
+5: process 2 received all STARTED messages
+12: process 2 received $ 1 from process 1
+16: process 2 transferred $ 2 to process 3
+44: process 2 has DONE with balance $19
+48: process 2 received all DONE messages
+1: process 5 (pid 15347, parent 15342) has STARTED with balance $90
+5: process 5 received all STARTED messages
+33: process 5 received $ 4 from process 4
+37: process 5 transferred $ 1 to process 1
+44: process 5 has DONE with balance $93
+48: process 5 received all DONE messages
+1: process 3 (pid 15345, parent 15342) has STARTED with balance $30
+5: process 3 received all STARTED messages
+19: process 3 received $ 2 from process 2
+23: process 3 transferred $ 3 to process 4
+44: process 3 has DONE with balance $29
+48: process 3 received all DONE messages
+1: process 4 (pid 15346, parent 15342) has STARTED with balance $40
+5: process 4 received all STARTED messages
+26: process 4 received $ 3 from process 3
+30: process 4 transferred $ 4 to process 5
+44: process 4 has DONE with balance $39
+48: process 4 received all DONE messages
+6: process 0 received all STARTED messages
+49: process 0 received all DONE messages
+1: process 1 (pid 15830, parent 15829) has STARTED with balance $10
+5: process 1 received all STARTED messages
+9: process 1 transferred $ 1 to process 2
+40: process 1 received $ 1 from process 5
+44: process 1 has DONE with balance $10
+48: process 1 received all DONE messages
+1: process 2 (pid 15831, parent 15829) has STARTED with balance $20
+5: process 2 received all STARTED messages
+12: process 2 received $ 1 from process 1
+16: process 2 transferred $ 2 to process 3
+44: process 2 has DONE with balance $19
+48: process 2 received all DONE messages
+1: process 4 (pid 15833, parent 15829) has STARTED with balance $40
+5: process 4 received all STARTED messages
+26: process 4 received $ 3 from process 3
+30: process 4 transferred $ 4 to process 5
+44: process 4 has DONE with balance $39
+48: process 4 received all DONE messages
+1: process 5 (pid 15834, parent 15829) has STARTED with balance $90
+5: process 5 received all STARTED messages
+33: process 5 received $ 4 from process 4
+37: process 5 transferred $ 1 to process 1
+44: process 5 has DONE with balance $93
+48: process 5 received all DONE messages
+1: process 3 (pid 15832, parent 15829) has STARTED with balance $30
+5: process 3 received all STARTED messages
+19: process 3 received $ 2 from process 2
+23: process 3 transferred $ 3 to process 4
+44: process 3 has DONE with balance $29
+48: process 3 received all DONE messages
+6: process 0 received all STARTED messages
+49: process 0 received all DONE messages
+1: process 1 (pid 15886, parent 15885) has STARTED with balance $10
+5: process 1 received all STARTED messages
+9: process 1 transferred $ 1 to process 2
+40: process 1 received $ 1 from process 5
+44: process 1 has DONE with balance $10
+48: process 1 received all DONE messages
+1: process 2 (pid 15887, parent 15885) has STARTED with balance $10
+5: process 2 received all STARTED messages
+12: process 2 received $ 1 from process 1
+16: process 2 transferred $ 2 to process 3
+44: process 2 has DONE with balance $ 9
+48: process 2 received all DONE messages
+1: process 3 (pid 15888, parent 15885) has STARTED with balance $20
+5: process 3 received all STARTED messages
+19: process 3 received $ 2 from process 2
+23: process 3 transferred $ 3 to process 4
+44: process 3 has DONE with balance $19
+48: process 3 received all DONE messages
+1: process 5 (pid 15890, parent 15885) has STARTED with balance $30
+5: process 5 received all STARTED messages
+33: process 5 received $ 4 from process 4
+37: process 5 transferred $ 1 to process 1
+44: process 5 has DONE with balance $33
+48: process 5 received all DONE messages
+1: process 4 (pid 15889, parent 15885) has STARTED with balance $20
+5: process 4 received all STARTED messages
+26: process 4 received $ 3 from process 3
+30: process 4 transferred $ 4 to process 5
+44: process 4 has DONE with balance $19
+48: process 4 received all DONE messages
+6: process 0 received all STARTED messages
+49: process 0 received all DONE messages
+1: process 2 (pid 16530, parent 16526) has STARTED with balance $10
+5: process 2 received all STARTED messages
+12: process 2 received $ 1 from process 1
+16: process 2 transferred $ 2 to process 3
+44: process 2 has DONE with balance $ 9
+48: process 2 received all DONE messages
+1: process 3 (pid 16531, parent 16526) has STARTED with balance $20
+5: process 3 received all STARTED messages
+19: process 3 received $ 2 from process 2
+23: process 3 transferred $ 3 to process 4
+44: process 3 has DONE with balance $19
+48: process 3 received all DONE messages
+1: process 4 (pid 16532, parent 16526) has STARTED with balance $20
+5: process 4 received all STARTED messages
+26: process 4 received $ 3 from process 3
+30: process 4 transferred $ 4 to process 5
+44: process 4 has DONE with balance $19
+48: process 4 received all DONE messages
+1: process 5 (pid 16533, parent 16526) has STARTED with balance $30
+5: process 5 received all STARTED messages
+33: process 5 received $ 4 from process 4
+37: process 5 transferred $ 1 to process 1
+44: process 5 has DONE with balance $33
+48: process 5 received all DONE messages
+1: process 1 (pid 16529, parent 16526) has STARTED with balance $10
+5: process 1 received all STARTED messages
+9: process 1 transferred $ 1 to process 2
+40: process 1 received $ 1 from process 5
+44: process 1 has DONE with balance $10
+48: process 1 received all DONE messages
+6: process 0 received all STARTED messages
+49: process 0 received all DONE messages
+1: process 1 (pid 17689, parent 17688) has STARTED with balance $10
+5: process 1 received all STARTED messages
+12: process 1 transferred $ 1 to process 2
+40: process 1 received $ 1 from process 5
+44: process 1 has DONE with balance $10
+48: process 1 received all DONE messages
+1: process 2 (pid 17690, parent 17688) has STARTED with balance $10
+5: process 2 received all STARTED messages
+12: process 2 received $ 1 from process 1
+19: process 2 transferred $ 2 to process 3
+44: process 2 has DONE with balance $ 9
+48: process 2 received all DONE messages
+1: process 4 (pid 17692, parent 17688) has STARTED with balance $20
+5: process 4 received all STARTED messages
+26: process 4 received $ 3 from process 3
+33: process 4 transferred $ 4 to process 5
+44: process 4 has DONE with balance $19
+48: process 4 received all DONE messages
+1: process 5 (pid 17693, parent 17688) has STARTED with balance $30
+5: process 5 received all STARTED messages
+33: process 5 received $ 4 from process 4
+40: process 5 transferred $ 1 to process 1
+44: process 5 has DONE with balance $33
+48: process 5 received all DONE messages
+1: process 3 (pid 17691, parent 17688) has STARTED with balance $20
+5: process 3 received all STARTED messages
+19: process 3 received $ 2 from process 2
+26: process 3 transferred $ 3 to process 4
+44: process 3 has DONE with balance $19
+48: process 3 received all DONE messages
+6: process 0 received all STARTED messages
+49: process 0 received all DONE messages
+1: process 1 (pid 18123, parent 18122) has STARTED with balance $10
+5: process 1 received all STARTED messages
+12: process 1 transferred $ 1 to process 2
+40: process 1 received $ 1 from process 5
+44: process 1 has DONE with balance $10
+48: process 1 received all DONE messages
+1: process 2 (pid 18124, parent 18122) has STARTED with balance $10
+5: process 2 received all STARTED messages
+12: process 2 received $ 1 from process 1
+19: process 2 transferred $ 2 to process 3
+44: process 2 has DONE with balance $ 9
+48: process 2 received all DONE messages
+1: process 3 (pid 18125, parent 18122) has STARTED with balance $20
+5: process 3 received all STARTED messages
+19: process 3 received $ 2 from process 2
+26: process 3 transferred $ 3 to process 4
+44: process 3 has DONE with balance $19
+48: process 3 received all DONE messages
+1: process 4 (pid 18126, parent 18122) has STARTED with balance $20
+5: process 4 received all STARTED messages
+26: process 4 received $ 3 from process 3
+33: process 4 transferred $ 4 to process 5
+44: process 4 has DONE with balance $19
+48: process 4 received all DONE messages
+1: process 5 (pid 18127, parent 18122) has STARTED with balance $30
+5: process 5 received all STARTED messages
+33: process 5 received $ 4 from process 4
+40: process 5 transferred $ 1 to process 1
+44: process 5 has DONE with balance $33
+48: process 5 received all DONE messages
+6: process 0 received all STARTED messages
+49: process 0 received all DONE messages
+1: process 1 (pid 18311, parent 18310) has STARTED with balance $10
+5: process 1 received all STARTED messages
+9: process 1 transferred $ 1 to process 2
+40: process 1 received $ 1 from process 5
+44: process 1 has DONE with balance $10
+48: process 1 received all DONE messages
+1: process 3 (pid 18313, parent 18310) has STARTED with balance $20
+5: process 3 received all STARTED messages
+19: process 3 received $ 2 from process 2
+23: process 3 transferred $ 3 to process 4
+44: process 3 has DONE with balance $19
+48: process 3 received all DONE messages
+1: process 2 (pid 18312, parent 18310) has STARTED with balance $10
+5: process 2 received all STARTED messages
+12: process 2 received $ 1 from process 1
+16: process 2 transferred $ 2 to process 3
+44: process 2 has DONE with balance $ 9
+48: process 2 received all DONE messages
+1: process 5 (pid 18315, parent 18310) has STARTED with balance $30
+5: process 5 received all STARTED messages
+33: process 5 received $ 4 from process 4
+37: process 5 transferred $ 1 to process 1
+44: process 5 has DONE with balance $33
+48: process 5 received all DONE messages
+1: process 4 (pid 18314, parent 18310) has STARTED with balance $20
+5: process 4 received all STARTED messages
+26: process 4 received $ 3 from process 3
+30: process 4 transferred $ 4 to process 5
+44: process 4 has DONE with balance $19
+48: process 4 received all DONE messages
+6: process 0 received all STARTED messages
+49: process 0 received all DONE messages
+1: process 1 (pid 18526, parent 18525) has STARTED with balance $10
+5: process 1 received all STARTED messages
+9: process 1 transferred $ 1 to process 2
+40: process 1 received $ 1 from process 5
+44: process 1 has DONE with balance $10
+48: process 1 received all DONE messages
+1: process 2 (pid 18527, parent 18525) has STARTED with balance $10
+5: process 2 received all STARTED messages
+12: process 2 received $ 1 from process 1
+16: process 2 transferred $ 2 to process 3
+44: process 2 has DONE with balance $ 9
+48: process 2 received all DONE messages
+1: process 5 (pid 18530, parent 18525) has STARTED with balance $30
+5: process 5 received all STARTED messages
+33: process 5 received $ 4 from process 4
+37: process 5 transferred $ 1 to process 1
+44: process 5 has DONE with balance $33
+48: process 5 received all DONE messages
+1: process 3 (pid 18528, parent 18525) has STARTED with balance $20
+5: process 3 received all STARTED messages
+19: process 3 received $ 2 from process 2
+23: process 3 transferred $ 3 to process 4
+44: process 3 has DONE with balance $19
+48: process 3 received all DONE messages
+1: process 4 (pid 18529, parent 18525) has STARTED with balance $20
+5: process 4 received all STARTED messages
+26: process 4 received $ 3 from process 3
+30: process 4 transferred $ 4 to process 5
+44: process 4 has DONE with balance $19
+48: process 4 received all DONE messages
+6: process 0 received all STARTED messages
+49: process 0 received all DONE messages
+1: process 1 (pid 18550, parent 18548) has STARTED with balance $10
+5: process 1 received all STARTED messages
+9: process 1 transferred $ 1 to process 2
+40: process 1 received $ 1 from process 5
+44: process 1 has DONE with balance $10
+51: process 1 received all DONE messages
+1: process 3 (pid 18552, parent 18548) has STARTED with balance $20
+5: process 3 received all STARTED messages
+19: process 3 received $ 2 from process 2
+23: process 3 transferred $ 3 to process 4
+44: process 3 has DONE with balance $19
+50: process 3 received all DONE messages
+1: process 4 (pid 18553, parent 18548) has STARTED with balance $20
+5: process 4 received all STARTED messages
+26: process 4 received $ 3 from process 3
+30: process 4 transferred $ 4 to process 5
+44: process 4 has DONE with balance $19
+50: process 4 received all DONE messages
+1: process 5 (pid 18554, parent 18548) has STARTED with balance $30
+5: process 5 received all STARTED messages
+33: process 5 received $ 4 from process 4
+37: process 5 transferred $ 1 to process 1
+44: process 5 has DONE with balance $33
+50: process 5 received all DONE messages
+1: process 1 (pid 21793, parent 21792) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+6: process 1 has DONE with balance $ 0
+10: process 1 received all DONE messages
+1: process 2 (pid 21794, parent 21792) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+6: process 2 has DONE with balance $ 0
+10: process 2 received all DONE messages
+1: process 3 (pid 21795, parent 21792) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+6: process 3 has DONE with balance $ 0
+10: process 3 received all DONE messages
+1: process 4 (pid 21796, parent 21792) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+6: process 4 has DONE with balance $ 0
+10: process 4 received all DONE messages
+1: process 5 (pid 21797, parent 21792) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+6: process 5 has DONE with balance $ 0
+10: process 5 received all DONE messages
+1: process 2 (pid 21818, parent 21816) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+6: process 2 has DONE with balance $ 0
+10: process 2 received all DONE messages
+1: process 1 (pid 21817, parent 21816) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+6: process 1 has DONE with balance $ 0
+10: process 1 received all DONE messages
+1: process 3 (pid 21819, parent 21816) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+6: process 3 has DONE with balance $ 0
+10: process 3 received all DONE messages
+1: process 4 (pid 21820, parent 21816) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+6: process 4 has DONE with balance $ 0
+10: process 4 received all DONE messages
+1: process 5 (pid 21821, parent 21816) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+6: process 5 has DONE with balance $ 0
+10: process 5 received all DONE messages
+1: process 3 (pid 21855, parent 21852) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+6: process 3 has DONE with balance $ 0
+10: process 3 received all DONE messages
+1: process 2 (pid 21854, parent 21852) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+6: process 2 has DONE with balance $ 0
+10: process 2 received all DONE messages
+1: process 1 (pid 21853, parent 21852) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+6: process 1 has DONE with balance $ 0
+10: process 1 received all DONE messages
+1: process 5 (pid 21857, parent 21852) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+6: process 5 has DONE with balance $ 0
+10: process 5 received all DONE messages
+1: process 4 (pid 21856, parent 21852) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+6: process 4 has DONE with balance $ 0
+10: process 4 received all DONE messages
+1: process 3 (pid 21877, parent 21874) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+6: process 3 has DONE with balance $ 0
+10: process 3 received all DONE messages
+1: process 2 (pid 21876, parent 21874) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+6: process 2 has DONE with balance $ 0
+10: process 2 received all DONE messages
+1: process 1 (pid 21875, parent 21874) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+6: process 1 has DONE with balance $ 0
+10: process 1 received all DONE messages
+1: process 5 (pid 21879, parent 21874) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+6: process 5 has DONE with balance $ 0
+10: process 5 received all DONE messages
+1: process 4 (pid 21878, parent 21874) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+6: process 4 has DONE with balance $ 0
+10: process 4 received all DONE messages
+1: process 2 (pid 21901, parent 21899) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+6: process 2 has DONE with balance $ 0
+10: process 2 received all DONE messages
+1: process 1 (pid 21900, parent 21899) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+6: process 1 has DONE with balance $ 0
+10: process 1 received all DONE messages
+1: process 3 (pid 21902, parent 21899) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+6: process 3 has DONE with balance $ 0
+10: process 3 received all DONE messages
+1: process 4 (pid 21903, parent 21899) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+6: process 4 has DONE with balance $ 0
+10: process 4 received all DONE messages
+1: process 5 (pid 21904, parent 21899) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+6: process 5 has DONE with balance $ 0
+10: process 5 received all DONE messages
+1: process 2 (pid 21983, parent 21981) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+6: process 2 has DONE with balance $ 0
+10: process 2 received all DONE messages
+1: process 1 (pid 21982, parent 21981) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+6: process 1 has DONE with balance $ 0
+10: process 1 received all DONE messages
+1: process 4 (pid 21985, parent 21981) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+6: process 4 has DONE with balance $ 0
+10: process 4 received all DONE messages
+1: process 5 (pid 21986, parent 21981) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+6: process 5 has DONE with balance $ 0
+10: process 5 received all DONE messages
+1: process 3 (pid 21984, parent 21981) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+6: process 3 has DONE with balance $ 0
+10: process 3 received all DONE messages
+6: process 0 received all STARTED messages
+13: process 0 received all DONE messages
+1: process 3 (pid 22006, parent 22003) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+6: process 3 has DONE with balance $ 0
+10: process 3 received all DONE messages
+1: process 2 (pid 22005, parent 22003) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+6: process 2 has DONE with balance $ 0
+10: process 2 received all DONE messages
+1: process 1 (pid 22004, parent 22003) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+6: process 1 has DONE with balance $ 0
+10: process 1 received all DONE messages
+1: process 5 (pid 22008, parent 22003) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+6: process 5 has DONE with balance $ 0
+10: process 5 received all DONE messages
+1: process 4 (pid 22007, parent 22003) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+6: process 4 has DONE with balance $ 0
+10: process 4 received all DONE messages
+6: process 0 received all STARTED messages
+13: process 0 received all DONE messages
+1: process 3 (pid 22040, parent 22037) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+6: process 3 has DONE with balance $ 0
+10: process 3 received all DONE messages
+1: process 2 (pid 22039, parent 22037) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+6: process 2 has DONE with balance $ 0
+10: process 2 received all DONE messages
+1: process 1 (pid 22038, parent 22037) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+6: process 1 has DONE with balance $ 0
+10: process 1 received all DONE messages
+1: process 4 (pid 22041, parent 22037) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+6: process 4 has DONE with balance $ 0
+10: process 4 received all DONE messages
+1: process 5 (pid 22042, parent 22037) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+6: process 5 has DONE with balance $ 0
+10: process 5 received all DONE messages
+6: process 0 received all STARTED messages
+12: process 0 received all DONE messages
+1: process 2 (pid 22063, parent 22061) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+6: process 2 has DONE with balance $ 0
+10: process 2 received all DONE messages
+1: process 1 (pid 22062, parent 22061) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+6: process 1 has DONE with balance $ 0
+10: process 1 received all DONE messages
+1: process 3 (pid 22064, parent 22061) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+6: process 3 has DONE with balance $ 0
+10: process 3 received all DONE messages
+1: process 4 (pid 22065, parent 22061) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+6: process 4 has DONE with balance $ 0
+10: process 4 received all DONE messages
+1: process 5 (pid 22066, parent 22061) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+6: process 5 has DONE with balance $ 0
+10: process 5 received all DONE messages
+6: process 0 received all STARTED messages
+12: process 0 received all DONE messages
+1: process 1 (pid 22087, parent 22086) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+6: process 1 has DONE with balance $ 0
+10: process 1 received all DONE messages
+1: process 2 (pid 22088, parent 22086) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+6: process 2 has DONE with balance $ 0
+10: process 2 received all DONE messages
+1: process 3 (pid 22089, parent 22086) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+6: process 3 has DONE with balance $ 0
+10: process 3 received all DONE messages
+1: process 4 (pid 22090, parent 22086) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+6: process 4 has DONE with balance $ 0
+10: process 4 received all DONE messages
+1: process 5 (pid 22091, parent 22086) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+6: process 5 has DONE with balance $ 0
+10: process 5 received all DONE messages
+6: process 0 received all STARTED messages
+12: process 0 received all DONE messages
+1: process 3 (pid 22114, parent 22111) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+6: process 3 has DONE with balance $ 0
+10: process 3 received all DONE messages
+1: process 2 (pid 22113, parent 22111) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+6: process 2 has DONE with balance $ 0
+10: process 2 received all DONE messages
+1: process 4 (pid 22115, parent 22111) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+6: process 4 has DONE with balance $ 0
+10: process 4 received all DONE messages
+1: process 1 (pid 22112, parent 22111) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+6: process 1 has DONE with balance $ 0
+10: process 1 received all DONE messages
+1: process 5 (pid 22116, parent 22111) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+6: process 5 has DONE with balance $ 0
+10: process 5 received all DONE messages
+6: process 0 received all STARTED messages
+12: process 0 received all DONE messages
+1: process 3 (pid 22136, parent 22133) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+6: process 3 has DONE with balance $ 0
+10: process 3 received all DONE messages
+1: process 1 (pid 22134, parent 22133) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+6: process 1 has DONE with balance $ 0
+10: process 1 received all DONE messages
+1: process 2 (pid 22135, parent 22133) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+6: process 2 has DONE with balance $ 0
+10: process 2 received all DONE messages
+1: process 4 (pid 22137, parent 22133) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+6: process 4 has DONE with balance $ 0
+10: process 4 received all DONE messages
+1: process 5 (pid 22138, parent 22133) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+6: process 5 has DONE with balance $ 0
+10: process 5 received all DONE messages
+6: process 0 received all STARTED messages
+12: process 0 received all DONE messages
+1: process 1 (pid 22174, parent 22173) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+6: process 1 has DONE with balance $ 0
+10: process 1 received all DONE messages
+1: process 2 (pid 22175, parent 22173) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+6: process 2 has DONE with balance $ 0
+10: process 2 received all DONE messages
+1: process 3 (pid 22176, parent 22173) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+6: process 3 has DONE with balance $ 0
+10: process 3 received all DONE messages
+1: process 4 (pid 22177, parent 22173) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+6: process 4 has DONE with balance $ 0
+10: process 4 received all DONE messages
+1: process 5 (pid 22178, parent 22173) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+6: process 5 has DONE with balance $ 0
+10: process 5 received all DONE messages
+6: process 0 received all STARTED messages
+12: process 0 received all DONE messages
+1: process 2 (pid 22215, parent 22213) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+6: process 2 has DONE with balance $ 0
+10: process 2 received all DONE messages
+1: process 4 (pid 22217, parent 22213) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+6: process 4 has DONE with balance $ 0
+10: process 4 received all DONE messages
+1: process 3 (pid 22216, parent 22213) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+6: process 3 has DONE with balance $ 0
+10: process 3 received all DONE messages
+1: process 1 (pid 22214, parent 22213) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+6: process 1 has DONE with balance $ 0
+10: process 1 received all DONE messages
+1: process 5 (pid 22218, parent 22213) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+6: process 5 has DONE with balance $ 0
+10: process 5 received all DONE messages
+6: process 0 received all STARTED messages
+12: process 0 received all DONE messages
+1: process 3 (pid 22253, parent 22250) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+6: process 3 has DONE with balance $ 0
+10: process 3 received all DONE messages
+1: process 1 (pid 22251, parent 22250) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+6: process 1 has DONE with balance $ 0
+10: process 1 received all DONE messages
+1: process 2 (pid 22252, parent 22250) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+6: process 2 has DONE with balance $ 0
+10: process 2 received all DONE messages
+1: process 4 (pid 22254, parent 22250) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+6: process 4 has DONE with balance $ 0
+10: process 4 received all DONE messages
+1: process 5 (pid 22255, parent 22250) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+6: process 5 has DONE with balance $ 0
+10: process 5 received all DONE messages
+6: process 0 received all STARTED messages
+12: process 0 received all DONE messages
+1: process 2 (pid  1030, parent  1028) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+6: process 2 has DONE with balance $ 0
+10: process 2 received all DONE messages
+1: process 3 (pid  1031, parent  1028) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+6: process 3 has DONE with balance $ 0
+10: process 3 received all DONE messages
+1: process 4 (pid  1032, parent  1028) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+6: process 4 has DONE with balance $ 0
+10: process 4 received all DONE messages
+1: process 1 (pid  1029, parent  1028) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+6: process 1 has DONE with balance $ 0
+10: process 1 received all DONE messages
+1: process 5 (pid  1033, parent  1028) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+6: process 5 has DONE with balance $ 0
+10: process 5 received all DONE messages
+6: process 0 received all STARTED messages
+12: process 0 received all DONE messages
+1: process 1 (pid  1070, parent  1069) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+16: process 1 has DONE with balance $ 0
+160: process 1 received all DONE messages
+1: process 2 (pid  1071, parent  1069) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+26: process 2 has DONE with balance $ 0
+160: process 2 received all DONE messages
+1: process 3 (pid  1072, parent  1069) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+36: process 3 has DONE with balance $ 0
+160: process 3 received all DONE messages
+1: process 4 (pid  1073, parent  1069) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+46: process 4 has DONE with balance $ 0
+160: process 4 received all DONE messages
+1: process 5 (pid  1074, parent  1069) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+56: process 5 has DONE with balance $ 0
+160: process 5 received all DONE messages
+6: process 0 received all STARTED messages
+162: process 0 received all DONE messages
+1: process 1 (pid  1154, parent  1153) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+16: process 1 has DONE with balance $ 0
+160: process 1 received all DONE messages
+1: process 2 (pid  1155, parent  1153) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+26: process 2 has DONE with balance $ 0
+160: process 2 received all DONE messages
+1: process 3 (pid  1156, parent  1153) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+36: process 3 has DONE with balance $ 0
+160: process 3 received all DONE messages
+1: process 4 (pid  1157, parent  1153) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+46: process 4 has DONE with balance $ 0
+160: process 4 received all DONE messages
+1: process 5 (pid  1158, parent  1153) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+56: process 5 has DONE with balance $ 0
+160: process 5 received all DONE messages
+6: process 0 received all STARTED messages
+162: process 0 received all DONE messages
+1: process 1 (pid  1201, parent  1183) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+16: process 1 has DONE with balance $ 0
+160: process 1 received all DONE messages
+1: process 2 (pid  1202, parent  1183) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+26: process 2 has DONE with balance $ 0
+160: process 2 received all DONE messages
+1: process 3 (pid  1205, parent  1183) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+36: process 3 has DONE with balance $ 0
+160: process 3 received all DONE messages
+1: process 4 (pid  1206, parent  1183) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+46: process 4 has DONE with balance $ 0
+160: process 4 received all DONE messages
+1: process 5 (pid  1207, parent  1183) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+56: process 5 has DONE with balance $ 0
+160: process 5 received all DONE messages
+6: process 0 received all STARTED messages
+162: process 0 received all DONE messages
+1: process 1 (pid  1273, parent  1272) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+16: process 1 has DONE with balance $ 0
+160: process 1 received all DONE messages
+1: process 2 (pid  1274, parent  1272) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+26: process 2 has DONE with balance $ 0
+160: process 2 received all DONE messages
+1: process 3 (pid  1275, parent  1272) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+36: process 3 has DONE with balance $ 0
+160: process 3 received all DONE messages
+1: process 4 (pid  1276, parent  1272) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+46: process 4 has DONE with balance $ 0
+160: process 4 received all DONE messages
+1: process 5 (pid  1277, parent  1272) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+56: process 5 has DONE with balance $ 0
+160: process 5 received all DONE messages
+6: process 0 received all STARTED messages
+162: process 0 received all DONE messages
+1: process 1 (pid  2057, parent  2056) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+16: process 1 has DONE with balance $ 0
+160: process 1 received all DONE messages
+1: process 2 (pid  2058, parent  2056) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+26: process 2 has DONE with balance $ 0
+160: process 2 received all DONE messages
+1: process 3 (pid  2059, parent  2056) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+36: process 3 has DONE with balance $ 0
+160: process 3 received all DONE messages
+1: process 4 (pid  2060, parent  2056) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+46: process 4 has DONE with balance $ 0
+160: process 4 received all DONE messages
+1: process 5 (pid  2061, parent  2056) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+56: process 5 has DONE with balance $ 0
+160: process 5 received all DONE messages
+6: process 0 received all STARTED messages
+162: process 0 received all DONE messages
+1: process 1 (pid  2107, parent  2106) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+16: process 1 has DONE with balance $ 0
+160: process 1 received all DONE messages
+1: process 2 (pid  2108, parent  2106) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+26: process 2 has DONE with balance $ 0
+160: process 2 received all DONE messages
+1: process 3 (pid  2109, parent  2106) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+36: process 3 has DONE with balance $ 0
+160: process 3 received all DONE messages
+1: process 4 (pid  2111, parent  2106) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+46: process 4 has DONE with balance $ 0
+160: process 4 received all DONE messages
+1: process 5 (pid  2112, parent  2106) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+56: process 5 has DONE with balance $ 0
+160: process 5 received all DONE messages
+6: process 0 received all STARTED messages
+162: process 0 received all DONE messages
+1: process 2 (pid  2265, parent  2263) has STARTED with balance $ 0
+9: process 2 received all STARTED messages
+30: process 2 has DONE with balance $ 0
+468: process 2 received all DONE messages
+1: process 3 (pid  2266, parent  2263) has STARTED with balance $ 0
+9: process 3 received all STARTED messages
+40: process 3 has DONE with balance $ 0
+468: process 3 received all DONE messages
+1: process 4 (pid  2267, parent  2263) has STARTED with balance $ 0
+9: process 4 received all STARTED messages
+50: process 4 has DONE with balance $ 0
+468: process 4 received all DONE messages
+1: process 5 (pid  2268, parent  2263) has STARTED with balance $ 0
+9: process 5 received all STARTED messages
+60: process 5 has DONE with balance $ 0
+468: process 5 received all DONE messages
+1: process 1 (pid  2264, parent  2263) has STARTED with balance $ 0
+9: process 1 received all STARTED messages
+20: process 1 has DONE with balance $ 0
+468: process 1 received all DONE messages
+1: process 6 (pid  2269, parent  2263) has STARTED with balance $ 0
+9: process 6 received all STARTED messages
+70: process 6 has DONE with balance $ 0
+468: process 6 received all DONE messages
+1: process 7 (pid  2270, parent  2263) has STARTED with balance $ 0
+9: process 7 received all STARTED messages
+80: process 7 has DONE with balance $ 0
+468: process 7 received all DONE messages
+1: process 9 (pid  2272, parent  2263) has STARTED with balance $ 0
+9: process 9 received all STARTED messages
+100: process 9 has DONE with balance $ 0
+468: process 9 received all DONE messages
+1: process 8 (pid  2271, parent  2263) has STARTED with balance $ 0
+9: process 8 received all STARTED messages
+90: process 8 has DONE with balance $ 0
+468: process 8 received all DONE messages
+10: process 0 received all STARTED messages
+470: process 0 received all DONE messages
+1: process 1 (pid  2740, parent  2739) has STARTED with balance $ 0
+2: process 1 received all STARTED messages
+13: process 1 has DONE with balance $ 0
+34: process 1 received all DONE messages
+1: process 2 (pid  2741, parent  2739) has STARTED with balance $ 0
+2: process 2 received all STARTED messages
+23: process 2 has DONE with balance $ 0
+34: process 2 received all DONE messages
+3: process 0 received all STARTED messages
+36: process 0 received all DONE messages
+1: process 2 (pid  2786, parent  2784) has STARTED with balance $ 0
+2: process 2 received all STARTED messages
+23: process 2 has DONE with balance $ 0
+34: process 2 received all DONE messages
+1: process 1 (pid  2785, parent  2784) has STARTED with balance $ 0
+2: process 1 received all STARTED messages
+13: process 1 has DONE with balance $ 0
+34: process 1 received all DONE messages
+3: process 0 received all STARTED messages
+36: process 0 received all DONE messages
+1: process 1 (pid  2836, parent  2835) has STARTED with balance $ 0
+2: process 1 received all STARTED messages
+13: process 1 has DONE with balance $ 0
+34: process 1 received all DONE messages
+1: process 2 (pid  2837, parent  2835) has STARTED with balance $ 0
+2: process 2 received all STARTED messages
+23: process 2 has DONE with balance $ 0
+34: process 2 received all DONE messages
+3: process 0 received all STARTED messages
+36: process 0 received all DONE messages
+1: process 2 (pid  2948, parent  2946) has STARTED with balance $ 0
+2: process 2 received all STARTED messages
+23: process 2 has DONE with balance $ 0
+34: process 2 received all DONE messages
+1: process 1 (pid  2947, parent  2946) has STARTED with balance $ 0
+2: process 1 received all STARTED messages
+13: process 1 has DONE with balance $ 0
+34: process 1 received all DONE messages
+3: process 0 received all STARTED messages
+36: process 0 received all DONE messages
+1: process 2 (pid  3005, parent  3003) has STARTED with balance $ 0
+2: process 2 received all STARTED messages
+23: process 2 has DONE with balance $ 0
+34: process 2 received all DONE messages
+1: process 1 (pid  3004, parent  3003) has STARTED with balance $ 0
+2: process 1 received all STARTED messages
+13: process 1 has DONE with balance $ 0
+34: process 1 received all DONE messages
+3: process 0 received all STARTED messages
+36: process 0 received all DONE messages
+1: process 1 (pid  3092, parent  3091) has STARTED with balance $ 0
+2: process 1 received all STARTED messages
+8: process 1 has DONE with balance $ 0
+19: process 1 received all DONE messages
+1: process 2 (pid  3093, parent  3091) has STARTED with balance $ 0
+2: process 2 received all STARTED messages
+13: process 2 has DONE with balance $ 0
+19: process 2 received all DONE messages
+3: process 0 received all STARTED messages
+21: process 0 received all DONE messages
+1: process 1 (pid  3160, parent  3159) has STARTED with balance $ 0
+2: process 1 received all STARTED messages
+3: process 0 received all STARTED messages
+1: process 1 (pid  3180, parent  3179) has STARTED with balance $ 0
+2: process 1 received all STARTED messages
+3: process 0 received all STARTED messages
+1: process 2 (pid  3218, parent  3216) has STARTED with balance $ 0
+2: process 2 received all STARTED messages
+13: process 2 has DONE with balance $ 0
+19: process 2 received all DONE messages
+1: process 1 (pid  3217, parent  3216) has STARTED with balance $ 0
+2: process 1 received all STARTED messages
+8: process 1 has DONE with balance $ 0
+19: process 1 received all DONE messages
+3: process 0 received all STARTED messages
+21: process 0 received all DONE messages
+1: process 2 (pid  3390, parent  3388) has STARTED with balance $ 0
+2: process 2 received all STARTED messages
+23: process 2 has DONE with balance $ 0
+34: process 2 received all DONE messages
+1: process 1 (pid  3389, parent  3388) has STARTED with balance $ 0
+2: process 1 received all STARTED messages
+13: process 1 has DONE with balance $ 0
+34: process 1 received all DONE messages
+3: process 0 received all STARTED messages
+36: process 0 received all DONE messages
+1: process 1 (pid  3419, parent  3418) has STARTED with balance $ 0
+2: process 1 received all STARTED messages
+13: process 1 has DONE with balance $ 0
+34: process 1 received all DONE messages
+1: process 2 (pid  3420, parent  3418) has STARTED with balance $ 0
+2: process 2 received all STARTED messages
+23: process 2 has DONE with balance $ 0
+34: process 2 received all DONE messages
+3: process 0 received all STARTED messages
+36: process 0 received all DONE messages
+1: process 1 (pid  3482, parent  3481) has STARTED with balance $ 0
+2: process 1 received all STARTED messages
+13: process 1 has DONE with balance $ 0
+34: process 1 received all DONE messages
+1: process 2 (pid  3483, parent  3481) has STARTED with balance $ 0
+2: process 2 received all STARTED messages
+23: process 2 has DONE with balance $ 0
+34: process 2 received all DONE messages
+3: process 0 received all STARTED messages
+36: process 0 received all DONE messages
+1: process 1 (pid  5294, parent  5293) has STARTED with balance $ 0
+2: process 1 received all STARTED messages
+33: process 1 has DONE with balance $ 0
+35: process 1 received all DONE messages
+1: process 2 (pid  5295, parent  5293) has STARTED with balance $ 0
+2: process 2 received all STARTED messages
+33: process 2 has DONE with balance $ 0
+34: process 2 received all DONE messages
+3: process 0 received all STARTED messages
+55: process 0 received all DONE messages
+1: process 1 (pid  5913, parent  5912) has STARTED with balance $ 0
+2: process 1 received all STARTED messages
+33: process 1 has DONE with balance $ 0
+35: process 1 received all DONE messages
+1: process 2 (pid  5914, parent  5912) has STARTED with balance $ 0
+2: process 2 received all STARTED messages
+33: process 2 has DONE with balance $ 0
+34: process 2 received all DONE messages
+3: process 0 received all STARTED messages
+55: process 0 received all DONE messages
+1: process 2 (pid  5935, parent  5933) has STARTED with balance $ 0
+2: process 2 received all STARTED messages
+33: process 2 has DONE with balance $ 0
+34: process 2 received all DONE messages
+1: process 1 (pid  5934, parent  5933) has STARTED with balance $ 0
+2: process 1 received all STARTED messages
+33: process 1 has DONE with balance $ 0
+35: process 1 received all DONE messages
+3: process 0 received all STARTED messages
+55: process 0 received all DONE messages
+1: process 2 (pid  7116, parent  7114) has STARTED with balance $ 0
+2: process 2 received all STARTED messages
+28: process 2 has DONE with balance $ 0
+29: process 2 received all DONE messages
+1: process 1 (pid  7115, parent  7114) has STARTED with balance $ 0
+2: process 1 received all STARTED messages
+23: process 1 has DONE with balance $ 0
+29: process 1 received all DONE messages
+3: process 0 received all STARTED messages
+45: process 0 received all DONE messages
+1: process 1 (pid  7649, parent  7648) has STARTED with balance $ 0
+2: process 1 received all STARTED messages
+23: process 1 has DONE with balance $ 0
+29: process 1 received all DONE messages
+1: process 2 (pid  7650, parent  7648) has STARTED with balance $ 0
+2: process 2 received all STARTED messages
+28: process 2 has DONE with balance $ 0
+29: process 2 received all DONE messages
+3: process 0 received all STARTED messages
+45: process 0 received all DONE messages
+1: process 1 (pid 11262, parent 11261) has STARTED with balance $ 0
+4: process 1 received all STARTED messages
+29: process 1 has DONE with balance $ 0
+29: process 1 received all DONE messages
+1: process 1 (pid 11284, parent 11283) has STARTED with balance $ 0
+4: process 1 received all STARTED messages
+29: process 1 has DONE with balance $ 0
+29: process 1 received all DONE messages
+1: process 1 (pid 11326, parent 11325) has STARTED with balance $ 0
+2: process 1 received all STARTED messages
+18: process 1 has DONE with balance $ 0
+18: process 1 received all DONE messages
+3: process 0 received all STARTED messages
+4: process 0 received all DONE messages
+1: process 1 (pid 11347, parent 11346) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+23: process 1 has DONE with balance $ 0
+23: process 1 received all DONE messages
+1: process 1 (pid 11432, parent 11431) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+23: process 1 has DONE with balance $ 0
+23: process 1 received all DONE messages
+1: process 1 (pid 11464, parent 11463) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+23: process 1 has DONE with balance $ 0
+23: process 1 received all DONE messages
+1: process 1 (pid 11526, parent 11525) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+23: process 1 has DONE with balance $ 0
+23: process 1 received all DONE messages
+1: process 1 (pid 11592, parent 11591) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+23: process 1 has DONE with balance $ 0
+23: process 1 received all DONE messages
+1: process 1 (pid 11804, parent 11803) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+23: process 1 has DONE with balance $ 0
+23: process 1 received all DONE messages
+1: process 1 (pid 11827, parent 11824) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+23: process 1 has DONE with balance $ 0
+23: process 1 received all DONE messages
+1: process 3 (pid 11910, parent 11906) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+49: process 3 has DONE with balance $ 0
+49: process 3 received all DONE messages
+1: process 2 (pid 11909, parent 11906) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+39: process 2 has DONE with balance $ 0
+39: process 2 received all DONE messages
+1: process 1 (pid 11908, parent 11906) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+23: process 1 has DONE with balance $ 0
+23: process 1 received all DONE messages
+4: process 0 received all STARTED messages
+76: process 0 received all DONE messages
+1: process 2 (pid 11930, parent 11928) has STARTED with balance $ 0
+4: process 2 received all STARTED messages
+49: process 2 has DONE with balance $ 0
+49: process 2 received all DONE messages
+1: process 4 (pid 11932, parent 11928) has STARTED with balance $ 0
+4: process 4 received all STARTED messages
+75: process 4 has DONE with balance $ 0
+75: process 4 received all DONE messages
+1: process 3 (pid 11931, parent 11928) has STARTED with balance $ 0
+4: process 3 received all STARTED messages
+65: process 3 has DONE with balance $ 0
+65: process 3 received all DONE messages
+1: process 1 (pid 11929, parent 11928) has STARTED with balance $ 0
+4: process 1 received all STARTED messages
+29: process 1 has DONE with balance $ 0
+29: process 1 received all DONE messages
+5: process 0 received all STARTED messages
+123: process 0 received all DONE messages
+1: process 2 (pid 11969, parent 11967) has STARTED with balance $ 0
+4: process 2 received all STARTED messages
+49: process 2 has DONE with balance $ 0
+49: process 2 received all DONE messages
+1: process 4 (pid 11971, parent 11967) has STARTED with balance $ 0
+4: process 4 received all STARTED messages
+75: process 4 has DONE with balance $ 0
+75: process 4 received all DONE messages
+1: process 3 (pid 11970, parent 11967) has STARTED with balance $ 0
+4: process 3 received all STARTED messages
+65: process 3 has DONE with balance $ 0
+65: process 3 received all DONE messages
+1: process 1 (pid 11968, parent 11967) has STARTED with balance $ 0
+4: process 1 received all STARTED messages
+29: process 1 has DONE with balance $ 0
+29: process 1 received all DONE messages
+5: process 0 received all STARTED messages
+123: process 0 received all DONE messages
+1: process 1 (pid 14983, parent 14982) has STARTED with balance $ 0
+4: process 1 received all STARTED messages
+29: process 1 has DONE with balance $ 0
+29: process 1 received all DONE messages
+1: process 2 (pid 14984, parent 14982) has STARTED with balance $ 0
+4: process 2 received all STARTED messages
+49: process 2 has DONE with balance $ 0
+49: process 2 received all DONE messages
+1: process 4 (pid 14986, parent 14982) has STARTED with balance $ 0
+4: process 4 received all STARTED messages
+75: process 4 has DONE with balance $ 0
+75: process 4 received all DONE messages
+1: process 3 (pid 14985, parent 14982) has STARTED with balance $ 0
+4: process 3 received all STARTED messages
+65: process 3 has DONE with balance $ 0
+65: process 3 received all DONE messages
+5: process 0 received all STARTED messages
+6: process 0 received all DONE messages
+1: process 2 (pid 16696, parent 16694) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+35: process 2 has DONE with balance $ 0
+35: process 2 received all DONE messages
+1: process 1 (pid 16695, parent 16694) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+14: process 1 has DONE with balance $ 0
+14: process 1 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 1 (pid 16721, parent 16719) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+15: process 1 has DONE with balance $ 0
+15: process 1 received all DONE messages
+1: process 2 (pid 16722, parent 16719) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+36: process 2 has DONE with balance $ 0
+36: process 2 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 3 (pid 17763, parent 17760) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+107: process 3 has DONE with balance $ 0
+107: process 3 received all DONE messages
+1: process 2 (pid 17762, parent 17760) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+84: process 2 has DONE with balance $ 0
+84: process 2 received all DONE messages
+1: process 1 (pid 17761, parent 17760) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+40: process 1 has DONE with balance $ 0
+40: process 1 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 1 (pid 17823, parent 17822) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+41: process 1 has DONE with balance $ 0
+41: process 1 received all DONE messages
+1: process 3 (pid 17825, parent 17822) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+111: process 3 has DONE with balance $ 0
+111: process 3 received all DONE messages
+1: process 2 (pid 17824, parent 17822) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+80: process 2 has DONE with balance $ 0
+80: process 2 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 3 (pid 17953, parent 17950) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+112: process 3 has DONE with balance $ 0
+112: process 3 received all DONE messages
+1: process 1 (pid 17951, parent 17950) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+36: process 1 has DONE with balance $ 0
+36: process 1 received all DONE messages
+1: process 2 (pid 17952, parent 17950) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+79: process 2 has DONE with balance $ 0
+79: process 2 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 3 (pid 18111, parent 18108) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+121: process 3 has DONE with balance $ 0
+121: process 3 received all DONE messages
+1: process 1 (pid 18109, parent 18108) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+45: process 1 has DONE with balance $ 0
+45: process 1 received all DONE messages
+1: process 2 (pid 18110, parent 18108) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+85: process 2 has DONE with balance $ 0
+85: process 2 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 3 (pid 18154, parent 18151) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+120: process 3 has DONE with balance $ 0
+120: process 3 received all DONE messages
+1: process 2 (pid 18153, parent 18151) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+83: process 2 has DONE with balance $ 0
+83: process 2 received all DONE messages
+1: process 1 (pid 18152, parent 18151) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+45: process 1 has DONE with balance $ 0
+45: process 1 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 3 (pid 18313, parent 18310) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+121: process 3 has DONE with balance $ 0
+121: process 3 received all DONE messages
+1: process 1 (pid 18311, parent 18310) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+45: process 1 has DONE with balance $ 0
+45: process 1 received all DONE messages
+1: process 2 (pid 18312, parent 18310) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+79: process 2 has DONE with balance $ 0
+79: process 2 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 1 (pid 19089, parent 19088) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+45: process 1 has DONE with balance $ 0
+45: process 1 received all DONE messages
+1: process 3 (pid 19091, parent 19088) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+120: process 3 has DONE with balance $ 0
+120: process 3 received all DONE messages
+1: process 2 (pid 19090, parent 19088) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+79: process 2 has DONE with balance $ 0
+79: process 2 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 3 (pid 19435, parent 19432) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+137: process 3 has DONE with balance $ 0
+137: process 3 received all DONE messages
+1: process 1 (pid 19433, parent 19432) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+45: process 1 has DONE with balance $ 0
+45: process 1 received all DONE messages
+1: process 2 (pid 19434, parent 19432) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+101: process 2 has DONE with balance $ 0
+101: process 2 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 3 (pid 19529, parent 19526) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+114: process 3 has DONE with balance $ 0
+114: process 3 received all DONE messages
+1: process 1 (pid 19527, parent 19526) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+45: process 1 has DONE with balance $ 0
+45: process 1 received all DONE messages
+1: process 2 (pid 19528, parent 19526) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+83: process 2 has DONE with balance $ 0
+83: process 2 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 1 (pid 19560, parent 19559) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+44: process 1 has DONE with balance $ 0
+44: process 1 received all DONE messages
+1: process 3 (pid 19562, parent 19559) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+144: process 3 has DONE with balance $ 0
+144: process 3 received all DONE messages
+1: process 2 (pid 19561, parent 19559) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+105: process 2 has DONE with balance $ 0
+105: process 2 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 2 (pid 19593, parent 19591) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+97: process 2 has DONE with balance $ 0
+97: process 2 received all DONE messages
+1: process 3 (pid 19594, parent 19591) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+146: process 3 has DONE with balance $ 0
+146: process 3 received all DONE messages
+1: process 1 (pid 19592, parent 19591) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+42: process 1 has DONE with balance $ 0
+42: process 1 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 1 (pid 19628, parent 19627) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+42: process 1 has DONE with balance $ 0
+42: process 1 received all DONE messages
+1: process 3 (pid 19630, parent 19627) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+127: process 3 has DONE with balance $ 0
+127: process 3 received all DONE messages
+1: process 2 (pid 19629, parent 19627) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+86: process 2 has DONE with balance $ 0
+86: process 2 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 3 (pid 19700, parent 19697) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+146: process 3 has DONE with balance $ 0
+146: process 3 received all DONE messages
+1: process 1 (pid 19698, parent 19697) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+43: process 1 has DONE with balance $ 0
+43: process 1 received all DONE messages
+1: process 2 (pid 19699, parent 19697) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+101: process 2 has DONE with balance $ 0
+101: process 2 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 1 (pid 19730, parent 19729) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+42: process 1 has DONE with balance $ 0
+42: process 1 received all DONE messages
+1: process 3 (pid 19732, parent 19729) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+127: process 3 has DONE with balance $ 0
+127: process 3 received all DONE messages
+1: process 2 (pid 19731, parent 19729) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+89: process 2 has DONE with balance $ 0
+89: process 2 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 1 (pid 19768, parent 19765) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+44: process 1 has DONE with balance $ 0
+44: process 1 received all DONE messages
+1: process 3 (pid 19770, parent 19765) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+122: process 3 has DONE with balance $ 0
+122: process 3 received all DONE messages
+1: process 2 (pid 19769, parent 19765) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+97: process 2 has DONE with balance $ 0
+97: process 2 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 3 (pid 19876, parent 19873) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+117: process 3 has DONE with balance $ 0
+117: process 3 received all DONE messages
+1: process 2 (pid 19875, parent 19873) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+81: process 2 has DONE with balance $ 0
+81: process 2 received all DONE messages
+1: process 1 (pid 19874, parent 19873) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+45: process 1 has DONE with balance $ 0
+45: process 1 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 3 (pid 19915, parent 19912) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+119: process 3 has DONE with balance $ 0
+119: process 3 received all DONE messages
+1: process 1 (pid 19913, parent 19912) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+44: process 1 has DONE with balance $ 0
+44: process 1 received all DONE messages
+1: process 2 (pid 19914, parent 19912) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+79: process 2 has DONE with balance $ 0
+79: process 2 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 3 (pid 20010, parent 20007) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+121: process 3 has DONE with balance $ 0
+121: process 3 received all DONE messages
+1: process 2 (pid 20009, parent 20007) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+77: process 2 has DONE with balance $ 0
+77: process 2 received all DONE messages
+1: process 1 (pid 20008, parent 20007) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+43: process 1 has DONE with balance $ 0
+43: process 1 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 1 (pid 20045, parent 20044) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+42: process 1 has DONE with balance $ 0
+42: process 1 received all DONE messages
+1: process 2 (pid 20046, parent 20044) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+96: process 2 has DONE with balance $ 0
+96: process 2 received all DONE messages
+1: process 3 (pid 20047, parent 20044) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+122: process 3 has DONE with balance $ 0
+122: process 3 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 3 (pid 20205, parent 20202) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+116: process 3 has DONE with balance $ 0
+116: process 3 received all DONE messages
+1: process 1 (pid 20203, parent 20202) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+45: process 1 has DONE with balance $ 0
+45: process 1 received all DONE messages
+1: process 2 (pid 20204, parent 20202) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+84: process 2 has DONE with balance $ 0
+84: process 2 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 1 (pid 20247, parent 20246) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+45: process 1 has DONE with balance $ 0
+45: process 1 received all DONE messages
+1: process 3 (pid 20249, parent 20246) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+116: process 3 has DONE with balance $ 0
+116: process 3 received all DONE messages
+1: process 2 (pid 20248, parent 20246) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+84: process 2 has DONE with balance $ 0
+84: process 2 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 3 (pid 21138, parent 21133) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+115: process 3 has DONE with balance $ 0
+115: process 3 received all DONE messages
+1: process 1 (pid 21136, parent 21133) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+44: process 1 has DONE with balance $ 0
+44: process 1 received all DONE messages
+1: process 2 (pid 21137, parent 21133) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+83: process 2 has DONE with balance $ 0
+83: process 2 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 1 (pid 21164, parent 21163) has STARTED with balance $ 0
+5: process 1 received all STARTED messages
+66: process 1 has DONE with balance $ 0
+66: process 1 received all DONE messages
+1: process 2 (pid 21165, parent 21163) has STARTED with balance $ 0
+5: process 2 received all STARTED messages
+123: process 2 has DONE with balance $ 0
+123: process 2 received all DONE messages
+1: process 3 (pid 21166, parent 21163) has STARTED with balance $ 0
+5: process 3 received all STARTED messages
+181: process 3 has DONE with balance $ 0
+181: process 3 received all DONE messages
+1: process 5 (pid 21168, parent 21163) has STARTED with balance $ 0
+5: process 5 received all STARTED messages
+272: process 5 has DONE with balance $ 0
+272: process 5 received all DONE messages
+1: process 4 (pid 21167, parent 21163) has STARTED with balance $ 0
+5: process 4 received all STARTED messages
+230: process 4 has DONE with balance $ 0
+230: process 4 received all DONE messages
+6: process 0 received all STARTED messages
+7: process 0 received all DONE messages
+1: process 3 (pid 21890, parent 21887) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+118: process 3 has DONE with balance $ 0
+118: process 3 received all DONE messages
+1: process 2 (pid 21889, parent 21887) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+86: process 2 has DONE with balance $ 0
+86: process 2 received all DONE messages
+1: process 1 (pid 21888, parent 21887) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+44: process 1 has DONE with balance $ 0
+44: process 1 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages
+1: process 3 (pid 21923, parent 21920) has STARTED with balance $ 0
+3: process 3 received all STARTED messages
+116: process 3 has DONE with balance $ 0
+116: process 3 received all DONE messages
+1: process 2 (pid 21922, parent 21920) has STARTED with balance $ 0
+3: process 2 received all STARTED messages
+84: process 2 has DONE with balance $ 0
+84: process 2 received all DONE messages
+1: process 1 (pid 21921, parent 21920) has STARTED with balance $ 0
+3: process 1 received all STARTED messages
+45: process 1 has DONE with balance $ 0
+45: process 1 received all DONE messages
+4: process 0 received all STARTED messages
+5: process 0 received all DONE messages

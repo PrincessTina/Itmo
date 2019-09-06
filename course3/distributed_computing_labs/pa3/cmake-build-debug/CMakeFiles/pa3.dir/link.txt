@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/pa3.dir/main.c.o CMakeFiles/pa3.dir/ipc.c.o CMakeFiles/pa3.dir/banking.c.o CMakeFiles/pa3.dir/bank_robbery.c.o CMakeFiles/pa3.dir/print_history.c.o CMakeFiles/pa3.dir/lamport_time.c.o  -o pa3 /home/princess/distributed_computing_labs/pa2/lib64/libruntime.so 

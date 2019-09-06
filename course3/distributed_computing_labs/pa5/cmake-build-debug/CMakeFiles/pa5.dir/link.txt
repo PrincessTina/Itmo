@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/pa5.dir/main.c.o CMakeFiles/pa5.dir/ipc.c.o CMakeFiles/pa5.dir/banking.c.o CMakeFiles/pa5.dir/bank_robbery.c.o CMakeFiles/pa5.dir/print_history.c.o CMakeFiles/pa5.dir/lamport_time.c.o CMakeFiles/pa5.dir/priority_queue.c.o CMakeFiles/pa5.dir/critical_section.c.o  -o pa5 /home/princess/distributed_computing_labs/pa2/lib64/libruntime.so 

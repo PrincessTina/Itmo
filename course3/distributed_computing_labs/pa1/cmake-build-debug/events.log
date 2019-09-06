@@ -1,0 +1,168 @@
+Process 1 (pid 22456, parent 22455) has STARTED
+Process 1 received all STARTED messages
+Process 1 has DONE its synchronizeBeforeWork
+Process 1 received all DONE messages
+Process 2 (pid 22457, parent 22455) has STARTED
+Process 2 received all STARTED messages
+Process 2 has DONE its synchronizeBeforeWork
+Process 2 received all DONE messages
+Process 5 (pid 22460, parent 22455) has STARTED
+Process 5 received all STARTED messages
+Process 5 has DONE its synchronizeBeforeWork
+Process 5 received all DONE messages
+Process 4 (pid 22459, parent 22455) has STARTED
+Process 4 received all STARTED messages
+Process 4 has DONE its synchronizeBeforeWork
+Process 4 received all DONE messages
+Process 10 (pid 22465, parent 22455) has STARTED
+Process 10 received all STARTED messages
+Process 10 has DONE its synchronizeBeforeWork
+Process 10 received all DONE messages
+Process 8 (pid 22463, parent 22455) has STARTED
+Process 8 received all STARTED messages
+Process 8 has DONE its synchronizeBeforeWork
+Process 8 received all DONE messages
+Process 7 (pid 22462, parent 22455) has STARTED
+Process 7 received all STARTED messages
+Process 7 has DONE its synchronizeBeforeWork
+Process 7 received all DONE messages
+Process 3 (pid 22458, parent 22455) has STARTED
+Process 3 received all STARTED messages
+Process 3 has DONE its synchronizeBeforeWork
+Process 3 received all DONE messages
+Process 9 (pid 22464, parent 22455) has STARTED
+Process 9 received all STARTED messages
+Process 9 has DONE its synchronizeBeforeWork
+Process 9 received all DONE messages
+Process 6 (pid 22461, parent 22455) has STARTED
+Process 6 received all STARTED messages
+Process 6 has DONE its synchronizeBeforeWork
+Process 6 received all DONE messages
+Process 0 received all STARTED messages
+Process 0 received all DONE messages
+Process 3 (pid 28352, parent 28349) has STARTED
+Process 3 received all STARTED messages
+Process 3 has DONE its synchronizeBeforeWork
+Process 3 received all DONE messages
+Process 5 (pid 28354, parent 28349) has STARTED
+Process 5 received all STARTED messages
+Process 5 has DONE its synchronizeBeforeWork
+Process 5 received all DONE messages
+Process 2 (pid 28351, parent 28349) has STARTED
+Process 2 received all STARTED messages
+Process 2 has DONE its synchronizeBeforeWork
+Process 2 received all DONE messages
+Process 8 (pid 28357, parent 28349) has STARTED
+Process 8 received all STARTED messages
+Process 8 has DONE its synchronizeBeforeWork
+Process 8 received all DONE messages
+Process 10 (pid 28359, parent 28349) has STARTED
+Process 10 received all STARTED messages
+Process 10 has DONE its synchronizeBeforeWork
+Process 10 received all DONE messages
+Process 9 (pid 28358, parent 28349) has STARTED
+Process 9 received all STARTED messages
+Process 9 has DONE its synchronizeBeforeWork
+Process 9 received all DONE messages
+Process 1 (pid 28350, parent 28349) has STARTED
+Process 1 received all STARTED messages
+Process 1 has DONE its synchronizeBeforeWork
+Process 1 received all DONE messages
+Process 6 (pid 28355, parent 28349) has STARTED
+Process 6 received all STARTED messages
+Process 6 has DONE its synchronizeBeforeWork
+Process 6 received all DONE messages
+Process 7 (pid 28356, parent 28349) has STARTED
+Process 7 received all STARTED messages
+Process 7 has DONE its synchronizeBeforeWork
+Process 7 received all DONE messages
+Process 4 (pid 28353, parent 28349) has STARTED
+Process 4 received all STARTED messages
+Process 4 has DONE its synchronizeBeforeWork
+Process 4 received all DONE messages
+Process 0 received all STARTED messages
+Process 0 received all DONE messages
+Process 1 (pid 28527, parent 28526) has STARTED
+Process 1 received all STARTED messages
+Process 1 has DONE its synchronizeBeforeWork
+Process 1 received all DONE messages
+Process 2 (pid 28528, parent 28526) has STARTED
+Process 2 received all STARTED messages
+Process 2 has DONE its synchronizeBeforeWork
+Process 2 received all DONE messages
+Process 4 (pid 28530, parent 28526) has STARTED
+Process 4 received all STARTED messages
+Process 4 has DONE its synchronizeBeforeWork
+Process 4 received all DONE messages
+Process 3 (pid 28529, parent 28526) has STARTED
+Process 3 received all STARTED messages
+Process 3 has DONE its synchronizeBeforeWork
+Process 3 received all DONE messages
+Process 6 (pid 28532, parent 28526) has STARTED
+Process 6 received all STARTED messages
+Process 6 has DONE its synchronizeBeforeWork
+Process 6 received all DONE messages
+Process 8 (pid 28534, parent 28526) has STARTED
+Process 8 received all STARTED messages
+Process 8 has DONE its synchronizeBeforeWork
+Process 8 received all DONE messages
+Process 5 (pid 28531, parent 28526) has STARTED
+Process 5 received all STARTED messages
+Process 5 has DONE its synchronizeBeforeWork
+Process 5 received all DONE messages
+Process 7 (pid 28533, parent 28526) has STARTED
+Process 7 received all STARTED messages
+Process 7 has DONE its synchronizeBeforeWork
+Process 7 received all DONE messages
+Process 9 (pid 28535, parent 28526) has STARTED
+Process 9 received all STARTED messages
+Process 9 has DONE its synchronizeBeforeWork
+Process 9 received all DONE messages
+Process 10 (pid 28536, parent 28526) has STARTED
+Process 10 received all STARTED messages
+Process 10 has DONE its synchronizeBeforeWork
+Process 10 received all DONE messages
+Process 0 received all STARTED messages
+Process 0 received all DONE messages
+Process 1 (pid 29007, parent 29006) has STARTED
+Process 1 received all STARTED messages
+Process 1 has DONE its synchronizeBeforeWork
+Process 1 received all DONE messages
+Process 2 (pid 29008, parent 29006) has STARTED
+Process 2 received all STARTED messages
+Process 2 has DONE its synchronizeBeforeWork
+Process 2 received all DONE messages
+Process 3 (pid 29009, parent 29006) has STARTED
+Process 3 received all STARTED messages
+Process 3 has DONE its synchronizeBeforeWork
+Process 3 received all DONE messages
+Process 4 (pid 29010, parent 29006) has STARTED
+Process 4 received all STARTED messages
+Process 4 has DONE its synchronizeBeforeWork
+Process 4 received all DONE messages
+Process 5 (pid 29011, parent 29006) has STARTED
+Process 5 received all STARTED messages
+Process 5 has DONE its synchronizeBeforeWork
+Process 5 received all DONE messages
+Process 7 (pid 29013, parent 29006) has STARTED
+Process 7 received all STARTED messages
+Process 7 has DONE its synchronizeBeforeWork
+Process 7 received all DONE messages
+Process 8 (pid 29014, parent 29006) has STARTED
+Process 8 received all STARTED messages
+Process 8 has DONE its synchronizeBeforeWork
+Process 8 received all DONE messages
+Process 6 (pid 29012, parent 29006) has STARTED
+Process 6 received all STARTED messages
+Process 6 has DONE its synchronizeBeforeWork
+Process 6 received all DONE messages
+Process 10 (pid 29016, parent 29006) has STARTED
+Process 10 received all STARTED messages
+Process 10 has DONE its synchronizeBeforeWork
+Process 10 received all DONE messages
+Process 9 (pid 29015, parent 29006) has STARTED
+Process 9 received all STARTED messages
+Process 9 has DONE its synchronizeBeforeWork
+Process 9 received all DONE messages
+Process 0 received all STARTED messages
+Process 0 received all DONE messages
