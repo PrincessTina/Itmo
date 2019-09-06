@@ -1,4 +1,4 @@
-# Install script for directory: /home/princess/distributed_computing_labs/pa6
+# Install script for directory: /home/princess/itmo/course3/distributed_computing_labs/pa6
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/princess/distributed_computing_labs/pa6/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/princess/itmo/course3/distributed_computing_labs/pa6/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

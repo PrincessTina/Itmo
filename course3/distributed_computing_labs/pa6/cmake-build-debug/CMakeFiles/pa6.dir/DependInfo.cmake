@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/princess/distributed_computing_labs/pa6/critical_section.c" "/home/princess/distributed_computing_labs/pa6/cmake-build-debug/CMakeFiles/pa6.dir/critical_section.c.o"
-  "/home/princess/distributed_computing_labs/pa6/ipc.c" "/home/princess/distributed_computing_labs/pa6/cmake-build-debug/CMakeFiles/pa6.dir/ipc.c.o"
-  "/home/princess/distributed_computing_labs/pa6/lamport_time.c" "/home/princess/distributed_computing_labs/pa6/cmake-build-debug/CMakeFiles/pa6.dir/lamport_time.c.o"
-  "/home/princess/distributed_computing_labs/pa6/main.c" "/home/princess/distributed_computing_labs/pa6/cmake-build-debug/CMakeFiles/pa6.dir/main.c.o"
+  "/home/princess/itmo/course3/distributed_computing_labs/pa6/critical_section.c" "/home/princess/itmo/course3/distributed_computing_labs/pa6/cmake-build-debug/CMakeFiles/pa6.dir/critical_section.c.o"
+  "/home/princess/itmo/course3/distributed_computing_labs/pa6/ipc.c" "/home/princess/itmo/course3/distributed_computing_labs/pa6/cmake-build-debug/CMakeFiles/pa6.dir/ipc.c.o"
+  "/home/princess/itmo/course3/distributed_computing_labs/pa6/lamport_time.c" "/home/princess/itmo/course3/distributed_computing_labs/pa6/cmake-build-debug/CMakeFiles/pa6.dir/lamport_time.c.o"
+  "/home/princess/itmo/course3/distributed_computing_labs/pa6/main.c" "/home/princess/itmo/course3/distributed_computing_labs/pa6/cmake-build-debug/CMakeFiles/pa6.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

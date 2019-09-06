@@ -3154,3 +3154,41 @@
 1190: process 8 received all DONE messages
 10: process 0 received all STARTED messages
 11: process 0 received all DONE messages
+1: process 3 (pid   809, parent   795) has STARTED with balance $ 0
+9: process 3 received all STARTED messages
+803: process 3 has DONE with balance $ 0
+803: process 3 received all DONE messages
+1: process 1 (pid   807, parent   795) has STARTED with balance $ 0
+9: process 1 received all STARTED messages
+360: process 1 has DONE with balance $ 0
+360: process 1 received all DONE messages
+1: process 2 (pid   808, parent   795) has STARTED with balance $ 0
+9: process 2 received all STARTED messages
+611: process 2 has DONE with balance $ 0
+611: process 2 received all DONE messages
+1: process 4 (pid   810, parent   795) has STARTED with balance $ 0
+9: process 4 received all STARTED messages
+944: process 4 has DONE with balance $ 0
+944: process 4 received all DONE messages
+1: process 9 (pid   819, parent   795) has STARTED with balance $ 0
+9: process 9 received all STARTED messages
+1196: process 9 has DONE with balance $ 0
+1196: process 9 received all DONE messages
+1: process 8 (pid   818, parent   795) has STARTED with balance $ 0
+9: process 8 received all STARTED messages
+1194: process 8 has DONE with balance $ 0
+1194: process 8 received all DONE messages
+1: process 7 (pid   816, parent   795) has STARTED with balance $ 0
+9: process 7 received all STARTED messages
+1164: process 7 has DONE with balance $ 0
+1164: process 7 received all DONE messages
+1: process 6 (pid   813, parent   795) has STARTED with balance $ 0
+9: process 6 received all STARTED messages
+1115: process 6 has DONE with balance $ 0
+1115: process 6 received all DONE messages
+1: process 5 (pid   811, parent   795) has STARTED with balance $ 0
+9: process 5 received all STARTED messages
+1042: process 5 has DONE with balance $ 0
+1042: process 5 received all DONE messages
+10: process 0 received all STARTED messages
+11: process 0 received all DONE messages

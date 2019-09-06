@@ -43,10 +43,10 @@ RM = /home/princess/Загрузки/clion-2019.2.1/bin/cmake/linux/bin/cmake -E
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/princess/distributed_computing_labs/pa6
+CMAKE_SOURCE_DIR = /home/princess/itmo/course3/distributed_computing_labs/pa6
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/princess/distributed_computing_labs/pa6/cmake-build-debug
+CMAKE_BINARY_DIR = /home/princess/itmo/course3/distributed_computing_labs/pa6/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/pa6.dir/depend.make
@@ -59,55 +59,55 @@ include CMakeFiles/pa6.dir/flags.make
 
 CMakeFiles/pa6.dir/main.c.o: CMakeFiles/pa6.dir/flags.make
 CMakeFiles/pa6.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/princess/distributed_computing_labs/pa6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/pa6.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pa6.dir/main.c.o   -c /home/princess/distributed_computing_labs/pa6/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/princess/itmo/course3/distributed_computing_labs/pa6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/pa6.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pa6.dir/main.c.o   -c /home/princess/itmo/course3/distributed_computing_labs/pa6/main.c
 
 CMakeFiles/pa6.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pa6.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/princess/distributed_computing_labs/pa6/main.c > CMakeFiles/pa6.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/princess/itmo/course3/distributed_computing_labs/pa6/main.c > CMakeFiles/pa6.dir/main.c.i
 
 CMakeFiles/pa6.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pa6.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/princess/distributed_computing_labs/pa6/main.c -o CMakeFiles/pa6.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/princess/itmo/course3/distributed_computing_labs/pa6/main.c -o CMakeFiles/pa6.dir/main.c.s
 
 CMakeFiles/pa6.dir/ipc.c.o: CMakeFiles/pa6.dir/flags.make
 CMakeFiles/pa6.dir/ipc.c.o: ../ipc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/princess/distributed_computing_labs/pa6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/pa6.dir/ipc.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pa6.dir/ipc.c.o   -c /home/princess/distributed_computing_labs/pa6/ipc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/princess/itmo/course3/distributed_computing_labs/pa6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/pa6.dir/ipc.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pa6.dir/ipc.c.o   -c /home/princess/itmo/course3/distributed_computing_labs/pa6/ipc.c
 
 CMakeFiles/pa6.dir/ipc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pa6.dir/ipc.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/princess/distributed_computing_labs/pa6/ipc.c > CMakeFiles/pa6.dir/ipc.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/princess/itmo/course3/distributed_computing_labs/pa6/ipc.c > CMakeFiles/pa6.dir/ipc.c.i
 
 CMakeFiles/pa6.dir/ipc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pa6.dir/ipc.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/princess/distributed_computing_labs/pa6/ipc.c -o CMakeFiles/pa6.dir/ipc.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/princess/itmo/course3/distributed_computing_labs/pa6/ipc.c -o CMakeFiles/pa6.dir/ipc.c.s
 
 CMakeFiles/pa6.dir/lamport_time.c.o: CMakeFiles/pa6.dir/flags.make
 CMakeFiles/pa6.dir/lamport_time.c.o: ../lamport_time.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/princess/distributed_computing_labs/pa6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/pa6.dir/lamport_time.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pa6.dir/lamport_time.c.o   -c /home/princess/distributed_computing_labs/pa6/lamport_time.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/princess/itmo/course3/distributed_computing_labs/pa6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/pa6.dir/lamport_time.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pa6.dir/lamport_time.c.o   -c /home/princess/itmo/course3/distributed_computing_labs/pa6/lamport_time.c
 
 CMakeFiles/pa6.dir/lamport_time.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pa6.dir/lamport_time.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/princess/distributed_computing_labs/pa6/lamport_time.c > CMakeFiles/pa6.dir/lamport_time.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/princess/itmo/course3/distributed_computing_labs/pa6/lamport_time.c > CMakeFiles/pa6.dir/lamport_time.c.i
 
 CMakeFiles/pa6.dir/lamport_time.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pa6.dir/lamport_time.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/princess/distributed_computing_labs/pa6/lamport_time.c -o CMakeFiles/pa6.dir/lamport_time.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/princess/itmo/course3/distributed_computing_labs/pa6/lamport_time.c -o CMakeFiles/pa6.dir/lamport_time.c.s
 
 CMakeFiles/pa6.dir/critical_section.c.o: CMakeFiles/pa6.dir/flags.make
 CMakeFiles/pa6.dir/critical_section.c.o: ../critical_section.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/princess/distributed_computing_labs/pa6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/pa6.dir/critical_section.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pa6.dir/critical_section.c.o   -c /home/princess/distributed_computing_labs/pa6/critical_section.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/princess/itmo/course3/distributed_computing_labs/pa6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/pa6.dir/critical_section.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pa6.dir/critical_section.c.o   -c /home/princess/itmo/course3/distributed_computing_labs/pa6/critical_section.c
 
 CMakeFiles/pa6.dir/critical_section.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pa6.dir/critical_section.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/princess/distributed_computing_labs/pa6/critical_section.c > CMakeFiles/pa6.dir/critical_section.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/princess/itmo/course3/distributed_computing_labs/pa6/critical_section.c > CMakeFiles/pa6.dir/critical_section.c.i
 
 CMakeFiles/pa6.dir/critical_section.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pa6.dir/critical_section.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/princess/distributed_computing_labs/pa6/critical_section.c -o CMakeFiles/pa6.dir/critical_section.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/princess/itmo/course3/distributed_computing_labs/pa6/critical_section.c -o CMakeFiles/pa6.dir/critical_section.c.s
 
 # Object files for target pa6
 pa6_OBJECTS = \
@@ -126,7 +126,7 @@ pa6: CMakeFiles/pa6.dir/critical_section.c.o
 pa6: CMakeFiles/pa6.dir/build.make
 pa6: /home/princess/distributed_computing_labs/pa2/lib64/libruntime.so
 pa6: CMakeFiles/pa6.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/princess/distributed_computing_labs/pa6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable pa6"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/princess/itmo/course3/distributed_computing_labs/pa6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable pa6"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pa6.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -139,6 +139,6 @@ CMakeFiles/pa6.dir/clean:
 .PHONY : CMakeFiles/pa6.dir/clean
 
 CMakeFiles/pa6.dir/depend:
-	cd /home/princess/distributed_computing_labs/pa6/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/princess/distributed_computing_labs/pa6 /home/princess/distributed_computing_labs/pa6 /home/princess/distributed_computing_labs/pa6/cmake-build-debug /home/princess/distributed_computing_labs/pa6/cmake-build-debug /home/princess/distributed_computing_labs/pa6/cmake-build-debug/CMakeFiles/pa6.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/princess/itmo/course3/distributed_computing_labs/pa6/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/princess/itmo/course3/distributed_computing_labs/pa6 /home/princess/itmo/course3/distributed_computing_labs/pa6 /home/princess/itmo/course3/distributed_computing_labs/pa6/cmake-build-debug /home/princess/itmo/course3/distributed_computing_labs/pa6/cmake-build-debug /home/princess/itmo/course3/distributed_computing_labs/pa6/cmake-build-debug/CMakeFiles/pa6.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/pa6.dir/depend
 
