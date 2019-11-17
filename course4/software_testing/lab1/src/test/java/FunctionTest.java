@@ -3,8 +3,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class FunctionTest {
-  private double EPS = 1E-7;
-  private double DELTA = 1E-6;
+  private final double EPS = 1E-7;
+  private final double DELTA = 1E-6;
 
   @Test
   public void test1() {
