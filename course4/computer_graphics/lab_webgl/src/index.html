@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D in WebGL!</title>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script  type="text/javascript" src="libraries/gl-matrix.js"></script>
+    <link href="css/index.css" rel="stylesheet" type="text/css"/>
+    <!--script id="shader-fs" type="x-shader/x-fragment" src="shaders/fragmentShader.glsl"></script-->
+    <!--script id="shader-vs" type="x-shader/x-vertex" src="shaders/vertexShader.glsl"></script-->
+</head>
+<body>
+<!-- полотно -->
+<canvas id="canvas">Ваш браузер не поддерживает элемент canvas</canvas>
+<!-- фрагментный шейдер -->
+<script id="shader-fs" type="x-shader/x-fragment">
+    precision mediump float;
+    varying vec3 vLightWeighting;
+
+    void main(void) {
+        gl_FragColor = vec4(vLightWeighting.rgb, 1);
+    }
+</script>
+<!-- вершинный шейдер -->
+<script id="shader-vs" type="x-shader/x-vertex">
+    const float shininess = 16.0;
+    attribute vec3 aVertexPosition;
+    attribute vec3 aVertexNormal;
+    attribute vec2 aVertexTextureCoords;
+    uniform mat4 uMVMatrix;
+    uniform mat4 uPMatrix;
+    uniform mat3 uNMatrix;
+    uniform vec3 uLightPosition;
+    uniform vec3 uAmbientLightColor;
+    uniform vec3 uDiffuseLightColor;
+    uniform vec3 uSpecularLightColor;
+    uniform vec3 uAmbientMaterialColor;
+    uniform vec3 uDiffuseMaterialColor;
+    uniform vec3 uSpecularMaterialColor;
+    varying vec3 vLightWeighting;
+
+    void main(void) {
+        vec4 vertexPositionEye4 = uMVMatrix * vec4(aVertexPosition, 1.0); // установка позиции наблюдателя сцены
+        vec3 vertexPositionEye3 = vertexPositionEye4.xyz / vertexPositionEye4.w;
+        vec3 lightDirection = normalize(uLightPosition - vertexPositionEye3); // получаем вектор направления света
+        vec3 normal = normalize(uNMatrix * aVertexNormal); // получаем нормаль
+        float diffuseLightDot = max(dot(normal, lightDirection), 0.0); // получаем скалярное произведение векторов нормали и направления света
+        vec3 reflectionVector = normalize(reflect(-lightDirection, normal)); // получаем вектор отраженного луча и нормализуем его
+        vec3 viewVectorEye = -normalize(vertexPositionEye3); // установка вектора камеры
+        float specularLightDot = max(dot(reflectionVector, viewVectorEye), 0.0);
+        float specularLightParam = pow(specularLightDot, shininess);
+
+        // отраженный свет равен сумме фонового, диффузного и зеркального отражений света
+        vLightWeighting = uAmbientMaterialColor * uAmbientLightColor +
+        uDiffuseMaterialColor * uDiffuseLightColor * diffuseLightDot +
+        uSpecularMaterialColor * uSpecularLightColor * specularLightParam;
+
+        gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+    }
+</script>
+</body>
+</html>
