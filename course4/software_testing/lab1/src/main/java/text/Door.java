@@ -1,5 +1,9 @@
 package text;
 
+/**
+ * Класс Дверь
+ * Дверь каюты капитана
+ */
 public class Door {
   private final String material = "Стальная";
   private boolean isClosed = false;
@@ -9,10 +13,16 @@ public class Door {
     initialize();
   }
 
+  /**
+   * Инициализируется, выводя себя
+   */
   private void initialize() {
     System.out.print(material + " дверь ");
   }
 
+  /**
+   * Закрытие двери
+   */
   void close() {
     System.out.print("закрылась");
 
@@ -20,6 +30,9 @@ public class Door {
     pushCaptain();
   }
 
+  /**
+   * Передает управление капитану
+   */
   private void pushCaptain() {
     if (isClosed && captain != null) {
       captain.leftAloneAgain();

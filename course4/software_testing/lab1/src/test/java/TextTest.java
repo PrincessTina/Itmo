@@ -6,9 +6,7 @@ import text.Door;
 import text.Guard;
 import text.Violater;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintStream;
+import java.io.*;
 
 public class TextTest {
   @Before
@@ -17,9 +15,9 @@ public class TextTest {
     guard.protectCaptain();
 
     try {
-      File testLog = new File("logs.txt");
-      System.setOut(new PrintStream(testLog));
-    } catch (IOException e) {
+      PrintStream out = new PrintStream(new FileOutputStream("logs.txt"));
+      System.setOut(out);
+    } catch (FileNotFoundException e) {
       e.printStackTrace();
     }
   }

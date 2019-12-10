@@ -1,5 +1,8 @@
 package text;
 
+/**
+ * Класс Нарушитель
+ */
 public class Violater {
   private int count;
   private int punishments = 0;
@@ -13,6 +16,9 @@ public class Violater {
     opposition = true;
   }
 
+  /**
+   * Инкрементирует количество принятых мер против нарушителей
+   */
   void incDonePunishments() {
     donePunishments++;
   }

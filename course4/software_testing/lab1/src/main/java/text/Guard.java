@@ -1,5 +1,9 @@
 package text;
 
+/**
+ * Класс Охранник
+ * Охраняет каюту капитана
+ */
 public class Guard {
   private boolean isAllWorkDone = false;
   private Door captainDoor;
@@ -10,10 +14,17 @@ public class Guard {
     initialize();
   }
 
+  /**
+   * Инициализируется, выводя себя
+   */
   private void initialize() {
     System.out.print("Охранник");
   }
 
+  /**
+   * Метод, который отвечает за кусочек текста, где охранник обхватывает шеи нарушителей
+   * Первое наказание для нарушителей
+   */
   private void grabNecks() {
     if (violaters.getViolate() && violaters.getCount() == 2) {
       System.out.print(" обхватил их обоих за шеи");
@@ -21,12 +32,19 @@ public class Guard {
     }
   }
 
+  /**
+   * Охранник кланяется спине капитана, если тот повернут спиной (всегда)
+   */
   private void bowedToCaptain() {
     if (captain.getSittingBack()) {
       System.out.print(" и, почтительно поклонившись спине капитана, ");
     }
   }
 
+  /**
+   * Метод, который отвечает за кусочек текста, где охранник убирает нарушителей с мостика
+   * Второе наказание для нарушителей
+   */
   private void bringOutFromBridge() {
     if (violaters.getViolate()) {
       System.out.print("выволок с мостика");
@@ -34,6 +52,10 @@ public class Guard {
     }
   }
 
+  /**
+   * Метод, который отвечает за кусочек текста, где охранник не обращает внимание на сопротивление нарушителей
+   * Третье наказание для нарушителей
+   */
   private void ignoreOpposing() {
     if (violaters.getViolate() && violaters.getOpposition()) {
       System.out.print(", не обращая внимания на их сопротивление. ");
@@ -41,6 +63,9 @@ public class Guard {
     }
   }
 
+  /**
+   * Защищает капитана, отгоняя от него нарушителей, если они есть
+   */
   public void protectCaptain() {
     violaters = new Violater(2, true);
     violaters.setPunishments(3);
@@ -57,6 +82,9 @@ public class Guard {
     pushEvents();
   }
 
+  /**
+   * Передает управление двери каюты капитана
+   */
   private void pushEvents() {
     if (isAllWorkDone) {
       captainDoor = new Door();
