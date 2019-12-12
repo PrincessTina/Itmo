@@ -1,7 +1,7 @@
 var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1000);
+var camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000); // 55
 var renderer = new THREE.WebGLRenderer();
-var angleX = 0.1;
+var angleX = 0.01;
 var angleY = 2;
 
 function handleKeyDown(e) {
@@ -23,11 +23,20 @@ function handleKeyDown(e) {
 
 window.onload = function () {
     var geometry = new THREE.CubeGeometry(200, 200, 200);
-    var material = new THREE.MeshBasicMaterial({color: 0x00ffff});
+    var material = new THREE.MeshPhongMaterial({
+        color: 0x00ffff,
+        specular: 0x00ffff,
+        shininess: 0
+    });
     var cube = new THREE.Mesh(geometry, material);
+    var pointLight = new THREE.PointLight(0xffffff, 0.8);
 
     scene.add(cube);
-    camera.position.z = 340;
+    scene.add(pointLight);
+
+    camera.position.z = 600;
+    cube.position.z = 200; // 170
+    pointLight.position.set(0, 1000, 1000);
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     document.body.appendChild(renderer.domElement);
@@ -42,4 +51,3 @@ window.onload = function () {
         renderer.render(scene, camera);
     })();
 };
-
