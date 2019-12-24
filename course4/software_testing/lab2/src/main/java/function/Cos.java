@@ -1,5 +1,8 @@
 package function;
 
+/**
+ * Косинус
+ */
 public class Cos {
   // Для тестов
   public static void main(String[] args) {}
