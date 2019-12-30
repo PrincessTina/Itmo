@@ -3,16 +3,12 @@ var shaderProgram;
 var cubeVertexBuffer;
 var cubeIndexBuffer;
 var cubeVertexNormalBuffer;
-var roofVertexBuffer;
-var roofIndexBuffer;
 
 var mvMatrix;
 var pMatrix;
 var nMatrix;
 
-var stoneTexture;
-var brickTexture;
-var angleX = 0.1;
+var angleX = 0.01;
 var angleY = 2.0;
 
 function handleKeyDown(e) {
@@ -154,8 +150,8 @@ function initShaders() {
  * Настройка цветов освещения
  */
 function setupLights() {
-    context.uniform3fv(shaderProgram.uniformLightPosition, [0.0, 10.0, 5.0]);
-    context.uniform3fv(shaderProgram.uniformAmbientLightColor, [0.1, 0.1, 0.1]);
+    context.uniform3fv(shaderProgram.uniformLightPosition, [0.0, 5.0, 5.0]);
+    context.uniform3fv(shaderProgram.uniformAmbientLightColor, [0.0, 0.0, 0.0]);
     context.uniform3fv(shaderProgram.uniformDiffuseLightColor, [0.7, 0.7, 0.7]);
     context.uniform3fv(shaderProgram.uniformSpecularLightColor, [1.0, 1.0, 1.0]);
 }
@@ -164,7 +160,7 @@ function setupLights() {
  * Установка материалов
  */
 function setupMaterials() {
-    context.uniform3fv(shaderProgram.uniformAmbientMaterialColor, [0.0, 1.0, 1.0]);
+    context.uniform3fv(shaderProgram.uniformAmbientMaterialColor, [1.0, 1.0, 1.0]);
     context.uniform3fv(shaderProgram.uniformDiffuseMaterialColor, [0.0, 1.0, 1.0]);
     context.uniform3fv(shaderProgram.uniformSpecularMaterialColor, [1.0, 1.0, 1.0]);
 }
@@ -285,75 +281,8 @@ function initCubeBuffers() {
     context.bufferData(context.ARRAY_BUFFER, new Float32Array(normals), context.STATIC_DRAW);
 }
 
-function initRoofBuffers() {
-    const points = [
-        // передняя сторона
-        -1.0, 0.5, 0.5, // 0
-        -1.0, 0.8, 0.5, // 1
-        1.0, 0.8, 0.5, // 2
-        1.0, 0.5, 0.5, // 3
-        // задняя сторона
-        -1.0, 0.5, 0.0, // 4
-        -1.0, 0.8, 0.0, // 5
-        1.0, 0.8, 0.0, // 6
-        1.0, 0.5, 0.0, // 7
-        // левый бок
-        -1.0, 0.5, 0.5, // 0
-        -1.0, 0.8, 0.5, // 1
-        -1.0, 0.8, 0.0, // 5
-        -1.0, 0.5, 0.0, // 4
-        // правый бок
-        1.0, 0.5, 0.5, // 3
-        1.0, 0.8, 0.5, // 2
-        1.0, 0.8, 0.0, // 6
-        1.0, 0.5, 0.0, // 7
-        // верх
-        1.0, 0.8, 0.5, // 2
-        -1.0, 0.8, 0.5, // 1
-        -1.0, 0.8, 0.0, // 5
-        1.0, 0.8, 0.0, // 6
-        // низ
-        1.0, 0.5, 0.5, // 3
-        -1.0, 0.5, 0.5, // 0
-        -1.0, 0.5, 0.0, // 4
-        1.0, 0.5, 0.0 // 7
-    ];
-    const indexes = [
-        // передняя сторона
-        0, 1, 2,
-        2, 3, 0,
-        // задняя сторона
-        4, 5, 6,
-        6, 7, 4,
-        // левый бок
-        8, 9, 10,
-        10, 11, 8,
-        // правый бок
-        12, 13, 14,
-        14, 15, 12,
-        // верх
-        16, 17, 18,
-        18, 19, 16,
-        // низ
-        20, 21, 22,
-        22, 23, 20
-    ];
-
-    roofVertexBuffer = context.createBuffer();
-    roofIndexBuffer = context.createBuffer();
-
-    roofVertexBuffer.itemSize = 3; // число координат на вершину (x, y, z)
-    roofIndexBuffer.numberOfItems = indexes.length;
-
-    context.bindBuffer(context.ARRAY_BUFFER, roofVertexBuffer);
-    context.bufferData(context.ARRAY_BUFFER, new Float32Array(points), context.STATIC_DRAW);
-
-    context.bindBuffer(context.ELEMENT_ARRAY_BUFFER, roofIndexBuffer);
-    context.bufferData(context.ELEMENT_ARRAY_BUFFER, new Uint16Array(indexes), context.STATIC_DRAW);
-}
-
 function setupWebGL() {
-    context.clearColor(1.0, 0.0, 0.0, 1.0); // закрашивание фона
+    context.clearColor(0.0, 0.0, 0.0, 1.0); // закрашивание фона
     context.viewport(0, 0, context.viewportWidth, context.viewportHeight); // установка области отрисовки
     context.clear(context.COLOR_BUFFER_BIT || context.DEPTH_BUFFER_BIT);
 
@@ -369,38 +298,6 @@ function setupWebGL() {
     //mat4.lookAt(mvMatrix, [2, 0, -2], [0, 0, 0], [0, 1, 0]);
 }
 
-function setupTextures() {
-    brickTexture = context.createTexture();
-    setTexture("resources/img/brickWall.jpg", brickTexture);
-
-    stoneTexture = context.createTexture();
-    setTexture("resources/img/stoneRoof.jpg", stoneTexture);
-}
-
-function setTexture(url, texture) {
-    const image = new Image();
-
-    context.bindTexture(context.TEXTURE_2D, texture);
-
-    image.onload = function () {
-        handleTextureLoaded(image, texture);
-    };
-
-    image.src = url;
-
-    shaderProgram.samplerUniform = context.getUniformLocation(shaderProgram, "uSampler");
-    context.uniform1i(shaderProgram.samplerUniform, 0);
-}
-
-function handleTextureLoaded(image, texture) {
-    context.bindTexture(context.TEXTURE_2D, texture);
-    context.pixelStorei(context.UNPACK_FLIP_Y_WEBGL, 0);
-    context.texImage2D(context.TEXTURE_2D, 0, context.RGBA, context.RGBA, context.UNSIGNED_BYTE, image);
-    context.texParameteri(context.TEXTURE_2D, context.TEXTURE_MAG_FILTER, context.LINEAR);
-    context.texParameteri(context.TEXTURE_2D, context.TEXTURE_MIN_FILTER, context.LINEAR);
-    context.bindTexture(context.TEXTURE_2D, null);
-}
-
 function cubeDraw() {
     context.bindBuffer(context.ARRAY_BUFFER, cubeVertexBuffer);
     context.vertexAttribPointer(shaderProgram.vertexPositionAttribute, cubeVertexBuffer.itemSize, context.FLOAT, false, 0, 0);
@@ -412,17 +309,6 @@ function cubeDraw() {
 
     context.drawElements(context.TRIANGLES, cubeIndexBuffer.numberOfItems, context.UNSIGNED_SHORT, 0); // отрисовка примитивов
     //context.drawArrays(context.TRIANGLES, 0, cubeVertexBuffer.numberOfItems);
-}
-
-function roofDraw() {
-    context.bindBuffer(context.ARRAY_BUFFER, roofVertexBuffer);
-    context.vertexAttribPointer(shaderProgram.vertexPositionAttribute, roofVertexBuffer.itemSize, context.FLOAT, false, 0, 0);
-
-    context.activeTexture(context.TEXTURE0);
-    context.bindTexture(context.TEXTURE_2D, stoneTexture);
-    context.enable(context.DEPTH_TEST);
-
-    context.drawElements(context.TRIANGLES, roofIndexBuffer.numberOfItems, context.UNSIGNED_SHORT, 0); // отрисовка примитивов
 }
 
 function draw() {
