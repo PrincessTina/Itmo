@@ -53,9 +53,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\BackgroundBehaviour.cs" />
      <Compile Include="Assets\Scripts\BallBehaviour.cs" />
      <Compile Include="Assets\Scripts\BlockScript.cs" />
+     <Compile Include="Assets\Scripts\BonusBehaviour.cs" />
      <Compile Include="Assets\Scripts\PlatformBehaviour.cs" />
+     <Compile Include="Assets\Scripts\PlayButtonBehaviour.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/krist/Documents/repo/itmo/course4/computer_graphics/arcanoid/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>

@@ -9,6 +9,7 @@ enum BallState {
 
 public class BallBehaviour : MonoBehaviour {
     public GameObject platform;
+    public AudioClip hitSound;
     private BallState state;
     private Vector3 position;
     private Vector2 force;
@@ -27,11 +28,17 @@ public class BallBehaviour : MonoBehaviour {
         move();
     }
 
+    void OnCollisionEnter2D(Collision2D collision) {
+        if (state == BallState.Active) {
+            GetComponent<AudioSource>().PlayOneShot(hitSound);
+        }
+    }
+
     void move() {
         position = transform.position;
 
         // Стартуем игру по условию
-        if (Input.GetButtonDown("Jump") == true) {
+        if (Input.GetButtonDown("Jump") || checkNotAlone()) {
             if (state == BallState.Passive) {
                 state = BallState.Active;
                 rigidBody.AddForce(force);
@@ -45,14 +52,33 @@ public class BallBehaviour : MonoBehaviour {
         }
 
         // Проверяем на выход за пределы экрана
-        if (state == BallState.Active && position.y < -6) {
-            state = BallState.Passive;
-            position = new Vector3(platform.transform.position.x, -4.1f, position.z);
-            transform.position = position;
+        if (state == BallState.Active && position.y < -5.2) {
+            if (checkNotAlone()) {
+                Destroy(gameObject);
+            } else {
+                state = BallState.Passive;
+                position = new Vector3(platform.transform.position.x, -4.15f, position.z);
+                transform.position = position;
 
-            rigidBody.velocity = new Vector2(0, 0);
+                rigidBody.velocity = new Vector2(0, 0);
 
-            platform.SendMessage("takeLife");
+                platform.SendMessage("takeLife");
+            }
+        }
+    }
+
+    // Проверяет, существуют ли другие шары
+    bool checkNotAlone() {
+        return GameObject.FindGameObjectsWithTag("Ball").Length > 1;
+    }
+
+    GameObject generateBalls() {
+        return Instantiate(gameObject, transform.position, transform.rotation);
+    }
+
+    void addBalls() {
+        for (int i = 0; i < 2; i++) {
+            generateBalls();
         }
     }
 }

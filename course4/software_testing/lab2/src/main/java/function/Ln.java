@@ -10,6 +10,7 @@ public class Ln {
 
   /**
    * Вычисляет x, необходимый для подстановки в формулу ряда
+   *
    * @param m - число, логарифм которого по основанию e мы хотим узнать
    * @return - число x
    */
@@ -20,7 +21,7 @@ public class Ln {
   /**
    * Вычисляет результат ln(m), где m = (1+x)/(1-x)
    *
-   * @param m - число, логарифм которого по основанию e мы хотим узнать
+   * @param m   - число, логарифм которого по основанию e мы хотим узнать
    * @param eps - значение точности вычислений
    * @return - результат ln(x)
    */
@@ -33,9 +34,8 @@ public class Ln {
     if (m == 0)
       return Double.NEGATIVE_INFINITY;
 
-    if (m < 0) {
+    if (m < 0)
       return Double.NaN;
-    }
 
     do {
       prevResult = currentResult;

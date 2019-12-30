@@ -5,10 +5,12 @@ package function;
  */
 public class Cos {
   // Для тестов
-  public static void main(String[] args) {}
+  public static void main(String[] args) {
+  }
 
   /**
    * Считает факториал числа n
+   *
    * @param n - число
    * @return - факториал
    */
@@ -18,7 +20,8 @@ public class Cos {
 
   /**
    * Вычисляет результат cos(x)
-   * @param x - значение угла в радианах
+   *
+   * @param x   - значение угла в радианах
    * @param eps - значение точности вычислений
    * @return - результат cos(x)
    */

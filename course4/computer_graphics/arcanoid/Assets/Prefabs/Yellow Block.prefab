@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4433118157080037841}
   m_Layer: 0
   m_Name: Yellow Block
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,5 +119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b12f626e4f84e41bf376f251cedc61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxNumberOfHits: 0
-  score: 0
+  type: 0
+  bonusPrefabs:
+  - {fileID: 409513031329067462, guid: 3cd822ad1c97f4b44bb22ab5ac930e7a, type: 3}
+  - {fileID: 4128252535913551553, guid: 6d68b5b361e128b4c869204ab37e35bc, type: 3}
+  - {fileID: 8462037229588743572, guid: f50ad289c8cb72c46975c6c7dc30e784, type: 3}
+  - {fileID: 106450178298760327, guid: 5f898360a294d82478148592ee46960d, type: 3}
