@@ -3,10 +3,15 @@ import static java.lang.Math.*;
 import Constants.MainResistorMaterialParams;
 import Structure.CTable;
 import Structure.RTable;
+import Structure.ResistorMaterialParams;
 import Structure.Surface;
 
 import java.lang.reflect.Field;
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
 
 public class Main {
   private static int[] R = {200, 2000, 8500, 15000, 950};
@@ -19,22 +24,18 @@ public class Main {
     int p;
     int resistorMaterialIndex;
 
-    RTable[] rTable = getDefaultRTable();
-    CTable[] cTable = getDefaultCTable();
+    RTable[] rRows = getDefaultRTable();
+    CTable[] cRows = getDefaultCTable();
 
-    p = countOptimalP(rTable);
-    resistorMaterialIndex = getResistorMaterialIndex(rTable, p);
+    p = countOptimalP(rRows);
+    resistorMaterialIndex = getResistorMaterialIndex(rRows, p);
 
-    setResistorFormCoefficient(rTable, p);
-    determineResistorSize(rTable, p, resistorMaterialIndex);
+    setResistorFormCoefficient(rRows, p);
+    determineResistorSize(rRows, p, resistorMaterialIndex);
 
-    countCapacitorSurface(cTable);
+    countCapacitorSurface(cRows);
 
-    try {
-      writeFullTables(rTable, cTable);
-    } catch (IllegalAccessException ignored) {}
-
-    //writeFormatTest();
+    writeFullData(p, resistorMaterialIndex, rRows, cRows);
   }
 
   private static Surface findGridWalkingSurfaceParams(double S) {
@@ -83,14 +84,14 @@ public class Main {
     return value % 5 == 0;
   }
 
-  private static void countCapacitorSurface(CTable[] cTable) {
-    for (CTable aCTable : cTable) {
+  private static void countCapacitorSurface(CTable[] cRows) {
+    for (CTable cRow : cRows) {
       double S;
       Surface surface;
 
-      aCTable.S = (double) aCTable.C / aCTable.C0;
-      aCTable.S = checkIfEndsAtFive(aCTable.S) ? aCTable.S : limitRound(aCTable.S, RoundMode.round, 0.01);
-      S = aCTable.S * 100;
+      cRow.S = (double) cRow.C / cRow.C0;
+      cRow.S = checkIfEndsAtFive(cRow.S) ? cRow.S : limitRound(cRow.S, RoundMode.round, 0.01);
+      S = cRow.S * 100;
 
       surface = findGridWalkingSurfaceParams(S);
 
@@ -98,34 +99,42 @@ public class Main {
         surface = findAnySurfaceParams(S);
       }
 
-      aCTable.a = surface.a;
-      aCTable.b = surface.b;
+      cRow.a = surface.a;
+      cRow.b = surface.b;
     }
   }
 
-  private static void countResistorLength(RTable aRTable, int p) {
+  private static void countResistorLength(RTable rRow, int p) {
     double R;
 
-    aRTable.lCalc = limitRound(aRTable.k * aRTable.b, RoundMode.round, 0.0001);
-    aRTable.l = gridStepRound(aRTable.lCalc, RoundMode.round);
+    rRow.lCalc = limitRound(rRow.k * rRow.b, RoundMode.round, 0.0001);
+    rRow.l = gridStepRound(rRow.lCalc, RoundMode.round);
 
-    R = aRTable.l * p / aRTable.b;
-    aRTable.deltaRFact = limitRound(abs(aRTable.R - R) / aRTable.R * 100, RoundMode.round, 0.1);
+    R = rRow.l * p / rRow.b;
+    rRow.deltaRFact = limitRound(abs(rRow.R - R) / rRow.R * 100, RoundMode.round, 0.1);
   }
 
-  private static void determineResistorSize(RTable[] rTable, int p, int resistorMaterialIndex) {
+  private static void complementChangesHistory(Map<String, RTable[]> changesHistory, int i, RTable rRow) {
+    //changesHistory.put
+  }
+
+  private static void determineResistorSize(RTable[] rRows, int p, int resistorMaterialIndex) {
     int W0 = MainResistorMaterialParams.params[resistorMaterialIndex].W0;
+    Map<String, RTable[]> changesHistory = new HashMap<>();
 
-    for (RTable aRTable : rTable) {
-      if (aRTable.k < 10) {
-        aRTable.bW = gridStepRound(10 * sqrt(p * aRTable.W / (aRTable.R * W0)), RoundMode.ceil);
-        aRTable.b = max(aRTable.bExact, aRTable.bW);
+    for (int i = 0; i < rRows.length; i++) {
+      RTable rRow = rRows[i];
 
-        countResistorLength(aRTable, p);
+      if (rRow.k < 10) {
+        rRow.bW = gridStepRound(10 * sqrt(p * rRow.W / (rRow.R * W0)), RoundMode.ceil);
+        rRow.b = max(rRow.bExact, rRow.bW);
 
-        while (aRTable.deltaRFact > aRTable.deltaR) {
-          aRTable.b += H;
-          countResistorLength(aRTable, p);
+        countResistorLength(rRow, p);
+
+        while (rRow.deltaRFact > rRow.deltaR) {
+
+          rRow.b += H;
+          countResistorLength(rRow, p);
         }
       } else {
         System.err.println("Меандр");
@@ -133,32 +142,40 @@ public class Main {
     }
   }
 
-  private static void setResistorFormCoefficient(RTable[] rTable, int p) {
-    for (RTable aRTable : rTable) {
-      aRTable.k = (double) aRTable.R / p;
+  private static void setResistorFormCoefficient(RTable[] rRows, int p) {
+    for (RTable rRow : rRows) {
+      rRow.k = (double) rRow.R / p;
     }
   }
 
   /**
    * Выбирается материал резистивной пленки
    */
-  private static int getResistorMaterialIndex(RTable[] rTable, int p) {
+  private static int getResistorMaterialIndex(RTable[] rRows, int p) {
+    int index = 0;
+    int W0 = 0;
+
     start:
     for (int i = 0; i < MainResistorMaterialParams.params.length; i++) {
-      if (p < MainResistorMaterialParams.params[i].pBottom || p > MainResistorMaterialParams.params[i].pTop) {
+      ResistorMaterialParams params = MainResistorMaterialParams.params[i];
+
+      if (p < params.pBottom || p > params.pTop) {
         continue;
       }
 
-      for (RTable aRTable : rTable) {
-        if (aRTable.R < MainResistorMaterialParams.params[i].RBottom || aRTable.R > MainResistorMaterialParams.params[i].RTop) {
+      for (RTable rRow : rRows) {
+        if (rRow.R < params.RBottom || rRow.R > params.RTop) {
           continue start;
         }
       }
 
-      return i;
+      if (params.W0 > W0) {
+        W0 = params.W0;
+        index = i;
+      }
     }
 
-    return 0;
+    return index;
   }
 
   /**
@@ -204,27 +221,77 @@ public class Main {
   /**
    * Подсчет оптимального удельного сопротивления
    */
-  private static int countOptimalP(RTable[] rTable) {
+  private static int countOptimalP(RTable[] rRows) {
     int numerator = 0;
     double denominator = 0;
 
-    for (RTable aRTable : rTable) {
-      numerator += aRTable.R;
-      denominator += pow(aRTable.R, -1);
+    for (RTable rRow : rRows) {
+      numerator += rRow.R;
+      denominator += pow(rRow.R, -1);
     }
 
     return highestLevelRound(sqrt(numerator / denominator));
   }
 
-  private static String writeFormatTest(Object value, String objectType) {
-    System.out.println(new DecimalFormat("###.00").format(value));
+  private static void writeFullData(int p, int resistorMaterialIndex, RTable[] rRows, CTable[] cRows) {
+    System.out.println("p: " + p + "\n");
+    writeResistorMaterialParams(MainResistorMaterialParams.params[resistorMaterialIndex]);
+    System.out.println();
+    writeFullTables(rRows, cRows);
+  }
 
+  private static void writeResistorMaterialParams(ResistorMaterialParams params) {
+    System.out.println("materialName: " + params.materialName + " p: " + params.p + " R: " + params.R + " W0: " + params.W0);
+  }
+
+  private static void writeFullTables(RTable[] rRows, CTable[] cRows) {
+    StringBuilder rRowsFieldFormat = new StringBuilder();
+    StringBuilder cRowsFieldFormat = new StringBuilder();
+
+    for (Field field : RTable.class.getDeclaredFields()) {
+      rRowsFieldFormat.append("%-");
+      rRowsFieldFormat.append(field.getName().length() + 9); // fieldName[:] [space] [6-digital value] [space]
+      rRowsFieldFormat.append("s");
+    }
+
+    for (Field field : CTable.class.getDeclaredFields()) {
+      cRowsFieldFormat.append("%-");
+      cRowsFieldFormat.append(field.getName().length() + 9); // fieldName[:] [space] [6-digital value] [space]
+      cRowsFieldFormat.append("s");
+    }
+
+    for (RTable rRow : rRows) {
+      writeFullFields(rRow, rRowsFieldFormat.toString());
+    }
+
+    System.out.println();
+    writeCapacitorMaterialParams();
+    System.out.println();
+
+    for (CTable cRow : cRows) {
+      writeFullFields(cRow, cRowsFieldFormat.toString());
+    }
+  }
+
+  private static void test() {
+    Map<String, RTable[]> states = new HashMap<>();
+    RTable[] rRows = {new RTable(1, 2, 4.0)};
+    states.put("1", rRows);
+  }
+
+  private static void writeCapacitorMaterialParams() {
+    System.out.println("materialName: Моноокись германия material: Алюминий А99 C0: (5 - 15) * 10^3 B: 10 - 5 e: 11 - 12");
+  }
+
+  private static String getFormattedValue(Object value, ObjectType objectType) {
     switch (objectType) {
-      case "int":
-        return value.toString();
-      case "double":
+      case double_t:
+        DecimalFormatSymbols formatSymbols = new DecimalFormatSymbols(Locale.getDefault());
+        formatSymbols.setDecimalSeparator('.');
+        return new DecimalFormat("###.####", formatSymbols).format(value);
+      case int_t:
       default:
-        return "";
+        return value.toString();
     }
   }
 
@@ -232,52 +299,53 @@ public class Main {
    * Находит все доступные поля объекта
    * Выписывает их имена и значения в формате name: value
    */
-  private static void writeFullFields(Object object) throws IllegalAccessException {
+  private static void writeFullFields(Object object, String format) {
     Field[] fields = object.getClass().getDeclaredFields();
+    String[] values = new String[fields.length];
 
-    for (Field field : fields) {
-      String fieldType = field.getType().toString();
+    for (int i = 0; i < fields.length; i++) {
+      Field field = fields[i];
+      String fieldType = field.getType().toString() + "_t";
       String fieldName = field.getName();
+      Object value = new Object();
+      ObjectType objectType = ObjectType.default_t;
 
-      Object value = field.get(object);
-      System.out.print(fieldName + ": " + value + " ");
+      try {
+        if (!field.isAccessible()) {
+          field.setAccessible(true);
+        }
+
+        value = field.get(object);
+        objectType = ObjectType.valueOf(fieldType);
+      } catch (IllegalArgumentException | IllegalAccessException ignored) {}
+
+      values[i] = fieldName + ": " + getFormattedValue(value, objectType);
     }
 
+    System.out.printf(format, values);
     System.out.println();
-  }
-
-  private static void writeFullTables(RTable[] rTable, CTable[] cTable) throws IllegalAccessException {
-    for (RTable aRTable : rTable) {
-      writeFullFields(aRTable);
-    }
-
-    System.out.println();
-
-    for (CTable aCTable : cTable) {
-      writeFullFields(aCTable);
-    }
   }
 
   private static CTable[] getDefaultCTable() {
     int length = C.length;
-    CTable[] cTable = new CTable[length];
+    CTable[] cRows = new CTable[length];
 
     for (int i = 0; i < length; i++) {
-      cTable[i] = new CTable(C[i]);
+      cRows[i] = new CTable(C[i]);
     }
 
-    return cTable;
+    return cRows;
   }
 
   private static RTable[] getDefaultRTable() {
     int length = R.length;
-    RTable[] rTable = new RTable[length];
+    RTable[] rRows = new RTable[length];
 
     for (int i = 0; i < length; i++) {
-      rTable[i] = new RTable(R[i], deltaR[i], W[i]);
+      rRows[i] = new RTable(R[i], deltaR[i], W[i]);
     }
 
-    return rTable;
+    return rRows;
   }
 }
 
@@ -285,4 +353,10 @@ enum RoundMode {
   ceil,
   floor,
   round
+}
+
+enum ObjectType {
+  int_t,
+  double_t,
+  default_t
 }

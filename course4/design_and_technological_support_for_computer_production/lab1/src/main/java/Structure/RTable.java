@@ -18,4 +18,11 @@ public class RTable {
     this.W = W;
     bExact = (deltaR == 20) ? 0.2 : (deltaR == 10) ? 0.3 : 0;
   }
+
+  public RTable(double b, double lCalc, double l, double deltaRFact) {
+    this.b = b;
+    this.lCalc = lCalc;
+    this.l = l;
+    this.deltaRFact = deltaRFact;
+  }
 }
