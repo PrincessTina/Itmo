@@ -13,9 +13,6 @@ public class Point {
     this.y = y;
   }
 
-  public Point() {
-  }
-
   /**
    * Умножение точки эллиптической кривой
    *
@@ -59,15 +56,30 @@ public class Point {
    * @return возвращает точку, являющуюся суммой точек
    */
   public Point add(Point point) {
-    int numerator = point.y - y;
-    int denominator = point.x - x;
-    int lambda = mod(numerator, denominator);
-    Point point3 = new Point();
+    final int numerator = point.y - y;
+    final int denominator = point.x - x;
+    final int lambda = mod(numerator, denominator);
+    final int x3 = mod((int) pow(lambda, 2) - x - point.x, 1);
+    final int y3 = mod(lambda * (x - x3) - y, 1);
 
-    point3.x = mod((int) pow(lambda, 2) - x - point.x, 1);
-    point3.y = mod(lambda * (x - point3.x) - y, 1);
+    return new Point(x3, y3);
+  }
 
-    return point3;
+  /**
+   * Сравнивает точки
+   *
+   * @param point - точка, с которой необходимо выполнить сравнение
+   * @return возвращает true, если координаты точек равны, иначе - false
+   */
+  public boolean equals(Point point) {
+    return x == point.x && y == point.y;
+  }
+
+  /**
+   * @return возвращает строковое представление точки
+   */
+  public String toString() {
+    return "(" + x + ", " + y + ")";
   }
 
   /**
@@ -76,14 +88,12 @@ public class Point {
    * @return возвращает точку, являющуюся произведением данной точки на 2
    */
   private Point redouble() {
-    int numerator = 3 * (int) pow(x, 2) + a;
-    int denominator = 2 * y;
-    int lambda = mod(numerator, denominator);
-    Point point3 = new Point();
+    final int numerator = 3 * (int) pow(x, 2) + a;
+    final int denominator = 2 * y;
+    final int lambda = mod(numerator, denominator);
+    final int x3 = mod((int) pow(lambda, 2) - 2 * x, 1);
+    final int y3 = mod(lambda * (x - x3) - y, 1);
 
-    point3.x = mod((int) pow(lambda, 2) - 2 * x, 1);
-    point3.y = mod(lambda * (x - point3.x) - y, 1);
-
-    return point3;
+    return new Point(x3, y3);
   }
 }
