@@ -16,9 +16,8 @@ public class Main {
 
     plainText = encode(convertToBinary(new StringBuilder(cipherText)), key);
 
-    ps.println("Encoded: " + cipherText);
+    ps.println("Encoded: " + replaceControlCharacters(cipherText));
     ps.println("Decoded: " + plainText);
-    in.close();
   }
 
   /**
@@ -113,6 +112,26 @@ public class Main {
   }
 
   /**
+   * Замена управляющих символов
+   * Управляющие символы при выводе на консоль не отображаются корректно и способны "сломать" вывод, в связи с чем
+   * осуществляется их замена на символ ♞
+   *
+   * @param source - строка, в которой необходимо произвести замену
+   * @return возвращает строку с заменами
+   */
+  private static String replaceControlCharacters(String source) {
+    StringBuilder fixed = new StringBuilder(source);
+
+    for (int i = 0; i < fixed.length(); i++) {
+      if (fixed.charAt(i) < 32) {
+        fixed.setCharAt(i, '♞');
+      }
+    }
+
+    return fixed.toString();
+  }
+
+  /**
    * Исправление записи кириллических символов
    * Коды символов кириллицы > 1000, тогда как остальные символы располагаются в таблице UTF-8 в диапазоне от 0 до 127
    * Исходные коды символов кириллицы заменяются на соответствующие, которые они могли бы занять в UTF-8 в диапазоне от 128 до 255
@@ -127,18 +146,12 @@ public class Main {
     for (int i = 0; i < fixed.length(); i++) {
       final char c = fixed.charAt(i);
 
-      if (c == 'ё') {
-        fixed.setCharAt(i, (char) 184);
-      } else if (c == 'Ё') {
-        fixed.setCharAt(i, (char) 168);
-      } else if (c == 168) {
-        fixed.setCharAt(i, 'Ё');
-      } else if (c == 184) {
-        fixed.setCharAt(i, 'ё');
-      } else if (c > 255) {
-        fixed.setCharAt(i, (char) (c - 848));
-      } else if (c > 127) {
-        fixed.setCharAt(i, (char) (c + 848));
+      if (c > 127 && c < 256) {
+        fixed.setCharAt(i, (char) (c + 128 * 7));
+      }
+
+      if (c > 1023 && c < 1152) {
+        fixed.setCharAt(i, (char) (c % 128 + 128));
       }
     }
 
