@@ -1,11 +1,10 @@
 package Main;
 
-import static java.lang.Math.*;
-import static Structure.Alphabet.alphabet;
+import static Structure.Alphabet.*;
+import static java.lang.Math.abs;
+import static Main.Log.*;
 
 import Structure.Point;
-
-import java.io.PrintStream;
 
 public class Main {
   public static final int a = -1;
@@ -31,12 +30,13 @@ public class Main {
         {new Point(425, 663), new Point(688, 10)}
     };
 
-    decode(encoded);
+    logInitialParams();
     encode(message, k);
+    decode(encoded);
   }
 
   /**
-   * Находит математически корректный остатот от деления
+   * Поиск математически корректного остатка от деления
    * - целого числа
    * - дроби
    * - отрицательного числа
@@ -66,67 +66,55 @@ public class Main {
     return (int) mod;
   }
 
+  /**
+   * Осуществление шифрования
+   * Выводит результат на стандартный поток вывода
+   *
+   * @param message - открытый текст
+   * @param k       - массив случайных чисел для символов message
+   */
   private static void encode(String message, int[] k) {
     Point[][] encoded = new Point[message.length()][2];
 
+    logEncodingFormula();
+
     for (int i = 0; i < message.length(); i++) {
-      final Point point = lookForPointInAlphabet(String.valueOf(message.charAt(i)));
+      final String symbol = String.valueOf(message.charAt(i));
+      final Point point = getPoint(symbol);
+      final Point temp;
 
       encoded[i][0] = G.multiply(k[i]);
-      encoded[i][1] = point.add(openKey.multiply(k[i]));
+      temp = openKey.multiply(k[i]);
+      encoded[i][1] = point.add(temp);
 
-      System.out.println("{" + encoded[i][0].toString() + ", " + encoded[i][1].toString() + "};");
+      logEncodingTact(symbol, point, encoded[i][0], temp, encoded[i][1], k[i]);
     }
+
+    logEncodingResult();
   }
 
+  /**
+   * Осуществление расшифрования
+   * Выводит результат на стандартный поток вывода
+   *
+   * @param encoded - массив шифров
+   */
   private static void decode(Point[][] encoded) {
-    StringBuilder message = new StringBuilder();
     Point[] decoded = new Point[encoded.length];
 
+    logDecodingFormula();
+
     for (int i = 0; i < decoded.length; i++) {
-      decoded[i] = encoded[i][1].subtract(encoded[i][0].multiply(secretKey));
-      message.append(lookForSymbolInAlphabet(decoded[i]));
+      final Point temp = encoded[i][0].multiply(secretKey);
+      String symbol;
 
-      System.out.print(decoded[i].toString() + " ");
+      decoded[i] = encoded[i][1].subtract(temp);
+      symbol = getSymbol(decoded[i]);
+
+      logDecodingTact(encoded[i][1], encoded[i][0], temp, decoded[i], symbol);
     }
 
-    try {
-      PrintStream ps = new PrintStream(System.out, true, "UTF-8");
-      ps.println("\n" + message.toString());
-    } catch (Exception ignored) {
-    }
-  }
-
-  /**
-   * Поиск точки в алфавите по соответствующему ей символу
-   *
-   * @param symbol - символ, по которому идет поиск
-   * @return возвращает найденную точку
-   */
-  private static Point lookForPointInAlphabet(String symbol) {
-    return alphabet.get(symbol);
-  }
-
-  /**
-   * Поиск символа в алфавите по соответствующей ему точке
-   *
-   * @param point - точка, по которой идет поиск
-   * @return возвращает найденный символ
-   */
-  private static String lookForSymbolInAlphabet(Point point) {
-    StringBuilder symbol = new StringBuilder();
-
-    alphabet.forEach((key, value) -> {
-      if (value.equals(point)) {
-        if (key.equals("И")) {
-          symbol.append(key.toLowerCase()); // Исправление ошибки, связанной с UTF-8, для "И"
-        } else {
-          symbol.append(key);
-        }
-      }
-    });
-
-    return symbol.toString();
+    logDecodingResult();
   }
 
   /**

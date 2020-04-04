@@ -3,6 +3,9 @@ package Structure;
 import java.util.Map;
 import java.util.HashMap;
 
+/**
+ * Алфавит символов, в котором каждому символу сопоставлена точка эллиптической кривой
+ */
 public class Alphabet {
   public static final Map<String, Point> alphabet = new HashMap<>();
 
@@ -166,5 +169,37 @@ public class Alphabet {
     alphabet.put("э", new Point(256, 630));
     alphabet.put("ю", new Point(257, 293));
     alphabet.put("я", new Point(257, 458));
+  }
+
+  /**
+   * Поиск символа в алфавите по соответствующей ему точке
+   *
+   * @param point - точка, по которой идет поиск
+   * @return возвращает найденный символ
+   */
+  public static String getSymbol(Point point) {
+    StringBuilder symbol = new StringBuilder();
+
+    alphabet.forEach((key, value) -> {
+      if (value.equals(point)) {
+        if (key.equals("И")) {
+          symbol.append(key.toLowerCase()); // Исправление ошибки, связанной с UTF-8, для "И"
+        } else {
+          symbol.append(key);
+        }
+      }
+    });
+
+    return symbol.toString();
+  }
+
+  /**
+   * Поиск точки в алфавите по соответствующему ей символу
+   *
+   * @param symbol - символ, по которому идет поиск
+   * @return возвращает найденную точку
+   */
+  public static Point getPoint(String symbol) {
+    return alphabet.get(symbol);
   }
 }

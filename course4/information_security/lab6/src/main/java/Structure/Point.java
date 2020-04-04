@@ -1,9 +1,13 @@
 package Structure;
 
 import static java.lang.Math.pow;
+import static Main.Log.setBufParams;
 import static Main.Main.mod;
 import static Main.Main.a;
 
+/**
+ * Точка эллиптической кривой
+ */
 public class Point {
   public int x;
   public int y;
@@ -61,6 +65,8 @@ public class Point {
     final int lambda = mod(numerator, denominator);
     final int x3 = mod((int) pow(lambda, 2) - x - point.x, 1);
     final int y3 = mod(lambda * (x - x3) - y, 1);
+
+    setBufParams(lambda, x3, y3);
 
     return new Point(x3, y3);
   }
