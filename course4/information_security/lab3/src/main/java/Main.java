@@ -1,5 +1,6 @@
+import Structure.Register;
+
 import java.io.PrintStream;
-import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Main {
@@ -8,68 +9,74 @@ public class Main {
     System.out.println("Source: ");
 
     String source = in.nextLine();
+    PrintStream ps = new PrintStream(System.out, true, "UTF-8");
     String plainText = convertToBinary(new StringBuilder(source));
     String key = convertToBinary(new StringBuilder("keyword"));
-    String encoded = encryption(plainText, key);
-    String decoded = encryption(convertToBinary(new StringBuilder(encoded)), key);
-    PrintStream ps = new PrintStream(System.out, true, "UTF-8");
+    String cipherText = encode(plainText, key);
 
-    ps.println("Encoded: " + encoded);
-    ps.println("Decoded: " + decoded);
+    plainText = encode(convertToBinary(new StringBuilder(cipherText)), key);
+
+    ps.println("Encoded: " + cipherText);
+    ps.println("Decoded: " + plainText);
     in.close();
   }
 
-  private static String encryption(String plainText, String key) {
-    LinkedList<String> register1 = new LinkedList<>();
-    LinkedList<String> register2 = new LinkedList<>();
-    StringBuilder encoded = new StringBuilder();
+  /**
+   * Шифрование
+   * Работает в обе стороны: шифрование / расшифрование
+   *
+   * @param plainText - открытый текст, который необходимо зашифровать
+   * @param key       - ключ
+   * @return - возвращает шифртекст
+   */
+  private static String encode(String plainText, String key) {
     final int registerLength = 81;
-    int[] register1BitPositions = {80, 9, 4, 2, 0};
-    int[] register2BitPositions = {80, 5, 3, 2, 1, 0};
+    final int[] register1BitPositions = {80, 9, 4, 2, 0};
+    final int[] register2BitPositions = {80, 5, 3, 2, 1, 0};
+    Register register1 = new Register(registerLength, register1BitPositions, key);
+    Register register2 = new Register(registerLength, register2BitPositions, key);
+    StringBuilder cipherText = new StringBuilder();
     int lastGamma = 0;
 
-    fillRegisters(register1, register2, registerLength, key);
-
     for (int i = 0; i < registerLength; i++) { // Прогоняем столько тактов, сколько длина регистра, вхолостую
-      lastGamma = runTact(register1, register2, register1BitPositions, register2BitPositions, lastGamma);
+      lastGamma = generateGamma(register1, register2, lastGamma);
     }
 
     for (int i = 0; i < plainText.length(); i++) {
-      int gamma = runTact(register1, register2, register1BitPositions, register2BitPositions, lastGamma);
-      int cipher = (Integer.parseInt("" + plainText.charAt(i)) + gamma) % 2;
+      int gamma = generateGamma(register1, register2, lastGamma);
+      int encoded = (Integer.parseInt(String.valueOf(plainText.charAt(i))) + gamma) % 2;
 
-      encoded.append(cipher);
       lastGamma = gamma;
+      cipherText.append(encoded);
     }
 
-    return convertToText(encoded);
+    return convertToText(cipherText);
   }
 
-  private static int runTact(LinkedList<String> register1, LinkedList<String> register2, int[] register1BitPositions,
-                              int[] register2BitPositions, int lastGamma) {
-    lastGamma = (lastGamma + getRegisterBit(register1) + getRegisterBit(register2)) % 2;
+  /**
+   * Гамма-генератор
+   * Генерирует гамму по заданному алгоритму
+   *
+   * @param register1 - первый регистр
+   * @param register2 - второй регистр
+   * @param gamma     - прошлое значение гаммы
+   * @return возвращает новое значение гаммы
+   */
+  private static int generateGamma(Register register1, Register register2, int gamma) {
+    gamma = (gamma + register1.getBit() + register2.getBit()) % 2;
 
-    moveRegisterToRight(register1, register1BitPositions);
-    moveRegisterToRight(register2, register2BitPositions);
+    register1.moveToRight();
+    register2.moveToRight();
 
-    return lastGamma;
+    return gamma;
   }
 
-  private static void moveRegisterToRight(LinkedList<String> register, int[] bitPositions) {
-    int newBit = 0;
-
-    for (int bitPosition : bitPositions) {
-      newBit += Integer.parseInt(register.get(bitPosition));
-    }
-
-    register.add(String.valueOf(newBit % 2));
-    register.removeFirst();
-  }
-
-  private static int getRegisterBit(LinkedList<String> register) {
-    return Integer.parseInt(String.valueOf(register.getFirst()));
-  }
-
+  /**
+   * Перевод символьной строки в бинарную
+   *
+   * @param text - символьная строка
+   * @return возвращает бинарную строку
+   */
   private static String convertToBinary(StringBuilder text) {
     StringBuilder binary = new StringBuilder();
 
@@ -89,6 +96,12 @@ public class Main {
     return binary.toString();
   }
 
+  /**
+   * Перевод бинарной строки в символьную
+   *
+   * @param binary - бинарная строка
+   * @return возвращает символьную строку
+   */
   private static String convertToText(StringBuilder binary) {
     StringBuilder text = new StringBuilder();
 
@@ -96,24 +109,23 @@ public class Main {
       text.append((char) Integer.parseInt(s, 2));
     }
 
-    text = fixCyrillic(text);
-
-    return text.toString();
+    return fixCyrillic(text).toString();
   }
 
-  private static void fillRegisters(LinkedList<String> register1, LinkedList<String> register2, int registerLength, String key) {
-    for (int i = 0; i < registerLength; i++) {
-      final char c = key.charAt(i % key.length());
-      register1.add(String.valueOf(c));
-      register2.add(String.valueOf(c));
-    }
-  }
-
+  /**
+   * Исправление записи кириллических символов
+   * Коды символов кириллицы > 1000, тогда как остальные символы располагаются в таблице UTF-8 в диапазоне от 0 до 127
+   * Исходные коды символов кириллицы заменяются на соответствующие, которые они могли бы занять в UTF-8 в диапазоне от 128 до 255
+   * Обратно временные коды заменяются на исходные
+   *
+   * @param source - строка, в которой необходимо произвести исправление
+   * @return возвращает исправленную строку
+   */
   private static StringBuilder fixCyrillic(StringBuilder source) {
     StringBuilder fixed = new StringBuilder(source);
 
     for (int i = 0; i < fixed.length(); i++) {
-      char c = fixed.charAt(i);
+      final char c = fixed.charAt(i);
 
       if (c == 'ё') {
         fixed.setCharAt(i, (char) 184);

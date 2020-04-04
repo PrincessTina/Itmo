@@ -14,9 +14,9 @@ public class Main {
   static int module = 751;
 
   public static void main(String[] args) {
-    final String message = "низменный";
+    final String plainText = "низменный";
     final int[] k = {12, 5, 7, 17, 18, 2, 12, 10, 11};
-    final Point[][] encoded = {
+    final Point[][] cipherText = {
         {new Point(16, 416), new Point(93, 484)},
         {new Point(489, 468), new Point(531, 397)},
         {new Point(188, 93), new Point(654, 102)},
@@ -31,8 +31,8 @@ public class Main {
     };
 
     logInitialParams();
-    encode(message, k);
-    decode(encoded);
+    encode(plainText, k);
+    decode(cipherText);
   }
 
   /**
@@ -70,24 +70,24 @@ public class Main {
    * Осуществление шифрования
    * Выводит результат на стандартный поток вывода
    *
-   * @param message - открытый текст
-   * @param k       - массив случайных чисел для символов message
+   * @param plainText - открытый текст
+   * @param k         - массив случайных чисел для символов plainText
    */
-  private static void encode(String message, int[] k) {
-    Point[][] encoded = new Point[message.length()][2];
+  private static void encode(String plainText, int[] k) {
+    Point[][] cipherText = new Point[plainText.length()][2];
 
     logEncodingFormula();
 
-    for (int i = 0; i < message.length(); i++) {
-      final String symbol = String.valueOf(message.charAt(i));
+    for (int i = 0; i < plainText.length(); i++) {
+      final String symbol = String.valueOf(plainText.charAt(i));
       final Point point = getPoint(symbol);
       final Point temp;
 
-      encoded[i][0] = G.multiply(k[i]);
+      cipherText[i][0] = G.multiply(k[i]);
       temp = openKey.multiply(k[i]);
-      encoded[i][1] = point.add(temp);
+      cipherText[i][1] = point.add(temp);
 
-      logEncodingTact(symbol, point, encoded[i][0], temp, encoded[i][1], k[i]);
+      logEncodingTact(symbol, point, cipherText[i][0], temp, cipherText[i][1], k[i]);
     }
 
     logEncodingResult();
@@ -97,21 +97,21 @@ public class Main {
    * Осуществление расшифрования
    * Выводит результат на стандартный поток вывода
    *
-   * @param encoded - массив шифров
+   * @param cipherText - шифртекст
    */
-  private static void decode(Point[][] encoded) {
-    Point[] decoded = new Point[encoded.length];
+  private static void decode(Point[][] cipherText) {
+    Point[] plainText = new Point[cipherText.length];
 
     logDecodingFormula();
 
-    for (int i = 0; i < decoded.length; i++) {
-      final Point temp = encoded[i][0].multiply(secretKey);
+    for (int i = 0; i < plainText.length; i++) {
+      final Point temp = cipherText[i][0].multiply(secretKey);
       String symbol;
 
-      decoded[i] = encoded[i][1].subtract(temp);
-      symbol = getSymbol(decoded[i]);
+      plainText[i] = cipherText[i][1].subtract(temp);
+      symbol = getSymbol(plainText[i]);
 
-      logDecodingTact(encoded[i][1], encoded[i][0], temp, decoded[i], symbol);
+      logDecodingTact(cipherText[i][1], cipherText[i][0], temp, plainText[i], symbol);
     }
 
     logDecodingResult();
