@@ -72,20 +72,20 @@ public class Point {
   }
 
   /**
-   * Сравнивает точки
-   *
-   * @param point - точка, с которой необходимо выполнить сравнение
-   * @return возвращает true, если координаты точек равны, иначе - false
-   */
-  public boolean equals(Point point) {
-    return x == point.x && y == point.y;
-  }
-
-  /**
    * @return возвращает строковое представление точки
    */
   public String toString() {
     return "(" + x + ", " + y + ")";
+  }
+
+  /**
+   * Сравнение точек на эквивалентность
+   *
+   * @param point - точка, с которой необходимо выполнить сравнение
+   * @return возвращает true, если координаты точек равны, иначе - false
+   */
+  boolean equals(Point point) {
+    return x == point.x && y == point.y;
   }
 
   /**

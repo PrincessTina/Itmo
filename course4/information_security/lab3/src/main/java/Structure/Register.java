@@ -6,9 +6,9 @@ import java.util.LinkedList;
  * Линейный регистр сдвига
  */
 public class Register {
-  LinkedList<String> buffer = new LinkedList<>();
-  int[] bitPositions;
-  int length;
+  private LinkedList<String> buffer = new LinkedList<>();
+  private int[] bitPositions;
+  private int length;
 
   public Register(int length, int[] bitPositions, String value) {
     this.length = length;

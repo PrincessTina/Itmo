@@ -7,7 +7,7 @@ import java.util.HashMap;
  * Алфавит символов, в котором каждому символу сопоставлена точка эллиптической кривой
  */
 public class Alphabet {
-  public static final Map<String, Point> alphabet = new HashMap<>();
+  private static final Map<String, Point> alphabet = new HashMap<>();
 
   static {
     alphabet.put(" ", new Point(33, 355));

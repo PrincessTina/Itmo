@@ -29,16 +29,30 @@ public class Log {
   }
 
   /**
+   * Установка параметров временного буфера из класса Point, полученных в результате вычислений
+   *
+   * @param lambdaFromPoint - lambda, необходимая для расчета x3
+   * @param x3FromPoint     - x3, абсцисса результата вычислений
+   * @param y3FromPoint     - y3, ордината результата вычислений
+   */
+  public static void setBufParams(int lambdaFromPoint, int x3FromPoint, int y3FromPoint) {
+    lambda = lambdaFromPoint;
+    lambdaSquare = (int) pow(lambda, 2);
+    x3 = x3FromPoint;
+    y3 = y3FromPoint;
+  }
+
+  /**
    * Вывод постоянных параметров системы
    */
-  public static void logInitialParams() {
+  static void logInitialParams() {
     System.out.printf("G = %s, Pb = %s, n = %d\n", G.toString(), openKey.toString(), secretKey);
   }
 
   /**
    * Вывод формулы шифрования
    */
-  public static void logEncodingFormula() {
+  static void logEncodingFormula() {
     ps.println("\nШифрование:\nCm = {kG, Pm + kPb}");
   }
 
@@ -52,7 +66,7 @@ public class Log {
    * @param PmkPb  - вторая точка шифртекста
    * @param k      - случайное число
    */
-  public static void logEncodingTact(String symbol, Point point, Point kg, Point kPb, Point PmkPb, int k) {
+  static void logEncodingTact(String symbol, Point point, Point kg, Point kPb, Point PmkPb, int k) {
     final String tactResult = String.format("{%s, %s};\n", kg.toString(), PmkPb.toString());
 
     result.append(tactResult);
@@ -77,7 +91,7 @@ public class Log {
   /**
    * Вывод шифртекста
    */
-  public static void logEncodingResult() {
+  static void logEncodingResult() {
     ps.print(result);
     result = new StringBuilder("\nРезультат:\n");
   }
@@ -85,7 +99,7 @@ public class Log {
   /**
    * Вывод формулы расшифрования
    */
-  public static void logDecodingFormula() {
+  static void logDecodingFormula() {
     ps.println("\nРасшифрование:\nPm = (Pm + kPb) - nkG");
   }
 
@@ -98,7 +112,7 @@ public class Log {
    * @param sum      - точка, являющаяся результатом расшифрования
    * @param symbol   - символ, соответствующий результатирующей точке в алфавите
    */
-  public static void logDecodingTact(Point PmkPb, Point kg, Point minusNkG, Point sum, String symbol) {
+  static void logDecodingTact(Point PmkPb, Point kg, Point minusNkG, Point sum, String symbol) {
     final Point nkG = new Point(minusNkG.x, -minusNkG.y);
 
     result.append(symbol);
@@ -122,22 +136,8 @@ public class Log {
   /**
    * Вывод открытого текста
    */
-  public static void logDecodingResult() {
+  static void logDecodingResult() {
     ps.println(result);
     result = new StringBuilder("\nРезультат:\n");
-  }
-
-  /**
-   * Установка параметров временного буфера из класса Point, полученных в результате вычислений
-   *
-   * @param lambdaFromPoint - lambda, необходимая для расчета x3
-   * @param x3FromPoint     - x3, абсцисса результата вычислений
-   * @param y3FromPoint     - y3, ордината результата вычислений
-   */
-  public static void setBufParams(int lambdaFromPoint, int x3FromPoint, int y3FromPoint) {
-    lambda = lambdaFromPoint;
-    lambdaSquare = (int) pow(lambda, 2);
-    x3 = x3FromPoint;
-    y3 = y3FromPoint;
   }
 }
