@@ -1,5 +1,8 @@
 package Structure;
 
+/**
+ * Площадь, состоит из полей a и b (длины и ширины)
+ */
 public class Surface {
   public double a;
   public double b;

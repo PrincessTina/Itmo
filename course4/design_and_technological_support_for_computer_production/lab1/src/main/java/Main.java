@@ -1,44 +1,75 @@
 import static java.lang.Math.*;
 
 import Constants.MainResistorMaterialParams;
-import Structure.CTable;
-import Structure.RTable;
+import Structure.CRow;
+import Structure.RRow;
 import Structure.ResistorMaterialParams;
 import Structure.Surface;
 
 import java.lang.reflect.Field;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
-  private static int[] R = {200, 2000, 8500, 15000, 950};
+  private static int[] R = {10000, 1300, 1800, 5000, 250};
   private static int[] deltaR = {10, 20, 20, 10, 10};
-  private static double[] W = {0.04, 0.005, 0.008, 0.001, 0.01};
-  private static int[] C = {1500, 4000};
+  private static double[] W = {0.003, 0.01, 0.005, 0.01, 0.008};
+  private static int[] C = {800, 350};
   private static double H = 0.1;
 
   public static void main(String[] args) {
     int p;
     int resistorMaterialIndex;
+    Map<Integer, ArrayList<RRow>> surfaceChangesHistory = new HashMap<>();
 
-    RTable[] rRows = getDefaultRTable();
-    CTable[] cRows = getDefaultCTable();
+    RRow[] tableR = getBasicTableR();
+    CRow[] tableC = getBasicTableC();
 
-    p = countOptimalP(rRows);
-    resistorMaterialIndex = getResistorMaterialIndex(rRows, p);
+    p = getOptimalP(tableR);
+    resistorMaterialIndex = getResistorMaterialIndex(tableR, p);
 
-    setResistorFormCoefficient(rRows, p);
-    determineResistorSize(rRows, p, resistorMaterialIndex);
+    setResistorsFormCoefficient(tableR, p);
+    determineResistorsSize(tableR, p, resistorMaterialIndex, surfaceChangesHistory);
 
-    countCapacitorSurface(cRows);
+    setCapacitorSurface(tableC);
 
-    writeFullData(p, resistorMaterialIndex, rRows, cRows);
+    writeFullData(p, resistorMaterialIndex, tableR, tableC, surfaceChangesHistory);
   }
 
-  private static Surface findGridWalkingSurfaceParams(double S) {
+  /**
+   * Находит длину и ширину конденсатора, соответствующие его площади
+   * Поиск a осуществляется в диапазоне от 0.1 до S, b - любое
+   *
+   * @param S - площадь конденсатора
+   * @return объект структуры Surface, содержащий найденные длину и ширину конденсатора
+   */
+  private static Surface getAnySurfaceParams(double S) {
+    double a = 0.1;
+    double b = S / a;
+
+    for (double i = 0.1; i < S; i += 0.1) {
+      double iRounded = gridStepRound(i, RoundMode.round);
+      double jRounded = gridStepRound(S / iRounded, RoundMode.round);
+
+      if (abs(iRounded - jRounded) < abs(a - b)) {
+        a = iRounded;
+        b = jRounded;
+      }
+    }
+
+    return new Surface(a, b);
+  }
+
+  /**
+   * Находит длину и ширину конденсатора, соответствующие его площади, в виде десятичной дроби с точностью до 0.1
+   * Поиск осуществляется в диапазоне от 0.1 до S
+   * Оставляет нулевые значения длины и ширины, если нет подходящих
+   *
+   * @param S - площадь конденсатора
+   * @return объект структуры Surface, содержащий найденные длину и ширину конденсатора
+   */
+  private static Surface getGridWalkingSurfaceParams(double S) {
     double a = 0;
     double b = 0;
 
@@ -59,23 +90,12 @@ public class Main {
     return new Surface(a, b);
   }
 
-  private static Surface findAnySurfaceParams(double S) {
-    double a = 0.1;
-    double b = S / a;
-
-    for (double i = 0.1; i < S; i += 0.1) {
-      double iRounded = gridStepRound(i, RoundMode.round);
-      double jRounded = gridStepRound(S / a, RoundMode.round);
-
-      if (abs(iRounded - jRounded) < abs(a - b)) {
-        a = iRounded;
-        b = jRounded;
-      }
-    }
-
-    return new Surface(a, b);
-  }
-
+  /**
+   * Исследует, заканчивается ли число на 5
+   *
+   * @param value - исследуемое число
+   * @return true / false
+   */
   private static boolean checkIfEndsAtFive(double value) {
     while (round(value) != value) {
       value *= 10;
@@ -84,19 +104,22 @@ public class Main {
     return value % 5 == 0;
   }
 
-  private static void countCapacitorSurface(CTable[] cRows) {
-    for (CTable cRow : cRows) {
-      double S;
+  /**
+   * Рассчитывает и устанавливает длину и ширину для каждого конденсатора
+   *
+   * @param tableC - таблица конденсаторов
+   */
+  private static void setCapacitorSurface(CRow[] tableC) {
+    for (CRow cRow : tableC) {
       Surface surface;
 
-      cRow.S = (double) cRow.C / cRow.C0;
+      cRow.S = 100 * (double) cRow.C / cRow.C0;
       cRow.S = checkIfEndsAtFive(cRow.S) ? cRow.S : limitRound(cRow.S, RoundMode.round, 0.01);
-      S = cRow.S * 100;
 
-      surface = findGridWalkingSurfaceParams(S);
+      surface = getGridWalkingSurfaceParams(cRow.S);
 
       if (surface.a == 0 || surface.b == 0) {
-        surface = findAnySurfaceParams(S);
+        surface = getAnySurfaceParams(cRow.S);
       }
 
       cRow.a = surface.a;
@@ -104,54 +127,93 @@ public class Main {
     }
   }
 
-  private static void countResistorLength(RTable rRow, int p) {
+  /**
+   * Создает историю изменений для резистора, если еще не была создана
+   * Добавляет в историю новое изменение, если уже была создана
+   *
+   * @param surfaceChangesHistory - история изменений
+   * @param i                     - номер резистора в таблице резисторов
+   * @param rRow                  - строка таблицы резисторов; параметры резистора
+   */
+  private static void complementChangesHistory(Map<Integer, ArrayList<RRow>> surfaceChangesHistory, int i, RRow rRow) {
+    if (surfaceChangesHistory.containsKey(i)) {
+      surfaceChangesHistory.get(i).add(new RRow(rRow.b, rRow.lCalc, rRow.l, rRow.deltaRFact));
+    } else {
+      ArrayList<RRow> historyTable = new ArrayList<>();
+      historyTable.add(new RRow(rRow.b, rRow.lCalc, rRow.l, rRow.deltaRFact));
+      surfaceChangesHistory.put(i, historyTable);
+    }
+  }
+
+  /**
+   * Рассчитывает предполагаемую длину резистора и вносит данные в историю изменений площади резистора
+   *
+   * @param rRow                  - строка таблицы резисторов; параметры резистора
+   * @param p                     - оптимальное удельное сопротивление
+   * @param i                     - номер резистора в таблице резисторов
+   * @param surfaceChangesHistory - история изменений
+   */
+  private static void countResistorLength(RRow rRow, int p, int i, Map<Integer, ArrayList<RRow>> surfaceChangesHistory) {
     double R;
 
     rRow.lCalc = limitRound(rRow.k * rRow.b, RoundMode.round, 0.0001);
     rRow.l = gridStepRound(rRow.lCalc, RoundMode.round);
-
     R = rRow.l * p / rRow.b;
     rRow.deltaRFact = limitRound(abs(rRow.R - R) / rRow.R * 100, RoundMode.round, 0.1);
+
+    complementChangesHistory(surfaceChangesHistory, i, rRow);
   }
 
-  private static void complementChangesHistory(Map<String, RTable[]> changesHistory, int i, RTable rRow) {
-    //changesHistory.put
-  }
-
-  private static void determineResistorSize(RTable[] rRows, int p, int resistorMaterialIndex) {
+  /**
+   * Рассчитывает длину и пересчитывает ширину резисторов
+   *
+   * @param tableR                - таблица резисторов
+   * @param p                     - оптимальное удельное сопротивление
+   * @param resistorMaterialIndex - индекс материала резистивной пленки
+   * @param surfaceChangesHistory - история изменений
+   */
+  private static void determineResistorsSize(RRow[] tableR, int p, int resistorMaterialIndex, Map<Integer, ArrayList<RRow>> surfaceChangesHistory) {
     int W0 = MainResistorMaterialParams.params[resistorMaterialIndex].W0;
-    Map<String, RTable[]> changesHistory = new HashMap<>();
 
-    for (int i = 0; i < rRows.length; i++) {
-      RTable rRow = rRows[i];
+    for (int i = 0; i < tableR.length; i++) {
+      RRow rRow = tableR[i];
 
       if (rRow.k < 10) {
         rRow.bW = gridStepRound(10 * sqrt(p * rRow.W / (rRow.R * W0)), RoundMode.ceil);
         rRow.b = max(rRow.bExact, rRow.bW);
 
-        countResistorLength(rRow, p);
+        countResistorLength(rRow, p, i, surfaceChangesHistory);
 
         while (rRow.deltaRFact > rRow.deltaR) {
-
           rRow.b += H;
-          countResistorLength(rRow, p);
+          countResistorLength(rRow, p, i, surfaceChangesHistory);
         }
       } else {
-        System.err.println("Меандр");
+        System.err.println("Меандр"); // TODO: написать логику для меандров
       }
     }
   }
 
-  private static void setResistorFormCoefficient(RTable[] rRows, int p) {
-    for (RTable rRow : rRows) {
+  /**
+   * Устанавливает коэффициент формы k для каждого резистора
+   *
+   * @param tableR - таблица резисторов
+   * @param p      - оптимальное удельное сопротивление
+   */
+  private static void setResistorsFormCoefficient(RRow[] tableR, int p) {
+    for (RRow rRow : tableR) {
       rRow.k = (double) rRow.R / p;
     }
   }
 
   /**
-   * Выбирается материал резистивной пленки
+   * Выбор материала резистивной пленки
+   *
+   * @param tableR - таблица резисторов
+   * @param p      - оптимальное удельное сопротивление
+   * @return индекс материала
    */
-  private static int getResistorMaterialIndex(RTable[] rRows, int p) {
+  private static int getResistorMaterialIndex(RRow[] tableR, int p) {
     int index = 0;
     int W0 = 0;
 
@@ -163,7 +225,7 @@ public class Main {
         continue;
       }
 
-      for (RTable rRow : rRows) {
+      for (RRow rRow : tableR) {
         if (rRow.R < params.RBottom || rRow.R > params.RTop) {
           continue start;
         }
@@ -179,7 +241,30 @@ public class Main {
   }
 
   /**
+   * Рассчитывает и возвращает оптимальное удельное сопротивление
+   *
+   * @param tableR - таблица резисторов
+   * @return оптимальное удельное сопротивление
+   */
+  private static int getOptimalP(RRow[] tableR) {
+    int numerator = 0;
+    double denominator = 0;
+
+    for (RRow rRow : tableR) {
+      numerator += rRow.R;
+      denominator += pow(rRow.R, -1);
+    }
+
+    return highestLevelRound(sqrt(numerator / denominator));
+  }
+
+  /**
    * Округление до заданного разряда
+   *
+   * @param value - округляемое значение
+   * @param mode  - режим округления: ceil / floor / round
+   * @param limit - разряд
+   * @return округленное значение
    */
   private static double limitRound(double value, RoundMode mode, double limit) {
     switch (mode) {
@@ -195,15 +280,21 @@ public class Main {
 
   /**
    * Округление кратно шагу координатной сетки H, H = 0.1
+   *
+   * @param value - округляемое значение
+   * @param mode  - режим округления
+   * @return округленное значение
    */
   private static double gridStepRound(double value, RoundMode mode) {
     return limitRound(value, mode, H);
   }
 
   /**
-   * Округление до старшего разряда (первой цифры числа)
+   * Округляет до старшего разряда (первой цифры числа)
+   *
+   * @param value - округляемое число
+   * @return округленное число
    */
-  //TODO: Поменять алгоритм округления (до 3 разряда)
   private static int highestLevelRound(double value) {
     int tenDegree = 1;
 
@@ -219,70 +310,21 @@ public class Main {
   }
 
   /**
-   * Подсчет оптимального удельного сопротивления
+   * Выводит на консоль параметры материала конденсатора
    */
-  private static int countOptimalP(RTable[] rRows) {
-    int numerator = 0;
-    double denominator = 0;
-
-    for (RTable rRow : rRows) {
-      numerator += rRow.R;
-      denominator += pow(rRow.R, -1);
-    }
-
-    return highestLevelRound(sqrt(numerator / denominator));
-  }
-
-  private static void writeFullData(int p, int resistorMaterialIndex, RTable[] rRows, CTable[] cRows) {
-    System.out.println("p: " + p + "\n");
-    writeResistorMaterialParams(MainResistorMaterialParams.params[resistorMaterialIndex]);
-    System.out.println();
-    writeFullTables(rRows, cRows);
-  }
-
-  private static void writeResistorMaterialParams(ResistorMaterialParams params) {
-    System.out.println("materialName: " + params.materialName + " p: " + params.p + " R: " + params.R + " W0: " + params.W0);
-  }
-
-  private static void writeFullTables(RTable[] rRows, CTable[] cRows) {
-    StringBuilder rRowsFieldFormat = new StringBuilder();
-    StringBuilder cRowsFieldFormat = new StringBuilder();
-
-    for (Field field : RTable.class.getDeclaredFields()) {
-      rRowsFieldFormat.append("%-");
-      rRowsFieldFormat.append(field.getName().length() + 9); // fieldName[:] [space] [6-digital value] [space]
-      rRowsFieldFormat.append("s");
-    }
-
-    for (Field field : CTable.class.getDeclaredFields()) {
-      cRowsFieldFormat.append("%-");
-      cRowsFieldFormat.append(field.getName().length() + 9); // fieldName[:] [space] [6-digital value] [space]
-      cRowsFieldFormat.append("s");
-    }
-
-    for (RTable rRow : rRows) {
-      writeFullFields(rRow, rRowsFieldFormat.toString());
-    }
-
-    System.out.println();
-    writeCapacitorMaterialParams();
-    System.out.println();
-
-    for (CTable cRow : cRows) {
-      writeFullFields(cRow, cRowsFieldFormat.toString());
-    }
-  }
-
-  private static void test() {
-    Map<String, RTable[]> states = new HashMap<>();
-    RTable[] rRows = {new RTable(1, 2, 4.0)};
-    states.put("1", rRows);
-  }
-
   private static void writeCapacitorMaterialParams() {
     System.out.println("materialName: Моноокись германия material: Алюминий А99 C0: (5 - 15) * 10^3 B: 10 - 5 e: 11 - 12");
   }
 
+  /**
+   * Возвращает строковое представление числа
+   * Помогает устранить лишние нули в записи десятичной дроби, полученные в результате некорректных расчетов java
+   * по типу 7.0000000000000001 путем сокращения выписываемой дробной части числа до 4 символов
+   *
+   * @param value      - число
+   * @param objectType - тип: double / int
+   * @return строковое представление числа
+   */
   private static String getFormattedValue(Object value, ObjectType objectType) {
     switch (objectType) {
       case double_t:
@@ -296,19 +338,25 @@ public class Main {
   }
 
   /**
-   * Находит все доступные поля объекта
-   * Выписывает их имена и значения в формате name: value
+   * Выводит на консоль строку из таблицы
+   *
+   * @param object          - таблица
+   * @param format          - формат, в котором будет выписана строка
+   * @param ignorableFields - поля, которые необходимо игнорировать
    */
-  private static void writeFullFields(Object object, String format) {
+  private static void writeTableRow(Object object, String format, ArrayList<?> ignorableFields) {
     Field[] fields = object.getClass().getDeclaredFields();
-    String[] values = new String[fields.length];
+    ArrayList<String> values = new ArrayList<>();
 
-    for (int i = 0; i < fields.length; i++) {
-      Field field = fields[i];
+    for (Field field : fields) {
       String fieldType = field.getType().toString() + "_t";
       String fieldName = field.getName();
       Object value = new Object();
       ObjectType objectType = ObjectType.default_t;
+
+      if (ignorableFields.contains(fieldName)) {
+        continue;
+      }
 
       try {
         if (!field.isAccessible()) {
@@ -317,35 +365,132 @@ public class Main {
 
         value = field.get(object);
         objectType = ObjectType.valueOf(fieldType);
-      } catch (IllegalArgumentException | IllegalAccessException ignored) {}
+      } catch (IllegalArgumentException | IllegalAccessException ignored) {
+      }
 
-      values[i] = fieldName + ": " + getFormattedValue(value, objectType);
+      values.add(fieldName + ": " + getFormattedValue(value, objectType));
     }
 
-    System.out.printf(format, values);
+    System.out.printf(format, values.toArray());
     System.out.println();
   }
 
-  private static CTable[] getDefaultCTable() {
-    int length = C.length;
-    CTable[] cRows = new CTable[length];
+  /**
+   * Выводит на консоль представление таблицы резисторов, таблицы конденсаторов; параметры материала конденсатора
+   *
+   * @param tableR                - таблица резисторов
+   * @param tableC                - таблица конденсаторов
+   * @param surfaceChangesHistory - история изменений площади резисторов
+   */
+  private static void writeFullTables(RRow[] tableR, CRow[] tableC, Map<Integer, ArrayList<RRow>> surfaceChangesHistory) {
+    ArrayList<?> ignorableFields = new ArrayList<>(Arrays.asList("R", "W", "k", "bExact", "bW", "deltaR"));
+    StringBuilder tableRFieldFormat = new StringBuilder();
+    StringBuilder surfaceChangesHistoryFormat = new StringBuilder();
+    StringBuilder tableCFieldFormat = new StringBuilder();
 
-    for (int i = 0; i < length; i++) {
-      cRows[i] = new CTable(C[i]);
+    for (Field field : RRow.class.getDeclaredFields()) {
+      tableRFieldFormat.append("%-");
+      tableRFieldFormat.append(field.getName().length() + 9); // fieldName [:] [space] [6-digital value] [space]
+      tableRFieldFormat.append("s");
     }
 
-    return cRows;
+    for (Field field : RRow.class.getDeclaredFields()) {
+      if (ignorableFields.contains(field.getName())) {
+        continue;
+      }
+
+      surfaceChangesHistoryFormat.append("%-");
+      surfaceChangesHistoryFormat.append(field.getName().length() + 9); // fieldName [:] [space] [6-digital value] [space]
+      surfaceChangesHistoryFormat.append("s");
+    }
+
+    for (Field field : CRow.class.getDeclaredFields()) {
+      tableCFieldFormat.append("%-");
+      tableCFieldFormat.append(field.getName().length() + 9); // fieldName [:] [space] [6-digital value] [space]
+      tableCFieldFormat.append("s");
+    }
+
+    for (RRow rRow : tableR) {
+      writeTableRow(rRow, tableRFieldFormat.toString(), new ArrayList<>());
+    }
+    System.out.println();
+
+    for (int i : surfaceChangesHistory.keySet()) {
+      if (surfaceChangesHistory.get(i).size() < 2) {
+        continue;
+      }
+
+      System.out.printf("R%d:\n", i + 1);
+
+      for (RRow rRow : surfaceChangesHistory.get(i)) {
+        writeTableRow(rRow, surfaceChangesHistoryFormat.toString(), ignorableFields);
+      }
+    }
+
+    System.out.println();
+    writeCapacitorMaterialParams();
+    System.out.println();
+
+    for (CRow cRow : tableC) {
+      writeTableRow(cRow, tableCFieldFormat.toString(), new ArrayList<>());
+    }
   }
 
-  private static RTable[] getDefaultRTable() {
-    int length = R.length;
-    RTable[] rRows = new RTable[length];
+  /**
+   * Выводит на консоль параметры материала резистивной пленки
+   *
+   * @param params - параметры материала резистивной пленки
+   */
+  private static void writeResistorMaterialParams(ResistorMaterialParams params) {
+    System.out.println("materialName: " + params.materialName + " p: " + params.p + " R: " + params.R + " W0: " + params.W0);
+  }
+
+  /**
+   * Выводит все результаты на консоль
+   *
+   * @param p                     - оптимальное удельное сопротивление
+   * @param resistorMaterialIndex - индекс материала резистивной пленки
+   * @param tableR                - таблица резисторов
+   * @param tableC                - таблица конденсаторов
+   * @param surfaceChangesHistory - история изменений площади резисторов
+   */
+  private static void writeFullData(int p, int resistorMaterialIndex, RRow[] tableR, CRow[] tableC, Map<Integer, ArrayList<RRow>> surfaceChangesHistory) {
+    System.out.println("p: " + p + "\n");
+    writeResistorMaterialParams(MainResistorMaterialParams.params[resistorMaterialIndex]);
+    System.out.println();
+    writeFullTables(tableR, tableC, surfaceChangesHistory);
+  }
+
+  /**
+   * Создает, наполняет и возвращает таблицу C (конденсаторов) исходя из начальных данных C
+   *
+   * @return таблицу C
+   */
+  private static CRow[] getBasicTableC() {
+    int length = C.length;
+    CRow[] tableC = new CRow[length];
 
     for (int i = 0; i < length; i++) {
-      rRows[i] = new RTable(R[i], deltaR[i], W[i]);
+      tableC[i] = new CRow(C[i]);
     }
 
-    return rRows;
+    return tableC;
+  }
+
+  /**
+   * Создает, наполняет и возвращает таблицу R (резисторов) исходя из начальных данных R, deltaR, W
+   *
+   * @return таблицу R
+   */
+  private static RRow[] getBasicTableR() {
+    int length = R.length;
+    RRow[] tableR = new RRow[length];
+
+    for (int i = 0; i < length; i++) {
+      tableR[i] = new RRow(R[i], deltaR[i], W[i]);
+    }
+
+    return tableR;
   }
 }
 

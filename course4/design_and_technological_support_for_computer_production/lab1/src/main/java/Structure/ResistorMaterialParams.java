@@ -1,5 +1,8 @@
 package Structure;
 
+/**
+ * Параметры материала резистивной пленки
+ */
 public class ResistorMaterialParams {
   public String materialName;
   public String p;

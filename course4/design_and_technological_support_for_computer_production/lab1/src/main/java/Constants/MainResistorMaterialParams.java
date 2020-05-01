@@ -2,6 +2,9 @@ package Constants;
 
 import Structure.ResistorMaterialParams;
 
+/**
+ * Массив основных параметров материалов тонкопленочных резисторов
+ */
 public class MainResistorMaterialParams {
   public static ResistorMaterialParams[] params;
 
