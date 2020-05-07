@@ -1,0 +1,420 @@
+Added Component: Designator=P1(HDR2X5)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=U1(DIP254P762X508-14)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SN7404N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN7404N/Texas%20Instruments/view-part/380958/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U2(DIP254P762X508-14)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SN7404N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN7404N/Texas%20Instruments/view-part/380958/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U3(DIP254P762X508-14)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SN7404N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN7404N/Texas%20Instruments/view-part/380958/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U4(DIP254P762X508-14)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SN7404N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN7404N/Texas%20Instruments/view-part/380958/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U5(DIP254P762X508-14)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SN7404N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN7404N/Texas%20Instruments/view-part/380958/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U6(DIP254P762X508-14)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SN7404N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN7404N/Texas%20Instruments/view-part/380958/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U7(DIP254P762X508-14)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SN7404N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN7404N/Texas%20Instruments/view-part/380958/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U8(DIP254P762X508-14)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SN7404N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN7404N/Texas%20Instruments/view-part/380958/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U9(DIP254P762X508-14)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SN7404N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN7404N/Texas%20Instruments/view-part/380958/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U10(DIP254P762X508-14)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SN7404N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN7404N/Texas%20Instruments/view-part/380958/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U11(DIP254P762X508-14)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SN7404N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN7404N/Texas%20Instruments/view-part/380958/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U12(DIP254P762X508-14)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SN7404N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN7404N/Texas%20Instruments/view-part/380958/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U13(DIP254P762X508-14)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SN7404N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN7404N/Texas%20Instruments/view-part/380958/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U14(DIP254P762X508-14)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SN7404N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN7404N/Texas%20Instruments/view-part/380958/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U15(DIP254P762X508-14)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SN7404N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN7404N/Texas%20Instruments/view-part/380958/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U16(DIP254P762X508-14)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SN7404N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN7404N/Texas%20Instruments/view-part/380958/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U17(DIP254P762X508-14)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SN7404N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN7404N/Texas%20Instruments/view-part/380958/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U18(DIP254P762X508-14)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SN7404N"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "DIP-14 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SN7404N/Texas%20Instruments/view-part/380958/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=U1-7
+Added Pin To Net: NetName=GND Pin=U2-7
+Added Pin To Net: NetName=GND Pin=U3-7
+Added Pin To Net: NetName=GND Pin=U4-7
+Added Pin To Net: NetName=GND Pin=U5-7
+Added Pin To Net: NetName=GND Pin=U6-7
+Added Pin To Net: NetName=GND Pin=U7-7
+Added Pin To Net: NetName=GND Pin=U8-7
+Added Pin To Net: NetName=GND Pin=U9-7
+Added Pin To Net: NetName=GND Pin=U10-7
+Added Pin To Net: NetName=GND Pin=U11-7
+Added Pin To Net: NetName=GND Pin=U12-7
+Added Pin To Net: NetName=GND Pin=U13-7
+Added Pin To Net: NetName=GND Pin=U14-7
+Added Pin To Net: NetName=GND Pin=U15-7
+Added Pin To Net: NetName=GND Pin=U16-7
+Added Pin To Net: NetName=GND Pin=U17-7
+Added Pin To Net: NetName=GND Pin=U18-7
+Added Net: Name=GND
+Added Pin To Net: NetName=Net1 Pin=U3-6
+Added Pin To Net: NetName=Net1 Pin=U15-3
+Added Pin To Net: NetName=Net1 Pin=U15-12
+Added Pin To Net: NetName=Net1 Pin=U18-12
+Added Net: Name=Net1
+Added Pin To Net: NetName=Net2 Pin=U4-5
+Added Pin To Net: NetName=Net2 Pin=U5-11
+Added Pin To Net: NetName=Net2 Pin=U14-4
+Added Pin To Net: NetName=Net2 Pin=U17-13
+Added Pin To Net: NetName=Net2 Pin=U18-8
+Added Net: Name=Net2
+Added Pin To Net: NetName=Net3 Pin=P1-4
+Added Pin To Net: NetName=Net3 Pin=U3-8
+Added Pin To Net: NetName=Net3 Pin=U11-13
+Added Pin To Net: NetName=Net3 Pin=U16-12
+Added Pin To Net: NetName=Net3 Pin=U17-6
+Added Pin To Net: NetName=Net3 Pin=U18-6
+Added Net: Name=Net3
+Added Pin To Net: NetName=Net4 Pin=U1-10
+Added Pin To Net: NetName=Net4 Pin=U5-6
+Added Pin To Net: NetName=Net4 Pin=U18-2
+Added Pin To Net: NetName=Net4 Pin=U18-11
+Added Net: Name=Net4
+Added Pin To Net: NetName=Net5 Pin=U3-11
+Added Pin To Net: NetName=Net5 Pin=U10-12
+Added Pin To Net: NetName=Net5 Pin=U16-9
+Added Pin To Net: NetName=Net5 Pin=U17-11
+Added Pin To Net: NetName=Net5 Pin=U18-1
+Added Net: Name=Net5
+Added Pin To Net: NetName=Net6 Pin=U2-2
+Added Pin To Net: NetName=Net6 Pin=U6-11
+Added Pin To Net: NetName=Net6 Pin=U9-4
+Added Pin To Net: NetName=Net6 Pin=U18-13
+Added Net: Name=Net6
+Added Pin To Net: NetName=Net7 Pin=U4-6
+Added Pin To Net: NetName=Net7 Pin=U11-4
+Added Pin To Net: NetName=Net7 Pin=U18-4
+Added Pin To Net: NetName=Net7 Pin=U18-5
+Added Pin To Net: NetName=Net7 Pin=U18-10
+Added Net: Name=Net7
+Added Pin To Net: NetName=Net8 Pin=U3-3
+Added Pin To Net: NetName=Net8 Pin=U7-2
+Added Pin To Net: NetName=Net8 Pin=U17-3
+Added Pin To Net: NetName=Net8 Pin=U17-5
+Added Pin To Net: NetName=Net8 Pin=U18-3
+Added Net: Name=Net8
+Added Pin To Net: NetName=Net9 Pin=P1-6
+Added Pin To Net: NetName=Net9 Pin=U7-5
+Added Pin To Net: NetName=Net9 Pin=U9-9
+Added Pin To Net: NetName=Net9 Pin=U11-6
+Added Pin To Net: NetName=Net9 Pin=U13-11
+Added Pin To Net: NetName=Net9 Pin=U18-9
+Added Net: Name=Net9
+Added Pin To Net: NetName=Net10 Pin=U11-10
+Added Pin To Net: NetName=Net10 Pin=U14-9
+Added Pin To Net: NetName=Net10 Pin=U14-10
+Added Pin To Net: NetName=Net10 Pin=U16-10
+Added Pin To Net: NetName=Net10 Pin=U16-13
+Added Net: Name=Net10
+Added Pin To Net: NetName=Net11 Pin=U2-6
+Added Pin To Net: NetName=Net11 Pin=U5-8
+Added Pin To Net: NetName=Net11 Pin=U8-9
+Added Pin To Net: NetName=Net11 Pin=U11-3
+Added Pin To Net: NetName=Net11 Pin=U16-3
+Added Net: Name=Net11
+Added Pin To Net: NetName=Net12 Pin=U6-5
+Added Pin To Net: NetName=Net12 Pin=U8-6
+Added Pin To Net: NetName=Net12 Pin=U8-11
+Added Pin To Net: NetName=Net12 Pin=U15-13
+Added Net: Name=Net12
+Added Pin To Net: NetName=Net13 Pin=U3-2
+Added Pin To Net: NetName=Net13 Pin=U9-10
+Added Pin To Net: NetName=Net13 Pin=U11-8
+Added Pin To Net: NetName=Net13 Pin=U13-10
+Added Net: Name=Net13
+Added Pin To Net: NetName=Net14 Pin=U2-3
+Added Pin To Net: NetName=Net14 Pin=U12-9
+Added Pin To Net: NetName=Net14 Pin=U17-8
+Added Net: Name=Net14
+Added Pin To Net: NetName=Net15 Pin=U2-5
+Added Pin To Net: NetName=Net15 Pin=U6-2
+Added Pin To Net: NetName=Net15 Pin=U10-10
+Added Pin To Net: NetName=Net15 Pin=U13-6
+Added Pin To Net: NetName=Net15 Pin=U17-4
+Added Net: Name=Net15
+Added Pin To Net: NetName=Net16 Pin=U1-1
+Added Pin To Net: NetName=Net16 Pin=U10-11
+Added Pin To Net: NetName=Net16 Pin=U13-5
+Added Pin To Net: NetName=Net16 Pin=U13-8
+Added Net: Name=Net16
+Added Pin To Net: NetName=Net17 Pin=U15-1
+Added Pin To Net: NetName=Net17 Pin=U15-10
+Added Pin To Net: NetName=Net17 Pin=U17-1
+Added Pin To Net: NetName=Net17 Pin=U17-9
+Added Net: Name=Net17
+Added Pin To Net: NetName=Net18 Pin=U1-3
+Added Pin To Net: NetName=Net18 Pin=U11-2
+Added Pin To Net: NetName=Net18 Pin=U16-5
+Added Pin To Net: NetName=Net18 Pin=U17-2
+Added Pin To Net: NetName=Net18 Pin=U17-10
+Added Net: Name=Net18
+Added Pin To Net: NetName=Net19 Pin=U5-9
+Added Pin To Net: NetName=Net19 Pin=U8-1
+Added Pin To Net: NetName=Net19 Pin=U10-3
+Added Pin To Net: NetName=Net19 Pin=U11-9
+Added Pin To Net: NetName=Net19 Pin=U16-8
+Added Net: Name=Net19
+Added Pin To Net: NetName=Net20 Pin=U8-8
+Added Pin To Net: NetName=Net20 Pin=U10-4
+Added Pin To Net: NetName=Net20 Pin=U10-5
+Added Pin To Net: NetName=Net20 Pin=U11-1
+Added Pin To Net: NetName=Net20 Pin=U17-12
+Added Net: Name=Net20
+Added Pin To Net: NetName=Net21 Pin=P1-9
+Added Pin To Net: NetName=Net21 Pin=U1-6
+Added Pin To Net: NetName=Net21 Pin=U12-6
+Added Pin To Net: NetName=Net21 Pin=U16-1
+Added Net: Name=Net21
+Added Pin To Net: NetName=Net22 Pin=U3-1
+Added Pin To Net: NetName=Net22 Pin=U5-13
+Added Pin To Net: NetName=Net22 Pin=U7-4
+Added Pin To Net: NetName=Net22 Pin=U8-12
+Added Pin To Net: NetName=Net22 Pin=U15-2
+Added Net: Name=Net22
+Added Pin To Net: NetName=Net23 Pin=U7-1
+Added Pin To Net: NetName=Net23 Pin=U8-2
+Added Pin To Net: NetName=Net23 Pin=U9-1
+Added Pin To Net: NetName=Net23 Pin=U14-6
+Added Net: Name=Net23
+Added Pin To Net: NetName=Net24 Pin=U1-12
+Added Pin To Net: NetName=Net24 Pin=U1-13
+Added Pin To Net: NetName=Net24 Pin=U6-12
+Added Pin To Net: NetName=Net24 Pin=U9-8
+Added Pin To Net: NetName=Net24 Pin=U15-4
+Added Net: Name=Net24
+Added Pin To Net: NetName=Net25 Pin=U1-5
+Added Pin To Net: NetName=Net25 Pin=U7-12
+Added Pin To Net: NetName=Net25 Pin=U14-13
+Added Net: Name=Net25
+Added Pin To Net: NetName=Net26 Pin=U2-4
+Added Pin To Net: NetName=Net26 Pin=U2-10
+Added Pin To Net: NetName=Net26 Pin=U5-2
+Added Pin To Net: NetName=Net26 Pin=U10-13
+Added Net: Name=Net26
+Added Pin To Net: NetName=Net27 Pin=U6-6
+Added Pin To Net: NetName=Net27 Pin=U7-3
+Added Pin To Net: NetName=Net27 Pin=U11-11
+Added Net: Name=Net27
+Added Pin To Net: NetName=Net28 Pin=U4-4
+Added Pin To Net: NetName=Net28 Pin=U6-8
+Added Pin To Net: NetName=Net28 Pin=U8-4
+Added Pin To Net: NetName=Net28 Pin=U14-8
+Added Pin To Net: NetName=Net28 Pin=U16-4
+Added Net: Name=Net28
+Added Pin To Net: NetName=Net29 Pin=P1-1
+Added Pin To Net: NetName=Net29 Pin=U4-3
+Added Pin To Net: NetName=Net29 Pin=U4-13
+Added Pin To Net: NetName=Net29 Pin=U11-12
+Added Pin To Net: NetName=Net29 Pin=U13-13
+Added Pin To Net: NetName=Net29 Pin=U16-2
+Added Net: Name=Net29
+Added Pin To Net: NetName=Net30 Pin=P1-7
+Added Pin To Net: NetName=Net30 Pin=U6-4
+Added Pin To Net: NetName=Net30 Pin=U9-11
+Added Pin To Net: NetName=Net30 Pin=U13-4
+Added Pin To Net: NetName=Net30 Pin=U14-12
+Added Net: Name=Net30
+Added Pin To Net: NetName=Net31 Pin=U3-4
+Added Pin To Net: NetName=Net31 Pin=U10-1
+Added Pin To Net: NetName=Net31 Pin=U11-5
+Added Pin To Net: NetName=Net31 Pin=U12-5
+Added Pin To Net: NetName=Net31 Pin=U15-11
+Added Net: Name=Net31
+Added Pin To Net: NetName=Net32 Pin=U5-1
+Added Pin To Net: NetName=Net32 Pin=U10-6
+Added Pin To Net: NetName=Net32 Pin=U10-9
+Added Pin To Net: NetName=Net32 Pin=U13-1
+Added Pin To Net: NetName=Net32 Pin=U13-12
+Added Net: Name=Net32
+Added Pin To Net: NetName=Net33 Pin=U1-2
+Added Pin To Net: NetName=Net33 Pin=U6-13
+Added Pin To Net: NetName=Net33 Pin=U9-6
+Added Net: Name=Net33
+Added Pin To Net: NetName=Net34 Pin=U3-12
+Added Pin To Net: NetName=Net34 Pin=U8-13
+Added Pin To Net: NetName=Net34 Pin=U10-8
+Added Net: Name=Net34
+Added Pin To Net: NetName=Net35 Pin=U2-1
+Added Pin To Net: NetName=Net35 Pin=U2-11
+Added Pin To Net: NetName=Net35 Pin=U14-2
+Added Net: Name=Net35
+Added Pin To Net: NetName=Net36 Pin=P1-3
+Added Pin To Net: NetName=Net36 Pin=U5-3
+Added Pin To Net: NetName=Net36 Pin=U10-2
+Added Pin To Net: NetName=Net36 Pin=U14-5
+Added Pin To Net: NetName=Net36 Pin=U15-5
+Added Pin To Net: NetName=Net36 Pin=U16-6
+Added Net: Name=Net36
+Added Pin To Net: NetName=Net37 Pin=P1-8
+Added Pin To Net: NetName=Net37 Pin=U1-4
+Added Pin To Net: NetName=Net37 Pin=U2-12
+Added Pin To Net: NetName=Net37 Pin=U5-4
+Added Pin To Net: NetName=Net37 Pin=U5-5
+Added Pin To Net: NetName=Net37 Pin=U16-11
+Added Net: Name=Net37
+Added Pin To Net: NetName=Net38 Pin=U3-9
+Added Pin To Net: NetName=Net38 Pin=U3-13
+Added Pin To Net: NetName=Net38 Pin=U7-8
+Added Pin To Net: NetName=Net38 Pin=U7-13
+Added Pin To Net: NetName=Net38 Pin=U14-1
+Added Net: Name=Net38
+Added Pin To Net: NetName=Net39 Pin=P1-5
+Added Pin To Net: NetName=Net39 Pin=U4-2
+Added Pin To Net: NetName=Net39 Pin=U12-8
+Added Pin To Net: NetName=Net39 Pin=U12-11
+Added Pin To Net: NetName=Net39 Pin=U12-12
+Added Pin To Net: NetName=Net39 Pin=U13-3
+Added Net: Name=Net39
+Added Pin To Net: NetName=Net40 Pin=P1-10
+Added Pin To Net: NetName=Net40 Pin=U4-8
+Added Pin To Net: NetName=Net40 Pin=U9-5
+Added Pin To Net: NetName=Net40 Pin=U12-13
+Added Pin To Net: NetName=Net40 Pin=U13-9
+Added Pin To Net: NetName=Net40 Pin=U15-6
+Added Net: Name=Net40
+Added Pin To Net: NetName=Net41 Pin=P1-2
+Added Pin To Net: NetName=Net41 Pin=U3-10
+Added Pin To Net: NetName=Net41 Pin=U5-10
+Added Pin To Net: NetName=Net41 Pin=U7-11
+Added Pin To Net: NetName=Net41 Pin=U9-2
+Added Pin To Net: NetName=Net41 Pin=U15-9
+Added Net: Name=Net41
+Added Pin To Net: NetName=VCC Pin=U1-14
+Added Pin To Net: NetName=VCC Pin=U2-14
+Added Pin To Net: NetName=VCC Pin=U3-14
+Added Pin To Net: NetName=VCC Pin=U4-14
+Added Pin To Net: NetName=VCC Pin=U5-14
+Added Pin To Net: NetName=VCC Pin=U6-14
+Added Pin To Net: NetName=VCC Pin=U7-14
+Added Pin To Net: NetName=VCC Pin=U8-14
+Added Pin To Net: NetName=VCC Pin=U9-14
+Added Pin To Net: NetName=VCC Pin=U10-14
+Added Pin To Net: NetName=VCC Pin=U11-14
+Added Pin To Net: NetName=VCC Pin=U12-14
+Added Pin To Net: NetName=VCC Pin=U13-14
+Added Pin To Net: NetName=VCC Pin=U14-14
+Added Pin To Net: NetName=VCC Pin=U15-14
+Added Pin To Net: NetName=VCC Pin=U16-14
+Added Pin To Net: NetName=VCC Pin=U17-14
+Added Pin To Net: NetName=VCC Pin=U18-14
+Added Net: Name=VCC
+Added Class: Name=Sheet2
+Added Room: Name=Sheet2

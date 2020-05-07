@@ -4,14 +4,14 @@ package Structure;
  * Параметры материала резистивной пленки
  */
 public class ResistorMaterialParams {
-  public String materialName;
-  public String p;
-  public String R;
-  public int pBottom;
-  public int pTop;
-  public int RBottom;
-  public int RTop;
-  public int W0;
+  public final String materialName;
+  public final String p;
+  public final String R;
+  public final int pBottom;
+  public final int pTop;
+  public final int RBottom;
+  public final int RTop;
+  public final int W0;
 
   public ResistorMaterialParams(String materialName, int pBottom, int pTop, int RBottom, int RTop, int W0) {
     this.materialName = materialName;

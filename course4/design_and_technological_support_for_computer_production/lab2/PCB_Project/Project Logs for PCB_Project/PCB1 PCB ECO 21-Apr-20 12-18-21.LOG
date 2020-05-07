@@ -1,0 +1,7 @@
+Change Component DesignItemId : Designator=P1 Old DesignItemId=Header 5X2 New DesignItemId=Header 6X2
+Change Component Footprint: Designator=P1 Old Footprint=HDR2X5 New Footprint=HDR2X6
+Change Component Comment : Designator=P1 Old Comment=Header 5X2 New Comment=Header 6X2
+Change Component Description : Designator=P1 Old Description=Header, 5-Pin, Dual row New Description=Header, 6-Pin, Dual row
+Added Pin To Net: NetName=GND Pin=P1-11
+Added Pin To Net: NetName=VCC Pin=P1-12
+Added Member To Class: ClassName=Sheet1 Member=Component S5 SW DIP-7

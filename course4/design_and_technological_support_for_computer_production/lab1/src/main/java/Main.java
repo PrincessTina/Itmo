@@ -12,11 +12,11 @@ import java.text.DecimalFormatSymbols;
 import java.util.*;
 
 public class Main {
-  private static int[] R = {10000, 1300, 1800, 5000, 250};
-  private static int[] deltaR = {10, 20, 20, 10, 10};
-  private static double[] W = {0.003, 0.01, 0.005, 0.01, 0.008};
-  private static int[] C = {800, 350};
-  private static double H = 0.1;
+  private static final int[] R = {10000, 1300, 1800, 5000, 250};
+  private static final int[] deltaR = {10, 20, 20, 10, 10};
+  private static final double[] W = {0.003, 0.01, 0.005, 0.01, 0.008};
+  private static final int[] C = {800, 350};
+  private static final double H = 0.1;
 
   public static void main(String[] args) {
     int p;
@@ -189,7 +189,7 @@ public class Main {
           countResistorLength(rRow, p, i, surfaceChangesHistory);
         }
       } else {
-        System.err.println("Меандр"); // TODO: написать логику для меандров
+        System.err.println("Меандр"); // TODO: написать логику для меандров, формула: 2,55n + m = k, где m = l/b
       }
     }
   }

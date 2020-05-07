@@ -1,0 +1,59 @@
+Added Component: Designator=P1(HDR2X5)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Net: Name=GND
+Added Net: Name=Net1
+Added Net: Name=Net2
+Added Pin To Net: NetName=Net3 Pin=P1-4
+Added Net: Name=Net3
+Added Net: Name=Net4
+Added Net: Name=Net5
+Added Net: Name=Net6
+Added Net: Name=Net7
+Added Net: Name=Net8
+Added Pin To Net: NetName=Net9 Pin=P1-6
+Added Net: Name=Net9
+Added Net: Name=Net10
+Added Net: Name=Net11
+Added Net: Name=Net12
+Added Net: Name=Net13
+Added Net: Name=Net14
+Added Net: Name=Net15
+Added Net: Name=Net16
+Added Net: Name=Net17
+Added Net: Name=Net18
+Added Net: Name=Net19
+Added Net: Name=Net20
+Added Pin To Net: NetName=Net21 Pin=P1-9
+Added Net: Name=Net21
+Added Net: Name=Net22
+Added Net: Name=Net23
+Added Net: Name=Net24
+Added Net: Name=Net25
+Added Net: Name=Net26
+Added Net: Name=Net27
+Added Net: Name=Net28
+Added Pin To Net: NetName=Net29 Pin=P1-1
+Added Net: Name=Net29
+Added Pin To Net: NetName=Net30 Pin=P1-7
+Added Net: Name=Net30
+Added Net: Name=Net31
+Added Net: Name=Net32
+Added Net: Name=Net33
+Added Net: Name=Net34
+Added Net: Name=Net35
+Added Pin To Net: NetName=Net36 Pin=P1-3
+Added Net: Name=Net36
+Added Pin To Net: NetName=Net37 Pin=P1-8
+Added Net: Name=Net37
+Added Net: Name=Net38
+Added Pin To Net: NetName=Net39 Pin=P1-5
+Added Net: Name=Net39
+Added Pin To Net: NetName=Net40 Pin=P1-10
+Added Net: Name=Net40
+Added Pin To Net: NetName=Net41 Pin=P1-2
+Added Net: Name=Net41
+Added Net: Name=VCC
+Added Class: Name=Sheet2
+Added Room: Name=Sheet2
