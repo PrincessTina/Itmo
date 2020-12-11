@@ -169,6 +169,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make CMakeFiles/lab1.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+sort.obj: sort.cpp.obj
+
+.PHONY : sort.obj
+
+# target to build an object file
+sort.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make CMakeFiles/lab1.dir/sort.cpp.obj
+.PHONY : sort.cpp.obj
+
+sort.i: sort.cpp.i
+
+.PHONY : sort.i
+
+# target to preprocess a source file
+sort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make CMakeFiles/lab1.dir/sort.cpp.i
+.PHONY : sort.cpp.i
+
+sort.s: sort.cpp.s
+
+.PHONY : sort.s
+
+# target to generate assembly for a file
+sort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make CMakeFiles/lab1.dir/sort.cpp.s
+.PHONY : sort.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -181,6 +208,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... sort.obj
+	@echo ... sort.i
+	@echo ... sort.s
 .PHONY : help
 
 
