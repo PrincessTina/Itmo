@@ -27,11 +27,20 @@ void swap(int *first, int *second);
 int getIntervalLength(int *firstIntervalElement, int *lastIntervalElement);
 
 /**
- * Проверяет размер интервала и вызывает соответствующую для него функцию сортировки
- * @param firstIntervalElement - указатель на первый элемент интервала
- * @param lastIntervalElement - указатель на последний элемент интервала
+ * Сортировка вставками
+ * @param firstIntervalElement - указатель на первый элемент сортируемого интервала
+ * @param lastIntervalElement - указатель на последний элемент сортируемого интервала
  */
-void intervalSort(int *firstIntervalElement, int *lastIntervalElement);
+void insertionSort(int *firstIntervalElement, const int *lastIntervalElement);
+
+ /**
+  * Проверяет размер интервала и вызывает соответствующую для него функцию сортировки
+  * @param firstIntervalElement - указатель на первый элемент интервала
+  * @param lastIntervalElement - указатель на последний элемент интервала
+  * @param canDoRecursion - можно ли делать рекурсивный вызов функции sort
+  * @return возвращает true в случае, если сортировка интервала завершена, false, если интервал еще нуждается в сортировке
+  */
+bool intervalSort(int *firstIntervalElement, int *lastIntervalElement, bool canDoRecursion);
 
 /**
  * Элементы, больше опорного, отправляет в правый интервал, меньше опорного - в левый
