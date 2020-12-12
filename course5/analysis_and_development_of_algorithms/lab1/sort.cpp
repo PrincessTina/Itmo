@@ -1,7 +1,15 @@
 #include "sort.h"
 
-bool compare(const int first, const int second) {
-    return first < second;
+int compare(const int first, const int second) {
+    if (first > second) {
+        return 1;
+    }
+
+    if (first < second) {
+        return -1;
+    }
+
+    return 0; // if first == second
 }
 
 void swap(int *first, int *second) {
@@ -10,60 +18,81 @@ void swap(int *first, int *second) {
     *second = temporary;
 }
 
+int getIntervalLength(int *firstIntervalElement, int *lastIntervalElement) {
+    return lastIntervalElement - firstIntervalElement + 1;
+}
+
+void intervalSort(int *firstIntervalElement, int *lastIntervalElement) {
+    int intervalLength = getIntervalLength(firstIntervalElement, lastIntervalElement);
+
+    if (intervalLength == 1) {
+        return;
+    }
+
+    if (intervalLength == 2) {
+        if (*firstIntervalElement > *lastIntervalElement) {
+            swap(firstIntervalElement, lastIntervalElement);
+        }
+    }
+
+    if (intervalLength > 2) {
+        sort(firstIntervalElement, lastIntervalElement);
+    }
+}
+
+int * redistributeElements(int *leftIntervalPointer, int *rightIntervalPointer, int supportElement) {
+    while (true) {
+        while (compare(*leftIntervalPointer, supportElement) == -1) {
+            leftIntervalPointer++;
+        }
+
+        while (compare(*rightIntervalPointer, supportElement) == 1) {
+            rightIntervalPointer--;
+        }
+
+        if (leftIntervalPointer == rightIntervalPointer) {
+            return leftIntervalPointer;
+        } else if (compare(*leftIntervalPointer, *rightIntervalPointer) == 0) {
+            rightIntervalPointer--;
+        } else {
+            swap(leftIntervalPointer, rightIntervalPointer);
+        }
+    }
+}
+
 int getSupportElement(const int *firstIntervalElement, const int *lastIntervalElement) {
     int middleIntervalElement = *(firstIntervalElement + (lastIntervalElement - firstIntervalElement) / 2);
 
-    if (compare(*firstIntervalElement, middleIntervalElement) + compare(*firstIntervalElement, *lastIntervalElement)
-        == true) {
+    if (abs(compare(*firstIntervalElement, middleIntervalElement) +
+            compare(*firstIntervalElement, *lastIntervalElement)) != 2) { // любые значения, кроме -1, -1 (<. <) и 1, 1 (>, >)
         return *firstIntervalElement;
     }
 
-    if (compare(middleIntervalElement, *firstIntervalElement) + compare(middleIntervalElement, *lastIntervalElement)
-        == true) {
+    if (abs(compare(middleIntervalElement, *firstIntervalElement) +
+            compare(middleIntervalElement, *lastIntervalElement)) != 2) { // любые значения, кроме -1, -1 (<. <) и 1, 1 (>, >)
         return middleIntervalElement;
     }
 
-    if (compare(*lastIntervalElement, *firstIntervalElement) + compare(*lastIntervalElement, middleIntervalElement)
-        == true) {
+    if ((compare(*lastIntervalElement, *firstIntervalElement) +
+         compare(*lastIntervalElement, middleIntervalElement)) != 2) { // любые значения, кроме -1, -1 (<. <) и 1, 1 (>, >)
         return *lastIntervalElement;
     }
 
     return -1;
 }
 
-void intervalSort(int *firstIntervalElement, int *lastIntervalElement) {
-    int intervalLength = lastIntervalElement - firstIntervalElement;
-
-    if (intervalLength == 1) {
-        if (*firstIntervalElement > *lastIntervalElement) {
-            swap(firstIntervalElement, lastIntervalElement);
-        }
-    } else if (intervalLength > 1) {
-        sort(firstIntervalElement, lastIntervalElement);
-    }
-}
-
 void sort(int *firstIntervalElement, int *lastIntervalElement) {
-    int supportElement = getSupportElement(firstIntervalElement, lastIntervalElement);
-    int *leftIntervalPointer = firstIntervalElement;
-    int *rightIntervalPointer = lastIntervalElement;
+    while (firstIntervalElement != lastIntervalElement) {
+        int supportElement = getSupportElement(firstIntervalElement, lastIntervalElement);
+        int *separationElement = redistributeElements(firstIntervalElement, lastIntervalElement, supportElement);
 
-    while (true) {
-        while (*leftIntervalPointer < supportElement) {
-            leftIntervalPointer++;
-        }
-
-        while (*rightIntervalPointer > supportElement) {
-            rightIntervalPointer--;
-        }
-
-        if (leftIntervalPointer == rightIntervalPointer) {
-            break;
+        if (getIntervalLength(firstIntervalElement, separationElement - 1) <
+            getIntervalLength(separationElement + 1, lastIntervalElement)) {
+            intervalSort(firstIntervalElement, separationElement - 1);
+            firstIntervalElement = separationElement + 1;
         } else {
-            swap(leftIntervalPointer, rightIntervalPointer);
+            intervalSort(separationElement + 1, lastIntervalElement);
+            lastIntervalElement = separationElement - 1;
         }
     }
-
-    intervalSort(firstIntervalElement, leftIntervalPointer - 1);
-    intervalSort(rightIntervalPointer + 1, lastIntervalElement);
 }

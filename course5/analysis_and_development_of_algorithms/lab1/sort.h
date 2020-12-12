@@ -1,13 +1,15 @@
 #ifndef LAB1_SORT_H
 #define LAB1_SORT_H
 
+#include <cmath>
+
 /**
  * Сравнивает элементы
  * @param first - первый элемент
  * @param second - второй элемент
- * @return true, если first < second, иначе false
+ * @return 1, если first > second; -1, если first < second; 0, если first == second
  */
-bool compare(int first, int second);
+int compare(int first, int second);
 
 /**
  * Переставляет элементы местами
@@ -17,19 +19,41 @@ bool compare(int first, int second);
 void swap(int *first, int *second);
 
 /**
- * Возвращает опорный элемент массива, который является медианой из первого, последнего и среднего элементов массива
- * @param firstIntervalElement - указатель на первый элемент массива
- * @param lastIntervalElement - указатель на последний элемент массива
+ * Возвращает длину интервала
+ * @param firstIntervalElement - указатель на первый элемент интервала
+ * @param lastIntervalElement - указатель на последний элемент интервала
+ * @return длину интервала
+ */
+int getIntervalLength(int *firstIntervalElement, int *lastIntervalElement);
+
+/**
+ * Проверяет размер интервала и вызывает соответствующую для него функцию сортировки
+ * @param firstIntervalElement - указатель на первый элемент интервала
+ * @param lastIntervalElement - указатель на последний элемент интервала
+ */
+void intervalSort(int *firstIntervalElement, int *lastIntervalElement);
+
+/**
+ * Элементы, больше опорного, отправляет в правый интервал, меньше опорного - в левый
+ * @param leftIntervalPointer - указатель на самый левый (первый) элемент интервала
+ * @param rightIntervalPointer - указатель на самый правый (последний) элемент интервала
+ * @param supportElement - опорный элемент
+ * @return возвращает элемент, относительно которого произошло перераспределение
+ */
+int * redistributeElements(int *leftIntervalPointer, int *rightIntervalPointer, int supportElement);
+
+/**
+ * Возвращает опорный элемент интервала, который является медианой из первого, последнего и среднего элементов интервала
+ * @param firstIntervalElement - указатель на первый элемент интервала
+ * @param lastIntervalElement - указатель на последний элемент интервала
  * @return опорный элемент
  */
 int getSupportElement(const int *firstIntervalElement, const int *lastIntervalElement);
 
-void intervalSort(int *firstIntervalElement, int *lastIntervalElement);
-
 /**
  * Быстрая сортировка
  * @param firstIntervalElement - указатель на первый элемент сортируемого интервала
- * @param lastIntervalElement - указател на второй элемент сортируемого интервала
+ * @param lastIntervalElement - указатель на второй элемент сортируемого интервала
  */
 void sort(int *firstIntervalElement, int *lastIntervalElement);
 
