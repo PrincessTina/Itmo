@@ -4,6 +4,11 @@
 #include <cmath>
 
 /**
+ * Экспериментально полученная длина интервала, до которой будет выполняться сортировка вставками
+ */
+const int transitionIntervalLength = 12;
+
+/**
  * Сравнивает элементы
  * @param first - первый элемент
  * @param second - второй элемент
@@ -28,6 +33,7 @@ int getIntervalLength(int *firstIntervalElement, int *lastIntervalElement);
 
 /**
  * Сортировка вставками
+ * https://www.youtube.com/watch?v=ROalU379l3U&feature=emb_title
  * @param firstIntervalElement - указатель на первый элемент сортируемого интервала
  * @param lastIntervalElement - указатель на последний элемент сортируемого интервала
  */
@@ -57,10 +63,11 @@ int * redistributeElements(int *leftIntervalPointer, int *rightIntervalPointer, 
  * @param lastIntervalElement - указатель на последний элемент интервала
  * @return опорный элемент
  */
-int getSupportElement(const int *firstIntervalElement, const int *lastIntervalElement);
+int getPivotElement(const int *firstIntervalElement, const int *lastIntervalElement);
 
 /**
  * Быстрая сортировка
+ * https://www.youtube.com/watch?v=oS5bZdtEhHY&feature=emb_title
  * @param firstIntervalElement - указатель на первый элемент сортируемого интервала
  * @param lastIntervalElement - указатель на второй элемент сортируемого интервала
  */

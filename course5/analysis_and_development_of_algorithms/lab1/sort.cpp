@@ -23,18 +23,22 @@ int getIntervalLength(int *firstIntervalElement, int *lastIntervalElement) {
 }
 
 void insertionSort(int *firstIntervalElement, const int *lastIntervalElement) {
+    int brokenElementMean;
     int *brokenElementPointer;
     int *currentElementPointer = firstIntervalElement + 1;
 
     while (currentElementPointer <= lastIntervalElement) {
         brokenElementPointer = currentElementPointer;
+        brokenElementMean = *brokenElementPointer;
 
-        while (currentElementPointer != firstIntervalElement) {
-            if (compare(*currentElementPointer, *(currentElementPointer - 1)) == -1) {
-                swap(currentElementPointer, currentElementPointer - 1);
-                currentElementPointer--;
-            } else {
+        while (currentElementPointer >= firstIntervalElement) {
+            if (currentElementPointer == firstIntervalElement ||
+                compare(brokenElementMean, *(currentElementPointer - 1)) != -1) {
+                *currentElementPointer = brokenElementMean;
                 break;
+            } else {
+                *currentElementPointer = *(currentElementPointer - 1);
+                currentElementPointer--;
             }
         }
 
@@ -43,7 +47,6 @@ void insertionSort(int *firstIntervalElement, const int *lastIntervalElement) {
 }
 
 bool intervalSort(int *firstIntervalElement, int *lastIntervalElement, bool canDoRecursion) {
-    const int transitionIntervalLength = 6;
     int intervalLength = getIntervalLength(firstIntervalElement, lastIntervalElement);
 
     if (intervalLength == 1) {
@@ -67,13 +70,13 @@ bool intervalSort(int *firstIntervalElement, int *lastIntervalElement, bool canD
     return false;
 }
 
-int *redistributeElements(int *leftIntervalPointer, int *rightIntervalPointer, int supportElement) {
+int *redistributeElements(int *leftIntervalPointer, int *rightIntervalPointer, int pivotElement) {
     while (true) {
-        while (compare(*leftIntervalPointer, supportElement) == -1) {
+        while (compare(*leftIntervalPointer, pivotElement) == -1) {
             leftIntervalPointer++;
         }
 
-        while (compare(*rightIntervalPointer, supportElement) == 1) {
+        while (compare(*rightIntervalPointer, pivotElement) == 1) {
             rightIntervalPointer--;
         }
 
@@ -87,7 +90,7 @@ int *redistributeElements(int *leftIntervalPointer, int *rightIntervalPointer, i
     }
 }
 
-int getSupportElement(const int *firstIntervalElement, const int *lastIntervalElement) {
+int getPivotElement(const int *firstIntervalElement, const int *lastIntervalElement) {
     int middleIntervalElement = *(firstIntervalElement + (lastIntervalElement - firstIntervalElement) / 2);
 
     if (abs(compare(*firstIntervalElement, middleIntervalElement) +
@@ -112,9 +115,12 @@ int getSupportElement(const int *firstIntervalElement, const int *lastIntervalEl
 }
 
 void sort(int *firstIntervalElement, int *lastIntervalElement) {
+    int pivotElement;
+    int *separationElement;
+
     while (firstIntervalElement != lastIntervalElement) {
-        int supportElement = getSupportElement(firstIntervalElement, lastIntervalElement);
-        int *separationElement = redistributeElements(firstIntervalElement, lastIntervalElement, supportElement);
+        pivotElement = getPivotElement(firstIntervalElement, lastIntervalElement);
+        separationElement = redistributeElements(firstIntervalElement, lastIntervalElement, pivotElement);
 
         if (getIntervalLength(firstIntervalElement, separationElement - 1) <
             getIntervalLength(separationElement + 1, lastIntervalElement)) {
