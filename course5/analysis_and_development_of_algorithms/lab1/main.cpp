@@ -20,7 +20,7 @@ void countTime() {
             }
 
             insertionSort(array, array + size - 1);
-            //sort(array, array + size - 1);
+            //qsort(array, array + size - 1);
         }
 
         QueryPerformanceCounter(&finishTime);
@@ -38,6 +38,26 @@ void printArray(T *array, int size) {
     }
 }
 
+/**
+ * Сравнивает элементы
+ * @tparam T - тип данных
+ * @param first - первый элемент
+ * @param second - второй элемент
+ * @return 1, если first > second; -1, если first < second; 0, если first == second
+ */
+template<typename T>
+int compareCommon(const T first, const T second) {
+    if (first > second) {
+        return 1;
+    }
+
+    if (first < second) {
+        return -1;
+    }
+
+    return 0; // if first == second
+}
+
 int main() {
     int size = 8;
     //int array[] = {3, 8, 9, 12, 4, 1, 0, 48};
@@ -46,7 +66,7 @@ int main() {
     //int array[] = {3, 0, 1, 8, 7, 2, 5, 4, 9, 6};
     double array[] = {3.7, 8.1, 3.77, 12.3, 3.71, 3.7, 0, 48.2};
 
-    sort(array, array + size - 1, &compare);
+    sort(array, array + size - 1, compareCommon);
     printArray(array, size);
     return 0;
 }

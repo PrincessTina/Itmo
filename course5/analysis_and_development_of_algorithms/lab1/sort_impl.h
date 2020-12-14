@@ -1,18 +1,7 @@
 #ifndef LAB1_SORT_IMPL_H
 #define LAB1_SORT_IMPL_H
 
-template<typename T>
-int compare(const T first, const T second) {
-    if (first > second) {
-        return 1;
-    }
-
-    if (first < second) {
-        return -1;
-    }
-
-    return 0; // if first == second
-}
+#include <functional>
 
 template<typename T>
 void swap(T *first, T *second) {
@@ -38,7 +27,7 @@ void insertionSort(T *firstIntervalElement, const T *lastIntervalElement) {
 
         while (currentElementPointer >= firstIntervalElement) {
             if (currentElementPointer == firstIntervalElement ||
-                compare(brokenElementMean, *(currentElementPointer - 1)) != -1) {
+                compare<T>(brokenElementMean, *(currentElementPointer - 1)) != -1) {
                 *currentElementPointer = brokenElementMean;
                 break;
             } else {
@@ -69,7 +58,7 @@ bool intervalSort(T *firstIntervalElement, T *lastIntervalElement, bool canDoRec
     }
 
     if (intervalLength > transitionIntervalLength) {
-        sort(firstIntervalElement, lastIntervalElement, &compare);
+        qsort(firstIntervalElement, lastIntervalElement);
         return true;
     }
 
@@ -79,17 +68,17 @@ bool intervalSort(T *firstIntervalElement, T *lastIntervalElement, bool canDoRec
 template<typename T>
 T *redistributeElements(T *leftIntervalPointer, T *rightIntervalPointer, T pivotElement) {
     while (true) {
-        while (compare(*leftIntervalPointer, pivotElement) == -1) {
+        while (compare<T>(*leftIntervalPointer, pivotElement) == -1) {
             leftIntervalPointer++;
         }
 
-        while (compare(*rightIntervalPointer, pivotElement) == 1) {
+        while (compare<T>(*rightIntervalPointer, pivotElement) == 1) {
             rightIntervalPointer--;
         }
 
         if (leftIntervalPointer == rightIntervalPointer) {
             return leftIntervalPointer;
-        } else if (compare(*leftIntervalPointer, *rightIntervalPointer) == 0) {
+        } else if (compare<T>(*leftIntervalPointer, *rightIntervalPointer) == 0) {
             rightIntervalPointer--;
         } else {
             swap(leftIntervalPointer, rightIntervalPointer);
@@ -101,20 +90,20 @@ template<typename T>
 T getPivotElement(const T *firstIntervalElement, const T *lastIntervalElement) {
     T middleIntervalElement = *(firstIntervalElement + (lastIntervalElement - firstIntervalElement) / 2);
 
-    if (abs(compare(*firstIntervalElement, middleIntervalElement) +
-            compare(*firstIntervalElement, *lastIntervalElement)) !=
+    if (abs(compare<T>(*firstIntervalElement, middleIntervalElement) +
+            compare<T>(*firstIntervalElement, *lastIntervalElement)) !=
         2) { // любые значения, кроме -1, -1 (<. <) и 1, 1 (>, >)
         return *firstIntervalElement;
     }
 
-    if (abs(compare(middleIntervalElement, *firstIntervalElement) +
-            compare(middleIntervalElement, *lastIntervalElement)) !=
+    if (abs(compare<T>(middleIntervalElement, *firstIntervalElement) +
+            compare<T>(middleIntervalElement, *lastIntervalElement)) !=
         2) { // любые значения, кроме -1, -1 (<. <) и 1, 1 (>, >)
         return middleIntervalElement;
     }
 
-    if ((compare(*lastIntervalElement, *firstIntervalElement) +
-         compare(*lastIntervalElement, middleIntervalElement)) !=
+    if ((compare<T>(*lastIntervalElement, *firstIntervalElement) +
+         compare<T>(*lastIntervalElement, middleIntervalElement)) !=
         2) { // любые значения, кроме -1, -1 (<. <) и 1, 1 (>, >)
         return *lastIntervalElement;
     }
@@ -122,8 +111,8 @@ T getPivotElement(const T *firstIntervalElement, const T *lastIntervalElement) {
     return -1;
 }
 
-template <typename T>
-void sort(T *firstIntervalElement, T *lastIntervalElement, int (*compare)(const T, const T)) {
+template<typename T>
+void qsort(T *firstIntervalElement, T *lastIntervalElement) {
     T pivotElement;
     T *separationElement;
 
@@ -148,6 +137,12 @@ void sort(T *firstIntervalElement, T *lastIntervalElement, int (*compare)(const 
             }
         }
     }
+}
+
+template<typename T>
+void sort(T *firstIntervalElement, T *lastIntervalElement, int (*compareFunc)(const T, const T)) {
+    compare<T> = compareFunc;
+    qsort(firstIntervalElement, lastIntervalElement);
 }
 
 #endif //LAB1_SORT_IMPL_H
