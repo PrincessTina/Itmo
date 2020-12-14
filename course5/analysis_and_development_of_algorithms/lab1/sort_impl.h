@@ -1,8 +1,6 @@
 #ifndef LAB1_SORT_IMPL_H
 #define LAB1_SORT_IMPL_H
 
-#include <functional>
-
 template<typename T>
 void swap(T *first, T *second) {
     T temporary = *first;
@@ -88,6 +86,7 @@ T *redistributeElements(T *leftIntervalPointer, T *rightIntervalPointer, T pivot
 
 template<typename T>
 T getPivotElement(const T *firstIntervalElement, const T *lastIntervalElement) {
+    T errorElement;
     T middleIntervalElement = *(firstIntervalElement + (lastIntervalElement - firstIntervalElement) / 2);
 
     if (abs(compare<T>(*firstIntervalElement, middleIntervalElement) +
@@ -108,7 +107,7 @@ T getPivotElement(const T *firstIntervalElement, const T *lastIntervalElement) {
         return *lastIntervalElement;
     }
 
-    return -1;
+    return errorElement;
 }
 
 template<typename T>

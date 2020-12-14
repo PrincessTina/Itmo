@@ -3,4 +3,4 @@ project(lab1)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(lab1 main.cpp sort.h sort_impl.h)
+add_executable(lab1 main.cpp sort.h sort_impl.h helper_library.h helper_library_impl.h)

@@ -2,6 +2,7 @@
 #define LAB1_SORT_H
 
 #include <cmath>
+#include <functional>
 
 /**
  * Экспериментально полученная длина интервала, до которой будет выполняться сортировка вставками
@@ -99,5 +100,4 @@ template<typename T>
 void sort(T *firstIntervalElement, T *lastIntervalElement, int (*compareFunc)(const T, const T));
 
 #include "sort_impl.h"
-
 #endif //LAB1_SORT_H
