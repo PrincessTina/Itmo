@@ -14,14 +14,16 @@ const int transitionIntervalLength = 12;
  * @param second - второй элемент
  * @return 1, если first > second; -1, если first < second; 0, если first == second
  */
-int compare(int first, int second);
+template<typename T>
+int compare(T first, T second);
 
 /**
  * Переставляет элементы местами
  * @param first - указатель на первый элемент
  * @param second - указатель на второй элемент
  */
-void swap(int *first, int *second);
+template<typename T>
+void swap(T *first, T *second);
 
 /**
  * Возвращает длину интервала
@@ -29,7 +31,8 @@ void swap(int *first, int *second);
  * @param lastIntervalElement - указатель на последний элемент интервала
  * @return длину интервала
  */
-int getIntervalLength(int *firstIntervalElement, int *lastIntervalElement);
+template<typename T>
+int getIntervalLength(T *firstIntervalElement, T *lastIntervalElement);
 
 /**
  * Сортировка вставками
@@ -37,7 +40,8 @@ int getIntervalLength(int *firstIntervalElement, int *lastIntervalElement);
  * @param firstIntervalElement - указатель на первый элемент сортируемого интервала
  * @param lastIntervalElement - указатель на последний элемент сортируемого интервала
  */
-void insertionSort(int *firstIntervalElement, const int *lastIntervalElement);
+template<typename T>
+void insertionSort(T *firstIntervalElement, const T *lastIntervalElement);
 
  /**
   * Проверяет размер интервала и вызывает соответствующую для него функцию сортировки
@@ -46,16 +50,18 @@ void insertionSort(int *firstIntervalElement, const int *lastIntervalElement);
   * @param canDoRecursion - можно ли делать рекурсивный вызов функции sort
   * @return возвращает true в случае, если сортировка интервала завершена, false, если интервал еще нуждается в сортировке
   */
-bool intervalSort(int *firstIntervalElement, int *lastIntervalElement, bool canDoRecursion);
+ template<typename T>
+ bool intervalSort(T *firstIntervalElement, T *lastIntervalElement, bool canDoRecursion);
 
 /**
  * Элементы, больше опорного, отправляет в правый интервал, меньше опорного - в левый
  * @param leftIntervalPointer - указатель на самый левый (первый) элемент интервала
  * @param rightIntervalPointer - указатель на самый правый (последний) элемент интервала
- * @param supportElement - опорный элемент
+ * @param pivotElement - опорный элемент
  * @return возвращает элемент, относительно которого произошло перераспределение
  */
-int * redistributeElements(int *leftIntervalPointer, int *rightIntervalPointer, int supportElement);
+template<typename T>
+T * redistributeElements(T *leftIntervalPointer, T *rightIntervalPointer, T pivotElement);
 
 /**
  * Возвращает опорный элемент интервала, который является медианой из первого, последнего и среднего элементов интервала
@@ -63,7 +69,8 @@ int * redistributeElements(int *leftIntervalPointer, int *rightIntervalPointer, 
  * @param lastIntervalElement - указатель на последний элемент интервала
  * @return опорный элемент
  */
-int getPivotElement(const int *firstIntervalElement, const int *lastIntervalElement);
+template<typename T>
+T getPivotElement(const T *firstIntervalElement, const T *lastIntervalElement);
 
 /**
  * Быстрая сортировка
@@ -71,6 +78,8 @@ int getPivotElement(const int *firstIntervalElement, const int *lastIntervalElem
  * @param firstIntervalElement - указатель на первый элемент сортируемого интервала
  * @param lastIntervalElement - указатель на второй элемент сортируемого интервала
  */
-void sort(int *firstIntervalElement, int *lastIntervalElement);
+template<typename T>
+void sort(T *firstIntervalElement, T *lastIntervalElement, int (*)(const T, const T));
 
+#include "sort_impl.h"
 #endif //LAB1_SORT_H

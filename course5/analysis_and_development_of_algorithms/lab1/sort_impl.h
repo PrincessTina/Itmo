@@ -1,6 +1,8 @@
-#include "sort.h"
+#ifndef LAB1_SORT_IMPL_H
+#define LAB1_SORT_IMPL_H
 
-int compare(const int first, const int second) {
+template<typename T>
+int compare(const T first, const T second) {
     if (first > second) {
         return 1;
     }
@@ -12,20 +14,23 @@ int compare(const int first, const int second) {
     return 0; // if first == second
 }
 
-void swap(int *first, int *second) {
-    int temporary = *first;
+template<typename T>
+void swap(T *first, T *second) {
+    T temporary = *first;
     *first = *second;
     *second = temporary;
 }
 
-int getIntervalLength(int *firstIntervalElement, int *lastIntervalElement) {
+template<typename T>
+int getIntervalLength(T *firstIntervalElement, T *lastIntervalElement) {
     return (int) (lastIntervalElement - firstIntervalElement + 1);
 }
 
-void insertionSort(int *firstIntervalElement, const int *lastIntervalElement) {
-    int brokenElementMean;
-    int *brokenElementPointer;
-    int *currentElementPointer = firstIntervalElement + 1;
+template<typename T>
+void insertionSort(T *firstIntervalElement, const T *lastIntervalElement) {
+    T brokenElementMean;
+    T *brokenElementPointer;
+    T *currentElementPointer = firstIntervalElement + 1;
 
     while (currentElementPointer <= lastIntervalElement) {
         brokenElementPointer = currentElementPointer;
@@ -46,7 +51,8 @@ void insertionSort(int *firstIntervalElement, const int *lastIntervalElement) {
     }
 }
 
-bool intervalSort(int *firstIntervalElement, int *lastIntervalElement, bool canDoRecursion) {
+template<typename T>
+bool intervalSort(T *firstIntervalElement, T *lastIntervalElement, bool canDoRecursion) {
     int intervalLength = getIntervalLength(firstIntervalElement, lastIntervalElement);
 
     if (intervalLength == 1) {
@@ -63,14 +69,15 @@ bool intervalSort(int *firstIntervalElement, int *lastIntervalElement, bool canD
     }
 
     if (intervalLength > transitionIntervalLength) {
-        sort(firstIntervalElement, lastIntervalElement);
+        sort(firstIntervalElement, lastIntervalElement, &compare);
         return true;
     }
 
     return false;
 }
 
-int *redistributeElements(int *leftIntervalPointer, int *rightIntervalPointer, int pivotElement) {
+template<typename T>
+T *redistributeElements(T *leftIntervalPointer, T *rightIntervalPointer, T pivotElement) {
     while (true) {
         while (compare(*leftIntervalPointer, pivotElement) == -1) {
             leftIntervalPointer++;
@@ -90,8 +97,9 @@ int *redistributeElements(int *leftIntervalPointer, int *rightIntervalPointer, i
     }
 }
 
-int getPivotElement(const int *firstIntervalElement, const int *lastIntervalElement) {
-    int middleIntervalElement = *(firstIntervalElement + (lastIntervalElement - firstIntervalElement) / 2);
+template<typename T>
+T getPivotElement(const T *firstIntervalElement, const T *lastIntervalElement) {
+    T middleIntervalElement = *(firstIntervalElement + (lastIntervalElement - firstIntervalElement) / 2);
 
     if (abs(compare(*firstIntervalElement, middleIntervalElement) +
             compare(*firstIntervalElement, *lastIntervalElement)) !=
@@ -114,9 +122,10 @@ int getPivotElement(const int *firstIntervalElement, const int *lastIntervalElem
     return -1;
 }
 
-void sort(int *firstIntervalElement, int *lastIntervalElement) {
-    int pivotElement;
-    int *separationElement;
+template <typename T>
+void sort(T *firstIntervalElement, T *lastIntervalElement, int (*compare)(const T, const T)) {
+    T pivotElement;
+    T *separationElement;
 
     while (firstIntervalElement != lastIntervalElement) {
         pivotElement = getPivotElement(firstIntervalElement, lastIntervalElement);
@@ -140,3 +149,5 @@ void sort(int *firstIntervalElement, int *lastIntervalElement) {
         }
     }
 }
+
+#endif //LAB1_SORT_IMPL_H

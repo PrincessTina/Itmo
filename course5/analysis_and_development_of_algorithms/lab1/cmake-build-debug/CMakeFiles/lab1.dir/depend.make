@@ -3,7 +3,5 @@
 
 CMakeFiles/lab1.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/lab1.dir/main.cpp.obj: ../sort.h
-
-CMakeFiles/lab1.dir/sort.cpp.obj: ../sort.cpp
-CMakeFiles/lab1.dir/sort.cpp.obj: ../sort.h
+CMakeFiles/lab1.dir/main.cpp.obj: ../sort_impl.h
 
