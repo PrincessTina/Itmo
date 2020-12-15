@@ -39,9 +39,9 @@ CMakeFiles/lab1.dir/test/test.cpp.obj: ../test/lib/googletest-release-1.10.0/goo
 CMakeFiles/lab1.dir/test/test.cpp.obj: ../test/lib/googletest-release-1.10.0/googletest/include/gtest/internal/gtest-port.h
 CMakeFiles/lab1.dir/test/test.cpp.obj: ../test/lib/googletest-release-1.10.0/googletest/include/gtest/internal/gtest-string.h
 CMakeFiles/lab1.dir/test/test.cpp.obj: ../test/lib/googletest-release-1.10.0/googletest/include/gtest/internal/gtest-type-util.h
-CMakeFiles/lab1.dir/test/test.cpp.obj: ../helper_library.h
-CMakeFiles/lab1.dir/test/test.cpp.obj: ../helper_library_impl.h
-CMakeFiles/lab1.dir/test/test.cpp.obj: ../sort.h
-CMakeFiles/lab1.dir/test/test.cpp.obj: ../sort_impl.h
+CMakeFiles/lab1.dir/test/test.cpp.obj: ../main/helper_library.h
+CMakeFiles/lab1.dir/test/test.cpp.obj: ../main/helper_library_impl.h
+CMakeFiles/lab1.dir/test/test.cpp.obj: ../main/sort.h
+CMakeFiles/lab1.dir/test/test.cpp.obj: ../main/sort_impl.h
 CMakeFiles/lab1.dir/test/test.cpp.obj: ../test/test.cpp
 

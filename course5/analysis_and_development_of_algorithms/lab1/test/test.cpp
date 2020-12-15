@@ -2,8 +2,8 @@
 #include <gmock/gmock.h>
 #include <algorithm>
 
-#include "../helper_library.h"
-#include "../sort.h"
+#include "../main/helper_library.h"
+#include "../main/sort.h"
 
 /**
  * Выводит на экран отсортированный массив в формате:
