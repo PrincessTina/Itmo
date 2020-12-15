@@ -1,0 +1,2 @@
+"D:\Program Files\Mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\ar.exe" qc ..\..\..\..\lib\libgmockd.a  CMakeFiles/gmock.dir/src/gmock-all.cc.obj
+"D:\Program Files\Mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\ranlib.exe" ..\..\..\..\lib\libgmockd.a

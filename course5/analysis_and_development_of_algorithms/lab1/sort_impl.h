@@ -141,7 +141,7 @@ void qsort(T *firstIntervalElement, T *lastIntervalElement) {
 template<typename T>
 void sort(T *firstIntervalElement, T *lastIntervalElement, int (*compareFunc)(const T, const T)) {
     compare<T> = compareFunc;
-    qsort(firstIntervalElement, lastIntervalElement);
+    intervalSort(firstIntervalElement, lastIntervalElement, true);
 }
 
 #endif //LAB1_SORT_IMPL_H

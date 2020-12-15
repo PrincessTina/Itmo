@@ -100,4 +100,5 @@ template<typename T>
 void sort(T *firstIntervalElement, T *lastIntervalElement, int (*compareFunc)(const T, const T));
 
 #include "sort_impl.h"
+
 #endif //LAB1_SORT_H

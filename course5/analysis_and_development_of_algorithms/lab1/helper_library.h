@@ -26,13 +26,30 @@ struct Gnome {
     }
 };
 
-std::ostream &operator<<(std::ostream &out, const Gnome &gnome) {
-    out << gnome.name;
+/**
+ * Переопределение оператора << (вывода) для типа данных Gnome
+ * @param out
+ * @param gnome - объект, информацию о котором нужно вывести на экран
+ * @return
+ */
+std::ostream &operator<<(std::ostream &out, const Gnome gnome) {
+    out << gnome.name << " (" << gnome.respect << ")";
     return out;
 }
 
 /**
- * Выводит на экран элементы массива через пробел
+ * Переопределение оператора == (эквивалентности) для типа данных Gnome
+ * @param gnome1 - первый сравниваемый объект
+ * @param gnome2 - второй сравниваемый объект
+ * @return true, если объекты эквивалентны, false, если объекты различны
+ */
+bool operator==(const Gnome gnome1, const Gnome gnome2) {
+    return gnome1.name == gnome2.name && gnome1.age == gnome2.age && gnome1.workExperience == gnome2.workExperience &&
+           gnome1.beardLength == gnome2.beardLength;
+}
+
+/**
+ * Выводит на экран элементы массива через пробел с запятой
  * @tparam T - тип данных
  * @param array - массив, который нужно вывести на экран
  * @param size - размер массива
@@ -49,6 +66,16 @@ void printArray(T *array, int size);
  */
 template<typename T>
 int commonCompare(T first, T second);
+
+/**
+ * Сравнивает элементы простых типов данных в обратном порядке
+ * @tparam T - тип данных
+ * @param first - первый элемент
+ * @param second - второй элемент
+ * @return -1, если first > second; 1, если first < second; 0, если first == second
+ */
+template<typename T>
+int reverseCompare(T first, T second);
 
 /**
  * Сравнивает объекты типа данных Gnome
