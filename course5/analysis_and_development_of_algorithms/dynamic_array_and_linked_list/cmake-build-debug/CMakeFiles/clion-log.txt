@@ -1,0 +1,4 @@
+"D:\Program Files\JetBrains\CLion 2020.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "D:\Documents\ITMO University\Github Repository\itmo\course5\analysis_and_development_of_algorithms\dynamic_array_and_linked_list"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/Documents/ITMO University/Github Repository/itmo/course5/analysis_and_development_of_algorithms/dynamic_array_and_linked_list/cmake-build-debug

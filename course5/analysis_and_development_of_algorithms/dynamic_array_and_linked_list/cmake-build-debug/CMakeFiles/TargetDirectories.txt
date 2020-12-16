@@ -1,0 +1,3 @@
+D:/Documents/ITMO University/Github Repository/itmo/course5/analysis_and_development_of_algorithms/dynamic_array_and_linked_list/cmake-build-debug/CMakeFiles/dynamic_array_and_linked_list.dir
+D:/Documents/ITMO University/Github Repository/itmo/course5/analysis_and_development_of_algorithms/dynamic_array_and_linked_list/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Documents/ITMO University/Github Repository/itmo/course5/analysis_and_development_of_algorithms/dynamic_array_and_linked_list/cmake-build-debug/CMakeFiles/rebuild_cache.dir
