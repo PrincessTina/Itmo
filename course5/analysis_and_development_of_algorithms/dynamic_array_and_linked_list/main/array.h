@@ -6,6 +6,10 @@ class Array final {
     int maxSize = 16;
     int currentSize = 0;
 
+    static void throwException();
+
+    int *allocateMemory(int memorySize);
+
 public:
     Array();
 

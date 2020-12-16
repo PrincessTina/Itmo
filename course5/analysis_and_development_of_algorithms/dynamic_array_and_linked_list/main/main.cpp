@@ -1,26 +1,27 @@
 #include <iostream>
 #include "array.h"
 
+void printArray(const Array &array) {
+    for (int i = 0; i < array.size(); i++) {
+        std::cout << array[i] << " ";
+    }
+
+    std::cout << std::endl;
+}
+
 int main() {
-    Array a;
+    Array array(3);
 
-    a.insert(5);
-    a.insert(12);
-    a.insert(10);
-    a.insert(21);
-
-    std::cout << a[0] << " ";
-    std::cout << a[1] << " ";
-    std::cout << a[2] << " ";
-    std::cout << a[3] << " " << std::endl;
-
-    a.insert(1, 8);
-
-    std::cout << a[0] << " ";
-    std::cout << a[1] << " ";
-    std::cout << a[2] << " ";
-    std::cout << a[3] << " ";
-    std::cout << a[4] << " " << std::endl;
+    array.insert(5);
+    printArray(array);
+    array.insert(12);
+    printArray(array);
+    array.insert(10);
+    printArray(array);
+    array.insert(21);
+    printArray(array);
+    array.insert(1, 8);
+    printArray(array);
 
     return 0;
 }
