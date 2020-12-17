@@ -89,4 +89,64 @@ int Array::size() const {
     return currentSize;
 }
 
+Array::Iterator Array::iterator() {
+    return *thisIterator;
+}
+
+Array::Iterator Array::iterator() const {
+    return *thisIterator;
+}
+
+Array::Iterator::Iterator(Array *array) {
+    this->array = array;
+}
+
+const int &Array::Iterator::get() const {
+    return (*array)[currentElementIndex];
+}
+
+void Array::Iterator::set(const int &value) {
+    (*array)[currentElementIndex] = value;
+}
+
+void Array::Iterator::insert(const int &value) {
+    array->insert(currentElementIndex, value);
+}
+
+void Array::Iterator::remove() {
+    array->remove(currentElementIndex);
+}
+
+void Array::Iterator::next() {
+    if (currentElementIndex == array->size() - 1) {
+        throwException();
+    }
+
+    currentElementIndex++;
+}
+
+void Array::Iterator::prev() {
+    if (currentElementIndex == 0) {
+        throwException();
+    }
+
+    currentElementIndex--;
+}
+
+void Array::Iterator::toIndex(int index) {
+    if (index < 0 || index >= array->size()) {
+        throwException();
+    }
+
+    currentElementIndex = index;
+}
+
+bool Array::Iterator::hasNext() const {
+    return currentElementIndex != array->size() - 1;
+}
+
+bool Array::Iterator::hasPrev() const {
+    return currentElementIndex != 0;
+}
+
 #endif //DYNAMIC_ARRAY_AND_LINKED_LIST_ARRAY_IMPL_H

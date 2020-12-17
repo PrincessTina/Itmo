@@ -11,6 +11,7 @@ void printArray(const Array &array) {
 
 int main() {
     Array array(3);
+    auto it = array.iterator();
 
     array.insert(5);
     printArray(array);
@@ -22,6 +23,12 @@ int main() {
     printArray(array);
     array.insert(1, 8);
     printArray(array);
+
+    for (it; it.hasNext(); it.next()) {
+        std::cout << it.get() << std::endl;
+    }
+
+    std::cout << it.get() << std::endl;
 
     return 0;
 }
