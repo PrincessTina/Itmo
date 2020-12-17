@@ -1,0 +1,14 @@
+//
+// Created by Kristina on 17.12.2020.
+//
+
+#ifndef DYNAMIC_ARRAY_AND_LINKED_LIST_ARRAY_TESTS_H
+#define DYNAMIC_ARRAY_AND_LINKED_LIST_ARRAY_TESTS_H
+
+
+class array_tests {
+
+};
+
+
+#endif //DYNAMIC_ARRAY_AND_LINKED_LIST_ARRAY_TESTS_H

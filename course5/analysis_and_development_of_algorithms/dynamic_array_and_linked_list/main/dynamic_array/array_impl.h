@@ -1,8 +1,6 @@
 #ifndef DYNAMIC_ARRAY_AND_LINKED_LIST_ARRAY_IMPL_H
 #define DYNAMIC_ARRAY_AND_LINKED_LIST_ARRAY_IMPL_H
 
-#include "array.h"
-
 template<typename T>
 void Array<T>::throwException() {
     throw std::invalid_argument("Accessing array out of bounds");
