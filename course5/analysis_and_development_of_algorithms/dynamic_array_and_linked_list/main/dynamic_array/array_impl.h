@@ -104,12 +104,12 @@ int Array<T>::size() const {
 
 template<typename T>
 typename Array<T>::Iterator Array<T>::iterator() {
-    return *thisIterator;
+    return Iterator(this);
 }
 
 template<typename T>
 typename Array<T>::Iterator Array<T>::iterator() const {
-    return *thisIterator;
+    return Iterator(this);
 }
 
 template<typename T>
@@ -135,6 +135,10 @@ void Array<T>::Iterator::insert(const T &value) {
 template<typename T>
 void Array<T>::Iterator::remove() {
     array->remove(currentElementIndex);
+
+    if (currentElementIndex == array->size() && currentElementIndex != 0) {
+        prev();
+    }
 }
 
 template<typename T>
