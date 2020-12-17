@@ -1,32 +1,41 @@
 #ifndef DYNAMIC_ARRAY_AND_LINKED_LIST_ARRAY_IMPL_H
 #define DYNAMIC_ARRAY_AND_LINKED_LIST_ARRAY_IMPL_H
 
-void Array::throwException() {
+#include "array.h"
+
+template<typename T>
+void Array<T>::throwException() {
     throw std::invalid_argument("Accessing array out of bounds");
 }
 
-int *Array::allocateMemory(int memorySize) {
+template<typename T>
+T *Array<T>::allocateMemory(int memorySize) {
     maxSize = memorySize;
-    return (int *) malloc(memorySize * sizeof(int));
+    return (T *) malloc(memorySize * sizeof(T));
 }
 
-Array::Array() {
+template<typename T>
+Array<T>::Array() {
     firstElementPointer = allocateMemory(maxSize);
 }
 
-Array::Array(int capacity) {
+template<typename T>
+Array<T>::Array(int capacity) {
     firstElementPointer = allocateMemory(capacity);
 }
 
-Array::~Array() {
+template<typename T>
+Array<T>::~Array() {
     free(firstElementPointer);
 }
 
-void Array::insert(const int &value) {
+template<typename T>
+void Array<T>::insert(const T &value) {
     insert(currentSize, value);
 }
 
-void Array::insert(int index, const int &value) {
+template<typename T>
+void Array<T>::insert(int index, const T &value) {
     if (index < 0 || index > currentSize) {
         throwException();
     }
@@ -34,7 +43,7 @@ void Array::insert(int index, const int &value) {
     currentSize++;
 
     if (currentSize > maxSize) {
-        int *newFirstElementPointer = allocateMemory(maxSize * 2);
+        T *newFirstElementPointer = allocateMemory(maxSize * 2);
         int j = 0;
 
         for (int i = 0; i < currentSize; i++) {
@@ -57,7 +66,8 @@ void Array::insert(int index, const int &value) {
     }
 }
 
-void Array::remove(int index) {
+template<typename T>
+void Array<T>::remove(int index) {
     if (index < 0 || index >= currentSize) {
         throwException();
     }
@@ -69,7 +79,8 @@ void Array::remove(int index) {
     currentSize--;
 }
 
-const int &Array::operator[](int index) const {
+template<typename T>
+const T &Array<T>::operator[](int index) const {
     if (index < 0 || index >= currentSize) {
         throwException();
     }
@@ -77,7 +88,8 @@ const int &Array::operator[](int index) const {
     return *(firstElementPointer + index);
 }
 
-int &Array::operator[](int index) {
+template<typename T>
+T &Array<T>::operator[](int index) {
     if (index < 0 || index >= currentSize) {
         throwException();
     }
@@ -85,39 +97,48 @@ int &Array::operator[](int index) {
     return *(firstElementPointer + index);
 }
 
-int Array::size() const {
+template<typename T>
+int Array<T>::size() const {
     return currentSize;
 }
 
-Array::Iterator Array::iterator() {
+template<typename T>
+typename Array<T>::Iterator Array<T>::iterator() {
     return *thisIterator;
 }
 
-Array::Iterator Array::iterator() const {
+template<typename T>
+typename Array<T>::Iterator Array<T>::iterator() const {
     return *thisIterator;
 }
 
-Array::Iterator::Iterator(Array *array) {
+template<typename T>
+Array<T>::Iterator::Iterator(Array *array) {
     this->array = array;
 }
 
-const int &Array::Iterator::get() const {
+template<typename T>
+const T &Array<T>::Iterator::get() const {
     return (*array)[currentElementIndex];
 }
 
-void Array::Iterator::set(const int &value) {
+template<typename T>
+void Array<T>::Iterator::set(const T &value) {
     (*array)[currentElementIndex] = value;
 }
 
-void Array::Iterator::insert(const int &value) {
+template<typename T>
+void Array<T>::Iterator::insert(const T &value) {
     array->insert(currentElementIndex, value);
 }
 
-void Array::Iterator::remove() {
+template<typename T>
+void Array<T>::Iterator::remove() {
     array->remove(currentElementIndex);
 }
 
-void Array::Iterator::next() {
+template<typename T>
+void Array<T>::Iterator::next() {
     if (currentElementIndex == array->size() - 1) {
         throwException();
     }
@@ -125,7 +146,8 @@ void Array::Iterator::next() {
     currentElementIndex++;
 }
 
-void Array::Iterator::prev() {
+template<typename T>
+void Array<T>::Iterator::prev() {
     if (currentElementIndex == 0) {
         throwException();
     }
@@ -133,7 +155,8 @@ void Array::Iterator::prev() {
     currentElementIndex--;
 }
 
-void Array::Iterator::toIndex(int index) {
+template<typename T>
+void Array<T>::Iterator::toIndex(int index) {
     if (index < 0 || index >= array->size()) {
         throwException();
     }
@@ -141,11 +164,13 @@ void Array::Iterator::toIndex(int index) {
     currentElementIndex = index;
 }
 
-bool Array::Iterator::hasNext() const {
+template<typename T>
+bool Array<T>::Iterator::hasNext() const {
     return currentElementIndex != array->size() - 1;
 }
 
-bool Array::Iterator::hasPrev() const {
+template<typename T>
+bool Array<T>::Iterator::hasPrev() const {
     return currentElementIndex != 0;
 }
 

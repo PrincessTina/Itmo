@@ -1,7 +1,8 @@
 #include <iostream>
 #include "array.h"
 
-void printArray(const Array &array) {
+template<typename T>
+void printArray(const Array<T> &array) {
     for (int i = 0; i < array.size(); i++) {
         std::cout << array[i] << " ";
     }
@@ -10,7 +11,7 @@ void printArray(const Array &array) {
 }
 
 int main() {
-    Array array(3);
+    Array<int> array(3);
     auto it = array.iterator();
 
     array.insert(5);

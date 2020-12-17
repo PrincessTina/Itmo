@@ -1,64 +1,167 @@
 #ifndef DYNAMIC_ARRAY_AND_LINKED_LIST_ARRAY_H
 #define DYNAMIC_ARRAY_AND_LINKED_LIST_ARRAY_H
 
+/**
+ * Динамический массив
+ * @tparam T - тип элементов массива
+ */
+template<typename T>
 class Array final {
     class Iterator {
-        Array *array;
-        int currentElementIndex = 0;
+        Array *array; // указатель на массив итератора
+        int currentElementIndex = 0; // индекс элемента, на который указывает итератор
 
     public:
         Iterator(Array *array);
 
-        const int &get() const;
+        /**
+         * Возвращает элемент на текущей позиции итератора, если это возможно. Иначе выбрасывает ошибку
+         * @return элемент на текущей позиции итератора
+         */
+        const T &get() const;
 
-        void set(const int &value);
+        /**
+         * Перезаписывает элемент в текущей позиции итератора, если это возможно. Иначе выбрасывает ошибку
+         * @param value - новый элемент
+         */
+        void set(const T &value);
 
-        void insert(const int &value);
+        /**
+         * Вставляет элемент в текущую позицию итератора, если это возможно. Иначе выбрасывает ошибку
+         * @param value - элемент, который необходимо вставить
+         */
+        void insert(const T &value);
 
+        /**
+         * Удаляет элемент на текущей позиции итератора, если это возможно. Иначе выбрасывает ошибку
+         */
         void remove();
 
+        /**
+         * Инкрементирует currentElementIndex, если это возможно. Иначе выбрасывает ошибку
+         */
         void next();
 
+        /**
+         * Декрементирует currentElementIndex, если это возможно. Иначе выбрасывает ошибку
+         */
         void prev();
 
+        /**
+         * Присваивает currentElementIndex значение index, если это возможно. Иначе выбрасывает ошибку
+         * @param index - индекс элемента, на который будет указывать итератор
+         */
         void toIndex(int index);
 
+        /**
+         * Проверяет, есть ли следующий элемент в массиве
+         * @return true, если есть, иначе false
+         */
         bool hasNext() const;
 
+        /**
+         * Проверяет, есть ли предыдущий элемент в массиве
+         * @return true, если есть, иначе false
+         */
         bool hasPrev() const;
     };
 
-    int *firstElementPointer;
-    int maxSize = 16;
-    int currentSize = 0;
-    Iterator *thisIterator = new Iterator(this);
+    T *firstElementPointer; // указатель на первый элемент массива
+    int maxSize = 16; // количество элементов, на которое рассчитан массив
+    int currentSize = 0; // размер массива
+    Iterator *thisIterator = new Iterator(this); // указатель на итератор массива
 
 private:
+    /**
+     * Выбрасывает ошибку выхода за пределы массива
+     */
     static void throwException();
 
-    int *allocateMemory(int memorySize);
+    /**
+     * Выделяет память, необходимую для того, чтобы поместилось memorySize количество элементов
+     * Присваивает maxSize значение memorySize
+     * @param memorySize - количество элементов, на которое рассчитан массив
+     * @return указатель на выделенный участок памяти
+     */
+    T *allocateMemory(int memorySize);
 
 public:
+    /**
+     * Конструктор
+     * Выделяет память, необходимую для того, чтобы поместилось maxSize количество элементов
+     */
     Array();
 
+    /**
+     * Конструктор
+     * Выделяет память, необходимую для того, чтобы поместилось capacity количество элементов
+     * @param capacity - количество элементов, на которое рассчитан массив
+     */
     Array(int capacity);
 
+    /**
+     * Деструктор
+     * Освобождает память
+     */
     ~Array();
 
-    void insert(const int &value);
+    /**
+     * Осуществляет вставку элемента в конец массива, инкрементируя currentSize
+     * Если выделенной под массив памяти (maxSize) недостаточно, выделяет новый участок в памяти, копируя в него
+     * массив, и переопределяет firstElementPointer. Освобождает память, которую ранее занимал массив
+     * @param value - элемент, который необходимо вставить
+     */
+    void insert(const T &value);
 
-    void insert(int index, const int &value);
+    /**
+     * Осуществляет вставку элемента по индексу, инкрементируя currentSize
+     * Осуществляет проверку индекса. В случае если index < 0 или index > currentSize, выбрасывает ошибку
+     * Если выделенной под массив памяти (maxSize) недостаточно, выделяет новый участок в памяти, копируя в него
+     * массив, и переопределяет firstElementPointer. Освобождает память, которую ранее занимал массив
+     * @param index - индекс, по которому необходимо вставить элемент
+     * @param value - элемент, который необходимо вставить
+     */
+    void insert(int index, const T &value);
 
+    /**
+     * Удаляет элемент по индексу, декрементируя currentSize
+     * Осуществляет проверку индекса. В случае если index < 0 или index >= currentSize, выбрасывает ошибку
+     * @param index - индекс, по которому необходимо удалить элемент
+     */
     void remove(int index);
 
-    const int &operator[](int index) const;
+    /**
+     * Переопределение оператора [] (get)
+     * Осуществляет проверку индекса. В случае если index < 0 или index >= currentSize, выбрасывает ошибку
+     * @param index - индекс, по которому необходимо получить элемент
+     * @return элемент по индексу (чтение)
+     */
+    const T &operator[](int index) const;
 
-    int &operator[](int index);
+    /**
+     * Переопределение оператора [] (get)
+     * Осуществляет проверку индекса. В случае если index < 0 или index >= currentSize, выбрасывает ошибку
+     * @param index - индекс, по которому необходимо получить элемент
+     * @return элемент по индексу (чтение и запись)
+     */
+    T &operator[](int index);
 
+    /**
+     * Возвращает количество элементов массива
+     * @return количество элементов массива
+     */
     int size() const;
 
+    /**
+     * Возвращает итератор (по умолчанию указывающий на первый элемент массива)
+     * @return итератор (чтение и запись)
+     */
     Iterator iterator();
 
+    /**
+     * Возвращает итератор (по умолчанию указывающий на первый элемент массива)
+     * @return итератор (чтение)
+     */
     Iterator iterator() const;
 };
 
