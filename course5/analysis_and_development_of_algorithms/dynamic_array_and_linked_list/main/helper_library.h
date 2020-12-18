@@ -1,6 +1,9 @@
 #ifndef DYNAMIC_ARRAY_AND_LINKED_LIST_HELPER_LIBRARY_H
 #define DYNAMIC_ARRAY_AND_LINKED_LIST_HELPER_LIBRARY_H
 
+#include "dynamic_array/array.h"
+#include "../main/linked_list/list.h"
+
 enum Flower_Name {
     Tulip,
     Rose,
@@ -67,9 +70,21 @@ std::ostream &operator<<(std::ostream &out, const Flower flower) {
  * @param array - сформированный динамический массив
  */
 template<typename T>
-void printArray(const Array<T> &array) {
+void printCustomArray(const Array<T> &array) {
     for (int i = 0; i < array.size(); i++) {
         if (i == array.size() - 1) {
+            std::cout << array[i];
+        } else {
+            std::cout << array[i] << ", ";
+        }
+    }
+
+    std::cout << std::endl;
+}
+
+void printArray(int *array, int size) {
+    for (int i = 0; i < size; i++) {
+        if (i == size - 1) {
             std::cout << array[i];
         } else {
             std::cout << array[i] << ", ";

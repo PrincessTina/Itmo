@@ -1,7 +1,6 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 
-#include "../main/dynamic_array/array.h"
 #include "../main/helper_library.h"
 
 /**
@@ -31,7 +30,7 @@ TEST(array, Test1) {
 
     array.insert(18);
     EXPECT_EQ(array[0], 18);
-    printArray(array);
+    printCustomArray(array);
 }
 
 /**
@@ -46,7 +45,7 @@ TEST(array, Test2) {
     array[0] = 9;
     EXPECT_EQ(array[0], 9);
 
-    printArray(array);
+    printCustomArray(array);
 }
 
 /**
@@ -63,7 +62,7 @@ TEST(array, Test3) {
     EXPECT_THROW(array[-1], std::invalid_argument);
     EXPECT_THROW(array[1], std::invalid_argument);
 
-    printArray(array);
+    printCustomArray(array);
 }
 
 /**
@@ -80,7 +79,7 @@ TEST(array, Test4) {
     array.insert(0);
 
     EXPECT_EQ(array.size(), 4);
-    printArray(array);
+    printCustomArray(array);
 }
 
 /**
@@ -96,7 +95,7 @@ TEST(array, Test5) {
     array.insert(-4);
 
     EXPECT_TRUE(elementsAreEqual(array, expectedArray, size));
-    printArray(array);
+    printCustomArray(array);
 }
 
 /**
@@ -122,7 +121,7 @@ TEST(array, Test6) {
     array.insert(64);
 
     EXPECT_TRUE(elementsAreEqual(array, expectedArray, size));
-    printArray(array);
+    printCustomArray(array);
 }
 
 /**
@@ -141,7 +140,7 @@ TEST(array, Test7) {
     }
 
     EXPECT_TRUE(elementsAreEqual(array, expectedArray, size));
-    printArray(array);
+    printCustomArray(array);
 }
 
 /**
@@ -159,7 +158,7 @@ TEST(array, Test8) {
     array.insert(0, 5);
 
     EXPECT_TRUE(elementsAreEqual(array, expectedArray, size));
-    printArray(array);
+    printCustomArray(array);
 }
 
 /**
@@ -177,7 +176,7 @@ TEST(array, Test9) {
     array.insert(4, 5);
 
     EXPECT_TRUE(elementsAreEqual(array, expectedArray, size));
-    printArray(array);
+    printCustomArray(array);
 }
 
 /**
@@ -195,7 +194,7 @@ TEST(array, Test10) {
     array.insert(2, 5);
 
     EXPECT_TRUE(elementsAreEqual(array, expectedArray, size));
-    printArray(array);
+    printCustomArray(array);
 }
 
 /**
@@ -218,7 +217,7 @@ TEST(array, Test11) {
 
     EXPECT_NO_THROW(array.insert(5, 33));
     EXPECT_TRUE(elementsAreEqual(array, expectedArray, size));
-    printArray(array);
+    printCustomArray(array);
 }
 
 /**
@@ -236,7 +235,7 @@ TEST(array, Test12) {
 
     array.remove(0);
     EXPECT_TRUE(elementsAreEqual(array, expectedArray, size));
-    printArray(array);
+    printCustomArray(array);
 }
 
 /**
@@ -254,7 +253,7 @@ TEST(array, Test13) {
 
     array.remove(3);
     EXPECT_TRUE(elementsAreEqual(array, expectedArray, size));
-    printArray(array);
+    printCustomArray(array);
 }
 
 /**
@@ -272,7 +271,7 @@ TEST(array, Test14) {
 
     array.remove(2);
     EXPECT_TRUE(elementsAreEqual(array, expectedArray, size));
-    printArray(array);
+    printCustomArray(array);
 }
 
 /**
@@ -293,7 +292,7 @@ TEST(array, Test15) {
     EXPECT_NO_THROW(array.remove(1));
 
     EXPECT_TRUE(elementsAreEqual(array, expectedArray, size));
-    printArray(array);
+    printCustomArray(array);
 }
 
 /**
@@ -305,7 +304,7 @@ TEST(array, Test16) {
 
     iterator.insert(102);
     EXPECT_EQ(iterator.get(), 102);
-    printArray(array);
+    printCustomArray(array);
 }
 
 /**
@@ -321,7 +320,7 @@ TEST(array, Test17) {
     iterator.set(90);
     EXPECT_EQ(iterator.get(), 90);
 
-    printArray(array);
+    printCustomArray(array);
 }
 
 /**
@@ -342,7 +341,7 @@ TEST(array, Test18) {
     iterator.set(41);
     EXPECT_EQ(array[2], 41);
 
-    printArray(array);
+    printCustomArray(array);
 }
 
 /**
@@ -389,7 +388,7 @@ TEST(array, Test19) {
     iterator.next(); // указывает на 39 (1ый)
     iterator.remove(); // удаление с 2, так как iterator указывает на 2: {11, 13}
     EXPECT_TRUE(elementsAreEqual(array, exp3, 2));
-    printArray(array);
+    printCustomArray(array);
 }
 
 /**
@@ -408,7 +407,7 @@ TEST(array, Test20) {
     array.remove(1);
 
     EXPECT_TRUE(elementsAreEqual(array, expectedArray, size));
-    printArray(array);
+    printCustomArray(array);
 }
 
 /**
@@ -429,7 +428,7 @@ TEST(array, Test21) {
     array.remove(0);
 
     EXPECT_TRUE(elementsAreEqual(array, expectedArray, size));
-    printArray(array);
+    printCustomArray(array);
 }
 
 /**
@@ -451,7 +450,7 @@ TEST(array, Test22) {
     array.remove(3);
 
     EXPECT_TRUE(elementsAreEqual(array, expectedArray, size));
-    printArray(array);
+    printCustomArray(array);
 }
 
 /**
@@ -478,6 +477,6 @@ TEST(array, Test23) {
 
     array[2] = Flower(Tulip, Purple, 0.72, 34);
     EXPECT_TRUE(elementsAreEqual(array, expectedArray, size));
-    printArray(array);
+    printCustomArray(array);
 }
 
