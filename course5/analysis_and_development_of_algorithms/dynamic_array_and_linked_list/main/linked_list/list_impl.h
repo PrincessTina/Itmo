@@ -5,6 +5,10 @@ List::Node *List::allocateChunk() {
     return (Node *) malloc(sizeof(Node) * chunkSize);
 }
 
+void *List::freeChunk(Node *chunk) {
+    free(chunk);
+}
+
 void List::throwException() {
     throw std::invalid_argument("Accessing list out of bounds");
 }
@@ -14,7 +18,9 @@ List::List() {
 }
 
 List::~List() {
-
+    if (nodesCount == 0) {
+        free(headNode);
+    }
 }
 
 void List::insertHead(const int &value) {
@@ -42,22 +48,76 @@ void List::insertHead(const int &value) {
 }
 
 void List::insertTail(const int &value) {
+    int index = 0;
 
+    if (nodesCount == 0) {
+        tailNode = headNode;
+    } else if (tailNode->index == chunkSize - 1) {
+        Node *temporary = allocateChunk();
+
+        tailNode->nextChunk = temporary;
+        temporary->nextChunk = tailNode;
+        tailNode = temporary;
+    } else {
+        index = tailNode->index + 1;
+        tailNode++;
+    }
+
+    tailNode->value = value;
+    tailNode->index = index;
+
+    nodesCount++;
 }
 
 void List::removeHead() {
+    if (nodesCount == 0) {
+        throwException();
+    }
 
+    if (nodesCount == 1) {
+        headNode = tailNode = nullptr;
+    } else if (headNode->index == chunkSize - 1) {
+        headNode = headNode->nextChunk;
+        freeChunk(headNode->nextChunk - chunkSize + 1);
+        headNode->nextChunk = nullptr;
+    } else {
+        headNode++;
+    }
+
+    nodesCount--;
 }
 
 void List::removeTail() {
+    if (nodesCount == 0) {
+        throwException();
+    }
 
+    if (nodesCount == 1) {
+        headNode = tailNode = nullptr;
+    } else if (tailNode->index == 0) {
+        tailNode = tailNode->nextChunk;
+        freeChunk(tailNode->nextChunk);
+        tailNode->nextChunk = nullptr;
+    } else {
+        tailNode--;
+    }
+
+    nodesCount--;
 }
 
 const int &List::head() const {
+    if (nodesCount == 0) {
+        throwException();
+    }
+
     return headNode->value;
 }
 
 const int &List::tail() const {
+    if (nodesCount == 0) {
+        throwException();
+    }
+
     return tailNode->value;
 }
 
@@ -86,10 +146,18 @@ List::Iterator::Iterator(const List *list, Node *currentNodePointer, int chunkSi
 }
 
 const int &List::Iterator::get() const {
+    if (list->size() == 0) {
+        throwException();
+    }
+
     return currentNodePointer->value;
 }
 
 void List::Iterator::set(const int &value) {
+    if (list->size() == 0) {
+        throwException();
+    }
+
     currentNodePointer->value = value;
 }
 

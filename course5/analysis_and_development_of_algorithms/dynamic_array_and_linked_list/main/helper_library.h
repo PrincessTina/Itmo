@@ -82,6 +82,17 @@ void printCustomArray(const Array<T> &array) {
     std::cout << std::endl;
 }
 
+void formArrayFromList(List list, int *arrayList) {
+    int i = 0;
+
+    for (auto it = list.iterator(); it.hasNext(); it.next()) {
+        arrayList[i] = it.get();
+        i++;
+    }
+
+    arrayList[i] = list.tail();
+}
+
 void printArray(int *array, int size) {
     for (int i = 0; i < size; i++) {
         if (i == size - 1) {

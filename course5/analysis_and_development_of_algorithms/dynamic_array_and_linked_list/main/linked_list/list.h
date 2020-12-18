@@ -3,16 +3,16 @@
 
 class List final {
     struct Node {
-        int value;
-        int index;
-        Node *nextChunk = nullptr; // указатель на 0ой элемент следующего (слева или справа) чанка
+        int value; // значение элемента
+        int index; // индекс элемента в текущем чанке
+        Node *nextChunk = nullptr; // указатель на элемент следующего (слева или справа) чанка
     };
 
     class Iterator {
-        const List *readableList = nullptr;
-        List *list = nullptr;
-        int chunkSize;
-        Node *currentNodePointer;
+        const List *readableList = nullptr; // указатель на список только для чтения
+        List *list = nullptr; // указатель на список для чтения и записи
+        int chunkSize; // размер чанка списка
+        Node *currentNodePointer; // указатель на текущий элемент списка
 
     public:
         Iterator(List *list, Node *currentNodePointer, int chunkSize);
@@ -36,13 +36,15 @@ class List final {
         bool hasPrev() const;
     };
 
-    Node *headNode = nullptr;
-    Node *tailNode = nullptr;
-    int chunkSize = 5;
-    int nodesCount = 0;
+    Node *headNode = nullptr; // указатель на начало списка
+    Node *tailNode = nullptr; // указатель на конец списка
+    int chunkSize = 5; // 64 / sizeof(Node) // размер чанка
+    int nodesCount = 0; // количество элементов списка
 
 private:
     Node *allocateChunk();
+
+    void *freeChunk(Node *chunk);
 
     static void throwException();
 
