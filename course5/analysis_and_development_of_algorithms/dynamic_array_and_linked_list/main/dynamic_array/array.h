@@ -105,6 +105,17 @@ public:
     explicit Array(int capacity);
 
     /**
+     * Запрет констуктора копирования
+     */
+    Array(const Array&) = delete;
+
+    /**
+     * Запрет оператора присваивания
+     * @return
+     */
+    Array& operator=(const Array&) = delete;
+
+    /**
      * Деструктор
      * Освобождает память
      */

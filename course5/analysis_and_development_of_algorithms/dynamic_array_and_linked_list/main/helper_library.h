@@ -24,6 +24,14 @@ enum Color {
 
 std::string colors[] = {"Yellow", "Purple", "White", "Pink", "Orange"};
 
+enum Locale {
+    EN,
+    FR,
+    IT
+};
+
+std::string locales[] = {"EN", "FR", "IT"};
+
 /**
  * Пользовательский тип данных Цветок
  */
@@ -65,8 +73,44 @@ std::ostream &operator<<(std::ostream &out, const Flower flower) {
 }
 
 /**
+ * Пользовательский тип данных Alphabet
+ */
+struct Alphabet {
+    char letter; // символ
+    Locale locale; // локаль
+
+    Alphabet() {}
+
+    Alphabet(char letter, Locale locale) {
+        this->letter = letter;
+        this->locale = locale;
+    }
+};
+
+/**
+ * Переопределение оператора != (неравенства) для типа данных Alphabet
+ * @param letter1 - первый сравниваемый объект
+ * @param letter2 - второй сравниваемый объект
+ * @return true, если объекты различны, false, если объекты эквивалентны
+ */
+bool operator!=(const Alphabet letter1, const Alphabet letter2) {
+    return letter1.letter != letter2.letter || letter1.locale != letter2.locale;
+}
+
+/**
+ * Переопределение оператора << (вывода) для типа данных Alphabet
+ * @param out
+ * @param letter - объект, информацию о котором нужно вывести на экран
+ * @return
+ */
+std::ostream &operator<<(std::ostream &out, const Alphabet letter) {
+    out << "Letter: " << letter.letter << ", Locale: " << locales[letter.locale];
+    return out;
+}
+
+/**
  * Выводит элементы массива на экран через пробел с запятой
- * @tparam T - тип элементов массивов
+ * @tparam T - тип элементов массива
  * @param array - сформированный динамический массив
  */
 template<typename T>
@@ -82,7 +126,14 @@ void printCustomArray(const Array<T> &array) {
     std::cout << std::endl;
 }
 
-void formArrayFromList(List list, int *arrayList) {
+/**
+ * Формирует массив из элементов списка
+ * @tparam T - тип элементов
+ * @param list - исходный список
+ * @param arrayList - массив, который нужно заполнить элементами списка
+ */
+template<typename T>
+void formArrayFromList(List<T> list, T *arrayList) {
     int i = 0;
 
     for (auto it = list.iterator(); it.hasNext(); it.next()) {
@@ -93,7 +144,14 @@ void formArrayFromList(List list, int *arrayList) {
     arrayList[i] = list.tail();
 }
 
-void printArray(int *array, int size) {
+/**
+ * Выводит элементы массива на экран через пробел с запятой
+ * @tparam T - тип элементов массива
+ * @param array - массив, элементы которого нужно вывести на экран
+ * @param size - предполагаемый размер массива
+ */
+template<typename T>
+void printArray(T *array, int size) {
     for (int i = 0; i < size; i++) {
         if (i == size - 1) {
             std::cout << array[i];

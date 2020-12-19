@@ -3,7 +3,8 @@
 
 #include "../main/helper_library.h"
 
-bool elementsAreEqual(int *arrayList, int *expectedArrayList, int size) {
+template<typename T>
+bool elementsAreEqual(T *arrayList, T *expectedArrayList, int size) {
     for (int i = 0; i < size; i++) {
         if (arrayList[i] != expectedArrayList[i]) {
             return false;
@@ -17,7 +18,7 @@ bool elementsAreEqual(int *arrayList, int *expectedArrayList, int size) {
  * Проверка на списке из 1 элемента операций insertHead, size, head, tail
  */
 TEST(list, Test1) {
-    List list;
+    List<int> list;
     EXPECT_EQ(list.size(), 0);
 
     list.insertHead(6);
@@ -30,7 +31,7 @@ TEST(list, Test1) {
  * Проверка на списке из 3 элементов операций insertHead, size, head, tail
  */
 TEST(list, Test2) {
-    List list;
+    List<int> list;
     EXPECT_EQ(list.size(), 0);
 
     list.insertHead(8);
@@ -48,7 +49,7 @@ TEST(list, Test2) {
  * Вывод списка на экран обходом слева направо с помощью итератора, операций hasNext, next, get
  */
 TEST(list, Test3) {
-    List list;
+    List<int> list;
     int i = 0;
     int size = 6;
     int arrayList[size];
@@ -77,7 +78,7 @@ TEST(list, Test3) {
  * Вывод списка на экран обходом справа налево с помощью итератора, операций hasPrev, prev, get
  */
 TEST(list, Test4) {
-    List list;
+    List<int> list;
     int i = 5;
     int size = 6;
     int arrayList[size];
@@ -112,7 +113,7 @@ TEST(list, Test4) {
  * Проверка на списке из 4 элементов, что работает операция removeHead
  */
 TEST(list, Test5) {
-    List list;
+    List<int> list;
     int size = 3;
     int arrayList[size];
     int expectedArrayList[] = {9, 21, 13};
@@ -135,7 +136,7 @@ TEST(list, Test5) {
  * (очищение чанка)
  */
 TEST(list, Test6) {
-    List list;
+    List<int> list;
     int size = 4;
     int arrayList[size];
     int expectedArrayList[] = {0, 11, 2, 37};
@@ -168,7 +169,7 @@ TEST(list, Test6) {
  * (выделение чанка)
  */
 TEST(list, Test7) {
-    List list;
+    List<int> list;
     int size = 6;
     int arrayList[size];
     int expectedArrayList[] = {15, 22, 51, 12, 68, 72};
@@ -192,7 +193,7 @@ TEST(list, Test7) {
  * (очищение чанка)
  */
 TEST(list, Test8) {
-    List list;
+    List<int> list;
     int size = 4;
     int arrayList[size];
     int expectedArrayList[] = {7, 50, 24, 9};
@@ -224,7 +225,7 @@ TEST(list, Test8) {
  * Проверка списка при воздействии на него операциями insertHead, insertTail, removeHead, removeTail
  */
 TEST(list, Test9) {
-    List list;
+    List<int> list;
     int size = 6;
     int arrayList[size];
     int expectedArrayList[] = {24, 50, 7, 61, 73, 57};
@@ -254,7 +255,7 @@ TEST(list, Test9) {
  * Проверка операции set итератора
  */
 TEST(list, Test10) {
-    List list;
+    List<int> list;
     int size = 6;
     int arrayList[size];
     int expectedArrayList[] = {94, 57, 10, 92, 5, 63};
@@ -281,7 +282,7 @@ TEST(list, Test10) {
  * Проверка операции insert итератора
  */
 TEST(list, Test11) {
-    List list;
+    List<int> list;
     int size = 9;
     int arrayList[size];
     int expectedArrayList[] = {2, 3, 4, 5, 101, 7, 6, 3, 9};
@@ -314,7 +315,7 @@ TEST(list, Test11) {
  * Проверка нескольких операций insert итератора
  */
 TEST(list, Test12) {
-    List list;
+    List<int> list;
     auto iterator = list.iterator();
     int size = 4;
     int arrayList[size];
@@ -342,7 +343,7 @@ TEST(list, Test12) {
  * Проверка операции remove итератора
  */
 TEST(list, Test13) {
-    List list;
+    List<int> list;
     int size = 8;
     int arrayList[size];
     int expectedArrayList[] = {34, 52, 20, 95, 77, 44, 82, 46};
@@ -375,7 +376,7 @@ TEST(list, Test13) {
  * Проверка нескольких операций remove итератора
  */
 TEST(list, Test14) {
-    List list;
+    List<int> list;
     auto iterator = list.iterator();
     int size = 2;
     int arrayList[size];
@@ -407,10 +408,131 @@ TEST(list, Test14) {
     printArray(arrayList, size);
 }
 
+/**
+ * Проверка на списке элементов типа double
+ */
 TEST(list, Test15) {
-    List list;
-    auto iterator = list.iterator();
+    List<double> list;
+    int size = 6;
+    double arrayList[size];
+    double expectedArrayList[] = {2.4, 50.201, 7.32, 6.15, 7.3, 5.7};
 
-    //iterator.get();
+    list.insertTail(7.32); // 7.32
+    list.insertHead(50.201); // 50.201 7.32
+    list.insertHead(2.4); // 2.4 50.201 7.32
+    list.insertTail(6.15); // 2.4 50.201 7.32 6.15
+    list.insertTail(7.3); // 2.4 50.201 7.32 6.15 7.3
+    list.insertHead(4.81); // 4.81 2.4 50.201 7.32 6.15 7.3
+    list.insertTail(5.7); // 4.81 2.4 50.201 7.32 6.15 7.3 5.7
+    list.insertHead(3.29); // 3.29 4.81 2.4 50.201 7.32 6.15 7.3 5.7
+    list.insertTail(54.701); // 3.29 4.81 2.4 50.201 7.32 6.15 7.3 5.7 54.701
+    list.insertTail(4.2); // 3.29 4.81 2.4 50.201 7.32 6.15 7.3 5.7 54.701 4.2
+
+    list.removeHead(); // 4.81 2.4 50.201 7.32 6.15 7.3 5.7 54.701 4.2
+    list.removeTail(); // 4.81 2.4 50.201 7.32 6.15 7.3 5.7 54.701
+    list.removeHead(); // 2.4 50.201 7.32 6.15 7.3 5.7 54.701
+    list.removeTail(); // 2.4 50.201 7.32 6.15 7.3 5.7
+
+    formArrayFromList(list, arrayList);
+    EXPECT_TRUE(elementsAreEqual(arrayList, expectedArrayList, size));
+    printArray(arrayList, size);
+}
+
+/**
+ * Проверка на списке элементов типа bool
+ */
+TEST(list, Test16) {
+    List<bool> list;
+    int size = 6;
+    bool arrayList[size];
+    bool expectedArrayList[] = {true, false, true, true, false, false};
+
+    list.insertTail(true); // true
+    list.insertHead(false); // false true
+    list.insertHead(true); // true false true
+    list.insertTail(true); // true false true true
+    list.insertTail(false); // true false true true false
+    list.insertHead(false); // false true false true true false
+    list.insertTail(false); // false true false true true false false
+    list.insertHead(true); // true false true false true true false false
+    list.insertTail(true); // true false true false true true false false true
+    list.insertTail(false); // true false true false true true false false true false
+
+    list.removeHead(); // false true false true true false false true false
+    list.removeTail(); // false true false true true false false true
+    list.removeHead(); // true false true true false false true
+    list.removeTail(); // true false true true false false
+
+    formArrayFromList(list, arrayList);
+    EXPECT_TRUE(elementsAreEqual(arrayList, expectedArrayList, size));
+    printArray(arrayList, size);
+}
+
+/**
+ * Проверка на списке элементов типа char
+ */
+TEST(list, Test17) {
+    List<char> list;
+    int size = 3;
+    char arrayList[size];
+    char expectedArrayList[] = {'m', 'a', 'g'};
+
+    list.insertHead('n'); // n
+    list.insertHead('i'); // i n
+    list.insertHead('g'); // g i n
+    list.insertHead('a'); // a g i n
+    list.insertHead('m'); // m a g i n
+    list.insertHead('i'); // i m a g i n
+    list.insertTail('a'); // i m a g i n a
+    list.insertTail('t'); // i m a g i n a t
+    list.insertTail('i'); // i m a g i n a t i
+    list.insertTail('o'); // i m a g i n a t i o
+    list.insertTail('n'); // i m a g i n a t i o n
+
+    list.removeHead(); // m a g i n a t i o n
+
+    for (int i = 0; i < 7; i++) {
+        list.removeTail();
+    }
+
+    formArrayFromList(list, arrayList);
+    EXPECT_TRUE(elementsAreEqual(arrayList, expectedArrayList, size));
+    printArray(arrayList, size);
+}
+
+/**
+ * Проверка на списке элементов пользовательского типа данных Alphabet
+ */
+TEST(list, Test18) {
+    List<Alphabet> list;
+    int size = 5;
+    Alphabet arrayList[size];
+    Alphabet expectedArrayList[] = {
+            Alphabet('m', EN),
+            Alphabet('a', FR),
+            Alphabet('g', IT),
+            Alphabet('i', EN),
+            Alphabet('c', FR)
+    };
+
+    list.insertHead(Alphabet('g', IT));
+    list.insertHead(Alphabet('a', FR));
+    list.insertHead(Alphabet('m', EN));
+    list.insertTail(Alphabet('j', EN));
+    list.insertTail(Alphabet('s', FR));
+    list.insertTail(Alphabet('c', FR));
+
+    auto it = list.iterator();
+
+    for (int i = 0; i < 4; i++) {
+        it.next();
+    }
+
+    it.remove();
+    it.set(Alphabet('i', EN));
+
+    formArrayFromList(list, arrayList);
+    EXPECT_TRUE(elementsAreEqual(arrayList, expectedArrayList, size));
+    printArray(arrayList, size);
 }
 

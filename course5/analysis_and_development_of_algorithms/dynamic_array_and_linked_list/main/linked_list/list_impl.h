@@ -1,30 +1,36 @@
 #ifndef DYNAMIC_ARRAY_AND_LINKED_LIST_LIST_IMPL_H
 #define DYNAMIC_ARRAY_AND_LINKED_LIST_LIST_IMPL_H
 
-List::Node *List::allocateChunk() {
+template<typename T>
+typename List<T>::Node *List<T>::allocateChunk() {
     return (Node *) malloc(sizeof(Node) * chunkSize);
 }
 
-void List::freeChunk(Node *chunk) {
+template<typename T>
+void List<T>::freeChunk(Node *chunk) {
     free(chunk);
 }
 
-void List::throwException() {
+template<typename T>
+void List<T>::throwException() {
     throw std::invalid_argument("Accessing list out of bounds");
 }
 
-List::List() {
+template<typename T>
+List<T>::List() {
     headNode = allocateChunk();
     headNode->index = -1;
 }
 
-List::~List() {
+template<typename T>
+List<T>::~List() {
     if (nodesCount == 0) {
         free(headNode);
     }
 }
 
-void List::insertHead(const int &value) {
+template<typename T>
+void List<T>::insertHead(const T &value) {
     int index = chunkSize - 1;
 
     if (nodesCount == 0) {
@@ -48,7 +54,8 @@ void List::insertHead(const int &value) {
     nodesCount++;
 }
 
-void List::insertTail(const int &value) {
+template<typename T>
+void List<T>::insertTail(const T &value) {
     int index = 0;
 
     if (nodesCount == 0) {
@@ -70,7 +77,8 @@ void List::insertTail(const int &value) {
     nodesCount++;
 }
 
-void List::removeHead() {
+template<typename T>
+void List<T>::removeHead() {
     if (nodesCount == 0) {
         throwException();
     }
@@ -88,7 +96,8 @@ void List::removeHead() {
     nodesCount--;
 }
 
-void List::removeTail() {
+template<typename T>
+void List<T>::removeTail() {
     if (nodesCount == 0) {
         throwException();
     }
@@ -106,7 +115,8 @@ void List::removeTail() {
     nodesCount--;
 }
 
-const int &List::head() const {
+template<typename T>
+const T &List<T>::head() const {
     if (nodesCount == 0) {
         throwException();
     }
@@ -114,7 +124,8 @@ const int &List::head() const {
     return headNode->value;
 }
 
-const int &List::tail() const {
+template<typename T>
+const T &List<T>::tail() const {
     if (nodesCount == 0) {
         throwException();
     }
@@ -122,31 +133,37 @@ const int &List::tail() const {
     return tailNode->value;
 }
 
-int List::size() const {
+template<typename T>
+int List<T>::size() const {
     return nodesCount;
 }
 
-List::Iterator List::iterator() {
+template<typename T>
+typename List<T>::Iterator List<T>::iterator() {
     return Iterator(this, headNode, chunkSize);
 }
 
-List::Iterator List::iterator() const {
+template<typename T>
+typename List<T>::Iterator List<T>::iterator() const {
     return Iterator(this, headNode, chunkSize);
 }
 
-List::Iterator::Iterator(List *list, Node *currentNodePointer, int chunkSize) {
+template<typename T>
+List<T>::Iterator::Iterator(List *list, Node *currentNodePointer, int chunkSize) {
     this->list = list;
     this->currentNodePointer = currentNodePointer;
     this->chunkSize = chunkSize;
 }
 
-List::Iterator::Iterator(const List *list, Node *currentNodePointer, int chunkSize) {
+template<typename T>
+List<T>::Iterator::Iterator(const List *list, Node *currentNodePointer, int chunkSize) {
     this->readableList = list;
     this->currentNodePointer = currentNodePointer;
     this->chunkSize = chunkSize;
 }
 
-const int &List::Iterator::get() const {
+template<typename T>
+const T &List<T>::Iterator::get() const {
     if (readableList && readableList->size() == 0 || list && list->size() == 0) {
         throwException();
     }
@@ -154,7 +171,8 @@ const int &List::Iterator::get() const {
     return currentNodePointer->value;
 }
 
-void List::Iterator::set(const int &value) {
+template<typename T>
+void List<T>::Iterator::set(const T &value) {
     if (readableList && readableList->size() == 0 || list && list->size() == 0) {
         throwException();
     }
@@ -162,7 +180,8 @@ void List::Iterator::set(const int &value) {
     currentNodePointer->value = value;
 }
 
-void List::Iterator::insert(const int &value) {
+template<typename T>
+void List<T>::Iterator::insert(const T &value) {
     if (readableList) {
         throwException();
     }
@@ -190,7 +209,8 @@ void List::Iterator::insert(const int &value) {
     currentNodePointer->value = value;
 }
 
-void List::Iterator::remove() {
+template<typename T>
+void List<T>::Iterator::remove() {
     if (readableList || list->size() == 0) {
         throwException();
     } else if (list->size() == 1) {
@@ -215,7 +235,8 @@ void List::Iterator::remove() {
     currentNodePointer = brokenNodePointer;
 }
 
-void List::Iterator::next() {
+template<typename T>
+void List<T>::Iterator::next() {
     if (!hasNext()) {
         throwException();
     }
@@ -227,7 +248,8 @@ void List::Iterator::next() {
     }
 }
 
-void List::Iterator::prev() {
+template<typename T>
+void List<T>::Iterator::prev() {
     if (!hasPrev()) {
         throwException();
     }
@@ -239,11 +261,13 @@ void List::Iterator::prev() {
     }
 }
 
-bool List::Iterator::hasNext() const {
+template<typename T>
+bool List<T>::Iterator::hasNext() const {
     return list ? currentNodePointer != list->tailNode : currentNodePointer != readableList->tailNode;
 }
 
-bool List::Iterator::hasPrev() const {
+template<typename T>
+bool List<T>::Iterator::hasPrev() const {
     return list ? currentNodePointer != list->headNode : currentNodePointer != readableList->headNode;
 }
 

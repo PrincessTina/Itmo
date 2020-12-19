@@ -1,9 +1,14 @@
 #ifndef DYNAMIC_ARRAY_AND_LINKED_LIST_LIST_H
 #define DYNAMIC_ARRAY_AND_LINKED_LIST_LIST_H
-//ToDo: переписать на шаблоны
+
+/**
+ * Двусвязный список на чанках
+ * @tparam T - тип элементов списка
+ */
+template<typename T>
 class List final {
     struct Node {
-        int value; // значение элемента
+        T value; // значение элемента
         int index; // индекс элемента в текущем чанке
         Node *nextChunk = nullptr; // указатель на элемент следующего (слева или справа) чанка
     };
@@ -12,18 +17,18 @@ class List final {
         const List *readableList = nullptr; // указатель на список только для чтения
         List *list = nullptr; // указатель на список для чтения и записи
         Node *currentNodePointer; // указатель на текущий элемент списка
-        int chunkSize;
+        int chunkSize; // размер чанка списка
 
     public:
         Iterator(List *list, Node *currentNodePointer, int chunkSize);
 
         Iterator(const List *list, Node *currentNodePointer, int chunkSize);
 
-        const int &get() const;
+        const T &get() const;
 
-        void set(const int &value);
+        void set(const T &value);
 
-        void insert(const int &value);
+        void insert(const T &value);
 
         void remove();
 
@@ -51,19 +56,27 @@ private:
 public:
     List();
 
+    //List(const List&) = delete; // запрет копирования
+
+    /**
+     * Запрет оператора присваивания
+     * @return
+     */
+    List& operator=(const List&) = delete;
+
     ~List();
 
-    void insertHead(const int &value);
+    void insertHead(const T &value);
 
-    void insertTail(const int &value);
+    void insertTail(const T &value);
 
     void removeHead();
 
     void removeTail();
 
-    const int &head() const;
+    const T &head() const;
 
-    const int &tail() const;
+    const T &tail() const;
 
     int size() const;
 
