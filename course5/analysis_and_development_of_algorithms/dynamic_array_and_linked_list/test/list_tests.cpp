@@ -277,3 +277,140 @@ TEST(list, Test10) {
     printArray(arrayList, size);
 }
 
+/**
+ * Проверка операции insert итератора
+ */
+TEST(list, Test11) {
+    List list;
+    int size = 9;
+    int arrayList[size];
+    int expectedArrayList[] = {2, 3, 4, 5, 101, 7, 6, 3, 9};
+
+    list.insertHead(5);
+    list.insertHead(4);
+    list.insertHead(3);
+    list.insertHead(2);
+    list.insertTail(7);
+    list.insertTail(6);
+    list.insertTail(3);
+    list.insertTail(9);
+
+    auto iterator = list.iterator();
+
+    for (int i = 0; i < 4; i++) {
+        iterator.next();
+    }
+
+    iterator.insert(101);
+    iterator.next();
+    EXPECT_EQ(iterator.get(), 7);
+
+    formArrayFromList(list, arrayList);
+    EXPECT_TRUE(elementsAreEqual(arrayList, expectedArrayList, size));
+    printArray(arrayList, size);
+}
+
+/**
+ * Проверка нескольких операций insert итератора
+ */
+TEST(list, Test12) {
+    List list;
+    auto iterator = list.iterator();
+    int size = 4;
+    int arrayList[size];
+    int expectedArrayList[] = {0, 4, 22, 12};
+
+    iterator.insert(12); // 12
+    iterator.insert(4); // 4 12
+
+    iterator.next();
+    EXPECT_EQ(iterator.get(), 12);
+
+    iterator.insert(22); // 4 22 12
+
+    iterator.prev();
+    EXPECT_EQ(iterator.get(), 4);
+
+    iterator.insert(0); // 0 4 22 12
+
+    formArrayFromList(list, arrayList);
+    EXPECT_TRUE(elementsAreEqual(arrayList, expectedArrayList, size));
+    printArray(arrayList, size);
+}
+
+/**
+ * Проверка операции remove итератора
+ */
+TEST(list, Test13) {
+    List list;
+    int size = 8;
+    int arrayList[size];
+    int expectedArrayList[] = {34, 52, 20, 95, 77, 44, 82, 46};
+
+    list.insertHead(53);
+    list.insertHead(95);
+    list.insertHead(20);
+    list.insertHead(52);
+    list.insertHead(34);
+    list.insertTail(77);
+    list.insertTail(44);
+    list.insertTail(82);
+    list.insertTail(46);
+
+    auto iterator = list.iterator();
+
+    for (int i = 0; i < 4; i++) {
+        iterator.next();
+    }
+
+    iterator.remove();
+    EXPECT_EQ(iterator.get(), 95);
+
+    formArrayFromList(list, arrayList);
+    EXPECT_TRUE(elementsAreEqual(arrayList, expectedArrayList, size));
+    printArray(arrayList, size);
+}
+
+/**
+ * Проверка нескольких операций remove итератора
+ */
+TEST(list, Test14) {
+    List list;
+    auto iterator = list.iterator();
+    int size = 2;
+    int arrayList[size];
+    int expectedArrayList[] = {92, 44};
+
+    iterator.insert(19); // 19
+    iterator.remove();
+
+    iterator.insert(44); // 44
+    iterator.insert(92); // 92 44
+    iterator.insert(13); // 13 92 44
+    iterator.insert(6); // 6 13 92 44
+    iterator.insert(-81); // -81 6 13 92 44
+    iterator.insert(29); // 29 -81 6 13 92 44
+
+    iterator.next();
+    iterator.next();
+
+    iterator.remove(); // 29 -81 13 92 44
+    EXPECT_EQ(iterator.get(), -81);
+
+    iterator.next();
+    iterator.remove(); // 29 -81 92 44
+    iterator.remove(); // 29 92 44
+    iterator.remove(); // 92 44
+
+    formArrayFromList(list, arrayList);
+    EXPECT_TRUE(elementsAreEqual(arrayList, expectedArrayList, size));
+    printArray(arrayList, size);
+}
+
+TEST(list, Test15) {
+    List list;
+    auto iterator = list.iterator();
+
+    //iterator.get();
+}
+

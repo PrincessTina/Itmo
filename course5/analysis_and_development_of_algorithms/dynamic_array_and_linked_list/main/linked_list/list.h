@@ -1,6 +1,6 @@
 #ifndef DYNAMIC_ARRAY_AND_LINKED_LIST_LIST_H
 #define DYNAMIC_ARRAY_AND_LINKED_LIST_LIST_H
-
+//ToDo: переписать на шаблоны
 class List final {
     struct Node {
         int value; // значение элемента
@@ -11,8 +11,8 @@ class List final {
     class Iterator {
         const List *readableList = nullptr; // указатель на список только для чтения
         List *list = nullptr; // указатель на список для чтения и записи
-        int chunkSize; // размер чанка списка
         Node *currentNodePointer; // указатель на текущий элемент списка
+        int chunkSize;
 
     public:
         Iterator(List *list, Node *currentNodePointer, int chunkSize);
@@ -38,13 +38,13 @@ class List final {
 
     Node *headNode = nullptr; // указатель на начало списка
     Node *tailNode = nullptr; // указатель на конец списка
-    int chunkSize = 5; // 64 / sizeof(Node) // размер чанка
+    int chunkSize = 64 / sizeof(Node); // размер чанка
     int nodesCount = 0; // количество элементов списка
 
 private:
     Node *allocateChunk();
 
-    void *freeChunk(Node *chunk);
+    void freeChunk(Node *chunk);
 
     static void throwException();
 

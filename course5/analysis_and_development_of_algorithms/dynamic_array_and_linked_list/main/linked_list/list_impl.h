@@ -5,7 +5,7 @@ List::Node *List::allocateChunk() {
     return (Node *) malloc(sizeof(Node) * chunkSize);
 }
 
-void *List::freeChunk(Node *chunk) {
+void List::freeChunk(Node *chunk) {
     free(chunk);
 }
 
@@ -15,6 +15,7 @@ void List::throwException() {
 
 List::List() {
     headNode = allocateChunk();
+    headNode->index = -1;
 }
 
 List::~List() {
@@ -27,7 +28,7 @@ void List::insertHead(const int &value) {
     int index = chunkSize - 1;
 
     if (nodesCount == 0) {
-        headNode += index;
+        headNode = headNode->index == -1 ? headNode + index : headNode;
         tailNode = headNode;
     } else if (headNode->index == 0) {
         Node *temporary = allocateChunk();
@@ -74,14 +75,14 @@ void List::removeHead() {
         throwException();
     }
 
-    if (nodesCount == 1) {
-        headNode = tailNode = nullptr;
-    } else if (headNode->index == chunkSize - 1) {
-        headNode = headNode->nextChunk;
-        freeChunk(headNode->nextChunk - chunkSize + 1);
-        headNode->nextChunk = nullptr;
-    } else {
-        headNode++;
+    if (nodesCount != 1) {
+        if (headNode->index == chunkSize - 1) {
+            headNode = headNode->nextChunk;
+            freeChunk(headNode->nextChunk - chunkSize + 1);
+            headNode->nextChunk = nullptr;
+        } else {
+            headNode++;
+        }
     }
 
     nodesCount--;
@@ -92,14 +93,14 @@ void List::removeTail() {
         throwException();
     }
 
-    if (nodesCount == 1) {
-        headNode = tailNode = nullptr;
-    } else if (tailNode->index == 0) {
-        tailNode = tailNode->nextChunk;
-        freeChunk(tailNode->nextChunk);
-        tailNode->nextChunk = nullptr;
-    } else {
-        tailNode--;
+    if (nodesCount != 1) {
+        if (tailNode->index == 0) {
+            tailNode = tailNode->nextChunk;
+            freeChunk(tailNode->nextChunk);
+            tailNode->nextChunk = nullptr;
+        } else {
+            tailNode--;
+        }
     }
 
     nodesCount--;
@@ -146,7 +147,7 @@ List::Iterator::Iterator(const List *list, Node *currentNodePointer, int chunkSi
 }
 
 const int &List::Iterator::get() const {
-    if (list->size() == 0) {
+    if (readableList && readableList->size() == 0 || list && list->size() == 0) {
         throwException();
     }
 
@@ -154,11 +155,64 @@ const int &List::Iterator::get() const {
 }
 
 void List::Iterator::set(const int &value) {
-    if (list->size() == 0) {
+    if (readableList && readableList->size() == 0 || list && list->size() == 0) {
         throwException();
     }
 
     currentNodePointer->value = value;
+}
+
+void List::Iterator::insert(const int &value) {
+    if (readableList) {
+        throwException();
+    }
+
+    if (list->size() == 0) {
+        list->insertHead(value);
+        currentNodePointer = list->headNode;
+        return;
+    }
+
+    Node *brokenNodePointer = currentNodePointer;
+    currentNodePointer = list->tailNode;
+    list->insertTail(list->tailNode->value);
+
+    while (currentNodePointer != brokenNodePointer) {
+        if (currentNodePointer->index > 0) {
+            set((currentNodePointer - 1)->value);
+            currentNodePointer--;
+        } else {
+            set(currentNodePointer->nextChunk->value);
+            currentNodePointer = currentNodePointer->nextChunk;
+        }
+    }
+
+    currentNodePointer->value = value;
+}
+
+void List::Iterator::remove() {
+    if (readableList || list->size() == 0) {
+        throwException();
+    } else if (list->size() == 1) {
+        list->removeHead();
+        currentNodePointer = list->headNode;
+        return;
+    }
+
+    Node *brokenNodePointer = currentNodePointer;
+
+    while (currentNodePointer != list->headNode) {
+        if (currentNodePointer->index > 0) {
+            set((currentNodePointer - 1)->value);
+            currentNodePointer--;
+        } else {
+            set(currentNodePointer->nextChunk->value);
+            currentNodePointer = currentNodePointer->nextChunk;
+        }
+    }
+
+    list->removeHead();
+    currentNodePointer = brokenNodePointer;
 }
 
 void List::Iterator::next() {
@@ -186,11 +240,11 @@ void List::Iterator::prev() {
 }
 
 bool List::Iterator::hasNext() const {
-    return currentNodePointer != list->tailNode;
+    return list ? currentNodePointer != list->tailNode : currentNodePointer != readableList->tailNode;
 }
 
 bool List::Iterator::hasPrev() const {
-    return currentNodePointer != list->headNode;
+    return list ? currentNodePointer != list->headNode : currentNodePointer != readableList->headNode;
 }
 
 #endif //DYNAMIC_ARRAY_AND_LINKED_LIST_LIST_IMPL_H
