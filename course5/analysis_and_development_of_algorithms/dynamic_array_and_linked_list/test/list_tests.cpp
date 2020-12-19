@@ -3,6 +3,14 @@
 
 #include "../main/helper_library.h"
 
+/**
+ * Сравнивает элементы массивов
+ * @tparam T - тип элементов массивов
+ * @param arrayList - сформированный массив из элементов списка
+ * @param expectedArrayList - массив с ожидаемыми элементами
+ * @param size - количество элементов в массивах
+ * @return true, если массивы одинаковы, иначе false
+ */
 template<typename T>
 bool elementsAreEqual(T *arrayList, T *expectedArrayList, int size) {
     for (int i = 0; i < size; i++) {
