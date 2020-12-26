@@ -4,6 +4,11 @@
 #include "list.h"
 
 template<typename T>
+void List<T>::throwException() {
+    throw std::invalid_argument("Accessing list out of bounds");
+}
+
+template<typename T>
 typename List<T>::Chunk *List<T>::allocateChunk() {
     Chunk *chunk = (Chunk *) malloc(sizeof(Chunk));
     chunk->nodes = (T *) malloc(sizeof(T) * chunkSize);
@@ -19,11 +24,6 @@ void List<T>::freeChunk(List::Chunk *chunk) {
 }
 
 template<typename T>
-void List<T>::throwException() {
-    throw std::invalid_argument("Accessing list out of bounds");
-}
-
-template<typename T>
 void List<T>::insertInChunk(Chunk *chunk, int index, const T &value) {
     for (int i = chunk->length; i > index; i--) {
         chunk->nodes[i] = std::move(chunk->nodes[i - 1]);
@@ -31,6 +31,7 @@ void List<T>::insertInChunk(Chunk *chunk, int index, const T &value) {
 
     chunk->nodes[index] = value;
     chunk->length++;
+    nodesCount++;
 }
 
 template<typename T>
@@ -40,6 +41,90 @@ void List<T>::removeFromChunk(Chunk *chunk, int index) {
     }
 
     chunk->length--;
+    nodesCount--;
+}
+
+template<typename T>
+int List<T>::relocateChunkPartToRight(Chunk *chunkFrom, Chunk *chunkTo) {
+    int length = (chunkFrom->length > chunkSize / 2) ? chunkSize / 2 : chunkFrom->length;
+
+    for (int i = 0; i < length; i++) {
+        insertInChunk(chunkTo, 0, chunkFrom->nodes[chunkFrom->length - 1]);
+        removeFromChunk(chunkFrom, chunkFrom->length - 1);
+    }
+
+    return length;
+}
+
+template<typename T>
+void List<T>::relocateChunkPartToLeft(List::Chunk *chunkFrom, List::Chunk *chunkTo) {
+    int length = (chunkFrom->length > chunkSize / 2) ? chunkSize / 2 : chunkFrom->length;
+
+    for (int i = 0; i < length; i++) {
+        insertInChunk(chunkTo, chunkTo->length, chunkFrom->nodes[0]);
+        removeFromChunk(chunkFrom, 0);
+    }
+}
+
+template<typename T>
+int List<T>::insert(Chunk *chunkPointer, int index, const T &value) {
+    if (chunkPointer->length == chunkSize) {
+        Chunk *chunk = allocateChunk();
+        chunk->next = chunkPointer->next;
+        chunk->prev = chunkPointer;
+        chunkPointer->next = chunk;
+
+        tailChunk = (chunkPointer == tailChunk) ? chunk : tailChunk;
+
+        relocateChunkPartToRight(chunkPointer, chunk);
+
+        if (index > chunkSize / 2) {
+            chunkPointer = chunkPointer->next;
+            index = (index < chunkSize) ? index % (chunkSize / 2) : chunkSize / 2;
+        }
+    }
+
+    insertInChunk(chunkPointer, index, value);
+    return index;
+}
+
+template<typename T>
+int List<T>::remove(Chunk *chunkPointer, int index) {
+    if (nodesCount == 0) {
+        throwException();
+    }
+
+    removeFromChunk(chunkPointer, index);
+
+    if (chunkPointer->length <= chunkSize / 2) {
+        if (chunkPointer == headChunk && chunkPointer == tailChunk) {
+            return index;
+        }
+
+        if (chunkPointer != tailChunk) {
+            relocateChunkPartToLeft(chunkPointer->next, chunkPointer);
+
+            if (chunkPointer->next->length == 0) {
+                Chunk *chunkToFree = chunkPointer->next;
+
+                chunkPointer->next = chunkToFree->next;
+                (chunkToFree == tailChunk) ? tailChunk = chunkPointer : chunkPointer->next->prev = chunkPointer;
+                freeChunk(chunkToFree);
+            }
+        } else {
+            index = index + relocateChunkPartToRight(chunkPointer->prev, chunkPointer);
+
+            if (chunkPointer->prev->length == 0) {
+                Chunk *chunkToFree = chunkPointer->prev;
+
+                chunkPointer->prev = chunkToFree->prev;
+                (chunkToFree == headChunk) ? headChunk = chunkPointer : chunkPointer->prev->next = chunkPointer;
+                freeChunk(chunkToFree);
+            }
+        }
+    }
+
+    return index;
 }
 
 template<typename T>
@@ -49,67 +134,29 @@ List<T>::List() {
 
 template<typename T>
 List<T>::~List() {
-
+    if (nodesCount == 0) {
+        freeChunk(headChunk);
+    }
 }
 
 template<typename T>
 void List<T>::insertHead(const T &value) {
-    if (headChunk->length == chunkSize) {
-        Chunk *temporary = allocateChunk();
-
-        headChunk->prev = temporary;
-        temporary->next = headChunk;
-        headChunk = temporary;
-    }
-
-    insertInChunk(headChunk, 0, value);
-    nodesCount++;
+    insert(headChunk, 0, value);
 }
 
 template<typename T>
 void List<T>::insertTail(const T &value) {
-    if (tailChunk->length == chunkSize) {
-        Chunk *temporary = allocateChunk();
-
-        tailChunk->next = temporary;
-        temporary->prev = tailChunk;
-        tailChunk = temporary;
-    }
-
-    insertInChunk(tailChunk, tailChunk->length, value);
-    nodesCount++;
+    insert(tailChunk, tailChunk->length, value);
 }
 
 template<typename T>
 void List<T>::removeHead() {
-    if (nodesCount == 0) {
-        throwException();
-    }
-
-    removeFromChunk(headChunk, 0);
-    nodesCount--;
-
-    if (headChunk->length == 0 && nodesCount != 0) {
-        headChunk = headChunk->next;
-        freeChunk(headChunk->prev);
-        headChunk->prev = nullptr;
-    }
+    remove(headChunk, 0);
 }
 
 template<typename T>
 void List<T>::removeTail() {
-    if (nodesCount == 0) {
-        throwException();
-    }
-
-    removeFromChunk(tailChunk, tailChunk->length - 1);
-    nodesCount--;
-
-    if (tailChunk->length == 0 && nodesCount != 0) {
-        tailChunk = tailChunk->prev;
-        freeChunk(tailChunk->next);
-        tailChunk->next = nullptr;
-    }
+    remove(tailChunk, tailChunk->length - 1);
 }
 
 template<typename T>
@@ -175,15 +222,22 @@ void List<T>::Iterator::set(const T &value) {
     chunkPointer->nodes[nodeIndex] = value;
 }
 
-
 template<typename T>
 void List<T>::Iterator::insert(const T &value) {
+    if (readableList) {
+        throwException();
+    }
 
+    nodeIndex = list->insert(chunkPointer, nodeIndex, value);
 }
 
 template<typename T>
 void List<T>::Iterator::remove() {
+    if (readableList) {
+        throwException();
+    }
 
+    nodeIndex = list->remove(chunkPointer, nodeIndex);
 }
 
 template<typename T>
