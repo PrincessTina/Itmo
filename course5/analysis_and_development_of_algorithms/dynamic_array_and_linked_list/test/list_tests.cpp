@@ -52,23 +52,26 @@ TEST(list, Test2) {
 }
 
 /**
- * Проверка на списке из 6 элементов (> chunkSize), что при insertHead происходит расширение списка в левую сторону
- * (выделение чанка)
+ * Проверка на списке из 10 элементов (> chunkSize), что при insertHead выделяется новый чанк справа
  * Вывод списка на экран обходом слева направо с помощью итератора, операций hasNext, next, get
  */
 TEST(list, Test3) {
     List<int> list;
     int i = 0;
-    int size = 6;
+    int size = 10;
     int arrayList[size];
-    int expectedArrayList[] = {6, 4, 0, 5, 2, 8};
+    int expectedArrayList[] = {52, 21, 78, 98, 55, 86, 76, 88, 20, 25};
 
-    list.insertHead(8);
-    list.insertHead(2);
-    list.insertHead(5);
-    list.insertHead(0);
-    list.insertHead(4);
-    list.insertHead(6);
+    list.insertHead(25);
+    list.insertHead(20);
+    list.insertHead(88);
+    list.insertHead(76);
+    list.insertHead(86);
+    list.insertHead(55);
+    list.insertHead(98);
+    list.insertHead(78);
+    list.insertHead(21);
+    list.insertHead(52);
 
     for (auto it = list.iterator(); it.hasNext(); it.next()) {
         arrayList[i] = it.get();
@@ -77,7 +80,7 @@ TEST(list, Test3) {
 
     arrayList[i] = list.tail();
 
-    EXPECT_EQ(list.head(), 6);
+    EXPECT_EQ(list.head(), 52);
     EXPECT_TRUE(elementsAreEqual(arrayList, expectedArrayList, size));
     printArray(arrayList, size);
 }
@@ -140,8 +143,8 @@ TEST(list, Test5) {
 }
 
 /**
- * Проверка на списке из 10 элементов (> chunkSize), что при removeHead происходит сужение списка в правую сторону
- * (очищение чанка)
+ * Проверка на списке из 10 элементов (> chunkSize), что при removeHead очищается чанк справа
+ * (удаляем элементы из первого чанка)
  */
 TEST(list, Test6) {
     List<int> list;
@@ -173,32 +176,35 @@ TEST(list, Test6) {
 }
 
 /**
- * Проверка на списке из 6 элементов (> chunkSize), что при insertTail происходит расширение списка в правую сторону
- * (выделение чанка)
+ * Проверка на списке из 10 элементов (> chunkSize), что при insertTail выделяется новый чанк справа
  */
 TEST(list, Test7) {
     List<int> list;
-    int size = 6;
+    int size = 10;
     int arrayList[size];
-    int expectedArrayList[] = {15, 22, 51, 12, 68, 72};
+    int expectedArrayList[] = {8, 25, 15, 21, 17, 3, 37, 28, 11, 12};
 
+    list.insertTail(8);
+    list.insertTail(25);
     list.insertTail(15);
-    list.insertTail(22);
-    list.insertTail(51);
+    list.insertTail(21);
+    list.insertTail(17);
+    list.insertTail(3);
+    list.insertTail(37);
+    list.insertTail(28);
+    list.insertTail(11);
     list.insertTail(12);
-    list.insertTail(68);
-    list.insertTail(72);
 
     formArrayFromList(list, arrayList);
-    EXPECT_EQ(list.tail(), 72);
-    EXPECT_EQ(list.head(), 15);
+    EXPECT_EQ(list.tail(), 12);
+    EXPECT_EQ(list.head(), 8);
     EXPECT_TRUE(elementsAreEqual(arrayList, expectedArrayList, size));
     printArray(arrayList, size);
 }
 
 /**
- * Проверка на списке из 10 элементов (> chunkSize), что при removeTail происходит сужение списка в левую сторону
- * (очищение чанка)
+ * Проверка на списке из 10 элементов (> chunkSize), что при removeTail очищается чанк справа
+ * (удаляем элементы из первого чанка)
  */
 TEST(list, Test8) {
     List<int> list;
@@ -373,7 +379,7 @@ TEST(list, Test13) {
     }
 
     iterator.remove();
-    EXPECT_EQ(iterator.get(), 95);
+    EXPECT_EQ(iterator.get(), 77);
 
     formArrayFromList(list, arrayList);
     EXPECT_TRUE(elementsAreEqual(arrayList, expectedArrayList, size));
@@ -388,7 +394,7 @@ TEST(list, Test14) {
     auto iterator = list.iterator();
     int size = 2;
     int arrayList[size];
-    int expectedArrayList[] = {92, 44};
+    int expectedArrayList[] = {29, -81};
 
     iterator.insert(19); // 19
     iterator.remove();
@@ -404,12 +410,12 @@ TEST(list, Test14) {
     iterator.next();
 
     iterator.remove(); // 29 -81 13 92 44
-    EXPECT_EQ(iterator.get(), -81);
+    EXPECT_EQ(iterator.get(), 13);
 
     iterator.next();
-    iterator.remove(); // 29 -81 92 44
-    iterator.remove(); // 29 92 44
-    iterator.remove(); // 92 44
+    iterator.remove(); // 29 -81 13 44
+    iterator.remove(); // 29 -81 13
+    iterator.remove(); // 29 -81
 
     formArrayFromList(list, arrayList);
     EXPECT_TRUE(elementsAreEqual(arrayList, expectedArrayList, size));
@@ -537,10 +543,10 @@ TEST(list, Test18) {
     }
 
     it.remove();
+    it.prev();
     it.set(Alphabet('i', EN));
 
     formArrayFromList(list, arrayList);
     EXPECT_TRUE(elementsAreEqual(arrayList, expectedArrayList, size));
     printArray(arrayList, size);
 }
-
