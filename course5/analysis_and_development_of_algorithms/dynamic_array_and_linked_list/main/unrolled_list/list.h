@@ -1,19 +1,23 @@
 #ifndef DYNAMIC_ARRAY_AND_LINKED_LIST_LIST_H
 #define DYNAMIC_ARRAY_AND_LINKED_LIST_LIST_H
 
+
+
 /**
  * Двусвязный список на чанках
  * @tparam T - тип элементов списка
  */
 template<typename T>
 class List final {
+    static const int chunkSize = (sizeof(T) < 40) ? (64 - 24) / sizeof(T) : 1; // вместимость чанка, для int равен 10
+
     /**
      * Структура Chunk
      * Содержит ссылку на массив элементов чанка, количество элементов в массиве и ссылки на следующий / предыдущий чанки
-     * Занимает 32 байта
+     * Занимает 24 байта
      */
     struct Chunk {
-        T *nodes; // массив элементов
+        T nodes[chunkSize]; // массив элементов
         int length; // количество элементов в чанке
         Chunk *prev; // указатель на следующий чанк
         Chunk *next; // укзатель на предыдущий чанк
@@ -88,7 +92,6 @@ class List final {
 
     Chunk *headChunk = nullptr; // указатель на первый чанк списка
     Chunk *tailChunk = nullptr; // указатель на последний чанк списка
-    int chunkSize = (64 - sizeof(Chunk)) / sizeof(T); // вместимость чанка, для int равен 8
     int nodesCount = 0; // количество элементов списка
 
 private:

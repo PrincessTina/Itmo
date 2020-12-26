@@ -9,7 +9,6 @@ void List<T>::throwException() {
 template<typename T>
 typename List<T>::Chunk *List<T>::allocateChunk() {
     Chunk *chunk = (Chunk *) malloc(sizeof(Chunk));
-    chunk->nodes = (T *) malloc(sizeof(T) * chunkSize);
     chunk->length = 0;
     chunk->prev = chunk->next = nullptr;
     return chunk;
@@ -17,7 +16,6 @@ typename List<T>::Chunk *List<T>::allocateChunk() {
 
 template<typename T>
 void List<T>::freeChunk(List::Chunk *chunk) {
-    free(chunk->nodes);
     free(chunk);
 }
 
