@@ -2,7 +2,7 @@
 #define DYNAMIC_ARRAY_AND_LINKED_LIST_HELPER_LIBRARY_H
 
 #include "dynamic_array/array.h"
-#include "../main/unrolled_list/list.h"
+#include "unrolled_list/list.h"
 
 enum Flower_Name {
     Tulip,

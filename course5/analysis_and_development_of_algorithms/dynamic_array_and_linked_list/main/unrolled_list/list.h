@@ -1,10 +1,9 @@
 #ifndef DYNAMIC_ARRAY_AND_LINKED_LIST_LIST_H
 #define DYNAMIC_ARRAY_AND_LINKED_LIST_LIST_H
 
-
-
 /**
  * Двусвязный список на чанках
+ * Что такое Unrolled List? (https://habr.com/ru/post/149918/)
  * @tparam T - тип элементов списка
  */
 template<typename T>
@@ -13,7 +12,7 @@ class List final {
 
     /**
      * Структура Chunk
-     * Содержит ссылку на массив элементов чанка, количество элементов в массиве и ссылки на следующий / предыдущий чанки
+     * Содержит массив элементов чанка, количество элементов в массиве и ссылки на следующий / предыдущий чанки
      * Занимает 24 байта
      */
     struct Chunk {
