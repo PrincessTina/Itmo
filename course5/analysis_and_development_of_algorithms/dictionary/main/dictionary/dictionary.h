@@ -1,6 +1,8 @@
 #ifndef DICTIONARY_DICTIONARY_H
 #define DICTIONARY_DICTIONARY_H
 
+#include <stack>
+
 enum Color {
     BLACK,
     RED
@@ -22,9 +24,27 @@ class Dictionary final {
 private:
     Node *allocateNode();
 
-    Node *find(K key, Node *currentNode);
+    void freeNode(Node *node);
 
-    Node *find(K key, Node *currentNode, Node *parentNode);
+    Node *find(const K &key);
+
+    void find(const K &key, const V &value, std::stack<Node *> *path);
+
+    Node *findLeftmostNode(Node *node);
+
+    void rotateLeft(Node *parentNode);
+
+    void rotateRight(Node *grandParentNode);
+
+    void flipColor(Node *parentNode);
+
+    void moveRedLeft(Node *node);
+
+    void moveRedRight(Node *node);
+
+    Node *removeLeftmostNode(Node *node, std::stack<Node *> *path);
+
+    void fixNodesOrder(std::stack<Node *> *path, bool needFullTraversal);
 
 public:
     Dictionary();
@@ -43,8 +63,6 @@ public:
 
     int size() const;
 };
-
-
 
 #include "dictionary_impl.h"
 

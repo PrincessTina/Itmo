@@ -49,16 +49,162 @@ TEST(map, Test4) {
     EXPECT_EQ(map.size(), 2);
 }
 
+/**
+ * Проверка операций вставки 20 элементов
+ */
 TEST(map, Test5) {
     Dictionary<int, int> map;
-    map.put(1, 110);
-    map.put(3, 87);
-    map.put(5, 22);
-    map.put(6, 10);
-    map.put(7, 45);
-    map.put(0, -17);
 
-    //EXPECT_EQ(map[1], 110);
-    //EXPECT_EQ(map[6], 87);
+    for (int i = 1; i <= 20; i++) {
+        map.put(i, i);
+    }
+
+    for (int i = 1; i <= 20; i++) {
+        EXPECT_EQ(map[i], i);
+    }
+
+    EXPECT_EQ(map.size(), 20);
+}
+
+/**
+ * Проверка операции remove из самого левого листа
+ */
+TEST(map, Test6) {
+    Dictionary<int, int> map;
+
+    for (int i = 1; i <= 20; i++) {
+        map.put(i, i);
+    }
+
+    map.put(0, 0);
+    map.remove(0);
+
+    for (int i = 1; i <= 20; i++) {
+        EXPECT_EQ(map[i], i);
+    }
+
+    EXPECT_EQ(map.size(), 20);
+}
+
+/**
+ * Проверка операции remove из самого правого листа
+ */
+TEST(map, Test7) {
+    Dictionary<int, int> map;
+
+    for (int i = 1; i <= 19; i++) {
+        map.put(i, i);
+    }
+
+    map.remove(19);
+
+    for (int i = 1; i <= 18; i++) {
+        EXPECT_EQ(map[i], i);
+    }
+
+    EXPECT_EQ(map.size(), 18);
+}
+
+/**
+ * Проверка операции remove из правого листа самой левой ноды
+ */
+TEST(map, Test8) {
+    Dictionary<int, int> map;
+
+    for (int i = 1; i <= 20; i++) {
+        map.put(i, i);
+    }
+
+    map.put(0, 0);
+    map.remove(3);
+
+    for (int i = 0; i <= 20; i++) {
+        if (i == 3) {
+            continue;
+        }
+
+        EXPECT_EQ(map[i], i);
+    }
+
+    EXPECT_EQ(map.size(), 20);
+}
+
+/**
+ * Проверка операции remove из левого листа самой правой ноды
+ */
+TEST(map, Test9) {
+    Dictionary<int, int> map;
+
+    for (int i = 1; i <= 20; i++) {
+        map.put(i, i);
+    }
+
+    map.put(0, 0);
+    map.remove(19);
+
+    for (int i = 0; i <= 20; i++) {
+        if (i == 19) {
+            continue;
+        }
+
+        EXPECT_EQ(map[i], i);
+    }
+
+    EXPECT_EQ(map.size(), 20);
+}
+
+/**
+ * Проверка операции remove не из листа
+ */
+TEST(map, Test10) {
+    Dictionary<int, int> map;
+
+    for (int i = 1; i <= 20; i++) {
+        map.put(i, i);
+    }
+
+    map.put(0, 0);
+    map.remove(4);
+
+    for (int i = 0; i <= 20; i++) {
+        if (i == 4) {
+            continue;
+        }
+
+        EXPECT_EQ(map[i], i);
+    }
+
+    EXPECT_EQ(map.size(), 20);
+}
+
+/**
+ * Проверка операции remove из корня
+ */
+TEST(map, Test11) {
+    Dictionary<int, int> map;
+
+    for (int i = 1; i <= 20; i++) {
+        map.put(i, i);
+    }
+
+    map.put(0, 0);
+    map.remove(8);
+
+    for (int i = 0; i <= 20; i++) {
+        if (i == 8) {
+            continue;
+        }
+
+        EXPECT_EQ(map[i], i);
+    }
+
+    EXPECT_EQ(map.size(), 20);
+}
+
+/**
+ * Проверка нескольких операций remove и put
+ */
+TEST(map, Test12) {
+
 }
 
