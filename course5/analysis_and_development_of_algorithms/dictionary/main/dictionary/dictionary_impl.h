@@ -1,9 +1,16 @@
 #ifndef DICTIONARY_DICTIONARY_IMPL_H
 #define DICTIONARY_DICTIONARY_IMPL_H
 
+#include "dictionary.h"
+
 template<typename K, typename V>
 typename Dictionary<K, V>::Node *Dictionary<K, V>::allocateNode() {
     Node *node = (Node *) malloc(sizeof(Node));
+    K key;
+    V value;
+
+    node->key = key;
+    node->value = value;
     node->left = node->right = nullptr;
     node->edgeToParentColor = RED;
     return node;
@@ -30,15 +37,15 @@ typename Dictionary<K, V>::Node *Dictionary<K, V>::find(const K &key) {
 }
 
 template<typename K, typename V>
-void Dictionary<K, V>::find(const K &key, const V &value, std::stack<Node *> *path) {
+void Dictionary<K, V>::insertNode(const K &key, const V &value, std::stack<Node *> *path) {
     Node *currentNode = root;
 
     while (currentNode) {
+        path->push(currentNode);
+
         if (key < currentNode->key) {
-            path->push(currentNode);
             currentNode = currentNode->left;
         } else {
-            path->push(currentNode);
             currentNode = currentNode->right;
         }
     }
@@ -164,11 +171,16 @@ void Dictionary<K, V>::fixNodesOrder(std::stack<Node *> *path, bool needFullTrav
         if ((parentNode->left && parentNode->left->edgeToParentColor == RED) &&
             (parentNode->right && parentNode->right->edgeToParentColor == RED)) {
             flipColor(parentNode);
+        } else if (parentNode->edgeToParentColor == RED) {
+            if (parentNode->right && parentNode->right->edgeToParentColor == RED) {
+                rotateLeft(parentNode);
+            }
+
+            if (parentNode->left && parentNode->left->edgeToParentColor == RED) {
+                rotateRight(path->top());
+            }
         } else if (parentNode->right && parentNode->right->edgeToParentColor == RED) {
             rotateLeft(parentNode);
-        } else if (parentNode->left && parentNode->left->edgeToParentColor == RED &&
-                   parentNode->edgeToParentColor == RED) {
-            rotateRight(path->top());
         } else if (!needFullTraversal) {
             fixed = true;
         }
@@ -182,7 +194,12 @@ Dictionary<K, V>::Dictionary() {
 
 template<typename K, typename V>
 Dictionary<K, V>::~Dictionary() {
-    // TODO: сделать деструктор
+    while (nodesCount != 0) {
+        K key = root->key;
+        remove(key);
+    }
+
+    freeNode(root);
 }
 
 template<typename K, typename V>
@@ -199,7 +216,7 @@ void Dictionary<K, V>::put(const K &key, const V &value) {
         }
 
         std::stack<Node *> path;
-        find(key, value, &path);
+        insertNode(key, value, &path);
         fixNodesOrder(&path, false);
     }
 
@@ -208,7 +225,12 @@ void Dictionary<K, V>::put(const K &key, const V &value) {
 
 template<typename K, typename V>
 void Dictionary<K, V>::remove(const K &key) {
-    if (!contains(key)) {
+    if (!contains(key) || nodesCount == 0) {
+        return;
+    }
+
+    if (nodesCount == 1) {
+        nodesCount--;
         return;
     }
 
@@ -281,9 +303,7 @@ const V &Dictionary<K, V>::operator[](const K &key) const {
     Node *desired = find(key);
 
     if (!desired) {
-        V value;
-        V *pointer = &value;
-        return *pointer;
+        return new V;
     } else {
         return desired->value;
     }
@@ -295,12 +315,12 @@ V &Dictionary<K, V>::operator[](const K &key) {
 
     if (!desired) {
         V value;
-        V *pointer = &value;
+
         put(key, value);
-        return *pointer;
-    } else {
-        return desired->value;
+        desired = find(key);
     }
+
+    return desired->value;
 }
 
 template<typename K, typename V>
@@ -308,6 +328,92 @@ int Dictionary<K, V>::size() const {
     return nodesCount;
 }
 
-// TODO: реализовать итератор
+template<typename K, typename V>
+typename Dictionary<K, V>::Iterator Dictionary<K, V>::iterator() {
+    return Iterator(this);
+}
+
+template<typename K, typename V>
+const typename Dictionary<K, V>::Iterator Dictionary<K, V>::iterator() const {
+    return Iterator(this);
+}
+
+template<typename K, typename V>
+Dictionary<K, V>::Iterator::Iterator(Dictionary *dictionary) {
+    nodesCount = dictionary->nodesCount;
+    fillNodes(dictionary->root);
+}
+
+template<typename K, typename V>
+void Dictionary<K, V>::Iterator::fillNodes(Node *rootNode) {
+    std::stack<Node *> path;
+    nodes = (Node **) malloc(nodesCount * sizeof(Node));
+
+    path.push(rootNode);
+    nodes[0] = path.top();
+
+    for (int i = 1; i < nodesCount; i++) {
+        Node *node = path.top();
+        Node *prev = node;
+
+        while (true) {
+            if (node->left && node->left != prev && node->right != prev) {
+                path.push(node->left);
+                break;
+            } else if (node->right && node->right != prev) {
+                path.push(node->right);
+                break;
+            } else {
+                prev = path.top();
+                path.pop();
+                node = path.top();
+            }
+        }
+
+        nodes[i] = path.top();
+    }
+}
+
+template<typename K, typename V>
+const K &Dictionary<K, V>::Iterator::key() const {
+    Node *node = nodes[index];
+    return node->key;
+}
+
+template<typename K, typename V>
+const V &Dictionary<K, V>::Iterator::get() const {
+    Node *node = nodes[index];
+    return node->value;
+}
+
+template<typename K, typename V>
+void Dictionary<K, V>::Iterator::set(const V &value) {
+    Node *node = nodes[index];
+    node->value = value;
+}
+
+template<typename K, typename V>
+void Dictionary<K, V>::Iterator::next() {
+    if (hasNext()) {
+        index++;
+    }
+}
+
+template<typename K, typename V>
+void Dictionary<K, V>::Iterator::prev() {
+    if (hasPrev()) {
+        index--;
+    }
+}
+
+template<typename K, typename V>
+bool Dictionary<K, V>::Iterator::hasNext() const {
+    return index + 1 < nodesCount;
+}
+
+template<typename K, typename V>
+bool Dictionary<K, V>::Iterator::hasPrev() const {
+    return index - 1 >= 0;
+}
 
 #endif //DICTIONARY_DICTIONARY_IMPL_H

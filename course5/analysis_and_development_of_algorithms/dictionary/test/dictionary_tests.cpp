@@ -9,7 +9,9 @@
 TEST(map, Test1) {
     Dictionary<int, int> map;
     map.put(12, 4);
+
     EXPECT_EQ(map.size(), 1);
+    printTree(&map);
 }
 
 /**
@@ -18,8 +20,10 @@ TEST(map, Test1) {
 TEST(map, Test2) {
     Dictionary<int, int> map;
     map.put(42, 10);
+
     EXPECT_EQ(map.contains(42), true);
     EXPECT_EQ(map.contains(13), false);
+    printTree(&map);
 }
 
 /**
@@ -33,6 +37,7 @@ TEST(map, Test3) {
     EXPECT_EQ(map[39], 92);
     map[39] = 74;
     EXPECT_EQ(map[39], 74);
+    printTree(&map);
 }
 
 /**
@@ -47,6 +52,7 @@ TEST(map, Test4) {
     EXPECT_EQ(map[1], 110);
     EXPECT_EQ(map[6], 33);
     EXPECT_EQ(map.size(), 2);
+    printTree(&map);
 }
 
 /**
@@ -64,6 +70,7 @@ TEST(map, Test5) {
     }
 
     EXPECT_EQ(map.size(), 20);
+    printTree(&map);
 }
 
 /**
@@ -84,6 +91,7 @@ TEST(map, Test6) {
     }
 
     EXPECT_EQ(map.size(), 20);
+    printTree(&map);
 }
 
 /**
@@ -103,6 +111,7 @@ TEST(map, Test7) {
     }
 
     EXPECT_EQ(map.size(), 18);
+    printTree(&map);
 }
 
 /**
@@ -127,6 +136,7 @@ TEST(map, Test8) {
     }
 
     EXPECT_EQ(map.size(), 20);
+    printTree(&map);
 }
 
 /**
@@ -151,6 +161,7 @@ TEST(map, Test9) {
     }
 
     EXPECT_EQ(map.size(), 20);
+    printTree(&map);
 }
 
 /**
@@ -175,6 +186,7 @@ TEST(map, Test10) {
     }
 
     EXPECT_EQ(map.size(), 20);
+    printTree(&map);
 }
 
 /**
@@ -199,12 +211,100 @@ TEST(map, Test11) {
     }
 
     EXPECT_EQ(map.size(), 20);
+    printTree(&map);
 }
 
 /**
- * Проверка нескольких операций remove и put
+ * Проверка нескольких операций remove
  */
 TEST(map, Test12) {
+    int pasteOrder[] = {0, 5, 2, 13, 10, 19, 20, 4, 1, 3, 8, 7, 6, 18, 17, 15, 16, 12, 9, 11, 14};
+    int removeOrder[] = {18, 13, 12, 16, 20, 19, 10, 11, 15, 17, 14};
+    Dictionary<int, int> map;
 
+    for (int i: pasteOrder) {
+        map.put(i, i);
+    }
+
+    for (int i: removeOrder) {
+        map.remove(i);
+    }
+
+    map.put(10, 10);
+
+    for (int i = 0; i <= 10; i++) {
+        EXPECT_EQ(map[i], i);
+    }
+
+    EXPECT_EQ(map.size(), 11);
+    printTree(&map);
+}
+
+/**
+ * Проверка операций key, get, next, hasNext, prev, hasPrev итератора
+ */
+TEST(map, Test13) {
+    int pasteOrder[] = {0, 5, 2, 13, 10, 19, 20, 4, 1, 3, 8, 7, 6, 18, 17, 15, 16, 12, 9, 11, 14};
+    int removeOrder[] = {18, 13, 12, 16, 20, 19, 10, 11, 15, 17, 14};
+    Dictionary<int, int> map;
+
+    for (int i: pasteOrder) {
+        map.put(i, i);
+    }
+
+    for (int i: removeOrder) {
+        map.remove(i);
+    }
+
+    map.put(10, 10);
+
+    std::cout << "От корня к последнему:" << std::endl;
+
+    auto it = map.iterator();
+    for (it = map.iterator(); it.hasNext(); it.next()) {
+        EXPECT_EQ(it.key(), it.get());
+        std::cout << "(" << it.key() << ", " << it.get() << ")" << std::endl;
+    }
+
+    EXPECT_EQ(it.key(), it.get());
+    std::cout << "(" << it.key() << ", " << it.get() << ")" << std::endl << std::endl << "От последнего к корню:" <<
+              std::endl;
+
+    for (it = it; it.hasPrev(); it.prev()) {
+        EXPECT_EQ(it.key(), it.get());
+        std::cout << "(" << it.key() << ", " << it.get() << ")" << std::endl;
+    }
+
+    EXPECT_EQ(it.key(), it.get());
+    std::cout << "(" << it.key() << ", " << it.get() << ")";
+}
+
+/**
+ * Проверка операции set итератора
+ */
+TEST(map, Test14) {
+    int pasteOrder[] = {0, 5, 2, 13, 10, 19, 20, 4, 1, 3, 8, 7, 6, 18, 17, 15, 16, 12, 9, 11, 14};
+    int removeOrder[] = {18, 13, 12, 16, 20, 19, 10, 11, 15, 17, 14};
+    Dictionary<int, int> map;
+
+    for (int i: pasteOrder) {
+        map.put(i, i);
+    }
+
+    for (int i: removeOrder) {
+        map.remove(i);
+    }
+
+    map.put(10, 10);
+
+    auto it = map.iterator();
+    for (int i = 0; i < 3; i++) {
+        it.next();
+    }
+
+    EXPECT_EQ(map[0], 0);
+    it.set(100);
+    EXPECT_EQ(map[0], 100);
+    printTree(&map);
 }
 

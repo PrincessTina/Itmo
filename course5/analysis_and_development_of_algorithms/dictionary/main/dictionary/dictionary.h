@@ -18,6 +18,32 @@ class Dictionary final {
         Node *right;
     };
 
+    class Iterator {
+        Node **nodes = nullptr;
+        int index = 0;
+        int nodesCount = 0;
+
+    private:
+        void fillNodes(Node *rootNode);
+
+    public:
+        Iterator(Dictionary *dictionary);
+
+        const K &key() const;
+
+        const V &get() const;
+
+        void set(const V &value);
+
+        void next();
+
+        void prev();
+
+        bool hasNext() const;
+
+        bool hasPrev() const;
+    };
+
     Node *root = nullptr;
     int nodesCount = 0;
 
@@ -28,7 +54,7 @@ private:
 
     Node *find(const K &key);
 
-    void find(const K &key, const V &value, std::stack<Node *> *path);
+    void insertNode(const K &key, const V &value, std::stack<Node *> *path);
 
     Node *findLeftmostNode(Node *node);
 
@@ -51,6 +77,17 @@ public:
 
     ~Dictionary();
 
+    /**
+     * Запрет конструктора копирования
+     */
+    Dictionary(const Dictionary &) = delete;
+
+    /**
+     * Запрет оператора присваивания
+     * @return
+     */
+    Dictionary &operator=(const Dictionary &) = delete;
+
     void put(const K &key, const V &value);
 
     void remove(const K &key);
@@ -62,6 +99,10 @@ public:
     V &operator[](const K &key);
 
     int size() const;
+
+    Iterator iterator();
+
+    const Iterator iterator() const;
 };
 
 #include "dictionary_impl.h"
