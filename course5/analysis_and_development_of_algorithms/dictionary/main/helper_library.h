@@ -19,11 +19,23 @@ public:
     }
 };
 
+/**
+ * Переопределение оператора << (вывода) для типа данных Friend
+ * @param out
+ * @param body - объект, информацию о котором нужно вывести на экран
+ * @return
+ */
 std::ostream &operator<<(std::ostream &out, const Friend body) {
     out << body.name << " " << body.surname;
     return out;
 }
 
+/**
+ * Переопределение оператора < (меньше) для типа данных Friend
+ * @param body - первый сравниваемый объект
+ * @param body2 - второй сравниваемый объект
+ * @return true, если body < body2; false, если body >= body2
+ */
 bool operator<(const Friend body, const Friend body2) {
     if (body.name < body2.name) {
         return true;
@@ -34,14 +46,32 @@ bool operator<(const Friend body, const Friend body2) {
     }
 }
 
+/**
+ * Переопределение оператора == для типа данных Friend
+ * @param body - первый сравниваемый объект
+ * @param body2 - второй сравниваемый объект
+ * @return true, если body == body2, иначе false
+ */
 bool operator==(const Friend body, const Friend body2) {
     return body.name == body2.name && body.surname == body2.surname;
 }
 
+/**
+ * Переопределение оператора != для типа данных Friend
+ * @param body - первый сравниваемый объект
+ * @param body2 - второй сравниваемый объект
+ * @return true, если body != body2, иначе false
+ */
 bool operator!=(const Friend body, const Friend body2) {
     return body.name != body2.name || body.surname != body2.surname;
 }
 
+/**
+ * Выводит элементы дерева на экран, начиная от корня. Сначала идет по левым нодам
+ * @tparam K - тип ключа
+ * @tparam V - тип значения
+ * @param map - дерево, элементы которого нужно вывести
+ */
 template<typename K, typename V>
 void printTree(Dictionary<K, V> *map) {
     auto it = map->iterator();

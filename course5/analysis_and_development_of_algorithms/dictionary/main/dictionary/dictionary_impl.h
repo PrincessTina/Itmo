@@ -139,7 +139,7 @@ void Dictionary<K, V>::moveRedRight(Dictionary::Node *node) {
 }
 
 template<typename K, typename V>
-typename Dictionary<K, V>::Node *Dictionary<K, V>::removeLeftmostNode(Node *node, std::stack<Node *> *path) {
+typename Dictionary<K, V>::Node *Dictionary<K, V>::reachLeftmostNode(Node *node, std::stack<Node *> *path) {
     Node *currentNode = node;
 
     while (currentNode->left) {
@@ -276,7 +276,7 @@ void Dictionary<K, V>::remove(const K &key) {
                 currentNode->key = leftmost->key;
                 currentNode->value = leftmost->value;
 
-                currentNode = removeLeftmostNode(currentNode->right, &path);
+                currentNode = reachLeftmostNode(currentNode->right, &path);
                 break;
             } else {
                 currentNode = currentNode->right;
