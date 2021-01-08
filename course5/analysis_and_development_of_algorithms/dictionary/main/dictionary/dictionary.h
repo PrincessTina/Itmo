@@ -21,7 +21,7 @@ class Dictionary final {
     class Iterator {
         Node **nodes = nullptr;
         int index = 0;
-        int nodesCount = 0;
+        int nodesCount;
 
     private:
         void fillNodes(Node *rootNode);

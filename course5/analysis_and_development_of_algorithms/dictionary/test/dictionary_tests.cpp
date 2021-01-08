@@ -308,3 +308,115 @@ TEST(map, Test14) {
     printTree(&map);
 }
 
+/**
+ * Проверка дерева элементов со значениями типа string
+ */
+TEST(map, Test15) {
+    Dictionary<int, std::string> topFriends;
+    int keys[] = {0, 5, 2, 6, 10, 9, 7, 4, 1, 3, 8};
+    std::string values[] = {"Alyson", "Shannon", "Mercy", "Jasper", "Jayson", "Clare", "Daniela", "Gary", "Miranda",
+                            "Lesley", "Brent"};
+
+    for (int i = 0; i < 11; i++) {
+        topFriends.put(keys[i], values[i]);
+    }
+
+    for (int i = 0; i < 11; i++) {
+        EXPECT_EQ(topFriends[keys[i]], values[i]);
+    }
+
+    printTree(&topFriends);
+}
+
+/**
+ * Проверка дерева элементов со значениями типа Friend
+ */
+TEST(map, Test16) {
+    Dictionary<int, Friend> topFriends;
+    int keys[] = {0, 5, 2, 6, 10, 9, 7, 4, 1, 3, 8};
+    Friend values[] = {
+            Friend("Alyson", "Rose"),
+            Friend("Shannon", "Chambers"),
+            Friend("Mercy", "Wilcox"),
+            Friend("Jasper", "Fowler"),
+            Friend("Jayson", "Cook"),
+            Friend("Clare", "Harris"),
+            Friend("Daniela", "Kelly"),
+            Friend("Gary", "Barker"),
+            Friend("Miranda", "Golden"),
+            Friend("Lesley", "Berry"),
+            Friend("Brent", "Benson")
+    };
+
+    for (int i = 0; i < 11; i++) {
+        topFriends.put(keys[i], values[i]);
+    }
+
+    for (int i = 0; i < 11; i++) {
+        EXPECT_EQ(topFriends[keys[i]], values[i]);
+    }
+
+    printTree(&topFriends);
+}
+
+/**
+ * Проверка дерева элементов с ключами типа string
+ */
+TEST(map, Test17) {
+    Dictionary<std::string, int> topFriends;
+    std::string keys[] = {"Alyson", "Shannon", "Mercy", "Jasper", "Jayson", "Clare", "Daniela", "Gary", "Miranda",
+                          "Lesley", "Brent"};
+    int values[] = {0, 5, 2, 6, 10, 9, 7, 4, 1, 3, 8};
+
+    for (int i = 0; i < 11; i++) {
+        topFriends.put(keys[i], values[i]);
+    }
+
+    for (int i = 0; i < 11; i++) {
+        EXPECT_EQ(topFriends[keys[i]], values[i]);
+    }
+
+    printTree(&topFriends);
+}
+
+/**
+ * Проверка дерева элементов с ключами типа Friend
+ */
+TEST(map, Test18) {
+    Dictionary<Friend, int> topFriends;
+    Friend keys[] = {
+            Friend("Alyson", "Rose"),
+            Friend("Shannon", "Chambers"),
+            Friend("Mercy", "Wilcox"),
+            Friend("Jasper", "Fowler"),
+            Friend("Jayson", "Cook"),
+            Friend("Clare", "Harris"),
+            Friend("Daniela", "Kelly"),
+            Friend("Gary", "Barker"),
+            Friend("Miranda", "Golden"),
+            Friend("Lesley", "Berry"),
+            Friend("Brent", "Benson")
+    };
+    int values[] = {0, 5, 2, 6, 10, 9, 7, 4, 1, 3, 8};
+
+    for (int i = 0; i < 11; i++) {
+        topFriends.put(keys[i], values[i]);
+    }
+
+    for (int i = 0; i < 11; i++) {
+        EXPECT_EQ(topFriends[keys[i]], values[i]);
+    }
+
+    printTree(&topFriends);
+}
+
+/**
+ * Проверка вставки элемента с NULL ключом (?)
+ */
+TEST(map, Test19) {
+    Dictionary<int, int> map;
+    map.put(NULL, 4);
+
+    EXPECT_EQ(map.size(), 1);
+    printTree(&map);
+}

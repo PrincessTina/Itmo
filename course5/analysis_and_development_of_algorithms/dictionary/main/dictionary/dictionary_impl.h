@@ -5,7 +5,7 @@
 
 template<typename K, typename V>
 typename Dictionary<K, V>::Node *Dictionary<K, V>::allocateNode() {
-    Node *node = (Node *) malloc(sizeof(Node));
+    Node *node = new Node;
     K key;
     V value;
 
@@ -13,12 +13,13 @@ typename Dictionary<K, V>::Node *Dictionary<K, V>::allocateNode() {
     node->value = value;
     node->left = node->right = nullptr;
     node->edgeToParentColor = RED;
+
     return node;
 }
 
 template<typename K, typename V>
 void Dictionary<K, V>::freeNode(Node *node) {
-    free(node);
+    delete(node);
 }
 
 template<typename K, typename V>
@@ -347,7 +348,7 @@ Dictionary<K, V>::Iterator::Iterator(Dictionary *dictionary) {
 template<typename K, typename V>
 void Dictionary<K, V>::Iterator::fillNodes(Node *rootNode) {
     std::stack<Node *> path;
-    nodes = (Node **) malloc(nodesCount * sizeof(Node));
+    nodes = new Node*[nodesCount];
 
     path.push(rootNode);
     nodes[0] = path.top();
