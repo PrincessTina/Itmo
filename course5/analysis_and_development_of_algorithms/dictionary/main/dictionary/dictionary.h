@@ -250,6 +250,11 @@ public:
      * @return итератор, указывающий на корень дерева
      */
     const Iterator iterator() const;
+
+    /**
+     * Выводит дерево на экран в естественном виде. Рядом с каждым элементом в скобках указывает цвет ссылки
+     */
+    void printTree();
 };
 
 #include "dictionary_impl.h"

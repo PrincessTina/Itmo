@@ -67,22 +67,12 @@ bool operator!=(const Friend body, const Friend body2) {
 }
 
 /**
- * Выводит элементы дерева на экран, начиная от корня. Сначала идет по левым нодам
- * @tparam K - тип ключа
- * @tparam V - тип значения
- * @param map - дерево, элементы которого нужно вывести
+ * @param min - минимальное значение случайного числа
+ * @param max - максимальное значение случайного числа
+ * @return случайное число в диапазоне [min, max]
  */
-template<typename K, typename V>
-void printTree(Dictionary<K, V> *map) {
-    auto it = map->iterator();
-
-    std::cout << "От корня к последнему:" << std::endl;
-
-    for (it = map->iterator(); it.hasNext(); it.next()) {
-        std::cout << "(" << it.key() << ", " << it.get() << ")" << std::endl;
-    }
-
-    std::cout << "(" << it.key() << ", " << it.get() << ")";
+int random(int min, int max) {
+    return rand() * (max - min) / RAND_MAX + min;
 }
 
 #endif //DICTIONARY_HELPER_LIBRARY_H

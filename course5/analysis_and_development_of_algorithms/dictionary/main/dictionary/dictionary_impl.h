@@ -340,6 +340,50 @@ const typename Dictionary<K, V>::Iterator Dictionary<K, V>::iterator() const {
 }
 
 template<typename K, typename V>
+void Dictionary<K, V>::printTree() {
+    std::stack<Node *> path;
+    std::string color = root->edgeToParentColor == BLACK ? "[\x1b[30;1mB\x1b[0m]" : "[\x1b[31;1mR\x1b[0m]";
+    int depth = 0;
+    std::string position;
+
+    path.push(root);
+    std::cout << "(" << root->key << ", " << root->value << ") " << color << std::endl;
+
+    for (int i = 1; i < nodesCount; i++) {
+        Node *node = path.top();
+        Node *prev = node;
+
+        while (true) {
+            if (node->left && node->left != prev && node->right != prev) {
+                path.push(node->left);
+                position = "L:";
+                depth++;
+                break;
+            } else if (node->right && node->right != prev) {
+                path.push(node->right);
+                position = "R:";
+                depth++;
+                break;
+            } else {
+                prev = path.top();
+                path.pop();
+                node = path.top();
+                depth--;
+            }
+        }
+
+        Node *current = path.top();
+        color = current->edgeToParentColor == BLACK ? "[\x1b[30;1mB\x1b[0m]" : "[\x1b[31;1mR\x1b[0m]";
+
+        for (int j = 0; j < depth; j++) {
+            std::cout << "\t";
+        }
+
+        std::cout << position << " (" << current->key << ", " << current->value << ") " << color << std::endl;
+    }
+}
+
+template<typename K, typename V>
 Dictionary<K, V>::Iterator::Iterator(Dictionary *dictionary) {
     nodesCount = dictionary->nodesCount;
     fillNodes(dictionary->root);

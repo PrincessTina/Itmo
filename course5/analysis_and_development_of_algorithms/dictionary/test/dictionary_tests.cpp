@@ -11,7 +11,7 @@ TEST(map, Test1) {
     map.put(12, 4);
 
     EXPECT_EQ(map.size(), 1);
-    printTree(&map);
+    map.printTree();
 }
 
 /**
@@ -23,7 +23,7 @@ TEST(map, Test2) {
 
     EXPECT_EQ(map.contains(42), true);
     EXPECT_EQ(map.contains(13), false);
-    printTree(&map);
+    map.printTree();
 }
 
 /**
@@ -37,7 +37,7 @@ TEST(map, Test3) {
     EXPECT_EQ(map[39], 92);
     map[39] = 74;
     EXPECT_EQ(map[39], 74);
-    printTree(&map);
+    map.printTree();
 }
 
 /**
@@ -52,7 +52,7 @@ TEST(map, Test4) {
     EXPECT_EQ(map[1], 110);
     EXPECT_EQ(map[6], 33);
     EXPECT_EQ(map.size(), 2);
-    printTree(&map);
+    map.printTree();
 }
 
 /**
@@ -70,7 +70,7 @@ TEST(map, Test5) {
     }
 
     EXPECT_EQ(map.size(), 20);
-    printTree(&map);
+    map.printTree();
 }
 
 /**
@@ -91,7 +91,7 @@ TEST(map, Test6) {
     }
 
     EXPECT_EQ(map.size(), 20);
-    printTree(&map);
+    map.printTree();
 }
 
 /**
@@ -111,7 +111,7 @@ TEST(map, Test7) {
     }
 
     EXPECT_EQ(map.size(), 18);
-    printTree(&map);
+    map.printTree();
 }
 
 /**
@@ -136,7 +136,7 @@ TEST(map, Test8) {
     }
 
     EXPECT_EQ(map.size(), 20);
-    printTree(&map);
+    map.printTree();
 }
 
 /**
@@ -161,7 +161,7 @@ TEST(map, Test9) {
     }
 
     EXPECT_EQ(map.size(), 20);
-    printTree(&map);
+    map.printTree();
 }
 
 /**
@@ -186,7 +186,7 @@ TEST(map, Test10) {
     }
 
     EXPECT_EQ(map.size(), 20);
-    printTree(&map);
+    map.printTree();
 }
 
 /**
@@ -211,7 +211,7 @@ TEST(map, Test11) {
     }
 
     EXPECT_EQ(map.size(), 20);
-    printTree(&map);
+    map.printTree();
 }
 
 /**
@@ -237,7 +237,7 @@ TEST(map, Test12) {
     }
 
     EXPECT_EQ(map.size(), 11);
-    printTree(&map);
+    map.printTree();
 }
 
 /**
@@ -305,7 +305,7 @@ TEST(map, Test14) {
     EXPECT_EQ(map[0], 0);
     it.set(100);
     EXPECT_EQ(map[0], 100);
-    printTree(&map);
+    map.printTree();
 }
 
 /**
@@ -325,7 +325,7 @@ TEST(map, Test15) {
         EXPECT_EQ(topFriends[keys[i]], values[i]);
     }
 
-    printTree(&topFriends);
+    topFriends.printTree();
 }
 
 /**
@@ -356,7 +356,7 @@ TEST(map, Test16) {
         EXPECT_EQ(topFriends[keys[i]], values[i]);
     }
 
-    printTree(&topFriends);
+    topFriends.printTree();
 }
 
 /**
@@ -376,7 +376,7 @@ TEST(map, Test17) {
         EXPECT_EQ(topFriends[keys[i]], values[i]);
     }
 
-    printTree(&topFriends);
+    topFriends.printTree();
 }
 
 /**
@@ -407,16 +407,35 @@ TEST(map, Test18) {
         EXPECT_EQ(topFriends[keys[i]], values[i]);
     }
 
-    printTree(&topFriends);
+    topFriends.printTree();
 }
 
 /**
- * Проверка вставки элемента с NULL ключом (?)
+ * Проверка вставки 100 случайных элементов и вывода дерева на экран
  */
 TEST(map, Test19) {
-    Dictionary<int, int> map;
-    map.put(NULL, 4);
+    Dictionary<int, Friend> topFriends;
+    int variantsCount = 26;
+    int friendsCount = 10;
+    std::string names[] = {"Alyson", "Shannon", "Mercy", "Jasper", "Jayson", "Clare", "Daniela", "Gary", "Miranda",
+                           "Lesley", "Brent", "Gladys", "Mabel", "Berenice", "Debra", "Candice", "Barbara", "Austen",
+                           "Jeremy", "Edgar", "Noel", "Clarence", "Bruno", "Bryce", "Colin", "Philip"};
+    std::string surnames[] = {"Rose", "Chambers", "Wilcox", "Fowler", "Cook", "Harris", "Kelly", "Barker", "Golden",
+                              "Berry", "Benson", "Davidson", "Short", "Cummings", "Welch", "Douglas", "Poole",
+                              "Ferguson", "Stafford", "Miller", "Flynn", "Freeman", "Norris", "Hodge", "Bryan", "Wilkins"};
 
-    EXPECT_EQ(map.size(), 1);
-    printTree(&map);
+    srand(time(0));
+
+    for (int i = 0; i < friendsCount; i++) {
+        int key;
+
+        do {
+            key = random(0, friendsCount - 1);
+        } while (topFriends.contains(key));
+
+        topFriends.put(key, Friend(names[random(0, variantsCount - 1)],
+                                   surnames[random(0, variantsCount - 1)]));
+    }
+
+    topFriends.printTree();
 }
