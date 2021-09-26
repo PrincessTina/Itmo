@@ -13,27 +13,33 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Исходные файлы\Window">
+      <UniqueIdentifier>{ea3334ca-84eb-4058-b2c0-716ad16adc7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Game">
+      <UniqueIdentifier>{0dfaaac4-b4c7-44bc-ac2b-25195bda138c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="window.cpp">
-      <Filter>Файлы ресурсов</Filter>
-    </ClCompile>
     <ClCompile Include="game.cpp">
-      <Filter>Файлы ресурсов</Filter>
+      <Filter>Исходные файлы\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="window.cpp">
+      <Filter>Исходные файлы\Window</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="window.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="error.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="game.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Исходные файлы\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="window.h">
+      <Filter>Исходные файлы\Window</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
