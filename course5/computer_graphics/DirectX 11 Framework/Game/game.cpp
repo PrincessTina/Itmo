@@ -1,7 +1,7 @@
 #include "game.h"
 
 #pragma comment(lib,"d3d11.lib")
-#include "error.h"
+#include "../error.h"
 
 int WINAPI main(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR pScmdline, int iCmdshow)
 {

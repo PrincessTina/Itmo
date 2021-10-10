@@ -148,13 +148,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="game.cpp" />
-    <ClCompile Include="window.cpp" />
+    <ClCompile Include="Game\game.cpp" />
+    <ClCompile Include="Window\window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="error.h" />
-    <ClInclude Include="game.h" />
-    <ClInclude Include="window.h" />
+    <ClInclude Include="Game\game.h" />
+    <ClInclude Include="Window\window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

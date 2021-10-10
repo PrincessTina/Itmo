@@ -24,10 +24,10 @@
     <ClCompile Include="main.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="game.cpp">
+    <ClCompile Include="Game\game.cpp">
       <Filter>Исходные файлы\Game</Filter>
     </ClCompile>
-    <ClCompile Include="window.cpp">
+    <ClCompile Include="Window\window.cpp">
       <Filter>Исходные файлы\Window</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,10 +35,10 @@
     <ClInclude Include="error.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="game.h">
+    <ClInclude Include="Game\game.h">
       <Filter>Исходные файлы\Game</Filter>
     </ClInclude>
-    <ClInclude Include="window.h">
+    <ClInclude Include="Window\window.h">
       <Filter>Исходные файлы\Window</Filter>
     </ClInclude>
   </ItemGroup>
