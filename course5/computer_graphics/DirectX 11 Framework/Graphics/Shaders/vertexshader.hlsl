@@ -1,7 +1,6 @@
 cbuffer mycBuffer : register(b0)
 {
-    float xOffset;
-    float yOffset;
+    matrix rotationMatrix;
 };
 
 struct VS_INPUT
@@ -19,9 +18,7 @@ struct VS_OUTPUT
 VS_OUTPUT main(VS_INPUT input)
 {
     VS_OUTPUT output;
-    output.pos = float4(input.pos, 1.0f);
-    output.pos.x += xOffset;
-    output.pos.y += yOffset;
+    output.pos = mul(float4(input.pos, 1.0f), rotationMatrix);
     output.col = input.col;
 
     return output;

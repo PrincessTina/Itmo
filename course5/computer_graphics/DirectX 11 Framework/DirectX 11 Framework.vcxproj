@@ -148,6 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Game\game.cpp" />
+    <ClCompile Include="Graphics\Buffers\component.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Graphics\engine.cpp" />
     <ClCompile Include="Graphics\Shaders\shader.cpp" />
@@ -156,8 +157,7 @@
   <ItemGroup>
     <ClInclude Include="error.h" />
     <ClInclude Include="Game\game.h" />
-    <ClInclude Include="Graphics\Buffers\indexbuffer.h" />
-    <ClInclude Include="Graphics\Buffers\vertexbuffer.h" />
+    <ClInclude Include="Graphics\Buffers\component.h" />
     <ClInclude Include="Graphics\engine.h" />
     <ClInclude Include="Graphics\Shaders\vertex.h" />
     <ClInclude Include="Graphics\Shaders\shader.h" />
