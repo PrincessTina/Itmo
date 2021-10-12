@@ -1,9 +1,9 @@
 #pragma once
 #include <d3d11.h>
 #include "Shaders/shader.h"
-
 #include "Shaders/vertex.h"
-#include "Buffers/buffer.h"
+#include "Buffers/indexbuffer.h"
+#include "Buffers/vertexbuffer.h"
 
 class Engine
 {
@@ -19,8 +19,9 @@ private:
 	VertexShader vertexShader;
 	PixelShader pixelShader;
 
-	Buffer<Vertex> vertexBuffer;
-	Buffer<DWORD> indexBuffer;
+	VertexBuffer<Vertex> vertexBuffer;
+	IndexBuffer indexBuffer;
+	ID3D11Buffer* constantBuffer;
 
 	ID3D11DepthStencilView* depthStencilView;
 	ID3D11Texture2D* depthStencilBuffer;
@@ -36,5 +37,4 @@ private:
 	void CreateRasterizerState();
 	void InitShaders();
 	void InitScene();
-	void CreateBuffer(ID3D11Buffer** bufferAddress, const void* bufferDataArray, UINT size, UINT flags);
 };

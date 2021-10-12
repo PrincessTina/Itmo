@@ -1,7 +1,6 @@
 #include "engine.h"
 
 #include "../error.h"
-#include "Shaders/vertex.h"
 
 void Engine::InitGraphics(HWND hwnd, int width, int height)
 {
@@ -29,7 +28,7 @@ void Engine::RenderFrame()
 	deviceContext->VSSetShader(vertexShader.GetShader(), NULL, 0);
 	deviceContext->PSSetShader(pixelShader.GetShader(), NULL, 0);
 
-	deviceContext->DrawIndexed(6, 0, 0);
+	deviceContext->DrawIndexed(indexBuffer.GetSize(), 0, 0);
 
 	swapChain->Present(1, NULL);
 }
@@ -184,8 +183,8 @@ void Engine::InitScene()
 		0, 2, 3
 	};
 
-	vertexBuffer.CreateBuffer(vertexes, ARRAYSIZE(vertexes), D3D11_BIND_VERTEX_BUFFER, device);
-	indexBuffer.CreateBuffer(indices, ARRAYSIZE(indices), D3D11_BIND_INDEX_BUFFER, device);
+	vertexBuffer.CreateBuffer(vertexes, ARRAYSIZE(vertexes), device);
+	indexBuffer.CreateBuffer(indices, ARRAYSIZE(indices), device);
 }
 
 // INPUT ASSEMBLER - InputLayout

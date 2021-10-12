@@ -1,20 +1,20 @@
-#ifndef Buffer_h__
-#define Buffer_h__
+#ifndef VertexBuffer_h__
+#define VertexBuffer_h__
 
 #include <d3d11.h>
 #include "../error.h"
 
 template<class T>
-class Buffer
+class VertexBuffer
 {
 private:
-	ID3D11Buffer* buffer;
+	ID3D11Buffer* buffer = nullptr;
 	UINT stride;
 
 public:
-	Buffer() {}
+	VertexBuffer() {}
 	
-	void CreateBuffer(T* bufferDataArray, UINT bufferDataArraySize, UINT flags, ID3D11Device* device)
+	void CreateBuffer(T* vertexes, UINT vertexCount, ID3D11Device* device)
 	{
 		stride = sizeof(T);
 		
@@ -22,8 +22,8 @@ public:
 		ZeroMemory(&bufferDesc, sizeof(bufferDesc));
 
 		bufferDesc.Usage = D3D11_USAGE_DEFAULT;
-		bufferDesc.ByteWidth = sizeof(T) * bufferDataArraySize;
-		bufferDesc.BindFlags = flags;
+		bufferDesc.ByteWidth = sizeof(T) * vertexCount;
+		bufferDesc.BindFlags = D3D11_BIND_VERTEX_BUFFER;
 		bufferDesc.CPUAccessFlags = 0;
 		bufferDesc.MiscFlags = 0;
 		//bufferDesc.StructureByteStride = 0;
@@ -31,17 +31,12 @@ public:
 		D3D11_SUBRESOURCE_DATA bufferData;
 		ZeroMemory(&bufferData, sizeof(bufferData));
 
-		bufferData.pSysMem = bufferDataArray;
+		bufferData.pSysMem = vertexes;
 		//bufferData.SysMemPitch = 0;
 		//bufferData.SysMemSlicePitch = 0;
 
 		HRESULT hr = device->CreateBuffer(&bufferDesc, &bufferData, &buffer);
 		popAssert(FAILED(hr), hr);
-	}
-
-	ID3D11Buffer* Get() 
-	{
-		return buffer;
 	}
 
 	ID3D11Buffer** GetAddress() 
@@ -55,4 +50,4 @@ public:
 	}
 };
 
-#endif // Buffer_h__
+#endif // VertexBuffer_h__

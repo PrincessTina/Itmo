@@ -65,7 +65,10 @@
     <ClInclude Include="Game\game.h">
       <Filter>Исходные файлы\Game</Filter>
     </ClInclude>
-    <ClInclude Include="Graphics\Buffers\buffer.h">
+    <ClInclude Include="Graphics\Buffers\vertexbuffer.h">
+      <Filter>Исходные файлы\Graphics\Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Buffers\indexbuffer.h">
       <Filter>Исходные файлы\Graphics\Buffers</Filter>
     </ClInclude>
   </ItemGroup>

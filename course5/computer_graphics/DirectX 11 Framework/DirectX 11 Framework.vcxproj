@@ -156,7 +156,8 @@
   <ItemGroup>
     <ClInclude Include="error.h" />
     <ClInclude Include="Game\game.h" />
-    <ClInclude Include="Graphics\Buffers\buffer.h" />
+    <ClInclude Include="Graphics\Buffers\indexbuffer.h" />
+    <ClInclude Include="Graphics\Buffers\vertexbuffer.h" />
     <ClInclude Include="Graphics\engine.h" />
     <ClInclude Include="Graphics\Shaders\vertex.h" />
     <ClInclude Include="Graphics\Shaders\shader.h" />
