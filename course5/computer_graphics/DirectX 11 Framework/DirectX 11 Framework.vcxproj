@@ -147,14 +147,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="Game\game.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Graphics\engine.cpp" />
+    <ClCompile Include="Graphics\Shaders\shader.cpp" />
     <ClCompile Include="Window\window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="error.h" />
     <ClInclude Include="Game\game.h" />
+    <ClInclude Include="Graphics\engine.h" />
+    <ClInclude Include="Graphics\Shaders\vertex.h" />
+    <ClInclude Include="Graphics\Shaders\shader.h" />
     <ClInclude Include="Window\window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Game\pixelshader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Game\vertexshader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+    </FxCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
