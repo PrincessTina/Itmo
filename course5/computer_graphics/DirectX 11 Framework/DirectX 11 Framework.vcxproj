@@ -156,19 +156,20 @@
   <ItemGroup>
     <ClInclude Include="error.h" />
     <ClInclude Include="Game\game.h" />
+    <ClInclude Include="Graphics\Buffers\buffer.h" />
     <ClInclude Include="Graphics\engine.h" />
     <ClInclude Include="Graphics\Shaders\vertex.h" />
     <ClInclude Include="Graphics\Shaders\shader.h" />
     <ClInclude Include="Window\window.h" />
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="Game\pixelshader.hlsl">
+    <FxCompile Include="Graphics\Shaders\pixelshader.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
     </FxCompile>
-    <FxCompile Include="Game\vertexshader.hlsl">
+    <FxCompile Include="Graphics\Shaders\vertexshader.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>

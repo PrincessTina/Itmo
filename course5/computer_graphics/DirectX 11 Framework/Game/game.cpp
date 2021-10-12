@@ -13,13 +13,15 @@ int WINAPI main(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR pScmdline, in
 
 void Game::Run(HINSTANCE hInstance)
 {
+	int width = 800;
+	int height = 600;
+	
 	Window mainWindow;
-	mainWindow.Create(hInstance);
+	mainWindow.Create(hInstance, width, height);
 
 	Engine engine;
-	engine.InitGraphics(mainWindow.GetHandle());
+	engine.InitGraphics(mainWindow.GetHandle(), width, height);
 
-	//engine.RenderFrame();
 	while (mainWindow.ProcessMessages())
 	{
 		engine.RenderFrame();

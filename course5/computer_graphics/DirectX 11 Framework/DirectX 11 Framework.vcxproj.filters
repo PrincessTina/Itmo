@@ -25,6 +25,9 @@
     <Filter Include="Исходные файлы\Graphics\Shaders">
       <UniqueIdentifier>{e81531a9-bbb4-4380-8aea-8ca4f3941856}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Graphics\Buffers">
+      <UniqueIdentifier>{cae77db9-dc9d-4f55-9044-08beaddc64c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -62,13 +65,16 @@
     <ClInclude Include="Game\game.h">
       <Filter>Исходные файлы\Game</Filter>
     </ClInclude>
+    <ClInclude Include="Graphics\Buffers\buffer.h">
+      <Filter>Исходные файлы\Graphics\Buffers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="Game\vertexshader.hlsl">
-      <Filter>Файлы ресурсов</Filter>
+    <FxCompile Include="Graphics\Shaders\pixelshader.hlsl">
+      <Filter>Исходные файлы\Graphics\Shaders</Filter>
     </FxCompile>
-    <FxCompile Include="Game\pixelshader.hlsl">
-      <Filter>Файлы ресурсов</Filter>
+    <FxCompile Include="Graphics\Shaders\vertexshader.hlsl">
+      <Filter>Исходные файлы\Graphics\Shaders</Filter>
     </FxCompile>
   </ItemGroup>
 </Project>

@@ -6,7 +6,7 @@ class Window
 public:
 	~Window();
 	inline HWND GetHandle() { return m_Handle; };
-	void Create(HINSTANCE hInstance, int width = 600, int height = 600, LPCWSTR title = L"Game", LPCWSTR className = L"Game");
+	void Create(HINSTANCE hInstance, int width, int height, LPCWSTR title = L"Game", LPCWSTR className = L"Game");
 	bool ProcessMessages(); // Handle the windows messages
 
 private:
