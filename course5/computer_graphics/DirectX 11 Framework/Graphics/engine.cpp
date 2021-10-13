@@ -7,14 +7,14 @@ void Engine::InitGraphics(HWND hwnd, int width, int height)
 {
 	InitDirectX(hwnd, width, height);
 	InitShaders();
-	InitScene();
+	InitScene(width, height);
 }
 
 void Engine::RenderFrame()
 {
 	UINT stride = sizeof(Vertex);
 	UINT offset = 0;
-	float bgcolor[] = { 0.f, 0.1f,  0.1f, 1.0f };
+	float bgcolor[] = { 0.f, 0.f,  0.07f, 1.0f };
 
 	timer->SetTime();
 	
@@ -170,15 +170,31 @@ void Engine::InitShaders()
 	pixelShader.Init(device, L"x64\\Debug\\pixelshader.cso");
 }
 
-void Engine::InitScene()
+void Engine::InitScene(int width, int height)
 {
-	timer = new Timer();
-	components[0] = new Component();
-
-	for (Component* component : components)
+	const int componentsCount = ARRAYSIZE(components);
+	float positions[componentsCount][3] =
 	{
-		component->Init(device, deviceContext);
+		{-2.f, 0.f, 0.f},
+		{2.5f, 0.2f, 0.8f}
+	};
+	float colors[componentsCount][3] =
+	{
+		{0.56f, 0.55f, 0.56f},
+		{0.99f, 0.9f, 0.68f}
+	};
+	
+	for (int i = 0; i < componentsCount; i++)
+	{
+		Component* component = new Component();
+		component->worldPosition = { positions[i][0], positions[i][1], positions[i][2] };
+		component->color = { colors[i][0], colors[i][1], colors[i][2] };
+		
+		components[i] = component;
+		component->Init(device, deviceContext, (float)height / width);
 	}
+
+	timer = new Timer();
 }
 
 // INPUT ASSEMBLER - InputLayout

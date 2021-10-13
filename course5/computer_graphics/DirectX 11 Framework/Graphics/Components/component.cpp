@@ -3,23 +3,32 @@
 #include "../Shaders/vertex.h"
 #include "../error.h"
 
-void Component::Init(ID3D11Device* device, ID3D11DeviceContext* deviceContext)
+void Component::Init(ID3D11Device* device, ID3D11DeviceContext* deviceContext, float viewHeight)
 {
 	this->device = device;
 	this->deviceContext = deviceContext;
+	this->viewHeight = viewHeight;
 	
 	Vertex vertexes[] =
 	{
-		Vertex(-0.5f, -0.5f, 1.f, 1.f, 0.f, 0.f),
-		Vertex(-0.5f, 0.5f, 1.f, 0.f, 1.f, 0.f),
-		Vertex(0.5f, 0.5f, 1.f, 0.f, 0.f, 1.f),
-		Vertex(0.5f, -0.5f, 1.f, 0.f, 1.0f, 1.0f),
+		Vertex(-0.5f, -0.5f, -0.5f, color.r, color.g, color.b),
+		Vertex(0.5f, -0.5f, -0.5f, color.r, color.g, color.b),
+		Vertex(-0.5f, 0.5f, -0.5f, color.r, color.g, color.b),
+		Vertex(0.5f, 0.5f, -0.5f, color.r, color.g, color.b),
+		Vertex(-0.5f, -0.5f, 0.5f, color.r, color.g, color.b),
+		Vertex(0.5f, -0.5f, 0.5f, color.r, color.g, color.b),
+		Vertex(-0.5f, 0.5f, 0.5f, color.r, color.g, color.b),
+		Vertex(0.5f, 0.5f, 0.5f, color.r, color.g, color.b),
 	};
 
 	DWORD indices[] =
 	{
-		0, 1, 2,
-		0, 2, 3
+		0, 2, 1,	2, 3, 1,
+		1, 3, 5,	3, 7, 5,
+		2, 6, 3,	3, 6, 7,
+		4, 5, 7,	4, 7, 6,
+		0, 4, 2,	2, 4, 6,
+		0, 1, 4,	1, 5, 4
 	};
 	
 	CreateBuffer(&vertexBuffer, vertexes, sizeof(Vertex) * ARRAYSIZE(vertexes), D3D11_BIND_VERTEX_BUFFER);
@@ -38,17 +47,18 @@ void Component::Draw(float time)
 	deviceContext->IASetVertexBuffers(0, 1, &vertexBuffer, &stride, &offset);
 	deviceContext->IASetIndexBuffer(indexBuffer, DXGI_FORMAT_R32_UINT, 0);
 
-	deviceContext->DrawIndexed(6, 0, 0);
+	deviceContext->DrawIndexed(36, 0, 0);
 }
 
 void Component::ApplyTransform(float angle)
 {
 	CB_VS_RotationMatrix matrix =
 	{
-		cos(angle), -sin(angle), 0.f, 0.f,
-		sin(angle), cos(angle), 0.f, 0.f,
-		0.f, 0.f, 1.f, 0.f,
-		0.f, 0.f, 0.f, 1.f
+		DirectX::XMMatrixTranspose(
+			DirectX::XMMatrixRotationY(angle) * 
+			DirectX::XMMatrixTranslation(worldPosition.x, worldPosition.y, worldPosition.z + 4.f) * 
+			DirectX::XMMatrixPerspectiveLH(1.f, viewHeight, 0.5, 10.f)
+		)
 	};
 
 	CreateBuffer(&constantBuffer, &matrix, sizeof(matrix), D3D11_BIND_CONSTANT_BUFFER, D3D11_USAGE_DYNAMIC, D3D11_CPU_ACCESS_WRITE);

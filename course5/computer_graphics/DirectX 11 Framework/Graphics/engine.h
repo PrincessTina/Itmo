@@ -11,14 +11,6 @@ public:
 	void InitGraphics(HWND hwnd, int width, int height);
 	void RenderFrame();
 private:
-	struct CB_VS_RotationMatrix
-	{
-		struct
-		{
-			float matrix[4][4];
-		} rotationMatrix;
-	};
-	
 	IDXGISwapChain* swapChain;
 	ID3D11Device* device;
 	ID3D11DeviceContext* deviceContext;
@@ -34,7 +26,7 @@ private:
 	ID3D11RasterizerState* rasterizerState;
 
 	Timer* timer;
-	Component* components[1];
+	Component* components[2];
 
 	void InitDirectX(HWND hwnd, int width, int height);
 	void CreateDeviceAndSwapChain(HWND hwnd, int width, int height);
@@ -43,5 +35,5 @@ private:
 	void CreateViewport(int width, int height);
 	void CreateRasterizerState();
 	void InitShaders();
-	void InitScene();
+	void InitScene(int width, int height);
 };
