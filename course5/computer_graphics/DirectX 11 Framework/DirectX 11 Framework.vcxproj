@@ -148,7 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Game\game.cpp" />
-    <ClCompile Include="Graphics\Buffers\component.cpp" />
+    <ClCompile Include="Graphics\Components\component.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Graphics\engine.cpp" />
     <ClCompile Include="Graphics\Shaders\shader.cpp" />
@@ -157,10 +157,11 @@
   <ItemGroup>
     <ClInclude Include="error.h" />
     <ClInclude Include="Game\game.h" />
-    <ClInclude Include="Graphics\Buffers\component.h" />
+    <ClInclude Include="Graphics\Components\component.h" />
     <ClInclude Include="Graphics\engine.h" />
     <ClInclude Include="Graphics\Shaders\vertex.h" />
     <ClInclude Include="Graphics\Shaders\shader.h" />
+    <ClInclude Include="Graphics\timer.h" />
     <ClInclude Include="Window\window.h" />
   </ItemGroup>
   <ItemGroup>

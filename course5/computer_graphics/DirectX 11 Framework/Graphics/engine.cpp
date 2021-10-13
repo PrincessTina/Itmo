@@ -1,6 +1,7 @@
 #include "engine.h"
 
 #include "../error.h"
+#include "Components/component.h"
 
 void Engine::InitGraphics(HWND hwnd, int width, int height)
 {
@@ -14,6 +15,8 @@ void Engine::RenderFrame()
 	UINT stride = sizeof(Vertex);
 	UINT offset = 0;
 	float bgcolor[] = { 0.f, 0.1f,  0.1f, 1.0f };
+
+	timer->SetTime();
 	
 	deviceContext->ClearRenderTargetView(renderTargetView, bgcolor);
 	deviceContext->ClearDepthStencilView(depthStencilView, D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
@@ -25,27 +28,10 @@ void Engine::RenderFrame()
 	deviceContext->VSSetShader(vertexShader.GetShader(), NULL, 0);
 	deviceContext->PSSetShader(pixelShader.GetShader(), NULL, 0);
 
-	float angle = rand() * 1000;
-	CB_VS_RotationMatrix matrix =
+	for (Component* component : components)
 	{
-		cos(angle), -sin(angle), 0.f, 0.f,
-		sin(angle), cos(angle), 0.f, 0.f,
-		0.f, 0.f, 1.f, 0.f,
-		0.f, 0.f, 0.f, 1.f
-	};
-
-	//CreateBuffer(&constantBuffer, &matrix, sizeof(matrix), D3D11_BIND_CONSTANT_BUFFER, D3D11_USAGE_DYNAMIC, D3D11_CPU_ACCESS_WRITE);
-
-	D3D11_MAPPED_SUBRESOURCE mappedResource;
-	HRESULT hr = deviceContext->Map(constantBuffer, 0, D3D11_MAP_WRITE_DISCARD, 0, &mappedResource);
-	CopyMemory(mappedResource.pData, &matrix, sizeof(matrix));
-	deviceContext->Unmap(constantBuffer, 0);
-
-	deviceContext->VSSetConstantBuffers(0, 1, &constantBuffer);
-	deviceContext->IASetVertexBuffers(0, 1, &vertexBuffer, &stride, &offset);
-	deviceContext->IASetIndexBuffer(indexBuffer, DXGI_FORMAT_R32_UINT, 0);
-	
-	deviceContext->DrawIndexed(6, 0, 0);
+		component->Draw(timer->GetTime());
+	}
 
 	swapChain->Present(1, NULL);
 }
@@ -186,56 +172,13 @@ void Engine::InitShaders()
 
 void Engine::InitScene()
 {
-	Vertex vertexes[] =
+	timer = new Timer();
+	components[0] = new Component();
+
+	for (Component* component : components)
 	{
-		Vertex(-0.5f, -0.5f, 1.f, 1.f, 0.f, 0.f),
-		Vertex(-0.5f, 0.5f, 1.f, 0.f, 1.f, 0.f),
-		Vertex(0.5f, 0.5f, 1.f, 0.f, 0.f, 1.f),
-		Vertex(0.5f, -0.5f, 1.f, 0.f, 1.0f, 1.0f),
-	};
-
-	DWORD indices[] =
-	{
-		0, 1, 2,
-		0, 2, 3
-	};
-
-	CreateBuffer(&vertexBuffer, vertexes, sizeof(Vertex) * ARRAYSIZE(vertexes), D3D11_BIND_VERTEX_BUFFER);
-	CreateBuffer(&indexBuffer, indices, sizeof(DWORD) * ARRAYSIZE(indices), D3D11_BIND_INDEX_BUFFER);
-	CreateBuffer(&constantBuffer, nullptr, 16, D3D11_BIND_CONSTANT_BUFFER, D3D11_USAGE_DYNAMIC, D3D11_CPU_ACCESS_WRITE);
-}
-
-void Engine::CreateBuffer(ID3D11Buffer** bufferAddress, const void* bufferDataArray, UINT byteWidth, UINT bindFlags,
-	D3D11_USAGE usage, UINT CPUAccessFlags)
-{
-	D3D11_BUFFER_DESC bufferDesc;
-	ZeroMemory(&bufferDesc, sizeof(bufferDesc));
-
-	bufferDesc.Usage = usage;
-	bufferDesc.ByteWidth = byteWidth;
-	bufferDesc.BindFlags = bindFlags;
-	bufferDesc.CPUAccessFlags = CPUAccessFlags;
-	bufferDesc.MiscFlags = 0;
-	bufferDesc.StructureByteStride = 0;
-
-	HRESULT hr;
-	if (bufferDataArray != nullptr)
-	{
-		D3D11_SUBRESOURCE_DATA bufferData;
-		ZeroMemory(&bufferData, sizeof(bufferData));
-
-		bufferData.pSysMem = bufferDataArray;
-		//bufferData.SysMemPitch = 0;
-		//bufferData.SysMemSlicePitch = 0;
-
-		hr = device->CreateBuffer(&bufferDesc, &bufferData, bufferAddress);
+		component->Init(device, deviceContext);
 	}
-	else
-	{
-		hr = device->CreateBuffer(&bufferDesc, 0, bufferAddress);
-	}
-	
-	popAssert(FAILED(hr), hr);
 }
 
 // INPUT ASSEMBLER - InputLayout

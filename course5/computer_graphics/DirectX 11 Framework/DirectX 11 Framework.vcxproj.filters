@@ -25,7 +25,7 @@
     <Filter Include="Исходные файлы\Graphics\Shaders">
       <UniqueIdentifier>{e81531a9-bbb4-4380-8aea-8ca4f3941856}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\Graphics\Component">
+    <Filter Include="Исходные файлы\Graphics\Components">
       <UniqueIdentifier>{205ce7ec-5fe6-4ac1-8694-ce618f2eb94e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -45,8 +45,8 @@
     <ClCompile Include="Game\game.cpp">
       <Filter>Исходные файлы\Game</Filter>
     </ClCompile>
-    <ClCompile Include="Graphics\Buffers\component.cpp">
-      <Filter>Исходные файлы\Graphics\Component</Filter>
+    <ClCompile Include="Graphics\Components\component.cpp">
+      <Filter>Исходные файлы\Graphics\Components</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -68,8 +68,11 @@
     <ClInclude Include="Game\game.h">
       <Filter>Исходные файлы\Game</Filter>
     </ClInclude>
-    <ClInclude Include="Graphics\Buffers\component.h">
-      <Filter>Исходные файлы\Graphics\Component</Filter>
+    <ClInclude Include="Graphics\Components\component.h">
+      <Filter>Исходные файлы\Graphics\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\timer.h">
+      <Filter>Исходные файлы\Graphics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

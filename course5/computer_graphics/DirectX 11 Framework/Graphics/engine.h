@@ -2,6 +2,8 @@
 #include <d3d11.h>
 #include "Shaders/shader.h"
 #include "Shaders/vertex.h"
+#include "Components/component.h"
+#include "timer.h"
 
 class Engine
 {
@@ -25,15 +27,14 @@ private:
 	VertexShader vertexShader;
 	PixelShader pixelShader;
 
-	ID3D11Buffer* vertexBuffer;
-	ID3D11Buffer* indexBuffer;
-	ID3D11Buffer* constantBuffer;
-
 	ID3D11DepthStencilView* depthStencilView;
 	ID3D11Texture2D* depthStencilBuffer;
 	ID3D11DepthStencilState* depthStencilState;
 
 	ID3D11RasterizerState* rasterizerState;
+
+	Timer* timer;
+	Component* components[1];
 
 	void InitDirectX(HWND hwnd, int width, int height);
 	void CreateDeviceAndSwapChain(HWND hwnd, int width, int height);
@@ -43,6 +44,4 @@ private:
 	void CreateRasterizerState();
 	void InitShaders();
 	void InitScene();
-	void CreateBuffer(ID3D11Buffer** bufferAddress, const void* bufferDataArray, UINT byteWidth, UINT bindFlags, 
-		D3D11_USAGE usage = D3D11_USAGE_DEFAULT, UINT CPUAccessFlags = 0);
 };
